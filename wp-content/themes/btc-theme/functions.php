@@ -103,8 +103,8 @@ function remove_view_link_from_product_list($actions, $post) {
     if ($post->post_type === 'product') {
         unset($actions['view']);
     }
+   
     return $actions;
 }
 add_filter('post_row_actions', 'remove_view_link_from_product_list', 10, 2);
-
 
