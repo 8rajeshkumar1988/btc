@@ -7,7 +7,7 @@
 
   <?php
   // Output meta title and description for pages/posts
-  if (is_singular(post_types: ['post', 'page'])) {
+  // if (is_singular(post_types: ['post', 'page','blogs'])) {
     $meta_title = get_post_meta(get_the_ID(), 'meta_title', true);
     $meta_description = get_post_meta(get_the_ID(), 'meta_description', true);
     $meta_image = get_post_meta(get_the_ID(), 'meta_image', true);
@@ -43,7 +43,7 @@
     }
    } 
 
-  }
+  
   ?>
 
   <?php wp_head(); ?>

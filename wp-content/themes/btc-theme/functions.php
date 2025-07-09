@@ -3,11 +3,10 @@
 function btc_features() {
     //   add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
-    add_image_size( 'thumb', 400, 250, true );
-    // cropped
-    add_image_size( 'medium', 800, 600, false );
-    // not cropped
-    add_image_size( 'banner', 1200, 400, true );
+    add_image_size( 'thumbnail', 400, 400, true );
+    add_image_size( 'btc_medium', 800, 600, false );
+    add_image_size( 'btc_large', 1200, 800, true );
+
     add_image_size( 'metaimage', 1200, 630, true );
 }
 
@@ -57,3 +56,55 @@ function btc_save_seo_meta_fields( $post_id ) {
     }
 }
 // add_action( 'save_post', 'btc_save_seo_meta_fields' );
+
+function custom_login_logo() {
+    echo '
+    <style type="text/css">
+        #login h1 a {
+            background-image: url(' . get_stylesheet_directory_uri() . '/assets/images/logo.svg);
+            background-size: contain;
+            width: 100%;
+            height: 80px;
+        }
+    </style>';
+}
+add_action( 'login_head', 'custom_login_logo' );
+
+function custom_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'custom_login_logo_url' );
+
+function custom_login_logo_url_title() {
+    return get_bloginfo( 'name' );
+}
+add_filter( 'login_headertext', 'custom_login_logo_url_title' );
+
+function hide_login_privacy_policy_link() {
+    echo '<style>
+        .privacy-policy-page-link {
+            display: none !important;
+        }
+    </style>';
+}
+add_action( 'login_head', 'hide_login_privacy_policy_link' );
+
+
+function remove_wp_admin_bar_logo() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_node('wp-logo');
+}
+add_action('admin_bar_menu', 'remove_wp_admin_bar_logo', 999);
+
+
+
+
+function remove_view_link_from_product_list($actions, $post) {
+    if ($post->post_type === 'product') {
+        unset($actions['view']);
+    }
+    return $actions;
+}
+add_filter('post_row_actions', 'remove_view_link_from_product_list', 10, 2);
+
+

@@ -1,12 +1,9 @@
-
-
 <?php
 
 get_header();
 
 ?>
-
-Blog List Page
+Textile Park
 
 <?php
 get_footer();

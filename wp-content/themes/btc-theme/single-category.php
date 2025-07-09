@@ -1,12 +1,10 @@
 
-
 <?php
 
 get_header();
 
 ?>
-
-Blog List Page
+Category Detail Page
 
 <?php
 get_footer();

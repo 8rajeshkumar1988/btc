@@ -1,12 +1,9 @@
-
-
 <?php
 
 get_header();
 
 ?>
-
-Blog List Page
+Contact us Page
 
 <?php
 get_footer();

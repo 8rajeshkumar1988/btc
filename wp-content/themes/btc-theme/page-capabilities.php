@@ -1,12 +1,9 @@
-
-
 <?php
 
 get_header();
 
 ?>
-
-Blog List Page
+Capabilities
 
 <?php
 get_footer();

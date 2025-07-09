@@ -1,12 +1,9 @@
-
-
 <?php
 
 get_header();
 
 ?>
-
-Blog List Page
+Sustainability
 
 <?php
 get_footer();

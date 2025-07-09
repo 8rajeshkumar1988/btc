@@ -1,13 +1,9 @@
-
-
 <?php
 
 get_header();
 
 ?>
-
-Blog List Page
-
+Why BTC
 <?php
 get_footer();
 

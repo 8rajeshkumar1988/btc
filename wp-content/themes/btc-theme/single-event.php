@@ -1,12 +1,10 @@
 
-
 <?php
 
 get_header();
 
 ?>
-
-Blog List Page
+Event Detail Page
 
 <?php
 get_footer();

@@ -1,13 +1,9 @@
-
-
 <?php
 
 get_header();
 
 ?>
-
-Blog List Page
-
+All Event List
 <?php
 get_footer();
 
