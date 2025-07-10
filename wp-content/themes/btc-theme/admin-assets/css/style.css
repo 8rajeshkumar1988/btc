@@ -1,0 +1,18 @@
+.gallery-item {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 8px;
+  background: #f0f0f0;
+  border-radius: 5px;
+}
+.gallery-item img {
+  max-width: 100px;
+  height: auto;
+}
+.remove-image {
+  margin-top: 5px;
+  background-color: #dc3232;
+  color: white;
+}

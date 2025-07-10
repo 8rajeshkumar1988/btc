@@ -89,22 +89,36 @@ function hide_login_privacy_policy_link() {
 }
 add_action( 'login_head', 'hide_login_privacy_policy_link' );
 
-
 function remove_wp_admin_bar_logo() {
     global $wp_admin_bar;
-    $wp_admin_bar->remove_node('wp-logo');
+    $wp_admin_bar->remove_node( 'wp-logo' );
 }
-add_action('admin_bar_menu', 'remove_wp_admin_bar_logo', 999);
+add_action( 'admin_bar_menu', 'remove_wp_admin_bar_logo', 999 );
 
-
-
-
-function remove_view_link_from_product_list($actions, $post) {
-    if ($post->post_type === 'product') {
-        unset($actions['view']);
+function remove_view_link_from_product_list( $actions, $post ) {
+    if ( $post->post_type === 'product' ) {
+        unset( $actions[ 'view' ] );
     }
-   
+    if ( $post->post_type === 'customiz_category' ) {
+        unset( $actions[ 'view' ] );
+    }
+    if ( $post->post_type === 'customization_type' ) {
+        unset( $actions[ 'view' ] );
+    }
+    if ( $post->post_type === 'homecapability' ) {
+        unset( $actions[ 'view' ] );
+    }
+    if ( $post->post_type === 'leadership' ) {
+        unset( $actions[ 'view' ] );
+    }
+    if ( $post->post_type === 'client' ) {
+        unset( $actions[ 'view' ] );
+    }
+
+
+    
+
     return $actions;
 }
-add_filter('post_row_actions', 'remove_view_link_from_product_list', 10, 2);
+add_filter( 'post_row_actions', 'remove_view_link_from_product_list', 10, 2 );
 
