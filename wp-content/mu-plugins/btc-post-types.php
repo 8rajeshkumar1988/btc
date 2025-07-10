@@ -112,7 +112,7 @@ function university_post_types() {
             'all_items' => 'All Type',
             'singular_name' => 'Customization Type'
         ),
-        'menu_icon' => 'dashicons-slides'
+        'menu_icon' => 'dashicons-text-page'
     ) );
 
     register_post_type('leadership', array(
