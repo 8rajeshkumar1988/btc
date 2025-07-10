@@ -8,7 +8,7 @@
   border-radius: 5px;
 }
 .gallery-item img {
-  max-width: 100px;
+  max-width: 400px;
   height: auto;
 }
 .remove-image {

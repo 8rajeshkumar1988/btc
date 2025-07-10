@@ -335,7 +335,7 @@ function render_event_gallery_meta_box($post) {
 
                 attachments.forEach(function(attachment){
                     var html = '<div class="gallery-item">';
-                    html += '<img src="' + attachment.url + '" style="max-width:100px;" />';
+                    html += '<img src="' + attachment.url + '" style="max-width:400px;" />';
                     html += '<input type="hidden" name="event_gallery[]" value="' + attachment.url + '" />';
                     html += '<button type="button" class="button remove-image">Remove</button>';
                     html += '</div>';
