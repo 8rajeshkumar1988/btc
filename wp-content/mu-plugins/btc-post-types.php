@@ -273,8 +273,28 @@ function my_custom_meta_box() {
         'normal',
         'default'
     );
+    add_meta_box(
+        'sort_order_meta',                  // ID
+        'Sort Order',                       // Title
+        'render_sort_order_meta_box',      // Callback
+        ['client','category','customization_type','leadership','homecapability','product','customiz_category'],                // Post types
+        'side',                             // Context: 'side' = right sidebar
+        'default'                           // Priority
+    ); 
+
+
 }
 add_action('add_meta_boxes', 'my_custom_meta_box');
+
+
+function render_sort_order_meta_box($post) {
+    $value = get_post_meta($post->ID, '_sort_order', true);
+    $value=$value?$value:0;
+    ?>
+    <input type="number" name="sort_order" value="<?php echo esc_attr($value); ?>" style="width: 100%;" />
+    <p class="description">Lower number = higher priority</p>
+    <?php
+}
 
 function render_event_gallery_meta_box($post) {
     $gallery = get_post_meta($post->ID, '_event_gallery', true);
@@ -455,7 +475,10 @@ function render_product_custom_category_dropdown($post) {
 
 // Save selected value
 function save_custom_dropdown_data($post_id) {
-
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    if (isset($_POST['sort_order'])) {
+        update_post_meta($post_id, '_sort_order', intval($_POST['sort_order']));
+    }
     
 
     if (isset($_POST['event_gallery']) && is_array($_POST['event_gallery'])) {
