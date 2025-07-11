@@ -571,3 +571,14 @@ function show_custom_category_column($column, $post_id) {
         }
     }
 }
+function get_attachment_id_from_url( $url ) {
+    echo $url;
+    global $wpdb;
+    $attachment = $wpdb->get_col( $wpdb->prepare(
+        "SELECT ID FROM $wpdb->posts WHERE guid = %s",
+        $url
+    ) );
+    print_r( $attachment);
+    
+    return isset( $attachment[ 0 ] ) ? $attachment[ 0 ] : false;
+}
