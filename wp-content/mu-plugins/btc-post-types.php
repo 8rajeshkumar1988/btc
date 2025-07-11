@@ -45,7 +45,7 @@ function university_post_types() {
             'all_items' => 'All Product',
             'singular_name' => 'Product'
         ),
-        'menu_icon' => 'dashicons-awards'
+        'menu_icon' => 'dashicons-products'
     ) );
 
     // Professor Post Type
@@ -145,6 +145,26 @@ function university_post_types() {
         ),
         'menu_icon' => 'dashicons-format-gallery'
     ) );
+
+
+    register_post_type('socialmedia', array(
+        'show_in_rest' => true,
+        'supports' => array( 'title','thumbnail'),
+        'has_archive' => true,
+        'public' => true,
+        'labels' => array(
+            'name' => 'Social Medias',
+            'add_new_item' => 'Add New',
+            'edit_item' => 'Edit',
+            'all_items' => 'All Social Medias',
+            'singular_name' => 'Social Media'
+        ),
+        'menu_icon' => 'dashicons-embed-post'
+    ) );
+
+
+
+   
 
 
 }
@@ -277,7 +297,7 @@ function my_custom_meta_box() {
         'sort_order_meta',                  // ID
         'Sort Order',                       // Title
         'render_sort_order_meta_box',      // Callback
-        ['client','category','customization_type','leadership','homecapability','product','customiz_category'],                // Post types
+        ['client','category','customization_type','leadership','homecapability','product','customiz_category','socialmedia'],                // Post types
         'side',                             // Context: 'side' = right sidebar
         'default'                           // Priority
     ); 

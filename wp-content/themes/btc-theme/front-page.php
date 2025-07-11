@@ -60,7 +60,7 @@ if ( $clients->have_posts() ) {
 }
 wp_reset_postdata();
 ?>
-
+<?php get_template_part( 'components/socials' ); ?>
 <?php get_template_part( 'components/clients' ); ?>
 <?php
 get_footer();
