@@ -266,159 +266,10 @@ get_header();
     </section>
 
 
-    <section id="our_social">
-        <img src="../assets/BTC pattern.svg" alt="" />
 
-        <div class="our_social_head">
-            <div class="heading">
-                <p>Our Socials</p>
-                <h2>Behind the Seams</h2>
-            </div>
-            <button class="cta">
-                follow our threads
-                <img src=".<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
-            </button>
-        </div>
-        <div class="swiper social_media">
-            <div class="swiper-wrapper social_media_wrapper">
-                <a href="/" class="swiper-slide social_media_card">
-                    <img src="../assets/social/social2.jpg" alt="" />
-                    <div class="social_icon">
-                        <img src="../assets/social/facebook.svg" alt="" />
-                    </div>
-                </a>
-                <a href="/" class="swiper-slide social_media_card">
-                    <img src="../assets/social/social3.jpg" alt="" />
-                    <div class="social_icon">
-                        <img src="../assets/social/instagram.svg" alt="" />
-                    </div>
-                </a>
-                <a href="/" class="swiper-slide social_media_card">
-                    <img src="../assets/social/social4.jpg" alt="" />
-                    <div class="social_icon">
-                        <img src="../assets/social/linkedin.svg" alt="" />
-                    </div>
-                </a>
-                <a href="/" class="swiper-slide social_media_card">
-                    <img src="../assets/social/social5.jpg" alt="" />
-                    <div class="social_icon">
-                        <img src="../assets/social/facebook.svg" alt="" />
-                    </div>
-                </a>
+<?php get_template_part( 'components/socials' ); ?>
 
-                <a href="/" class="swiper-slide social_media_card">
-                    <img src="../assets/social/social3.jpg" alt="" />
-                    <div class="social_icon">
-                        <img src="../assets/social/instagram.svg" alt="" />
-                    </div>
-                </a>
-                <a href="/" class="swiper-slide social_media_card">
-                    <img src="../assets/social/social4.jpg" alt="" />
-                    <div class="social_icon">
-                        <img src="../assets/social/linkedin.svg" alt="" />
-                    </div>
-                </a>
-                <a href="/" class="swiper-slide social_media_card">
-                    <img src="../assets/social/social5.jpg" alt="" />
-                    <div class="social_icon">
-                        <img src="../assets/social/facebook.svg" alt="" />
-                    </div>
-                </a>
-
-                <a href="/" class="swiper-slide social_media_card">
-                    <img src="../assets/social/social1.jpg" alt="" />
-                    <div class="social_icon">
-                        <img src="../assets/social/instagram.svg" alt="" />
-                    </div>
-                </a>
-            </div>            
-        </div>
-    </section>
-
-
-    <section id="our_clients">
-        <div class="heading">
-            <p>Our Clients</p>
-            <h2>
-                Powering the World's <br />
-                Leading Labels
-            </h2>
-        </div>
-        <div class="marquee-container">
-            <div class="marquee-track left-slide">
-                <div class="marquee-content">
-                    <img src="../assets/client/client1.png" alt="" />
-                    <img src="../assets/client/client2.png" alt="" />
-                    <img src="../assets/client/client3.png" alt="" />
-                    <img src="../assets/client/client4.png" alt="" />
-                    <img src="../assets/client/client5.png" alt="" />
-                    <img src="../assets/client/client1.png" alt="" />
-                    <img src="../assets/client/client2.png" alt="" />
-                    <img src="../assets/client/client3.png" alt="" />
-                    <img src="../assets/client/client4.png" alt="" />
-                    <img src="../assets/client/client5.png" alt="" />
-                    <!-- <img src="../assets/client/client6.png" alt="" />
-            <img src="../assets/client/client7.png" alt="" />
-            <img src="../assets/client/client8.png" alt="" />
-            <img src="../assets/client/client9.png" alt="" />
-            <img src="../assets/client/client10.png" alt="" /> -->
-                </div>
-                <div class="marquee-content">
-                    <img src="../assets/client/client1.png" alt="" />
-                    <img src="../assets/client/client2.png" alt="" />
-                    <img src="../assets/client/client3.png" alt="" />
-                    <img src="../assets/client/client4.png" alt="" />
-                    <img src="../assets/client/client5.png" alt="" />
-                    <img src="../assets/client/client1.png" alt="" />
-                    <img src="../assets/client/client2.png" alt="" />
-                    <img src="../assets/client/client3.png" alt="" />
-                    <img src="../assets/client/client4.png" alt="" />
-                    <img src="../assets/client/client5.png" alt="" />
-                    <!-- <img src="../assets/client/client6.png" alt="" />
-            <img src="../assets/client/client7.png" alt="" />
-            <img src="../assets/client/client8.png" alt="" />
-            <img src="../assets/client/client9.png" alt="" />
-            <img src="../assets/client/client10.png" alt="" /> -->
-                </div>
-            </div>
-            <div class="marquee-track right-slide">
-                <div class="marquee-content">
-                    <!-- <img src="../assets/client/client1.png" alt="" />
-            <img src="../assets/client/client2.png" alt="" />
-            <img src="../assets/client/client3.png" alt="" />
-            <img src="../assets/client/client4.png" alt="" />
-            <img src="../assets/client/client5.png" alt="" /> -->
-                    <img src="../assets/client/client6.png" alt="" />
-                    <img src="../assets/client/client7.png" alt="" />
-                    <img src="../assets/client/client8.png" alt="" />
-                    <img src="../assets/client/client9.png" alt="" />
-                    <img src="../assets/client/client10.png" alt="" />
-                    <img src="../assets/client/client6.png" alt="" />
-                    <img src="../assets/client/client7.png" alt="" />
-                    <img src="../assets/client/client8.png" alt="" />
-                    <img src="../assets/client/client9.png" alt="" />
-                    <img src="../assets/client/client10.png" alt="" />
-                </div>
-                <div class="marquee-content">
-                    <!-- <img src="../assets/client/client1.png" alt="" />
-            <img src="../assets/client/client2.png" alt="" />
-            <img src="../assets/client/client3.png" alt="" />
-            <img src="../assets/client/client4.png" alt="" />
-            <img src="../assets/client/client5.png" alt="" /> -->
-                    <img src="../assets/client/client6.png" alt="" />
-                    <img src="../assets/client/client7.png" alt="" />
-                    <img src="../assets/client/client8.png" alt="" />
-                    <img src="../assets/client/client9.png" alt="" />
-                    <img src="../assets/client/client10.png" alt="" />
-                    <img src="../assets/client/client6.png" alt="" />
-                    <img src="../assets/client/client7.png" alt="" />
-                    <img src="../assets/client/client8.png" alt="" />
-                    <img src="../assets/client/client9.png" alt="" />
-                    <img src="../assets/client/client10.png" alt="" />
-                </div>
-            </div>
-        </div>
-    </section>
+<?php get_template_part( 'components/clients' ); ?>
 
     <section id="linkedIn_video">
         <video src="./assets/homeVideoSec.mp4" autoplay loop muted playsinline></video>
@@ -427,31 +278,6 @@ get_header();
 
 
 
-<?php
-
-$clients = new WP_Query( array(
-    'posts_per_page' => -1,
-    'post_type' => 'category',
-    'orderby' => 'title',
-    'post_status'    => 'publish', 
-    'meta_key'       => '_sort_order',
-    'orderby'        => 'meta_value_num',
-    'order'          => 'ASC',
-
-) );
-
-if ( $clients->have_posts() ) {
-    while( $clients->have_posts() ) {
-         $clients->the_post(); 
-        ?>
-        <a href = "<?php the_permalink(); ?>"><img title= "<?php the_title(); ?>" class = 'category__image' src = "<?php the_post_thumbnail_url('btc_medium') ?>"></a>
-        <?php
-    }
-
-}
-wp_reset_postdata();
-?>
-<br/>
 homecapability List:
 <?php
 
@@ -477,8 +303,8 @@ if ( $clients->have_posts() ) {
 }
 wp_reset_postdata();
 ?>
-<?php get_template_part( 'components/socials' ); ?>
-<?php get_template_part( 'components/clients' ); ?>
+
+
 <?php
 get_footer();
 
