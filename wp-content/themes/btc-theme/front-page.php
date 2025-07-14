@@ -15,7 +15,7 @@ get_header();
 </section>
 
     <section id="aboutBtc">
-        <img class="worldMap" src="./assets/world map.svg" alt="">
+        <img class="worldMap" src="<?php echo get_template_directory_uri() . '/assets/images/world map.svg'; ?>" alt="">
         <div class="content">
             <div class="headNum heading">
                 <p>ABOUT BTC</p>
@@ -38,11 +38,11 @@ get_header();
                     </div>
                 </div>
                 <div class="navigation_about">
-                    <button class="prev"><img src="./assets/right_arrow.svg" alt="right arrow "></button>
-                    <button class="next"><img src="./assets/right_arrow.svg" alt="right arrow "></button>
+                    <button class="prev"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
+                    <button class="next"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
                 </div>
             </div>
-            <button class="cta">Know More About BTC <img src="./assets/right_arrow.svg" alt=""></button>
+            <button class="cta">Know More About BTC <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
         </div>
     </section>
 
@@ -55,42 +55,43 @@ get_header();
         <div class="content">
             <div class="swiper ourProducts">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide items">
-                        <div>
-                            <img src="./assets/activeRange.png" alt="">
-                            <p class="title">Activewear</p>
-                            <button class="cta">View range<img src="./assets/right_arrow.svg" alt=""></button>
-                        </div>
-                        <p>Activewear</p>
-                    </div>
-                    <div class="swiper-slide items">
-                        <div>
-                            <img src="./assets/kidsWear.png" alt="">
-                            <p class="title">Kids Wear</p>
-                            <button class="cta">View range<img src="./assets/right_arrow.svg" alt=""></button>
-                        </div>
-                        <p>Kids wear</p>
-                    </div>
-                    <div class="swiper-slide items">
-                        <div>
-                            <img src="./assets/innerWear.jpg" alt="">
-                            <p class="title">Innerwear</p>
-                            <button class="cta">View range<img src="./assets/right_arrow.svg" alt=""></button>
-                        </div>
-                        <p>Innerwear</p>
-                    </div>
-                    <div class="swiper-slide items">
-                        <div>
-                            <img src="./assets/activeRange.png" alt="">
-                            <p class="title">Activewear</p>
-                            <button class="cta">View range<img src="./assets/right_arrow.svg" alt=""></button>
-                        </div>
-                        <p>Activewear</p>
-                    </div>
+                    
+                    <?php
+
+                        $clients = new WP_Query( array(
+                            'posts_per_page' => -1,
+                            'post_type' => 'category',
+                            'orderby' => 'title',
+                            'post_status'    => 'publish', 
+                            'meta_key'       => '_sort_order',
+                            'orderby'        => 'meta_value_num',
+                            'order'          => 'ASC',
+
+                        ) );
+
+                        if ( $clients->have_posts() ) {
+                            while( $clients->have_posts() ) {
+                                $clients->the_post(); 
+                                ?>
+                                <!-- <a href = "<?php the_permalink(); ?>"><img title= "<?php the_title(); ?>" class = 'category__image' src = "<?php the_post_thumbnail_url('btc_medium') ?>"></a> -->
+                                 <div class="swiper-slide items">
+                                    <div>
+                                        <img title= "<?php the_title(); ?>" src = "<?php the_post_thumbnail_url('btc_medium') ?>" alt="">
+                                        <p class="title">Activewear</p>
+                                        <a href = "<?php the_permalink(); ?>" class="cta">View range<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
+                                    </div>
+                                    <p>Activewear</p>
+                                </div>
+                                <?php
+                            }
+
+                        }
+                        wp_reset_postdata();
+                        ?>
                 </div>
                 <div class="btnss">
-                    <button class="swiper-button-next"><img src="./assets/right_arrow.svg" alt=""></button>
-                    <button class="swiper-button-prev"><img src="./assets/right_arrow.svg" alt=""></button>
+                    <button class="swiper-button-next"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+                    <button class="swiper-button-prev"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
                 </div>
             </div>
         </div>
@@ -104,7 +105,7 @@ get_header();
                 <p>Sustainability Standards</p>
                 <h3>Compliant With Global Sustainability Standards</h3>
             </div>
-            <button class="cta">Learn More <img src="./assets/right_arrow.svg" alt=""></button>
+            <button class="cta">Learn More <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
         </div>
         <div class="accordian">
             <div class="faq default-open"
@@ -182,7 +183,7 @@ get_header();
         <div class="rightContent">
             <p>BTC combines <span>state-of-the-art technology</span> with sustainable practices, ensuring every product
                 is crafted with care, precision and environmental responsibility.</p>
-            <button class="cta">Explore What We Do<img src="./assets/right_arrow.svg" alt=""></button>
+            <button class="cta">Explore What We Do<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
         </div>
         <div class="cap_container swiper ourCapabilities">
             <div class="swiper-wrapper">
@@ -258,8 +259,8 @@ get_header();
                 </div>
             </div>
             <div class="btnssNew">
-                <button class="swiper-button-next"><img src="./assets/right_arrow.svg" alt=""></button>
-                <button class="swiper-button-prev"><img src="./assets/right_arrow.svg" alt=""></button>
+                <button class="swiper-button-next"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+                <button class="swiper-button-prev"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
             </div>
         </div>
     </section>
@@ -275,7 +276,7 @@ get_header();
             </div>
             <button class="cta">
                 follow our threads
-                <img src="../assets/right_arrow.svg" alt="right arrow" />
+                <img src=".<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
             </button>
         </div>
         <div class="swiper social_media">

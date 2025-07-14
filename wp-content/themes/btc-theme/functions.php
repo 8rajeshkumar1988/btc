@@ -17,6 +17,7 @@ function btc_files() {
     //   wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
     wp_enqueue_style( 'btc_main_styles', get_theme_file_uri( '/assets/css/common.css' ) );
     if (is_front_page() ) {
+        wp_enqueue_style( 'btc_homepage_swiper', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css' );
         wp_enqueue_style( 'btc_homepage_styles', get_theme_file_uri( '/assets/homepage/style.css' ) );
     }
 
