@@ -9,7 +9,7 @@
             </div>
             <button class="cta">
                 follow our threads
-                <img src=".<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
             </button>
         </div>
         <div class="swiper social_media">

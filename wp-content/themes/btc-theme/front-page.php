@@ -112,7 +112,7 @@ get_header();
                 style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
                 <div class="head">
                     <p>Carbon Footprint of factory</p>
-                    <img class="menu open" src="./assets/arow_donw.svg" alt="clase icon">
+                    <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
                 </div>
                 <div class="ans" style="display: none;">
                     <p>We reduce emissions and waste through sustainable sourcing and clean production.</p>
@@ -127,7 +127,7 @@ get_header();
                 style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
                 <div class="head">
                     <p>Sustainable infra</p>
-                    <img class="menu open" src="./assets/arow_donw.svg" alt="clase icon">
+                    <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
                 </div>
                 <div class="ans" style="display: none;">
                     <p>Our facilities meet global sustainability benchmarks, guided by ESIA and IFC standards.</p>
@@ -142,7 +142,7 @@ get_header();
                 style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
                 <div class="head">
                     <p>Tech</p>
-                    <img class="menu open" src="./assets/arow_donw.svg" alt="clase icon">
+                    <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
                 </div>
                 <div class="ans" style="display: none;">
                     <p>Smart tech drives our efficient, eco-conscious production.</p>
@@ -157,7 +157,7 @@ get_header();
                 style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
                 <div class="head">
                     <p>Certifications</p>
-                    <img class="menu open" src="./assets/arow_donw.svg" alt="clase icon">
+                    <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
                 </div>
                 <div class="ans" style="display: none;">
                     <p>We meet leading global standards in quality, safety, and sustainability.</p>
@@ -187,76 +187,41 @@ get_header();
         </div>
         <div class="cap_container swiper ourCapabilities">
             <div class="swiper-wrapper">
-                <div class="swiper-slide swirl-img">
-                    <img class="spiralImage" src="../assets/activeRange.png" alt="">
-                    <div class="empty"></div>
-                    <div class="text">
-                        <h3>Access To Local Cotton</h3>
-                        <img class="line" src="./assets/line.svg" alt="">
-                        <p>We source <span>high-quality cotton locally</span>, ensuring better traceability, reduced
-                            lead times and stronger support for regional agriculture.</p>
-                    </div>
-                </div>
-                <div class="swiper-slide swirl-img">
-                    <img class="spiralImage" src="../assets/kidsWear.png" alt="">
-                    <div class="empty"></div>
-                    <div class="text">
-                        <h3>Access To <span>Local Cotton</span></h3>
-                        <img class="line" src="./assets/line.svg" alt="">
-                        <p>We source <span>high-quality cotton locally</span>, ensuring better traceability, reduced
-                            lead times and stronger support for regional agriculture.</p>
-                    </div>
-                </div>
-                <div class="swiper-slide swirl-img">
-                    <img class="spiralImage" src="../assets/category_item.png" alt="">
-                    <div class="empty"></div>
-                    <div class="text">
-                        <h3>Access To Local Cotton</h3>
-                        <img class="line" src="./assets/line.svg" alt="">
-                        <p>We source <span>high-quality cotton locally</span>, ensuring better traceability, reduced
-                            lead times and stronger support for regional agriculture.</p>
-                    </div>
-                </div>
-                <div class="swiper-slide swirl-img">
-                    <img class="spiralImage" src="../assets/category_item2.png" alt="">
-                    <div class="empty"></div>
-                    <div class="text">
-                        <h3>Access To Local Cotton</h3>
-                        <img class="line" src="./assets/line.svg" alt="">
-                        <p>We source <span>high-quality cotton locally</span>, ensuring better traceability, reduced
-                            lead times and stronger support for regional agriculture.</p>
-                    </div>
-                </div>
-                <div class="swiper-slide swirl-img">
-                    <img class="spiralImage" src="../assets/category_item3.png" alt="">
-                    <div class="empty"></div>
-                    <div class="text">
-                        <h3>Access To Local Cotton</h3>
-                        <img class="line" src="./assets/line.svg" alt="">
-                        <p>We source <span>high-quality cotton locally</span>, ensuring better traceability, reduced
-                            lead times and stronger support for regional agriculture.</p>
-                    </div>
-                </div>
-                <div class="swiper-slide swirl-img">
-                    <img class="spiralImage" src="../assets/category_item4.png" alt="">
-                    <div class="empty"></div>
-                    <div class="text">
-                        <h3>Access To Local Cotton</h3>
-                        <img class="line" src="./assets/line.svg" alt="">
-                        <p>We source <span>high-quality cotton locally</span>, ensuring better traceability, reduced
-                            lead times and stronger support for regional agriculture.</p>
-                    </div>
-                </div>
-                <div class="swiper-slide swirl-img">
-                    <img class="spiralImage" src="../assets/category_item5.png" alt="">
-                    <div class="empty"></div>
-                    <div class="text">
-                        <h3>Access To Local Cotton</h3>
-                        <img class="line" src="./assets/line.svg" alt="">
-                        <p>We source <span>high-quality cotton locally</span>, ensuring better traceability, reduced
-                            lead times and stronger support for regional agriculture.</p>
-                    </div>
-                </div>
+               
+                <?php
+
+                $clients = new WP_Query( array(
+                    'posts_per_page' => -1,
+                    'post_type' => 'homecapability',
+                    'orderby' => 'title',
+                    'post_status'    => 'publish', 
+                    'meta_key'       => '_sort_order',
+                    'orderby'        => 'meta_value_num',
+                    'order'          => 'ASC',
+
+                ) );
+
+                if ( $clients->have_posts() ) {
+                    while( $clients->have_posts() ) {
+                        $clients->the_post(); 
+                        ?>
+                        
+                         <div class="swiper-slide swirl-img">
+                            <img title= "<?php the_title(); ?>" class = 'homecapability__image spiralImage' src = "<?php the_post_thumbnail_url('btc_large') ?>">
+                   
+                            <div class="empty"></div>
+                            <div class="text">
+                                <h3><?php the_title(); ?></h3>
+                                <img class="line" src="<?php echo get_template_directory_uri() . '/assets/images/line.svg'; ?>" alt="">
+                                <?php the_content(); ?>
+                            </div>
+                        </div>
+                        <?php
+                    }
+
+                }
+                wp_reset_postdata();
+                ?>
             </div>
             <div class="btnssNew">
                 <button class="swiper-button-next"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
@@ -272,37 +237,10 @@ get_header();
 <?php get_template_part( 'components/clients' ); ?>
 
     <section id="linkedIn_video">
-        <video src="./assets/homeVideoSec.mp4" autoplay loop muted playsinline></video>
+        <video src="<?php echo get_template_directory_uri() . '/assets/images/homeVideoSec.mp4'; ?>" autoplay loop muted playsinline></video>
     </section>
 
 
-
-
-homecapability List:
-<?php
-
-$clients = new WP_Query( array(
-    'posts_per_page' => -1,
-    'post_type' => 'homecapability',
-    'orderby' => 'title',
-    'post_status'    => 'publish', 
-    'meta_key'       => '_sort_order',
-    'orderby'        => 'meta_value_num',
-    'order'          => 'ASC',
-
-) );
-
-if ( $clients->have_posts() ) {
-    while( $clients->have_posts() ) {
-         $clients->the_post(); 
-        ?>
-        <img title= "<?php the_title(); ?>" class = 'homecapability__image' src = "<?php the_post_thumbnail_url('btc_large') ?>">
-        <?php
-    }
-
-}
-wp_reset_postdata();
-?>
 
 
 <?php
