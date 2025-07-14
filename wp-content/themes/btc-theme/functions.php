@@ -1,5 +1,30 @@
 <?php
 
+function btc_files() {
+    wp_enqueue_script( 'btc-jquery', '//code.jquery.com/jquery-3.7.1.min.js' );
+    wp_enqueue_script( 'btc-swiper', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js' );
+    wp_enqueue_script( 'btc-lenis', '//unpkg.com/lenis@1.0.45/dist/lenis.min.js' );
+    wp_enqueue_script( 'btc-gsap', '//cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js' );
+    wp_enqueue_script( 'btc-ScrollTrigger', '//cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js' );
+    wp_enqueue_script( 'btc-ScrollToPlugin', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js' );
+    wp_enqueue_script( 'btc-ScrollToPlugin', '//unpkg.com/split-type' );
+    wp_enqueue_script( 'main-btc-js', get_theme_file_uri( '/assets/js/main.js' ) );
+    if (is_front_page() ) {
+        wp_enqueue_script( 'main-homepage-js', get_theme_file_uri( '/assets/homepage/script.js' ) );
+    }
+
+    //   wp_enqueue_style( 'custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i' );
+    //   wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+    wp_enqueue_style( 'btc_main_styles', get_theme_file_uri( '/assets/css/common.css' ) );
+    if (is_front_page() ) {
+        wp_enqueue_style( 'btc_homepage_styles', get_theme_file_uri( '/assets/homepage/style.css' ) );
+    }
+
+    //   wp_enqueue_style( 'btc_extra_styles', get_theme_file_uri( '/assets/index.css' ) );
+}
+
+add_action( 'wp_enqueue_scripts', 'btc_files' );
+
 function btc_features() {
     //   add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
@@ -114,9 +139,6 @@ function remove_view_link_from_product_list( $actions, $post ) {
     if ( $post->post_type === 'client' ) {
         unset( $actions[ 'view' ] );
     }
-
-
-    
 
     return $actions;
 }
