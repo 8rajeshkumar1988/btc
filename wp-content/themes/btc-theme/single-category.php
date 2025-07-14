@@ -4,17 +4,136 @@
 get_header();
 
 ?>
-Category Detail Page
-<?php the_title(); ?>
-<php the_field('sub_title'); ?>
-<img title = '<?php the_title(); ?>' class = 'category__image' src = "<?php the_post_thumbnail_url('btc_large') ?>">
+<section class="heroBanner">
+    <!-- <video playsinline autoplay muted loop src="../assets/homeVideo.mp4"></video> -->
+    <img src="<?php the_post_thumbnail_url('btc_large') ?>" alt="" />
+    <div class="content">
+    <p class="breadcrub">Home / Our Products / Active Wear</p>
+    <div class="heading">
+        <p style="color: #00000099"><?php the_title(); ?></p>
+        <h1 style="color: #4d6144">
+            <?php the_field('sub_title'); ?>
+        </h1>
+    </div>
+    </div>
+</section>
 
 <?php get_template_part( 'components/spot_light' );?>
 <?php get_template_part( 'components/category_products' );?>
 <?php get_template_part( 'components/other_categories' );?>
 
 
-<?php
+<section id="faqs">
+      <img src="../assets/BTC_pattern.png" alt="" />
+      <div class="heading">
+        <p>Your Questions, Answered</p>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="accordian">
+        <div
+          class="faq default-open"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          ">
+          <div class="head">
+            <p>Do you offer private label manufacturing for fashion brands?</p>
+            <img
+              class="menu open"
+              src="../assets/arow_donw.svg"
+              alt="clase icon" />
+          </div>
+          <div class="ans" style="display: none">
+            <p>
+              Our MOQ typically starts from 500 to 1,000 pieces per style,
+              depending on the fabric, design complexity, and print or
+              embellishment requirements.
+            </p>
+          </div>
+        </div>
+        <div
+          class="faq"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          ">
+          <div class="head">
+            <p>What is your minimum order quantity (MOQ)?</p>
+            <img
+              class="menu open"
+              src="../assets/arow_donw.svg"
+              alt="clase icon" />
+          </div>
+          <div class="ans" style="display: none">
+            <p>
+              Our MOQ typically starts from 500 to 1,000 pieces per style,
+              depending on the fabric, design complexity, and print or
+              embellishment requirements.
+            </p>
+          </div>
+        </div>
+        <div
+          class="faq"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          ">
+          <div class="head">
+            <p>
+              Can you support startups or small brands with lower quantities?
+            </p>
+            <img
+              class="menu open"
+              src="../assets/arow_donw.svg"
+              alt="clase icon" />
+          </div>
+          <div class="ans" style="display: none">
+            <p>
+              Our MOQ typically starts from 500 to 1,000 pieces per style,
+              depending on the fabric, design complexity, and print or
+              embellishment requirements.
+            </p>
+          </div>
+        </div>
+        <div
+          class="faq"
+          style="
+            translate: none;
+            rotate: none;
+            scale: none;
+            transform: translate(0px, 0px);
+            opacity: 1;
+          ">
+          <div class="head">
+            <p>Do you provide design or product development services?</p>
+            <img
+              class="menu open"
+              src="../assets/arow_donw.svg"
+              alt="clase icon" />
+          </div>
+          <div class="ans" style="display: none">
+            <p>
+              Our MOQ typically starts from 500 to 1,000 pieces per style,
+              depending on the fabric, design complexity, and print or
+              embellishment requirements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+<!-- <?php
 $faqs = get_post_meta(get_the_ID(), 'category_faqs', true);
 
 if (!empty($faqs)) {
@@ -28,7 +147,7 @@ if (!empty($faqs)) {
     }
     echo '</ul></div>';
 }
-?>
+?> -->
 <?php get_template_part( 'components/clients' );?>
 <?php
 get_footer();

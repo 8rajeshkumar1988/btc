@@ -1,9 +1,37 @@
+ <section id="explore_other_categories">
+      <div class="explore_other_head">
+        <div class="heading">
+          <h2>Explore Other Categories</h2>
+        </div>
+        <div class="explore_other_buttons">
+          <button class="explore_other-prev">
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
+          </button>
+          <button class="explore_other-next">
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
+          </button>
+        </div>
+      </div>
+      <div class="explore_other_categories_container">
+        <div class="swiper explore_other_categories">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide category_item">
+              <a href="./index.html" class="category_image">
+                <img src="../assets/category_item.png" alt="" />
+                <p class="cta">
+                  explore More <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" />
+                </p>
+              </a>
+              <a href="./index.html" class="category_title">Active Wear</a>
+            </div>
+            
+          </div>
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+      </div>
+    </section>
 
-<br/>
 
-Other Category
-
-<br/>
 <?php $category_id = get_the_ID();
 
 ?>

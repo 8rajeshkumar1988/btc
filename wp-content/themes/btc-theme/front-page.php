@@ -99,7 +99,7 @@ get_header();
 
 
     <section id="sustainabiltyStandard">
-        <img src="./assets/sustain_back_svg.png" alt="" class="back_svg">
+        <img src="<?php echo get_template_directory_uri() . '/assets/images/sustain_back_svg.png'; ?>" alt="" class="back_svg">
         <div class="leftContent">
             <div class="heading">
                 <p>Sustainability Standards</p>
@@ -175,7 +175,7 @@ get_header();
     </section>
 
     <section id="ourCapabilities">
-        <img src="./assets/capabilities_back.png" alt="" class="back">
+        <img src="<?php echo get_template_directory_uri() . '/assets/images/capabilities_back.png'; ?>" alt="" class="back">
         <div class="leftContent heading">
             <p>Our Capabilities</p>
             <h3>From Farm <br>To Fashion</h3>

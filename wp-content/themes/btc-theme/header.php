@@ -52,6 +52,6 @@
 
 <body <?php body_class(); ?>>
   <header class="site-header">
-    Header
+
 
   </header>

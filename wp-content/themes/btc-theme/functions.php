@@ -9,6 +9,7 @@ function btc_files() {
     wp_enqueue_script( 'btc-ScrollToPlugin', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js' );
     wp_enqueue_script( 'btc-ScrollToPlugin', '//unpkg.com/split-type' );
     wp_enqueue_script( 'main-btc-js', get_theme_file_uri( '/assets/js/main.js' ) );
+    wp_enqueue_style( 'btc_main_swiper', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css' );
     if (is_front_page() ) {
         wp_enqueue_script( 'main-homepage-js', get_theme_file_uri( '/assets/homepage/script.js' ) );
     }
@@ -17,9 +18,18 @@ function btc_files() {
     //   wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
     wp_enqueue_style( 'btc_main_styles', get_theme_file_uri( '/assets/css/common.css' ) );
     if (is_front_page() ) {
-        wp_enqueue_style( 'btc_homepage_swiper', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css' );
         wp_enqueue_style( 'btc_homepage_styles', get_theme_file_uri( '/assets/homepage/style.css' ) );
     }
+    if(is_page('products') ) {
+        wp_enqueue_style( 'btc_product_styles', get_theme_file_uri( '/assets/product-category/style.css' ) );
+        wp_enqueue_style( 'btc_product_script', get_theme_file_uri( '/assets/product-category/script.js' ) );
+    }
+    if ( strpos( $_SERVER['REQUEST_URI'], '/products/' ) !== false ) {
+        wp_enqueue_style( 'btc_product_styles', get_theme_file_uri( '/assets/product-detail/style.css' ) );
+        wp_enqueue_script( 'btc_product_script', get_theme_file_uri( '/assets/product-detail/script.js' ), [], false, true );
+    }
+
+
 
     //   wp_enqueue_style( 'btc_extra_styles', get_theme_file_uri( '/assets/index.css' ) );
 }
