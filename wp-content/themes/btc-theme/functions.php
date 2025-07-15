@@ -56,6 +56,17 @@ function btc_files()
         );
     }
 
+    if (is_page('sustainability')) {
+        wp_enqueue_style('btc_sustainability_styles', get_theme_file_uri('/assets/sustainbility/style.css'));
+        wp_enqueue_script(
+            'btc_sustainability_script', // Handle
+            get_theme_file_uri('/assets/sustainbility/script.js'), // JS file path
+            array(), // Dependencies (e.g., array('jquery'))
+            null, // Version (or use '1.0')
+            true // Load in footer (true = footer, false = header)
+        );
+    }
+
 
 
     //   wp_enqueue_style( 'btc_extra_styles', get_theme_file_uri( '/assets/index.css' ) );
