@@ -73,14 +73,14 @@ get_header();
                             while( $clients->have_posts() ) {
                                 $clients->the_post(); 
                                 ?>
-                                <!-- <a href = "<?php the_permalink(); ?>"><img title= "<?php the_title(); ?>" class = 'category__image' src = "<?php the_post_thumbnail_url('btc_medium') ?>"></a> -->
+                                
                                  <div class="swiper-slide items">
                                     <div>
-                                        <img title= "<?php the_title(); ?>" src = "<?php the_post_thumbnail_url('btc_medium') ?>" alt="">
-                                        <p class="title">Activewear</p>
+                                        <img title= "<?php the_title(); ?>" src = "<?php the_post_thumbnail_url('btc_medium') ?>" alt="<?php the_title(); ?>">
+                                        <p class="title"><?php the_title(); ?></p>
                                         <a href = "<?php the_permalink(); ?>" class="cta">View range<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
                                     </div>
-                                    <p>Activewear</p>
+                                    <p><?php the_title(); ?></p>
                                 </div>
                                 <?php
                             }
