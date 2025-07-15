@@ -9,20 +9,19 @@ the_post();
 
     if ($banner_video) {
         echo '<video playsinline autoplay muted loop src="' . esc_url($banner_video['url']) . '"></video>';
-        
-    } else  if(has_post_thumbnail()) {
+    } else  if (has_post_thumbnail()) {
         $banner_image_id   = get_post_thumbnail_id();
-		$banner_image = array(
-			'url' => wp_get_attachment_image_url( $banner_image_id, 'full' ),
-			'alt' => get_post_meta( $banner_image_id, '_wp_attachment_image_alt', true ),
-		);
-       echo '<img src="' . esc_url($banner_image['url']) . '" alt="' . esc_attr($banner_image['alt']) . '">';
+        $banner_image = array(
+            'url' => wp_get_attachment_image_url($banner_image_id, 'full'),
+            'alt' => get_post_meta($banner_image_id, '_wp_attachment_image_alt', true),
+        );
+        echo '<img src="' . esc_url($banner_image['url']) . '" alt="' . esc_attr($banner_image['alt']) . '">';
     }
 
     ?>
 
 
-    
+
     <div class="content">
         <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / About Us</p>
         <div class="heading">
@@ -123,62 +122,53 @@ the_post();
         </p>
     </div>
 </section>
-<section id="our_leadership">
-    <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" />
-    <div class="heading">
-        <p>Our Leadership</p>
-        <h2>Visionaries Shaping the Future</h2>
-    </div>
-    <div class="our_leadership_container">
-        <div class="leader_card">
-            <div class="leader_image">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/leadership/Joshi Vireshwar.jpg"  ?>" alt="" />
-            </div>
-            <div class="leader_detail">
-                <h2 class="leader_title">Joshi Vireshwar</h2>
-                <p class="leader_description">Chief Operating Officer</p>
-            </div>
+
+
+<?php
+
+$leaderships = new WP_Query(array(
+    'posts_per_page' => -1,
+    'post_type' => 'leadership',
+    'orderby' => 'title',
+    'post_status'    => 'publish',
+    'meta_key'       => '_sort_order',
+    'orderby'        => 'meta_value_num',
+    'order'          => 'ASC',
+
+));
+if ($leaderships->have_posts()) {
+?>
+    <section id="our_leadership">
+        <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" />
+        <div class="heading">
+            <p>Our Leadership</p>
+            <h2>Visionaries Shaping the Future</h2>
         </div>
-        <div class="leader_card">
-            <div class="leader_image">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/leadership/Vikas Budhiraja.jpg"  ?>" alt="" />
-            </div>
-            <div class="leader_detail">
-                <h2 class="leader_title">Vikas Budhiraja</h2>
-                <p class="leader_description">Senior Vice President, Marketing</p>
-            </div>
+        <div class="our_leadership_container">
+
+            <?php while ($leaderships->have_posts()) {
+                $leaderships->the_post(); ?>
+                <div class="leader_card">
+                    <div class="leader_image">
+                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" />
+                    </div>
+                    <div class="leader_detail">
+                        <h2 class="leader_title"><?php the_title(); ?></h2>
+                        <?php the_content(); ?>
+                        <!-- <p class="leader_description">Chief Operating Officer</p> -->
+                    </div>
+                </div>
+            <?php
+            }
+
+            wp_reset_postdata();
+            ?>
+
+
         </div>
-        <div class="leader_card">
-            <div class="leader_image">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/leadership/R. Periyaponnan.jpg" ?>" alt="" />
-            </div>
-            <div class="leader_detail">
-                <h2 class="leader_title">R. Periyaponnan</h2>
-                <p class="leader_description">Head of Textile Operations</p>
-            </div>
-        </div>
-        <div class="leader_card">
-            <div class="leader_image">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/leadership/Landry Echui.jpg" ?>" alt="" />
-            </div>
-            <div class="leader_detail">
-                <h2 class="leader_title">Landry Echui</h2>
-                <p class="leader_description">Chief Financial Officer</p>
-            </div>
-        </div>
-        <div class="leader_card">
-            <div class="leader_image">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/leadership/Girish Sannappa.jpg" ?>" alt="" />
-            </div>
-            <div class="leader_detail">
-                <h2 class="leader_title">Girish Sannappa</h2>
-                <p class="leader_description">
-                    Sr. General Manager for Garmenting Operations
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+<?php }
+?>
 <section id="product_page_details">
     <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="" />
     <div class="heading">
