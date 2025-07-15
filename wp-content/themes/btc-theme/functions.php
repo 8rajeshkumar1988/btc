@@ -202,3 +202,5 @@ function remove_view_link_from_product_list($actions, $post)
     return $actions;
 }
 add_filter('post_row_actions', 'remove_view_link_from_product_list', 10, 2);
+
+
