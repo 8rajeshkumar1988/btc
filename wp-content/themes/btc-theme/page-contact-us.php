@@ -18,7 +18,7 @@ the_post();
         );
         echo '<img src="' . esc_url($banner_image['url']) . '" alt="' . esc_attr($banner_image['alt']) . '">';
     }
-
+    
     ?>
     <div class="content">
         <!-- <p class="breadcrub">Home / Sustainability</p> -->

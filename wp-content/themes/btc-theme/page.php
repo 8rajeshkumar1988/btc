@@ -3,7 +3,7 @@
 get_header();
 
 ?>
-Static Page
+<?php the_content() ?>
 
 <?php
 get_footer();

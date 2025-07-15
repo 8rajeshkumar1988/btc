@@ -8,7 +8,7 @@ function btc_files()
     wp_enqueue_script('btc-gsap', '//cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js');
     wp_enqueue_script('btc-ScrollTrigger', '//cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js');
     wp_enqueue_script('btc-ScrollToPlugin', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js');
-    wp_enqueue_script('btc-ScrollToPlugin', '//unpkg.com/split-type');
+    wp_enqueue_script('btc-splitType', '//unpkg.com/split-type');
     wp_enqueue_script('main-btc-js', get_theme_file_uri('/assets/js/main.js'));
     wp_enqueue_style('btc_main_swiper', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
     if (is_front_page()) {
@@ -66,6 +66,7 @@ function btc_files()
             true // Load in footer (true = footer, false = header)
         );
     }
+    
 
 
 

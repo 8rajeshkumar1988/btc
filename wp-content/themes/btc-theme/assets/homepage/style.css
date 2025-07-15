@@ -258,7 +258,7 @@
 }
 #sustainabiltyStandard .accordian .faq .ans ul,
 #sustainabiltyStandard .accordian .faq .ans ol {
-  padding-left: 1.2rem;
+  padding-left: 1.4rem;
 }
 #sustainabiltyStandard .accordian .faq.default-open .head .open {
   transform: rotateX(180deg);
@@ -321,7 +321,6 @@
   display: grid;
   grid-template-columns: auto auto;
   gap: 80px;
-  align-items: center;
 }
 #ourCapabilities .swiper-slide .empty {
   height: 100%;
