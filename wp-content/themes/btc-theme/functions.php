@@ -23,15 +23,37 @@ function btc_files()
     }
     if (is_page('products')) {
         wp_enqueue_style('btc_product_styles', get_theme_file_uri('/assets/product-category/style.css'));
-        wp_enqueue_style('btc_product_script', get_theme_file_uri('/assets/product-category/script.js'));
+        wp_enqueue_script('btc_product_script', get_theme_file_uri('/assets/product-category/script.js'));
     }
     // if (is_singular('category')) {
     //     echo "You are on a single Category post type page";
     // }
     if (is_singular('category')) {
-       
-        wp_enqueue_style('btc_product_styles', get_theme_file_uri('/assets/product-detail/style.css'));
-        wp_enqueue_script('btc_product_script', get_theme_file_uri('/assets/product-detail/script.js'), [], false, true);
+
+        wp_enqueue_style('btc_category_styles', get_theme_file_uri('/assets/product-detail/style.css'));
+        wp_enqueue_script('btc_category_script', get_theme_file_uri('/assets/product-detail/script.js'), [], false, true);
+    }
+
+    if (is_page('about-us')) {
+        wp_enqueue_style('btc_about_styles', get_theme_file_uri('/assets/about-us/style.css'));
+        wp_enqueue_script(
+            'btc_about_script', // Handle
+            get_theme_file_uri('/assets/about-us/script.js'), // JS file path
+            array(), // Dependencies (e.g., array('jquery'))
+            null, // Version (or use '1.0')
+            true // Load in footer (true = footer, false = header)
+        );
+    }
+
+    if (is_page('contact-us')) {
+        wp_enqueue_style('btc_contact_styles', get_theme_file_uri('/assets/contact-us/style.css'));
+        wp_enqueue_script(
+            'btc_contact_script', // Handle
+            get_theme_file_uri('/assets/contact-us/script.js'), // JS file path
+            array(), // Dependencies (e.g., array('jquery'))
+            null, // Version (or use '1.0')
+            true // Load in footer (true = footer, false = header)
+        );
     }
 
 
