@@ -121,7 +121,7 @@ function setInitialLayout() {
     setInitialLayout();
 
     // ✅ Swirl animation triggered by center image click
-    images[0].addEventListener('click', () => {
+    document.getElementById('exploreWhatWeDo').addEventListener('click', () => {
         // Prevent replay if already played
         if (swirlTimeline && swirlTimeline.progress() === 1) return;
 
