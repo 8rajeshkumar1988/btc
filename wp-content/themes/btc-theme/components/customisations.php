@@ -1,150 +1,150 @@
  <section id="customization">
-    <img src="../assets/BTC_pattern.png" alt="" />
-    <div class="heading">
-    <p>Customisations</p>
-    <h2>Flexibility Woven In</h2>
-    </div>
-    <div class="customization_container">
-     <div class="customization_buttons">
-    <?php
-
-$cats = new WP_Query( array(
-    'posts_per_page' => -1,
-    'post_type' => 'customiz_category',
-    'orderby' => 'title',
-    'post_status'    => 'publish',
-    'meta_key'       => '_sort_order',
-    'orderby'        => 'meta_value_num',
-    'order'          => 'ASC',
-
-) );
-
-if ( $cats->have_posts() ) {
-    $counter=1;
-    while( $cats->have_posts() ) {
-        $cats->the_post();
-        $category_id = get_the_ID();
-        $title=get_the_title();
-        $titles=explode(" ",$title);
-        $title_name=strtolower($titles[0]);
-       
-        
-
-        ?>
-        <button class="cta <?php echo $counter==1?"active":"unactive" ?>" data-tab="<?php echo $title_name; ?>"> <?php the_title();?></button>
-         
-    <?php  $counter++; } ?>
-    </div>  
-    <?php 
-    $counter=1;
-     while( $cats->have_posts() ) {
-        $cats->the_post();
-        $category_id = get_the_ID();
-        $title=get_the_title();
-        $titles=explode(" ",$title);
-        $title_name=strtolower($titles[0]);
-       
-    ?>    
-      <div class="customization_text <?php echo $counter==1?"active":"" ?>" id="<?php echo $title_name; ?>_text">
-        <?php echo get_the_content(); ?>
+     <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" />
+     <div class="heading">
+         <p>Customisations</p>
+         <h2>Flexibility Woven In</h2>
      </div>
-<?php
- $counter++;
-     }
-     $counter=1;
-while( $cats->have_posts() ) {
-        $cats->the_post();
-        $category_id = get_the_ID();
-        $title=get_the_title();
-        $titles=explode(" ",$title);
-        $title_name=strtolower($titles[0]);
-        ?> 
-         <div class="customization_cards <?php echo $counter==1?"active":"unactive" ?>" id="<?php echo $title_name; ?>">
+     <div class="customization_container">
+         <div class="customization_buttons">
+             <?php
 
-       <?php
-        $products = new WP_Query( [
-            'post_type'      => 'customization_type',
-            'posts_per_page' => -1,       
-            'meta_query'     => [
-                [
-                    'key'     => '_customiz_category_id',
-                    'value'   => $category_id,
-                    'compare' => '=',
-                ],
-            ],
-        ] );
-        if ( $products->have_posts() ) {?>
-        
-        
-       
-        <?php 
-        
-        while ( $products->have_posts() ) {
-                $products->the_post();
+                $cats = new WP_Query(array(
+                    'posts_per_page' => -1,
+                    'post_type' => 'customiz_category',
+                    'orderby' => 'title',
+                    'post_status'    => 'publish',
+                    'meta_key'       => '_sort_order',
+                    'orderby'        => 'meta_value_num',
+                    'order'          => 'ASC',
+
+                ));
+
+                if ($cats->have_posts()) {
+                    $counter = 1;
+                    while ($cats->have_posts()) {
+                        $cats->the_post();
+                        $category_id = get_the_ID();
+                        $title = get_the_title();
+                        $titles = explode(" ", $title);
+                        $title_name = strtolower($titles[0]);
+
+
+
                 ?>
-                  <div class="customization_card">
-                    <?php 
-                     if ( has_post_thumbnail() ) {
-                    the_post_thumbnail( 'thumbnail' );
-                }
-                    
-                    ?>
-                    <div>
-                        <strong><?php the_title(); ?></strong> <br />
-                       <?php the_content(); ?>
-                    </div>
-                </div>
+                     <button class="cta <?php echo $counter == 1 ? "active" : "unactive" ?>" data-tab="<?php echo $title_name; ?>"> <?php the_title(); ?></button>
 
-               <?php
-                
+                 <?php $counter++;
+                    } ?>
+         </div>
+         <?php
+                    $counter = 1;
+                    while ($cats->have_posts()) {
+                        $cats->the_post();
+                        $category_id = get_the_ID();
+                        $title = get_the_title();
+                        $titles = explode(" ", $title);
+                        $title_name = strtolower($titles[0]);
 
-               
+            ?>
+             <div class="customization_text <?php echo $counter == 1 ? "active" : "" ?>" id="<?php echo $title_name; ?>_text">
+                 <?php echo get_the_content(); ?>
+             </div>
+         <?php
+                        $counter++;
+                    }
+                    $counter = 1;
+                    while ($cats->have_posts()) {
+                        $cats->the_post();
+                        $category_id = get_the_ID();
+                        $title = get_the_title();
+                        $titles = explode(" ", $title);
+                        $title_name = strtolower($titles[0]);
+            ?>
+             <div class="customization_cards <?php echo $counter == 1 ? "active" : "unactive" ?>" id="<?php echo $title_name; ?>">
 
-              
-            }
-   
-       
-        
-        ?>
-        
-       
-        
+                 <?php
+                        $products = new WP_Query([
+                            'post_type'      => 'customization_type',
+                            'posts_per_page' => -1,
+                            'meta_query'     => [
+                                [
+                                    'key'     => '_customiz_category_id',
+                                    'value'   => $category_id,
+                                    'compare' => '=',
+                                ],
+                            ],
+                        ]);
+                        if ($products->have_posts()) { ?>
 
-    <!-- <div style="justify-content: flex-end" class="customization_card">
+
+
+                     <?php
+
+                            while ($products->have_posts()) {
+                                $products->the_post();
+                        ?>
+                         <div class="customization_card">
+                             <?php
+                                if (has_post_thumbnail()) {
+                                    the_post_thumbnail('thumbnail');
+                                }
+
+                                ?>
+                             <div>
+                                 <strong><?php the_title(); ?></strong> <br />
+                                 <?php the_content(); ?>
+                             </div>
+                         </div>
+
+                     <?php
+
+
+
+
+
+                            }
+
+
+
+                        ?>
+
+
+
+
+                     <!-- <div style="justify-content: flex-end" class="customization_card">
         <button class="cta">
             Start Customizing Today
             <img src="../assets/right_arrow.svg" alt="" />
         </button>
         </div>
     </div> -->
-    
-     <?php
 
-           
-            
-          
-            wp_reset_postdata();
-
-        }
-
-       
-       $counter++;
-       echo "</div>";
-    }
-}
-wp_reset_postdata();
-?>
+         <?php
 
 
-   
-        
-       
-    
-   
-   
-    
 
-    <!-- <div class="customization_cards" id="yarn">
+
+                            wp_reset_postdata();
+                        }
+
+
+                        $counter++;
+                        echo "</div>";
+                    }
+                }
+                wp_reset_postdata();
+            ?>
+
+
+
+
+
+
+
+
+
+
+         <!-- <div class="customization_cards" id="yarn">
         <div class="customization_card">
             <img src="../assets/fabric1.png" alt="" />
             <p>
@@ -223,9 +223,6 @@ wp_reset_postdata();
         </button>
         </div>
     </div> -->
-    
-    </div>
-</section>
 
-
-
+             </div>
+ </section>
