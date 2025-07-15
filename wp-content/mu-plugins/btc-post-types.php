@@ -133,7 +133,7 @@ function university_post_types() {
 
     register_post_type('homecapability', array(
         'show_in_rest' => true,
-        'supports' => array( 'title', 'editor','thumbnail'),
+        'supports' => array( 'title','thumbnail'),
         'has_archive' => true,
         'public' => true,
         'labels' => array(
@@ -602,3 +602,6 @@ function get_attachment_id_from_url( $url ) {
     
     return isset( $attachment[ 0 ] ) ? $attachment[ 0 ] : false;
 }
+
+
+

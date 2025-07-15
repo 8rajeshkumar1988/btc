@@ -213,7 +213,7 @@ get_header();
                             <div class="text">
                                 <h3><?php the_title(); ?></h3>
                                 <img class="line" src="<?php echo get_template_directory_uri() . '/assets/images/line.svg'; ?>" alt="">
-                                <?php the_content(); ?>
+                                <?php echo get_field('content'); ?>
                             </div>
                         </div>
                         <?php
