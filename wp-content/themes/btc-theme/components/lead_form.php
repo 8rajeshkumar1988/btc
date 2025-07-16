@@ -1,27 +1,27 @@
-<form action="">
+<form id="aa-lead-form">
     <div>
         <label for="name">Name</label>
         <br />
-        <input id="name" type="text" placeholder="Enter your name" />
+        <input id="name" name="name" type="text" placeholder="Enter your name" required />
     </div>
     <div>
         <label for="email">Email</label>
         <br />
-        <input id="email" type="email" placeholder="Enter your email" />
+        <input id="email"  name="email" type="email" placeholder="Enter your email" required />
     </div>
     <div>
         <label for="enquiry_type">Enquiry Type</label>
         <br />
-        <select id="enquiry_type">
-            <option value="general">General Enquiry</option>
-            <option value="product">Product Enquiry</option>
-            <option value="order">Order Enquiry</option>
+        <select id="enquiry_type" name="enquiry_type" required >
+            <option value="General">General</option>
+            <option value="Business">Business</option>
+            <option value="Careers">Careers</option>
         </select>
     </div>
     <div>
         <label for="phone">Phone Number</label>
         <br />
-        <input id="phone" type="tel" placeholder="Enter your phone number" />
+        <input id="phone" name="phone"   type="tel" placeholder="Enter your phone number" required />
     </div>
     <div>
         <label for="company">Company Name</label>
@@ -29,6 +29,7 @@
         <input
             id="company"
             type="text"
+            name="company_name" 
             placeholder="Enter your company name" />
     </div>
 
@@ -43,6 +44,7 @@
         <input
             id="whatsapp_number"
             type="tel"
+            name="whatsapp"  
             placeholder="Enter your Whatsapp number" />
     </div>
     <div>
@@ -51,6 +53,7 @@
         <input
             id="Organization"
             type="text"
+            name="org_type" 
             placeholder="Enter your Organization Type" />
     </div>
     <div class="textareaDiv">
@@ -59,11 +62,12 @@
         <textarea
             id="requirements"
             rows="3"
+            name="requirements"
             placeholder="Enter your requirements"></textarea>
     </div>
     <div>
         <div class="policy_container">
-            <input type="checkbox" id="policy_checkbox" />
+            <input type="checkbox" id="policy_checkbox" required name="tandc" />
             <label for="policy_checkbox">
                 I agree to the BTC privacy policy.*
             </label>
@@ -71,7 +75,7 @@
     </div>
     <div>
         <div class="e_com_btc">
-            <input type="checkbox" id="e_com_btc" />
+            <input type="checkbox" id="e_com_btc" name="e_com_btc" />
             <label for="e_com_btc">
                 I agree to receive e-communications from BTC.
             </label>

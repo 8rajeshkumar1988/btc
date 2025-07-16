@@ -241,12 +241,18 @@ function aa_ajax_save_lead()
     $email        = sanitize_email($_POST['email'] ?? '');
     $enquiry_type = sanitize_text_field($_POST['enquiry_type'] ?? '');
     $phone        = sanitize_text_field($_POST['phone'] ?? '');
-    $company      = sanitize_text_field($_POST['company'] ?? '');
+    $company_name      = sanitize_text_field($_POST['company_name'] ?? '');
     $requirements = sanitize_textarea_field($_POST['requirements'] ?? '');
     $whatsapp     = sanitize_text_field($_POST['whatsapp'] ?? '');
     $org_type     = sanitize_text_field($_POST['org_type'] ?? '');
     $source_url = sanitize_text_field($_POST['source_url'] ?? '');
-    $i_agree_to_receive_e= sanitize_text_field($_POST['i_agree_to_receive_e-communications_from_btc'] ?? '');
+    $i_agree_to_receive_e= sanitize_text_field($_POST['e_com_btc'] ?? false);
+    $tandc= sanitize_text_field($_POST['tandc'] ?? false);
+
+    if (!$tandc) {
+        wp_send_json_error('Please accept terms and conditions.');
+    } 
+
     if (empty($name) || empty($email)) {
         wp_send_json_error('Name and Email are required.');
     }
@@ -266,12 +272,13 @@ function aa_ajax_save_lead()
     update_field('email', $email, $post_id);
     update_field('enquiry_type', $enquiry_type, $post_id);
     update_field('phone_number', $phone, $post_id);
-    update_field('company_name', $company, $post_id);
+    update_field('company_name', $company_name, $post_id);
     update_field('requirements', $requirements, $post_id);
-    update_field('whatsapp_no', $whatsapp, $post_id);
+    update_field('whatsapp_number', $whatsapp, $post_id);
     update_field('organization_type', $org_type, $post_id);
     update_field('source_url', $source_url, $post_id);
     update_field('i_agree_to_receive_e-communications_from_btc', $i_agree_to_receive_e, $post_id);
+    update_field('i_agree_to_the_btc_privacy_policy', $tandc, $post_id);
     update_field('created_on', $dt_ist->format('Y-m-d H:i'), $post_id);
 
     wp_send_json_success('Lead saved. Thank you!');

@@ -657,7 +657,7 @@ function aa_lead_custom_columns($columns) {
         'name'            => 'Name',
         'email'           => 'Email',
         'phone_number'    => 'Phone',
-        'company'         => 'Company',
+        'company_name'         => 'Company',
         'requirements'         => 'Requirements',
         'whatsapp_number'         => 'Whatsapp Number',
         'organization_type'         => 'Organization Type',
@@ -682,8 +682,8 @@ function aa_lead_custom_column_content($column, $post_id) {
         case 'phone_number':
             echo esc_html(get_field('phone_number', $post_id));
             break;
-        case 'company':
-            echo esc_html(get_field('company', $post_id));
+        case 'company_name':
+            echo esc_html(get_field('company_name', $post_id));
             break;
         case 'requirements':
             echo esc_html(get_field('requirements', $post_id));
