@@ -199,6 +199,11 @@ function remove_view_link_from_product_list($actions, $post)
     if ($post->post_type === 'client') {
         unset($actions['view']);
     }
+    if ($post->post_type === 'infra_legacy_pointer') {
+        unset($actions['view']);
+    }
+
+    
 
     return $actions;
 }

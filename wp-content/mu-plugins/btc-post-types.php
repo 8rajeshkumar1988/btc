@@ -163,6 +163,22 @@ function university_post_types() {
     ) );
 
 
+    register_post_type('infra_legacy_pointer', array(
+        'show_in_rest' => true,
+        'supports' => array( 'title'),
+        'has_archive' => true,
+        'public' => true,
+        'labels' => array(
+            'name' => 'Infra Legacy Pointers',
+            'add_new_item' => 'Add New',
+            'edit_item' => 'Edit',
+            'all_items' => 'All Pointers',
+            'singular_name' => 'Infra Legacy Pointer'
+        ),
+        'menu_icon' => 'dashicons-embed-post'
+    ) );
+
+
 
    
 
@@ -297,7 +313,7 @@ function my_custom_meta_box() {
         'sort_order_meta',                  // ID
         'Sort Order',                       // Title
         'render_sort_order_meta_box',      // Callback
-        ['client','category','customization_type','leadership','homecapability','product','customiz_category','socialmedia'],                // Post types
+        ['client','category','customization_type','leadership','homecapability','product','customiz_category','socialmedia','infra_legacy_pointer'],                // Post types
         'side',                             // Context: 'side' = right sidebar
         'default'                           // Priority
     ); 

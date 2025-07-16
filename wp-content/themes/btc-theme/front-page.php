@@ -14,64 +14,7 @@ get_header();
     </div>
 </section>
 
-<section id="aboutBtc">
-    <img class="worldMap" src="<?php echo get_template_directory_uri() . '/assets/images/world map.svg'; ?>" alt="">
-    <div class="content">
-        <div class="headNum heading">
-            <p>ABOUT BTC</p>
-            <h2>Driven by Craft. <br>Powered by Scale.</h2>
-        </div>
-        <div class="sliderAbout swiper " >
-            <div class="slides_about swiper-wrapper">
-                <div class="tiles swiper-slide">
-                    <div>
-                        <p class="number">32,000</p>
-                        <p class="tag">High-Performance Spindles</p>
-                    </div>
-                    <div class="copy">
-                        <p>
-                            Our advanced spinning facility houses <span>32,000 high-performance spindles</span>,
-                            enabling us to
-                            produce high-quality yarn with precision and consistency.
-                        </p>
-                    </div>
-                </div>
-                <div class="tiles swiper-slide">
-                    <div>
-                        <p class="number">32,000</p>
-                        <p class="tag">High-Performance Spindles</p>
-                    </div>
-                    <div class="copy">
-                        <p>
-                            Our advanced spinning facility houses <span>32,000 high-performance spindles</span>,
-                            enabling us to
-                            produce high-quality yarn with precision and consistency.
-                        </p>
-                    </div>
-                </div>
-                <div class="tiles swiper-slide">
-                    <div>
-                        <p class="number">32,000</p>
-                        <p class="tag">High-Performance Spindles</p>
-                    </div>
-                    <div class="copy">
-                        <p>
-                            Our advanced spinning facility houses <span>32,000 high-performance spindles</span>,
-                            enabling us to
-                            produce high-quality yarn with precision and consistency.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="navigation_about">
-                <button class="prev"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
-                <button class="next"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
-            </div>
-        </div>
-        <button class="cta">Know More About BTC <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
-    </div>
-</section>
-
+<?php get_template_part('components/home_about_btc_section'); ?>
 
 <section id="ourProducts">
     <div class="heading">
@@ -102,7 +45,22 @@ get_header();
 
                         <div class="swiper-slide items">
                             <div>
-                                <img title="<?php the_title(); ?>" src="<?php the_post_thumbnail_url('btc_medium') ?>" alt="<?php the_title(); ?>">
+                                <?php
+                                $thumbnail_id = get_post_thumbnail_id();
+                                $image_url = wp_get_attachment_url($thumbnail_id);
+                                $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+                                $title_text = get_the_title($thumbnail_id);
+                                if (empty($alt_text)) {
+                                    $alt_text = get_the_title();
+                                }
+                                if (empty($title_text)) {
+                                    $title_text = get_the_title();
+                                }
+
+                                $image = '<img title="' . esc_attr($title_text) . '" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+                                echo  $image;
+
+                                ?>
                                 <p class="title"><?php the_title(); ?></p>
                                 <a href="<?php the_permalink(); ?>" class="cta">View range<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
                             </div>
@@ -232,8 +190,22 @@ get_header();
             ?>
 
                     <div class="swiper-slide swirl-img">
-                        <img title="<?php the_title(); ?>" class='homecapability__image spiralImage' src="<?php the_post_thumbnail_url('btc_large') ?>">
+                        <?php
+                        $thumbnail_id = get_post_thumbnail_id();
+                        $image_url = wp_get_attachment_url($thumbnail_id);
+                        $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+                        $title_text = get_the_title($thumbnail_id);
+                        if (empty($alt_text)) {
+                            $alt_text = get_the_title();
+                        }
+                        if (empty($title_text)) {
+                            $title_text = get_the_title();
+                        }
 
+                        $image = '<img class="homecapability__image spiralImage" title="' . esc_attr($title_text) . '" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+                        echo  $image;
+
+                        ?>
                         <div class="empty"></div>
                         <div class="text">
                             <h3><?php the_title(); ?></h3>

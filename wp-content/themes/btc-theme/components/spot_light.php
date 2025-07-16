@@ -29,15 +29,8 @@ if ($products->have_posts()) {
         <div class="swiper spotlight_slider">
             <div class="swiper-wrapper">
                 <?php
-
-
-
-                while ($products->have_posts()) : $products->the_post();
-
-                    $image_url = get_post_meta(get_the_ID(), '_spotlight_image', true);
-                    $attachment_id = $image_url ? attachment_url_to_postid($image_url) : false;
-
-                ?>
+                while ($products->have_posts()) {
+                    $products->the_post(); ?>
                     <div class="swiper-slide">
                         <div class="product_detail">
                             <div>
@@ -47,18 +40,27 @@ if ($products->have_posts()) {
                             <button class="cta">Get in Touch <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
                         </div>
                         <?php
+                        $image_url = get_post_meta(get_the_ID(), '_spotlight_image', true);
+                        $attachment_id = $image_url ? attachment_url_to_postid($image_url) : false;
+
                         if ($attachment_id) {
-                            echo wp_get_attachment_image($attachment_id, 'btc_large');
-                        } elseif ($image_url) {
-                            echo '<img src="' . esc_url($image_url) . '" alt="' . esc_attr(get_the_title()) . '">';
-                        } else {
-                            echo '<img src="' . get_theme_file_uri('/assets/placeholder.jpg') . '" alt="Placeholder">';
+                            $full_image_url = wp_get_attachment_image_url($attachment_id, 'full');
+                            $alt_text = get_post_meta($attachment_id, '_wp_attachment_image_alt', true);
+                            $title_text = get_the_title($attachment_id);
+                            if (empty($alt_text)) {
+                                $alt_text = get_the_title();
+                            }
+                            if (empty($title_text)) {
+                                $title_text = get_the_title();
+                            }
+
+                            echo '<img src="' . esc_url($full_image_url) . '" alt="' . esc_attr($alt_text) . '" title="' . esc_attr($title_text) . '">';
                         }
                         ?>
                     </div>
                 <?php
 
-                endwhile;
+                }
                 wp_reset_postdata();
 
                 ?>
