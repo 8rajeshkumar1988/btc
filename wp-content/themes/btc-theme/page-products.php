@@ -6,7 +6,27 @@ get_header();
   <?php
   the_post();
   if (has_post_thumbnail()) {
-    the_post_thumbnail('btc_large');
+    $thumbnail_id = get_post_thumbnail_id();
+    $image_url = wp_get_attachment_url($thumbnail_id);
+    $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+    $title_text = get_the_title($thumbnail_id);
+    if (empty($alt_text)) {
+      $alt_text = get_the_title();
+    }
+    if (empty($title_text)) {
+      $title_text = get_the_title();
+    }
+
+    $image = '<img title="' . esc_attr($title_text) . '" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+    echo $image;
+  }else{
+      $banner_video = get_field('banner_video');
+
+      if ($banner_video) {
+          echo '<video playsinline autoplay muted loop src="' . esc_url($banner_video['url']) . '"></video>';
+      }
+
+
   }
   ?>
   <!-- <img src="../assets/product_page_banner.jpg" alt="" /> -->
@@ -87,7 +107,27 @@ get_header();
         $tags_background_color_code = get_field('tags_background_color_code');
 
         // Thumbnail fallback
-        $image_url = get_the_post_thumbnail_url(get_the_ID(), 'btc_medium') ?: get_template_directory_uri() . '/assets/category_item.png';
+        #$image_url = get_the_post_thumbnail_url(get_the_ID(), 'btc_medium') ?: get_template_directory_uri() . '/assets/category_item.png';
+
+
+        if (has_post_thumbnail()) {
+          $thumbnail_id = get_post_thumbnail_id();
+          $image_url = wp_get_attachment_url($thumbnail_id);
+          $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+          $title_text = get_the_title($thumbnail_id);
+          if (empty($alt_text)) {
+            $alt_text = get_the_title();
+          }
+          if (empty($title_text)) {
+            $title_text = get_the_title();
+          }
+
+          $image = '<img title="' . esc_attr($title_text) . '" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+        } else {
+          $image = '<img src="' . get_template_directory_uri() . '/assets/category_item.png" alt="Category Item">';
+        }
+
+
 
         // Product tags query (custom post type 'product' with custom meta field '_category_id')
         $products = new WP_Query([
@@ -109,7 +149,7 @@ get_header();
 
         <div class="category_list_card">
           <a href="<?php the_permalink(); ?>" class="category_list_card_img">
-            <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>" />
+            <?php echo $image; ?>
             <p class="cta">Start your Line <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></p>
           </a>
 
