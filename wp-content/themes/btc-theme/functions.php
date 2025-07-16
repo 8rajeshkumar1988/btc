@@ -66,7 +66,7 @@ function btc_files()
             true // Load in footer (true = footer, false = header)
         );
     }
-    
+
 
 
 
@@ -79,9 +79,9 @@ function btc_features()
 {
     //   add_theme_support( 'title-tag' );
     add_theme_support('post-thumbnails');
-    add_image_size('thumbnail', 400, 400, true);
-    add_image_size('btc_medium', 800, 600, false);
-    add_image_size('btc_large', 1200, 800, true);
+    // add_image_size('thumbnail', 400, 400, true);
+    // add_image_size('btc_medium', 800, 600, false);
+    // add_image_size('btc_large', 1200, 800, true);
 
     add_image_size('metaimage', 1200, 630, true);
 }
@@ -199,9 +199,89 @@ function remove_view_link_from_product_list($actions, $post)
     if ($post->post_type === 'client') {
         unset($actions['view']);
     }
+    if ($post->post_type === 'infra_legacy_pointer') {
+        unset($actions['view']);
+    }
+
+
 
     return $actions;
 }
 add_filter('post_row_actions', 'remove_view_link_from_product_list', 10, 2);
 
 
+/**
+ * Enqueue lead‑submission JS on the front‑end.
+ */
+function aa_enqueue_lead_script()
+{
+    wp_enqueue_script(
+        'aa-lead-submit',
+        get_stylesheet_directory_uri() . '/assets/js/lead-submit.js',
+        array('jquery'),
+        '1.0',
+        true
+    );
+
+    wp_localize_script('aa-lead-submit', 'aaLead', array(
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'nonce'    => wp_create_nonce('aa_save_lead'),
+    ));
+}
+add_action('wp_enqueue_scripts', 'aa_enqueue_lead_script');
+
+
+
+// Save lead via AJAX
+function aa_ajax_save_lead()
+{
+    check_ajax_referer('aa_save_lead', 'nonce');
+
+    $name         = sanitize_text_field($_POST['name'] ?? '');
+    $email        = sanitize_email($_POST['email'] ?? '');
+    $enquiry_type = sanitize_text_field($_POST['enquiry_type'] ?? '');
+    $phone        = sanitize_text_field($_POST['phone'] ?? '');
+    $company_name      = sanitize_text_field($_POST['company_name'] ?? '');
+    $requirements = sanitize_textarea_field($_POST['requirements'] ?? '');
+    $whatsapp     = sanitize_text_field($_POST['whatsapp'] ?? '');
+    $org_type     = sanitize_text_field($_POST['org_type'] ?? '');
+    $source_url = sanitize_text_field($_POST['source_url'] ?? '');
+    $i_agree_to_receive_e= sanitize_text_field($_POST['e_com_btc'] ?? false);
+    $tandc= sanitize_text_field($_POST['tandc'] ?? false);
+
+    if (!$tandc) {
+        wp_send_json_error('Please accept terms and conditions.');
+    } 
+
+    if (empty($name) || empty($email)) {
+        wp_send_json_error('Name and Email are required.');
+    }
+    $dt_ist = new DateTime('now', new DateTimeZone('Asia/Kolkata'));
+    $post_id = wp_insert_post([
+        'post_type'   => 'lead',
+        'post_status' => 'publish',
+        'post_title'  => $name . ' – ' . $dt_ist->format('Y-m-d H:i'),
+    ]);
+
+    if (is_wp_error($post_id)) {
+        wp_send_json_error($post_id->get_error_message());
+    }
+
+    // Save ACF fields
+    update_field('name', $name, $post_id);
+    update_field('email', $email, $post_id);
+    update_field('enquiry_type', $enquiry_type, $post_id);
+    update_field('phone_number', $phone, $post_id);
+    update_field('company_name', $company_name, $post_id);
+    update_field('requirements', $requirements, $post_id);
+    update_field('whatsapp_number', $whatsapp, $post_id);
+    update_field('organization_type', $org_type, $post_id);
+    update_field('source_url', $source_url, $post_id);
+    update_field('i_agree_to_receive_e-communications_from_btc', $i_agree_to_receive_e, $post_id);
+    update_field('i_agree_to_the_btc_privacy_policy', $tandc, $post_id);
+    update_field('created_on', $dt_ist->format('Y-m-d H:i'), $post_id);
+
+    wp_send_json_success('Lead saved. Thank you!');
+}
+add_action('wp_ajax_save_lead', 'aa_ajax_save_lead');
+add_action('wp_ajax_nopriv_save_lead', 'aa_ajax_save_lead');

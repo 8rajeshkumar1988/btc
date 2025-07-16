@@ -11,14 +11,21 @@ the_post();
     if ($banner_video) {
         echo '<video playsinline autoplay muted loop src="' . esc_url($banner_video['url']) . '"></video>';
     } else  if (has_post_thumbnail()) {
-        $banner_image_id   = get_post_thumbnail_id();
-        $banner_image = array(
-            'url' => wp_get_attachment_image_url($banner_image_id, 'full'),
-            'alt' => get_post_meta($banner_image_id, '_wp_attachment_image_alt', true),
-        );
-        echo '<img src="' . esc_url($banner_image['url']) . '" alt="' . esc_attr($banner_image['alt']) . '">';
+        $thumbnail_id = get_post_thumbnail_id();
+        $image_url = wp_get_attachment_url($thumbnail_id);
+        $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+        $title_text = get_the_title($thumbnail_id);
+        if (empty($alt_text)) {
+            $alt_text = get_the_title();
+        }
+        if (empty($title_text)) {
+            $title_text = get_the_title();
+        }
+
+        $image = '<img title="' . esc_attr($title_text) . '" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+        echo $image;
     }
-    
+
     ?>
     <div class="content">
         <!-- <p class="breadcrub">Home / Sustainability</p> -->
@@ -38,89 +45,7 @@ the_post();
             looking for a one stop textile solution?
         </h2>
     </div>
-    <form action="">
-        <div>
-            <label for="name">Name</label>
-            <br />
-            <input id="name" type="text" placeholder="Enter your name" />
-        </div>
-        <div>
-            <label for="email">Email</label>
-            <br />
-            <input id="email" type="email" placeholder="Enter your email" />
-        </div>
-        <div>
-            <label for="enquiry_type">Enquiry Type</label>
-            <br />
-            <select id="enquiry_type">
-                <option value="general">General Enquiry</option>
-                <option value="product">Product Enquiry</option>
-                <option value="order">Order Enquiry</option>
-            </select>
-        </div>
-        <div>
-            <label for="phone">Phone Number</label>
-            <br />
-            <input id="phone" type="tel" placeholder="Enter your phone number" />
-        </div>
-        <div>
-            <label for="company">Company Name</label>
-            <br />
-            <input
-                id="company"
-                type="text"
-                placeholder="Enter your company name" />
-        </div>
-
-        <div class="whatsapp_input">
-            <div class="whatsapp_container">
-                <label for="whatsapp_number">Whatsapp Number</label>
-                <div class="checkbox_container">
-                    <input type="checkbox" id="whatsapp_checkbox" />
-                    <label for="whatsapp_checkbox">Same as phone number</label>
-                </div>
-            </div>
-            <input
-                id="whatsapp_number"
-                type="tel"
-                placeholder="Enter your Whatsapp number" />
-        </div>
-        <div>
-            <label for="Organization">Organization Type</label>
-            <br />
-            <input
-                id="Organization"
-                type="text"
-                placeholder="Enter your Organization Type" />
-        </div>
-        <div class="textareaDiv">
-            <label for="requirements">Tell Us About Your Requirements</label>
-            <br />
-            <textarea
-                id="requirements"
-                rows="3"
-                placeholder="Enter your requirements"></textarea>
-        </div>
-        <div>
-            <div class="policy_container">
-                <input type="checkbox" id="policy_checkbox" />
-                <label for="policy_checkbox">
-                    I agree to the BTC privacy policy.*
-                </label>
-            </div>
-        </div>
-        <div>
-            <div class="e_com_btc">
-                <input type="checkbox" id="e_com_btc" />
-                <label for="e_com_btc">
-                    I agree to receive e-communications from BTC.
-                </label>
-            </div>
-        </div>
-        <div class="btn_container">
-            <button class="cta">Submit <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
-        </div>
-    </form>
+    <?php get_template_part('components/lead_form');?>
 </section>
 
 
@@ -233,6 +158,21 @@ if (!empty($faqs)) { ?>
 </section>
 
 
+
+<!-- <form id="aa-lead-form">
+    <input type="text"  name="name"          placeholder="Name*"          required>
+    <input type="email" name="email"         placeholder="Email*"         required>
+    <input type="text"  name="phone"         placeholder="Phone">
+    <input type="text"  name="company"       placeholder="Company">
+    <input type="text"  name="enquiry_type"  placeholder="Enquiry Type">
+    <textarea           name="requirements"  placeholder="Requirements"></textarea>
+    <input type="text"  name="whatsapp"      placeholder="WhatsApp No">
+    <input type="text"  name="org_type"      placeholder="Organization Type">
+    <button type="submit">Submit Lead</button>
+</form> -->
+
+
+
 <?php
 get_footer();
 
@@ -243,14 +183,14 @@ get_footer();
     const iframe = document.getElementById("mapIframe");
 
     overlay.addEventListener("dblclick", () => {
-      iframe.style.pointerEvents = "auto";
-      overlay.style.display = "none";
-      closeBtn.style.display = "block";
+        iframe.style.pointerEvents = "auto";
+        overlay.style.display = "none";
+        closeBtn.style.display = "block";
     });
 
     closeBtn.addEventListener("click", () => {
-      iframe.style.pointerEvents = "none";
-      overlay.style.display = "flex";
-      closeBtn.style.display = "none";
+        iframe.style.pointerEvents = "none";
+        overlay.style.display = "flex";
+        closeBtn.style.display = "none";
     });
-  </script>
+</script>

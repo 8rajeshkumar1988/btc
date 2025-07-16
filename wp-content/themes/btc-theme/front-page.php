@@ -14,6 +14,7 @@ get_header();
     </div>
 </section>
 
+<<<<<<< HEAD
 <section id="aboutBtc">
     <img class="worldMap" src="<?php echo get_template_directory_uri() . '/assets/images/world map.svg'; ?>" alt="">
     <div class="content">
@@ -72,6 +73,9 @@ get_header();
     </div>
 </section>
 
+=======
+<?php get_template_part('components/home_about_btc_section'); ?>
+>>>>>>> da9772e631c6b05ee2ae2ab51dfd6a6e67899908
 
 <section id="ourProducts">
     <div class="heading">
@@ -102,7 +106,22 @@ get_header();
 
                         <div class="swiper-slide items">
                             <div>
-                                <img title="<?php the_title(); ?>" src="<?php the_post_thumbnail_url('btc_medium') ?>" alt="<?php the_title(); ?>">
+                                <?php
+                                $thumbnail_id = get_post_thumbnail_id();
+                                $image_url = wp_get_attachment_url($thumbnail_id);
+                                $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+                                $title_text = get_the_title($thumbnail_id);
+                                if (empty($alt_text)) {
+                                    $alt_text = get_the_title();
+                                }
+                                if (empty($title_text)) {
+                                    $title_text = get_the_title();
+                                }
+
+                                $image = '<img title="' . esc_attr($title_text) . '" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+                                echo  $image;
+
+                                ?>
                                 <p class="title"><?php the_title(); ?></p>
                                 <a href="<?php the_permalink(); ?>" class="cta">View range<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
                             </div>
@@ -232,8 +251,22 @@ get_header();
             ?>
 
                     <div class="swiper-slide swirl-img">
-                        <img title="<?php the_title(); ?>" class='homecapability__image spiralImage' src="<?php the_post_thumbnail_url('btc_large') ?>">
+                        <?php
+                        $thumbnail_id = get_post_thumbnail_id();
+                        $image_url = wp_get_attachment_url($thumbnail_id);
+                        $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+                        $title_text = get_the_title($thumbnail_id);
+                        if (empty($alt_text)) {
+                            $alt_text = get_the_title();
+                        }
+                        if (empty($title_text)) {
+                            $title_text = get_the_title();
+                        }
 
+                        $image = '<img class="homecapability__image spiralImage" title="' . esc_attr($title_text) . '" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+                        echo  $image;
+
+                        ?>
                         <div class="empty"></div>
                         <div class="text">
                             <h3><?php the_title(); ?></h3>

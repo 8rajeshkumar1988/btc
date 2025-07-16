@@ -36,7 +36,23 @@
                         echo $embed_code;
                     } else {  ?>
                         <a target="_blank" href="<?php echo get_field('media_url'); ?>" class="swiper-slide social_media_card">
-                            <img title="<?php the_title(); ?>" class='socialmedia__image' src="<?php the_post_thumbnail_url('btc_medium') ?>">
+                            <?php
+                            $thumbnail_id = get_post_thumbnail_id();
+                            $image_url = wp_get_attachment_url($thumbnail_id);
+                            $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+                            $title_text = get_the_title($thumbnail_id);
+                            if (empty($alt_text)) {
+                                $alt_text = get_the_title();
+                            }
+                            if (empty($title_text)) {
+                                $title_text = get_the_title();
+                            }
+
+                            $image = '<img class="socialmedia__image"  title="' . esc_attr($title_text) . '" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+                            echo  $image;
+
+                            ?>
+
                             <?php if ($social_icon) { ?>
                                 <div class="social_icon">
                                     <?php echo '<img src="' . esc_url($social_icon['url']) . '" alt="' . esc_attr($social_icon['alt']) . '">'; ?>

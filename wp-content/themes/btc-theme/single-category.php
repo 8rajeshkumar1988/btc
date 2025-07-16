@@ -11,7 +11,10 @@ the_post();
   $banner_video = get_field('banner_video');
 
   if ($banner_image) {
-    echo '<img src="' . esc_url($banner_image['url']) . '" alt="' . esc_attr($banner_image['alt']) . '">';
+    $image_url = isset($banner_image['sizes']['full']) ? $banner_image['sizes']['full'] : $banner_image['url'];
+    $alt_text = isset($banner_image['alt']) ? $banner_image['alt'] : '';
+
+    echo '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
   } else if ($banner_video) {
     echo '<video playsinline autoplay muted loop src="' . esc_url($banner_video['url']) . '"></video>';
   }
@@ -58,10 +61,10 @@ if (!empty($faqs)) { ?>
     </div>
     <div class="accordian">
       <?php
-      $ctr=1;
+      $ctr = 1;
       foreach ($faqs as $faq) { ?>
         <div
-          class="faq <?php echo $ctr==1?"default-open":""; ?>"
+          class="faq <?php echo $ctr == 1 ? "default-open" : ""; ?>"
           style="
             translate: none;
             rotate: none;
@@ -73,21 +76,20 @@ if (!empty($faqs)) { ?>
             <p><?php echo esc_html($faq['question']); ?></p>
             <img
               class="menu open"
-              src="<?php echo get_template_directory_uri().'/assets/images/arow_donw.svg'; ?>"
+              src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>"
               alt="clase icon" />
           </div>
           <div class="ans" style="display: none">
             <p>
-             <?php echo esc_html($faq['answer']) ?>
+              <?php echo esc_html($faq['answer']) ?>
             </p>
           </div>
         </div>
 
 
       <?php
-       
-       $ctr++;
-       
+
+        $ctr++;
       }
       ?>
     </div>

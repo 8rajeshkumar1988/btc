@@ -102,8 +102,8 @@ function university_post_types() {
 
     register_post_type('customization_type', array(
         'show_in_rest' => true,
-        'supports' => array( 'title', 'editor','thumbnail'),
-        'has_archive' => true,
+        'supports' => array( 'title','thumbnail'),
+        'has_archive' => false,
         'public' => true,
         'labels' => array(
             'name' => 'Customization Types',
@@ -162,6 +162,39 @@ function university_post_types() {
         'menu_icon' => 'dashicons-embed-post'
     ) );
 
+
+    register_post_type('infra_legacy_pointer', array(
+        'show_in_rest' => true,
+        'supports' => array( 'title'),
+        'has_archive' => true,
+        'public' => true,
+        'labels' => array(
+            'name' => 'Infra Legacy Pointers',
+            'add_new_item' => 'Add New',
+            'edit_item' => 'Edit',
+            'all_items' => 'All Pointers',
+            'singular_name' => 'Infra Legacy Pointer'
+        ),
+        'menu_icon' => 'dashicons-hammer'
+    ) );
+    
+    
+    register_post_type('lead', array(
+        'labels' => array(
+            'name' => 'Leads',
+            'singular_name' => 'Lead',
+            'add_new_item' => 'Add New Lead',
+            'edit_item' => 'Edit Lead',
+            'new_item' => 'New Lead',
+            'view_item' => 'View Lead',
+            'search_items' => 'Search Leads',
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'show_in_rest' => true, // for Gutenberg and API
+        'supports' => array('title'), // you can also add 'editor', 'thumbnail' if needed
+        'menu_icon' => 'dashicons-id', // nice icon for leads
+    ));
 
 
    
@@ -297,7 +330,7 @@ function my_custom_meta_box() {
         'sort_order_meta',                  // ID
         'Sort Order',                       // Title
         'render_sort_order_meta_box',      // Callback
-        ['client','category','customization_type','leadership','homecapability','product','customiz_category','socialmedia'],                // Post types
+        ['client','category','customization_type','leadership','homecapability','product','customiz_category','socialmedia','infra_legacy_pointer'],                // Post types
         'side',                             // Context: 'side' = right sidebar
         'default'                           // Priority
     ); 
@@ -604,4 +637,131 @@ function get_attachment_id_from_url( $url ) {
 }
 
 
+function hide_title_and_editor_for_leads() {
+    $screen = get_current_screen();
+    if ($screen->post_type === 'lead') {
+        echo '<style>
+            #titlediv, #postdivrich, #editor-toolbar, .editor-post-title__block { display: none !important; }
+        </style>';
+    }
+}
+add_action('admin_head', 'hide_title_and_editor_for_leads');
 
+
+
+
+// 1. Define custom columns for the 'lead' post type
+function aa_lead_custom_columns($columns) {
+    $new_columns = array(
+        'cb'              => $columns['cb'],
+        'name'            => 'Name',
+        'email'           => 'Email',
+        'phone_number'    => 'Phone',
+        'company_name'         => 'Company',
+        'requirements'         => 'Requirements',
+        'whatsapp_number'         => 'Whatsapp Number',
+        'organization_type'         => 'Organization Type',
+        'enquiry_type'    => 'Enquiry Type',
+        'i_agree_to_receive_e-communications_from_btc'    => 'Receive E Communications',
+        'created_on'      => 'Created On',
+    );
+    return $new_columns;
+}
+add_filter('manage_edit-lead_columns', 'aa_lead_custom_columns');
+
+
+// 2. Populate the custom columns
+function aa_lead_custom_column_content($column, $post_id) {
+    switch ($column) {
+        case 'name':
+            echo esc_html(get_field('name', $post_id));
+            break;
+        case 'email':
+            echo esc_html(get_field('email', $post_id));
+            break;
+        case 'phone_number':
+            echo esc_html(get_field('phone_number', $post_id));
+            break;
+        case 'company_name':
+            echo esc_html(get_field('company_name', $post_id));
+            break;
+        case 'requirements':
+            echo esc_html(get_field('requirements', $post_id));
+            break;  
+        case 'whatsapp_number':
+            echo esc_html(get_field('whatsapp_number', $post_id));
+            break; 
+        case 'organization_type':
+            echo esc_html(get_field('organization_type', $post_id));
+            break;            
+        case 'enquiry_type':
+            echo esc_html(get_field('enquiry_type', $post_id));
+            break;
+        case 'i_agree_to_receive_e-communications_from_btc':
+            echo esc_html(get_field('i_agree_to_receive_e-communications_from_btc', $post_id));
+            break;    
+        case 'created_on':
+            echo esc_html(get_field('created_on', $post_id));
+            break;
+    }
+}
+add_action('manage_lead_posts_custom_column', 'aa_lead_custom_column_content', 10, 2);
+
+
+function aa_lead_sortable_columns($columns) {
+    $columns['created_on'] = 'created_on';
+    $columns['name'] = 'name';
+    $columns['enquiry_type'] = 'enquiry_type';
+    return $columns;
+}
+add_filter('manage_edit-lead_sortable_columns', 'aa_lead_sortable_columns');
+
+
+function aa_add_lead_date_filters() {
+    global $typenow;
+
+    if ($typenow !== 'lead') return;
+
+    $from_date = $_GET['lead_from_date'] ?? '';
+    $to_date   = $_GET['lead_to_date'] ?? '';
+
+    echo '<input type="date" name="lead_from_date" placeholder="From Date" value="' . esc_attr($from_date) . '" />';
+    echo '<input type="date" name="lead_to_date" placeholder="To Date" value="' . esc_attr($to_date) . '" />';
+}
+add_action('restrict_manage_posts', 'aa_add_lead_date_filters');
+
+
+function aa_filter_leads_by_created_date($query) {
+    global $pagenow;
+    $post_type = $query->get('post_type');
+
+    if ($pagenow === 'edit.php' && $post_type === 'lead' && is_admin()) {
+        $from_date = $_GET['lead_from_date'] ?? '';
+        $to_date   = $_GET['lead_to_date'] ?? '';
+
+        if ($from_date || $to_date) {
+            $meta_query = [];
+
+            if ($from_date) {
+                $meta_query[] = [
+                    'key'     => 'created_on',
+                    'value'   => $from_date,
+                    'compare' => '>=',
+                    'type'    => 'DATE',
+                ];
+            }
+
+            if ($to_date) {
+                $meta_query[] = [
+                    'key'     => 'created_on',
+                    'value'   => $to_date,
+                    'compare' => '<=',
+                    'type'    => 'DATE',
+                ];
+            }
+
+            $query->set('meta_query', $meta_query);
+        }
+    }
+}
+add_action('pre_get_posts', 'aa_filter_leads_by_created_date');
