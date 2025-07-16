@@ -21,9 +21,35 @@ get_header();
             <p>ABOUT BTC</p>
             <h2>Driven by Craft. <br>Powered by Scale.</h2>
         </div>
-        <div class="sliderAbout">
-            <div class="slides_about">
-                <div class="tiles">
+        <div class="sliderAbout swiper " >
+            <div class="slides_about swiper-wrapper">
+                <div class="tiles swiper-slide">
+                    <div>
+                        <p class="number">32,000</p>
+                        <p class="tag">High-Performance Spindles</p>
+                    </div>
+                    <div class="copy">
+                        <p>
+                            Our advanced spinning facility houses <span>32,000 high-performance spindles</span>,
+                            enabling us to
+                            produce high-quality yarn with precision and consistency.
+                        </p>
+                    </div>
+                </div>
+                <div class="tiles swiper-slide">
+                    <div>
+                        <p class="number">32,000</p>
+                        <p class="tag">High-Performance Spindles</p>
+                    </div>
+                    <div class="copy">
+                        <p>
+                            Our advanced spinning facility houses <span>32,000 high-performance spindles</span>,
+                            enabling us to
+                            produce high-quality yarn with precision and consistency.
+                        </p>
+                    </div>
+                </div>
+                <div class="tiles swiper-slide">
                     <div>
                         <p class="number">32,000</p>
                         <p class="tag">High-Performance Spindles</p>

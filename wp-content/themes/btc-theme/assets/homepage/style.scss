@@ -33,12 +33,15 @@
             display: flex;
             flex-direction: column;
             width: 40%;
-            gap: 30px;
+            // gap: 30px;
+            margin: 0;
             .slides_about {
                 background-color: #fff;
                 border: 1px solid #d9d9d9;
                 padding: 30px;
+                gap: 30px;
                 .tiles {
+                    width: calc(100% - 60px);
                     display: flex;
                     flex-direction: column;
                     gap: 50px;

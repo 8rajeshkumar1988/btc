@@ -1,8 +1,30 @@
 $(document).ready(function () {
 
 
+    const HeroSwiper = new Swiper('.sliderAbout', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        grabCursor: true, // 👈 adds grab cursor on hover
+        speed: 800,
+        // autoplay: {
+        //     delay: 5000, // change delay as needed
+        //     disableOnInteraction: false, // keeps autoplay after manual swipe
+        // },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true, // optional: makes pagination dots clickable
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+
+
     // my products
-    const swiper = new Swiper(".ourProducts", {
+    const ourProducts = new Swiper(".ourProducts", {
         spaceBetween: 30,
         centeredSlides: false,
         slidesPerView: 2.2,
@@ -93,29 +115,29 @@ $(document).ready(function () {
     ];
 
     // Initial stacked setup
-function setInitialLayout() {
-    images.forEach((img, index) => {
-        let offset;
-        if (index === 0) {
-            offset = 0; // center image
-        } else {
-            // Alternate right (1, 3, 5...) and left (2, 4, 6...) with increasing distance
-            const position = Math.ceil(index / 2);
-            offset = index % 2 === 1 ? position : -position;
-        }
+    function setInitialLayout() {
+        images.forEach((img, index) => {
+            let offset;
+            if (index === 0) {
+                offset = 0; // center image
+            } else {
+                // Alternate right (1, 3, 5...) and left (2, 4, 6...) with increasing distance
+                const position = Math.ceil(index / 2);
+                offset = index % 2 === 1 ? position : -position;
+            }
 
-        const scale = 1 - Math.abs(offset) * 0.1;
-        const xOffset = offset * 60;
+            const scale = 1 - Math.abs(offset) * 0.1;
+            const xOffset = offset * 60;
 
-        gsap.set(img, {
-            x: xOffset,
-            y: 0,
-            scale: scale,
-            rotation: 0,
-            zIndex: 100 - Math.abs(offset),
+            gsap.set(img, {
+                x: xOffset,
+                y: 0,
+                scale: scale,
+                rotation: 0,
+                zIndex: 100 - Math.abs(offset),
+            });
         });
-    });
-}
+    }
 
 
     setInitialLayout();
@@ -133,7 +155,7 @@ function setInitialLayout() {
 
         images.forEach((img, index) => {
             const isCenter = index === 0;
-            const isRightNext = index ===  1;
+            const isRightNext = index === 1;
             const additionNal = window.innerWidth / 10;
 
             if (isCenter) {
