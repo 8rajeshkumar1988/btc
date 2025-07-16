@@ -70,6 +70,7 @@ $(document).ready(function () {
         $('.empty').css('display', 'none');
     }
     const makeSwiper = () => {
+        $('.spiralImage').addClass('active');
         resetSpiral();
         const swiperCapabilities = new Swiper(".ourCapabilities", {
             spaceBetween: 40,
@@ -125,9 +126,9 @@ $(document).ready(function () {
                 const position = Math.ceil(index / 2);
                 offset = index % 2 === 1 ? position : -position;
             }
-
+            const isDesk = window.innerWidth > 1700;
             const scale = 1 - Math.abs(offset) * 0.1;
-            const xOffset = offset * 60;
+            const xOffset = offset * (isDesk ? 60 : 40);
 
             gsap.set(img, {
                 x: xOffset,
@@ -156,8 +157,8 @@ $(document).ready(function () {
         images.forEach((img, index) => {
             const isCenter = index === 0;
             const isRightNext = index === 1;
-            const additionNal = window.innerWidth / 10;
-
+            const isDesk = window.innerWidth > 1700;
+            const additionNal = window.innerWidth / (isDesk ? 10 : 20);
             if (isCenter) {
                 swirlTimeline.to(img, {
                     x: -containerWidth / 2 + img.offsetWidth / 2 + additionNal,
@@ -166,7 +167,7 @@ $(document).ready(function () {
                 }, 0);
             } else if (isRightNext) {
                 swirlTimeline.to(img, {
-                    x: containerWidth / 2 - img.offsetWidth / 2 + (additionNal * 2),
+                    x: containerWidth / 2 - (img.offsetWidth / 1) + images[0].offsetWidth  + (isDesk ? 60 : 120) + 20,
                     y: 0,
                     scale: 1,
                 }, 0);

@@ -67,7 +67,7 @@
   all: unset;
   background-color: var(--green);
   color: #000;
-  padding: 15px 40px;
+  padding: clamp(0.3125rem, -0.7292rem + 1.3889vw, 0.9375rem) clamp(1.25rem, -0.8333rem + 2.7778vw, 2.5rem);
   text-transform: uppercase;
   font-size: var(--font-20);
   width: -moz-fit-content;

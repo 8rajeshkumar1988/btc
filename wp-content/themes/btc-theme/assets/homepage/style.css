@@ -33,17 +33,16 @@
   display: flex;
   flex-direction: column;
   width: 40%;
+  gap: 30px;
   margin: 0;
 }
-#aboutBtc .content .sliderAbout .slides_about {
+#aboutBtc .content .sliderAbout .slides_about .tiles {
+  width: calc(100% - 5px);
   background-color: #fff;
   border: 1px solid #d9d9d9;
-  padding: 30px;
   gap: 30px;
-}
-#aboutBtc .content .sliderAbout .slides_about .tiles {
-  width: calc(100% - 60px);
   display: flex;
+  padding: 30px;
   flex-direction: column;
   gap: 50px;
 }
@@ -76,6 +75,7 @@
   gap: 15px;
 }
 #aboutBtc .content .sliderAbout .navigation_about button {
+  position: relative;
   padding: 15px;
   height: var(--navBtn);
   width: var(--navBtn);
@@ -84,10 +84,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  right: unset;
+  left: unset;
+  margin: unset;
+  top: unset;
 }
 #aboutBtc .content .sliderAbout .navigation_about button img {
   height: 100%;
   width: 100%;
+}
+#aboutBtc .content .sliderAbout .navigation_about button::after, #aboutBtc .content .sliderAbout .navigation_about button::before {
+  content: "";
+}
+#aboutBtc .content .sliderAbout .navigation_about .prev {
+  position: relative;
 }
 #aboutBtc .content .sliderAbout .navigation_about .prev img {
   transform: rotate(180deg);
@@ -318,10 +328,10 @@
 }
 #ourCapabilities .swiper-slide {
   position: initial;
-  height: calc(100vh - (var(--paddingY) + var(--paddingY)));
+  height: 100%;
   width: 80vw;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: clamp(18.75rem, 4.6875rem + 18.75vw, 27.1875rem) auto;
   gap: 80px;
 }
 #ourCapabilities .swiper-slide .empty {
@@ -395,16 +405,20 @@
 #ourCapabilities .cap_container {
   position: relative;
   padding: var(--paddingY) var(--paddingX) var(--paddingY);
-  height: 100vh;
+  width: 100%;
+  aspect-ratio: 16/8;
   display: block;
+}
+#ourCapabilities .cap_container .spiralImage.active {
+  width: 100%;
+  height: auto;
 }
 #ourCapabilities .cap_container .spiralImage {
   position: absolute;
-  height: calc(100vh - (var(--paddingY) + var(--paddingY)));
+  height: 100%;
   width: auto;
-  aspect-ratio: 3/4;
+  aspect-ratio: 3/4.5;
   left: 50%;
-  top: 50%;
   -o-object-fit: cover;
      object-fit: cover;
   transform: translate(-50%, -50%);
@@ -428,4 +442,13 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media screen and (max-width: 1546px) {
+  #ourCapabilities .swiper-slide {
+    width: 90vw;
+  }
+  #ourCapabilities .cap_container .spiralImage {
+    top: 50%;
+  }
 }/*# sourceMappingURL=style.css.map */
