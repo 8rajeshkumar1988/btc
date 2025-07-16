@@ -86,14 +86,24 @@
                          <div class="customization_card">
                              <?php
                                 if (has_post_thumbnail()) {
-                                    the_post_thumbnail('thumbnail');
-                                }
+                                    $thumbnail_id = get_post_thumbnail_id();
+                                    $image_url = wp_get_attachment_url($thumbnail_id);
+                                    $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+                                    $title_text = get_the_title($thumbnail_id);
+                                    if (empty($alt_text)) {
+                                        $alt_text = get_the_title();
+                                    }
+                                    if (empty($title_text)) {
+                                        $title_text = get_the_title();
+                                    }
 
+                                    echo '<img title="' . esc_attr($title_text) . '" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+                                }
                                 ?>
-                             <div>
+                             <p>
                                  <strong><?php the_title(); ?></strong> <br />
-                                 <?php the_content(); ?>
-                             </div>
+                                 <?php echo get_field('content') ?>
+                             </p>
                          </div>
 
                      <?php

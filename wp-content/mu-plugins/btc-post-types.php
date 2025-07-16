@@ -102,8 +102,8 @@ function university_post_types() {
 
     register_post_type('customization_type', array(
         'show_in_rest' => true,
-        'supports' => array( 'title', 'editor','thumbnail'),
-        'has_archive' => true,
+        'supports' => array( 'title','thumbnail'),
+        'has_archive' => false,
         'public' => true,
         'labels' => array(
             'name' => 'Customization Types',

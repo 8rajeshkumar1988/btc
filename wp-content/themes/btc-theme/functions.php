@@ -79,9 +79,9 @@ function btc_features()
 {
     //   add_theme_support( 'title-tag' );
     add_theme_support('post-thumbnails');
-    add_image_size('thumbnail', 400, 400, true);
-    add_image_size('btc_medium', 800, 600, false);
-    add_image_size('btc_large', 1200, 800, true);
+    // add_image_size('thumbnail', 400, 400, true);
+    // add_image_size('btc_medium', 800, 600, false);
+    // add_image_size('btc_large', 1200, 800, true);
 
     add_image_size('metaimage', 1200, 630, true);
 }
