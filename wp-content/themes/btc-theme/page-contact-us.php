@@ -240,6 +240,21 @@ if (!empty($faqs)) { ?>
 </section>
 
 
+
+<!-- <form id="aa-lead-form">
+    <input type="text"  name="name"          placeholder="Name*"          required>
+    <input type="email" name="email"         placeholder="Email*"         required>
+    <input type="text"  name="phone"         placeholder="Phone">
+    <input type="text"  name="company"       placeholder="Company">
+    <input type="text"  name="enquiry_type"  placeholder="Enquiry Type">
+    <textarea           name="requirements"  placeholder="Requirements"></textarea>
+    <input type="text"  name="whatsapp"      placeholder="WhatsApp No">
+    <input type="text"  name="org_type"      placeholder="Organization Type">
+    <button type="submit">Submit Lead</button>
+</form> -->
+
+
+
 <?php
 get_footer();
 
