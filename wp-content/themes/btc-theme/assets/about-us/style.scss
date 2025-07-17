@@ -3,7 +3,7 @@ body {
 }
 
 #about_btc {
-  padding: var(--paddingX) 0px;
+  padding: var(--paddingY) 0px;
   padding-bottom: 0;
   position: relative;
   overflow: hidden;
@@ -111,7 +111,7 @@ body {
 }
 
 #vision_mission {
-  padding: var(--paddingX);
+  padding: var(--paddingY) var(--paddingX);
   background-color: #fff;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -157,7 +157,7 @@ body {
 }
 
 #our_leadership {
-  padding: var(--paddingX);
+  padding: var(--paddingY) var(--paddingX);
   // padding-bottom: 0;
   background: linear-gradient(180deg, #2f2874 0%, #201a5b 100%);
 
@@ -229,7 +229,7 @@ body {
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: var(--paddingX);
+  padding: var(--paddingY) var(--paddingX);
   align-items: center;
   gap: clamp(1.25rem, -17.5rem + 25vw, 12.5rem);
   & > img {
@@ -257,7 +257,7 @@ body {
 
 #arise_details {
   position: relative;
-  padding: var(--paddingX);
+  padding: var(--paddingY) var(--paddingX);
   background-color: #fff;
   .heading {
     margin-bottom: 80px;
@@ -409,7 +409,7 @@ body {
 }
 
 #certificates_compliances{
-  padding: var(--paddingX);
+  padding: var(--paddingY) var(--paddingX);
   background: linear-gradient(180deg, #2F2874 0%, #201A5B 100%);
   .heading{
     p{
