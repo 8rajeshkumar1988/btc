@@ -14,68 +14,7 @@ get_header();
     </div>
 </section>
 
-<<<<<<< HEAD
-<section id="aboutBtc">
-    <img class="worldMap" src="<?php echo get_template_directory_uri() . '/assets/images/world map.svg'; ?>" alt="">
-    <div class="content">
-        <div class="headNum heading">
-            <p>ABOUT BTC</p>
-            <h2>Driven by Craft. <br>Powered by Scale.</h2>
-        </div>
-        <div class="sliderAbout swiper " >
-            <div class="slides_about swiper-wrapper">
-                <div class="tiles swiper-slide">
-                    <div>
-                        <p class="number">32,000</p>
-                        <p class="tag">High-Performance Spindles</p>
-                    </div>
-                    <div class="copy">
-                        <p>
-                            Our advanced spinning facility houses <span>32,000 high-performance spindles</span>,
-                            enabling us to
-                            produce high-quality yarn with precision and consistency.
-                        </p>
-                    </div>
-                </div>
-                <div class="tiles swiper-slide">
-                    <div>
-                        <p class="number">32,000</p>
-                        <p class="tag">High-Performance Spindles</p>
-                    </div>
-                    <div class="copy">
-                        <p>
-                            Our advanced spinning facility houses <span>32,000 high-performance spindles</span>,
-                            enabling us to
-                            produce high-quality yarn with precision and consistency.
-                        </p>
-                    </div>
-                </div>
-                <div class="tiles swiper-slide">
-                    <div>
-                        <p class="number">32,000</p>
-                        <p class="tag">High-Performance Spindles</p>
-                    </div>
-                    <div class="copy">
-                        <p>
-                            Our advanced spinning facility houses <span>32,000 high-performance spindles</span>,
-                            enabling us to
-                            produce high-quality yarn with precision and consistency.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="navigation_about">
-                <button class="prev swiper-button-prev"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
-                <button class="next swiper-button-next"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
-            </div>
-        </div>
-        <button class="cta">Know More About BTC <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
-    </div>
-</section>
-
-=======
 <?php get_template_part('components/home_about_btc_section'); ?>
->>>>>>> da9772e631c6b05ee2ae2ab51dfd6a6e67899908
 
 <section id="ourProducts">
     <div class="heading">
