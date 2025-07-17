@@ -177,7 +177,7 @@ if ($leaderships->have_posts()) {
                     <div class="leader_detail">
                         <h2 class="leader_title"><?php the_title(); ?></h2>
                         
-                        <p class="leader_description"><?php echo strip_tags(get_the_content()); ?></p>
+                        <p class="leader_description"><?php echo get_field('jobtitle'); ?></p>
                     </div>
                 </div>
             <?php
@@ -252,56 +252,139 @@ if ($leaderships->have_posts()) {
     </div>
 </section>
 <section id="our_impact">
-    <div class="heading">
+      <div class="heading">
         <p>Our Impact</p>
-        <h2>Making a Difference, <br> Stitch by Stitch</h2>
-    </div>
+        <h2>
+          Making a Difference, <br />
+          Stitch by Stitch
+        </h2>
+      </div>
 
-    <div class="our_impact_container">
+      <div class="our_impact_container">
         <!-- PARTNERS -->
         <div data-section="partners" class="impact_wrapper bg-partners open">
-            <div class="overlay"></div>
-            <div class="impact_wrapper_head">
-                <h2>PARTNERS</h2>
-                <button class="open-btn"><img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow"></button>
+          <div class="overlay"></div>
+          <div class="impact_wrapper_head">
+            <h2>PARTNERS</h2>
+            <button class="open-btn">
+              <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
+            </button>
+          </div>
+          <div class="content">
+            <div class="content-details">
+              <div class="content-detail">
+                <div>
+                  <h2>7000</h2>
+                  <p>
+                    Beninese nationals will be directly employed across both
+                    shifts
+                  </p>
+                </div>
+                <div>
+                  <h2>7000-8000</h2>
+                  <p>Driving indirect jobs across supply and services</p>
+                </div>
+              </div>
+              <ul>
+                <li>Skilling of Local man power for life time through GTC</li>
+                <li>Local Entrepreneurial development through EDS scheme</li>
+                <li>
+                  The vertical supply chain Eco system shall cater to other
+                  garment manufacturers in the region
+                </li>
+              </ul>
             </div>
-            <div class="content">
-                <p>
-                    Kiabi Collaboration: BTC kickstarted a strategic partnership with
-                    French fashion brand Kiabi, shipping 80,000 children's leggings,
-                    with 2M units for 2024 and 4M for 2025 in the pipeline.
-                </p>
-                <button class="cta-btn">GET IN TOUCH</button>
+            <div class="content-btn">
+              <button class="cta">
+              GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+            </button>
             </div>
+          </div>
         </div>
 
         <!-- PEOPLE -->
         <div data-section="people" class="impact_wrapper bg-people">
-            <div class="overlay"></div>
-            <div class="impact_wrapper_head">
-                <h2>PEOPLE</h2>
-                <button class="open-btn"><img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow"></button>
+          <div class="overlay"></div>
+          <div class="impact_wrapper_head">
+            <h2>PEOPLE</h2>
+            <button class="open-btn">
+              <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
+            </button>
+          </div>
+          <div class="content">
+            <div class="content-details">
+              <div class="content-detail">
+                <div>
+                  <h2>7000</h2>
+                  <p>
+                    Beninese nationals will be directly employed across both
+                    shifts
+                  </p>
+                </div>
+                <div>
+                  <h2>7000-8000</h2>
+                  <p>Driving indirect jobs across supply and services</p>
+                </div>
+              </div>
+              <ul>
+                <li>Skilling of Local man power for life time through GTC</li>
+                <li>Local Entrepreneurial development through EDS scheme</li>
+                <li>
+                  The vertical supply chain Eco system shall cater to other
+                  garment manufacturers in the region
+                </li>
+              </ul>
             </div>
-            <div class="content">
-                <p>This is the People content revealed with image background.</p>
-                <button class="cta-btn">GET IN TOUCH</button>
+           <div class="content-btn">
+              <button class="cta">
+              GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+            </button>
             </div>
+          </div>
         </div>
 
         <!-- PLANET -->
         <div data-section="planet" class="impact_wrapper bg-planet">
-            <div class="overlay"></div>
-            <div class="impact_wrapper_head">
-                <h2>PLANET</h2>
-                <button class="open-btn"><img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow"></button>
+          <div class="overlay"></div>
+          <div class="impact_wrapper_head">
+            <h2>PLANET</h2>
+            <button class="open-btn">
+              <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
+            </button>
+          </div>
+          <div class="content">
+            <div class="content-details">
+              <div class="content-detail">
+                <div>
+                  <h2>7000</h2>
+                  <p>
+                    Beninese nationals will be directly employed across both
+                    shifts
+                  </p>
+                </div>
+                <div>
+                  <h2>7000-8000</h2>
+                  <p>Driving indirect jobs across supply and services</p>
+                </div>
+              </div>
+              <ul>
+                <li>Skilling of Local man power for life time through GTC</li>
+                <li>Local Entrepreneurial development through EDS scheme</li>
+                <li>
+                  The vertical supply chain Eco system shall cater to other
+                  garment manufacturers in the region
+                </li>
+              </ul>
             </div>
-            <div class="content">
-                <p>This is the Planet content revealed with image background.</p>
-                <button class="cta-btn">GET IN TOUCH</button>
+            <div class="content-btn">
+              <button class="cta">
+              GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+            </button>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 <section id="certificates_compliances">
     <div class="heading">
         <p>CERTIFICATIONS & COMPLIANCE</p>

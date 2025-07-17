@@ -7,12 +7,12 @@
     <div>
         <label for="email">Email</label>
         <br />
-        <input id="email"  name="email" type="email" placeholder="Enter your email" required />
+        <input id="email" name="email" type="email" placeholder="Enter your email" required />
     </div>
     <div>
         <label for="enquiry_type">Enquiry Type</label>
         <br />
-        <select id="enquiry_type" name="enquiry_type" required >
+        <select id="enquiry_type" name="enquiry_type" required>
             <option value="General">General</option>
             <option value="Business">Business</option>
             <option value="Careers">Careers</option>
@@ -21,7 +21,7 @@
     <div>
         <label for="phone">Phone Number</label>
         <br />
-        <input id="phone" name="phone"   type="tel" placeholder="Enter your phone number" required />
+        <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required />
     </div>
     <div>
         <label for="company">Company Name</label>
@@ -29,7 +29,7 @@
         <input
             id="company"
             type="text"
-            name="company_name" 
+            name="company_name"
             placeholder="Enter your company name" />
     </div>
 
@@ -44,7 +44,7 @@
         <input
             id="whatsapp_number"
             type="tel"
-            name="whatsapp"  
+            name="whatsapp"
             placeholder="Enter your Whatsapp number" />
     </div>
     <div>
@@ -53,7 +53,7 @@
         <input
             id="Organization"
             type="text"
-            name="org_type" 
+            name="org_type"
             placeholder="Enter your Organization Type" />
     </div>
     <div class="textareaDiv">
