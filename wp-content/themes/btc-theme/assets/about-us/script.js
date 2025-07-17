@@ -20,25 +20,23 @@ var swiper = new Swiper(".about_btc", {
 });
 
 $(document).ready(function () {
-  // Show default open section
-  $(".impact_wrapper.open .content").show();
+  $(".impact_wrapper.open .content").css("display", "grid").show();
 
   $(".impact_wrapper").click(function () {
     const $clicked = $(this);
 
     if ($clicked.hasClass("open")) {
-      // Already open: close it
-      $clicked.find('.content').slideUp(300);
-      $clicked.removeClass("open");
-    } else {
-      // Close others
-      $(".impact_wrapper.open .content").slideUp(300);
-      $(".impact_wrapper").removeClass("open");
-
-      // Open this one
-      $clicked.addClass("open");
-      $clicked.find('.content').slideDown(300);
+      return;
     }
+
+    $(".impact_wrapper.open .content").slideUp(800);
+    $(".impact_wrapper").removeClass("open");
+
+    $clicked.addClass("open");
+    $clicked.find(".content")
+      .css("display", "grid")
+      .hide()
+      .slideDown(800);
   });
 });
 
