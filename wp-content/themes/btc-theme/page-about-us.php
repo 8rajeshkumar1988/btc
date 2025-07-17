@@ -177,7 +177,7 @@ if ($leaderships->have_posts()) {
                     <div class="leader_detail">
                         <h2 class="leader_title"><?php the_title(); ?></h2>
                         
-                        <p class="leader_description"><?php echo strip_tags(get_the_content()); ?></p>
+                        <p class="leader_description"><?php echo get_field('jobtitle'); ?></p>
                     </div>
                 </div>
             <?php
