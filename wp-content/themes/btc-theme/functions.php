@@ -66,6 +66,16 @@ function btc_files()
             true // Load in footer (true = footer, false = header)
         );
     }
+    if (is_page('why-btc')) {
+        wp_enqueue_style('btc_why-btc_styles', get_theme_file_uri('/assets/why-btc/style.css'));
+        wp_enqueue_script(
+            'btc_why-btc_script', // Handle
+            get_theme_file_uri('/assets/why-btc/script.js'), // JS file path
+            array(), // Dependencies (e.g., array('jquery'))
+            null, // Version (or use '1.0')
+            true // Load in footer (true = footer, false = header)
+        );
+    }
 
 
 
