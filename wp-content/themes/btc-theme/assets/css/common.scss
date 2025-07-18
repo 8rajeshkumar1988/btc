@@ -4,15 +4,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 //1920 - 1200
 :root {
   --font-46: clamp(2.5rem, -0.4167rem + 3.8889vw, 4.25rem); //40 - 68
   --font-20: clamp(1.1875rem, 0.4583rem + 0.9722vw, 1.625rem); // 19 - 26
   --font-24: clamp(1.5rem, 0.875rem + 0.8333vw, 1.875rem);
-  --font-14: 14px;
-  --font-16: 16px;
+  --font-14: clamp(0.875rem, 0.4819rem + 0.4839vw, 1.0625rem);
+  --font-16: clamp(1rem, 0.4758rem + 0.6452vw, 1.25rem);
   --font-18: 18px;
   --primaryBlack: #000;
   --secondaryBlack: #3b3b3b;
@@ -333,7 +333,7 @@ textarea {
 @media screen and (max-width: 1200px) {
   .heroBanner {
     height: auto;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/10;
   }
 }
 
