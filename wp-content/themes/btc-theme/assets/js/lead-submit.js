@@ -34,7 +34,7 @@ jQuery(function ($) {
 
         const $form  = $(this);
         const data = {
-            action:        'save_lead',
+            action:        'save_event',
             nonce:         aaLead.nonce,
             name:          $form.find('[name="name"]').val(),
             email:         $form.find('[name="email"]').val(),

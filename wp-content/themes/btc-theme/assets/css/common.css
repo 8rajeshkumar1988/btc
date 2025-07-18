@@ -26,6 +26,10 @@
   --spaceBelow_heading: clamp(2.1875rem, 0.625rem + 2.0833vw, 3.125rem);
 }
 
+body {
+  background-color: #FFFFF4;
+}
+
 .heroBanner {
   position: relative;
   height: 95vh;
@@ -48,12 +52,16 @@
   flex-direction: column;
 }
 .heroBanner .content > div h1 {
+  position: relative;
   font-size: var(--font-46);
   font-weight: 400;
   color: #fff;
   margin-top: var(--headingTop);
+  z-index: 1;
 }
 .heroBanner .content > div p {
+  position: relative;
+  z-index: 1;
   font-size: var(--font-20);
   font-weight: 700;
   color: rgba(255, 255, 255, 0.6);
@@ -61,6 +69,15 @@
 .heroBanner .content .breadcrub {
   font-size: var(--font-20);
   color: rgba(255, 255, 255, 0.6);
+}
+.heroBanner .content .layer {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 }
 
 .cta {
@@ -141,9 +158,12 @@
   inset: 0;
   z-index: 0;
 }
+#our_social > .cta {
+  display: none;
+}
 #our_social .our_social_head {
   position: relative;
-  padding: var(--paddingX);
+  padding: var(--paddingY) var(--paddingX);
   padding-bottom: 0;
   display: flex;
   justify-content: space-between;
@@ -273,7 +293,7 @@ textarea {
 #newsletter .newsletter_form input {
   width: 100%;
   border: none;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   border-radius: 10px;
   padding: 10px;
   margin-top: 15px;
@@ -301,9 +321,38 @@ textarea {
     --paddingY: clamp(5rem, -4.1734rem + 11.2903vw, 9.375rem);
   }
 }
+@media screen and (max-width: 1200px) {
+  .heroBanner {
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+}
 @media screen and (max-width: 768px) {
+  :root {
+    --font-46: 30px;
+    --font-20: 16px;
+    --navBtn: 45px;
+    --paddingY: 50px;
+    --font-24: 20px;
+  }
+  .heroBanner {
+    height: 95vh;
+    aspect-ratio: initial;
+  }
   #newsletter .newsletter_form {
     display: flex;
     flex-direction: column;
+  }
+  #our_clients .marquee-content img {
+    height: 40px;
+    width: 80px;
+  }
+  #our_social > .cta {
+    display: block;
+    margin: var(--spaceBelow_heading) 0;
+    margin-left: var(--paddingX);
+  }
+  #our_social .our_social_head .cta {
+    display: none;
   }
 }/*# sourceMappingURL=common.css.map */

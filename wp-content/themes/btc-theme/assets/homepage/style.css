@@ -35,6 +35,7 @@
   width: 40%;
   gap: 30px;
   margin: 0;
+  min-width: 450px;
 }
 #aboutBtc .content .sliderAbout .slides_about .tiles {
   width: calc(100% - 5px);
@@ -45,6 +46,8 @@
   padding: 30px;
   flex-direction: column;
   gap: 50px;
+  aspect-ratio: 3/2.4;
+  min-height: 400px;
 }
 #aboutBtc .content .sliderAbout .slides_about .tiles > div:first-child {
   display: flex;
@@ -216,10 +219,12 @@
   padding: var(--paddingY) var(--paddingX) var(--paddingY);
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 #sustainabiltyStandard .back_svg {
   position: absolute;
   height: 100%;
+  pointer-events: none;
 }
 #sustainabiltyStandard .leftContent {
   display: flex;
@@ -450,5 +455,89 @@
   }
   #ourCapabilities .cap_container .spiralImage {
     top: 50%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #sustainabiltyStandard {
+    padding-bottom: calc(var(--paddingY) * 2);
+    grid-template-columns: auto;
+  }
+  #sustainabiltyStandard .heading {
+    max-width: 500px;
+  }
+  #aboutBtc .content .sliderAbout {
+    max-width: 400px;
+    width: 100%;
+    min-width: unset;
+  }
+  #aboutBtc .content .sliderAbout .navigation_about button {
+    padding: 7px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #aboutBtc > .worldMap {
+    width: 100%;
+    height: auto;
+    top: calc(var(--paddingY) * 2.5);
+  }
+  #aboutBtc .content .sliderAbout {
+    margin-top: clamp(9.375rem, 19.5652rem - 40.7609vw, 0rem);
+  }
+  #aboutBtc .content .sliderAbout .slides_about .tiles {
+    gap: 30px;
+    min-height: 350px;
+  }
+  #aboutBtc .content .sliderAbout .slides_about .tiles > div:first-child .number {
+    font-size: calc(var(--font-46) * 2);
+  }
+  #aboutBtc .content .sliderAbout .navigation_about button {
+    padding: 7px;
+  }
+  #ourProducts .content {
+    padding: 0 var(--paddingX);
+  }
+}
+@media screen and (max-width: 600px) {
+  #ourProducts .content .ourProducts {
+    height: auto;
+    aspect-ratio: 4/5;
+  }
+  #ourProducts .content .ourProducts .items > p {
+    opacity: 0;
+    margin-top: 28px;
+  }
+  #ourProducts .content .ourProducts .items > div {
+    height: 100%;
+  }
+  #ourProducts .content .ourProducts .items > div .cta {
+    right: 20px;
+    bottom: 20px;
+  }
+  #ourProducts .content .ourProducts .items.swiper-slide-active > div {
+    height: 100%;
+  }
+  #ourProducts .content .ourProducts .items.swiper-slide-active > div p {
+    opacity: 0;
+  }
+  #ourProducts .content .ourProducts .items.swiper-slide-active > p {
+    opacity: 1;
+    margin-top: 28px;
+  }
+  #ourProducts .content .ourProducts > .swiper-wrapper {
+    height: 100%;
+  }
+  #ourProducts .content .ourProducts .btnss {
+    position: initial;
+    height: var(--navBtn);
+    margin-top: 20px;
+  }
+  #ourProducts .content .ourProducts .btnss button {
+    margin: 0;
+    padding: 7px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #aboutBtc .cta {
+    position: relative;
   }
 }/*# sourceMappingURL=style.css.map */

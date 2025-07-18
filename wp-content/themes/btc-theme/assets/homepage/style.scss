@@ -35,9 +35,10 @@
             width: 40%;
             gap: 30px;
             margin: 0;
+            min-width: 450px;
             .slides_about {
-                .tiles {          
-                    width: calc(100% - 5px);          
+                .tiles {
+                    width: calc(100% - 5px);
                     background-color: #fff;
                     border: 1px solid #d9d9d9;
                     gap: 30px;
@@ -45,6 +46,8 @@
                     padding: 30px;
                     flex-direction: column;
                     gap: 50px;
+                    aspect-ratio: 3/2.4;
+                    min-height: 400px;
                     & > div:first-child {
                         display: flex;
                         flex-direction: column;
@@ -94,8 +97,9 @@
                         height: 100%;
                         width: 100%;
                     }
-                    &::after, &::before {
-                        content: '';
+                    &::after,
+                    &::before {
+                        content: "";
                     }
                 }
                 .prev {
@@ -229,9 +233,11 @@
     padding: var(--paddingY) var(--paddingX) var(--paddingY);
     align-items: center;
     position: relative;
+    overflow: hidden;
     .back_svg {
         position: absolute;
         height: 100%;
+        pointer-events: none;
     }
     .leftContent {
         display: flex;
@@ -350,7 +356,7 @@
         display: grid;
         grid-template-columns: clamp(18.75rem, 4.6875rem + 18.75vw, 27.1875rem) auto;
         gap: 80px;
-        
+
         .empty {
             height: 100%;
             aspect-ratio: 3/4;
@@ -392,7 +398,7 @@
         flex-direction: row-reverse;
         gap: 15px;
         opacity: 0;
-        transform: translate(150px,0);
+        transform: translate(150px, 0);
         .swiper-button-prev {
             img {
                 transform: rotate(180deg);
@@ -454,33 +460,145 @@
     }
 }
 
-
-#our_social{
+#our_social {
     overflow: hidden;
-} 
+}
 
-#linkedIn_video{
+#linkedIn_video {
     overflow: hidden;
-    video{
+    video {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 }
 
-
-
-
-
-@media screen and (max-width: 1546px){
+@media screen and (max-width: 1546px) {
     #ourCapabilities {
-        .swiper-slide{
-            width: 90vw
+        .swiper-slide {
+            width: 90vw;
         }
-        .cap_container{
-             .spiralImage{
+        .cap_container {
+            .spiralImage {
                 top: 50%;
-             }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #sustainabiltyStandard {
+        padding-bottom: calc(var(--paddingY) * 2);
+        grid-template-columns: auto;
+        .heading {
+            max-width: 500px;
+        }
+    }
+    #aboutBtc {
+        .content {
+            .sliderAbout {
+                max-width: 400px;
+                width: 100%;
+                min-width: unset;
+                .navigation_about {
+                    button {
+                        padding: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #aboutBtc {
+        & > .worldMap {
+            width: 100%;
+            height: auto;
+            top: calc(var(--paddingY) * 2.5);
+        }
+        .content {
+            .sliderAbout {
+                margin-top: clamp(9.375rem, 19.5652rem + -40.7609vw, 0rem);
+                .slides_about {
+                    .tiles {
+                        gap: 30px;
+                        min-height: 350px;
+                        & > div:first-child {
+                            .number {
+                                font-size: calc(var(--font-46) * 2);
+                            }
+                        }
+                    }
+                }
+                .navigation_about {
+                    button {
+                        padding: 7px;
+                    }
+                }
+            }
+        }
+    }
+
+    #ourProducts {
+        .content {
+            padding: 0 var(--paddingX);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #ourProducts {
+        .content {
+            .ourProducts {
+                height: auto;
+                aspect-ratio: 4/5;
+                .items {
+                    & > p{
+                        opacity: 0;
+                        margin-top: 28px;
+                    }
+                    & > div {
+                        height: 100%;
+                        .cta{
+                            right: 20px;
+                            bottom: 20px;
+                        }
+                    }
+                }
+                .items.swiper-slide-active {
+                    & > div {
+                        height: 100%;
+                        p{
+                            opacity: 0;
+                        }
+                    }
+                    & > p{
+                        opacity: 1;
+                        margin-top: 28px;
+                    }
+                }
+                & > .swiper-wrapper{
+                    height: 100%;
+                }
+                .btnss{
+                    position: initial;
+                    height: var(--navBtn);
+                    margin-top: 20px;
+                    button{
+                        margin: 0;
+                        padding: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #aboutBtc {
+        .cta {
+            position: relative;
         }
     }
 }

@@ -66,6 +66,16 @@ function btc_files()
             true // Load in footer (true = footer, false = header)
         );
     }
+    if (is_page('why-btc')) {
+        wp_enqueue_style('btc_why-btc_styles', get_theme_file_uri('/assets/why-btc/style.css'));
+        wp_enqueue_script(
+            'btc_why-btc_script', // Handle
+            get_theme_file_uri('/assets/why-btc/script.js'), // JS file path
+            array(), // Dependencies (e.g., array('jquery'))
+            null, // Version (or use '1.0')
+            true // Load in footer (true = footer, false = header)
+        );
+    }
 
 
 
@@ -90,50 +100,50 @@ add_action('after_setup_theme', 'btc_features');
 
 // Add meta box for Pages & Posts
 
-function btc_add_meta_seo_fields()
-{
-    $screens = ['post', 'page'];
-    // ✅ Add to both Posts and Pages
-    foreach ($screens as $screen) {
-        add_meta_box(
-            'btc_seo_meta',
-            'SEO Metadata',
-            'btc_seo_meta_callback',
-            $screen,
-            'normal',
-            'high'
-        );
-    }
-}
+// function btc_add_meta_seo_fields()
+// {
+//     $screens = ['post', 'page'];
+//     // ✅ Add to both Posts and Pages
+//     foreach ($screens as $screen) {
+//         add_meta_box(
+//             'btc_seo_meta',
+//             'SEO Metadata',
+//             'btc_seo_meta_callback',
+//             $screen,
+//             'normal',
+//             'high'
+//         );
+//     }
+// }
 // add_action( 'add_meta_boxes', 'btc_add_meta_seo_fields' );
 
 // Output the meta fields
 
-function btc_seo_meta_callback($post)
-{
-    $meta_title = get_post_meta($post->ID, '_btc_meta_title', true);
-    $meta_description = get_post_meta($post->ID, '_btc_meta_description', true);
-?>
-    <p><label for='btc_meta_title'><strong>Meta Title</strong></label></p>
-    <input type='text' id='btc_meta_title' name='btc_meta_title' value="<?php echo esc_attr($meta_title); ?>" style='width:100%;' />
+// function btc_seo_meta_callback($post)
+// {
+//     $meta_title = get_post_meta($post->ID, '_btc_meta_title', true);
+//     $meta_description = get_post_meta($post->ID, '_btc_meta_description', true);
+// ?>
+     <!-- <p><label for='btc_meta_title'><strong>Meta Title</strong></label></p>
+//     <input type='text' id='btc_meta_title' name='btc_meta_title' value="<?php //echo esc_attr($meta_title); ?>" style='width:100%;' />
 
-    <p><label for='btc_meta_description'><strong>Meta Description</strong></label></p>
-    <textarea id='btc_meta_description' name='btc_meta_description' rows='4' style='width:100%;'><?php echo esc_textarea($meta_description);
-                                                                                                    ?></textarea>
+//     <p><label for='btc_meta_description'><strong>Meta Description</strong></label></p>
+//     <textarea id='btc_meta_description' name='btc_meta_description' rows='4' style='width:100%;'><?php //echo esc_textarea($meta_description);
+//                                                                                                     ?></textarea> -->
 <?php
-}
+// }
 
 // Save the meta fields
 
-function btc_save_seo_meta_fields($post_id)
-{
-    if (array_key_exists('btc_meta_title', $_POST)) {
-        update_post_meta($post_id, '_btc_meta_title', sanitize_text_field($_POST['btc_meta_title']));
-    }
-    if (array_key_exists('btc_meta_description', $_POST)) {
-        update_post_meta($post_id, '_btc_meta_description', sanitize_textarea_field($_POST['btc_meta_description']));
-    }
-}
+// function btc_save_seo_meta_fields($post_id)
+// {
+//     if (array_key_exists('btc_meta_title', $_POST)) {
+//         update_post_meta($post_id, '_btc_meta_title', sanitize_text_field($_POST['btc_meta_title']));
+//     }
+//     if (array_key_exists('btc_meta_description', $_POST)) {
+//         update_post_meta($post_id, '_btc_meta_description', sanitize_textarea_field($_POST['btc_meta_description']));
+//     }
+// }
 // add_action( 'save_post', 'btc_save_seo_meta_fields' );
 
 
@@ -141,7 +151,7 @@ function btc_save_seo_meta_fields($post_id)
 /**
  * Enqueue lead‑submission JS on the front‑end.
  */
-function aa_enqueue_lead_script()
+function btc_enqueue_lead_script()
 {
     wp_enqueue_script(
         'aa-lead-submit',
@@ -153,22 +163,22 @@ function aa_enqueue_lead_script()
 
     wp_localize_script('aa-lead-submit', 'aaLead', array(
         'ajax_url' => admin_url('admin-ajax.php'),
-        'nonce'    => wp_create_nonce('aa_save_lead'),
+        'nonce'    => wp_create_nonce('btc_save_lead'),
     ));
 
     wp_localize_script('aa-reg_event-submit', 'aaEvent', array(
         'ajax_url' => admin_url('admin-ajax.php'),
-        'nonce'    => wp_create_nonce('aa_save_event'),
+        'nonce'    => wp_create_nonce('btc_save_event'),
     ));
 }
-add_action('wp_enqueue_scripts', 'aa_enqueue_lead_script');
+add_action('wp_enqueue_scripts', 'btc_enqueue_lead_script');
 
 
 
 // Save lead via AJAX
-function aa_ajax_save_lead()
+function btc_ajax_save_lead()
 {
-    check_ajax_referer('aa_save_lead', 'nonce');
+    check_ajax_referer('btc_save_lead', 'nonce');
 
     $name         = sanitize_text_field($_POST['name'] ?? '');
     $email        = sanitize_email($_POST['email'] ?? '');
@@ -216,8 +226,8 @@ function aa_ajax_save_lead()
 
     wp_send_json_success('Lead saved. Thank you!');
 }
-add_action('wp_ajax_save_lead', 'aa_ajax_save_lead');
-add_action('wp_ajax_nopriv_save_lead', 'aa_ajax_save_lead');
+add_action('wp_ajax_save_lead', 'btc_ajax_save_lead');
+add_action('wp_ajax_nopriv_save_lead', 'btc_ajax_save_lead');
 
 
 
@@ -228,9 +238,9 @@ add_action('wp_ajax_nopriv_save_lead', 'aa_ajax_save_lead');
 
 
 // Save lead via AJAX
-function aa_ajax_save_event()
+function btc_ajax_save_event()
 {
-    check_ajax_referer('aa_save_event', 'nonce');
+    check_ajax_referer('btc_save_event', 'nonce');
 
     $name         = sanitize_text_field($_POST['name'] ?? '');
     $email        = sanitize_email($_POST['email'] ?? '');
@@ -275,6 +285,6 @@ function aa_ajax_save_event()
 
     wp_send_json_success('Event registered. Thank you!');
 }
-add_action('wp_ajax_save_event', 'aa_ajax_save_event');
-add_action('wp_ajax_nopriv_save_event', 'aa_ajax_save_event');
+add_action('wp_ajax_save_event', 'btc_ajax_save_event');
+add_action('wp_ajax_nopriv_save_event', 'btc_ajax_save_event');
 

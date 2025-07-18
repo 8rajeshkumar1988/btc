@@ -23,11 +23,12 @@ $(document).ready(function () {
 
 
 
-    // my products
+    // my products  
+    const slidesPerViewProduct = window.innerWidth > 820 ? 2.2 : window.innerWidth > 600 ? 1.8 : 1;
     const ourProducts = new Swiper(".ourProducts", {
         spaceBetween: 30,
         centeredSlides: false,
-        slidesPerView: 2.2,
+        slidesPerView: slidesPerViewProduct,
         loop: true,
         // autoplay: { 
         //     delay: 2500,
