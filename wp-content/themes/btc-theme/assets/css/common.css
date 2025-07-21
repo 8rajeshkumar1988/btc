@@ -27,7 +27,7 @@
 }
 
 body {
-  background-color: #FFFFF4;
+  background-color: #fffff4;
 }
 
 .heroBanner {
@@ -334,6 +334,9 @@ textarea {
     --navBtn: 45px;
     --paddingY: 50px;
     --font-24: 20px;
+    --font-14: 13px;
+    --font-16: 15px;
+    --spaceBelow_heading: 30px;
   }
   .heroBanner {
     height: 95vh;

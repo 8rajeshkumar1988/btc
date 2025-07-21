@@ -24,7 +24,7 @@
   line-height: 1.3;
   font-weight: 400;
   color: var(--secondaryBlack);
-  margin-bottom: 20px;
+  margin-bottom: var(--spaceBelow_heading);
 }
 #globalSearch .content ul,
 #globalSearch .content ol {
@@ -133,7 +133,7 @@
   color: #fff;
 }
 #glance .content .subContent {
-  margin-top: var(--font-46);
+  margin-top: var(--spaceBelow_heading);
   display: grid;
   grid-template-columns: 47.5% 47.5%;
   gap: 5%;
@@ -160,7 +160,7 @@
   position: relative;
   padding: var(--paddingY) var(--paddingX);
   padding-bottom: clamp(12.5rem, -7.1573rem + 24.1935vw, 21.875rem);
-  background: linear-gradient(180deg, #FFFFFF 0%, #ECF3FF 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #ecf3ff 100%);
   display: flex;
   flex-direction: column;
   gap: var(--spaceBelow_heading);
@@ -186,7 +186,8 @@
   font-weight: 300;
   line-height: 1.6;
 }
-#homeOfBtc .content .first * strong, #homeOfBtc .content .first * b {
+#homeOfBtc .content .first * strong,
+#homeOfBtc .content .first * b {
   font-weight: 600;
 }
 #homeOfBtc .content .second .title {
@@ -275,7 +276,8 @@
   font-weight: 300;
   color: var(--secondaryBlack);
 }
-#roleOfbtc .content > div .text * strong, #roleOfbtc .content > div .text * b {
+#roleOfbtc .content > div .text * strong,
+#roleOfbtc .content > div .text * b {
   font-weight: 600;
 }
 
@@ -316,7 +318,8 @@
   #sustainableManufacturer > div .img p {
     bottom: 0;
   }
-  #sustainableManufacturer > div .text ul, #sustainableManufacturer > div .text ol {
+  #sustainableManufacturer > div .text ul,
+  #sustainableManufacturer > div .text ol {
     margin-top: 10px;
   }
   #sustainableManufacturer > div:nth-child(odd) {
@@ -347,5 +350,39 @@
   }
   #glance .content .subContent > div {
     width: calc((90vw - 20px) / 2);
+  }
+  #homeOfBtc {
+    overflow: hidden;
+    padding-bottom: clamp(13.75rem, 0.1724rem + 51.7241vw, 25rem);
+  }
+  #homeOfBtc .layer {
+    width: 160%;
+  }
+  #homeOfBtc .content {
+    display: flex;
+    flex-direction: column;
+  }
+  #homeOfBtc .content .second .swiper-wrapper .swiper-slide > div img {
+    width: 80px;
+    height: 80px;
+    padding: 15px;
+  }
+  #homeOfBtc .content .second .swiper-wrapper .swiper-slide > div .titles {
+    margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #roleOfbtc .content > div {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  #roleOfbtc .content > div .img {
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+  #roleOfbtc .content > div:nth-child(even) {
+    display: flex;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */
