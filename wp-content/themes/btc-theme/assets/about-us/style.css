@@ -296,7 +296,7 @@ body {
 #our_impact .our_impact_container .impact_wrapper .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(77.63deg, rgba(0, 0, 0, 0.7254901961) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.8509803922) 25%, transparent);
   z-index: 0;
 }
 #our_impact .our_impact_container .impact_wrapper.open .impact_wrapper_head .open-btn {

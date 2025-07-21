@@ -303,11 +303,7 @@ body {
       .overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient(
-          77.63deg,
-          #000000b9 0%,
-          rgba(0, 0, 0, 0.1) 100%
-        );
+        background: linear-gradient(45deg, #000000d9 25%, transparent);
         z-index: 0;
       }
       &.open .impact_wrapper_head .open-btn {
