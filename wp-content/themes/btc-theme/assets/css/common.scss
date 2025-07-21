@@ -26,8 +26,8 @@
   --spaceBelow_heading: clamp(2.1875rem, 0.625rem + 2.0833vw, 3.125rem); //35 - 50
 }
 
-body{
-  background-color: #FFFFF4;
+body {
+  background-color: #fffff4;
 }
 
 .heroBanner {
@@ -70,7 +70,7 @@ body{
       font-size: var(--font-20);
       color: #ffffff99;
     }
-    .layer{
+    .layer {
       position: absolute;
       height: 50%;
       width: 100%;
@@ -164,8 +164,8 @@ body{
     inset: 0;
     z-index: 0;
   }
-  & > .cta{
-    display: none ;
+  & > .cta {
+    display: none;
   }
   .our_social_head {
     position: relative;
@@ -344,10 +344,13 @@ textarea {
     --navBtn: 45px;
     --paddingY: 50px;
     --font-24: 20px;
+    --font-14: 13px;
+    --font-16: 15px;
+    --spaceBelow_heading: 30px;
   }
   .heroBanner {
     height: 95vh;
-    aspect-ratio: initial;    
+    aspect-ratio: initial;
   }
 
   #newsletter {
@@ -356,22 +359,22 @@ textarea {
       flex-direction: column;
     }
   }
-  #our_clients {    
+  #our_clients {
     .marquee-content {
-      img{
+      img {
         height: 40px;
         width: 80px;
       }
     }
   }
   #our_social {
-    & > .cta{
+    & > .cta {
       display: block;
       margin: var(--spaceBelow_heading) 0;
       margin-left: var(--paddingX);
     }
-    .our_social_head{
-      .cta{
+    .our_social_head {
+      .cta {
         display: none;
       }
     }
