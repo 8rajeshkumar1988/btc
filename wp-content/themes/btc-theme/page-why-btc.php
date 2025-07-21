@@ -25,9 +25,9 @@ get_header();
 
     ?>
     <div class="content">
-        <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / About Us</p>
+        <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / Why Btc</p>
         <div class="heading">
-            <p>About US</p>
+            <p>Why Btc</p>
             <h1>
                 Knitting the Future <br />
                 with African Cotton

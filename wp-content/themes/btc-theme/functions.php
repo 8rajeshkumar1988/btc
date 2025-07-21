@@ -77,6 +77,17 @@ function btc_files()
         );
     }
 
+    if (is_page('textile-park')) {
+        wp_enqueue_style('btc_why-btc_styles', get_theme_file_uri('/assets/textile-park/style.css'));
+        wp_enqueue_script(
+            'btc_textile-park_script', // Handle
+            get_theme_file_uri('/assets/textile-park/scripts.js'), // JS file path
+            array(), // Dependencies (e.g., array('jquery'))
+            null, // Version (or use '1.0')
+            true // Load in footer (true = footer, false = header)
+        );
+    }
+
     if (is_home()) {
         wp_enqueue_style('btc_news_styles', get_theme_file_uri('/assets/news/style.css'));
         wp_enqueue_script(
