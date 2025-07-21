@@ -317,7 +317,7 @@ get_header();
 
 <?php get_template_part('components/clients'); ?>
 
-<?php get_template_part('components/footer'); ?>
+
 
 
 <?php
