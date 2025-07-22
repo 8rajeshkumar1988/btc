@@ -1,0 +1,207 @@
+.heroBanner {
+  .content {
+    & > div {
+      p {
+        text-transform: none;
+        font-weight: 400;
+      }
+      h1 {
+        max-width: 1024px;
+        line-height: 1.3;
+      }
+    }
+  }
+}
+.breadcrub_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 40px 0px;
+  padding: 0px var(--paddingX);
+  .breadcrub {
+    color: #666662;
+    font-size: 20px;
+
+    a {
+      color: #666662;
+      text-decoration: none;
+      font-size: 20px;
+    }
+  }
+  .social_links {
+    display: flex;
+    gap: 10px;
+    img {
+      width: var(--font-24);
+      height: var(--font-24);
+      aspect-ratio: 1;
+      -o-object-fit: contain;
+      filter: grayscale(1);
+      object-fit: contain;
+    }
+  }
+}
+
+#event_location {
+  padding: var(--paddingY) var(--paddingX);
+  .iframe {
+    margin: 40px 0px;
+    width: 100%;
+    height: 400px;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .button_container {
+    display: flex;
+    justify-content: space-between;
+    .copy_address {
+      button {
+        img {
+          width: var(--font-24);
+          height: var(--font-24);
+          aspect-ratio: 1;
+          -o-object-fit: contain;
+          filter: grayscale(1);
+          object-fit: contain;
+        }
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        padding: 10px 20px;
+        background-color: #e4e4e4;
+        font-size: var(--font-16);
+        color: #757575;
+      }
+    }
+    .cta {
+      padding: 10px 20px;
+      font-size: var(--font-16);
+    }
+  }
+}
+
+#explore_other_event {
+  background: #fff;
+    background-color: #ffffff;
+  .heading {
+    padding: var(--paddingY) var(--paddingX);
+    padding-bottom: 0;
+    h2 {
+      color: #000;
+    }
+  }
+  .event_btc_button_container {
+    padding: 40px var(--paddingX) var(--paddingY) var(--paddingX);
+    display: flex;
+    justify-content: flex-end;
+  }
+  .event_btc_buttons {
+    display: flex;
+    gap: 15px;
+    button {
+      padding: 15px;
+      height: var(--navBtn);
+      width: var(--navBtn);
+      background-color: #d4ff32;
+      border: 0px solid #d9d9d9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+      }
+    }
+    button.swiper-button-disabled {
+      background-color: #e4e4e4;
+      img {
+        opacity: 0.4;
+      }
+    }
+    .event_btc-prev {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .event_btc_container {
+    margin-top: 40px;
+
+    .event_btc {
+      padding: 0 var(--paddingX);
+      .event_item {
+        // width: calc((100% - (var(--paddingX) * 2)) / 3);
+        text-decoration: none;
+        cursor: unset;
+        min-width: 320px;
+        .event_image {
+          width: 100%;
+          aspect-ratio: 341/194;
+          position: relative;
+          overflow: hidden;
+          display: block;
+          & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            inset: 0;
+          }
+           p {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            padding: 12px 24px;
+            font-size: 18px;
+            cursor: pointer;
+          }
+        }
+        .event_description {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          margin-top: 20px;
+          h2 {
+            font-size: var(--font-20);
+            font-weight: 500;
+            color: var(--secondaryBlack);
+          }
+          .event_date,
+          .event_location {
+            & > img {
+              width: 30px;
+              height: 30px;
+              aspect-ratio: 1;
+              margin-right: 10px;
+            }
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: var(--font-18);
+            color: var(--secondaryBlack);
+            font-weight: 400;
+          }
+          .cta {
+            padding: 10px 20px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .breadcrub_container {
+    margin: 20px 0px;
+    gap: 20px;
+  }
+}
