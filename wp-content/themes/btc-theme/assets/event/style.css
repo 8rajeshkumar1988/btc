@@ -52,7 +52,6 @@ body {
 #spotlight .hero-slider .swiper-slide .content p {
   color: #fff;
   font-size: var(--font-18);
-  margin-bottom: 20px;
 }
 #spotlight .hero_slider_button_container {
   position: absolute;

@@ -7,20 +7,34 @@ var swiper1 = new Swiper(".event_btc", {
     prevEl: ".event_btc-prev",
   },
 
-  slidesOffsetBefore: 0,
-  slidesOffsetAfter: 0,
+  // slidesOffsetBefore: 0,
+  // slidesOffsetAfter: 0,
   breakpoints: {
     768: {
       slidesPerView: 3,
-      slidesOffsetBefore: window.innerWidth * 0.1,
-      slidesOffsetAfter: window.innerWidth * 0.1,
+      // slidesOffsetBefore: window.innerWidth * 0.1,
+      // slidesOffsetAfter: window.innerWidth * 0.1,
     },
   },
 });
 var swiper2 = new Swiper(".hero-slider", {
   slidesPerView: 1,
   spaceBetween: 0,
-
+  grabCursor: true,
+  effect: "creative",
+  speed: 1000,
+  keyboard: {
+    enabled: true,
+  },
+  creativeEffect: {
+    prev: {
+      shadow: true,
+      translate: [0, 0, -400],
+    },
+    next: {
+      translate: ["100%", 0, 0],
+    },
+  },
   navigation: {
     nextEl: ".hero_slider-next",
     prevEl: ".hero_slider-prev",
@@ -41,9 +55,6 @@ $(document).ready(function () {
     $(".impact_wrapper").removeClass("open");
 
     $clicked.addClass("open");
-    $clicked.find(".content")
-      .css("display", "grid")
-      .hide()
-      .slideDown(800);
+    $clicked.find(".content").css("display", "grid").hide().slideDown(800);
   });
 });
