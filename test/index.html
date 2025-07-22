@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Popup with Reverse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <!-- Grid -->
+    <div id="grid" class="grid grid-cols-3 gap-4 max-w-6xl mx-auto">
+      <div class="card bg-white p-4 rounded shadow cursor-pointer" data-id="1">
+        <img
+          src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg"
+          class="w-full h-40 object-cover rounded mb-2" />
+        <h3 class="text-lg font-bold">Card 1</h3>
+        <p class="hidden">This is the paragraph for card 1.</p>
+      </div>
+      <div class="card bg-white p-4 rounded shadow cursor-pointer" data-id="2">
+        <img
+          src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg"
+          class="w-full h-40 object-cover rounded mb-2" />
+        <h3 class="text-lg font-bold">Card 2</h3>
+        <p class="hidden">Another paragraph for card 2.</p>
+      </div>
+      <!-- Add more cards if needed -->
+    </div>
+
+    <!-- Popup Layout -->
+    <div
+      id="popup"
+      class="fixed top-0 left-0 w-screen h-screen hidden bg-white z-50 overflow-hidden">
+      <!-- Close button -->
+      <button
+        id="closeBtn"
+        class="absolute top-4 right-6 text-3xl font-bold text-gray-600 hover:text-black z-50">
+        ✕
+      </button>
+
+      <div class="flex w-full h-full">
+        <img id="popupImg" src="" class="w-1/2 h-full object-cover" />
+        <div class="w-1/2 flex flex-col justify-center px-8">
+          <h2 id="popupHeading" class="text-3xl font-bold mb-4"></h2>
+          <p id="popupPara" class="text-lg text-gray-700"></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const cards = document.querySelectorAll(".card");
+      const popup = document.getElementById("popup");
+      const popupImg = document.getElementById("popupImg");
+      const popupHeading = document.getElementById("popupHeading");
+      const popupPara = document.getElementById("popupPara");
+      const closeBtn = document.getElementById("closeBtn");
+
+      let lastClickedImage = null;
+      let lastImageRect = null;
+      let lastCardHeading = null;
+
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          const img = card.querySelector("img");
+          const heading = card.querySelector("h3");
+          const para = card.querySelector("p");
+          lastClickedImage = img;
+          lastImageRect = img.getBoundingClientRect();
+          lastCardHeading = heading;
+          gsap.set(heading, { autoAlpha: 0 });
+
+          popupImg.src = img.src;
+          popupHeading.innerText = heading.innerText;
+          popupPara.innerText = para.innerText;
+
+          gsap.set([popupHeading, popupPara], { autoAlpha: 0, x: 50 });
+
+          popup.classList.remove("hidden");
+
+          gsap.set(popupImg, {
+            position: "absolute",
+            top: lastImageRect.top,
+            left: lastImageRect.left,
+            width: lastImageRect.width,
+            height: lastImageRect.height,
+            zIndex: 100,
+          });
+
+          gsap.to(popupImg, {
+            top: 0,
+            left: 0,
+            width: window.innerWidth / 2,
+            height: window.innerHeight,
+            duration: 0.7,
+            ease: "power3.inOut",
+            onComplete: () => {
+              gsap.set(popupImg, { clearProps: "all" });
+            },
+          });
+
+          gsap.to([popupHeading, popupPara], {
+            autoAlpha: 1,
+            x: 0,
+            duration: 0.5,
+            delay: 0.3,
+            stagger: 0.1,
+            ease: "power2.out",
+          });
+        });
+      });
+
+      closeBtn.addEventListener("click", () => {
+        gsap.to([popupHeading, popupPara], {
+          autoAlpha: 0,
+          x: 50,
+          duration: 0.3,
+          ease: "power2.in",
+        });
+
+        const rect = lastImageRect;
+
+        gsap.set(popupImg, {
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: window.innerWidth / 2,
+          height: window.innerHeight,
+          zIndex: 100,
+        });
+
+        gsap.to(popupImg, {
+          top: rect.top,
+          left: rect.left,
+          width: rect.width,
+          height: rect.height,
+          duration: 0.6,
+          ease: "power3.inOut",
+          onComplete: () => {
+            popup.classList.add("hidden");
+            gsap.set(popupImg, { clearProps: "all" });
+
+            // Fade card heading back in
+            if (lastCardHeading) {
+              gsap.set(lastCardHeading, { autoAlpha: 1 });
+            }
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
