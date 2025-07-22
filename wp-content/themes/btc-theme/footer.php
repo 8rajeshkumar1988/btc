@@ -55,8 +55,8 @@
         </div>
         <div>
             <div>
-                <p class="title">Africa</p>
-                <p>H7R3+Q7, Ouézoumé, Benin</p>
+                <p class="title">Address</p>
+                <p>H7R3+Q7, Ouézoumé, Benin, Africa</p>
             </div>
             <div>
                 <p class="title">Email</p>
