@@ -81,7 +81,7 @@ function btc_files()
         );
     }
 
-    if (is_page('textile-park')) {
+    if (is_page('vertical-integration')) {
         wp_enqueue_style('btc_why-btc_styles', get_theme_file_uri('/assets/textile-park/style.css'));
         wp_enqueue_script(
             'btc_textile-park_script', // Handle
