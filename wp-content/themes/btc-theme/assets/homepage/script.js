@@ -1,10 +1,10 @@
 $(document).ready(function () {
 
 
-    const HeroSwiper = new Swiper('.sliderAbout', {
+    const sliderAbout = new Swiper('.sliderAbout', {
         slidesPerView: 1,
         spaceBetween: 0,
-        loop: true,
+        loop: false,
         grabCursor: true, // 👈 adds grab cursor on hover
         speed: 800,
         // autoplay: {

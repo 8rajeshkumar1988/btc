@@ -8,9 +8,10 @@ get_header();
     <div class="content">
         <p class="breadcrub">&nbsp;</p>
         <div class="heading">
-            <p>Africa’s Leading Textile Hub</p>
-            <h1>Crafting Inspired Apparel <br> Solutions for Global Brands.</h1>
+            <p><?php the_title(); ?></p>
+            <?php the_content(); ?>
         </div>
+        <div class="layer"></div>
     </div>
 </section>
 

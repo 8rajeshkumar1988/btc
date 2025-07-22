@@ -82,7 +82,7 @@
   padding: 15px;
   height: var(--navBtn);
   width: var(--navBtn);
-  background-color: #fff;
+  background-color: #3B3B3B;
   border: 1px solid #d9d9d9;
   display: flex;
   align-items: center;
@@ -95,6 +95,7 @@
 #aboutBtc .content .sliderAbout .navigation_about button img {
   height: 100%;
   width: 100%;
+  filter: invert(1);
 }
 #aboutBtc .content .sliderAbout .navigation_about button::after, #aboutBtc .content .sliderAbout .navigation_about button::before {
   content: "";
@@ -441,8 +442,14 @@
 
 #linkedIn_video {
   overflow: hidden;
+  height: 95vh;
+  width: 100%;
+  position: relative;
+  margin-bottom: var(--paddingY);
 }
 #linkedIn_video video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;

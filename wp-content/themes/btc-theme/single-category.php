@@ -25,11 +25,12 @@ the_post();
   <div class="content">
     <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / <a href="<?php echo site_url('/products') ?>">Our Products</a> / <?php the_title() ?></p>
     <div class="heading">
-      <p style="color: #00000099"><?php the_title(); ?></p>
-      <h1 style="color: #4d6144">
+      <p><?php the_title(); ?></p>
+      <h1>
         <?php the_field('sub_title'); ?>
       </h1>
     </div>
+    <div class="layer"></div>
   </div>
 </section>
 

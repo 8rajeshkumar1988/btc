@@ -6,15 +6,11 @@ var swiper = new Swiper(".about_btc", {
     nextEl: ".about_btc-next",
     prevEl: ".about_btc-prev",
   },
-
-  slidesOffsetBefore: 0,
-  slidesOffsetAfter: 0,
   breakpoints: {
     768: {
-      slidesPerView: 2.5,
-      spaceBetween: 40,
-      slidesOffsetBefore: window.innerWidth * 0.1,
-      slidesOffsetAfter: window.innerWidth * 0.1,
+      slidesPerView: 2.8,
+      spaceBetween: 30,
+
     },
   },
 });
