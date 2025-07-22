@@ -5,21 +5,14 @@
     </div>
     <form class="newsletter_form" action="/">
         <div class="f_name">
-            <label for="first_name">First Name</label>
+            <label for="first_name"> Name</label>
             <br />
             <input
                 id="first_name"
                 type="text"
-                placeholder="Enter your first name" />
+                placeholder="Enter your name" />
         </div>
-        <div class="l_name">
-            <label for="last_name">Last Name</label>
-            <br />
-            <input
-                id="last_name"
-                type="text"
-                placeholder="Enter your last name" />
-        </div>
+        
         <div class="email_g">
             <label for="email">Email</label>
             <br />

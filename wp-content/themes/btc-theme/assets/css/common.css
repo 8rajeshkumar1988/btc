@@ -283,7 +283,7 @@ textarea {
 #newsletter .newsletter_form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 20px;
   margin-top: 40px;
 }
@@ -302,14 +302,11 @@ textarea {
 #newsletter .newsletter_form .f_name {
   grid-area: 1/1/2/2;
 }
-#newsletter .newsletter_form .l_name {
+#newsletter .newsletter_form .email_g {
   grid-area: 1/2/2/3;
 }
-#newsletter .newsletter_form .email_g {
-  grid-area: 2/1/3/3;
-}
 #newsletter .newsletter_form .cta {
-  grid-area: 3/1/4/2;
+  grid-area: 2/1/3/3;
   height: -moz-fit-content;
   height: fit-content;
   margin-top: 30px;

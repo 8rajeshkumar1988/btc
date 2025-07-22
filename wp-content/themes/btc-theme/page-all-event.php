@@ -133,6 +133,11 @@ get_header();
         </div>
       </div>
     </section>
+
+    <?php get_template_part('components/socials'); ?>
+    <?php get_template_part('components/newsletter_subs_section'); ?>
+
+    
 <?php
 get_footer();
 
