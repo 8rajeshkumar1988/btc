@@ -1,5 +1,6 @@
+let lenis;
 $(document).ready(function () {
-  const lenis = new Lenis();
+  lenis = new Lenis();
 
   lenis.on("scroll", ScrollTrigger.update);
 
@@ -42,4 +43,30 @@ $(document).ready(function () {
       repeat: -1,
     }
   );
+});
+
+
+
+// header js
+$(document).ready(function () {
+  $('.headerBtn').click(function () {
+    $(this).toggleClass('open');
+
+    if ($(this).hasClass('open')) {
+      lenis.stop();
+      $('#header').css({ display: 'grid' });      
+    } else {
+      lenis.start();
+      $('#header').css({ display: 'none' });
+    }
+  });
+
+
+  $('.right a').each(function () {
+    const el = $(this);
+    el.mouseenter(function () {
+      const path = el.attr('h');
+    });
+  });
+
 });
