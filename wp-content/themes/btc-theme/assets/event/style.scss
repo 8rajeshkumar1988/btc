@@ -37,6 +37,7 @@ body {
         position: relative;
         z-index: 1;
         height: 100%;
+        
         h1 {
           font-size: var(--heading);
           color: #fff;
@@ -47,7 +48,7 @@ body {
         p {
           color: #fff;
           font-size: var(--font-18);
-          margin-bottom: 20px;
+          // margin-bottom: 20px;
         }
       }
     }
