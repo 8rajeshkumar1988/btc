@@ -68,11 +68,11 @@ body {
 }
 .heroBanner .content .breadcrub {
   font-size: var(--font-16);
-  color: var(--secondaryBlack);
+  color: rgba(255, 255, 255, 0.6);
 }
 .heroBanner .content .breadcrub * {
   text-decoration: none;
-  color: var(--secondaryBlack);
+  color: rgba(255, 255, 255, 0.6);
 }
 .heroBanner .content .layer {
   position: absolute;

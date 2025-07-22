@@ -68,11 +68,11 @@ body {
     }
     .breadcrub {
       font-size: var(--font-16);
-      color: var(--secondaryBlack);
+      color: #ffffff99;
       * {
         text-decoration: none;        
-        color: var(--secondaryBlack);
-        // color: #ffffff99;
+        // color: var(--secondaryBlack);
+        color: #ffffff99;
       }
     }
     .layer {

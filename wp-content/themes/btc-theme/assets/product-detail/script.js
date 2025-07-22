@@ -22,28 +22,28 @@ var explore_other_categories = new Swiper(".explore_other_categories", {
     nextEl: ".explore_other-next",
     prevEl: ".explore_other-prev",
   },
-  
- slidesOffsetBefore: 0,   
-  slidesOffsetAfter:0,   
+
+  slidesOffsetBefore: 0,
+  slidesOffsetAfter: 0,
   breakpoints: {
     768: {
       slidesPerView: 2.5,
       spaceBetween: 40,
-      slidesOffsetBefore: window.innerWidth * 0.10,  
-      slidesOffsetAfter: window.innerWidth * 0.10,
+      slidesOffsetBefore: window.innerWidth * 0.1,
+      slidesOffsetAfter: window.innerWidth * 0.1,
     },
   },
 });
 
 var spotlight_slider = new Swiper(".spotlight_slider", {
-  slidesPerView: 1.25,
+  slidesPerView: 1.2,
+  initialSlide: 1,
   spaceBetween: 30,
   centeredSlides: true,
-  initialSlide: 2,
-   loopAdditionalSlides: 3,
   loop: true,
-  navigation: {
-    nextEl: ".product_spotlight-next",
-    prevEl: ".product_spotlight-prev",
-  },
+  loopAdditionalSlides: 3,
+  // navigation: {
+  //   nextEl: ".product_spotlight-next",
+  //   prevEl: ".product_spotlight-prev",
+  // },
 });
