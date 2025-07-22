@@ -20,27 +20,38 @@
         </div>
     </div>
     <div class="middle">
+        <?php
+        $cats = new WP_Query([
+            'posts_per_page' => -1,
+            'post_type'      => 'category',
+            'post_status'    => 'publish',
+            'meta_key'       => '_sort_order',
+            'orderby'        => 'meta_value_num',
+            'order'          => 'ASC',
+        ]);
+
+        if ($cats->have_posts()) {
+        ?>
+            <div>
+                <a href="<?php echo site_url('/products') ?>" class="title">Products</a>
+                <?php while ($cats->have_posts()) {
+                    $cats->the_post(); ?>
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                <?php } ?>
+            </div>
+        <?php } ?>
         <div>
-            <a href="" class="title">Products</a>
-            <a href="">Activewear</a>
-            <a href="">Athleisure</a>
-            <a href="">Nightwear</a>
-            <a href="">Formal Wear</a>
-            <a href="">Intimates</a>
-            <a href="">Kids Wear</a>
-        </div>
-        <div>
-            <a href="" class="title">About Us</a>
-            <a href="">Capabilities</a>
-            <a href="">Sustainability</a>
-            <a href="">Why BTC</a>
+            <a href="<?php echo site_url('/about-us') ?>" class="title">About Us</a>
+            <a href="<?php echo site_url('/capabilities') ?>">Capabilities</a>
+            <a href="<?php echo site_url('/sustainability') ?>">Sustainability</a>
+            <a href="<?php echo site_url('/why-btc') ?>">Why BTC</a>
             <a href="">Vertical Integration</a>
-            <a href="">Contact Us</a>
+            <a href="<?php echo site_url('/contact-us') ?>">Contact Us</a>
         </div>
         <div>
             <a href="" class="title">Media</a>
-            <a href="">News & Blogs</a>
-            <a href="">Events & Engagements</a>
+            <a href="<?php echo site_url('/blogs') ?>">News & Blogs</a>
+            <a href="<?php echo site_url('/all-event') ?>">Events & Engagements</a>
         </div>
         <div>
             <div>
@@ -69,8 +80,8 @@
             <p>All Rights Reserved. BTC</p>
         </div>
         <div class="right">
-            <a href="">Privacy Policy</a>
-            <a href="">Terms & Conditions</a>
+            <a href="<?php echo site_url('/privacy-policy') ?>">Privacy Policy</a>
+            <a href="<?php echo site_url('/terms-and-conditions') ?>">Terms & Conditions</a>
         </div>
     </div>
 </footer>
