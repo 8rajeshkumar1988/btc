@@ -89,7 +89,7 @@
 
 #explore_other_event {
   background: #fff;
-    background-color: #ffffff;
+  background-color: #ffffff;
   .heading {
     padding: var(--paddingY) var(--paddingX);
     padding-bottom: 0;
@@ -155,7 +155,7 @@
             position: absolute;
             inset: 0;
           }
-           p {
+          p {
             position: absolute;
             bottom: 30px;
             right: 30px;
@@ -193,6 +193,76 @@
             padding: 10px 20px;
             font-size: 16px;
           }
+        }
+      }
+    }
+  }
+}
+
+#event_registration {
+  padding: var(--paddingY) var(--paddingX);
+  .event_reg_form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+    label {
+      font-size: var(--font-16);
+      // margin-bottom: 20px;
+    }
+    input,
+    textarea {
+      width: 100%;
+      border: none;
+      border: 1px solid #d9d9d9;
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 15px;
+      font-size: var(--font-16);
+    }
+    .f_name {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .email_g {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    .phone_number {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+    .reason_to_attend {
+      grid-area: 2 / 1 / 4 / 2;
+    }
+    .no_of_attendees {
+      grid-area: 3 / 2 / 4 / 3;
+      height: fit-content;
+
+      .input-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-size: var(--font-16);
+        color: #757575;
+        .value-button {
+          font-size: 40px;
+          color: #000;
+          height: 65px;
+          width: 65px;
+          background-color: #d4ff32;
+          border: 0px solid #d9d9d9;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          aspect-ratio: 1;
+          display: grid;
+          place-items: center;
+        }
+        #attendees_number{
+          margin-top: 0;
         }
       }
     }

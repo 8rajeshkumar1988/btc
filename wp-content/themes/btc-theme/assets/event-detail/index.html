@@ -77,6 +77,45 @@
             <p>Never Miss an opportunity</p>
             <h2>Register Now </h2>
         </div>
+        <form class="event_reg_form" action="/">
+        <div class="f_name">
+            <label for="first_name"> Name</label>
+            <br />
+            <input
+                id="first_name"
+                type="text"
+                placeholder="Enter your name" />
+        </div>
+        
+        <div class="email_g">
+            <label for="email">Your e-mail</label>
+            <br />
+            <input id="email" type="email" placeholder="Enter your email" />
+        </div>
+        <div class="phone_number">
+            <label for="phone">Phone number</label>
+            <br />
+            <input id="phone" type="tel" placeholder="Enter your phone number" />
+        </div>
+        <div class="reason_to_attend">
+            <label for="reason">Reason to Attend</label>
+            <br />
+            <textarea name="reason" rows="5" id="reason"></textarea>
+        </div>
+        <div class="no_of_attendees">
+            <label for="attendees">No. of Attendees</label>
+            <br />
+            <div class="input-group">
+                <div class="value-button"  onclick="decreaseValue()" value="Decrease Value">-</div>
+                <input name="attendees" type="number" id="attendees_number" value="0" />
+                <div class="value-button" onclick="increaseValue()" value="Increase Value">+</div>
+            </div>
+        </div>
+        <button class="cta">
+            Subscribe
+            <img src="../../assets/images/right_arrow.svg" alt="right arrow" />
+        </button>
+    </form>
     </section>
 
     <section id="explore_other_event">
