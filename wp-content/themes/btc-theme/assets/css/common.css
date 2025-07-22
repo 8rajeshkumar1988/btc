@@ -67,8 +67,12 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 .heroBanner .content .breadcrub {
-  font-size: var(--font-20);
+  font-size: var(--font-16);
   color: rgba(255, 255, 255, 0.6);
+}
+.heroBanner .content .breadcrub * {
+  text-decoration: none;
+  color: var(--secondaryBlack);
 }
 .heroBanner .content .layer {
   position: absolute;
@@ -451,6 +455,153 @@ footer .bottom .right * {
   text-decoration: unset;
   font-size: var(--font-14);
   color: #7870C8;
+}
+
+header {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  padding: 50px var(--paddingX);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  height: clamp(3.125rem, 1.0417rem + 2.7778vw, 4.375rem);
+}
+header button {
+  all: unset;
+  cursor: pointer;
+}
+header button img {
+  pointer-events: none;
+}
+header button .open {
+  display: block;
+}
+header button .close {
+  display: none;
+}
+header button.open .open {
+  display: none;
+}
+header button.open .close {
+  display: block;
+}
+
+#header {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  padding-top: 150px;
+  padding-left: var(--paddingX);
+  z-index: 98;
+  background-color: #fff;
+  display: none;
+  grid-template-columns: 35% 60%;
+  gap: 5%;
+}
+#header .right {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #E8E8E8;
+  border-right: 0;
+}
+#header .right a {
+  font-size: calc(var(--font-20) * 2);
+  color: #C9C9C9;
+  width: 100%;
+  padding-left: calc(var(--font-46) / 1.5);
+  text-decoration: unset;
+  line-height: 1.4;
+}
+#header .right a.active, #header .right a:hover {
+  background-color: var(--blue);
+  color: #fff;
+  font-weight: 600;
+}
+#header .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+#header .left .bannerArea .img {
+  width: 100%;
+  aspect-ratio: 16/7.5;
+  position: relative;
+}
+#header .left .bannerArea .img img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#header .left .bannerArea .content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--font-46);
+}
+#header .left .bannerArea .content .headingLike {
+  margin-top: var(--font-14);
+}
+#header .left .bannerArea .content .headingLike .title {
+  font-size: var(--font-14);
+  color: var(--tertiaryBlack);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#header .left .bannerArea .content .headingLike p {
+  font-size: var(--font-24);
+  color: var(--secondaryBlack);
+  line-height: 1.3;
+  width: min(100%, 400px);
+}
+#header .left .bannerArea .content .links {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--font-14) / 2);
+}
+#header .left .bannerArea .content .links a {
+  color: var(--secondaryBlack);
+  font-size: var(--font-14);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  transition: transform 0.2s ease-in-out;
+}
+#header .left .bannerArea .content .links a:hover {
+  transform: translateX(-5px);
+}
+#header .left .bannerArea .content .links a span {
+  color: var(--tertiaryBlack);
+}
+#header .left .mediaArea {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--font-14) / 3);
+}
+#header .left .mediaArea .right {
+  display: none;
+}
+#header .left .mediaArea > div {
+  display: flex;
+  gap: 5px;
+}
+#header .left .mediaArea > div img {
+  width: var(--font-20);
+  height: var(--font-20);
+  aspect-ratio: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: grayscale(1) brightness(1.5);
+}
+#header .left .mediaArea P {
+  font-size: var(--font-14);
+  color: #C9C9C9;
 }
 
 @media screen and (max-width: 1546px) {

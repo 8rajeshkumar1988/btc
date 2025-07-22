@@ -78,9 +78,9 @@
                 <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/images/youtube.png'; ?>" alt="youtube"></a>
             </div>
             <div class="right">
-            <a href="">Privacy Policy</a>
-            <a href="">Terms & Conditions</a>
-        </div>
+                <a href="">Privacy Policy</a>
+                <a href="">Terms & Conditions</a>
+            </div>
             <p>All Rights Reserved. BTC</p>
         </div>
         <div class="right">
