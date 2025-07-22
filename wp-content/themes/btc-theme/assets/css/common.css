@@ -467,7 +467,7 @@ header {
   align-items: center;
 }
 header .logo {
-  height: clamp(3.125rem, 1.0417rem + 2.7778vw, 4.375rem);
+  height: clamp(3.125rem, 2.0833rem + 1.3889vw, 3.75rem);
 }
 header button {
   all: unset;
