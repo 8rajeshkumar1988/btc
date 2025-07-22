@@ -51,7 +51,5 @@
 
 
 <body <?php body_class(); ?>>
-  <header class="site-header">
-
-
-  </header>
+  
+<?php get_template_part('components/headerMenu'); ?>
