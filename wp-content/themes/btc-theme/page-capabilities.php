@@ -213,19 +213,19 @@ get_header();
           <div class="static">
             <div>
               <h3>2782 m/c</h3>
-              <p>Production with 1391 Stitching machines x 2 shifts</p>
+              <p>Production with 1391 Stitching <br> machines x 2 shifts</p>
             </div>
             <div>
               <h3>11.4 Ha</h3>
-              <p>Vertically Integrated Knitting unit area</p>
+              <p>Vertically Integrated <br>Knitting unit area</p>
             </div>
             <div>
               <h3>7000 Tons</h3>
-              <p>Knit fabric production annually</p>
+              <p>Knit fabric production <br> annually</p>
             </div>
             <div>
               <h3>24 Mn</h3>
-              <p>Pieces of apparel per annum</p>
+              <p>Pieces of apparel <br> per annum</p>
             </div>
           </div>
           <div class="dynamic_desc">

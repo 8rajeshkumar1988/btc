@@ -9,7 +9,7 @@ var swiper = new Swiper(".about_btc", {
   breakpoints: {
     768: {
       slidesPerView: 2.8,
-      spaceBetween: 30,
+      spaceBetween: 20,
 
     },
   },

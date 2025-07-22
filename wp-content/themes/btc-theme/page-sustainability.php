@@ -29,11 +29,12 @@ the_post();
     <div class="content">
         <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / Sustainability</p>
         <div class="heading">
-            <p style="color: #00000099">SUSTAINABILITY</p>
-            <h1 style="color: #000000">
+            <p>SUSTAINABILITY</p>
+            <h1>
                 Eco-Innovation at <br> Every Stage
             </h1>
         </div>
+        <div class="layer"></div>
     </div>
 </section>
 <section id="sustainability_details">

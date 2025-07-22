@@ -122,7 +122,8 @@ body {
 #sustainability_details .sustainability_info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: var(--font-24);
+  align-items: center;
 }
 #sustainability_details .sustainability_info p {
   margin-bottom: 30px;
@@ -142,7 +143,9 @@ body {
 #sustainability_details .sustainability_info .image_wrapper {
   position: relative;
   overflow: hidden;
+  width: 100%;
   min-height: 350px;
+  aspect-ratio: 537/407;
 }
 #sustainability_details .sustainability_info .image_wrapper img {
   position: absolute;
