@@ -36,6 +36,7 @@ get_header();
       <p><?php the_title(); ?></p>
       <?php the_content(); ?>
     </div>
+    <div class="layer"></div>
   </div>
 </section>
 <section id="product_page_details">
@@ -195,7 +196,7 @@ get_header();
     </div>
     <div class="custom_product_detail_list">
       <div>
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/sewing.svg'; ?>" alt="" />
+        <img src="<?php echo get_template_directory_uri() . '/assets/images/machine.png'; ?>" alt="" />
         <p>
           Custom printing, <br />
           embroidery & dyeing options <br />
@@ -203,7 +204,7 @@ get_header();
         </p>
       </div>
       <div>
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/shirt.svg'; ?>" alt="" />
+        <img src="<?php echo get_template_directory_uri() . '/assets/images/shirtIcon.png'; ?>" alt="" />
         <p>
           Made-to-order <br />
           garments for truly <br />

@@ -32,12 +32,10 @@ the_post();
     <div class="content">
         <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / About Us</p>
         <div class="heading">
-            <p>About US</p>
-            <h1>
-                Knitting the Future <br />
-                with African Cotton
-            </h1>
+            <p><?php the_title(); ?></p>
+            <?php the_content(); ?>
         </div>
+        <div class="layer"></div>
     </div>
 </section>
 <section id="about_btc">
@@ -106,26 +104,28 @@ the_post();
 </section>
 <section id="vision_mission">
     <div class="vision_mission_container">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/vision.jpg"  ?>" alt="" />
+        
+        <video autoplay loop muted playsinline  src="<?php echo get_template_directory_uri() . "/assets/images/vision.mp4"  ?>"></video>
     </div>
     <div class="vision_mission_container">
         <h2>Vision</h2>
         <p>
             To lead Africa's textile transformation by pioneering sustainable,
-            traceable and high-performance apparel manufacturing, setting new
+            traceable and <strong> high-performance apparel manufacturing,</strong> setting new
             global standards for quality and environmental responsibility.
         </p>
     </div>
     <div class="vision_mission_container">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/mission.jpg"  ?>" alt="" />
+        
+        <video autoplay loop muted playsinline src="<?php echo get_template_directory_uri() . "/assets/images/mission.mp4"  ?>"></video>
     </div>
     <div class="vision_mission_container">
         <h2>Mission</h2>
         <p>
-            At BTC, we shape the future of textiles by integrating sustainability,
-            innovation, and efficiency. From CmiA-certified cotton to premium
+            At BTC, we shape the future of textiles by integrating <strong> sustainability,
+            innovation, and efficiency.</strong> From <strong>CmiA-certified cotton </strong> to premium
             garments, we deliver ethical, high-quality apparel that meets global
-            demand while empowering communities and reducing carbon footprints.
+            demand while empowering communities and <strong> reducing carbon footprints.</strong>
         </p>
     </div>
 </section>
@@ -176,7 +176,7 @@ if ($leaderships->have_posts()) {
                     </div>
                     <div class="leader_detail">
                         <h2 class="leader_title"><?php the_title(); ?></h2>
-                        
+
                         <p class="leader_description"><?php echo get_field('jobtitle'); ?></p>
                     </div>
                 </div>
@@ -252,139 +252,139 @@ if ($leaderships->have_posts()) {
     </div>
 </section>
 <section id="our_impact">
-      <div class="heading">
+    <div class="heading">
         <p>Our Impact</p>
         <h2>
-          Making a Difference, <br />
-          Stitch by Stitch
+            Making a Difference, <br />
+            Stitch by Stitch
         </h2>
-      </div>
+    </div>
 
-      <div class="our_impact_container">
+    <div class="our_impact_container">
         <!-- PARTNERS -->
         <div data-section="partners" class="impact_wrapper bg-partners open">
-          <div class="overlay"></div>
-          <div class="impact_wrapper_head">
-            <h2>PARTNERS</h2>
-            <button class="open-btn">
-              <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
-            </button>
-          </div>
-          <div class="content">
-            <div class="content-details">
-              <div class="content-detail">
-                <div>
-                  <h2>7000</h2>
-                  <p>
-                    Beninese nationals will be directly employed across both
-                    shifts
-                  </p>
-                </div>
-                <div>
-                  <h2>7000-8000</h2>
-                  <p>Driving indirect jobs across supply and services</p>
-                </div>
-              </div>
-              <ul>
-                <li>Skilling of Local man power for life time through GTC</li>
-                <li>Local Entrepreneurial development through EDS scheme</li>
-                <li>
-                  The vertical supply chain Eco system shall cater to other
-                  garment manufacturers in the region
-                </li>
-              </ul>
+            <div class="overlay"></div>
+            <div class="impact_wrapper_head">
+                <h2>PARTNERS</h2>
+                <button class="open-btn">
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
+                </button>
             </div>
-            <div class="content-btn">
-              <button class="cta">
-              GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
-            </button>
+            <div class="content">
+                <div class="content-details">
+                    <div class="content-detail">
+                        <div>
+                            <h2>7000</h2>
+                            <p>
+                                Beninese nationals will be directly employed across both
+                                shifts
+                            </p>
+                        </div>
+                        <div>
+                            <h2>7000-8000</h2>
+                            <p>Driving indirect jobs across supply and services</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Skilling of Local man power for life time through GTC</li>
+                        <li>Local Entrepreneurial development through EDS scheme</li>
+                        <li>
+                            The vertical supply chain Eco system shall cater to other
+                            garment manufacturers in the region
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-btn">
+                    <button class="cta">
+                        GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
 
         <!-- PEOPLE -->
         <div data-section="people" class="impact_wrapper bg-people">
-          <div class="overlay"></div>
-          <div class="impact_wrapper_head">
-            <h2>PEOPLE</h2>
-            <button class="open-btn">
-              <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
-            </button>
-          </div>
-          <div class="content">
-            <div class="content-details">
-              <div class="content-detail">
-                <div>
-                  <h2>7000</h2>
-                  <p>
-                    Beninese nationals will be directly employed across both
-                    shifts
-                  </p>
-                </div>
-                <div>
-                  <h2>7000-8000</h2>
-                  <p>Driving indirect jobs across supply and services</p>
-                </div>
-              </div>
-              <ul>
-                <li>Skilling of Local man power for life time through GTC</li>
-                <li>Local Entrepreneurial development through EDS scheme</li>
-                <li>
-                  The vertical supply chain Eco system shall cater to other
-                  garment manufacturers in the region
-                </li>
-              </ul>
+            <div class="overlay"></div>
+            <div class="impact_wrapper_head">
+                <h2>PEOPLE</h2>
+                <button class="open-btn">
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
+                </button>
             </div>
-           <div class="content-btn">
-              <button class="cta">
-              GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
-            </button>
+            <div class="content">
+                <div class="content-details">
+                    <div class="content-detail">
+                        <div>
+                            <h2>7000</h2>
+                            <p>
+                                Beninese nationals will be directly employed across both
+                                shifts
+                            </p>
+                        </div>
+                        <div>
+                            <h2>7000-8000</h2>
+                            <p>Driving indirect jobs across supply and services</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Skilling of Local man power for life time through GTC</li>
+                        <li>Local Entrepreneurial development through EDS scheme</li>
+                        <li>
+                            The vertical supply chain Eco system shall cater to other
+                            garment manufacturers in the region
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-btn">
+                    <button class="cta">
+                        GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
 
         <!-- PLANET -->
         <div data-section="planet" class="impact_wrapper bg-planet">
-          <div class="overlay"></div>
-          <div class="impact_wrapper_head">
-            <h2>PLANET</h2>
-            <button class="open-btn">
-              <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
-            </button>
-          </div>
-          <div class="content">
-            <div class="content-details">
-              <div class="content-detail">
-                <div>
-                  <h2>7000</h2>
-                  <p>
-                    Beninese nationals will be directly employed across both
-                    shifts
-                  </p>
-                </div>
-                <div>
-                  <h2>7000-8000</h2>
-                  <p>Driving indirect jobs across supply and services</p>
-                </div>
-              </div>
-              <ul>
-                <li>Skilling of Local man power for life time through GTC</li>
-                <li>Local Entrepreneurial development through EDS scheme</li>
-                <li>
-                  The vertical supply chain Eco system shall cater to other
-                  garment manufacturers in the region
-                </li>
-              </ul>
+            <div class="overlay"></div>
+            <div class="impact_wrapper_head">
+                <h2>PLANET</h2>
+                <button class="open-btn">
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
+                </button>
             </div>
-            <div class="content-btn">
-              <button class="cta">
-              GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
-            </button>
+            <div class="content">
+                <div class="content-details">
+                    <div class="content-detail">
+                        <div>
+                            <h2>7000</h2>
+                            <p>
+                                Beninese nationals will be directly employed across both
+                                shifts
+                            </p>
+                        </div>
+                        <div>
+                            <h2>7000-8000</h2>
+                            <p>Driving indirect jobs across supply and services</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Skilling of Local man power for life time through GTC</li>
+                        <li>Local Entrepreneurial development through EDS scheme</li>
+                        <li>
+                            The vertical supply chain Eco system shall cater to other
+                            garment manufacturers in the region
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-btn">
+                    <button class="cta">
+                        GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 <section id="certificates_compliances">
     <div class="heading">
         <p>CERTIFICATIONS & COMPLIANCE</p>

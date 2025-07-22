@@ -55,7 +55,7 @@ body {
         font-weight: 400;
         color: #fff;
         margin-top: var(--headingTop);
-        // line-height: 100%;
+        line-height: 1.2;
         z-index: 1;
       }
       p {
@@ -64,6 +64,7 @@ body {
         font-size: var(--font-20);
         font-weight: 700;
         color: #ffffff99;
+        text-transform: uppercase;
       }
     }
     .breadcrub {
@@ -118,7 +119,7 @@ body {
   h3,
   h4 {
     font-size: var(--font-46);
-    line-height: 1.3;
+    line-height: 1.2;
     font-weight: 400;
     color: var(--secondaryBlack);
     margin-top: var(--headingTop);
@@ -141,7 +142,7 @@ body {
   }
 
   .marquee-track.left-slide {
-    margin: var(--spaceBelow_heading) 0;
+    margin: var(--spaceBelow_heading) 0 calc(var(--spaceBelow_heading) * 1.5);
   }
   .marquee-track {
     display: flex;
@@ -231,6 +232,9 @@ body {
     width: 100%;
     z-index: -1;
     transform: translate(0%, -25%);
+  }
+  .heading{
+    margin-bottom: var(--spaceBelow_heading);
   }
   .accordian {
     position: relative;
@@ -402,7 +406,7 @@ footer {
       font-weight: 300;
       color: #fff;
       font-size: var(--font-16);
-      line-height: 1;
+      line-height: 1.3;
     }
   }
   .middle{

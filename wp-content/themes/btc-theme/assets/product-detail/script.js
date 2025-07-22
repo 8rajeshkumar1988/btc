@@ -22,15 +22,11 @@ var explore_other_categories = new Swiper(".explore_other_categories", {
     nextEl: ".explore_other-next",
     prevEl: ".explore_other-prev",
   },
-
-  slidesOffsetBefore: 0,
-  slidesOffsetAfter: 0,
+  
   breakpoints: {
     768: {
       slidesPerView: 2.5,
-      spaceBetween: 40,
-      slidesOffsetBefore: window.innerWidth * 0.1,
-      slidesOffsetAfter: window.innerWidth * 0.1,
+      spaceBetween: 20,
     },
   },
 });

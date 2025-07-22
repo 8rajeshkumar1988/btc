@@ -14,7 +14,7 @@ $(document).ready(function () {
 
   const social_media = new Swiper(".social_media", {
     slidesPerView: "auto",
-    spaceBetween: 30,
+    spaceBetween: 20,
   });
 
   const leftTrack = document.querySelector(".left-slide");
