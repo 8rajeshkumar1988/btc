@@ -56,8 +56,7 @@ function btc_files()
         );
     }
     if (is_page('capabilities')) {
-        wp_enqueue_style('btc_capabilities_styles', get_theme_file_uri('/assets/capabilities/style.css'));
-        
+        wp_enqueue_style('btc_capabilities_styles', get_theme_file_uri('/assets/capabilities/style.css'));  
     }
 
     if (is_page('sustainability')) {
@@ -65,6 +64,16 @@ function btc_files()
         wp_enqueue_script(
             'btc_sustainability_script', // Handle
             get_theme_file_uri('/assets/sustainbility/script.js'), // JS file path
+            array(), // Dependencies (e.g., array('jquery'))
+            null, // Version (or use '1.0')
+            true // Load in footer (true = footer, false = header)
+        );
+    }
+    if (is_page('all-event')) {
+        wp_enqueue_style('btc_event_styles', get_theme_file_uri('/assets/event/style.css'));
+        wp_enqueue_script(
+            'btc_event_script', // Handle
+            get_theme_file_uri('/assets/event/script.js'), // JS file path
             array(), // Dependencies (e.g., array('jquery'))
             null, // Version (or use '1.0')
             true // Load in footer (true = footer, false = header)
