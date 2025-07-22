@@ -99,7 +99,7 @@
     <div class="right">
         <a class="active" href="/btc/products">Products</a>
         <a href="/btc/why-btc">Why BTC</a>
-        <a href="/btc/all-events">Media</a>
+        <a href="/btc/all-event">Media</a>
         <a href="/btc/about-us">About Us</a>
         <a href="/btc/vertical-integration">Vertical Integration</a>
         <a href="/btc/sustainability">Sustainability</a>
