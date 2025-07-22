@@ -113,6 +113,18 @@ function btc_files()
     }
 
 
+    if ( is_single() && get_post_type() === 'post' ) {
+      wp_enqueue_style('btc_news_detail_styles', get_theme_file_uri('/assets/blog-detail/style.css'));
+      wp_enqueue_script(
+            'btc_news_detail_script', // Handle
+            get_theme_file_uri('/assets/blog-detail/script.js'), // JS file path
+            array(), // Dependencies (e.g., array('jquery'))
+            null, // Version (or use '1.0')
+            true // Load in footer (true = footer, false = header)
+        );
+    }
+
+
 
 
     //   wp_enqueue_style( 'btc_extra_styles', get_theme_file_uri( '/assets/index.css' ) );
