@@ -262,7 +262,7 @@ if ($leaderships->have_posts()) {
 
     <div class="our_impact_container">
         <!-- PARTNERS -->
-        <div data-section="partners" class="impact_wrapper bg-partners open">
+        <div data-section="partners" class="impact_wrapper bg-partners ">
             <div class="overlay"></div>
             <div class="impact_wrapper_head">
                 <h2>PARTNERS</h2>
@@ -303,7 +303,7 @@ if ($leaderships->have_posts()) {
         </div>
 
         <!-- PEOPLE -->
-        <div data-section="people" class="impact_wrapper bg-people">
+        <div data-section="people" class="impact_wrapper bg-people open">
             <div class="overlay"></div>
             <div class="impact_wrapper_head">
                 <h2>PEOPLE</h2>

@@ -269,6 +269,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--font-46);
+  align-items: center;
 }
 #arise_details .arise_container .logo_container img {
   width: 100%;
@@ -276,12 +277,13 @@ body {
 #arise_details .arise_container .description {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
-  gap: 40px;
+  gap: calc(var(--font-24) * 1);
 }
 #arise_details .arise_container .description p {
   font-size: var(--font-20);
+  color: var(--secondaryBlack);
 }
 
 #our_impact {
