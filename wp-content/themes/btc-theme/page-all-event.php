@@ -3,7 +3,136 @@
 get_header();
 
 ?>
-All Event List
+<section id="spotlight">
+      <!-- <video playsinline autoplay muted loop src="../assets/homeVideo.mp4"></video> -->
+      <div class="hero-slider swiper">
+        <div class="swiper-wrapper">
+          
+          <div class="swiper-slide">
+            <img src="../assets/product-detail.png" alt="" />
+            <div class="content">
+              <p class="breadcrub">&nbsp;</p>
+              <div class="heading">
+                <p style="font-weight: 400;margin-bottom: 20px;">SPOTLIGHT</p>
+                <div class="event_description">
+                  <h1>BTC at Global Apparel Expo 2025</h1>
+                  <div class="event_date">
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender-white.png" ?>" alt="" />
+                    <p>12 July 2025</p>
+                  </div>
+                  <div class="event_location">
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/event/location-white.png" ?>" alt="" />
+                    <p>Benin</p>
+                  </div>
+                  <button class="cta">
+                    View Event
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="hero_slider_button_container">
+        <div class="hero_slider_buttons">
+          <button class="hero_slider-prev">
+            <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+          </button>
+          <button class="hero_slider-next">
+            <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="upcoming_events">
+      <div class="heading">
+        <p>Don't Miss</p>
+        <h2>Upcoming events</h2>
+      </div>
+      <div class="our_impact_container">
+        <div class="impact_wrapper upcoming-events open">
+          <img src="../assets/verticle/laundry.jpg" alt="" />
+          <div class="overlay"></div>
+          <div class="impact_wrapper_head">
+            <h2>BTC at Global Apparel Expo 2025</h2>
+            <button class="open-btn">
+              <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>"
+              alt="right arrow" />
+            </button>
+          </div>
+          <div class="content">
+            <div class="content-details">
+              <p>
+                Showcasing sustainable manufacturing innovations on the world
+                stage.
+              </p>
+
+              <div class="content-bottom">
+                <div class="event_date">
+                  <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender-white.png" ?>" alt="" />
+                  <p>12 July 2025</p>
+                </div>
+                <div class="event_location">
+                  <img src="<?php echo get_template_directory_uri() . "/assets/images/event/location-white.png" ?>" alt="" />
+                  <p>Benin</p>
+                </div>
+                <button class="cta">
+                  Register Now <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>"
+                  alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="event_archive">
+      <div class="heading">
+        <p>Event Archive</p>
+        <h2>Previous Events</h2>
+      </div>
+      <div class="event_btc_container">
+        <div class="swiper event_btc">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide event_item">
+              <div class="event_image">
+                <img src="../assets/about-sec-1.jpg" alt="" />
+              </div>
+              <div class="event_description">
+                <h2>BTC at FutureTextiles Summit 2025</h2>
+                <div class="event_date">
+                  <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender.png" ?>" alt="" />
+                  <p>12 July 2025</p>
+                </div>
+                <div class="event_location">
+                  <img src="<?php echo get_template_directory_uri() . "/assets/images/event/location.png" ?>" alt="" />
+                  <p>Benin</p>
+                </div>
+                <button class="cta">
+                  View Event
+                  <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
+                </button>
+              </div>
+            </div>
+           
+          </div>
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+      </div>
+      <div class="event_btc_button_container">
+        <div class="event_btc_buttons">
+          <button class="event_btc-prev">
+            <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+          </button>
+          <button class="event_btc-next">
+            <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+          </button>
+        </div>
+      </div>
+    </section>
 <?php
 get_footer();
 

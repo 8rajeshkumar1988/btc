@@ -45,7 +45,7 @@
             <a href="<?php echo site_url('/capabilities') ?>">Capabilities</a>
             <a href="<?php echo site_url('/sustainability') ?>">Sustainability</a>
             <a href="<?php echo site_url('/why-btc') ?>">Why BTC</a>
-            <a href="">Vertical Integration</a>
+            <a href="<?php echo site_url('/vertical-integration') ?>">Vertical Integration</a>
             <a href="<?php echo site_url('/contact-us') ?>">Contact Us</a>
         </div>
         <div>
@@ -55,8 +55,8 @@
         </div>
         <div>
             <div>
-                <p class="title">Africa</p>
-                <p>H7R3+Q7, Ouézoumé, Benin</p>
+                <p class="title">Address</p>
+                <p>H7R3+Q7, Ouézoumé, Benin, Africa</p>
             </div>
             <div>
                 <p class="title">Email</p>
