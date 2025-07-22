@@ -42,8 +42,8 @@ var spotlight_slider = new Swiper(".spotlight_slider", {
   centeredSlides: true,
   loop: true,
   loopAdditionalSlides: 3,
-  // navigation: {
-  //   nextEl: ".product_spotlight-next",
-  //   prevEl: ".product_spotlight-prev",
-  // },
+  navigation: {
+    nextEl: ".product_spotlight-next",
+    prevEl: ".product_spotlight-prev",
+  },
 });
