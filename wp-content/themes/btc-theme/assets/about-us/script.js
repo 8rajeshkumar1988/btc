@@ -36,18 +36,49 @@ $(document).ready(function () {
   });
 });
 
-// $(".faq.default-open .ans").slideDown(500);
+ document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".leader_card");
+    const popup = document.getElementById("popup");
+    const popupImg = document.getElementById("popupImg");
+    const popupHeading = document.getElementById("popupHeading");
+    const popupPara = document.getElementById("popupPara");
+    const popupleaderBio = document.getElementById("leader_bio");
+    const closeBtn = document.getElementById("closeBtn");
 
-// $(".faq").click(function () {
-//   const item = $(this);
-//   $(".faq.default-open .ans").slideUp(500);
-//   const answer = item.find(".ans");
-//   if (item.hasClass("default-open")) {
-//     item.removeClass("default-open");
-//     answer.slideUp(500);
-//   } else {
-//     $(".faq").removeClass("default-open");
-//     item.addClass("default-open");
-//     answer.slideDown(500);
-//   }
-// });
+    cards.forEach((card) => {
+      card.addEventListener("click", () => {
+        const img = card.querySelector("img");
+        const heading = card.querySelector(".leader_title");
+        const para = card.querySelector(".leader_description");
+        const leaderBio = card.querySelector(".leader_bio");
+
+        // Set content
+        popupImg.src = img.src;
+        popupHeading.innerText = heading.innerText;
+        popupPara.innerText = para.innerText;
+        popupleaderBio.innerHTML = leaderBio.innerHTML;
+
+        // Show popup and fade in
+        popup.classList.remove("hidden");
+        lenis.stop();
+        gsap.fromTo(
+          popup,
+          { autoAlpha: 0 },
+          { autoAlpha: 1, duration: 0.6, ease: "power2.out" }
+        );
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      // Fade out popup
+      gsap.to(popup, {
+        autoAlpha: 0,
+        duration: 0.4,
+        ease: "power2.in",
+        onComplete: () => {
+          popup.classList.add("hidden");
+          lenis.start();
+        },
+      });
+    });
+  });

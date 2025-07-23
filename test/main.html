@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #iframe {
+            display: none; /* Hide the iframe initially */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #F0EBF8; /* Semi-transparent background */
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+        #closeButton {
+                position: absolute;
+    top: 20px;
+    right: 20px;
+    aspect-ratio: 1;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    display: grid;
+    place-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="openButton">Open iframe</button>
+
+    <div id="iframe">
+        <button id="closeButton">X</button>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSemd19fT6a-4P-Wb8c3WenvIRIA2_G6vXnodr2xTpAC5bNLAA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+
+    <script>
+        const openButton = document.getElementById('openButton');
+        const iframeDiv = document.getElementById('iframe');
+        const closeButton = document.getElementById('closeButton');
+
+        // Show iframe when button is clicked
+        openButton.addEventListener('click', () => {
+            iframeDiv.style.display = 'flex'; // Make iframe visible
+        });
+
+        // Close iframe when close button is clicked
+        closeButton.addEventListener('click', () => {
+            iframeDiv.style.display = 'none'; // Hide iframe
+        });
+    </script>
+
+</body>
+</html>
