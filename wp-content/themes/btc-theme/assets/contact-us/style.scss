@@ -137,6 +137,113 @@ body {
   //   background-size: 20px;
   // }
 }
+#lead_popup_form {
+  // padding: 5vh var(--paddingX);
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  align-content: center;
+  padding: 55px 44px;
+  backdrop-filter: blur(10px);
+  .popup_container{
+    background-color: #fff;
+    padding: 50px 72px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    .logo {
+      height: clamp(3.125rem, 2.0833rem + 1.3889vw, 3.75rem);
+    }
+    .close {
+      cursor: pointer;
+      width: 40px;
+      img {
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  .heading {
+    h2 {
+      color: var(--blue);
+      font-weight: 500;
+      max-width: 900PX;
+      font-size: calc(var(--font-46) - 15px);
+    }
+  }
+  form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 30px;
+    margin-top: 30px;
+  }
+  label {
+    font-size: var(--font-14);
+  }
+  input,
+  select,
+  textarea {
+    width: 100%;
+    border: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 8px;
+    margin-top: 10px;
+    font-size: var(--font-14);
+  }
+  .whatsapp_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .checkbox_container {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      gap: 5px;
+      label {
+        font-size: 12px;
+      }
+      #whatsapp_checkbox {
+        width: auto;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+  .policy_container,
+  .e_com_btc {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 40px;
+    input {
+      width: auto;
+      margin: 0;
+    }
+  }
+  .textareaDiv {
+    grid-area: 2 / 3 / 4 / 4;
+  }
+  .btn_container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  // select {
+  //   appearance: none;
+  //   background-image: url('/assets/arow_donw.svg');
+  //   background-repeat: no-repeat;
+  //   background-position: right 10px center;
+  //   background-size: 20px;
+  // }
+}
 #virtual_factory_experience {
   padding: calc(var(--paddingY) / 2) var(--paddingX);
   background-color: white;
@@ -217,6 +324,21 @@ body {
       margin: 0;
     }
   }
+  #lead_popup_form {
+    form {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .textareaDiv {
+      grid-area: auto;
+    }
+    .whatsapp_input {
+      grid-area: 3 / 1 / 4 / 2;
+    }
+    .policy_container,
+    .e_com_btc {
+      margin: 0;
+    }
+  }
 }
 @media screen and (max-width: 768px) {
   .heroBanner {
@@ -240,7 +362,14 @@ body {
     form {
       grid-template-columns: 1fr;
     }
-
+    .whatsapp_input {
+      grid-area: 5 / 1 / 6 / 2;
+    }
+  }
+  #lead_popup_form {
+    form {
+      grid-template-columns: 1fr;
+    }
     .whatsapp_input {
       grid-area: 5 / 1 / 6 / 2;
     }

@@ -496,7 +496,7 @@ body {
     color: #333;
     cursor: pointer;
     z-index: 9999;
-    background-color: #d9d9d9;
+    background-color: #979797;
     width: 50px;
     height: 50px;
     display: grid;
@@ -553,6 +553,25 @@ body {
   #certificates_compliances {
     .cc_container {
       grid-template-columns: 1fr;
+    }
+  }
+  #popup {
+    padding: 0;
+    .pop_container{
+      grid-template-columns: 1fr;
+      gap: 30px;
+      overflow: scroll;
+      // padding: 0;
+      #popupImg{
+        max-width: 600px;
+        max-height: 600px;
+      }
+      .pop_content{
+        overflow:visible;
+        #leader_bio{
+          margin-top: 30px;
+        }
+      }
     }
   }
 }
@@ -642,6 +661,27 @@ body {
         //   display: grid;
         //   grid-template-columns: repeat(2, 1fr);
         // }
+      }
+    }
+  }
+  #popup {
+    #closeBtn{
+      width: 35px;
+      height: 35px;
+      font-size: 20px;
+    }
+    .pop_container{
+      gap: 20px;
+      padding: 15px;
+      #popupImg{
+        max-width: 600px;
+        max-height: 600px;
+        height: 450px;
+      }
+      .pop_content{
+        #leader_bio{
+          margin-top: 20px;
+        }
       }
     }
   }
