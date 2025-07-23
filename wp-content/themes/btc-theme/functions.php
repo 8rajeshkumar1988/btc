@@ -211,17 +211,11 @@ function btc_enqueue_lead_script()
     wp_localize_script('aa-lead-submit', 'aaLead', array(
         'ajax_url' => admin_url('admin-ajax.php'),
         'nonce'    => wp_create_nonce('btc_save_lead'),
+        'event_nonce'    => wp_create_nonce('btc_save_event'),
+        'subscribe_nonce'=> wp_create_nonce('btc_save_subscribe'),
     ));
 
-    wp_localize_script('aa-reg_event-submit', 'aaEvent', array(
-        'ajax_url' => admin_url('admin-ajax.php'),
-        'nonce'    => wp_create_nonce('btc_save_event'),
-    ));
-
-    wp_localize_script('aa-subscribe-submit', 'aaSubscribe', array(
-        'ajax_url' => admin_url('admin-ajax.php'),
-        'nonce'    => wp_create_nonce('btc_save_subscribe'),
-    ));
+    
 }
 add_action('wp_enqueue_scripts', 'btc_enqueue_lead_script');
 

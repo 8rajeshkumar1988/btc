@@ -35,7 +35,7 @@ jQuery(function ($) {
         const $form  = $(this);
         const data = {
             action:        'save_event',
-            nonce:         aaEvent.nonce,
+            nonce:         aaLead.event_nonce,
             name:          $form.find('[name="name"]').val(),
             email:         $form.find('[name="email"]').val(),
             phone:         $form.find('[name="phone"]').val(),
@@ -44,7 +44,7 @@ jQuery(function ($) {
             source_url:    window.location.href
         };
 
-        $.post(aaEvent.ajax_url, data, function (response) {
+        $.post(aaLead.ajax_url, data, function (response) {
             if (response.success) {
                 alert(response.data);
                 // $form.trigger('reset');
@@ -61,16 +61,16 @@ jQuery(function ($) {
         const $form  = $(this);
         const data = {
             action:        'save_subscribe',
-            nonce:         aaSubscribe.nonce,
+            nonce:         aaLead.subscribe_nonce,
             name:          $form.find('[name="name"]').val(),
             email:         $form.find('[name="email"]').val(),
             source_url:    window.location.href
         };
 
-        $.post(aaSubscribe.ajax_url, data, function (response) {
+        $.post(aaLead.ajax_url, data, function (response) {
             if (response.success) {
                 alert(response.data);
-                // $form.trigger('reset');
+                $form.trigger('reset');
             } else {
                 alert('Error: ' + response.data);
             }
