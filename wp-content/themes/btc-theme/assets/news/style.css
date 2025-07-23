@@ -172,7 +172,7 @@ body {
   inset: 0;
 }
 #more_news .more_news_container .about_more_news .blog_card .blog_description {
-  margin: 40px 0px;
+  margin: 25px 0px;
   margin-bottom: 0;
   text-decoration: none;
   line-height: 1.5;
@@ -181,7 +181,7 @@ body {
 }
 #more_news .more_news_container .about_more_news .blog_card .blog_description p {
   font-size: var(--font-18);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   display: -webkit-box;
   line-clamp: 3;
   -webkit-line-clamp: 3;
@@ -200,6 +200,7 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 1.4;
 }
 
 #explore_media {

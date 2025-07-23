@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+  .swiper-container {
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+  }
+
+  .swiper-slide-container {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-top {
+    height: 80%;
+    width: 100%;
+  }
+
+  .gallery-thumbs {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .gallery-thumbs .swiper-wrapper {
+    flex-grow: 1;
+  }
+
+  .gallery-thumbs .swiper-slide {
+    width: 100%;
+    max-width: 100px;
+    min-width: 50px;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .gallery-thumbs .swiper-slide-active {
+    opacity: 1;
+  }
+
+  .gallery-button-prev,
+  .gallery-button-next {
+    flex-shrink: 0;
+    padding: 10px 15px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+
+<div class="swiper-container gallery-top">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+        <div class="swiper-slide-container">
+            <img src="." alt="">
+        </div>
+    </div>
+    <div class="swiper-slide"><div class="swiper-slide-container">Slide 2</div></div>
+    <div class="swiper-slide"><div class="swiper-slide-container">Slide 3</div></div>
+    <div class="swiper-slide"><div class="swiper-slide-container">Slide 4</div></div>
+    <div class="swiper-slide"><div class="swiper-slide-container">Slide 5</div></div>
+  </div>
+</div>
+
+<!-- Thumbnail slider with buttons outside Swiper -->
+<div class="swiper-container gallery-thumbs">
+  <button class="gallery-button-prev">Left</button>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><div class="swiper-slide-container">Slide 1</div></div>
+    <div class="swiper-slide"><div class="swiper-slide-container">Slide 2</div></div>
+    <div class="swiper-slide"><div class="swiper-slide-container">Slide 3</div></div>
+    <div class="swiper-slide"><div class="swiper-slide-container">Slide 4</div></div>
+    <div class="swiper-slide"><div class="swiper-slide-container">Slide 5</div></div>
+  </div>
+  <button class="gallery-button-next">Right</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const galleryTop = new Swiper(".gallery-top", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".gallery-button-next",
+      prevEl: ".gallery-button-prev",
+    },
+  });
+
+  const galleryThumbs = new Swiper(".gallery-thumbs", {
+    spaceBetween: 10,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    touchRatio: 0.2,
+    slideToClickedSlide: true,
+  });
+
+  galleryTop.controller.control = galleryThumbs;
+  galleryThumbs.controller.control = galleryTop;
+</script>
+
+</body>
+</html>
