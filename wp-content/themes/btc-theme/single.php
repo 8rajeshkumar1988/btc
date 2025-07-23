@@ -57,9 +57,9 @@ get_header();
 
 </section>
 
-<div class="blog_content">
+
   <?php the_content(); ?>
-</div>
+
 
 <?php
 

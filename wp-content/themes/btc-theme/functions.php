@@ -335,3 +335,12 @@ function btc_ajax_save_event()
 add_action('wp_ajax_save_event', 'btc_ajax_save_event');
 add_action('wp_ajax_nopriv_save_event', 'btc_ajax_save_event');
 
+add_action('after_setup_theme', function () {
+    remove_theme_support('core-block-patterns');
+});
+
+add_action('wp_enqueue_scripts', function () {
+    wp_dequeue_style('wp-block-library'); // Core block CSS
+    wp_dequeue_style('wp-block-library-theme'); // Theme styles for editor
+    wp_dequeue_style('global-styles'); // theme.json-generated styles
+}, 20);

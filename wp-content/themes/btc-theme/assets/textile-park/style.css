@@ -125,6 +125,7 @@
   display: grid;
   grid-template-columns: auto auto;
   gap: calc(var(--font-46) * 2);
+  margin-right: calc(-1.3 * var(--font-24));
 }
 #parking .containers .bottom .left .inner_top .tag_div {
   display: flex;

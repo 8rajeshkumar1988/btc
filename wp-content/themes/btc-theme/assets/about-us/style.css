@@ -317,7 +317,7 @@ body {
 }
 #our_impact .our_impact_container .impact_wrapper .impact_wrapper_head {
   position: relative;
-  padding: 20px 40px;
+  padding: 20px var(--font-24);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -351,7 +351,7 @@ body {
   z-index: 1;
   color: #fff;
   gap: 40px;
-  padding: 40px;
+  padding: 0 var(--font-24) var(--font-24);
 }
 #our_impact .our_impact_container .impact_wrapper .content .content-details .content-detail {
   /* display: flex; */
@@ -359,7 +359,7 @@ body {
   flex-wrap: wrap;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(0, 300px));
-  margin-bottom: 40px;
+  margin: clamp(0rem, -4.1667rem + 5.5556vw, 2.5rem) 0 clamp(1.25rem, -5rem + 8.3333vw, 5rem);
 }
 #our_impact .our_impact_container .impact_wrapper .content .content-details .content-detail h2 {
   font-size: clamp(1.625rem, -0.4583rem + 2.7778vw, 2.875rem);
