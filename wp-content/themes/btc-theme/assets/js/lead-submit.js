@@ -53,4 +53,27 @@ jQuery(function ($) {
             }
         });
     });
+
+
+     $('#btc-subscribe-form').on('submit', function (e) {
+        e.preventDefault();
+
+        const $form  = $(this);
+        const data = {
+            action:        'save_subscribe',
+            nonce:         aaSubscribe.nonce,
+            name:          $form.find('[name="name"]').val(),
+            email:         $form.find('[name="email"]').val(),
+            source_url:    window.location.href
+        };
+
+        $.post(aaSubscribe.ajax_url, data, function (response) {
+            if (response.success) {
+                alert(response.data);
+                // $form.trigger('reset');
+            } else {
+                alert('Error: ' + response.data);
+            }
+        });
+    });
 });
