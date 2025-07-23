@@ -1,16 +1,18 @@
 <header>
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/HeaderLogoWhite.svg" alt="" class="logo">
+    <a href="/btc">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/HeaderLogoWhite.svg" alt="" class="logo">
+    </a>
     <button class="headerBtn">
         <img class="open" src="<?php echo get_template_directory_uri(); ?>/assets/images/quill_hamburger.svg"
             alt="quill_hamburger">
         <img class="close" src="<?php echo get_template_directory_uri(); ?>/assets/images/closeSvg.svg" alt="closeSvg">
     </button>
 </header>
-<section id="header">
+<section id="header" class="active">
     <div class="left">
-        <div source="products" class="bannerArea">
+        <div source="products" class="bannerArea active">
             <div class="img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product_page_banner.jpg" alt="">
+                <video autoplay muted loop playsinline src="<?php echo get_template_directory_uri(); ?>/assets/images/homeVideo.mp4"></video>
             </div>
             <div class="content">
                 <div class="headingLike">
@@ -25,9 +27,9 @@
                 </div>
             </div>
         </div>
-        <!-- <div source="why-btc" class="bannerArea">
+        <div source="why-btc" class="bannerArea">
             <div class="img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product_page_banner.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/manufacturing.jpg" alt="">
             </div>
             <div class="content">
                 <div class="headingLike">
@@ -59,9 +61,9 @@
                 </div>
             </div>
         </div>
-        <div source="about-us" class="bannerArea">
+        <div source="contact-us" class="bannerArea">
             <div class="img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/product_page_banner.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/contact-us.jpg" alt="">
             </div>
             <div class="content">
                 <div class="headingLike">
@@ -77,8 +79,8 @@
             </div>
         </div>
         <div class="else">
-
-        </div> -->
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/cotton.jpg" alt="">
+        </div>
 
         <div class="mediaArea">
             <div>
@@ -97,13 +99,13 @@
         </div>
     </div>
     <div class="right">
-        <a class="active" href="/btc/products">Products</a>
-        <a href="/btc/why-btc">Why BTC</a>
-        <a href="/btc/all-event">Media</a>
-        <a href="/btc/about-us">About Us</a>
-        <a href="/btc/vertical-integration">Vertical Integration</a>
-        <a href="/btc/sustainability">Sustainability</a>
-        <a href="/btc/capabilities">Capabilities</a>
-        <a href="/btc/contact-us">Contact us</a>
+        <a path='products' class="active" href="/btc/products">Products</a>
+        <a path='why-btc' href="/btc/why-btc">Why BTC</a>
+        <a path='all-events' href="/btc/all-event">Media</a>
+        <a path='about-us' href="/btc/about-us">About Us</a>
+        <a path='vertical-integration' href="/btc/vertical-integration">Vertical Integration</a>
+        <a path='sustainability' href="/btc/sustainability">Sustainability</a>
+        <a path='capabilities' href="/btc/capabilities">Capabilities</a>
+        <a path='contact-us' href="/btc/contact-us">Contact us</a>
     </div>
 </section>
