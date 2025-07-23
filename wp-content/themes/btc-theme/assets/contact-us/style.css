@@ -71,6 +71,108 @@ body {
   justify-content: flex-end;
 }
 
+#lead_popup_form {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  align-content: center;
+  padding: 55px 44px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+#lead_popup_form .popup_container {
+  background-color: #fff;
+  padding: 50px 72px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+#lead_popup_form .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+#lead_popup_form .head .logo {
+  height: clamp(3.125rem, 2.0833rem + 1.3889vw, 3.75rem);
+}
+#lead_popup_form .head .close {
+  cursor: pointer;
+  width: 40px;
+}
+#lead_popup_form .head .close img {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#lead_popup_form .heading h2 {
+  color: var(--blue);
+  font-weight: 500;
+  max-width: 900PX;
+  font-size: calc(var(--font-46) - 15px);
+}
+#lead_popup_form form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 30px;
+  margin-top: 30px;
+}
+#lead_popup_form label {
+  font-size: var(--font-14);
+}
+#lead_popup_form input,
+#lead_popup_form select,
+#lead_popup_form textarea {
+  width: 100%;
+  border: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  padding: 8px;
+  margin-top: 10px;
+  font-size: var(--font-14);
+}
+#lead_popup_form .whatsapp_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#lead_popup_form .whatsapp_container .checkbox_container {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  gap: 5px;
+}
+#lead_popup_form .whatsapp_container .checkbox_container label {
+  font-size: 12px;
+}
+#lead_popup_form .whatsapp_container .checkbox_container #whatsapp_checkbox {
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+#lead_popup_form .policy_container,
+#lead_popup_form .e_com_btc {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 40px;
+}
+#lead_popup_form .policy_container input,
+#lead_popup_form .e_com_btc input {
+  width: auto;
+  margin: 0;
+}
+#lead_popup_form .textareaDiv {
+  grid-area: 2/3/4/4;
+}
+#lead_popup_form .btn_container {
+  display: flex;
+  justify-content: flex-end;
+}
+
 #virtual_factory_experience {
   padding: calc(var(--paddingY) / 2) var(--paddingX);
   background-color: white;
@@ -152,6 +254,19 @@ body {
   #lead_form .e_com_btc {
     margin: 0;
   }
+  #lead_popup_form form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #lead_popup_form .textareaDiv {
+    grid-area: auto;
+  }
+  #lead_popup_form .whatsapp_input {
+    grid-area: 3/1/4/2;
+  }
+  #lead_popup_form .policy_container,
+  #lead_popup_form .e_com_btc {
+    margin: 0;
+  }
 }
 @media screen and (max-width: 768px) {
   #virtual_factory_experience .virtual_container iframe {
@@ -161,6 +276,12 @@ body {
     grid-template-columns: 1fr;
   }
   #lead_form .whatsapp_input {
+    grid-area: 5/1/6/2;
+  }
+  #lead_popup_form form {
+    grid-template-columns: 1fr;
+  }
+  #lead_popup_form .whatsapp_input {
     grid-area: 5/1/6/2;
   }
 }/*# sourceMappingURL=style.css.map */
