@@ -292,22 +292,19 @@ function btc_ajax_save_event()
     $name         = sanitize_text_field($_POST['name'] ?? '');
     $email        = sanitize_email($_POST['email'] ?? '');
     $phone        = sanitize_text_field($_POST['phone'] ?? '');
-    $requirements = sanitize_textarea_field($_POST['requirements'] ?? '');
-    $whatsapp     = sanitize_text_field($_POST['whatsapp'] ?? '');
+    $reason_to_attend = sanitize_textarea_field($_POST['reason_to_attend'] ?? '');
+    $no_of_attendees = sanitize_textarea_field($_POST['reason_to_attend'] ?? '');
     $source_url = sanitize_text_field($_POST['source_url'] ?? '');
-    $i_agree_to_receive_e= sanitize_text_field($_POST['e_com_btc'] ?? false);
-    $tandc= sanitize_text_field($_POST['tandc'] ?? false);
+   
 
-    if (!$tandc) {
-        wp_send_json_error('Please accept terms and conditions.');
-    } 
+    
 
     if (empty($name) || empty($email)) {
         wp_send_json_error('Name and Email are required.');
     }
     $dt_ist = new DateTime('now', new DateTimeZone('Asia/Kolkata'));
     $post_id = wp_insert_post([
-        'post_type'   => 'lead',
+        'post_type'   => 'event_registration',
         'post_status' => 'publish',
         'post_title'  => $name . ' – ' . $dt_ist->format('Y-m-d H:i'),
     ]);
@@ -322,25 +319,24 @@ function btc_ajax_save_event()
     
     update_field('phone_number', $phone, $post_id);
    
-    update_field('requirements', $requirements, $post_id);
-    update_field('whatsapp_number', $whatsapp, $post_id);
+    update_field('reason_to_attend', $reason_to_attend, $post_id);
+    update_field('no_of_attendees', $no_of_attendees, $post_id);
     
     update_field('source_url', $source_url, $post_id);
-    update_field('i_agree_to_receive_e-communications_from_btc', $i_agree_to_receive_e, $post_id);
-    update_field('i_agree_to_the_btc_privacy_policy', $tandc, $post_id);
+   
     update_field('created_on', $dt_ist->format('Y-m-d H:i'), $post_id);
 
-    wp_send_json_success('Event registered. Thank you!');
+    wp_send_json_success('You have been registered. Thank you!');
 }
 add_action('wp_ajax_save_event', 'btc_ajax_save_event');
 add_action('wp_ajax_nopriv_save_event', 'btc_ajax_save_event');
 
-add_action('after_setup_theme', function () {
-    remove_theme_support('core-block-patterns');
-});
+// add_action('after_setup_theme', function () {
+//     remove_theme_support('core-block-patterns');
+// });
 
-add_action('wp_enqueue_scripts', function () {
-    wp_dequeue_style('wp-block-library'); // Core block CSS
-    wp_dequeue_style('wp-block-library-theme'); // Theme styles for editor
-    wp_dequeue_style('global-styles'); // theme.json-generated styles
-}, 20);
+// add_action('wp_enqueue_scripts', function () {
+//     wp_dequeue_style('wp-block-library'); // Core block CSS
+//     wp_dequeue_style('wp-block-library-theme'); // Theme styles for editor
+//     wp_dequeue_style('global-styles'); // theme.json-generated styles
+// }, 20);
