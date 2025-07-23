@@ -293,7 +293,7 @@ function btc_ajax_save_event()
     $email        = sanitize_email($_POST['email'] ?? '');
     $phone        = sanitize_text_field($_POST['phone'] ?? '');
     $reason_to_attend = sanitize_textarea_field($_POST['reason_to_attend'] ?? '');
-    $no_of_attendees = sanitize_textarea_field($_POST['reason_to_attend'] ?? '');
+    $no_of_attendees = sanitize_textarea_field($_POST['no_of_attendees'] ?? '');
     $source_url = sanitize_text_field($_POST['source_url'] ?? '');
    
 

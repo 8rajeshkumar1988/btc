@@ -29,27 +29,22 @@ jQuery(function ($) {
         });
     });
 
-    $('#aa-event-form').on('submit', function (e) {
+    $('#btc-event-form').on('submit', function (e) {
         e.preventDefault();
 
         const $form  = $(this);
         const data = {
             action:        'save_event',
-            nonce:         aaLead.nonce,
+            nonce:         aaEvent.nonce,
             name:          $form.find('[name="name"]').val(),
             email:         $form.find('[name="email"]').val(),
-            enquiry_type:  $form.find('[name="enquiry_type"]').val(),
             phone:         $form.find('[name="phone"]').val(),
-            company_name:       $form.find('[name="company_name"]').val(),
-            requirements:  $form.find('[name="requirements"]').val(),
-            whatsapp:      $form.find('[name="whatsapp"]').val(),
-            org_type:      $form.find('[name="org_type"]').val(),
-            tandc:         $form.find('[name="tandc"]').val(),
-            e_com_btc:     $form.find('[name="e_com_btc"]').val(),
+            reason_to_attend:  $form.find('[name="reason_to_attend"]').val(),
+            no_of_attendees:      $form.find('[name="no_of_attendees"]').val(),
             source_url:    window.location.href
         };
 
-        $.post(aaLead.ajax_url, data, function (response) {
+        $.post(aaEvent.ajax_url, data, function (response) {
             if (response.success) {
                 alert(response.data);
                 // $form.trigger('reset');
