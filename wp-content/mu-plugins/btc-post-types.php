@@ -365,7 +365,7 @@ function my_custom_meta_box()
         'sort_order_meta',                  // ID
         'Sort Order',                       // Title
         'render_sort_order_meta_box',      // Callback
-        ['client', 'category', 'customization_type', 'leadership', 'homecapability', 'product', 'customiz_category', 'socialmedia', 'infra_legacy_pointer'],                // Post types
+        ['client','page' ,'category', 'customization_type', 'leadership', 'homecapability', 'product', 'customiz_category', 'socialmedia', 'infra_legacy_pointer'],                // Post types
         'side',                             // Context: 'side' = right sidebar
         'default'                           // Priority
     );
