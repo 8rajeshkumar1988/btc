@@ -237,7 +237,15 @@ if ($sarticles->have_posts()) {
                             </div>
                             <div class="blog_desciption">
                                 <h2><?php the_title(); ?></h2>
-                                <p><?php the_excerpt(); ?></p>
+                                <!-- <p><?php the_excerpt(); ?></p> -->
+                                <p>
+                                    <?php
+                                    $date_raw = get_field('published_at');
+                                    if ($date_raw) {
+                                        echo date('j F Y', strtotime($date_raw));
+                                    }
+                                    ?>
+                                </p>
                             </div>
                         </div>
                     </div>
