@@ -56,7 +56,7 @@ function btc_files()
         );
     }
     if (is_page('capabilities')) {
-        wp_enqueue_style('btc_capabilities_styles', get_theme_file_uri('/assets/capabilities/style.css'));  
+        wp_enqueue_style('btc_capabilities_styles', get_theme_file_uri('/assets/capabilities/style.css'));
     }
 
     if (is_page('sustainability')) {
@@ -113,9 +113,9 @@ function btc_files()
     }
 
 
-    if ( is_single() && get_post_type() === 'post' ) {
-      wp_enqueue_style('btc_news_detail_styles', get_theme_file_uri('/assets/blog-detail/style.css'));
-      wp_enqueue_script(
+    if (is_single() && get_post_type() === 'post') {
+        wp_enqueue_style('btc_news_detail_styles', get_theme_file_uri('/assets/blog-detail/style.css'));
+        wp_enqueue_script(
             'btc_news_detail_script', // Handle
             get_theme_file_uri('/assets/blog-detail/script.js'), // JS file path
             array(), // Dependencies (e.g., array('jquery'))
@@ -211,12 +211,11 @@ function btc_enqueue_lead_script()
     wp_localize_script('aa-lead-submit', 'aaLead', array(
         'ajax_url' => admin_url('admin-ajax.php'),
         'nonce'    => wp_create_nonce('btc_save_lead'),
+        'event_nonce'    => wp_create_nonce('btc_save_event'),
+        'subscribe_nonce'=> wp_create_nonce('btc_save_subscribe'),
     ));
 
-    wp_localize_script('aa-reg_event-submit', 'aaEvent', array(
-        'ajax_url' => admin_url('admin-ajax.php'),
-        'nonce'    => wp_create_nonce('btc_save_event'),
-    ));
+    
 }
 add_action('wp_enqueue_scripts', 'btc_enqueue_lead_script');
 
@@ -236,12 +235,12 @@ function btc_ajax_save_lead()
     $whatsapp     = sanitize_text_field($_POST['whatsapp'] ?? '');
     $org_type     = sanitize_text_field($_POST['org_type'] ?? '');
     $source_url = sanitize_text_field($_POST['source_url'] ?? '');
-    $i_agree_to_receive_e= sanitize_text_field($_POST['e_com_btc'] ?? false);
-    $tandc= sanitize_text_field($_POST['tandc'] ?? false);
+    $i_agree_to_receive_e = sanitize_text_field($_POST['e_com_btc'] ?? false);
+    $tandc = sanitize_text_field($_POST['tandc'] ?? false);
 
     if (!$tandc) {
         wp_send_json_error('Please accept terms and conditions.');
-    } 
+    }
 
     if (empty($name) || empty($email)) {
         wp_send_json_error('Name and Email are required.');
@@ -293,11 +292,11 @@ function btc_ajax_save_event()
     $email        = sanitize_email($_POST['email'] ?? '');
     $phone        = sanitize_text_field($_POST['phone'] ?? '');
     $reason_to_attend = sanitize_textarea_field($_POST['reason_to_attend'] ?? '');
-    $no_of_attendees = sanitize_textarea_field($_POST['reason_to_attend'] ?? '');
+    $no_of_attendees = sanitize_textarea_field($_POST['no_of_attendees'] ?? '');
     $source_url = sanitize_text_field($_POST['source_url'] ?? '');
-   
 
-    
+
+
 
     if (empty($name) || empty($email)) {
         wp_send_json_error('Name and Email are required.');
@@ -316,20 +315,63 @@ function btc_ajax_save_event()
     // Save ACF fields
     update_field('name', $name, $post_id);
     update_field('email', $email, $post_id);
-    
+
     update_field('phone_number', $phone, $post_id);
-   
+
     update_field('reason_to_attend', $reason_to_attend, $post_id);
     update_field('no_of_attendees', $no_of_attendees, $post_id);
-    
+
     update_field('source_url', $source_url, $post_id);
-   
+
     update_field('created_on', $dt_ist->format('Y-m-d H:i'), $post_id);
 
     wp_send_json_success('You have been registered. Thank you!');
 }
 add_action('wp_ajax_save_event', 'btc_ajax_save_event');
 add_action('wp_ajax_nopriv_save_event', 'btc_ajax_save_event');
+
+
+
+
+
+function btc_ajax_save_subscribe()
+{
+    check_ajax_referer('btc_save_subscribe', 'nonce');
+    $name         = sanitize_text_field($_POST['name'] ?? '');
+    $email        = sanitize_email($_POST['email'] ?? '');
+    $source_url = sanitize_text_field($_POST['source_url'] ?? '');
+
+    if (empty($name) || empty($email)) {
+        wp_send_json_error('Name and Email are required.');
+    }
+    $dt_ist = new DateTime('now', new DateTimeZone('Asia/Kolkata'));
+    $post_id = wp_insert_post([
+        'post_type'   => 'subscriber',
+        'post_status' => 'publish',
+        'post_title'  => $name . ' – ' . $dt_ist->format('Y-m-d H:i'),
+    ]);
+
+    if (is_wp_error($post_id)) {
+        wp_send_json_error($post_id->get_error_message());
+    }
+
+    // Save ACF fields
+    update_field('name', $name, $post_id);
+    update_field('email', $email, $post_id);
+    update_field('source_url', $source_url, $post_id);
+    update_field('created_on', $dt_ist->format('Y-m-d H:i'), $post_id);
+    wp_send_json_success('You have subscribed. Thank you!');
+}
+add_action('wp_ajax_save_subscribe', 'btc_ajax_save_subscribe');
+add_action('wp_ajax_nopriv_save_subscribe', 'btc_ajax_save_subscribe');
+
+
+
+
+
+
+
+
 
 // add_action('after_setup_theme', function () {
 //     remove_theme_support('core-block-patterns');
