@@ -4,9 +4,33 @@ get_header();
 
 ?>
 <section class="heroBanner">
-    <video playsinline autoplay muted loop src="<?php echo get_template_directory_uri() . '/assets/images/homeVideo.mp4'; ?>"></video>
+    <?php
+    $banner_video = get_field('banner_video');
+
+    if ($banner_video) {
+        echo '<video playsinline autoplay muted loop src="' . esc_url($banner_video['url']) . '"></video>';
+    } else  if (has_post_thumbnail()) {
+        $thumbnail_id = get_post_thumbnail_id();
+        $image_url = wp_get_attachment_url($thumbnail_id);
+        $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+        $title_text = get_the_title($thumbnail_id);
+        if (empty($alt_text)) {
+            $alt_text = get_the_title();
+        }
+        if (empty($title_text)) {
+            $title_text = get_the_title();
+        }
+
+        $image = '<img title="' . esc_attr($title_text) . '" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+        echo $image;
+    }
+
+    ?>
+
+
+
     <div class="content">
-        <p class="breadcrub">&nbsp;</p>
+        <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / About Us</p>
         <div class="heading">
             <p><?php the_title(); ?></p>
             <?php the_content(); ?>

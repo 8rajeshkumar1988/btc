@@ -30,11 +30,8 @@ get_header();
     <div class="content">
         <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / Textile Park</p>
         <div class="heading">
-            <p>Textile Park</p>
-            <h1>
-                Knitting the Future <br />
-                with African Cotton
-            </h1>
+             <p><?php the_title(); ?></p>
+            <?php the_content(); ?>
         </div>
         <div class="layer"></div>
     </div>

@@ -25,7 +25,7 @@ get_header();
 
     ?>
     <div class="content">
-        <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / Why Btc</p>
+        <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / Why BTC</p>
         <div class="heading">
             <p>Why Btc</p>
             <h1>

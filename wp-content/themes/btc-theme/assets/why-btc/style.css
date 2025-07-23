@@ -1,6 +1,6 @@
 #globalSearch {
   width: 100%;
-  height: 95vh;
+  aspect-ratio: 16/8;
   position: relative;
   padding: var(--paddingY) var(--paddingX);
   display: flex;
@@ -154,6 +154,7 @@
 #glance .content .subContent .copy2 {
   font-size: calc(var(--font-46) / 2);
   color: var(--green);
+  font-weight: 500;
 }
 
 #homeOfBtc {
@@ -220,6 +221,8 @@
 #homeOfBtc .content .second .swiper-wrapper .swiper-slide > div .titles {
   font-size: var(--font-16);
   margin-bottom: var(--font-16);
+  font-weight: 700;
+  color: var(--blue);
 }
 #homeOfBtc .content .second .swiper-wrapper .swiper-slide > div .copy {
   font-size: var(--font-14);
@@ -302,9 +305,10 @@
 @media screen and (max-width: 1024px) {
   #globalSearch {
     max-height: 700px;
+    height: auto;
   }
   #globalSearch > svg {
-    width: 120%;
+    width: 105%;
     height: auto;
   }
   #sustainableManufacturer {
@@ -356,7 +360,7 @@
   }
   #homeOfBtc {
     overflow: hidden;
-    padding-bottom: clamp(13.75rem, 0.1724rem + 51.7241vw, 25rem);
+    padding-bottom: clamp(14.375rem, 21.5865rem - 28.8462vw, 3.125rem);
   }
   #homeOfBtc .layer {
     width: 160%;
@@ -375,6 +379,10 @@
   }
 }
 @media screen and (max-width: 768px) {
+  #globalSearch > svg {
+    width: 130%;
+    height: auto;
+  }
   #roleOfbtc .content > div {
     display: flex;
     flex-direction: column-reverse;
