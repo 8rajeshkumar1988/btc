@@ -56,10 +56,16 @@ $(document).ready(function () {
       lenis.stop();
       $('.heroBanner').addClass('activated');
       $('#header').addClass('active');
+      $('header .logo').css({'opacity': '0'});
+      $('#header .logoBlue').css({'opacity': '1'});
     } else {
       lenis.start();
       $('#header').removeClass('active');
       $('.heroBanner').removeClass('activated');
+      setTimeout(function () {
+        $('header .logo').css({'opacity': '1'});
+        $('#header .logoBlue').css({'opacity': '0'});        
+      },200)      
     }
   });
 
