@@ -130,10 +130,12 @@ $(document).ready(function () {
             const isDesk = window.innerWidth > 1700;
             const scale = 1 - Math.abs(offset) * 0.1;
             const xOffset = offset * (isDesk ? 60 : 40);
+            const spaceEx = window.innerWidth
 
             gsap.set(img, {
                 x: xOffset,
                 y: 0,
+                left: 0,
                 scale: scale,
                 rotation: 0,
                 zIndex: 100 - Math.abs(offset),
@@ -184,14 +186,14 @@ $(document).ready(function () {
                 }, 0);
             }
 
-            swirlTimeline.to('.leftContent', {
+            swirlTimeline.to('#ourCapabilities .leftContent', {
                 x: '-40vw',
                 y: 0,
                 scale: 1,
                 duration: 1,
                 opacity: 0
             }, 0);
-            swirlTimeline.to('.rightContent', {
+            swirlTimeline.to('#ourCapabilities .rightContent', {
                 x: '40vw',
                 y: 0,
                 scale: 1,
