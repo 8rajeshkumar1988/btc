@@ -13,6 +13,7 @@
   --font-24: clamp(1.5rem, 0.875rem + 0.8333vw, 1.875rem);
   --font-14: clamp(0.875rem, 0.4819rem + 0.4839vw, 1.0625rem);
   --font-16: clamp(1rem, 0.4758rem + 0.6452vw, 1.25rem);
+  --font-66: clamp(3.75rem, -0.4167rem + 5.5556vw, 6.25rem);
   --font-18: 18px;
   --primaryBlack: #000;
   --secondaryBlack: #3b3b3b;
@@ -30,7 +31,15 @@ body {
   background-color: #fffff4;
 }
 
+.heroBanner.activated {
+  transform: translateY(99px) scale(0.95, 0.8);
+  filter: blur(10px) brightness(0.8);
+}
+
 .heroBanner {
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom;
+  filter: blur(0px) brightness(1);
   position: relative;
   height: 95vh;
   width: 100%;
@@ -43,7 +52,7 @@ body {
      object-fit: cover;
 }
 .heroBanner .content {
-  padding: 150px var(--paddingX) var(--spaceBelow_heading);
+  padding: calc(clamp(1.5625rem, -1.7137rem + 4.0323vw, 3.125rem) * 2 + clamp(2.5rem, 0.5343rem + 2.4194vw, 3.4375rem)) var(--paddingX) var(--spaceBelow_heading);
   position: relative;
   height: 100%;
   display: flex;
@@ -68,6 +77,8 @@ body {
   text-transform: uppercase;
 }
 .heroBanner .content .breadcrub {
+  position: relative;
+  z-index: 1;
   font-size: var(--font-16);
   color: rgba(255, 255, 255, 0.6);
 }
@@ -83,6 +94,17 @@ body {
   left: 0;
   z-index: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  pointer-events: none;
+}
+.heroBanner .content .layer2 {
+  position: absolute;
+  pointer-events: none;
+  height: 40%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8117647059) 100%);
 }
 
 .cta {
@@ -450,7 +472,7 @@ footer .bottom .left > div img {
 }
 footer .bottom .left P {
   font-size: var(--font-14);
-  color: #7870C8;
+  color: #7870c8;
 }
 footer .bottom .right {
   display: flex;
@@ -459,20 +481,20 @@ footer .bottom .right {
 footer .bottom .right * {
   text-decoration: unset;
   font-size: var(--font-14);
-  color: #7870C8;
+  color: #7870c8;
 }
 
 header {
   position: absolute;
   z-index: 99;
   width: 100%;
-  padding: 50px var(--paddingX);
+  padding: clamp(1.5625rem, -1.7137rem + 4.0323vw, 3.125rem) var(--paddingX);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 header .logo {
-  height: clamp(3.125rem, 2.0833rem + 1.3889vw, 3.75rem);
+  height: clamp(2.5rem, 0.5343rem + 2.4194vw, 3.4375rem);
 }
 header button {
   all: unset;
@@ -494,6 +516,13 @@ header button.open .close {
   display: block;
 }
 
+#header.active {
+  display: grid;
+  opacity: 1;
+  transform: translateY(0%) scale(1);
+  pointer-events: unset;
+}
+
 #header {
   position: fixed;
   height: 100vh;
@@ -501,26 +530,31 @@ header button.open .close {
   padding-top: 150px;
   padding-left: var(--paddingX);
   z-index: 98;
+  transform: translateY(-50%) scale(0.9);
+  opacity: 0;
+  transition: all 0.3s ease;
   background-color: #fff;
-  display: none;
+  display: grid;
+  pointer-events: none;
   grid-template-columns: 35% 60%;
   gap: 5%;
 }
 #header .right {
   display: flex;
   flex-direction: column;
-  border: 1px solid #E8E8E8;
+  border: 1px solid #e8e8e8;
   border-right: 0;
 }
 #header .right a {
   font-size: calc(var(--font-20) * 2);
-  color: #C9C9C9;
+  color: #c9c9c9;
   width: 100%;
   padding-left: calc(var(--font-46) / 1.5);
   text-decoration: unset;
   line-height: 1.4;
 }
-#header .right a.active, #header .right a:hover {
+#header .right a.active,
+#header .right a:hover {
   background-color: var(--blue);
   color: #fff;
   font-weight: 600;
@@ -606,7 +640,7 @@ header button.open .close {
 }
 #header .left .mediaArea P {
   font-size: var(--font-14);
-  color: #C9C9C9;
+  color: #c9c9c9;
 }
 
 @media screen and (max-width: 1546px) {
@@ -626,6 +660,7 @@ header button.open .close {
 }
 @media screen and (max-width: 768px) {
   :root {
+    --font-66: 38px;
     --font-46: 30px;
     --font-20: 16px;
     --navBtn: 45px;

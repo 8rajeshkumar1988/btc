@@ -72,7 +72,7 @@ if (!$liveEvents->have_posts()) {
 
             ?>
 
-            ?>
+            
             <div class="content">
               <p class="breadcrub">&nbsp;</p>
               <div class="heading">
