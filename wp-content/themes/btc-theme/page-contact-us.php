@@ -35,11 +35,21 @@ the_post();
                 <?php the_content(); ?>
                 <button class="cta">Submit <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
             </div>
-            <div>
-                
+            <div class="contacts">
+                <p>Benin Textile Corporation</p>
+                <a href="">H7R3+Q7, Ouézoumé, Benin</a>
+                <div>
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/mailIcon.svg" ?>" alt="">
+                    <a href="mailto:marketing.btc@btc.com">marketing.btc@btc.com</a>                    
+                </div>
+                <div>
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/callIcon.svg" ?>" alt="">
+                    <a href="tel:+229 5145127009">+229 5145127009</a>
+                </div>
             </div>
         </div>
         <div class="layer"></div>
+        <div class="layer2"></div>
     </div>
 </section>
 <section id="lead_form">
