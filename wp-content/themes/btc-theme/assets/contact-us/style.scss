@@ -2,58 +2,57 @@ body {
   background-color: #fffff4;
 }
 
-
-.heroBanner{
-  .content{
-    > div{
+.heroBanner {
+  .content {
+    > div {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      .heading{
-        p{
+      .heading {
+        p {
           font-weight: 400;
         }
-        h1{
+        h1 {
           font-weight: 300;
           font-size: var(--font-66);
           margin-bottom: var(--spaceBelow_heading);
           line-height: 1;
         }
       }
-      .contacts{
+      .contacts {
         position: relative;
         z-index: 1;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding: clamp(1.875rem, 0.3125rem + 2.0833vw, 2.8125rem); 
+        padding: clamp(1.875rem, 0.3125rem + 2.0833vw, 2.8125rem);
         padding-right: calc(clamp(1.875rem, 0.3125rem + 2.0833vw, 2.8125rem) * 2.5);
         background-color: #fff;
-        & > p{
+        & > p {
           font-size: var(--font-24);
           color: var(--primaryBlack);
           text-transform: capitalize;
           font-weight: 400;
         }
-        & > a{
+        & > a {
           font-size: var(--font-20);
           color: var(--tertiaryBlack);
           font-weight: 300;
           text-decoration: none;
           margin: var(--font-14) 0 0;
         }
-        div{
+        div {
           display: flex;
-          align-items: center;         
+          align-items: center;
           gap: 15px;
           margin-top: var(--font-14);
-          *{
+          * {
             font-weight: var(--font-14);
             color: #000000;
             font-weight: 300;
             text-decoration: none;
           }
-          img{
+          img {
             height: var(--font-20);
             width: var(--font-20);
           }
@@ -62,7 +61,6 @@ body {
     }
   }
 }
-
 
 #lead_form {
   padding: var(--paddingY) var(--paddingX);
@@ -221,6 +219,16 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
+  .heroBanner {
+    & > .content {
+      & > div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spaceBelow_heading);
+      }
+    }
+  }
+
   #virtual_factory_experience {
     .virtual_container {
       iframe {
@@ -236,6 +244,21 @@ body {
     .whatsapp_input {
       grid-area: 5 / 1 / 6 / 2;
     }
-    
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .heroBanner {
+    & > .content {
+      & > div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spaceBelow_heading);
+        .contacts{
+          width: 100%;
+          padding: 20px;
+        }
+      }
+    }
   }
 }

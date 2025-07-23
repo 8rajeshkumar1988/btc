@@ -208,6 +208,11 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
+  .heroBanner > .content > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spaceBelow_heading);
+  }
   #virtual_factory_experience .virtual_container iframe {
     aspect-ratio: 9/16;
   }
@@ -216,5 +221,16 @@ body {
   }
   #lead_form .whatsapp_input {
     grid-area: 5/1/6/2;
+  }
+}
+@media screen and (max-width: 500px) {
+  .heroBanner > .content > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spaceBelow_heading);
+  }
+  .heroBanner > .content > div .contacts {
+    width: 100%;
+    padding: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
