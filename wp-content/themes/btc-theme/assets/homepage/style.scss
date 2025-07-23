@@ -467,8 +467,9 @@
 
 #linkedIn_video {
     overflow: hidden;
-    height: 95vh;
+    aspect-ratio: 16/7;
     width: 100%;
+    min-height: 400px;
     position: relative;
     margin-bottom: var(--paddingY);
     video {
@@ -476,6 +477,7 @@
         inset: 0;
         width: 100%;
         height: 100%;
+        object-position: top;
         object-fit: cover;
     }
 }

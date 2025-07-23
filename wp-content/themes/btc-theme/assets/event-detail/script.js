@@ -18,17 +18,37 @@ var event_btc_detail = new Swiper(".event_btc", {
   },
 });
 
-function increaseValue() {
-  var value = parseInt(document.getElementById('attendees_number').value, 10);
-  value = isNaN(value) ? 0 : value;
-  value++;
-  document.getElementById('attendees_number').value = value;
-}
+ function increaseValue() {
+    const input = document.getElementById('attendees_number');
+    let value = parseInt(input.value, 10) || 0;
+    if (value < 99) input.value = value + 1;
+  }
 
-function decreaseValue() {
-  var value = parseInt(document.getElementById('attendees_number').value, 10);
-  value = isNaN(value) ? 0 : value;
-  value < 1 ? value = 1 : '';
-  value--;
-  document.getElementById('attendees_number').value = value;
-}
+  function decreaseValue() {
+    const input = document.getElementById('attendees_number');
+    let value = parseInt(input.value, 10) || 0;
+    if (value > 1) input.value = value - 1;
+  }
+
+
+   var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.gallery-button-next',
+        prevEl: '.gallery-button-prev',
+      },
+	 		
+    });
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      touchRatio: 0.2,
+
+      // slideToClickedSlide: true,
+			// loop: true,
+			// loopedSlides: 4
+
+    });
+    galleryTop.controller.control = galleryThumbs;
+    galleryThumbs.controller.control = galleryTop;

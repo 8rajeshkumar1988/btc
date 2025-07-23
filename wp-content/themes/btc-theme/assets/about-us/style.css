@@ -505,7 +505,7 @@ body {
   margin-top: 40px;
 }
 #popup .pop_container .pop_content #leader_bio p {
-  font-size: var(--font-24);
+  font-size: var(--font-20);
   color: var(--secondaryBlack);
 }
 

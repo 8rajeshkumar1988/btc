@@ -44,6 +44,112 @@
   }
 }
 
+#event_gallery {
+  padding: var(--paddingY) var(--paddingX);
+  background: linear-gradient(180deg, #2f2874 0%, #201a5b 100%);
+  .heading {
+    p {
+      color: #ffffff99;
+    }
+    h2 {
+      color: #ffffff;
+    }
+    margin-bottom: var(--spaceBelow_heading);
+  }
+  .swiper-container {
+    width: 100%;
+    // height: 300px;
+    margin: 0px auto;
+    overflow: hidden;
+  }
+  .swiper-wrapper{
+    min-width: 0%;
+  }
+
+  .swiper-slide-container {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: 100%;
+    margin: auto;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+  }
+  .swiper-slide{
+    position: relative;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery-top {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1074/453;
+  }
+  .gallery-thumbs {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  .gallery-button-next,
+  .gallery-button-prev {
+    all: unset;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: clamp(1.875rem, 1.1875rem + 3.4375vw, 5.3125rem);
+    max-height: 100%;
+    opacity: 1;
+    position: relative;
+    aspect-ratio: 1;
+    z-index: 9999;
+    background: var(--green);
+    display: grid;
+    place-items: center;
+   
+  }
+  .swiper-button-disabled{
+    background:#E4E4E4;
+  }
+  .gallery-button-prev img{
+    transform: rotate(180deg);
+  }
+  .gallery-thumbs .swiper-slide {
+    width: 100%;
+    max-width: clamp(5rem, 4.125rem + 4.375vw, 9.375rem);
+    height: 100%;
+    opacity: 0.4;
+    position: relative;
+  }
+  .gallery-thumbs .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .gallery-thumbs .swiper-slide-active {
+    opacity: 1;
+  }
+}
+
 #event_location {
   padding: var(--paddingY) var(--paddingX);
   .iframe {
@@ -58,6 +164,8 @@
   .button_container {
     display: flex;
     justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
     .copy_address {
       button {
         img {
@@ -234,10 +342,25 @@
     .reason_to_attend {
       grid-area: 2 / 1 / 4 / 2;
     }
+    #reason {
+      height: 80%;
+      min-height: 120px;
+    }
+    .cta {
+      padding: 12px 20px;
+      margin-top: 15px;
+      font-size: var(--font-16);
+    }
     .no_of_attendees {
       grid-area: 3 / 2 / 4 / 3;
       height: fit-content;
-
+      .combine_box {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
       .input-group {
         display: flex;
         align-items: center;
@@ -247,11 +370,12 @@
         cursor: pointer;
         font-size: var(--font-16);
         color: #757575;
+        margin-top: 15px;
         .value-button {
-          font-size: 40px;
+          font-size: 24px;
           color: #000;
-          height: 65px;
-          width: 65px;
+          height: 55px;
+          width: 55px;
           background-color: #d4ff32;
           border: 0px solid #d9d9d9;
           display: flex;
@@ -260,9 +384,27 @@
           aspect-ratio: 1;
           display: grid;
           place-items: center;
+          user-select: none;
         }
-        #attendees_number{
+        .descrease {
+          background-color: #e4e4e4;
+          img {
+            filter: invert(1);
+          }
+        }
+        #attendees_number {
           margin-top: 0;
+          width: 55px;
+          height: 55px;
+          pointer-events: none;
+          text-align: center;
+        }
+
+        /* Remove arrows in Chrome, Safari, Edge, Opera */
+        #attendees_number::-webkit-outer-spin-button,
+        #attendees_number::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
         }
       }
     }
@@ -273,5 +415,44 @@
   .breadcrub_container {
     margin: 20px 0px;
     gap: 20px;
+  }
+
+  #event_registration {
+    padding: var(--paddingY) var(--paddingX);
+    .event_reg_form {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      margin-top: var(--spaceBelow_heading);
+
+      .f_name {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+
+      .email_g {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+      .phone_number {
+        grid-area: 3 / 1 / 4 / 2;
+      }
+      .reason_to_attend {
+        grid-area: 4 / 1 / 5 / 2;
+      }
+
+      .no_of_attendees {
+        grid-area: 5 / 1 / 6 / 2;
+        height: fit-content;
+        .input-group {
+          .value-button {
+            height: 50px;
+            width: 50px;
+          }
+          #attendees_number {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
   }
 }
