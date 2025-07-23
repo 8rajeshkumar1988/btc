@@ -3,147 +3,298 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GSAP Popup with Reverse</title>
+    <title>GSAP Popup Full Container Animation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ::-webkit-scrollbar{
+        display: none;
+        
+      }
+      body {
+        background-color: #333;
+        padding: 20px;
+      }
+
+      .leader_card {
+        cursor: pointer;
+      }
+
+      .leader_image {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 345 / 295;
+      }
+
+      .leader_image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        inset: 0;
+      }
+
+      .leader_detail {
+        margin-top: 20px;
+        padding-right: 40px;
+      }
+
+      .leader_title {
+        color: limegreen;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .leader_description {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 300;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      #popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: 9999;
+        backdrop-filter: blur(10px);
+        padding: 40px;
+      }
+
+      #closeBtn {
+        all: unset;
+        line-height: 1;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        font-weight: bold;
+        color: #333;
+        cursor: pointer;
+        z-index: 9999;
+      }
+
+      .pop_container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        gap: 40px;
+        overflow: hidden;
+        padding: 40px;
+      }
+
+      #popupImg {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .pop_content {
+        width: 50%;
+        padding: 20px;
+        overflow-y: auto;
+      }
+
+      #popupHeading {
+        font-size: 32px;
+        margin-bottom: 10px;
+      }
+
+      #popupText {
+        font-size: 18px;
+      }
+    </style>
   </head>
-  <body class="bg-gray-100 p-6">
+  <body>
     <!-- Grid -->
     <div id="grid" class="grid grid-cols-3 gap-4 max-w-6xl mx-auto">
-      <div class="card bg-white p-4 rounded shadow cursor-pointer" data-id="1">
-        <img
-          src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg"
-          class="w-full h-40 object-cover rounded mb-2" />
-        <h3 class="text-lg font-bold">Card 1</h3>
-        <p class="hidden">This is the paragraph for card 1.</p>
+      <div class="leader_card">
+        <div class="leader_image">
+          <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" />
+        </div>
+        <div class="leader_detail">
+          <h2 class="leader_title">Card 1</h2>
+          <p class="leader_description">This is a paragraph for card 1.</p>
+        </div>
       </div>
-      <div class="card bg-white p-4 rounded shadow cursor-pointer" data-id="2">
-        <img
-          src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg"
-          class="w-full h-40 object-cover rounded mb-2" />
-        <h3 class="text-lg font-bold">Card 2</h3>
-        <p class="hidden">Another paragraph for card 2.</p>
+      <div class="leader_card">
+        <div class="leader_image">
+          <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" />
+        </div>
+        <div class="leader_detail">
+          <h2 class="leader_title">Card 1</h2>
+          <p class="leader_description">This is a paragraph for card 1.</p>
+        </div>
       </div>
-      <!-- Add more cards if needed -->
+      <div class="leader_card">
+        <div class="leader_image">
+          <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" />
+        </div>
+        <div class="leader_detail">
+          <h2 class="leader_title">Card 1</h2>
+          <p class="leader_description">This is a paragraph for card 1.</p>
+        </div>
+      </div>
+      <div class="leader_card">
+        <div class="leader_image">
+          <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" />
+        </div>
+        <div class="leader_detail">
+          <h2 class="leader_title">Card 1</h2>
+          <p class="leader_description">This is a paragraph for card 1.</p>
+        </div>
+      </div>
+      <div class="leader_card">
+        <div class="leader_image">
+          <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" />
+        </div>
+        <div class="leader_detail">
+          <h2 class="leader_title">Card 1</h2>
+          <p class="leader_description">This is a paragraph for card 1.</p>
+        </div>
+      </div>
     </div>
 
-    <!-- Popup Layout -->
-    <div
-      id="popup"
-      class="fixed top-0 left-0 w-screen h-screen hidden bg-white z-50 overflow-hidden">
-      <!-- Close button -->
-      <button
-        id="closeBtn"
-        class="absolute top-4 right-6 text-3xl font-bold text-gray-600 hover:text-black z-50">
-        ✕
-      </button>
-
-      <div class="flex w-full h-full">
-        <img id="popupImg" src="" class="w-1/2 h-full object-cover" />
-        <div class="w-1/2 flex flex-col justify-center px-8">
-          <h2 id="popupHeading" class="text-3xl font-bold mb-4"></h2>
-          <p id="popupPara" class="text-lg text-gray-700"></p>
+    <!-- Popup -->
+    <div id="popup" class="hidden">
+      <button id="closeBtn">✕</button>
+      <div class="pop_container">
+        <img id="popupImg" src="" />
+        <div class="pop_content">
+          <h2 id="popupHeading"></h2>
+          <p id="popupText"></p>
         </div>
       </div>
     </div>
 
     <script>
-      const cards = document.querySelectorAll(".card");
-      const popup = document.getElementById("popup");
-      const popupImg = document.getElementById("popupImg");
-      const popupHeading = document.getElementById("popupHeading");
-      const popupPara = document.getElementById("popupPara");
-      const closeBtn = document.getElementById("closeBtn");
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".leader_card");
+        const popup = document.getElementById("popup");
+        const popupImg = document.getElementById("popupImg");
+        const popupHeading = document.getElementById("popupHeading");
+        const popupText = document.getElementById("popupText");
+        const closeBtn = document.getElementById("closeBtn");
+        const popContainer = document.querySelector(".pop_container");
 
-      let lastClickedImage = null;
-      let lastImageRect = null;
-      let lastCardHeading = null;
+        let lastImageRect = null;
+        let lastCardHeading = null;
+        let lastClickedImage = null;
 
-      cards.forEach((card) => {
-        card.addEventListener("click", () => {
-          const img = card.querySelector("img");
-          const heading = card.querySelector("h3");
-          const para = card.querySelector("p");
-          lastClickedImage = img;
-          lastImageRect = img.getBoundingClientRect();
-          lastCardHeading = heading;
-          gsap.set(heading, { autoAlpha: 0 });
+        cards.forEach((card) => {
+          card.addEventListener("click", () => {
+            const img = card.querySelector("img");
+            const heading = card.querySelector(".leader_title");
+            const para = card.querySelector(".leader_description");
 
-          popupImg.src = img.src;
-          popupHeading.innerText = heading.innerText;
-          popupPara.innerText = para.innerText;
+            lastClickedImage = img;
+            lastImageRect = img.getBoundingClientRect();
+            lastCardHeading = heading;
 
-          gsap.set([popupHeading, popupPara], { autoAlpha: 0, x: 50 });
+            popupImg.src = img.src;
+            popupHeading.innerText = heading.innerText;
+            popupText.innerText = para.innerText;
 
-          popup.classList.remove("hidden");
+            popup.classList.remove("hidden");
+            popup.offsetHeight;
 
-          gsap.set(popupImg, {
+            // Get final container position
+            const containerRect = popContainer.getBoundingClientRect();
+
+            // Start animation from card image position
+            gsap.set(popContainer, {
+              position: "absolute",
+              top: lastImageRect.top,
+              left: lastImageRect.left,
+              width: lastImageRect.width,
+              height: lastImageRect.height,
+              scale: 0.95,
+              // opacity: 0,
+              overflow: "hidden",
+              zIndex: 1000,
+            });
+
+            gsap.to(popContainer, {
+              top: containerRect.top,
+              left: containerRect.left,
+              width: containerRect.width,
+              height: containerRect.height,
+              scale: 1,
+              // opacity: 1,
+              duration: 0.7,
+              ease: "power3.inOut",
+              onComplete: () => {
+                gsap.set(popContainer, { clearProps: "all" });
+              },
+            });
+
+            gsap.set([popupHeading, popupText], { autoAlpha: 0, x: 50 });
+
+            gsap.to([popupHeading, popupText], {
+              autoAlpha: 1,
+              x: 0,
+              duration: 0.5,
+              delay: 0.5,
+              stagger: 0.1,
+              ease: "power2.out",
+            });
+
+            gsap.set(heading, { autoAlpha: 0 });
+          });
+        });
+
+        closeBtn.addEventListener("click", () => {
+          const rect = lastImageRect;
+
+          // Get current position of container before shrinking
+          const currentRect = popContainer.getBoundingClientRect();
+
+          gsap.set(popContainer, {
             position: "absolute",
-            top: lastImageRect.top,
-            left: lastImageRect.left,
-            width: lastImageRect.width,
-            height: lastImageRect.height,
-            zIndex: 100,
+            top: currentRect.top,
+            left: currentRect.left,
+            width: currentRect.width,
+            height: currentRect.height,
+            zIndex: 1000,
           });
 
-          gsap.to(popupImg, {
-            top: 0,
-            left: 0,
-            width: window.innerWidth / 2,
-            height: window.innerHeight,
-            duration: 0.7,
+          gsap.to([popupHeading, popupText], {
+            autoAlpha: 0,
+            x: 50,
+            duration: 0.3,
+            ease: "power2.in",
+          });
+
+          gsap.to(popContainer, {
+            top: rect.top,
+            left: rect.left,
+            width: rect.width,
+            height: rect.height,
+            scale: 0.95,
+            // opacity: 0,
+            duration: 0.6,
             ease: "power3.inOut",
             onComplete: () => {
-              gsap.set(popupImg, { clearProps: "all" });
+              popup.classList.add("hidden");
+              gsap.set(popContainer, { clearProps: "all" });
+
+              if (lastCardHeading) {
+                gsap.set(lastCardHeading, { autoAlpha: 1 });
+              }
             },
           });
-
-          gsap.to([popupHeading, popupPara], {
-            autoAlpha: 1,
-            x: 0,
-            duration: 0.5,
-            delay: 0.3,
-            stagger: 0.1,
-            ease: "power2.out",
-          });
-        });
-      });
-
-      closeBtn.addEventListener("click", () => {
-        gsap.to([popupHeading, popupPara], {
-          autoAlpha: 0,
-          x: 50,
-          duration: 0.3,
-          ease: "power2.in",
-        });
-
-        const rect = lastImageRect;
-
-        gsap.set(popupImg, {
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: window.innerWidth / 2,
-          height: window.innerHeight,
-          zIndex: 100,
-        });
-
-        gsap.to(popupImg, {
-          top: rect.top,
-          left: rect.left,
-          width: rect.width,
-          height: rect.height,
-          duration: 0.6,
-          ease: "power3.inOut",
-          onComplete: () => {
-            popup.classList.add("hidden");
-            gsap.set(popupImg, { clearProps: "all" });
-
-            // Fade card heading back in
-            if (lastCardHeading) {
-              gsap.set(lastCardHeading, { autoAlpha: 1 });
-            }
-          },
         });
       });
     </script>

@@ -178,6 +178,7 @@ if ($leaderships->have_posts()) {
                         <h2 class="leader_title"><?php the_title(); ?></h2>
 
                         <p class="leader_description"><?php echo get_field('jobtitle'); ?></p>
+                        <div  class="leader_bio" ><?php the_content(); ?></div>
                     </div>
                 </div>
             <?php
@@ -447,6 +448,21 @@ if ($leaderships->have_posts()) {
         </div>
     </div>
 </section>
+<div id="popup"  class="hidden">
+    <!-- Close button -->
+    
+    <div class="pop_container">
+        <button id="closeBtn">✕</button>
+    <img id="popupImg" src="" />
+    <div class="pop_content" data-lenis-prevent>
+        <h2 id="popupHeading"></h2>
+        <p id="popupPara"></p>
+        <div id="leader_bio"></div>
+    </div>
+    </div>
+</div>
+
+
 <?php get_template_part('components/clients'); ?>
 
 <?php

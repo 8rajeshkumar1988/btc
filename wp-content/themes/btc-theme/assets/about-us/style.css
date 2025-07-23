@@ -143,7 +143,8 @@ body {
   color: #000;
 }
 
-.vision_mission_container img, .vision_mission_container video {
+.vision_mission_container img,
+.vision_mission_container video {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
@@ -219,6 +220,9 @@ body {
   color: #fff;
   font-size: var(--font-18);
   font-weight: 300;
+}
+#our_leadership .our_leadership_container .leader_card .leader_detail .leader_bio {
+  display: none;
 }
 
 #product_page_details {
@@ -388,7 +392,7 @@ body {
 
 #certificates_compliances {
   padding: var(--paddingY) var(--paddingX);
-  background: linear-gradient(180deg, #2F2874 0%, #201A5B 100%);
+  background: linear-gradient(180deg, #2f2874 0%, #201a5b 100%);
 }
 #certificates_compliances .heading p {
   color: rgba(255, 255, 255, 0.6);
@@ -430,6 +434,79 @@ body {
   margin: 0;
   font-size: var(--font-18);
   color: #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  padding: clamp(1.875rem, -6.5385rem + 9.6154vw, 5rem);
+  z-index: 9999;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+#popup #closeBtn {
+  all: unset;
+  line-height: 1;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  z-index: 9999;
+  background-color: #d9d9d9;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+}
+#popup .pop_content::-webkit-scrollbar {
+  display: none;
+}
+#popup .pop_container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  padding: clamp(1.875rem, -6.5385rem + 9.6154vw, 5rem);
+  background: #fff;
+  position: relative;
+  grid-template-columns: 45% 50%;
+  gap: 5%;
+}
+#popup .pop_container #popupImg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#popup .pop_container .pop_content {
+  width: 100%;
+  padding: 20px;
+  padding-top: 0;
+  overflow-y: auto;
+}
+#popup .pop_container .pop_content #popupHeading {
+  font-size: var(--font-46);
+  color: var(--blue);
+}
+#popup .pop_container .pop_content #popupPara {
+  font-size: var(--font-30);
+}
+#popup .pop_container .pop_content #leader_bio {
+  margin-top: 40px;
+}
+#popup .pop_container .pop_content #leader_bio p {
+  font-size: var(--font-24);
+  color: var(--secondaryBlack);
 }
 
 @media screen and (max-width: 1200px) {
