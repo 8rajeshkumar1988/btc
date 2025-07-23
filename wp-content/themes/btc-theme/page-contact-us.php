@@ -28,14 +28,18 @@ the_post();
 
     ?>
     <div class="content">
-        <!-- <p class="breadcrub">Home / Sustainability</p> -->
-        <!-- <div class="heading">
-          <p style="color: #00000099">SUSTAINABILITY</p>
-          <h1 style="color: #000000">
-            Eco-Innovation at <br />
-            Every Stage
-          </h1>
-        </div> -->
+        <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / Contact Us</p>
+        <div>
+            <div class="heading">
+                <p><?php the_title(); ?></p>
+                <?php the_content(); ?>
+                <button class="cta">Submit <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
+            </div>
+            <div>
+                
+            </div>
+        </div>
+        <div class="layer"></div>
     </div>
 </section>
 <section id="lead_form">
@@ -45,7 +49,7 @@ the_post();
             looking for a one stop textile solution?
         </h2>
     </div>
-    <?php get_template_part('components/lead_form');?>
+    <?php get_template_part('components/lead_form'); ?>
 </section>
 
 
