@@ -1,13 +1,9 @@
 <?php
-
 get_header();
-
 ?>
-
 <section class="heroBanner">
     <?php
     $banner_video = get_field('banner_video');
-
     if ($banner_video) {
         echo '<video playsinline autoplay muted loop src="' . esc_url($banner_video['url']) . '"></video>';
     } else  if (has_post_thumbnail()) {
@@ -28,9 +24,9 @@ get_header();
 
     ?>
     <div class="content">
-        <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / Textile Park</p>
+        <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / <?php the_title() ?></p>
         <div class="heading">
-             <p><?php the_title(); ?></p>
+            <p><?php the_title(); ?></p>
             <?php the_content(); ?>
         </div>
         <div class="layer"></div>
@@ -47,7 +43,7 @@ get_header();
     </div>
     <div class="description">
         <p>Where every step of the production process - from raw cotton to the finished garment is meticulously managed under one roof.</p>
-<p>This ensures quality control, efficiency, and sustainability at every stage.</p>   
+        <p>This ensures quality control, efficiency, and sustainability at every stage.</p>
 
     </div>
 </section>
@@ -74,7 +70,7 @@ get_header();
                         <p class="title">Key Feature</p>
                         <p class="subCopy">Ethical sourcing practices ensure fair labor and environmental responsibility</p>
                     </div>
-                </div>        
+                </div>
             </div>
             <div class="right">
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/cotton.jpg'; ?>" alt="">
@@ -102,7 +98,7 @@ get_header();
                         <p class="title">Key Feature</p>
                         <p class="subCopy">The yarn is designed to maintain its integrity for durability and softness, which is crucial for the longevity of the final garment</p>
                     </div>
-                </div>        
+                </div>
             </div>
             <div class="right">
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/spinning.jpg'; ?>" alt="">
@@ -117,7 +113,7 @@ get_header();
             <div class="left">
                 <div class="inner_top">
                     <div class="copy">
-                        <p>The spun yarn is knitted into fabric at our facilities. We offer various fabric types (e.g., cotton knits,  fabrics) depending on the garment style</p>
+                        <p>The spun yarn is knitted into fabric at our facilities. We offer various fabric types (e.g., cotton knits, fabrics) depending on the garment style</p>
                     </div>
                     <p class="count">(03)</p>
                 </div>
@@ -130,7 +126,7 @@ get_header();
                         <p class="title">Key Feature</p>
                         <p class="subCopy">Our knitting processes result in breathable, high-quality textiles suitable for a variety of garment types</p>
                     </div>
-                </div>        
+                </div>
             </div>
             <div class="right">
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/precision.jpg'; ?>" alt="">
@@ -148,7 +144,7 @@ get_header();
                         <div class="tag_div">
                             <div class="tags active">DYEING</div>
                             <div class="tags">PRINTING</div>
-                            <div class="tags">EMBROIDERY</div>                        
+                            <div class="tags">EMBROIDERY</div>
                         </div>
                         <p>The fabrics are dyed using water-efficient, eco-friendly dyeing techniques. We minimize water waste and ensure that the dyes used are non-toxic and biodegradable</p>
                     </div>
@@ -163,7 +159,7 @@ get_header();
                         <p class="title">Key Feature</p>
                         <p class="subCopy">Sustainability is at the forefront, and we aim to use 100% eco-friendly dyes for all garments</p>
                     </div>
-                </div>        
+                </div>
             </div>
             <div class="right">
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/processing.jpg'; ?>" alt="">
@@ -191,7 +187,7 @@ get_header();
                         <p class="title">Key Feature</p>
                         <p class="subCopy">Customizations like embroidery, screen printing, and other design details are added in this stage</p>
                     </div>
-                </div>        
+                </div>
             </div>
             <div class="right">
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/manufacturing.jpg'; ?>" alt="">
@@ -219,7 +215,7 @@ get_header();
                         <p class="title">Key Feature</p>
                         <p class="subCopy">Every garment is checked for defects before being sent to packaging and distribution.</p>
                     </div>
-                </div>        
+                </div>
             </div>
             <div class="right">
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/manufacturing.jpg'; ?>" alt="">
@@ -247,7 +243,7 @@ get_header();
                         <p class="title">Key Feature</p>
                         <p class="subCopy">We use recyclable, biodegradable packaging materials to reduce plastic waste.</p>
                     </div>
-                </div>        
+                </div>
             </div>
             <div class="right">
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/manufacturing.jpg'; ?>" alt="">
@@ -275,7 +271,7 @@ get_header();
                         <p class="title">Key Feature</p>
                         <p class="subCopy">The use of nearby ports and airports enables shorter shipping routes, cutting down on carbon emissions.</p>
                     </div>
-                </div>        
+                </div>
             </div>
             <div class="right">
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/manufacturing.jpg'; ?>" alt="">
@@ -303,7 +299,7 @@ get_header();
                         <p class="title">Key Feature</p>
                         <p class="subCopy">The customer enjoys a product made with eco-conscious processes, with full visibility into its journey from farm to fashion.</p>
                     </div>
-                </div>        
+                </div>
             </div>
             <div class="right">
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/manufacturing.jpg'; ?>" alt="">
