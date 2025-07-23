@@ -32,11 +32,11 @@ body {
 }
 
 .heroBanner.activated {
-  transform: translateY(99px) scale(0.95, 0.8);  
+  transform: translateY(150px) scale(1, 1);
   filter: blur(10px) brightness(0.8);
 }
 .heroBanner {
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   transform-origin: bottom;
   filter: blur(0px) brightness(1);
   position: relative;
@@ -496,6 +496,9 @@ footer {
 }
 
 header {
+  a {
+    line-height: 1;
+  }
   position: absolute;
   z-index: 99;
   width: 100%;
@@ -511,6 +514,7 @@ header {
     cursor: pointer;
     img {
       pointer-events: none;
+      height: clamp(2.1875rem, 0.877rem + 1.6129vw, 2.8125rem);
     }
     .open {
       display: block;
@@ -532,24 +536,33 @@ header {
 #header.active {
   display: grid;
   opacity: 1;
-  transform: translateY(0%) scale(1);  
+  transform: translateY(0%);
   pointer-events: unset;
 }
 #header {
   position: fixed;
   height: 100vh;
   width: 100%;
-  padding-top: 150px;
+  padding-top: calc(
+    clamp(1.5625rem, -1.7137rem + 4.0323vw, 3.125rem) * 2 + clamp(2.5rem, 0.5343rem + 2.4194vw, 3.4375rem)
+  );
   padding-left: var(--paddingX);
   z-index: 98;
-  transform: translateY(-50%) scale(0.9);
+  transform: translateY(-50%);
   opacity: 0;
   transition: all 0.3s ease;
   background-color: #fff;
-  display:grid;
+  display: grid;
   pointer-events: none;
   grid-template-columns: 35% 60%;
   gap: 5%;
+  & > img {
+    position: absolute;
+    left: var(--paddingX);
+    height: clamp(2.5rem, 0.5343rem + 2.4194vw, 3.4375rem);
+    margin-top: clamp(1.5625rem, -1.7137rem + 4.0323vw, 3.125rem);
+    z-index: 100;
+  }
   .right {
     display: flex;
     flex-direction: column;
@@ -576,11 +589,37 @@ header {
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 50px;
+    position: relative;
+    .bannerArea.active,
+    .else.active {
+      opacity: 1;
+      transform: translate(0, 0);
+      pointer-events: unset;
+    }
+    .else {
+      opacity: 0;
+      transform: translate(0, 0px);
+      transition: all 0.5s;
+      pointer-events: none;
+      & > img,
+      & > video {
+        width: 100%;
+        aspect-ratio: 16/7.5;
+        object-fit: cover;
+      }
+    }
     .bannerArea {
+      width: 100%;
+      opacity: 0;
+      position: absolute;
+      transform: translate(0, 0px);
+      transition: all 0.5s;
+      pointer-events: none;
       .img {
         width: 100%;
         aspect-ratio: 16/7.5;
         position: relative;
+        video,
         img {
           position: absolute;
           height: 100%;
@@ -762,6 +801,29 @@ header {
       .right {
         display: none;
       }
+    }
+  }
+
+  header {
+    .logo {
+      height: 30px;
+    }
+    button {
+      img {
+        height: 30px;
+      }
+    }
+  }
+  #header{
+    padding-top: 82px;
+    & > img{
+      height: 30px;
+    }
+  }
+
+  .heroBanner{
+    .content{
+      padding-top: 82px;
     }
   }
 }
