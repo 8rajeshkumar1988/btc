@@ -31,7 +31,13 @@ body {
   background-color: #fffff4;
 }
 
+.heroBanner.activated {
+  transform: translateY(99px) scale(0.95, 0.8);
+}
+
 .heroBanner {
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom;
   position: relative;
   height: 95vh;
   width: 100%;
@@ -464,7 +470,7 @@ footer .bottom .left > div img {
 }
 footer .bottom .left P {
   font-size: var(--font-14);
-  color: #7870C8;
+  color: #7870c8;
 }
 footer .bottom .right {
   display: flex;
@@ -473,7 +479,7 @@ footer .bottom .right {
 footer .bottom .right * {
   text-decoration: unset;
   font-size: var(--font-14);
-  color: #7870C8;
+  color: #7870c8;
 }
 
 header {
@@ -508,6 +514,13 @@ header button.open .close {
   display: block;
 }
 
+#header.active {
+  display: grid;
+  opacity: 1;
+  transform: translateY(0%);
+  pointer-events: unset;
+}
+
 #header {
   position: fixed;
   height: 100vh;
@@ -515,26 +528,31 @@ header button.open .close {
   padding-top: 150px;
   padding-left: var(--paddingX);
   z-index: 98;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 0.3s ease;
   background-color: #fff;
-  display: none;
+  display: grid;
+  pointer-events: none;
   grid-template-columns: 35% 60%;
   gap: 5%;
 }
 #header .right {
   display: flex;
   flex-direction: column;
-  border: 1px solid #E8E8E8;
+  border: 1px solid #e8e8e8;
   border-right: 0;
 }
 #header .right a {
   font-size: calc(var(--font-20) * 2);
-  color: #C9C9C9;
+  color: #c9c9c9;
   width: 100%;
   padding-left: calc(var(--font-46) / 1.5);
   text-decoration: unset;
   line-height: 1.4;
 }
-#header .right a.active, #header .right a:hover {
+#header .right a.active,
+#header .right a:hover {
   background-color: var(--blue);
   color: #fff;
   font-weight: 600;
@@ -620,7 +638,7 @@ header button.open .close {
 }
 #header .left .mediaArea P {
   font-size: var(--font-14);
-  color: #C9C9C9;
+  color: #c9c9c9;
 }
 
 @media screen and (max-width: 1546px) {

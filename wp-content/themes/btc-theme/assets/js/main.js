@@ -54,10 +54,12 @@ $(document).ready(function () {
 
     if ($(this).hasClass('open')) {
       lenis.stop();
-      $('#header').css({ display: 'grid' });      
+      $('.heroBanner').addClass('activated');
+      $('#header').addClass('active');      
     } else {
       lenis.start();
-      $('#header').css({ display: 'none' });
+      $('#header').removeClass('active');
+      $('.heroBanner').removeClass('activated');
     }
   });
 

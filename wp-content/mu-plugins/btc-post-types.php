@@ -19,7 +19,7 @@ function university_post_types()
     // Event Post Type
     register_post_type('event', array(
         'show_in_rest' => true,
-        'supports' => array('title', 'editor', 'excerpt','thumbnail'),
+        'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
         'rewrite' => array('slug' => 'events'),
         'has_archive' => true,
         'public' => true,
@@ -195,6 +195,41 @@ function university_post_types()
         'show_in_rest' => true, // for Gutenberg and API
         'supports' => array('title'), // you can also add 'editor', 'thumbnail' if needed
         'menu_icon' => 'dashicons-id', // nice icon for leads
+    ));
+
+
+    register_post_type('subscriber', array(
+        'labels' => array(
+            'name' => 'Subscribers',
+            'singular_name' => 'Subscriber',
+            'add_new_item' => 'Add New Subscriber',
+            'edit_item' => 'Edit Subscriber',
+            'new_item' => 'New Subscriber',
+            'view_item' => 'View Subscriber',
+            'search_items' => 'Search Subscribers',
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'show_in_rest' => true, // for Gutenberg and API
+        'supports' => array('title'), // you can also add 'editor', 'thumbnail' if needed
+        'menu_icon' => 'dashicons-heart', // nice icon for leads
+    ));
+
+    register_post_type('event_registration', array(
+        'labels' => array(
+            'name' => 'Event Registrations',
+            'singular_name' => 'Registration',
+            'add_new_item' => 'Add New Registration',
+            'edit_item' => 'Edit Registration',
+            'new_item' => 'New Registration',
+            'view_item' => 'View Registration',
+            'search_items' => 'Search Registrations',
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'show_in_rest' => true, // for Gutenberg and API
+        'supports' => array('title'), // you can also add 'editor', 'thumbnail' if needed
+        'menu_icon' => 'dashicons-groups', // nice icon for leads
     ));
 }
 
@@ -659,7 +694,7 @@ function get_attachment_id_from_url($url)
 function hide_title_and_editor_for_leads()
 {
     $screen = get_current_screen();
-    if ($screen->post_type === 'lead') {
+    if ($screen->post_type === 'lead' || $screen->post_type === 'subscriber' || $screen->post_type === 'event_registration') {
         echo '<style>
             #titlediv, #postdivrich, #editor-toolbar, .editor-post-title__block { display: none !important; }
         </style>';
@@ -671,7 +706,7 @@ add_action('admin_head', 'hide_title_and_editor_for_leads');
 
 
 // 1. Define custom columns for the 'lead' post type
-function aa_lead_custom_columns($columns)
+function btc_lead_custom_columns($columns)
 {
     $new_columns = array(
         'cb'              => $columns['cb'],
@@ -684,15 +719,109 @@ function aa_lead_custom_columns($columns)
         'organization_type'         => 'Organization Type',
         'enquiry_type'    => 'Enquiry Type',
         'i_agree_to_receive_e-communications_from_btc'    => 'Receive E Communications',
+        'source_url'      => 'Page URL',
         'created_on'      => 'Created On',
     );
     return $new_columns;
 }
-add_filter('manage_edit-lead_columns', 'aa_lead_custom_columns');
+add_filter('manage_edit-lead_columns', 'btc_lead_custom_columns');
+
+
+
+function btc_subscriber_custom_columns($columns)
+{
+    $new_columns = array(
+        'cb'              => $columns['cb'],
+        'name'            => 'Name',
+        'email'           => 'Email',
+        'source_url'      => 'Page URL',
+        'created_on'      => 'Created On',
+    );
+    return $new_columns;
+}
+add_filter('manage_edit-subscriber_columns', 'btc_subscriber_custom_columns');
+
+
+function btc_subscriber_custom_column_content($column, $post_id)
+{
+    switch ($column) {
+        case 'name':
+            echo esc_html(get_field('name', $post_id));
+            break;
+        case 'email':
+            echo esc_html(get_field('email', $post_id));
+            break;
+
+        case 'source_url':
+            echo esc_html(get_field('source_url', $post_id));
+            break;
+        case 'created_on':
+            echo esc_html(get_field('created_on', $post_id));
+            break;
+    }
+}
+add_action('manage_subscriber_posts_custom_column', 'btc_subscriber_custom_column_content', 10, 2);
+
+
+
+
+function btc_event_registration_custom_columns($columns)
+{
+    $new_columns = array(
+        'cb'              => $columns['cb'],
+        'name'            => 'Name',
+        'email'           => 'Email',
+        'phone_number'    => 'Phone',
+        'reason_to_attend'         => 'Reason to Attend',
+        'no_of_attendees'         => 'No of Attendees',
+        'source_url'      => 'Page URL',
+        'created_on'      => 'Created On',
+    );
+    return $new_columns;
+}
+add_filter('manage_edit-event_registration_columns', 'btc_event_registration_custom_columns');
+
+
+
+
+
+function btc_event_registration_custom_column_content($column, $post_id)
+{
+    switch ($column) {
+        case 'name':
+            echo esc_html(get_field('name', $post_id));
+            break;
+        case 'email':
+            echo esc_html(get_field('email', $post_id));
+            break;
+        case 'phone_number':
+            echo esc_html(get_field('phone_number', $post_id));
+            break;
+        case 'reason_to_attend':
+            echo esc_html(get_field('reason_to_attend', $post_id));
+            break;
+        case 'no_of_attendees':
+            echo esc_html(get_field('no_of_attendees', $post_id));
+            break;
+        case 'source_url':
+            echo esc_html(get_field('source_url', $post_id));
+            break;
+        case 'created_on':
+            echo esc_html(get_field('created_on', $post_id));
+            break;
+    }
+}
+add_action('manage_event_registration_posts_custom_column', 'btc_event_registration_custom_column_content', 10, 2);
+
+
+
+
+
+
 
 
 // 2. Populate the custom columns
-function aa_lead_custom_column_content($column, $post_id)
+function btc_lead_custom_column_content($column, $post_id)
 {
     switch ($column) {
         case 'name':
@@ -722,41 +851,75 @@ function aa_lead_custom_column_content($column, $post_id)
         case 'i_agree_to_receive_e-communications_from_btc':
             echo esc_html(get_field('i_agree_to_receive_e-communications_from_btc', $post_id));
             break;
+        case 'source_url':
+            echo esc_html(get_field('source_url', $post_id));
+            break;
         case 'created_on':
             echo esc_html(get_field('created_on', $post_id));
             break;
     }
 }
-add_action('manage_lead_posts_custom_column', 'aa_lead_custom_column_content', 10, 2);
+add_action('manage_lead_posts_custom_column', 'btc_lead_custom_column_content', 10, 2);
 
 
-function aa_lead_sortable_columns($columns)
+
+
+function btc_lead_sortable_columns($columns)
 {
     $columns['created_on'] = 'created_on';
     $columns['name'] = 'name';
     $columns['enquiry_type'] = 'enquiry_type';
     return $columns;
 }
-add_filter('manage_edit-lead_sortable_columns', 'aa_lead_sortable_columns');
+add_filter('manage_edit-lead_sortable_columns', 'btc_lead_sortable_columns');
 
 
-function aa_add_lead_date_filters()
+function btc_subscriber_sortable_columns($columns)
+{
+    $columns['created_on'] = 'created_on';
+    $columns['name'] = 'name';
+
+    return $columns;
+}
+add_filter('manage_edit-subscriber_sortable_columns', 'btc_subscriber_sortable_columns');
+
+
+function btc_event_registration_sortable_columns($columns)
+{
+    $columns['created_on'] = 'created_on';
+    $columns['name'] = 'name';
+
+    return $columns;
+}
+add_filter('manage_edit-event_registration_sortable_columns', 'btc_event_registration_sortable_columns');
+
+
+
+function btc_date_filters()
 {
     global $typenow;
 
-    if ($typenow !== 'lead') return;
+    if ($typenow === 'lead') {
+        $from_date = $_GET['lead_from_date'] ?? '';
+        $to_date   = $_GET['lead_to_date'] ?? '';
 
-    $from_date = $_GET['lead_from_date'] ?? '';
-    $to_date   = $_GET['lead_to_date'] ?? '';
+        echo '<input type="date" name="lead_from_date" placeholder="From Date" value="' . esc_attr($from_date) . '" />';
+        echo '<input type="date" name="lead_to_date" placeholder="To Date" value="' . esc_attr($to_date) . '" />';
+    } else  if ($typenow === 'subscriber' || $typenow === 'event_registration') {
+        $from_date = $_GET['from_date'] ?? '';
+        $to_date   = $_GET['to_date'] ?? '';
 
-    echo '<input type="date" name="lead_from_date" placeholder="From Date" value="' . esc_attr($from_date) . '" />';
-    echo '<input type="date" name="lead_to_date" placeholder="To Date" value="' . esc_attr($to_date) . '" />';
+        echo '<input type="date" name="from_date" placeholder="From Date" value="' . esc_attr($from_date) . '" />';
+        echo '<input type="date" name="to_date" placeholder="To Date" value="' . esc_attr($to_date) . '" />';
+    } else {
+        return;
+    }
 }
-add_action('restrict_manage_posts', 'aa_add_lead_date_filters');
+add_action('restrict_manage_posts', 'btc_date_filters');
 
 
 
-function aa_filter_leads_by_created_date($query)
+function btc_filter_by_created_date($query)
 {
     global $pagenow;
     $post_type = $query->get('post_type');
@@ -789,8 +952,36 @@ function aa_filter_leads_by_created_date($query)
             $query->set('meta_query', $meta_query);
         }
     }
+    if ($pagenow === 'edit.php' && ($post_type === 'subscriber' || $post_type === 'event_registration') && is_admin()) {
+        $from_date = $_GET['from_date'] ?? '';
+        $to_date   = $_GET['to_date'] ?? '';
+
+        if ($from_date || $to_date) {
+            $meta_query = [];
+
+            if ($from_date) {
+                $meta_query[] = [
+                    'key'     => 'created_on',
+                    'value'   => $from_date,
+                    'compare' => '>=',
+                    'type'    => 'DATE',
+                ];
+            }
+
+            if ($to_date) {
+                $meta_query[] = [
+                    'key'     => 'created_on',
+                    'value'   => $to_date,
+                    'compare' => '<=',
+                    'type'    => 'DATE',
+                ];
+            }
+
+            $query->set('meta_query', $meta_query);
+        }
+    }
 }
-add_action('pre_get_posts', 'aa_filter_leads_by_created_date');
+add_action('pre_get_posts', 'btc_filter_by_created_date');
 
 
 
