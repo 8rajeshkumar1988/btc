@@ -1,6 +1,6 @@
 <form id="aa-lead-form">
     <div>
-        <label for="name">Name</label>
+        <label for="name">Name*</label>
         <br />
         <input id="name" name="name" type="text" placeholder="Enter your name" />
     </div>
@@ -67,21 +67,22 @@
     </div>
     <div>
         <div class="policy_container">
-            <input type="checkbox" id="policy_checkbox" name="tandc" />
-            <label for="policy_checkbox">
+            <input type="checkbox" checked id="policy_checkbox" name="tandc" />
+            <label for="policy_checkbox" class="policy_label">
                 I agree to the BTC privacy policy.*
             </label>
         </div>
     </div>
     <div>
         <div class="e_com_btc">
-            <input type="checkbox" id="e_com_btc" name="e_com_btc" />
-            <label for="e_com_btc">
-                I agree to receive e-communications from BTC.*
+            <input type="checkbox" checked id="e_com_btc" name="e_com_btc" />
+            <label for="e_com_btc" class="e_com_btc_label">
+                I agree to receive e-communications from BTC.
             </label>
         </div>
     </div>
     <div class="btn_container">
         <button class="cta">Submit <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
+        <p class="lead_form_error"></p>
     </div>
 </form>
