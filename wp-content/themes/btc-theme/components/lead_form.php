@@ -2,29 +2,29 @@
     <div>
         <label for="name">Name</label>
         <br />
-        <input id="name" name="name" type="text" placeholder="Enter your name" required />
+        <input id="name" name="name" type="text" placeholder="Enter your name" />
     </div>
     <div>
-        <label for="email">Email</label>
+        <label for="email">Email*</label>
         <br />
-        <input id="email" name="email" type="email" placeholder="Enter your email" required />
+        <input id="email" name="email" type="email" placeholder="Enter your email" />
     </div>
     <div>
-        <label for="enquiry_type">Enquiry Type</label>
+        <label for="enquiry_type">Enquiry Type*</label>
         <br />
-        <select id="enquiry_type" name="enquiry_type" required>
+        <select id="enquiry_type" name="enquiry_type">
             <option value="General">General</option>
             <option value="Business">Business</option>
             <option value="Careers">Careers</option>
         </select>
     </div>
     <div>
-        <label for="phone">Phone Number</label>
+        <label for="phone">Phone Number*</label>
         <br />
-        <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required />
+        <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" />
     </div>
     <div>
-        <label for="company">Company Name</label>
+        <label for="company">Company Name*</label>
         <br />
         <input
             id="company"
@@ -48,7 +48,7 @@
             placeholder="Enter your Whatsapp number" />
     </div>
     <div>
-        <label for="Organization">Organization Type</label>
+        <label for="Organization">Organization Type*</label>
         <br />
         <input
             id="Organization"
@@ -57,7 +57,7 @@
             placeholder="Enter your Organization Type" />
     </div>
     <div class="textareaDiv">
-        <label for="requirements">Tell Us About Your Requirements</label>
+        <label for="requirements">Tell Us About Your Requirements*</label>
         <br />
         <textarea
             id="requirements"
@@ -67,7 +67,7 @@
     </div>
     <div>
         <div class="policy_container">
-            <input type="checkbox" id="policy_checkbox" required name="tandc" />
+            <input type="checkbox" id="policy_checkbox" name="tandc" />
             <label for="policy_checkbox">
                 I agree to the BTC privacy policy.*
             </label>
@@ -77,7 +77,7 @@
         <div class="e_com_btc">
             <input type="checkbox" id="e_com_btc" name="e_com_btc" />
             <label for="e_com_btc">
-                I agree to receive e-communications from BTC.
+                I agree to receive e-communications from BTC.*
             </label>
         </div>
     </div>
