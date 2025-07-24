@@ -74,16 +74,18 @@ $(document).ready(function () {
         $('.spiralImage').addClass('active');
         resetSpiral();
         const swiperCapabilities = new Swiper(".ourCapabilities", {
-            spaceBetween: window.innerWidth > 1024 ? 40 : 20,
+            spaceBetween: window.innerWidth > 1024 ? 40 : 30,
             centeredSlides: true,
             slidesPerView: 'auto',
             loop: false,
+            grabCursor: true,
+            speed: 800,
             // initialSlide: 3,
             // autoplay: { 
             //     delay: 2500,
             //     disableOnInteraction: false,
             // },
-            allowTouchMove: false,     // 👈 disables swipe/drag
+            allowTouchMove: true,     // 👈 disables swipe/drag
             simulateTouch: false,
             pagination: {
                 el: ".swiper-pagination",
@@ -190,12 +192,12 @@ $(document).ready(function () {
                     }, 0);
                 } else {
                     swirlTimeline.to(img, {
-                        width: '80vw',
-                        x: -containerWidth / 2 + img.offsetWidth / 2 + (additionNal * 2),
+                        width: '90vw',
+                        x: -containerWidth / 2 + img.offsetWidth / 2 + (additionNal) - 5,
                         y: 0,
                         scale: 1,
                         onComplete: () => {
-                            $('.spiralImage').css('width', '80vw');
+                            $('.spiralImage').css('width', '90vw');
                         }
                     }, 0);
                 }
@@ -225,19 +227,25 @@ $(document).ready(function () {
                 opacity: isDesk ? 0 : 1,
             }, 0);
             swirlTimeline.to('#ourCapabilities .rightContent', {
-                x: '40vw',
+                x: isDesk ? '40vw' : '100vw',
                 y: 0,
                 scale: 1,
-                duration: 1,
+                duration: 0.3,
                 opacity: 0,
                 pointerEvent: 'none',
                 zIndex: 0
             }, 0);
-            swirlTimeline.to('.swiper-slide .text, .btnssNew', {
+            swirlTimeline.to('.swiper-slide:first-child .text', {
                 x: 0,
                 y: 0,
-                scale: 1,
-                duration: 0.5,
+                scale: 1,                
+                opacity: 1,
+                duration: 0
+            }, 0);
+            swirlTimeline.to('.btnssNew', {
+                x: 0,
+                y: 0,
+                scale: 1,                
                 opacity: 1
             }, 0);
         });
