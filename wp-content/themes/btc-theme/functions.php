@@ -125,6 +125,18 @@ function btc_files()
     }
 
 
+    if (is_single() && get_post_type() === 'event') {
+        wp_enqueue_style('btc_event_detail_styles', get_theme_file_uri('/assets/event-detail/style.css'));
+        wp_enqueue_script(
+            'btc_event_detail_script', // Handle
+            get_theme_file_uri('/assets/event-detail/script.js'), // JS file path
+            array(), // Dependencies (e.g., array('jquery'))
+            null, // Version (or use '1.0')
+            true // Load in footer (true = footer, false = header)
+        );
+    }
+
+
 
 
     //   wp_enqueue_style( 'btc_extra_styles', get_theme_file_uri( '/assets/index.css' ) );
