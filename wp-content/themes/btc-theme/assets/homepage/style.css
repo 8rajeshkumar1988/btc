@@ -424,10 +424,10 @@
   height: 100%;
   width: auto;
   aspect-ratio: 3/4.5;
-  left: 50%;
+  left: 0%;
   -o-object-fit: cover;
      object-fit: cover;
-  transform: translate(-50%, -50%);
+  transform: translate(0%, 0%);
 }
 #ourCapabilities .cap_container .spiralImage img {
   width: 100%;
@@ -462,9 +462,6 @@
 @media screen and (max-width: 1546px) {
   #ourCapabilities .swiper-slide {
     width: 90vw;
-  }
-  #ourCapabilities .cap_container .spiralImage {
-    top: 50%;
   }
 }
 @media screen and (max-width: 1024px) {

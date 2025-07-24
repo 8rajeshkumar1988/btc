@@ -167,5 +167,7 @@
                 <a path='<?php echo $slug ?>' class="<?php echo $post_id  == 97 ? "active" : ""; ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             <?php } ?>
         </div>
-    <?php } ?>
+    <?php }
+    wp_reset_postdata();
+     ?>
 </section>
