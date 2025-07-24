@@ -46,19 +46,31 @@ get_header();
       <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/images/youtube.png'; ?>" alt="youtube"></a>
     </div>
   </div>
+
+
+
   <div class="tags">
-    <p class="date">7 May 2025</p>
-    <a href="/">Tag</a>
-    <a href="/">Tag</a>
-    <a href="/">Tag</a>
-    <a href="/">Tag</a>
+    <p class="date"><?php echo get_the_date(); ?></p>
+    <?php
+    $tags = get_the_tags();
+    if ($tags) {
+      
+      foreach ($tags as $tag) {
+        echo '<a href="' . esc_url(get_tag_link($tag->term_id)) . '">' . esc_html($tag->name) . '</a> ';
+      }
+      echo '</div>';
+    }
+    ?>
+
+
+
   </div>
 
 
 </section>
 
 
-  <?php the_content(); ?>
+<?php the_content(); ?>
 
 
 <?php

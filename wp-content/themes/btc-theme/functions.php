@@ -101,7 +101,7 @@ function btc_files()
         );
     }
 
-    if (is_home()) {
+    if (is_home() || is_tag()) {
         wp_enqueue_style('btc_news_styles', get_theme_file_uri('/assets/news/style.css'));
         wp_enqueue_script(
             'btc_news_script', // Handle

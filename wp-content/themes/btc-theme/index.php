@@ -3,7 +3,15 @@
 get_header();
 
 ?>
-
+<?php
+$tag_name = "";
+$tag = get_queried_object(); // This is the tag object
+$tag_slug = "";
+if ($tag && isset($tag->term_id)) {
+    $tag_name = esc_html($tag->name);
+    $tag_slug = $tag->slug;
+}
+?>
 
 
 
@@ -16,9 +24,7 @@ get_header();
         </h2>
     </div>
     <?php
-
-
-    $spotlight_news = new WP_Query([
+    $args = [
         'post_type'      => 'post',
         'post_status'    => 'publish',
         'posts_per_page' => 1,
@@ -33,8 +39,11 @@ get_header();
                 'compare' => '=',
             ],
         ],
-    ]);
-
+    ];
+    if (!empty($tag_slug)) {
+        $args['tag'] = $tag_slug;
+    }
+    $spotlight_news = new WP_Query($args);
     $top_post_ids = array();
     if ($spotlight_news->have_posts()) {
 
@@ -100,7 +109,10 @@ get_header();
 </section>
 
 <?php
-$news = new WP_Query([
+
+
+
+$args = [
     'post_type'      => 'post',
     'post_status'    => 'publish',
     'posts_per_page' => -1,
@@ -109,8 +121,12 @@ $news = new WP_Query([
     'order'          => 'DESC',
     'cat'            => 1,
     'post__not_in'   => $top_post_ids,
-]);
+];
+if (!empty($tag_slug)) {
+    $args['tag'] = $tag_slug;
+}
 
+$news = new WP_Query($args);
 if ($news->have_posts()) {
 ?>
 
@@ -184,7 +200,10 @@ if ($news->have_posts()) {
 <?php
 
 
-$sarticles = new WP_Query([
+
+
+
+$args = [
     'post_type'      => 'post',
     'post_status'    => 'publish',
     'posts_per_page' => -1,
@@ -193,9 +212,12 @@ $sarticles = new WP_Query([
     'order'          => 'DESC',
     'cat'            => 3,
 
-]);
+];
+if (!empty($tag_slug)) {
+    $args['tag'] = $tag_slug;
+}
 
-
+$sarticles = new WP_Query($args);
 if ($sarticles->have_posts()) {
 
 ?>
