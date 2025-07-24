@@ -4,7 +4,7 @@
         <div class="logo">
             <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.svg'; ?>" alt="" />
         </div>
-        <div class="close">
+        <div class="close" id="closeleadpopup">
             <img src="<?php echo get_template_directory_uri() . '/assets/images/closeSvg.svg'; ?>" alt="" />
         </div>
     </div>

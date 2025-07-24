@@ -101,7 +101,7 @@ function btc_files()
         );
     }
 
-    if (is_home()) {
+    if (is_home() || is_tag()) {
         wp_enqueue_style('btc_news_styles', get_theme_file_uri('/assets/news/style.css'));
         wp_enqueue_script(
             'btc_news_script', // Handle
@@ -125,6 +125,33 @@ function btc_files()
     }
 
 
+    if (is_single() && get_post_type() === 'event') {
+        wp_enqueue_style('btc_event_detail_styles', get_theme_file_uri('/assets/event-detail/style.css'));
+        wp_enqueue_script(
+            'btc_event_detail_script', // Handle
+            get_theme_file_uri('/assets/event-detail/script.js'), // JS file path
+            array(), // Dependencies (e.g., array('jquery'))
+            null, // Version (or use '1.0')
+            true // Load in footer (true = footer, false = header)
+        );
+    }
+
+    wp_enqueue_style('intlTelInputCSS', 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css');
+    wp_enqueue_script('intlTelInputJS', 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js', [], null, true);
+
+    // Your init script
+    wp_add_inline_script('intlTelInputJS', "
+        document.addEventListener('DOMContentLoaded', function() {
+            const input = document.querySelector('input[type=\"tel\"]');
+            if (input) {
+                window.intlTelInput(input, {
+                    initialCountry: 'us',
+                    
+                    utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js'
+                });
+            }
+        });
+    ");
 
 
     //   wp_enqueue_style( 'btc_extra_styles', get_theme_file_uri( '/assets/index.css' ) );

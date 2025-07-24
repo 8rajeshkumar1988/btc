@@ -296,7 +296,7 @@ if ($leaderships->have_posts()) {
                     </ul>
                 </div>
                 <div class="content-btn">
-                    <button class="cta">
+                    <button class="cta leadpopup">
                         GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
                     </button>
                 </div>
@@ -337,7 +337,7 @@ if ($leaderships->have_posts()) {
                     </ul>
                 </div>
                 <div class="content-btn">
-                    <button class="cta">
+                    <button class="cta leadpopup">
                         GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
                     </button>
                 </div>
@@ -378,7 +378,7 @@ if ($leaderships->have_posts()) {
                     </ul>
                 </div>
                 <div class="content-btn">
-                    <button class="cta">
+                    <button class="cta leadpopup">
                         GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
                     </button>
                 </div>

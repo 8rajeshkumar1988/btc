@@ -22,7 +22,7 @@ jQuery(function ($) {
         $.post(aaLead.ajax_url, data, function (response) {
             if (response.success) {
                 alert(response.data);
-                // $form.trigger('reset');
+                $form.trigger('reset');
             } else {
                 alert('Error: ' + response.data);
             }
@@ -47,7 +47,7 @@ jQuery(function ($) {
         $.post(aaLead.ajax_url, data, function (response) {
             if (response.success) {
                 alert(response.data);
-                // $form.trigger('reset');
+                $form.trigger('reset');
             } else {
                 alert('Error: ' + response.data);
             }

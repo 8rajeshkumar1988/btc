@@ -102,3 +102,18 @@ $('.right a').each(function () {
 
 
 });
+
+
+
+
+$(document).ready(function () {
+  // Open popup with fadeIn
+  $('.leadpopup').on('click', function () {
+    $('#lead_popup_form').fadeIn(300);
+  });
+
+  // Close popup with fadeOut
+  $('#closeleadpopup').on('click', function () {
+    $('#lead_popup_form').fadeOut(300);
+  });
+});

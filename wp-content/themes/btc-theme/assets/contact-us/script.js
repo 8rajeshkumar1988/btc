@@ -13,3 +13,4 @@ $(".faq").click(function () {
     answer.slideDown(500);
   }
 });
+
