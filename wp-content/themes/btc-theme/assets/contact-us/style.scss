@@ -130,6 +130,12 @@ body {
   .btn_container {
     display: flex;
     justify-content: flex-end;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-end;
+    .lead_form_error{
+      color: #ff0000;
+    }
   }
   // select {
   //   appearance: none;

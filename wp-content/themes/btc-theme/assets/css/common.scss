@@ -24,7 +24,11 @@
   --headingTop: 5px;
   --paddingY: clamp(6.25rem, 1.0417rem + 6.9444vw, 9.375rem); // 100 - 150
   --navBtn: clamp(4.0625rem, 2.5rem + 2.0833vw, 5rem); //65 - 80
-  --spaceBelow_heading: clamp(2.1875rem, 0.625rem + 2.0833vw, 3.125rem); //35 - 50
+  --spaceBelow_heading: clamp(
+    2.1875rem,
+    0.625rem + 2.0833vw,
+    3.125rem
+  ); //35 - 50
 }
 
 body {
@@ -52,7 +56,8 @@ body {
   }
   .content {
     padding: calc(
-        calc(clamp(1.5625rem, -1.7137rem + 4.0323vw, 3.125rem) * 2) + clamp(2.5rem, 0.5343rem + 2.4194vw, 3.4375rem)
+        calc(clamp(1.5625rem, -1.7137rem + 4.0323vw, 3.125rem) * 2) +
+          clamp(2.5rem, 0.5343rem + 2.4194vw, 3.4375rem)
       )
       var(--paddingX) var(--spaceBelow_heading);
     position: relative;
@@ -117,7 +122,8 @@ body {
   all: unset;
   background-color: var(--green);
   color: #000;
-  padding: clamp(0.3125rem, -0.7292rem + 1.3889vw, 0.9375rem) clamp(1.25rem, -0.8333rem + 2.7778vw, 2.5rem);
+  padding: clamp(0.3125rem, -0.7292rem + 1.3889vw, 0.9375rem)
+    clamp(1.25rem, -0.8333rem + 2.7778vw, 2.5rem);
   text-transform: uppercase;
   font-size: var(--font-20);
   width: fit-content;
@@ -437,7 +443,9 @@ footer {
   .middle {
     display: grid;
     width: 100%;
-    grid-template-columns: calc(25% - 25px) calc(25% - 25px) calc(25% - 25px) calc(25% - 25px);
+    grid-template-columns: calc(25% - 25px) calc(25% - 25px) calc(25% - 25px) calc(
+        25% - 25px
+      );
     gap: 33.33px;
     & > div {
       display: flex;
@@ -544,7 +552,8 @@ header {
   height: 100vh;
   width: 100%;
   padding-top: calc(
-    clamp(1.5625rem, -1.7137rem + 4.0323vw, 3.125rem) * 2 + clamp(2.5rem, 0.5343rem + 2.4194vw, 3.4375rem)
+    clamp(1.5625rem, -1.7137rem + 4.0323vw, 3.125rem) * 2 +
+      clamp(2.5rem, 0.5343rem + 2.4194vw, 3.4375rem)
   );
   padding-left: var(--paddingX);
   z-index: 98;
@@ -696,7 +705,6 @@ header {
   }
 }
 
-
 #lead_popup_form {
   // padding: 5vh var(--paddingX);
   position: fixed;
@@ -754,12 +762,45 @@ header {
   select,
   textarea {
     width: 100%;
-    border: none;
     border: 1px solid #d9d9d9;
     border-radius: 10px;
     padding: 8px;
     margin-top: 10px;
     font-size: var(--font-14);
+  }
+  input[type="checkbox"] {
+    all: unset;
+    position: relative;
+    height: 15px !important;
+    width: 15px !important;
+    margin-top: -5px !important;
+  }
+  input[type="checkbox"]::after {
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    height: 15px;
+    width: 15px;
+    top: 1px;
+    border-radius: 5px;
+    border: 1px solid #b8b8b8;
+  }
+  input[type="checkbox"]:checked::after {
+    content: "";
+    background-color: #a2c617;
+    border: 1px solid #a2c617;
+  }
+  input[type="checkbox"]:checked::before {
+    content: "✓";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    z-index: 1;
+    top: -2px;
+    left: 19%;
+    font-weight: 1000;
+    font-size: 14px;
   }
   .whatsapp_container {
     display: flex;
@@ -780,6 +821,7 @@ header {
       }
     }
   }
+
   .policy_container,
   .e_com_btc {
     display: flex;
@@ -797,6 +839,12 @@ header {
   .btn_container {
     display: flex;
     justify-content: flex-end;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-end;
+    .lead_form_error{
+      color: #ff0000;
+    }
   }
   // select {
   //   appearance: none;
@@ -805,6 +853,9 @@ header {
   //   background-position: right 10px center;
   //   background-size: 20px;
   // }
+}
+.error_input {
+  border: 1px solid #ff0000 !important ;
 }
 
 @media screen and (max-width: 1600px) {
@@ -857,7 +908,11 @@ header {
 @media screen and (max-width: 1546px) {
   :root {
     --paddingX: 5%;
-    --paddingY: clamp(5rem, -4.1734rem + 11.2903vw, 9.375rem); // 1300 - 1920  80 - 100
+    --paddingY: clamp(
+      5rem,
+      -4.1734rem + 11.2903vw,
+      9.375rem
+    ); // 1300 - 1920  80 - 100
   }
   #footerContact {
     aspect-ratio: 16/7;
@@ -865,7 +920,7 @@ header {
 }
 
 @media screen and (max-width: 1024px) {
-   #lead_popup_form {
+  #lead_popup_form {
     form {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -875,7 +930,7 @@ header {
     .whatsapp_input {
       grid-area: 3 / 1 / 4 / 2;
     }
-    .btn_container{
+    .btn_container {
       grid-column: span 2;
     }
     .policy_container,
@@ -992,29 +1047,29 @@ header {
       }
     }
   }
-  #header{
+  #header {
     padding-top: 82px;
-    & > img{
+    & > img {
       height: 30px;
     }
   }
 
-  .heroBanner{
-    .content{
+  .heroBanner {
+    .content {
       padding-top: 82px;
     }
   }
 
-   #lead_popup_form {
-    .popup_container{
+  #lead_popup_form {
+    .popup_container {
       width: 100%;
       padding: 60px 20px;
     }
     form {
       grid-template-columns: 1fr;
     }
-    .btn_container{
-      grid-column:unset;
+    .btn_container {
+      grid-column: unset;
     }
     .whatsapp_input {
       grid-area: 5 / 1 / 6 / 2;

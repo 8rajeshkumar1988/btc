@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .custom-checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+}
+
+.checkbox-input {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+.checkbox-box {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* When checked */
+.checkbox-input:checked + .checkbox-box {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Error state */
+.checkbox-input.error + .checkbox-box {
+  border-color: red;
+}
+
+    </style>
+</head>
+<body>
+   <label class="custom-checkbox">
+  <input type="checkbox" id="policy_checkbox" class="checkbox-input error" />
+  <span class="checkbox-box"></span>
+  I agree to the policy
+</label>
+
+
+</body>
+</html>
