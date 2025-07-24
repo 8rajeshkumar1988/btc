@@ -233,6 +233,6 @@
         </button>
         </div>
     </div> -->
-
+                <button class="cta leadpopup">Start Customizing Today <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" /></button>
              </div>
  </section>

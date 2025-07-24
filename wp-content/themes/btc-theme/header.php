@@ -53,4 +53,4 @@
 <body <?php body_class(); ?>>
   
 <?php get_template_part('components/headerMenu'); ?>
-<!-- <?php get_template_part('components/lead_popup_form'); ?> -->
+<?php get_template_part('components/lead_popup_form'); ?>

@@ -54,7 +54,7 @@ get_header();
       Explore our products, made from eco-friendly, traceable cotton, and
       discover the perfect fit for your brand.
     </p>
-    <button class="cta">
+    <button class="cta leadpopup">
       Get in Touch <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" />
     </button>
   </div>
@@ -212,7 +212,7 @@ get_header();
         </p>
       </div>
     </div>
-    <button class="cta">
+    <button class="cta leadpopup">
       Start Customizing Today <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" />
     </button>
   </div>

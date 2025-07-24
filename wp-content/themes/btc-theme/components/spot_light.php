@@ -101,7 +101,7 @@ if ($products->have_posts()) {
                                     <p class="product_description">Product Spotlight</p>
                                     <h2><?php the_title(); ?></h2>
                                 </div>
-                                <button class="cta">Get in Touch <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+                                <button class="cta leadpopup">Get in Touch <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
                             </div>
                             <?php
                             if ($attachment_id) {

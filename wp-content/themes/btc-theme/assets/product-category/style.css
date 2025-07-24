@@ -320,6 +320,9 @@ body {
 #customization .customization_container .customization_cards .customization_card p strong {
   font-weight: 800;
 }
+#customization .leadpopup {
+  margin: 0 auto;
+}
 
 @media screen and (max-width: 1024px) {
   #product_page_details {
@@ -339,6 +342,9 @@ body {
   }
   #customization .customization_container .customization_cards .customization_card {
     justify-content: center;
+  }
+  #customization .leadpopup {
+    padding: 15px;
   }
 }
 @media screen and (max-width: 768px) {

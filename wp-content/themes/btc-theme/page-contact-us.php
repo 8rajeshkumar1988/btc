@@ -33,7 +33,7 @@ the_post();
             <div class="heading">
                 <p><?php the_title(); ?></p>
                 <?php the_content(); ?>
-                <button class="cta">Submit <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
+                <button class="cta leadpopup">Submit <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
             </div>
             <div class="contacts">
                 <p>Benin Textile Corporation</p>
