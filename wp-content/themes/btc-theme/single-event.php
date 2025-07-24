@@ -181,9 +181,9 @@ if ($gallery && is_array($gallery)) {
             <input id="email" type="email" name="email" placeholder="Enter your email" />
         </div>
         <div class="phone_number">
-            <label for="phone">Phone number</label>
+            <label for="phoneno">Phone number</label>
             <br />
-            <input id="phone" type="tel" name="phone" placeholder="Enter your phone number" />
+            <input id="phoneno" type="tel" name="phone" placeholder="Enter your phone number" />
         </div>
         <div class="reason_to_attend">
             <label for="reason">Reason to Attend</label>

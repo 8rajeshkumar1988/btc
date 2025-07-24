@@ -136,7 +136,22 @@ function btc_files()
         );
     }
 
+    wp_enqueue_style('intlTelInputCSS', 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css');
+    wp_enqueue_script('intlTelInputJS', 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js', [], null, true);
 
+    // Your init script
+    wp_add_inline_script('intlTelInputJS', "
+        document.addEventListener('DOMContentLoaded', function() {
+            const input = document.querySelector('input[type=\"tel\"]');
+            if (input) {
+                window.intlTelInput(input, {
+                    initialCountry: 'us',
+                    
+                    utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js'
+                });
+            }
+        });
+    ");
 
 
     //   wp_enqueue_style( 'btc_extra_styles', get_theme_file_uri( '/assets/index.css' ) );
