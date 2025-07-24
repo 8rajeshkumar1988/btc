@@ -187,7 +187,7 @@ get_header();
     <img src="<?php echo get_template_directory_uri() . '/assets/images/capabilities_back.png'; ?>" alt="" class="back">
     <div class="leftContent heading">
         <p>Our Capabilities</p>
-        <h3>From Farm <br>To Fashion</h3>
+        <h3>From Farm To Fashion</h3>
     </div>
     <div class="rightContent">
         <p>BTC combines <span>state-of-the-art technology</span> with sustainable practices, ensuring every product

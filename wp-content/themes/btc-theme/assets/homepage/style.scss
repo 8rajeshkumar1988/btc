@@ -319,6 +319,7 @@
         justify-content: center;
         left: var(--paddingX);
         z-index: 2;
+        max-width: clamp(14.375rem, 5.8036rem + 13.3929vw, 21.875rem);
         p {
             color: var(--green);
             opacity: 0.6;
@@ -352,7 +353,7 @@
     .swiper-slide {
         position: initial;
         height: 100%;
-        width: 80vw;
+        width: 100%;
         // border: 1px solid #d9d9d9;
         display: grid;
         grid-template-columns: clamp(18.75rem, 4.6875rem + 18.75vw, 27.1875rem) auto;
@@ -360,7 +361,7 @@
 
         .empty {
             height: 100%;
-            aspect-ratio: 3/4;
+            aspect-ratio: 3/4.5;
         }
         .text {
             opacity: 0;
@@ -369,6 +370,7 @@
                 font-size: var(--font-46);
                 font-weight: 400;
                 color: #fff;
+                line-he
                 span {
                     color: var(--green);
                 }
@@ -483,8 +485,7 @@
 
 @media screen and (max-width: 1546px) {
     #ourCapabilities {
-        .swiper-slide {
-            width: 90vw;
+        .swiper-slide {            
         }
         .cap_container {
             .spiralImage {
@@ -516,9 +517,44 @@
             }
         }
     }
+
+    #ourCapabilities {
+        .swiper-slide {
+            height: clamp(25rem, 6.25rem + 39.0625vw, 31.25rem);
+            gap: 40px;
+            grid-template-columns: auto auto;
+            .empty {
+                aspect-ratio: unset;
+                width: clamp(15.625rem, -3.125rem + 39.0625vw, 21.875rem);
+            }
+        }
+        .cap_container{
+            aspect-ratio: unset;
+            padding: clamp(9.375rem, -3.75rem + 27.3438vw, 13.75rem) var(--paddingX) var(--paddingY);
+            .spiralImage{
+                width: clamp(15.625rem, -3.125rem + 39.0625vw, 21.875rem);
+            }
+            .spiralImage.active{
+                height: 100%;
+                aspect-ratio: unset;
+                width: clamp(15.625rem, -3.125rem + 39.0625vw, 21.875rem);
+            }
+        }
+        .leftContent{
+            left: 0;
+            width: 100%;
+            height: auto;
+            top: var(--paddingY);
+            max-width: unset;
+            align-items: center;
+        }
+        .rightContent{
+            padding-top: calc(var(--paddingY) * 2);
+        }
+    }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
     #aboutBtc {
         & > .worldMap {
             width: 100%;
@@ -553,6 +589,56 @@
             padding: 0 var(--paddingX);
         }
     }
+
+    #ourCapabilities {
+        .swiper-slide {
+            height: auto;
+            gap: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80vw;
+            .empty {
+                aspect-ratio: unset;
+                width: clamp(15.625rem, -3.2328rem + 71.8391vw, 31.25rem);
+                height: 400px;
+            }
+        }
+        .cap_container{
+            aspect-ratio: unset;
+            padding: clamp(9.375rem, -3.75rem + 27.3438vw, 13.75rem) var(--paddingX) var(--paddingY);
+            .spiralImage{
+                width: clamp(15.625rem, -3.2328rem + 71.8391vw, 31.25rem);
+                height: 400px;
+            } 
+            .spiralImage.active{                
+                aspect-ratio: unset;
+                width: clamp(15.625rem, -3.2328rem + 71.8391vw, 31.25rem);
+                height: 400px;
+            }
+        }
+        .leftContent{
+            left: 0;
+            width: 100%;
+            height: auto;
+            top: var(--paddingY);
+            max-width: unset;
+            align-items: center;
+        }
+        .rightContent{
+            height: auto;
+            right: 0;
+            width: 100%;
+            bottom: var(--paddingY);
+            padding: 0 var(--paddingX);
+            align-items: center;
+            p{
+                max-width: 400px;
+                text-align: center;
+            }
+        }
+    }
+
 }
 
 @media screen and (max-width: 600px) {

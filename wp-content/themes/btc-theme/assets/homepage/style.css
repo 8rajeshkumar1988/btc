@@ -302,6 +302,7 @@
   justify-content: center;
   left: var(--paddingX);
   z-index: 2;
+  max-width: clamp(14.375rem, 5.8036rem + 13.3929vw, 21.875rem);
 }
 #ourCapabilities .leftContent p {
   color: var(--green);
@@ -335,14 +336,14 @@
 #ourCapabilities .swiper-slide {
   position: initial;
   height: 100%;
-  width: 80vw;
+  width: 100%;
   display: grid;
   grid-template-columns: clamp(18.75rem, 4.6875rem + 18.75vw, 27.1875rem) auto;
   gap: 80px;
 }
 #ourCapabilities .swiper-slide .empty {
   height: 100%;
-  aspect-ratio: 3/4;
+  aspect-ratio: 3/4.5;
 }
 #ourCapabilities .swiper-slide .text {
   opacity: 0;
@@ -353,7 +354,7 @@
   font-weight: 400;
   color: #fff;
 }
-#ourCapabilities .swiper-slide .text h3 span {
+#ourCapabilities .swiper-slide .text h3 line-he span {
   color: var(--green);
 }
 #ourCapabilities .swiper-slide .text img {
@@ -459,11 +460,6 @@
      object-fit: cover;
 }
 
-@media screen and (max-width: 1546px) {
-  #ourCapabilities .swiper-slide {
-    width: 90vw;
-  }
-}
 @media screen and (max-width: 1024px) {
   #sustainabiltyStandard {
     padding-bottom: calc(var(--paddingY) * 2);
@@ -480,8 +476,40 @@
   #aboutBtc .content .sliderAbout .navigation_about button {
     padding: 7px;
   }
+  #ourCapabilities .swiper-slide {
+    height: clamp(25rem, 6.25rem + 39.0625vw, 31.25rem);
+    gap: 40px;
+    grid-template-columns: auto auto;
+  }
+  #ourCapabilities .swiper-slide .empty {
+    aspect-ratio: unset;
+    width: clamp(15.625rem, -3.125rem + 39.0625vw, 21.875rem);
+  }
+  #ourCapabilities .cap_container {
+    aspect-ratio: unset;
+    padding: clamp(9.375rem, -3.75rem + 27.3438vw, 13.75rem) var(--paddingX) var(--paddingY);
+  }
+  #ourCapabilities .cap_container .spiralImage {
+    width: clamp(15.625rem, -3.125rem + 39.0625vw, 21.875rem);
+  }
+  #ourCapabilities .cap_container .spiralImage.active {
+    height: 100%;
+    aspect-ratio: unset;
+    width: clamp(15.625rem, -3.125rem + 39.0625vw, 21.875rem);
+  }
+  #ourCapabilities .leftContent {
+    left: 0;
+    width: 100%;
+    height: auto;
+    top: var(--paddingY);
+    max-width: unset;
+    align-items: center;
+  }
+  #ourCapabilities .rightContent {
+    padding-top: calc(var(--paddingY) * 2);
+  }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   #aboutBtc > .worldMap {
     width: 100%;
     height: auto;
@@ -502,6 +530,52 @@
   }
   #ourProducts .content {
     padding: 0 var(--paddingX);
+  }
+  #ourCapabilities .swiper-slide {
+    height: auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+  }
+  #ourCapabilities .swiper-slide .empty {
+    aspect-ratio: unset;
+    width: clamp(15.625rem, -3.2328rem + 71.8391vw, 31.25rem);
+    height: 400px;
+  }
+  #ourCapabilities .cap_container {
+    aspect-ratio: unset;
+    padding: clamp(9.375rem, -3.75rem + 27.3438vw, 13.75rem) var(--paddingX) var(--paddingY);
+  }
+  #ourCapabilities .cap_container .spiralImage {
+    width: clamp(15.625rem, -3.2328rem + 71.8391vw, 31.25rem);
+    height: 400px;
+  }
+  #ourCapabilities .cap_container .spiralImage.active {
+    aspect-ratio: unset;
+    width: clamp(15.625rem, -3.2328rem + 71.8391vw, 31.25rem);
+    height: 400px;
+  }
+  #ourCapabilities .leftContent {
+    left: 0;
+    width: 100%;
+    height: auto;
+    top: var(--paddingY);
+    max-width: unset;
+    align-items: center;
+  }
+  #ourCapabilities .rightContent {
+    height: auto;
+    right: 0;
+    width: 100%;
+    bottom: var(--paddingY);
+    padding: 0 var(--paddingX);
+    align-items: center;
+  }
+  #ourCapabilities .rightContent p {
+    max-width: 400px;
+    text-align: center;
   }
 }
 @media screen and (max-width: 600px) {
