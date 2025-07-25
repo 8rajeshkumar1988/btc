@@ -1,5 +1,12 @@
 <?php
-
+/**
+ * Plugin Name:       BTC Post Types
+ * Plugin URI:        https://btcorpnet.com/
+ * Description:       Custom post types for BTC site.
+ * Version:           1.0.0
+ * Author:            The Alpha Agency
+ * Author URI:        https://btcorpnet.com/
+ */
 
 add_action('admin_enqueue_scripts', function ($hook) {
     global $post;
