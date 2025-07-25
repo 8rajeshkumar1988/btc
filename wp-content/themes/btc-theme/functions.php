@@ -11,14 +11,14 @@ function btc_files()
     wp_enqueue_script('btc-splitType', '//unpkg.com/split-type');
     wp_enqueue_script('main-btc-js', get_theme_file_uri('/assets/js/main.js'));
     wp_enqueue_style('btc_main_swiper', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
-    if (is_front_page()) {
+    if (is_front_page() || is_page('home-testing')) {
         wp_enqueue_script('main-homepage-js', get_theme_file_uri('/assets/homepage/script.js'));
     }
 
     //   wp_enqueue_style( 'custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i' );
     //   wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
     wp_enqueue_style('btc_main_styles', get_theme_file_uri('/assets/css/common.css'));
-    if (is_front_page()) {
+    if (is_front_page() || is_page('home-testing')) {
         wp_enqueue_style('btc_homepage_styles', get_theme_file_uri('/assets/homepage/style.css'));
     }
     if (is_page('products')) {
