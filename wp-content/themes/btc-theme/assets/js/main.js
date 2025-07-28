@@ -143,10 +143,10 @@ $(document).ready(function () {
       opacity: 0,
       ease: "power4.out",
       duration: 1.2,
-      stagger: 0.2, // ✅ stagger between children
+      stagger: 0.3, // ✅ stagger between children
       scrollTrigger: {
         trigger: container,
-        start: "top 70%",
+        start: "top 80%",
         toggleActions: "play none none reverse"
       }
     });
