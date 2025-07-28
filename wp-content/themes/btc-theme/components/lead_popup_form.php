@@ -17,10 +17,3 @@
     <?php get_template_part('components/lead_form'); ?>
     </div>
 </section>
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        lenis.stop();
-    })
-</script>
