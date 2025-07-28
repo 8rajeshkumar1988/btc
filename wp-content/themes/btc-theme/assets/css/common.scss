@@ -748,6 +748,10 @@ header {
       font-size: calc(var(--font-46) - 15px);
     }
   }
+  .iti{
+    margin-top: 10px;
+    width: 100%;
+  }
   form {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -767,6 +771,9 @@ header {
     padding: 8px;
     margin-top: 10px;
     font-size: var(--font-14);
+  }
+   #phone,#whatsapp_number{
+    padding-left: 55px;
   }
   input[type="checkbox"] {
     all: unset;

@@ -731,6 +731,10 @@ header button.open .close {
   max-width: 900px;
   font-size: calc(var(--font-46) - 15px);
 }
+#lead_popup_form .iti {
+  margin-top: 10px;
+  width: 100%;
+}
 #lead_popup_form form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -751,6 +755,9 @@ header button.open .close {
   padding: 8px;
   margin-top: 10px;
   font-size: var(--font-14);
+}
+#lead_popup_form #phone, #lead_popup_form #whatsapp_number {
+  padding-left: 55px;
 }
 #lead_popup_form input[type=checkbox] {
   all: unset;

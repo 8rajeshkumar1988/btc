@@ -316,6 +316,13 @@
 #event_registration .event_reg_form .phone_number {
   grid-area: 2/2/3/3;
 }
+#event_registration .event_reg_form .iti {
+  width: 100%;
+  margin-top: 15px;
+}
+#event_registration .event_reg_form #phoneno {
+  padding-left: 55px;
+}
 #event_registration .event_reg_form .reason_to_attend {
   grid-area: 2/1/4/2;
 }

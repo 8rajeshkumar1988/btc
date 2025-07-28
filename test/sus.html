@@ -184,14 +184,13 @@
       start: "top top",
       end: () => `+=${(images.length - 1) * window.innerHeight}`,
       pin: true,
-      scrub: true,
+      // scrub: true,
       // markers: true,
     },
   });
 
-  // Start animating from the second image onward
   images.forEach((img, i) => {
-    if (i === 0) return; // Skip first image
+    if (i === 0) return; 
     tl.to(img, { scale: 1, duration: 1 }, i - 1);
   });
 </script>

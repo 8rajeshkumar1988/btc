@@ -1,11 +1,11 @@
 jQuery(function ($) {
-     $("#whatsapp_checkbox").on("change", function () {
-        if ($(this).is(":checked")) {
-        $("#whatsapp_number").val($("#phone").val());
-        } else {
-        $("#whatsapp_number").val("");
-        }
-    });
+  $("#whatsapp_checkbox").on("change", function () {
+    if ($(this).is(":checked")) {
+      $("#whatsapp_number").val($("#phone").val());
+    } else {
+      $("#whatsapp_number").val("");
+    }
+  });
   $("#aa-lead-form").on("submit", function (e) {
     e.preventDefault();
 
@@ -14,7 +14,7 @@ jQuery(function ($) {
     $form.find(".error_input").removeClass("error_input");
     $form.find(".error_text").removeClass("error_text");
     $(".lead_form_error").text("");
-   
+
     const $name = $($form.find('[name="name"]'));
     if (!$name.val().trim()) {
       isValid = false;
@@ -27,7 +27,7 @@ jQuery(function ($) {
       isValid = false;
       $email.addClass("error_input");
     }
-    
+
     const $phone = $($form.find('[name="phone"]'));
     const phoneVal = $phone.val().trim();
     const phonePattern = /^[0-9]{7,15}$/;
@@ -61,16 +61,22 @@ jQuery(function ($) {
       return false;
     }
 
+    const phoneInput = $form.find('[name="phone"]')[0];
+    const phone = `${phoneInput._intlTelInstance.getSelectedCountryData().dialCode}${phoneInput._intlTelInstance.getNumber()}`
+
+    const whatsappInput = $form.find('[name="whatsapp"]')[0];
+    const whatsapp = whatsappInput.value ? `${whatsappInput._intlTelInstance.getSelectedCountryData().dialCode}${whatsappInput._intlTelInstance.getNumber()}` : "";
+
     const data = {
       action: "save_lead",
       nonce: aaLead.nonce,
       name: $form.find('[name="name"]').val(),
       email: $form.find('[name="email"]').val(),
       enquiry_type: $form.find('[name="enquiry_type"]').val(),
-      phone: $form.find('[name="phone"]').val(),
+      phone: phone,
       company_name: $form.find('[name="company_name"]').val(),
       requirements: $form.find('[name="requirements"]').val(),
-      whatsapp: $form.find('[name="whatsapp"]').val(),
+      whatsapp: whatsapp,
       org_type: $form.find('[name="org_type"]').val(),
       tandc: $form.find('[name="tandc"]').val(),
       e_com_btc: $form.find('[name="e_com_btc"]').val(),

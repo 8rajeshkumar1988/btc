@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: #fffff4;
 }
@@ -64,6 +65,10 @@ body {
   color: var(--blue);
   font-weight: 600;
 }
+#lead_form .iti {
+  margin-top: 15px;
+  width: 100%;
+}
 #lead_form form {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -85,6 +90,43 @@ body {
   padding: 10px;
   margin-top: 15px;
   font-size: var(--font-14);
+}
+#lead_form #phone {
+  padding-left: 55px;
+}
+#lead_form input[type=checkbox] {
+  all: unset;
+  position: relative;
+  height: 15px !important;
+  width: 15px !important;
+  margin-top: -5px !important;
+}
+#lead_form input[type=checkbox]::after {
+  content: "";
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  height: 15px;
+  width: 15px;
+  top: 1px;
+  border-radius: 5px;
+  border: 1px solid #b8b8b8;
+}
+#lead_form input[type=checkbox]:checked::after {
+  content: "";
+  background-color: #a2c617;
+  border: 1px solid #a2c617;
+}
+#lead_form input[type=checkbox]:checked::before {
+  content: "✓";
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  z-index: 1;
+  top: -2px;
+  left: 19%;
+  font-weight: 1000;
+  font-size: 14px;
 }
 #lead_form .whatsapp_container {
   display: flex;

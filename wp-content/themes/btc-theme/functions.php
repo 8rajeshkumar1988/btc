@@ -132,26 +132,28 @@ function btc_files()
             get_theme_file_uri('/assets/event-detail/script.js'), // JS file path
             array(), // Dependencies (e.g., array('jquery'))
             null, // Version (or use '1.0')
-            true // Load in footer (true = footer, false = header)
+            true 
         );
     }
 
     wp_enqueue_style('intlTelInputCSS', 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css');
     wp_enqueue_script('intlTelInputJS', 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js', [], null, true);
 
-    // Your init script
     wp_add_inline_script('intlTelInputJS', "
-        document.addEventListener('DOMContentLoaded', function() {
-            const input = document.querySelector('input[type=\"tel\"]');
-            if (input) {
-                window.intlTelInput(input, {
+        document.addEventListener('DOMContentLoaded', function () {
+            const telInputs = document.querySelectorAll('input[type=\"tel\"]');
+            telInputs.forEach(function (input) {
+                const iti = window.intlTelInput(input, {
                     initialCountry: 'us',
-                    
                     utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js'
                 });
-            }
+
+                input._intlTelInstance = iti;
+            });
         });
     ");
+
+
 
 
     //   wp_enqueue_style( 'btc_extra_styles', get_theme_file_uri( '/assets/index.css' ) );
