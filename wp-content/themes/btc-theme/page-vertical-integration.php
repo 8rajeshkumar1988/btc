@@ -30,6 +30,7 @@ get_header();
             <?php the_content(); ?>
         </div>
         <div class="layer"></div>
+        <div class="layer2"></div>
     </div>
 </section>
 
