@@ -19,8 +19,3 @@
 </section>
 
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        lenis.stop();
-    })
-</script>
