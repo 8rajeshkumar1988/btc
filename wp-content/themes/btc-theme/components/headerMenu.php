@@ -1,10 +1,18 @@
 <header>
     <a href="/btc">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/HeaderLogoWhite.svg" alt="" class="logo">
+        <?php if (is_home() || is_tag() || (is_single() && get_post_type() === 'post')) : ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/headerLogo.svg" alt="Logo" class="logo">
+        <?php else : ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/HeaderLogoWhite.svg" alt="White Logo" class="logo">
+        <?php endif; ?>
     </a>
     <button class="headerBtn">
-        <img class="open" src="<?php echo get_template_directory_uri(); ?>/assets/images/quill_hamburger.svg"
-            alt="quill_hamburger">
+        <?php if (is_home() || is_tag() || (is_single() && get_post_type() === 'post')) : ?>
+        <img class="open" src="<?php echo get_template_directory_uri(); ?>/assets/images/quill_hamburger_black.svg"
+        alt="quill_hamburger">
+        <?php else : ?>
+            <img class="open" src="<?php echo get_template_directory_uri(); ?>/assets/images/quill_hamburger.svg"
+                <?php endif; ?>
         <img class="close" src="<?php echo get_template_directory_uri(); ?>/assets/images/closeSvg.svg" alt="closeSvg">
     </button>
 </header>
