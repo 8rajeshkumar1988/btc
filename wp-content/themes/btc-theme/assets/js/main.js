@@ -5,10 +5,10 @@ $(document).ready(function () {
   lenis.on("scroll", ScrollTrigger.update);
 
   gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
+    lenis.raf(time * 500);
   });
 
-  gsap.ticker.lagSmoothing(0);
+  gsap.ticker.lagSmoothing(2000);
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -56,50 +56,63 @@ $(document).ready(function () {
       lenis.stop();
       $('.heroBanner').addClass('activated');
       $('#header').addClass('active');
-      $('header .logo').css({'opacity': '0'});
-      $('#header .logoBlue').css({'opacity': '1'});
+      $('header .logo').css({ 'opacity': '0' });
+      $('#header .logoBlue').css({ 'opacity': '1' });
     } else {
       lenis.start();
       $('#header').removeClass('active');
       $('.heroBanner').removeClass('activated');
       setTimeout(function () {
-        $('header .logo').css({'opacity': '1'});
-        $('#header .logoBlue').css({'opacity': '0'});        
-      },200)      
+        $('header .logo').css({ 'opacity': '1' });
+        $('#header .logoBlue').css({ 'opacity': '0' });
+      }, 100)
     }
   });
 
+  if (window.innerWidth > 1024) {
+    $('.right a').each(function () {
+      const el = $(this);
+      let hoverTimer;
 
-$('.right a').each(function () {
-  const el = $(this);
-  let hoverTimer;
+      el.on('mouseenter', function () {
 
-  el.on('mouseenter', function () {
-    hoverTimer = setTimeout(function () {
-      $('.right a').removeClass('active');
-      el.addClass('active');
-      $('.bannerArea').removeClass('active');
-      $('.else').removeClass('active');
+        $('.right a').removeClass('active');
+        el.addClass('active');
+        hoverTimer = setTimeout(function () {
+          $('.bannerArea').removeClass('active');
+          $('.else').removeClass('active');
 
-      const path = el.attr('path');
+          const path = el.attr('path');
 
-      const matchedBanner = $('.bannerArea').filter(function () {
-        return $(this).attr('source') === path;
+          const matchedBanner = $('.bannerArea').filter(function () {
+            return $(this).attr('source') === path;
+          });
+
+          if (matchedBanner.length) {
+            matchedBanner.addClass('active');
+          } else {
+            $('.else').addClass('active');
+          }
+        }, 200); // delay in milliseconds
       });
 
-      if (matchedBanner.length) {
-        matchedBanner.addClass('active');
-      } else {
-        $('.else').addClass('active');
-      }
-    }, 200); // delay in milliseconds
-  });
+      el.on('mouseleave', function () {
+        clearTimeout(hoverTimer); // cancel if user leaves before 0.2s
+      });
+    });
+  }
 
-  el.on('mouseleave', function () {
-    clearTimeout(hoverTimer); // cancel if user leaves before 0.2s
-  });
-});
-
+  $('.extendClick')?.click(function (e) {
+    e.preventDefault();       // ✅ prevent anchor navigation
+    e.stopPropagation(); 
+    if($(this).hasClass('active')) {
+      $('.extended').slideUp(500)
+      $(this).removeClass('active');
+    } else{
+      $(this).addClass('active');
+      $('.extended').slideDown(500)
+    }
+  })
 
 });
 

@@ -25,11 +25,7 @@
   --headingTop: 5px;
   --paddingY: clamp(6.25rem, 1.0417rem + 6.9444vw, 9.375rem);
   --navBtn: clamp(3.125rem, -0.8065rem + 4.8387vw, 5rem);
-  --spaceBelow_heading: clamp(
-    2.1875rem,
-    0.625rem + 2.0833vw,
-    3.125rem
-  );
+  --spaceBelow_heading: clamp(2.1875rem, 0.625rem + 2.0833vw, 3.125rem);
 }
 
 body {
@@ -559,22 +555,49 @@ header button.open .close {
 #header .right {
   display: flex;
   flex-direction: column;
-  border: 1px solid #e8e8e8;
-  border-right: 0;
+  border-left: 1px solid #e8e8e8;
 }
 #header .right a {
-  font-size: calc(var(--font-20) * 2);
+  padding: 15px 0;
+  font-size: calc(var(--font-20) * 1.7);
   color: #c9c9c9;
   width: 100%;
   padding-left: calc(var(--font-46) / 1.5);
   text-decoration: unset;
   line-height: 1.4;
+  padding-right: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1.1;
+  overflow: hidden;
+}
+#header .right a span {
+  line-height: 1.1;
+}
+#header .right a svg {
+  height: var(--font-24);
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  filter: invert(1);
+}
+#header .right .extended {
+  display: none;
 }
 #header .right a.active,
 #header .right a:hover {
   background-color: var(--blue);
   color: #fff;
   font-weight: 600;
+}
+#header .right a.active svg,
+#header .right a:hover svg {
+  transform: translateX(0);
+  opacity: 1;
+}
+#header .right .mediaArea {
+  display: none;
 }
 #header .left {
   display: flex;
@@ -656,6 +679,7 @@ header button.open .close {
   align-items: center;
   line-height: 1;
   transition: transform 0.2s ease-in-out;
+  justify-content: flex-end;
 }
 #header .left .bannerArea .content .links a:hover {
   transform: translateX(-5px);
@@ -756,7 +780,8 @@ header button.open .close {
   margin-top: 10px;
   font-size: var(--font-14);
 }
-#lead_popup_form #phone, #lead_popup_form #whatsapp_number {
+#lead_popup_form #phone,
+#lead_popup_form #whatsapp_number {
   padding-left: 55px;
 }
 #lead_popup_form input[type=checkbox] {
@@ -882,11 +907,7 @@ header button.open .close {
 @media screen and (max-width: 1546px) {
   :root {
     --paddingX: 5%;
-    --paddingY: clamp(
-      5rem,
-      -4.1734rem + 11.2903vw,
-      9.375rem
-    );
+    --paddingY: clamp(5rem, -4.1734rem + 11.2903vw, 9.375rem);
   }
   #footerContact {
     aspect-ratio: 16/7;
@@ -908,6 +929,79 @@ header button.open .close {
   #lead_popup_form .policy_container,
   #lead_popup_form .e_com_btc {
     margin: 0;
+  }
+  #header {
+    grid-template-columns: 20% 80%;
+  }
+  #header .left {
+    display: none;
+  }
+  #header .right {
+    overflow-y: auto;
+    grid-area: 1/2/2/3;
+  }
+  #header .right a {
+    padding: 12px 10vw 12px calc(var(--font-46) / 1.5);
+    font-size: var(--font-24);
+  }
+  #header .right a svg {
+    transform: rotate(90deg);
+    display: none;
+  }
+  #header .right a.active svg,
+  #header .right a:hover svg {
+    transform: rotate(90deg);
+  }
+  #header .right a.extend svg {
+    display: block;
+  }
+  #header .right .extendClick.active {
+    transform: rotate(-90deg);
+  }
+  #header .right .extended {
+    display: block;
+    padding: 15px 0;
+  }
+  #header .right .extended a {
+    font-size: var(--font-20);
+    padding: 10px 10vw 10px calc(var(--font-46) / 1.5);
+    color: #000000;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+  #header .right .mediaArea {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--font-14) / 3);
+    margin-top: auto;
+    padding-left: calc(var(--font-46) / 1.5);
+    margin-bottom: var(--font-18);
+    padding-top: 50px;
+  }
+  #header .right .mediaArea .right {
+    display: none;
+  }
+  #header .right .mediaArea > div {
+    display: flex;
+    gap: 5px;
+  }
+  #header .right .mediaArea > div a {
+    all: unset;
+  }
+  #header .right .mediaArea > div img {
+    width: var(--font-20);
+    height: var(--font-20);
+    aspect-ratio: 1;
+    -o-object-fit: contain;
+       object-fit: contain;
+    filter: grayscale(1) brightness(1.5);
+  }
+  #header .right .mediaArea P {
+    font-size: var(--font-14);
+    color: #c9c9c9;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -1022,5 +1116,70 @@ header button.open .close {
   }
   #lead_popup_form .whatsapp_input {
     grid-area: 5/1/6/2;
+  }
+}
+@media screen and (max-width: 600px) {
+  #header {
+    grid-template-columns: 1fr;
+  }
+  #header .right {
+    grid-area: unset;
+  }
+  #header .right a {
+    padding: 12px 10vw 12px calc(var(--font-46) / 1.5);
+    font-size: var(--font-24);
+  }
+  #header .right a svg {
+    transform: rotate(90deg);
+    display: none;
+  }
+  #header .right a.active svg,
+  #header .right a:hover svg {
+    transform: rotate(90deg);
+  }
+  #header .right a.extend svg {
+    display: block;
+  }
+  #header .right .extendClick.active {
+    transform: rotate(-90deg);
+  }
+  #header .right .extended {
+    padding: 15px 0;
+  }
+  #header .right .extended a {
+    font-size: var(--font-20);
+    padding: 10px 10vw 10px calc(var(--font-46) / 1.5);
+    color: #000000;
+    font-weight: 400;
+  }
+  #header .right .mediaArea {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--font-14) / 3);
+    margin-top: auto;
+    padding-left: calc(var(--font-46) / 1.5);
+    margin-bottom: var(--font-18);
+  }
+  #header .right .mediaArea .right {
+    display: none;
+  }
+  #header .right .mediaArea > div {
+    display: flex;
+    gap: 5px;
+  }
+  #header .right .mediaArea > div a {
+    all: unset;
+  }
+  #header .right .mediaArea > div img {
+    width: var(--font-20);
+    height: var(--font-20);
+    aspect-ratio: 1;
+    -o-object-fit: contain;
+       object-fit: contain;
+    filter: grayscale(1) brightness(1.5);
+  }
+  #header .right .mediaArea P {
+    font-size: var(--font-14);
+    color: #c9c9c9;
   }
 }/*# sourceMappingURL=common.css.map */

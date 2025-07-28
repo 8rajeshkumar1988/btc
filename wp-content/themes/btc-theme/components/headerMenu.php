@@ -164,10 +164,43 @@
 
 
             ?>
-                <a path='<?php echo $slug ?>' class="<?php echo $post_id  == 97 ? "active" : ""; ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                <div>
+                    <a path='<?php echo $slug ?>' class="<?php echo $post_id  == 97 ? "active extend" : ""; ?>" href="<?php the_permalink(); ?>">
+                        <span>
+                            <?php the_title(); ?>
+                        </span>
+                        <svg class="<?php echo $post_id  == 97 ? "extendClick active" : ""; ?>"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.33366 13L21.667 13M21.667 13L14.0837 5.41663M21.667 13L14.0837 20.5833" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <?php if ($post_id == 97): ?>
+                        <div class="extended" extended='<?php echo $slug ?>'>
+                            <a href=""><span>(01)</span> active wear </a>
+                            <a href=""><span>(01)</span> active wear </a>
+                            <a href=""><span>(01)</span> active wear </a>
+                            <a href=""><span>(01)</span> active wear </a>
+                            <a href=""><span>(01)</span> active wear </a>
+                        </div>
+                    <?php endif; ?>
+                </div>
             <?php } ?>
+            <div class="mediaArea">
+                <div>
+                    <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/images/insta.png'; ?>"
+                            alt="instagram"></a>
+                    <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/images/facebook.png'; ?>"
+                            alt="facebook"></a>
+                    <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/images/x.png'; ?>"
+                            alt="twitter"></a>
+                    <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/images/linkedin.png'; ?>"
+                            alt="linkedin"></a>
+                    <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/images/youtube.png'; ?>"
+                            alt="youtube"></a>
+                </div>
+                <p>All Rights Reserved. BTC</p>
+            </div>
         </div>
     <?php }
     wp_reset_postdata();
-     ?>
+    ?>
 </section>
