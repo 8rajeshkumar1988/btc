@@ -1,36 +1,71 @@
 .traceability {
-  height: 400vh; /* enough scroll height */
   position: relative;
-}
-
-.image-wrapper {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  transform: translate(-50%, -50%);
   overflow: hidden;
-  pointer-events: none;
 }
-
-.traceability::after {
+.traceability .image-wrapper {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: center center;
+  /* will-change: transform, opacity; */
+  display: flex;
+  z-index: 1;
+  pointer-events: none;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.traceability .image-wrapper::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: black;
-  opacity: 0.3;
+  background: linear-gradient(270deg, #000000 4.13%, #6e6e6e 51.12%, #000000 96.34%);
+  mix-blend-mode: multiply;
+  opacity: 0.64;
 }
-
-.image-wrapper img {
+.traceability .image-wrapper img {
   position: absolute;
+  inset: 0;
+  -o-object-position: bottom;
+     object-position: bottom;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transform-origin: center center;
-  scale: 0;
-  opacity: 1;
+}
+.traceability .traceability_content {
+  padding: var(--paddingY) var(--paddingX);
+  position: relative;
+  z-index: 2;
+}
+.traceability .traceability_content .heading {
+  margin-bottom: var(--spaceBelow_heading);
+}
+.traceability .traceability_content .heading h2 {
+  color: #fff;
+}
+.traceability .traceability_content .description {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(18.75rem, -46.7742rem + 80.6452vw, 50rem);
+}
+.traceability .traceability_content .description ul {
+  padding-left: 1rem;
+}
+.traceability .traceability_content .description p,
+.traceability .traceability_content .description li {
+  font-size: var(--font-18);
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 5px;
+  line-height: 2;
+}
+.traceability .traceability_content .description .right_desc p {
+  margin: 40px 0px;
 }
 
 #sustainability_details {

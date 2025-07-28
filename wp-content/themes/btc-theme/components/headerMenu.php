@@ -1,10 +1,18 @@
 <header>
     <a href="/btc">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/HeaderLogoWhite.svg" alt="" class="logo">
+        <?php if (is_home() || is_tag() || (is_single() && get_post_type() === 'post')) : ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/headerLogo.svg" alt="Logo" class="logo">
+        <?php else : ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/HeaderLogoWhite.svg" alt="White Logo" class="logo">
+        <?php endif; ?>
     </a>
     <button class="headerBtn">
-        <img class="open" src="<?php echo get_template_directory_uri(); ?>/assets/images/quill_hamburger.svg"
-            alt="quill_hamburger">
+        <?php if (is_home() || is_tag() || (is_single() && get_post_type() === 'post')) : ?>
+        <img class="open" src="<?php echo get_template_directory_uri(); ?>/assets/images/quill_hamburger_black.svg"
+        alt="quill_hamburger">
+        <?php else : ?>
+            <img class="open" src="<?php echo get_template_directory_uri(); ?>/assets/images/quill_hamburger.svg"
+                <?php endif; ?>
         <img class="close" src="<?php echo get_template_directory_uri(); ?>/assets/images/closeSvg.svg" alt="closeSvg">
     </button>
 </header>
@@ -169,17 +177,57 @@
                         <span>
                             <?php the_title(); ?>
                         </span>
-                        <svg class="<?php echo $post_id  == 97 ? "extendClick active" : ""; ?>"  viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="<?php echo $post_id  == 97 ? "extendClick active" : ""; ?>" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4.33366 13L21.667 13M21.667 13L14.0837 5.41663M21.667 13L14.0837 20.5833" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </a>
                     <?php if ($post_id == 97): ?>
                         <div class="extended" extended='<?php echo $slug ?>'>
-                            <a href=""><span>(01)</span> active wear </a>
-                            <a href=""><span>(01)</span> active wear </a>
-                            <a href=""><span>(01)</span> active wear </a>
-                            <a href=""><span>(01)</span> active wear </a>
-                            <a href=""><span>(01)</span> active wear </a>
+                            <?php
+                            if ($post_id  == 97) {
+                                $cats = new WP_Query([
+                                    'posts_per_page' => -1,
+                                    'post_type'      => 'category',
+                                    'post_status'    => 'publish',
+                                    'meta_key'       => '_sort_order',
+                                    'orderby'        => 'meta_value_num',
+                                    'order'          => 'ASC',
+                                ]);
+
+                                if ($cats->have_posts()) {
+                            ?>
+
+
+                                    <?php while ($cats->have_posts()) {
+                                        $cats->the_post();
+                                        $category_id = get_the_ID();
+
+                                        $products = new WP_Query([
+                                            'post_type'      => 'product',
+                                            'post_status'    => 'publish',
+                                            'posts_per_page' => -1,
+                                            'meta_key'       => '_sort_order',
+                                            'orderby'        => 'meta_value_num',
+                                            'order'          => 'ASC',
+                                            'meta_query'     => [
+                                                [
+                                                    'key'     => '_category_id',
+                                                    'value'   => $category_id,
+                                                    'compare' => '=',
+                                                ],
+                                            ],
+                                        ]);
+                                        $count = $products->found_posts;
+                                    ?>
+
+                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?> <span>&nbsp; (<?php echo str_pad($count, 2, '0', STR_PAD_LEFT); ?>)</span></a>
+                                    <?php } ?>
+
+                            <?php wp_reset_postdata();
+                                }
+                            }
+
+                            ?>
                         </div>
                     <?php endif; ?>
                 </div>

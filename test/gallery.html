@@ -1,118 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smooth Manual Scroll Slides</title>
     <style>
-  .swiper-container {
-    width: 100%;
-    height: 300px;
-    margin: 20px auto;
-    overflow: hidden;
-  }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        overflow-x: hidden;
+      }
+      body {
+        font-family: sans-serif;
+      }
+      .top-section,
+      .bottom-section {
+        height: 100vh;
+        background: #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+      }
+      .bottom-section {
+        background: #f1f1f1;
+      }
+      .traceability {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .image-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5vw;
+        pointer-events: none;
+        user-select: none;
+        transform: scale(1);
+        will-change: transform;
+        transition: all 0.3s ease;
+      }
+      .image-wrapper:nth-child(1) {
+        background: #1abc9c;
+        color: white;
+      }
+      .image-wrapper:nth-child(2) {
+        background: #3498db;
+        color: white;
+      }
+      .image-wrapper:nth-child(3) {
+        background: #9b59b6;
+        color: white;
+      }
+      .image-wrapper:nth-child(4) {
+        background: #e74c3c;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="top-section">Top Section</section>
 
-  .swiper-slide-container {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    <section class="traceability">
+      <div class="image-wrapper">Slide 1</div>
+      <div class="image-wrapper">Slide 2</div>
+      <div class="image-wrapper">Slide 3</div>
+      <div class="image-wrapper">Slide 4</div>
+    </section>
 
-  .gallery-top {
-    height: 80%;
-    width: 100%;
-  }
+    <section class="bottom-section">Bottom Section</section>
 
-  .gallery-thumbs {
-    height: 20%;
-    box-sizing: border-box;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
 
-  .gallery-thumbs .swiper-wrapper {
-    flex-grow: 1;
-  }
+    <script>
+      gsap.registerPlugin(ScrollTrigger, Observer);
 
-  .gallery-thumbs .swiper-slide {
-    width: 100%;
-    max-width: 100px;
-    min-width: 50px;
-    height: 100%;
-    opacity: 0.4;
-  }
+      const slides = gsap.utils.toArray(".image-wrapper");
+      let currentIndex = 0;
+      let isAnimating = false;
+      let observer = null;
 
-  .gallery-thumbs .swiper-slide-active {
-    opacity: 1;
-  }
+      // Set initial state
+      gsap.set(slides, { scale: 0.5 });
+      gsap.set(slides[0], { scale: 1 });
 
-  .gallery-button-prev,
-  .gallery-button-next {
-    flex-shrink: 0;
-    padding: 10px 15px;
-    background-color: #ddd;
-    border: none;
-    cursor: pointer;
-  }
-</style>
+      ScrollTrigger.create({
+        trigger: ".traceability",
+        start: "top top",
+        end: () => `+=${slides.length * window.innerHeight}`,
+        pin: true,
+        pinSpacing: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+        onEnter: enableObserver,
+        onEnterBack: enableObserver,
+        onLeave: disableObserver,
+        onLeaveBack: disableObserver,
+      });
 
-<div class="swiper-container gallery-top">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">
-        <div class="swiper-slide-container">
-            <img src="." alt="">
-        </div>
-    </div>
-    <div class="swiper-slide"><div class="swiper-slide-container">Slide 2</div></div>
-    <div class="swiper-slide"><div class="swiper-slide-container">Slide 3</div></div>
-    <div class="swiper-slide"><div class="swiper-slide-container">Slide 4</div></div>
-    <div class="swiper-slide"><div class="swiper-slide-container">Slide 5</div></div>
-  </div>
-</div>
+      function throttle(func, delay) {
+        let lastCall = 0;
+        return function (...args) {
+          const now = Date.now();
+          if (now - lastCall >= delay) {
+            lastCall = now;
+            func(...args);
+          }
+        };
+      }
 
-<!-- Thumbnail slider with buttons outside Swiper -->
-<div class="swiper-container gallery-thumbs">
-  <button class="gallery-button-prev">Left</button>
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><div class="swiper-slide-container">Slide 1</div></div>
-    <div class="swiper-slide"><div class="swiper-slide-container">Slide 2</div></div>
-    <div class="swiper-slide"><div class="swiper-slide-container">Slide 3</div></div>
-    <div class="swiper-slide"><div class="swiper-slide-container">Slide 4</div></div>
-    <div class="swiper-slide"><div class="swiper-slide-container">Slide 5</div></div>
-  </div>
-  <button class="gallery-button-next">Right</button>
-</div>
+      function goToSlide(index) {
+        if (
+          isAnimating ||
+          index === currentIndex ||
+          index < 0 ||
+          index >= slides.length
+        )
+          return;
+        isAnimating = true;
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  const galleryTop = new Swiper(".gallery-top", {
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".gallery-button-next",
-      prevEl: ".gallery-button-prev",
-    },
-  });
+        // Hide current
+        gsap.to(slides[currentIndex], {
+          scale: 0.5,
+          duration: 0.5,
+          ease: "power2.inOut",
+        });
 
-  const galleryThumbs = new Swiper(".gallery-thumbs", {
-    spaceBetween: 10,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    touchRatio: 0.2,
-    slideToClickedSlide: true,
-  });
+        // Show new
+        gsap.to(slides[index], {
+          scale: 1,
+          duration: 0.5,
+          ease: "power2.inOut",
+          onComplete: () => {
+            currentIndex = index;
+            setTimeout(() => (isAnimating = false), 250);
+          },
+        });
+      }
 
-  galleryTop.controller.control = galleryThumbs;
-  galleryThumbs.controller.control = galleryTop;
-</script>
+      function enableObserver() {
+        if (observer) return;
+        observer = Observer.create({
+          target: window,
+          type: "wheel,touch,pointer",
+          preventDefault: true,
+          tolerance: 10,
+          onDown: throttle(() => goToSlide(currentIndex + 1), 400),
+          onUp: throttle(() => goToSlide(currentIndex - 1), 400),
+        });
+      }
 
-</body>
+      function disableObserver() {
+        if (observer) {
+          observer.kill();
+          observer = null;
+        }
+      }
+    </script>
+  </body>
 </html>

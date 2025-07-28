@@ -49,20 +49,113 @@ the_post();
 
     </div>
 </section>
-<!-- <section class="traceability">
-      <div class="image-wrapper" style="position: relative;top: 0;left: 0;transform: none;">
-        <img style="scale: 1;" src="https://picsum.photos/id/1015/1920/1080" alt="Image 1" />
+<section class="traceability">
+      <div
+        class="image-wrapper"
+        style=" top: 0; left: 0; transform: none"
+      >
+        <img
+          src="<?php echo get_template_directory_uri() . '/assets/images/PeoplePrinciples.jpg'; ?>"
+          alt="Image 1" />
+        <div class="traceability_content">
+          <div class="heading">
+            <h2>Traceability first</h2>
+          </div>
+          <div class="description">
+            <div>
+              <p>
+                We ensure full traceability across our supply chain from raw
+                materials to finished garments. This transparency guarantees
+                ethical sourcing, quality control & accountability at every
+                step, building trust with our partners and end consumers.
+              </p>
+            </div>
+            <div class="right_desc">
+              <p>We partner with world leaders in traceability</p>
+              <ul>
+                <li>FibreTrace</li>
+                <li>Cotton Made in Africa (CMIA)</li>
+                <li>Global Organic Textile Standard (GOTS)</li>
+                <li>
+                  Blockchain technology enables us to track every stage of
+                  production, ensuring a reliable attribution of the carbon
+                  footprint across the supply chain
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="image-wrapper animate-scale">
-        <img src="https://picsum.photos/id/1016/1920/1080" alt="Image 2" />
+      <div
+        class="image-wrapper"
+         style=" top: 0; left: 0; transform: none" >
+        <img
+          src="<?php echo get_template_directory_uri() . '/assets/images/VerticalIntegration.jpg'; ?>"
+          alt="Image 1" />
+        <div class="traceability_content">
+          <div class="heading">
+            <h2>Traceability Second</h2>
+          </div>
+          <div class="description">
+            <div>
+              <p>
+                We ensure full traceability across our supply chain from raw
+                materials to finished garments. This transparency guarantees
+                ethical sourcing, quality control & accountability at every
+                step, building trust with our partners and end consumers.
+              </p>
+            </div>
+            <div class="right_desc">
+              <p>We partner with world leaders in traceability</p>
+              <ul>
+                <li>FibreTrace</li>
+                <li>Cotton Made in Africa (CMIA)</li>
+                <li>Global Organic Textile Standard (GOTS)</li>
+                <li>
+                  Blockchain technology enables us to track every stage of
+                  production, ensuring a reliable attribution of the carbon
+                  footprint across the supply chain
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="image-wrapper animate-scale">
-        <img src="https://picsum.photos/id/1018/1920/1080" alt="Image 3" />
+      <div
+        class="image-wrapper"
+        style=" top: 0; left: 0; transform: none"
+        >
+        <img src="<?php echo get_template_directory_uri() . '/assets/images/backTrace.jpg'; ?>" alt="Image 1" />
+        <div class="traceability_content">
+          <div class="heading">
+            <h2>Traceability Third</h2>
+          </div>
+          <div class="description">
+            <div>
+              <p>
+                We ensure full traceability across our supply chain from raw
+                materials to finished garments. This transparency guarantees
+                ethical sourcing, quality control & accountability at every
+                step, building trust with our partners and end consumers.
+              </p>
+            </div>
+            <div class="right_desc">
+              <p>We partner with world leaders in traceability</p>
+              <ul>
+                <li>FibreTrace</li>
+                <li>Cotton Made in Africa (CMIA)</li>
+                <li>Global Organic Textile Standard (GOTS)</li>
+                <li>
+                  Blockchain technology enables us to track every stage of
+                  production, ensuring a reliable attribution of the carbon
+                  footprint across the supply chain
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="image-wrapper animate-scale">
-        <img src="https://picsum.photos/id/1021/1920/1080" alt="Image 4" />
-      </div>
-    </section> -->
+    </section>
 <section id="certificates_compliances">
     <div class="heading">
         <p>CERTIFICATIONS & COMPLIANCE</p>
