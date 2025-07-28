@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: var(--paddingY) var(--paddingX);
-  gap: 40px;
+  gap: var(--spaceBelow_heading);
   overflow: hidden;
   align-items: center;
 }
@@ -213,6 +213,9 @@
     align-items: flex-start;
     gap: 20px;
   }
+  #parking .containers {
+    gap: 25px;
+  }
   #parking .containers .top h3 span {
     display: inline;
     margin-right: 10px;
@@ -220,5 +223,80 @@
   #parking .containers .bottom {
     display: flex;
     flex-direction: column-reverse;
+    gap: 20px;
+  }
+  #parking .containers .bottom .left .inner_top {
+    grid-template-columns: 1fr;
+    margin-right: 0;
+  }
+  #parking .containers .bottom .left .inner_top .count {
+    display: none;
+  }
+  #parking .containers .bottom .left .inner_top .copy * {
+    font-size: var(--font-20);
+  }
+  #parking .containers .bottom .left .inner_top .tag_div {
+    gap: 5px;
+  }
+  #parking .containers .bottom .left .inner_top .tag_div .tags {
+    padding: 4px 15px;
+    font-size: var(--font-20);
+  }
+  #parking .containers .bottom .left .inner_bottom {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  #parking .containers .bottom .left .inner_bottom * {
+    font-size: var(--font-20);
+  }
+  #parking .containers .bottom .left .inner_bottom > div {
+    width: 100%;
+    min-width: unset;
+  }
+}
+@media screen and (max-width: 500px) {
+  #parking .containers {
+    gap: 25px;
+  }
+  #parking .containers .top h3 span {
+    display: inline;
+    margin-right: 10px;
+  }
+  #parking .containers .bottom {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  #parking .containers .bottom .left .inner_top {
+    grid-template-columns: 1fr;
+    margin-right: 0;
+  }
+  #parking .containers .bottom .left .inner_top .count {
+    display: none;
+  }
+  #parking .containers .bottom .left .inner_top .copy * {
+    font-size: var(--font-14);
+  }
+  #parking .containers .bottom .left .inner_top .tag_div {
+    gap: 5px;
+  }
+  #parking .containers .bottom .left .inner_top .tag_div .tags {
+    padding: 4px 15px;
+    font-size: var(--font-14);
+  }
+  #parking .containers .bottom .left .inner_bottom {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  #parking .containers .bottom .left .inner_bottom * {
+    font-size: var(--font-14);
+  }
+  #parking .containers .bottom .left .inner_bottom > div {
+    width: 100%;
+    min-width: unset;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: var(--paddingY) var(--paddingX);
-    gap: 40px;
+    gap: var(--spaceBelow_heading);
     overflow: hidden;
     align-items: center;
     & > img {
@@ -216,6 +216,7 @@
     }
     #parking{
         .containers{
+            gap: 25px;
             .top{
                 h3{
                     span{
@@ -227,6 +228,93 @@
             .bottom{
                 display: flex;
                 flex-direction: column-reverse;
+                gap: 20px;
+                .left{
+                    .inner_top  {
+                        grid-template-columns: 1fr;
+                        margin-right: 0;
+                        .count{
+                            display: none;
+                        }
+                        .copy *{
+                            font-size: var(--font-20);
+                        }
+                        .tag_div{
+                            gap: 5px;
+                            .tags{
+                                padding: 4px 15px;
+                                font-size: var(--font-20);
+                            }
+                        }
+                    }
+                    .inner_bottom{
+                        margin-top: 15px;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 15px;
+                        *{
+                            font-size: var(--font-20);
+                        }
+                        & > div{
+                            width: 100%;
+                            min-width: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+      #parking{
+        .containers{
+            gap: 25px;
+            .top{
+                h3{
+                    span{
+                        display: inline;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .bottom{
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 20px;
+                .left{
+                    .inner_top  {
+                        grid-template-columns: 1fr;
+                        margin-right: 0;
+                        .count{
+                            display: none;
+                        }
+                        .copy *{
+                            font-size: var(--font-14);
+                        }
+                        .tag_div{
+                            gap: 5px;
+                            .tags{
+                                padding: 4px 15px;
+                                font-size: var(--font-14);
+                            }
+                        }
+                    }
+                    .inner_bottom{
+                        margin-top: 15px;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 15px;
+                        *{
+                            font-size: var(--font-14);
+                        }
+                        & > div{
+                            width: 100%;
+                            min-width: unset;
+                        }
+                    }
+                }
             }
         }
     }

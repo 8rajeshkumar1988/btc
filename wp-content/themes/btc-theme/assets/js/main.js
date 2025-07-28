@@ -104,11 +104,11 @@ $(document).ready(function () {
 
   $('.extendClick')?.click(function (e) {
     e.preventDefault();       // ✅ prevent anchor navigation
-    e.stopPropagation(); 
-    if($(this).hasClass('active')) {
+    e.stopPropagation();
+    if ($(this).hasClass('active')) {
       $('.extended').slideUp(500)
       $(this).removeClass('active');
-    } else{
+    } else {
       $(this).addClass('active');
       $('.extended').slideDown(500)
     }
@@ -128,5 +128,13 @@ $(document).ready(function () {
   // Close popup with fadeOut
   $('#closeleadpopup').on('click', function () {
     $('#lead_popup_form').fadeOut(300);
+  });
+});
+
+
+$(document).ready(function () {
+  $('[animateHeading]').each(function () {
+    let el = $(this);
+    gsap.from(el, { y: 100, opacity: 0, ease: "power2.inOut", duration: 1, scrollTrigger: { trigger: el, start: "top 70%" } });
   });
 });
