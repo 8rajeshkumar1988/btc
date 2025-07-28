@@ -132,9 +132,23 @@ $(document).ready(function () {
 });
 
 
+
 $(document).ready(function () {
   $('[animateHeading]').each(function () {
-    let el = $(this);
-    gsap.from(el, { y: 100, opacity: 0, ease: "power2.inOut", duration: 1, scrollTrigger: { trigger: el, start: "top 70%" } });
+    const container = $(this);
+    const children = container.children();
+
+    gsap.from(children.toArray(), {
+      y: 100,
+      opacity: 0,
+      ease: "power4.out",
+      duration: 1.2,
+      stagger: 0.2, // ✅ stagger between children
+      scrollTrigger: {
+        trigger: container,
+        start: "top 70%",
+        toggleActions: "play none none reverse"
+      }
+    });
   });
 });

@@ -38,7 +38,7 @@
 <?php get_template_part('components/home_about_btc_section'); ?>
 
 <section id="ourProducts">
-    <div class="heading">
+    <div class="heading" animateHeading >
         <p>our products</p>
         <h2>From Yarn to Garment - <br>Complete Apparel Solutions</h2>
     </div>
@@ -105,7 +105,7 @@
 <section id="sustainabiltyStandard">
     <img src="<?php echo get_template_directory_uri() . '/assets/images/sustain_back_svg.png'; ?>" alt="" class="back_svg">
     <div class="leftContent">
-        <div class="heading">
+        <div class="heading" animateHeading>
             <p>Sustainability Standards</p>
             <h3>Compliant With Global Sustainability Standards</h3>
         </div>
@@ -180,7 +180,7 @@
 
 <section id="ourCapabilities">
     <img src="<?php echo get_template_directory_uri() . '/assets/images/capabilities_back.png'; ?>" alt="" class="back">
-    <div class="leftContent heading">
+    <div class="leftContent heading" animateHeading>
         <p>Our Capabilities</p>
         <h3>From Farm To Fashion</h3>
     </div>
