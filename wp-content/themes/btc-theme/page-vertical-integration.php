@@ -30,6 +30,7 @@ get_header();
             <?php the_content(); ?>
         </div>
         <div class="layer"></div>
+        <div class="layer2"></div>
     </div>
 </section>
 
@@ -51,7 +52,7 @@ get_header();
 <section id="parking">
     <div class="containers">
         <div class="top">
-            <h3>Access To Local Cotton</h3>
+            <h3><span>(01)</span>Access To Local Cotton</h3>
         </div>
         <div class="bottom">
             <div class="left">
@@ -79,7 +80,7 @@ get_header();
     </div>
     <div class="containers">
         <div class="top">
-            <h3>High-Performance Spinning</h3>
+            <h3><span>(02)</span>High-Performance Spinning</h3>
         </div>
         <div class="bottom">
             <div class="left">
@@ -107,7 +108,7 @@ get_header();
     </div>
     <div class="containers">
         <div class="top">
-            <h3>Knitting with Precision</h3>
+            <h3><span>(03)</span>Knitting with Precision</h3>
         </div>
         <div class="bottom">
             <div class="left">
@@ -135,7 +136,7 @@ get_header();
     </div>
     <div class="containers">
         <div class="top">
-            <h3>Excellence in Textile Processing</h3>
+            <h3><span>(04)</span>Excellence in Textile Processing</h3>
         </div>
         <div class="bottom">
             <div class="left">
@@ -168,7 +169,7 @@ get_header();
     </div>
     <div class="containers">
         <div class="top">
-            <h3>Garment Manufacturing</h3>
+            <h3><span>(05)</span> Garment Manufacturing</h3>
         </div>
         <div class="bottom">
             <div class="left">
@@ -196,7 +197,7 @@ get_header();
     </div>
     <div class="containers">
         <div class="top">
-            <h3>Quality Control</h3>
+            <h3><span>(06)</span>Quality Control</h3>
         </div>
         <div class="bottom">
             <div class="left">
@@ -224,7 +225,7 @@ get_header();
     </div>
     <div class="containers">
         <div class="top">
-            <h3>Packaging</h3>
+            <h3><span>(07)</span>Packaging</h3>
         </div>
         <div class="bottom">
             <div class="left">
@@ -252,7 +253,7 @@ get_header();
     </div>
     <div class="containers">
         <div class="top">
-            <h3>Logistics</h3>
+            <h3><span>(08)</span>Logistics</h3>
         </div>
         <div class="bottom">
             <div class="left">
@@ -280,7 +281,7 @@ get_header();
     </div>
     <div class="containers">
         <div class="top">
-            <h3>End Customer</h3>
+            <h3><span>(09)</span>End Customer</h3>
         </div>
         <div class="bottom">
             <div class="left">

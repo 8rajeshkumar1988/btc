@@ -22,6 +22,7 @@ get_header();
           </h1>
         </div>
         <div class="layer"></div>
+        <div class="layer2"></div>
       </div>
     </section>
 

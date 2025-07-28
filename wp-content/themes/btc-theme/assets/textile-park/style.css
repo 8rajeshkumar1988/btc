@@ -104,6 +104,12 @@
   height: -moz-fit-content;
   height: fit-content;
 }
+#parking .containers .top h3 {
+  font-weight: 300;
+}
+#parking .containers .top h3 span {
+  display: none;
+}
 #parking .containers .top * {
   font-size: var(--font-46);
   font-weight: 400;
@@ -206,5 +212,13 @@
   #textile_details .description {
     align-items: flex-start;
     gap: 20px;
+  }
+  #parking .containers .top h3 span {
+    display: inline;
+    margin-right: 10px;
+  }
+  #parking .containers .bottom {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }/*# sourceMappingURL=style.css.map */

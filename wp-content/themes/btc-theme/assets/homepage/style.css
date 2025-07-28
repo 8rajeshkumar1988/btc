@@ -82,7 +82,7 @@
   padding: 15px;
   height: var(--navBtn);
   width: var(--navBtn);
-  background-color: #3B3B3B;
+  background-color: #3b3b3b;
   border: 1px solid #d9d9d9;
   display: flex;
   align-items: center;
@@ -333,21 +333,32 @@
   margin-top: var(--font-24);
   white-space: pre;
 }
+#ourCapabilities .swiper-slide.swiper-slide-active .text {
+  opacity: 1;
+  transform: translateX(0);
+}
+#ourCapabilities .swiper-slide.swiper-slide-prev .text {
+  opacity: 0;
+  transform: translateX(-150px);
+}
+#ourCapabilities .swiper-slide .text, #ourCapabilities .swiper-slide-next .text {
+  transition: all 0.8s ease-in-out;
+  opacity: 0;
+  transform: translateX(150px);
+}
 #ourCapabilities .swiper-slide {
   position: initial;
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: clamp(18.75rem, 4.6875rem + 18.75vw, 27.1875rem) auto;
+  grid-template-columns: auto auto;
   gap: 80px;
+  height: clamp(30rem, 7.7218rem + 27.4194vw, 40.625rem);
 }
 #ourCapabilities .swiper-slide .empty {
+  height: clamp(30rem, 7.7218rem + 27.4194vw, 40.625rem);
   height: 100%;
   aspect-ratio: 3/4.5;
-}
-#ourCapabilities .swiper-slide .text {
-  opacity: 0;
-  transform: translateX(150px);
 }
 #ourCapabilities .swiper-slide .text h3 {
   font-size: var(--font-46);
@@ -417,12 +428,12 @@
   display: block;
 }
 #ourCapabilities .cap_container .spiralImage.active {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: clamp(30rem, 7.7218rem + 27.4194vw, 40.625rem);
 }
 #ourCapabilities .cap_container .spiralImage {
   position: absolute;
-  height: 100%;
+  height: clamp(30rem, 7.7218rem + 27.4194vw, 40.625rem);
   width: auto;
   aspect-ratio: 3/4.5;
   left: 0%;
@@ -491,9 +502,10 @@
   }
   #ourCapabilities .cap_container .spiralImage {
     width: clamp(15.625rem, -3.125rem + 39.0625vw, 21.875rem);
+    height: clamp(25rem, 6.25rem + 39.0625vw, 31.25rem);
   }
   #ourCapabilities .cap_container .spiralImage.active {
-    height: 100%;
+    height: clamp(25rem, 6.25rem + 39.0625vw, 31.25rem);
     aspect-ratio: unset;
     width: clamp(15.625rem, -3.125rem + 39.0625vw, 21.875rem);
   }
@@ -537,7 +549,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80vw;
+    width: 90vw;
   }
   #ourCapabilities .swiper-slide .empty {
     aspect-ratio: unset;
@@ -615,6 +627,13 @@
   #ourProducts .content .ourProducts .btnss button {
     margin: 0;
     padding: 7px;
+  }
+  #ourCapabilities .swiper-slide .text img {
+    margin: 2% 0 4%;
+  }
+  #ourCapabilities .btnssNew {
+    height: var(--navBtn);
+    bottom: 0;
   }
 }
 @media screen and (max-width: 450px) {
