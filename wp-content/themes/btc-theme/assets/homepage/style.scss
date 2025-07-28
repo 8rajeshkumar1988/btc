@@ -375,10 +375,11 @@
         width: 100%;
         // border: 1px solid #d9d9d9;
         display: grid;
-        grid-template-columns: clamp(18.75rem, 4.6875rem + 18.75vw, 27.1875rem) auto;
+        grid-template-columns: auto auto;
         gap: 80px;
-
+        height: clamp(30rem, 7.7218rem + 27.4194vw, 40.625rem);
         .empty {
+            height: clamp(30rem, 7.7218rem + 27.4194vw, 40.625rem);
             height: 100%;
             aspect-ratio: 3/4.5;
         }
@@ -458,12 +459,12 @@
         aspect-ratio: 16/8;
         display: block;
         .spiralImage.active {
-            width: 100%;
-            height: auto;
+            width: auto;
+            height:  clamp(30rem, 7.7218rem + 27.4194vw, 40.625rem);
         }
         .spiralImage {
             position: absolute;
-            height: 100%;
+            height:  clamp(30rem, 7.7218rem + 27.4194vw, 40.625rem);
             width: auto;
             aspect-ratio: 3/4.5;
             left: 0%;
@@ -549,9 +550,10 @@
             padding: clamp(9.375rem, -3.75rem + 27.3438vw, 13.75rem) var(--paddingX) var(--paddingY);
             .spiralImage {
                 width: clamp(15.625rem, -3.125rem + 39.0625vw, 21.875rem);
+                height: clamp(25rem, 6.25rem + 39.0625vw, 31.25rem);
             }
             .spiralImage.active {
-                height: 100%;
+                height: clamp(25rem, 6.25rem + 39.0625vw, 31.25rem);
                 aspect-ratio: unset;
                 width: clamp(15.625rem, -3.125rem + 39.0625vw, 21.875rem);
             }

@@ -176,12 +176,18 @@ $(document).ready(function () {
             const additionNal = window.innerWidth / (isDesk ? 10 : 20);
             let xDisplacementFir;
             let xDisplacementSec;
-            if (window.innerWidth > 1024) {
-                xDisplacementFir = -containerWidth / 2 + img.offsetWidth / 2 + additionNal
-                xDisplacementSec = containerWidth / 2 - (img.offsetWidth / 1) + images[0].offsetWidth + (isDesk ? 60 : 120) + 20
+            if (window.innerWidth > 1546) {
+                xDisplacementFir = -containerWidth / 2 + img.offsetWidth / 2 + additionNal - 2
+                xDisplacementSec = containerWidth / 2 - (img.offsetWidth / 1) + images[1].offsetWidth  + 60
+                console.log(' > 1025')
+            } else if (window.innerWidth > 1024) {
+                xDisplacementFir = -containerWidth / 2 + img.offsetWidth / 2 + additionNal - 2
+                xDisplacementSec = containerWidth / 2 - (img.offsetWidth / 1) + images[1].offsetWidth * 1.5 + 34
+                console.log(' > 1025')
             } else {
                 xDisplacementFir = $('.cap_container').width() / -20
-                xDisplacementSec = containerWidth - (img.offsetWidth / 1) + (isDesk ? 60 : 200) + 18
+                xDisplacementSec = containerWidth - (img.offsetWidth / 1) + (isDesk ? 60 : 200) + 30
+                console.log(' < 1025')
             }
             if (isCenter) {
                 if (window.innerWidth > 768) {
