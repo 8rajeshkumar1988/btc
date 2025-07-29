@@ -313,12 +313,14 @@
     }
     .leftContent {
         position: absolute;
-        height: 100%;
+        height: fit-content;
         display: flex;
         flex-direction: column;
         justify-content: center;
         left: var(--paddingX);
         z-index: 2;
+        top: 50%;
+        transform: translateY(-50%);
         max-width: clamp(14.375rem, 5.8036rem + 13.3929vw, 21.875rem);
         p {
             color: var(--green);

@@ -109,11 +109,10 @@
             <p>Sustainability Standards</p>
             <h3>Compliant With Global Sustainability Standards</h3>
         </div>
-        <button class="cta">Learn More <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+        <button class="cta" ctaButton>Learn More <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
     </div>
     <div class="accordian">
-        <div class="faq default-open"
-            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+        <div class="faq default-open" >
             <div class="head">
                 <p>Carbon Footprint of factory</p>
                 <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
@@ -127,8 +126,7 @@
                 </ul>
             </div>
         </div>
-        <div class="faq"
-            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+        <div class="faq" >
             <div class="head">
                 <p>Sustainable infra</p>
                 <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
@@ -142,8 +140,7 @@
                 </ul>
             </div>
         </div>
-        <div class="faq"
-            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+        <div class="faq" >
             <div class="head">
                 <p>Tech</p>
                 <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
@@ -157,8 +154,7 @@
                 </ul>
             </div>
         </div>
-        <div class="faq"
-            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+        <div class="faq" >
             <div class="head">
                 <p>Certifications</p>
                 <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
@@ -185,9 +181,9 @@
         <h3>From Farm To Fashion</h3>
     </div>
     <div class="rightContent">
-        <p>BTC combines <span>state-of-the-art technology</span> with sustainable practices, ensuring every product
+        <p ourCapabilitiesRightContent>BTC combines <span>state-of-the-art technology</span> with sustainable practices, ensuring every product
             is crafted with care, precision and environmental responsibility.</p>
-        <button id="exploreWhatWeDo" class="cta">Explore What We Do<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+        <button id="exploreWhatWeDo" ctaButton  class="cta">Explore What We Do<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
     </div>
     <div class="cap_container swiper ourCapabilities">
         <div class="swiper-wrapper">

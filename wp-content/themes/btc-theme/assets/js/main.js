@@ -12,7 +12,7 @@ $(document).ready(function () {
   gsap.ticker.lagSmoothing(2000);
 
   gsap.registerPlugin(ScrollTrigger);
-  
+
 
 
 
@@ -119,12 +119,12 @@ $(document).ready(function () {
         this.value = this.value.replace(/[^A-Za-z\s]/g, "");
       });
     });
-  } 
+  }
   const phoneInputs = document.querySelectorAll(".phone-input");
-  if(phoneInputs.length > 0){
+  if (phoneInputs.length > 0) {
     phoneInputs.forEach((input) => {
       input.addEventListener("input", function () {
-        this.value = this.value.replace(/[^0-9]/g, ""); 
+        this.value = this.value.replace(/[^0-9]/g, "");
       });
     });
   }
@@ -176,16 +176,14 @@ $(document).ready(function () {
 
   $("[ctaButton]").each(function () {
     const cta = $(this);
-
     gsap.from(cta, {
       y: 100,
       opacity: 0,
       ease: "power4.out",
       duration: 1.2,
-      stagger: 0.3, // ✅ stagger between children
       scrollTrigger: {
         trigger: cta,
-        start: "top 80%",
+        start: "top 90%",
         toggleActions: "play none none reverse",
       },
     });
@@ -209,6 +207,34 @@ $(document).ready(function () {
   });
 
 
-  const bannertext = SplitText.create("[animateHeadingBanner] > h1, [animateHeadingBanner] > h2, [animateHeadingBanner] > h3", {type:"chars,words,lines"})
+
+    gsap.from('.footerCopy', {
+      y: 100,
+      opacity: 0,
+      ease: "'power4.out'",
+      duration: 0.8,
+      scrollTrigger: {
+        trigger: '.footerCopy',
+        start: "top 90%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+
+
+
+  $("[animateHeadingBanner]").each(function () {
+    const container = $(this);
+    const children = container.children();
+
+    gsap.to(children.toArray(), {
+      y: 0,
+      opacity: 1,
+      ease: "power4.out",
+      duration: 1.2,
+      stagger: 0.3, // ✅ stagger between children      
+    });
+  });
+
 
 });

@@ -70,9 +70,6 @@ body {
   line-height: 1.2;
   z-index: 1;
 }
-.heroBanner .content > div h1 * {
-  line-height: 1.2;
-}
 .heroBanner .content > div p {
   position: relative;
   z-index: 1;
@@ -111,6 +108,11 @@ body {
   z-index: 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8117647059) 100%);
 }
+.heroBanner .content [animateHeadingBanner] * {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
 .cta {
   all: unset;
   background-color: var(--green);

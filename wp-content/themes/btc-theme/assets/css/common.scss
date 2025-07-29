@@ -68,10 +68,7 @@ body {
         color: #fff;
         margin-top: var(--headingTop);
         line-height: 1.2;
-        z-index: 1;
-        *{          
-          line-height: 1.2;
-        }
+        z-index: 1;        
       }
       p {
         position: relative;
@@ -115,10 +112,10 @@ body {
     }
   }
   .content [animateHeadingBanner]{
-    // *{
-    //   opacity: 0;
-    //   transform: translate();
-    // }
+    * {
+      opacity: 0;
+      transform: translateY(100px);
+    }
   }
 }
 
