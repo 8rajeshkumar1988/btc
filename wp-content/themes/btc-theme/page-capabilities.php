@@ -28,7 +28,7 @@ get_header();
 
     <section id="vertical_integration">
       <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" />
-      <div class="heading">
+      <div class="heading" animateHeading>
         <h2>Vertical Integration</h2>
         <p>
           BTC combines state-of-the-art technology with sustainable practices,
@@ -248,7 +248,7 @@ get_header();
       <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" />
 
       <div class="logistics_shipping_efficiency_head">
-        <div class="heading">
+        <div class="heading" animateHeading>
           <h2>Logistics & Shipping Efficiency</h2>
           <p style="font-weight: 300; text-transform: none">
             Strategically located in West Africa, our proximity to <br />

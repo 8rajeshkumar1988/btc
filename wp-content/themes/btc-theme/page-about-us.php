@@ -44,7 +44,7 @@ the_post();
     <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" />
 
     <div class="about_btc_head">
-        <div class="heading">
+        <div class="heading" animateHeading>
             <p>About BTC</p>
             <h2>
                 Providing Agility, Quality, <br />
@@ -108,7 +108,7 @@ the_post();
         
         <video autoplay loop muted playsinline  src="<?php echo get_template_directory_uri() . "/assets/images/vision.mp4"  ?>"></video>
     </div>
-    <div class="vision_mission_container">
+    <div class="vision_mission_container" animateHeading>
         <h2>Vision</h2>
         <p>
             To lead Africa's textile transformation by pioneering sustainable,
@@ -120,7 +120,7 @@ the_post();
         
         <video autoplay loop muted playsinline src="<?php echo get_template_directory_uri() . "/assets/images/mission.mp4"  ?>"></video>
     </div>
-    <div class="vision_mission_container">
+    <div class="vision_mission_container" animateHeading>
         <h2>Mission</h2>
         <p>
             At BTC, we shape the future of textiles by integrating <strong> sustainability,
@@ -148,7 +148,7 @@ if ($leaderships->have_posts()) {
 ?>
     <section id="our_leadership">
         <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" />
-        <div class="heading">
+        <div class="heading" animateHeading>
             <p>Our Leadership</p>
             <h2>Visionaries Shaping the Future</h2>
         </div>
@@ -195,7 +195,7 @@ if ($leaderships->have_posts()) {
 ?>
 <section id="product_page_details">
     <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="" />
-    <div class="heading">
+    <div class="heading" animateHeading>
         <p>Our Shareholders</p>
         <h2>
             Empowering <br />
@@ -224,7 +224,7 @@ if ($leaderships->have_posts()) {
     </div>
 </section>
 <section id="arise_details">
-    <div class="heading">
+    <div class="heading" animateHeading>
         <h2>Powered By</h2>
     </div>
     <div class="arise_container">
@@ -254,7 +254,7 @@ if ($leaderships->have_posts()) {
     </div>
 </section>
 <section id="our_impact">
-    <div class="heading">
+    <div class="heading" animateHeading>
         <p>Our Impact</p>
         <h2>
             Making a Difference, <br />
@@ -388,7 +388,7 @@ if ($leaderships->have_posts()) {
     </div>
 </section>
 <section id="certificates_compliances">
-    <div class="heading">
+    <div class="heading" animateHeading>
         <p>CERTIFICATIONS & COMPLIANCE</p>
         <h2>Compliance You Can Trust</h2>
     </div>

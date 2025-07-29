@@ -142,7 +142,7 @@ if ($upcomingEvents->have_posts()) {
 
 
   <section id="upcoming_events">
-    <div class="heading">
+    <div class="heading" animateHeading>
       <p>Don't Miss</p>
       <h2>Upcoming events</h2>
     </div>
@@ -223,7 +223,7 @@ if ($pastEvents->have_posts()) {
 
 ?>
   <section id="event_archive">
-    <div class="heading">
+    <div class="heading" animateHeading>
       <p>Event Archive</p>
       <h2>Previous Events</h2>
     </div>

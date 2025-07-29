@@ -131,7 +131,7 @@ if ($news->have_posts()) {
 ?>
 
     <section id="more_news">
-        <div class="heading">
+        <div class="heading" animateHeading>
             <p>Don't Miss</p>
             <h2>More News</h2>
         </div>
@@ -224,7 +224,7 @@ if ($sarticles->have_posts()) {
 
 
     <section id="explore_media">
-        <div class="heading">
+        <div class="heading" animateHeading>
             <p>Stories</p>
             <h2>Explore Media</h2>
         </div>

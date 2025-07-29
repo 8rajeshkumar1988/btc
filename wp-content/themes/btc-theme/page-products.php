@@ -62,7 +62,7 @@ get_header();
 </section>
 
 <section id="product_category">
-  <div class="heading">
+  <div class="heading" animateHeading>
     <p>Clothing That Fits All</p>
     <h2>Trendy, Timeless, Tailored</h2>
   </div>
@@ -83,7 +83,7 @@ get_header();
 </section>
 
 <section id="category_listing">
-  <div class="heading">
+  <div class="heading" animateHeading>
     <p>Our Products</p>
     <h2>Crafted for Every Need</h2>
   </div>

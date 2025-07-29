@@ -3,7 +3,7 @@
     <img src="<?php echo get_template_directory_uri() . '/assets/images/footerContact.jpg'; ?>" alt="">
     <div class="layer"></div>
     <div class="content">
-        <div class="heading">
+        <div class="heading" animateHeading>
             <p>Contact Us</p>
             <h3>Looking for Seamless, <br>Scalable Manufacturing?</h3>
         </div>
