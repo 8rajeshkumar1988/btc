@@ -42,7 +42,24 @@ $(document).ready(function () {
       repeat: -1,
     }
   );
+
+
 });
+
+function scrollToSectionById(id) {
+  const el = document.getElementById(id);
+  if (!el) {
+    // console.warn(`Element with ID '${id}' not found.`);
+    return;
+  }
+
+  lenis.scrollTo(el, {
+    offset: 0,          // adjust offset if needed
+    duration: 1,      // smooth duration in seconds
+    immediate: false,   // true = no animation
+  });
+}
+
 
 // header js
 $(document).ready(function () {

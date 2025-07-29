@@ -8,7 +8,7 @@
             <h3>Looking for Seamless, <br>Scalable Manufacturing?</h3>
         </div>
         <p class='footerCopy'>We offer end-to-end apparel manufacturing under one roof, built for brands and buying houses ready to scale.</p>
-        <button ctaButton class="cta leadpopup">Contact Us <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+        <button ctaButton onclick="scrollToSectionById('lead_form')" class="cta leadpopup">Contact Us <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
     </div>
 </section>
 <footer>
