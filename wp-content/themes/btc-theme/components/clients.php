@@ -25,7 +25,7 @@
                         while ($clients->have_posts()) {
                             $clients->the_post();
                     ?>
-                            <img alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class='event__image' src="<?php the_post_thumbnail_url('btc_medium') ?>">
+                            <img alt="<?php the_title(); ?>"  class='event__image' src="<?php the_post_thumbnail_url('btc_medium') ?>">
                     <?php
                         }
                     }
@@ -49,7 +49,7 @@
                         while ($clients->have_posts()) {
                             $clients->the_post();
                     ?>
-                            <img alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class='event__image' src="<?php the_post_thumbnail_url('btc_medium') ?>">
+                            <img alt="<?php the_title(); ?>"  class='event__image' src="<?php the_post_thumbnail_url('btc_medium') ?>">
                     <?php
                         }
                     }
@@ -75,7 +75,7 @@
                         while ($clients->have_posts()) {
                             $clients->the_post();
                     ?>
-                            <img alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class='event__image' src="<?php the_post_thumbnail_url('btc_medium') ?>">
+                            <img alt="<?php the_title(); ?>"  class='event__image' src="<?php the_post_thumbnail_url('btc_medium') ?>">
                     <?php
                         }
                     }
@@ -111,7 +111,7 @@
                                     $title_text = get_the_title();
                                 }
 
-                                $image = '<img title="' . esc_attr($title_text) . '" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+                                $image = '<img  src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
                                 echo  $image;
                             } 
 

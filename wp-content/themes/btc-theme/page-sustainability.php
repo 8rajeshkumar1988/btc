@@ -21,7 +21,7 @@ the_post();
   if ($banner_video) {
     echo '<video playsinline autoplay muted loop poster="' . $image_url . '" src="' . esc_url($banner_video['url']) . '"></video>';
   } else  if (has_post_thumbnail()) {
-    $image = '<img title="' . esc_attr($title_text) . '" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+    $image = '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
     echo $image;
   }
 

@@ -121,7 +121,7 @@ jQuery(function ($) {
 
   $("#btc-subscribe-form").on("submit", function (e) {
     e.preventDefault();
-
+    const error_text = document.querySelector(".newsletter_error")
     const $form = $(this);
     const data = {
       action: "save_subscribe",
@@ -130,13 +130,15 @@ jQuery(function ($) {
       email: $form.find('[name="email"]').val(),
       source_url: window.location.href,
     };
+    error_text
 
     $.post(aaLead.ajax_url, data, function (response) {
       if (response.success) {
         alert(response.data);
         $form.trigger("reset");
       } else {
-        alert("Error: " + response.data);
+        error_text.innerText = response.data;
+        // alert("Error: " + response.data);
       }
     });
   });

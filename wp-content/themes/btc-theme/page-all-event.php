@@ -249,7 +249,7 @@ if ($pastEvents->have_posts()) {
                     $title_text = get_the_title();
                   }
 
-                  $image = '<img title="' . esc_attr($title_text) . '" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+                  $image = '<img  src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
                   echo $image;
                 }
 
@@ -268,10 +268,10 @@ if ($pastEvents->have_posts()) {
                   <img src="<?php echo get_template_directory_uri() . "/assets/images/event/location.png" ?>" alt="" />
                   <p><?php echo get_field('event_location'); ?></p>
                 </div>
-                <button class="cta">
+                <a href="<?php the_permalink(); ?>" class="cta">
                   View Event
                   <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
-                </button>
+                </a>
               </div>
             </div>
           <?php } ?>

@@ -54,7 +54,7 @@ if ($products->have_posts()) {
                                 $title_text = get_the_title();
                             }
 
-                            echo '<img src="' . esc_url($full_image_url) . '" alt="' . esc_attr($alt_text) . '" title="' . esc_attr($title_text) . '">';
+                            echo '<img src="' . esc_url($full_image_url) . '" alt="' . esc_attr($alt_text) . '" >';
                         }
                         ?>
                     </div>
