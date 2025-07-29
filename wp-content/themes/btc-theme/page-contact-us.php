@@ -33,7 +33,7 @@ the_post();
             <div class="heading">
                 <p><?php the_title(); ?></p>
                 <?php the_content(); ?>
-                <button class="cta leadpopup">Reach Out to Us now <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
+                <button onclick="scrollToSectionById('lead_form')" class="cta" >Reach Out to Us now <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
             </div>
             <div class="contacts">
                 <p>Benin Textile Corporation</p>
@@ -133,6 +133,7 @@ if (!empty($faqs)) { ?>
             id="mapIframe"
             src="https://www.google.com/maps/embed?pb=!4v1752237216067!6m8!1m7!1sCAoSHENJQUJJaEFuNjhNcjFncDBiSHN0enBrb29uUlc.!2m2!1d-4.683459!2d11.8169195!3f224.67!4f5.239999999999995!5f0.7820865974627469"
             allowfullscreen=""
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>

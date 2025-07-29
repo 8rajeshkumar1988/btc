@@ -56,7 +56,7 @@ body {
 #spotlight .hero_slider_button_container {
   position: absolute;
   bottom: var(--spaceBelow_heading);
-  width: 100%;
+  right: 0px;
   z-index: 111;
   padding: 0px var(--paddingX) 0 var(--paddingX);
 }

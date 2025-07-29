@@ -395,6 +395,27 @@
   margin: 0;
 }
 
+.event-content {
+  padding: 0 var(--paddingX);
+}
+.event-content h2 {
+  font-size: var(--font-46);
+  font-weight: 400;
+}
+.event-content h2 * {
+  font-size: var(--font-46);
+  font-weight: 400;
+}
+.event-content p {
+  font-size: var(--font-18);
+  font-weight: 400;
+}
+.event-content p * {
+  font-size: var(--font-18);
+  font-weight: 400;
+  color: #000;
+}
+
 @media screen and (max-width: 768px) {
   .breadcrub_container {
     margin: 20px 0px;
