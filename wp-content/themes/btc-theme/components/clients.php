@@ -1,5 +1,5 @@
     <section id="our_clients">
-        <div class="heading">
+        <div class="heading" animateHeading>
             <p>Our Clients</p>
             <h2>
                 Powering the World's <br />
