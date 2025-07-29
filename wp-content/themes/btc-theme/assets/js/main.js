@@ -12,10 +12,7 @@ $(document).ready(function () {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const social_media = new Swiper(".social_media", {
-    slidesPerView: "auto",
-    spaceBetween: 20,
-  });
+
 
   const leftTrack = document.querySelector(".left-slide");
   const leftContent = leftTrack.querySelector(".marquee-content");
@@ -113,7 +110,14 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  // Open popup with fadeIn
+  const text_input = document.querySelectorAll(".text-control__input");
+  text_input.foreach((input) => {
+      input.addEventListener("input", function () {
+        this.value = this.value.replace(/[^A-Za-z\s]/g, "");
+      });
+  })
+
+
   $(".leadpopup").on("click", function () {
     $("#lead_popup_form").fadeIn(300);
   });
@@ -145,7 +149,7 @@ $(document).ready(function () {
 
   // cta animation
 
-  $(".cta").each(function () {
+  $("[ctaButton]").each(function () {
     const cta = $(this);
 
     gsap.from(cta, {
@@ -162,18 +166,7 @@ $(document).ready(function () {
     });
   });
 
-  gsap.from(".social_media_wrapper > a", {
-    y: 100,
-    opacity: 0,
-    ease: "power4.out",
-    duration: 1.2,
-    stagger: 0.1,
-    scrollTrigger: {
-      trigger: ".social_media_wrapper",
-      start: "top 80%",
-      toggleActions: "play none none reverse",
-    },
-  });
+
 
   //  footer background
   gsap.to("#footerContact > img", {

@@ -4,13 +4,9 @@ get_header();
 the_post();
 ?>
 <section class="heroBanner">
-    <?php
+<?php
     $banner_video = get_field('banner_video');
-
-    if ($banner_video) {
-        echo '<video playsinline autoplay muted loop src="' . esc_url($banner_video['url']) . '"></video>';
-    } else  if (has_post_thumbnail()) {
-        $thumbnail_id = get_post_thumbnail_id();
+      $thumbnail_id = get_post_thumbnail_id();
         $image_url = wp_get_attachment_url($thumbnail_id);
         $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
         $title_text = get_the_title($thumbnail_id);
@@ -21,6 +17,10 @@ the_post();
             $title_text = get_the_title();
         }
 
+
+    if ($banner_video) {
+        echo '<video playsinline autoplay muted loop poster="'.$image_url.'" src="' . esc_url($banner_video['url']) . '"></video>';
+    } else  if (has_post_thumbnail()) {
         $image = '<img title="' . esc_attr($title_text) . '" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
         echo $image;
     }

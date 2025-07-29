@@ -7,21 +7,21 @@ the_post();
 <section class="heroBanner">
     <?php
     $banner_video = get_field('banner_video');
+    $thumbnail_id = get_post_thumbnail_id();
+    $image_url = wp_get_attachment_url($thumbnail_id);
+    $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+    $title_text = get_the_title($thumbnail_id);
+    if (empty($alt_text)) {
+        $alt_text = get_the_title();
+    }
+    if (empty($title_text)) {
+        $title_text = get_the_title();
+    }
+
 
     if ($banner_video) {
-        echo '<video playsinline autoplay muted loop src="' . esc_url($banner_video['url']) . '"></video>';
+        echo '<video playsinline autoplay muted loop poster="' . $image_url . '" src="' . esc_url($banner_video['url']) . '"></video>';
     } else  if (has_post_thumbnail()) {
-        $thumbnail_id = get_post_thumbnail_id();
-        $image_url = wp_get_attachment_url($thumbnail_id);
-        $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
-        $title_text = get_the_title($thumbnail_id);
-        if (empty($alt_text)) {
-            $alt_text = get_the_title();
-        }
-        if (empty($title_text)) {
-            $title_text = get_the_title();
-        }
-
         $image = '<img title="' . esc_attr($title_text) . '" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
         echo $image;
     }
@@ -40,7 +40,7 @@ the_post();
                 <a href="">H7R3+Q7, Ouézoumé, Benin</a>
                 <div>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/mailIcon.svg" ?>" alt="">
-                    <a href="mailto:marketing.btc@btc.com">marketing.btc@btc.com</a>                    
+                    <a href="mailto:marketing.btc@btc.com">marketing.btc@btc.com</a>
                 </div>
                 <div>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/callIcon.svg" ?>" alt="">

@@ -2,12 +2,12 @@
 <section id="footerContact">
     <img src="<?php echo get_template_directory_uri() . '/assets/images/footerContact.jpg'; ?>" alt="">
     <div class="layer"></div>
-    <div class="content">
+    <div class="content" >
         <div class="heading" animateHeading>
             <p>Contact Us</p>
             <h3>Looking for Seamless, <br>Scalable Manufacturing?</h3>
         </div>
-        <p>We offer end-to-end apparel manufacturing under one roof, built for brands and buying houses ready to scale.</p>
+        <p >We offer end-to-end apparel manufacturing under one roof, built for brands and buying houses ready to scale.</p>
         <button class="cta leadpopup">Contact Us <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
     </div>
 </section>

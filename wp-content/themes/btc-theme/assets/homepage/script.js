@@ -331,4 +331,22 @@ $(document).ready(function () {
       toggleActions: "play none none reverse",
     },
   });
+
+
+  // our products
+
+  gsap.from(".ourProducts  .swiper-slide", {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    duration: 1.2,
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: ".ourProducts",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+  });
+
+
 });
