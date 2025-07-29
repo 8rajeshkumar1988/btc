@@ -5,6 +5,7 @@ body {
   object-position: center top;
 }
 #product_page_details {
+  background-color: #fffff4;
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -16,6 +17,8 @@ body {
     width: 100%;
     z-index: -1;
     transform: translate(0%, -25%);
+
+
   }
   h2 {
     font-size: var(--font-46);
@@ -42,6 +45,7 @@ body {
   }
 }
 #product_category {
+  background-color: #fffff4;
   .heading {
     padding: 0 var(--paddingX);
   }
@@ -71,10 +75,10 @@ body {
       }
       img, video {
         width: 100%;
-        height: calc(100% + 100px);
+        height: calc(100% + 200px);
         position: absolute;
         object-fit: cover;
-        z-index: -1;
+        z-index: -1;        
       }
     }
   }
@@ -93,10 +97,11 @@ body {
         aspect-ratio: 526/450;
         overflow: hidden;
         position: relative;
-        img {
+        video, img {
           width: 100%;
-          height: 100%;
+          height: calc(100% + 100px);
           object-fit: cover;
+          pointer-events: none;
         }
         p{
           white-space: nowrap;
@@ -199,8 +204,9 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
+    position: fixed;
     inset: 0;
+    z-index: -1;
   }
   &::after {
     content: "";

@@ -163,6 +163,7 @@ body {
 
 #our_clients {
   position: relative;
+  background-color: #fffff4;
 }
 #our_clients .heading {
   padding: var(--paddingY) var(--paddingX);
@@ -194,6 +195,7 @@ body {
 
 #our_social {
   position: relative;
+  background-color: #fffff4;
 }
 #our_social > img {
   width: 80%;
@@ -357,6 +359,10 @@ textarea {
   height: -moz-fit-content;
   height: fit-content;
   margin-top: 30px;
+}
+
+#footer_img_frame {
+  background-color: #fffff4;
 }
 
 #footerContact {

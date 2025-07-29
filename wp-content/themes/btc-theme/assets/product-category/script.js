@@ -51,25 +51,127 @@ $(document).ready(function () {
 
 
 
-
- gsap.utils.toArray("#product_category .category_card").forEach((card) => {
+  gsap.utils.toArray("#product_category .category_card").forEach((card, index) => {
     const video = card.querySelector("video");
 
     if (!video) return;
 
     gsap.to(video, {
-      y: -100, // move up by 100px
+      y: -200, // move up by 100px
       ease: "none",
+      delay: index * 0.2, // simulate stagger (adjust value as needed)
       scrollTrigger: {
         trigger: card,
         start: "top 90%",
         end: "bottom 0%",
         scrub: true,
-        markers: true // Uncomment for debug
+        toggleActions: "play none none reverse",
       }
     });
   });
 
+  gsap.from("#product_category .category_card", {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    duration: 1.2,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: "#product_category .category_card",
+      start: "top 90%",
+      toggleActions: "play none none reverse",
+    },
+  })
+
+
+  gsap.from("#product_page_details h2, #product_page_details p", {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    duration: 1.2,
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: "#product_page_details",
+      start: "top 70%",
+      toggleActions: "play none none reverse",
+    },
+  })
+
+  $('#category_listing .category_list_card').each(function (index) {
+    gsap.from(this, {
+      opacity: 0,
+      y: 100,
+      ease: "power4.out",
+      duration: 1,
+      delay: index * 0.08,
+      scrollTrigger: {
+        trigger: this,
+        start: "top 90%",
+        toggleActions: "play none none reverse",
+      },
+    })
+  })
+
+
+  gsap.utils.toArray("#category_listing .category_list_card").forEach((card, i) => {
+    const media = card.querySelector(".category_list_img");
+    if (!media) return;
+
+    gsap.to(media, {
+      y: -100,
+      ease: "none",
+      delay: i * 0.2,
+      scrollTrigger: {
+        trigger: card,
+        start: "top 90%",
+        end: "bottom 0%",
+        scrub: true,
+        toggleActions: "play none none reverse",
+      }
+    });
+  });
+
+
+     gsap.from('#customization .customization_buttons button', {
+      y: 100,
+      opacity: 0,
+      ease: "power4.out",
+      duration: 1.2,
+      stagger: 0.05,
+      delay: 0.5,
+      scrollTrigger: {
+        trigger: '#customization .customization_buttons',
+        start: "top 90%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+     gsap.from('.customization_text.active', {
+      y: 100,
+      opacity: 0,
+      ease: "power4.out",
+      duration: 1.2,
+      delay: 0.5,
+      scrollTrigger: {
+        trigger: '.customization_text.active',
+        start: "top 90%",
+        toggleActions: "play none none reverse",
+      },
+    });
+
+
+     gsap.from('.customization_cards.active .customization_card', {
+      y: 100,
+      opacity: 0,
+      ease: "power4.out",
+      duration: 1.2,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: '.customization_cards.active',
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      },
+    });
 
 
 });

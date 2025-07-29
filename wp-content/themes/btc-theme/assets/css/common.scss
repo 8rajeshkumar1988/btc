@@ -172,6 +172,7 @@ body {
 
 #our_clients {
   position: relative;
+  background-color: #fffff4;
   .heading {
     padding: var(--paddingY) var(--paddingX);
     padding-bottom: 0;
@@ -207,6 +208,7 @@ body {
 #our_social {
   position: relative;
   //   overflow: hidden;
+  background-color: #fffff4;
   & > img {
     width: 80%;
     position: absolute;
@@ -372,6 +374,10 @@ textarea {
       margin-top: 30px;
     }
   }
+}
+
+#footer_img_frame{
+  background-color: #fffff4;
 }
 
 #footerContact {

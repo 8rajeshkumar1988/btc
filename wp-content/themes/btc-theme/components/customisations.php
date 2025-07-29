@@ -1,6 +1,6 @@
  <section id="customization">
      <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" />
-     <div class="heading">
+     <div class="heading" animateHeading>
          <p>Customisations</p>
          <h2>Flexibility Woven In</h2>
      </div>
@@ -233,6 +233,6 @@
         </button>
         </div>
     </div> -->
-                <button class="cta leadpopup">Start Customizing Today <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" /></button>
+                <button class="cta leadpopup" ctaButton>Start Customizing Today <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" /></button>
              </div>
  </section>

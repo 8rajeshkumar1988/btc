@@ -252,4 +252,5 @@
 <section id="linkedIn_video">
     <video src="<?php echo get_template_directory_uri() . '/assets/images/homeVideoSec.mp4'; ?>" autoplay loop muted playsinline></video>
 </section>
+<div class="blankSpace"></div>
 

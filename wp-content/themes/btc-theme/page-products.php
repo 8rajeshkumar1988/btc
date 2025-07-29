@@ -52,7 +52,7 @@ the_post();
       Explore our products, made from eco-friendly, traceable cotton, and
       discover the perfect fit for your brand.
     </p>
-    <button class="cta leadpopup">
+    <button class="cta leadpopup" ctaButton >
       Get in Touch <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" />
     </button>
   </div>
@@ -121,9 +121,9 @@ the_post();
             $title_text = get_the_title();
           }
 
-          $image = '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+          $image = '<img class="category_list_img" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
         } else {
-          $image = '<img src="' . get_template_directory_uri() . '/assets/category_item.png" alt="Category Item">';
+          $image = '<img class="category_list_img" src="' . get_template_directory_uri() . '/assets/category_item.png" alt="Category Item">';
         }
 
 

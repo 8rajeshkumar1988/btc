@@ -13,19 +13,30 @@ body {
   z-index: -1;
   transform: translate(0%, -25%);
 }
+#product_spotlight .swiper-slide.swiper-slide-next > img {
+  transform: translateX(-300px);
+}
+#product_spotlight .swiper-slide.swiper-slide-prev > img {
+  transform: translateX(300px);
+}
+#product_spotlight .swiper-slide.swiper-slide-active > img {
+  transform: translateX(-150px);
+}
 #product_spotlight .swiper-slide {
   max-height: 768px;
   display: block;
   aspect-ratio: 16/9;
   position: relative;
+  overflow: hidden;
 }
 #product_spotlight .swiper-slide > img {
-  width: 100%;
+  width: calc(100% + 300px);
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
   inset: 0;
+  transition: transform 1s ease;
 }
 #product_spotlight .swiper-slide .product_detail {
   width: 30%;
@@ -160,6 +171,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: var(--spaceBelow_heading);
 }
 #explore_other_categories .explore_other_head .heading h2 {
   color: var(--secondaryBlack);
@@ -192,9 +204,9 @@ body {
 #explore_other_categories .explore_other_buttons .explore_other-prev img {
   transform: rotate(180deg);
 }
-#explore_other_categories .explore_other_categories_container {
-  margin-top: var(--spaceBelow_heading);
+#explore_other_categories .explore_other_categories_container .explore_other_categories {
   padding-left: var(--paddingX);
+  padding-right: var(--paddingX);
 }
 #explore_other_categories .explore_other_categories_container .explore_other_categories .category_item .category_image {
   width: 100%;
@@ -214,16 +226,16 @@ body {
 #explore_other_categories .explore_other_categories_container .explore_other_categories .category_item .category_image p {
   white-space: nowrap;
   position: absolute;
-  bottom: 30px;
-  right: 30px;
+  bottom: calc(var(--font-20) * 1.3);
+  right: calc(var(--font-20) * 1.3);
 }
 #explore_other_categories .explore_other_categories_container .explore_other_categories .category_item .category_title {
-  margin: 40px 20px;
+  margin: calc(var(--font-20) * 1.5) var(--font-20);
   text-decoration: none;
   font-size: var(--font-46);
-  line-height: 1.5;
+  line-height: 1;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 500;
   color: #594ec2;
   display: block;
 }

@@ -15,7 +15,7 @@ $(".faq").click(function () {
 });
 
 var explore_other_categories = new Swiper(".explore_other_categories", {
-  slidesPerView: 1,
+  slidesPerView: 1.1,
   spaceBetween: 20,
 
   navigation: {
@@ -35,9 +35,10 @@ var spotlight_slider = new Swiper(".spotlight_slider", {
   slidesPerView: 1.2,
   initialSlide: 1,
   spaceBetween: 30,
-  centeredSlides: true,
-  loop: true,
-  loopAdditionalSlides: 3,
+  centeredSlides: true,  
+  watchSlidesProgress: true,
+  speed: 1500,
+  watchSlidesVisibility: true,  
   navigation: {
     nextEl: ".product_spotlight-next",
     prevEl: ".product_spotlight-prev",
