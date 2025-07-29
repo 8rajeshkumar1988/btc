@@ -135,8 +135,10 @@ $(document).ready(function () {
       input.addEventListener("blur", function () {
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (this.value && !emailPattern.test(this.value)) {
-          this.addClass("error_input");
-          this.focus();
+          this.classList.add("error_input");
+          // this.focus();
+        } else {
+            this.classList.remove("error_input");
         }
       });
     });

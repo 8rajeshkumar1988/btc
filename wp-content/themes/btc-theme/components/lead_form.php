@@ -21,7 +21,7 @@
     <div>
         <label for="phone">Phone Number*</label>
         <br />
-        <input id="phone" name="phone" class="phone-input" type="tel" placeholder="Enter your phone number" />
+        <input id="phone" name="phone" autocomplete="new-phone" class="phone-input" type="tel" placeholder="Enter your phone number" />
     </div>
     <div>
         <label for="company">Company Name*</label>

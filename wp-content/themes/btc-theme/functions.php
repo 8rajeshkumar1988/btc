@@ -101,6 +101,10 @@ function btc_files()
         );
     }
 
+    if(is_page('terms-and-conditions') || is_page('privacy-policy')){
+        wp_enqueue_style('btc_page_styles', get_theme_file_uri('/assets/default-page/style.css'));
+    }
+
     if (is_home() || is_tag()) {
         wp_enqueue_style('btc_news_styles', get_theme_file_uri('/assets/news/style.css'));
         wp_enqueue_script(
