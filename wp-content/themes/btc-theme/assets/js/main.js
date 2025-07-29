@@ -1,4 +1,5 @@
 let lenis;
+gsap.registerPlugin(SplitText);
 $(document).ready(function () {
   lenis = new Lenis();
 
@@ -11,6 +12,7 @@ $(document).ready(function () {
   gsap.ticker.lagSmoothing(2000);
 
   gsap.registerPlugin(ScrollTrigger);
+  
 
 
 
@@ -175,4 +177,8 @@ $(document).ready(function () {
     ease: "power4.out",
     duration: 1.2,
   });
+
+
+  const bannertext = SplitText.create("[animateHeadingBanner] > h1, [animateHeadingBanner] > h2, [animateHeadingBanner] > h3", {type:"chars,words,lines"})
+
 });
