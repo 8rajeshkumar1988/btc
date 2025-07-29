@@ -61,6 +61,7 @@ body {
 #product_category .category_container .category_card {
   position: relative;
   aspect-ratio: 1;
+  overflow: hidden;
 }
 #product_category .category_container .category_card h2 {
   position: absolute;
@@ -70,10 +71,10 @@ body {
   top: var(--font-24);
   line-height: 1;
 }
-#product_category .category_container .category_card video {
+#product_category .category_container .category_card img, #product_category .category_container .category_card video {
   width: 100%;
+  height: calc(100% + 100px);
   position: absolute;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;

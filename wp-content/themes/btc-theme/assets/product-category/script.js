@@ -49,5 +49,22 @@ $(document).ready(function () {
     });
   });
 
- 
+
+
+  gsap.to("#product_category video", {
+    scrollTrigger: {
+      trigger: "#product_category .category_card",
+      start: "top 80%",
+      end: "bottom 0%",
+      toggleActions: "play none none reverse",
+      scrub: true,
+      markers: true
+    },
+    top: "-100px",
+    ease: "power4.out",
+    duration: 1.2,
+    stagger: 0.3,
+  });
+
+
 });

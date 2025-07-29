@@ -60,6 +60,7 @@ body {
     .category_card {
       position: relative;
       aspect-ratio: 1;
+      overflow: hidden;
       h2 {
         position: absolute;
         color: white;
@@ -68,10 +69,10 @@ body {
         top: var(--font-24);
         line-height: 1;
       }
-      video {
+      img, video {
         width: 100%;
+        height: calc(100% + 100px);
         position: absolute;
-        height: 100%;
         object-fit: cover;
         z-index: -1;
       }
