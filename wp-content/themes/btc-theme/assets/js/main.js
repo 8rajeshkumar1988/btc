@@ -110,12 +110,35 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  const text_input = document.querySelectorAll(".text-control__input");
-  text_input.foreach((input) => {
+  const text_inputs = document.querySelectorAll(".text-control__input");
+  if (text_inputs.length > 0) {
+    text_inputs.forEach((input) => {
       input.addEventListener("input", function () {
         this.value = this.value.replace(/[^A-Za-z\s]/g, "");
       });
-  })
+    });
+  } 
+  const phoneInputs = document.querySelectorAll(".phone-input");
+  if(phoneInputs.length > 0){
+    phoneInputs.forEach((input) => {
+      input.addEventListener("input", function () {
+        this.value = this.value.replace(/[^0-9]/g, ""); 
+      });
+    });
+  }
+
+  const emailInputs = document.querySelectorAll(".email-input");
+  if (emailInputs.length > 0) {
+    emailInputs.forEach((input) => {
+      input.addEventListener("blur", function () {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (this.value && !emailPattern.test(this.value)) {
+          this.addClass("error_input");
+          this.focus();
+        }
+      });
+    });
+  }
 
 
   $(".leadpopup").on("click", function () {

@@ -106,7 +106,7 @@ if ($gallery && is_array($gallery)) {
                 ?>
                     <div class="swiper-slide">
                         <div class="swiper-slide-container">
-                            <img title="<?php echo $title; ?>" src="<?php echo esc_url($img) ?>" alt="<?php echo $alt; ?>" />
+                            <img src="<?php echo esc_url($img) ?>" alt="<?php echo $alt; ?>" />
                         </div>
                     </div>
                 <?php } ?>
@@ -140,7 +140,7 @@ if ($gallery && is_array($gallery)) {
                                 <img
                                     src="<?php echo esc_url($thumbnail[0]); ?>"
                                     alt="<?php echo esc_attr($alt ?: $title); ?>"
-                                    title="<?php echo esc_attr($title); ?>" />
+                                     />
                             </div>
                         </div>
                     <?php } ?>

@@ -2,12 +2,12 @@
     <div>
         <label for="name">Name*</label>
         <br />
-        <input id="name" name="name" type="text" placeholder="Enter your name" />
+        <input id="name" name="name" type="text" class="text-control__input" placeholder="Enter your name" />
     </div>
     <div>
         <label for="email">Email*</label>
         <br />
-        <input id="email" name="email" type="email" placeholder="Enter your email" />
+        <input id="email" name="email" class="email-input" type="email" placeholder="Enter your email" />
     </div>
     <div>
         <label for="enquiry_type">Enquiry Type*</label>
@@ -21,7 +21,7 @@
     <div>
         <label for="phone">Phone Number*</label>
         <br />
-        <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" />
+        <input id="phone" name="phone" class="phone-input" type="tel" placeholder="Enter your phone number" />
     </div>
     <div>
         <label for="company">Company Name*</label>
@@ -44,7 +44,7 @@
         <input
             id="whatsapp_number"
             type="tel"
-            name="whatsapp"
+            name="whatsapp" class="phone-input"
             placeholder="Enter your Whatsapp number" />
     </div>
     <div>
