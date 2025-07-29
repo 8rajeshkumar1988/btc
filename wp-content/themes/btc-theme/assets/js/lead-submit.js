@@ -1,11 +1,48 @@
 jQuery(function ($) {
-  $("#whatsapp_checkbox").on("change", function () {
-    if ($(this).is(":checked")) {
-      $("#whatsapp_number").val($("#phone").val());
-    } else {
-      $("#whatsapp_number").val("");
-    }
-  });
+
+
+$("#whatsapp_checkbox").on("change", function () {
+  const $phoneInput = $("#phone");
+  const $whatsappInput = $("#whatsapp_number");
+
+  const phoneInstance = $phoneInput[0]._intlTelInstance;
+  const whatsappInstance = $whatsappInput[0]._intlTelInstance;
+
+  if (!phoneInstance || !whatsappInstance) {
+    console.warn("intlTelInput not initialized on one or both inputs");
+    return;
+  }
+
+  if ($(this).is(":checked")) {
+    const plainNumber = $phoneInput.val();
+
+    $whatsappInput
+      .val(plainNumber)
+      .prop("readonly", true);
+    
+    whatsappInstance.setCountry(phoneInstance.getSelectedCountryData().iso2);
+
+    $phoneInput.on("input._sync", function () {
+      $whatsappInput.val($phoneInput.val());
+    });
+
+    $phoneInput.on("countrychange._sync", function () {
+      const countryData = phoneInstance.getSelectedCountryData();
+      whatsappInstance.setCountry(countryData.iso2);
+    });
+
+  } else {
+    // Unbind all sync
+    $phoneInput.off(". _sync");
+    $whatsappInput
+      .val("")
+      .prop("readonly", false);
+  }
+});
+
+
+
+
   $("#aa-lead-form").on("submit", function (e) {
     e.preventDefault();
 
@@ -62,10 +99,10 @@ jQuery(function ($) {
     }
 
     const phoneInput = $form.find('[name="phone"]')[0];
-    const phone = `${phoneInput._intlTelInstance.getSelectedCountryData().dialCode}${phoneInput._intlTelInstance.getNumber()}`
+    const phone = phoneInput._intlTelInstance.getNumber();
 
     const whatsappInput = $form.find('[name="whatsapp"]')[0];
-    const whatsapp = whatsappInput.value ? `${whatsappInput._intlTelInstance.getSelectedCountryData().dialCode}${whatsappInput._intlTelInstance.getNumber()}` : "";
+    const whatsapp = whatsappInput && whatsappInput._intlTelInstance.getNumber();
 
     const data = {
       action: "save_lead",
@@ -121,7 +158,7 @@ jQuery(function ($) {
 
   $("#btc-subscribe-form").on("submit", function (e) {
     e.preventDefault();
-    const error_text = document.querySelector(".newsletter_error")
+    const error_text = document.querySelector(".newsletter_error");
     const $form = $(this);
     const data = {
       action: "save_subscribe",
@@ -130,12 +167,14 @@ jQuery(function ($) {
       email: $form.find('[name="email"]').val(),
       source_url: window.location.href,
     };
-    error_text
+    error_text;
 
     $.post(aaLead.ajax_url, data, function (response) {
       if (response.success) {
         alert(response.data);
         $form.trigger("reset");
+        error_text.innerText = "";
+        
       } else {
         error_text.innerText = response.data;
         // alert("Error: " + response.data);
