@@ -6,7 +6,7 @@
             <p>Our Socials</p>
             <h2>Behind the Seams</h2>
         </div>
-        <button class="cta">
+        <button class="cta" ctaButton>
             follow our threads
             <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
         </button>
@@ -68,7 +68,7 @@
         </div>
     </div>
 
-    <button class="cta">
+    <button class="cta" ctaButton >
         follow our threads
         <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
     </button>

@@ -349,4 +349,44 @@ $(document).ready(function () {
   });
 
 
+  gsap.from(".spiralImage", {
+    y: 200,
+    opacity: 0,
+    ease: "power4.out",
+    duration: 1.2,
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: ".spiralImage",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+  });
+
+
+  gsap.from("[ourCapabilitiesRightContent]", {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    duration: 1.2,
+    scrollTrigger: {
+      trigger: "[ourCapabilitiesRightContent]",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+  });
+
+  gsap.from("#sustainabiltyStandard .faq, #sustainabiltyStandard .faq p, #sustainabiltyStandard .faq li", {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    duration: 1.2,
+    stagger: 0.05,
+    scrollTrigger: {
+      trigger: "#sustainabiltyStandard .accordian",
+      start: "top 70%",
+      toggleActions: "play none none reverse",
+    },
+  });
+
+
 });
