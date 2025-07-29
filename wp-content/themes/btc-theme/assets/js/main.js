@@ -161,8 +161,6 @@ $(document).ready(function () {
 
 
 
-
-
   //  footer background
   gsap.to("#footerContact > img", {
     scrollTrigger: {

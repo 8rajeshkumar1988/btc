@@ -2,13 +2,10 @@
 get_header();
 ?>
 <section class="heroBanner">
-    <?php
-    $banner_video = get_field('banner_video');
 
-    if ($banner_video) {
-        echo '<video playsinline autoplay muted loop src="' . esc_url($banner_video['url']) . '"></video>';
-    } else  if (has_post_thumbnail()) {
-        $thumbnail_id = get_post_thumbnail_id();
+<?php
+    $banner_video = get_field('banner_video');
+      $thumbnail_id = get_post_thumbnail_id();
         $image_url = wp_get_attachment_url($thumbnail_id);
         $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
         $title_text = get_the_title($thumbnail_id);
@@ -19,19 +16,22 @@ get_header();
             $title_text = get_the_title();
         }
 
+
+    if ($banner_video) {
+        echo '<video playsinline autoplay muted loop poster="'.$image_url.'" src="' . esc_url($banner_video['url']) . '"></video>';
+    } else  if (has_post_thumbnail()) {
         $image = '<img title="' . esc_attr($title_text) . '" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
         echo $image;
     }
 
     ?>
+
+
     <div class="content">
-        <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / Why BTC</p>
+        <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / <?php the_title() ?></p>
         <div class="heading">
-            <p>Why Btc</p>
-            <h1>
-                Knitting the Future <br />
-                with African Cotton
-            </h1>
+            <p><?php the_title(); ?></p>
+            <?php the_content(); ?>
         </div>
         <div class="layer"></div>
         <div class="layer2"></div>
