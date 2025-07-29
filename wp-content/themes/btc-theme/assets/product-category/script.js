@@ -51,20 +51,25 @@ $(document).ready(function () {
 
 
 
-  gsap.to("#product_category video", {
-    scrollTrigger: {
-      trigger: "#product_category .category_card",
-      start: "top 80%",
-      end: "bottom 0%",
-      toggleActions: "play none none reverse",
-      scrub: true,
-      markers: true
-    },
-    top: "-100px",
-    ease: "power4.out",
-    duration: 1.2,
-    stagger: 0.3,
+
+ gsap.utils.toArray("#product_category .category_card").forEach((card) => {
+    const video = card.querySelector("video");
+
+    if (!video) return;
+
+    gsap.to(video, {
+      y: -100, // move up by 100px
+      ease: "none",
+      scrollTrigger: {
+        trigger: card,
+        start: "top 90%",
+        end: "bottom 0%",
+        scrub: true,
+        markers: true // Uncomment for debug
+      }
+    });
   });
+
 
 
 });
