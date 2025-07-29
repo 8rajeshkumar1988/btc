@@ -2,7 +2,7 @@
     <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC pattern.svg'; ?>" alt="" />
 
     <div class="our_social_head">
-        <div class="heading">
+        <div class="heading" animateHeading>
             <p>Our Socials</p>
             <h2>Behind the Seams</h2>
         </div>
@@ -69,7 +69,27 @@
     </div>
 
     <button class="cta">
-            follow our threads
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
-        </button>
+        follow our threads
+        <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
+    </button>
 </section>
+
+
+<script>
+    const social_media = new Swiper(".social_media", {
+        slidesPerView: "auto",
+        spaceBetween: 20,
+    });
+    gsap.from(".social_media_wrapper > a", {
+        y: 100,
+        opacity: 0,
+        ease: "power4.out",
+        duration: 1.2,
+        stagger: 0.1,
+        scrollTrigger: {
+            trigger: ".social_media_wrapper",
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+        },
+    });
+</script>
