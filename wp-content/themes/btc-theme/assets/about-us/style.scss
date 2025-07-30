@@ -33,11 +33,12 @@ body {
     }
   }
   .about_btc_button_container {
-    padding: var(--spaceBelow_heading) var(--paddingX) var(--paddingY);
+    padding: 0 var(--paddingX) var(--paddingY);
     display: flex;
     justify-content: flex-end;
   }
   .about_btc_buttons {
+    padding-top: var(--spaceBelow_heading);
     display: flex;
     gap: 15px;
     button {
@@ -84,7 +85,8 @@ body {
           display: block;
           & > img {
             width: 100%;
-            height: 100%;
+            height: calc(100% + 50px);
+            transform: translateY(-50px);
             object-fit: cover;
             position: absolute;
             inset: 0;
@@ -118,13 +120,16 @@ body {
   grid-template-rows: auto auto;
   gap: 40px;
   align-items: center;
+  .vision_mission_container {
+  height: clamp(23.75rem, 5.2572rem + 21.6606vw, 31.25rem);
+  overflow: hidden;
 }
-
-.vision_mission_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
+.videoC {
+  display: initial;
+}
+.text {
+  height: fit-content;
+  transform: translateY(20%);
 }
 .vision_mission_container:first-child {
   grid-area: 1 / 2 / 2 / 3;
@@ -150,13 +155,17 @@ body {
 .vision_mission_container img,
 .vision_mission_container video {
   width: 100%;
-  height: auto;
+  height: calc(100% + 150px);
   object-fit: cover;
+  transform: translateY(-150px);
 }
 .swiper {
   width: 100%;
   height: 100%;
 }
+}
+
+
 
 #our_leadership {
   padding: var(--paddingY) var(--paddingX);
@@ -348,11 +357,7 @@ body {
       }
       .content {
         display: none;
-        grid-template-columns: 1fr clamp(
-            18.75rem,
-            -2.0833rem + 27.7778vw,
-            31.25rem
-          );
+        grid-template-columns: 1fr clamp(18.75rem, -2.0833rem + 27.7778vw, 31.25rem);
         position: relative;
         justify-items: stretch;
         align-items: end;
@@ -367,7 +372,7 @@ body {
             flex-wrap: wrap;
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(0, 300px));
-            margin:  clamp(0rem, -4.1667rem + 5.5556vw, 2.5rem) 0 clamp(1.25rem, -5rem + 8.3333vw, 5rem);
+            margin: clamp(0rem, -4.1667rem + 5.5556vw, 2.5rem) 0 clamp(1.25rem, -5rem + 8.3333vw, 5rem);
             h2 {
               font-size: clamp(1.625rem, -0.4583rem + 2.7778vw, 2.875rem);
               color: var(--green);
@@ -502,9 +507,9 @@ body {
     display: grid;
     place-items: center;
   }
-.pop_content::-webkit-scrollbar {
-  display: none;
-}
+  .pop_content::-webkit-scrollbar {
+    display: none;
+  }
   .pop_container {
     display: grid;
     width: 100%;
@@ -514,7 +519,7 @@ body {
     position: relative;
     grid-template-columns: 45% 50%;
     gap: 5%;
-  
+
     #popupImg {
       width: 100%;
       height: 100%;
@@ -525,7 +530,7 @@ body {
       padding: 20px;
       padding-top: 0;
       overflow-y: auto;
-      
+
       #popupHeading {
         font-size: var(--font-46);
         color: var(--blue);
@@ -557,18 +562,18 @@ body {
   }
   #popup {
     padding: 0;
-    .pop_container{
+    .pop_container {
       grid-template-columns: 1fr;
       gap: 30px;
       overflow: scroll;
       // padding: 0;
-      #popupImg{
+      #popupImg {
         max-width: 600px;
         max-height: 600px;
       }
-      .pop_content{
-        overflow:visible;
-        #leader_bio{
+      .pop_content {
+        overflow: visible;
+        #leader_bio {
           margin-top: 30px;
         }
       }
@@ -665,21 +670,21 @@ body {
     }
   }
   #popup {
-    #closeBtn{
+    #closeBtn {
       width: 35px;
       height: 35px;
       font-size: 20px;
     }
-    .pop_container{
+    .pop_container {
       gap: 20px;
       padding: 15px;
-      #popupImg{
+      #popupImg {
         max-width: 600px;
         max-height: 600px;
         height: 450px;
       }
-      .pop_content{
-        #leader_bio{
+      .pop_content {
+        #leader_bio {
           margin-top: 20px;
         }
       }

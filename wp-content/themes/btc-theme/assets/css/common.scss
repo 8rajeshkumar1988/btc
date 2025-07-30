@@ -968,6 +968,9 @@ header {
 }
 
 @media screen and (max-width: 1024px) {
+  :root {
+    --font-18: 16px;
+  }
   #lead_popup_form {
     form {
       grid-template-columns: repeat(2, 1fr);

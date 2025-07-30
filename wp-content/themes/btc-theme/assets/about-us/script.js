@@ -76,53 +76,127 @@ $(document).ready(function () {
   });
 });
 
- document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".leader_card");
-    const popup = document.getElementById("popup");
-    const popupImg = document.getElementById("popupImg");
-    const popupHeading = document.getElementById("popupHeading");
-    const popupPara = document.getElementById("popupPara");
-    const popupleaderBio = document.getElementById("leader_bio");
-    const closeBtn = document.getElementById("closeBtn");
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".leader_card");
+  const popup = document.getElementById("popup");
+  const popupImg = document.getElementById("popupImg");
+  const popupHeading = document.getElementById("popupHeading");
+  const popupPara = document.getElementById("popupPara");
+  const popupleaderBio = document.getElementById("leader_bio");
+  const closeBtn = document.getElementById("closeBtn");
 
-    cards.forEach((card) => {
-      card.addEventListener("click", () => {
-        const img = card.querySelector("img");
-        const heading = card.querySelector(".leader_title");
-        const para = card.querySelector(".leader_description");
-        const leaderBio = card.querySelector(".leader_bio");
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const img = card.querySelector("img");
+      const heading = card.querySelector(".leader_title");
+      const para = card.querySelector(".leader_description");
+      const leaderBio = card.querySelector(".leader_bio");
 
-        // Set content
-        popupImg.src = img.src;
-        popupHeading.innerText = heading.innerText;
-        popupPara.innerText = para.innerText;
-        popupleaderBio.innerHTML = leaderBio.innerHTML;
+      // Set content
+      popupImg.src = img.src;
+      popupHeading.innerText = heading.innerText;
+      popupPara.innerText = para.innerText;
+      popupleaderBio.innerHTML = leaderBio.innerHTML;
 
-        // Show popup and fade in
-        popup.classList.remove("hidden");
-        lenis.stop();
-        gsap.fromTo(
-          popup,
-          { autoAlpha: 0 },
-          { autoAlpha: 1, duration: 0.6, ease: "power2.out" }
-        );
-      });
-    });
-
-    closeBtn.addEventListener("click", () => {
-      // Fade out popup
-      gsap.to(popup, {
-        autoAlpha: 0,
-        duration: 0.4,
-        ease: "power2.in",
-        onComplete: () => {
-          popup.classList.add("hidden");
-          lenis.start();
-        },
-      });
+      // Show popup and fade in
+      popup.classList.remove("hidden");
+      lenis.stop();
+      gsap.fromTo(
+        popup,
+        { autoAlpha: 0 },
+        { autoAlpha: 1, duration: 0.6, ease: "power2.out" }
+      );
     });
   });
 
+  closeBtn.addEventListener("click", () => {
+    // Fade out popup
+    gsap.to(popup, {
+      autoAlpha: 0,
+      duration: 0.4,
+      ease: "power2.in",
+      onComplete: () => {
+        popup.classList.add("hidden");
+        lenis.start();
+      },
+    });
+  });
+});
+
 $(document).ready(function () {
-  
+  gsap.utils.toArray('#about_btc .category_item').forEach((item, i) => {
+    gsap.fromTo(item,
+      { y: i * 30 },
+      {
+        y: i * -40,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: item,
+          start: 'top 100%',
+          end: 'bottom top',
+          scrub: true
+          // markers: true
+        }
+      }
+    );
+  });
+
+  gsap.utils.toArray('#about_btc .category_image').forEach((wrap, i) => {
+    const img = wrap.querySelector('img');
+    if (!img) return;
+    gsap.to(img, {
+      y: 0 + (i * 10),
+      ease: 'none',
+      scrollTrigger: {
+        trigger: wrap,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scrub: true,
+      }
+    });
+  });
+
+  gsap.utils.toArray("#vision_mission .videoC video").forEach((img) => {
+    gsap.to(img, {
+      y: 0,
+      ease: "none",
+      scrollTrigger: {
+        trigger: img.closest(".videoC") || img,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    });
+  });
+  gsap.utils.toArray("#vision_mission .text").forEach((text) => {
+    gsap.to(text, {
+      y: '-20%',
+      ease: "none",
+      scrollTrigger: {
+        trigger: text,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    });
+  });
+
+
+  gsap.utils.toArray("#vision_mission .videoC").forEach((videoDiv) => {
+    gsap.from(videoDiv, {
+      y: 100,
+      opacity: 0,      
+      ease: "power4.out",
+      duration: 1.2,      
+      scrollTrigger: {
+        trigger: videoDiv,
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      }
+    });
+  });
+
+
+
+
 });
