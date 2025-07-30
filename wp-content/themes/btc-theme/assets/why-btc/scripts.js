@@ -1,19 +1,38 @@
 $(document).ready(function () {
 
-    const homeBtcSwiper = new Swiper(".home-btc-swiper", {
-      grabCursor: true,
-      effect: "creative",
-      creativeEffect: {
-        prev: {
-          shadow: true,
-          translate: ["-20%", 0, -1],
-        },
-        next: {
-          translate: ["100%", 0, 0],
-        },
-      },
-        
-    });
+const homeBtcSwiper = new Swiper(".home-btc-swiper", {
+  grabCursor: true,
+  effect: "creative",
+  speed: 600,
+  creativeEffect: {
+    prev: {
+      translate: [0, 0, -400],
+      opacity: 0,
+    },
+    next: {
+      translate: ["100%", 0, 0],
+      opacity: 0,
+    },
+    current: {
+      translate: [0, 0, 0],
+      opacity: 1,
+    },
+  },
+  on: {
+    slideChangeTransitionStart() {
+      document
+        .querySelectorAll(".swiper-slide")
+        .forEach((el) => el.classList.add("blurring"));
+    },
+    slideChangeTransitionEnd() {
+      document
+        .querySelectorAll(".swiper-slide")
+        .forEach((el) => el.classList.remove("blurring"));
+    },
+  },
+});
+
+
 
 
     gsap.from("#globalSearch", {

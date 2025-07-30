@@ -2731,6 +2731,22 @@ get_header();
 
 </section>
 
+<style>
+    .swiper-slide {
+  transition: filter 0.3s ease;
+}
+
+/* Blur only during transition */
+.blurring.swiper-slide-prev,
+.blurring.swiper-slide-next {
+  filter: blur(6px);
+}
+
+.blurring.swiper-slide-active {
+  filter: blur(0);
+}
+
+</style>
 
 <section id="homeOfBtc">
     <img class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/homeOfBtc.png"  ?>" alt="">

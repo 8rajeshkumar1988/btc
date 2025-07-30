@@ -555,6 +555,10 @@ body {
   #product_page_details {
     grid-template-columns: 1fr;
   }
+  #product_page_details .heading {
+    margin-bottom: var(--spaceBelow_heading);
+    text-align: center;
+  }
   #product_page_details .shareholder_logos {
     align-items: flex-start;
   }

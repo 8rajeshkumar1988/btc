@@ -584,9 +584,12 @@ body {
   #arise_details {
     .heading {
       margin-bottom: 20px;
+      // text-align: center;
     }
     .arise_container {
       .logo_container {
+        // display: grid;
+        // place-items: center;
         img {
           width: 60%;
         }
@@ -598,6 +601,10 @@ body {
     }
   }
   #product_page_details {
+    .heading{
+      margin-bottom: var(--spaceBelow_heading);
+      text-align: center;
+    }
     grid-template-columns: 1fr;
     .shareholder_logos {
       align-items: flex-start;
