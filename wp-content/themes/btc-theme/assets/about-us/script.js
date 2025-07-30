@@ -197,6 +197,23 @@ $(document).ready(function () {
   });
 
 
+  gsap.utils.toArray("#our_leadership .leader_card").forEach((leader, i) => {
+    gsap.from(leader, {
+      y: 100,
+      opacity: 0,      
+      ease: "power4.out",
+      duration: 1.2,  
+      delay: i * 0.1,
+      scrollTrigger: {
+        trigger: leader,
+        start: "top 90%",
+        toggleActions: "restart none none reverse",
+      }
+    });
+  });
+
+
+
 
 
 });
