@@ -55,18 +55,18 @@ the_post();
     <div class="about_btc_container">
         <div class="swiper about_btc">
             <div class="swiper-wrapper">
-                <div class="swiper-slide category_item">
+                <div class="swiper-slide category_item" animateHeading>
                     <div class="category_image">
                         <img src="<?php echo get_template_directory_uri() . "/assets/images/about-sec-1.jpg"  ?>" alt="" />
                     </div>
-                    <p class="category_description">
+                    <p class="category_description" >
                         BTC, located in Benin, is West Africa's first fully vertically
                         integrated factory, transforming rain-fed, non-GMO
                         CmiA-certified cotton—widely recognized and trusted by ginning
                         associations and industry stakeholders—into premium apparel.
                     </p>
                 </div>
-                <div class="swiper-slide category_item">
+                <div class="swiper-slide category_item" animateHeading>
                     <div class="category_image">
                         <img src="<?php echo get_template_directory_uri() . "/assets/images/about-sec-2.jpg" ?>" alt="" />
                     </div>
@@ -77,7 +77,7 @@ the_post();
                         sustainability at every stage.
                     </p>
                 </div>
-                <div class="swiper-slide category_item">
+                <div class="swiper-slide category_item" animateHeading>
                     <div class="category_image">
                         <img src="<?php echo get_template_directory_uri() . "/assets/images/about-sec-3.jpg"  ?>" alt="" />
                     </div>
@@ -104,11 +104,10 @@ the_post();
     </div>
 </section>
 <section id="vision_mission">
-    <div class="vision_mission_container">
-        
-        <video autoplay loop muted playsinline  src="<?php echo get_template_directory_uri() . "/assets/images/vision.mp4"  ?>"></video>
+    <div class="vision_mission_container videoC">
+        <video autoplay loop muted playsinline  src="<?php echo get_template_directory_uri() . "/assets/images/about-us.mp4"  ?>"></video>
     </div>
-    <div class="vision_mission_container" animateHeading>
+    <div class="vision_mission_container text" animateHeading>
         <h2>Vision</h2>
         <p>
             To lead Africa's textile transformation by pioneering sustainable,
@@ -116,11 +115,10 @@ the_post();
             global standards for quality and environmental responsibility.
         </p>
     </div>
-    <div class="vision_mission_container">
-        
-        <video autoplay loop muted playsinline src="<?php echo get_template_directory_uri() . "/assets/images/mission.mp4"  ?>"></video>
+    <div class="vision_mission_container videoC">        
+        <video autoplay loop muted playsinline src="<?php echo get_template_directory_uri() . "/assets/images/about-us.mp4"  ?>"></video>
     </div>
-    <div class="vision_mission_container" animateHeading>
+    <div class="vision_mission_container text" animateHeading>
         <h2>Mission</h2>
         <p>
             At BTC, we shape the future of textiles by integrating <strong> sustainability,
