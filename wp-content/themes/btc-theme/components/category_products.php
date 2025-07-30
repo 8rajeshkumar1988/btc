@@ -44,10 +44,10 @@
                 $title_text = get_the_title();
               }
 
-              $image = '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+              $image = '<img class="productsImages" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
               echo $image;
             } else {
-              echo '<img src="' . get_template_directory_uri() . '/assets/images/placeholder.png' . '" alt="Placeholder">';
+              echo '<img class="productsImages" src="' . get_template_directory_uri() . '/assets/images/placeholder.png' . '" alt="Placeholder">';
             }
             ?>
           </div>

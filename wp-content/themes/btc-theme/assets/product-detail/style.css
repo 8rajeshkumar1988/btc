@@ -136,10 +136,11 @@ body {
   position: relative;
   width: 100%;
   aspect-ratio: 345/295;
+  overflow: hidden;
 }
-#explore_products .explore_products_container .products_item .product_image img {
+#explore_products .explore_products_container .products_item .product_image video, #explore_products .explore_products_container .products_item .product_image img {
   width: 100%;
-  height: 100%;
+  height: calc(100% + 100px);
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
