@@ -2697,8 +2697,10 @@ get_header();
     </svg>
 
     <div class="content">
-        <p class="first">West Africa’s Growing Economy Hub</p>
-        <p class="second">Benin At A Glance</p>
+        <div animateHeading>
+            <p class="first">West Africa’s Growing Economy Hub</p>
+            <p class="second">Benin At A Glance</p>
+        </div>
         <div class='subContent'>
             <div>
                 <p class="title">GDP</p>
@@ -2732,15 +2734,15 @@ get_header();
 
 <section id="homeOfBtc">
     <img class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/homeOfBtc.png"  ?>" alt="">
-    <div class="heading">
+    <div class="heading" animateHeading>
         <p>Home of BTC</p>
         <h3>GDIZ – Glo-Djigbé Industrial Zone</h3>
     </div>
     <div class="content swiper">
-        <div class="first">
+        <div class="first" animateHeading>
             <p>BTC is proudly based in <strong>GDIZ - Glo-Djigbé Industrial Zone</strong>, a public-private development project backed by the Government of Benin and ARISE IIP, built to offer world-class industrial infrastructure and business facilitation.</p>
         </div>
-        <div class="second">
+        <div class="second" animateHeading>
             <p class="title">Why GDIZ Matters to Our Clients</p>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -2766,7 +2768,7 @@ get_header();
 
 <section id="roleOfbtc">
     <img class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="">
-    <div class="heading">
+    <div class="heading" animateHeading>
         <p>Driving Local Impact, Creating Global Change</p>
         <h3>BTC's Role in Benin's Next Chapter</h3>
     </div>
