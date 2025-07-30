@@ -2738,13 +2738,29 @@ get_header();
         <p>Home of BTC</p>
         <h3>GDIZ – Glo-Djigbé Industrial Zone</h3>
     </div>
-    <div class="content swiper">
+    <div class="content  ">
         <div class="first" animateHeading>
             <p>BTC is proudly based in <strong>GDIZ - Glo-Djigbé Industrial Zone</strong>, a public-private development project backed by the Government of Benin and ARISE IIP, built to offer world-class industrial infrastructure and business facilitation.</p>
         </div>
-        <div class="second" animateHeading>
+        <div class="second home-btc-swiper" animateHeading>
             <p class="title">Why GDIZ Matters to Our Clients</p>
             <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <img src="<?php echo get_template_directory_uri() . "/assets/images/readyToUse.svg"  ?>" alt="">
+                        <div>
+                            <p class="titles">Ready-To-Use Infra & Industrial Setup</p>
+                            <p class="copy">Purpose built for textile, apparel, and agro-industrial businesses</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="<?php echo get_template_directory_uri() . "/assets/images/accessoryEcosystem.svg"  ?>" alt="">
+                        <div>
+                            <p class="titles">Accessory Ecosystem</p>
+                            <p class="copy">On-site availability of trims, accessories, and fabric finishing partners</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="swiper-slide">
                     <div>
                         <img src="<?php echo get_template_directory_uri() . "/assets/images/readyToUse.svg"  ?>" alt="">

@@ -208,6 +208,7 @@
             }
         }
         .second {
+            overflow: hidden;
             .title {
                 color: var(--secondaryBlack);
                 font-size: var(--font-20);
@@ -216,6 +217,7 @@
             .swiper-wrapper {
                 margin-top: calc(var(--font-20) * 1.5);
                 .swiper-slide {
+                    background: linear-gradient(180deg, #F8FBFF 0%, #F1F6FF 100%);
                     display: flex;
                     flex-direction: column;
                     gap: calc(var(--font-20) * 2);
