@@ -12,7 +12,7 @@ body {
   inset: 0;
   width: 100%;
   z-index: -1;
-  transform: translate(0%, -25%);
+  top: -20%;
 }
 #vertical_integration .heading h2 {
   text-align: center;
@@ -208,7 +208,9 @@ body {
   inset: 0;
   width: 85%;
   z-index: -1;
-  transform: translate(-5%, -50%) rotate(-70deg);
+  top: -50%;
+  left: -5%;
+  transform: rotate(-70deg);
 }
 #logistics_shipping_efficiency .logistics_shipping_efficiency_head {
   display: flex;
@@ -268,7 +270,9 @@ body {
 @media screen and (max-width: 1200px) {
   #logistics_shipping_efficiency > img:first-child {
     width: 100%;
-    transform: translate(-10%, -50%) rotate(-70deg);
+    left: -10%;
+    top: -40%;
+    transform: rotate(-70deg);
   }
   #logistics_shipping_efficiency .logistics_shipping_efficiency_container {
     grid-template-columns: repeat(2, 1fr);
@@ -280,6 +284,7 @@ body {
 @media screen and (max-width: 1024px) {
   #vertical_integration > img {
     width: 150%;
+    top: -10%;
   }
   #vertical_integration .cards_wrapper .card {
     width: calc((100% - var(--paddingX)) / 2);
@@ -308,7 +313,9 @@ body {
   }
   #logistics_shipping_efficiency > img:first-child {
     width: 150%;
-    transform: translate(-20%, -50%) rotate(-70deg);
+    left: -20%;
+    top: -10%;
+    transform: rotate(-70deg);
   }
   #logistics_shipping_efficiency .logistics_shipping_efficiency_container {
     grid-template-columns: 1fr;

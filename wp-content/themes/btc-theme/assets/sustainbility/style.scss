@@ -85,10 +85,10 @@
   align-items: center;
   & > img {
     position: absolute;
-    inset: 0;
-    width: 46%;
+    bottom: -85%;
+    right: 0;
+    width: 80%;
     z-index: -1;
-    transform: translate(118%, -25%) rotate(0deg);
   }
   h2 {
     font-size: var(--font-46);

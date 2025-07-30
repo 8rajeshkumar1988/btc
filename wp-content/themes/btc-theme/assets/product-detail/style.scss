@@ -9,7 +9,7 @@ body {
     inset: 0;
     width: 100%;
     z-index: -1;
-    transform: translate(0%, -25%);
+    // transform: translate(0%, -25%);
   }
   .swiper-slide.swiper-slide-next {
     & > img{
@@ -113,11 +113,11 @@ body {
   & > img {
     width: 100%;
     position: absolute;
-    transform: rotate(193deg) translate(4%, 0%);
+    transform: rotate(193deg);
     inset: 0;
     z-index: 0;
     opacity: 0.2;
-    top: 10%;
+    // top: 10%;
   }
   .heading {
     position: relative;

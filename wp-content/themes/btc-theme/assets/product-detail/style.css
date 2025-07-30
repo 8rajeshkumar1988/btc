@@ -11,7 +11,6 @@ body {
   inset: 0;
   width: 100%;
   z-index: -1;
-  transform: translate(0%, -25%);
 }
 #product_spotlight .swiper-slide.swiper-slide-next > img {
   transform: translateX(-300px);
@@ -108,11 +107,10 @@ body {
 #explore_products > img {
   width: 100%;
   position: absolute;
-  transform: rotate(193deg) translate(4%, 0%);
+  transform: rotate(193deg);
   inset: 0;
   z-index: 0;
   opacity: 0.2;
-  top: 10%;
 }
 #explore_products .heading {
   position: relative;

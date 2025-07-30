@@ -16,7 +16,7 @@ body {
   inset: 0;
   width: 100%;
   z-index: -1;
-  transform: translate(0%, -25%);
+  top: -20%;
 }
 #news_media .heading h2 {
   font-size: var(--heading);
