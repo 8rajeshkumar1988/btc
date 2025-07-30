@@ -31,7 +31,7 @@ get_header();
 
   <div class="content">
     <p class="breadcrub">&nbsp;</p>
-    <div class="heading">
+    <div class="heading" animateHeadingBanner>
       <p><?php the_title(); ?></p>
       <?php the_content(); ?>
     </div>

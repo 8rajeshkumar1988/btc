@@ -26,6 +26,7 @@ body {
   margin-top: 20px;
 }
 #vertical_integration .cards_wrapper {
+  perspective: 1000px;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
@@ -48,7 +49,7 @@ body {
 }
 #vertical_integration .cards_wrapper .card > img {
   width: 100%;
-  height: 100%;
+  height: calc(100% + 100px);
   position: absolute;
   inset: 0;
   -o-object-fit: cover;
