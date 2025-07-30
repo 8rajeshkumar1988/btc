@@ -209,6 +209,9 @@
 #homeOfBtc .content .first * b {
   font-weight: 600;
 }
+#homeOfBtc .content .second {
+  overflow: hidden;
+}
 #homeOfBtc .content .second .title {
   color: var(--secondaryBlack);
   font-size: var(--font-20);
@@ -218,6 +221,7 @@
   margin-top: calc(var(--font-20) * 1.5);
 }
 #homeOfBtc .content .second .swiper-wrapper .swiper-slide {
+  background: linear-gradient(180deg, #F8FBFF 0%, #F1F6FF 100%);
   display: flex;
   flex-direction: column;
   gap: calc(var(--font-20) * 2);

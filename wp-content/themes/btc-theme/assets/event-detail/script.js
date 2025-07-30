@@ -18,16 +18,34 @@ var event_btc_detail = new Swiper(".event_btc", {
   },
 });
 
- function increaseValue() {
-    const input = document.getElementById('attendees_number');
-    let value = parseInt(input.value, 10) || 0;
-    if (value < 99) input.value = value + 1;
-  }
+function copyAddress(button) {
+  const latitude = button.getAttribute("data-lat");
+  const longitude = button.getAttribute("data-lng");
+  const url = `https://www.google.com/maps?q=${latitude},${longitude}`;
 
-  function decreaseValue() {
-    const input = document.getElementById('attendees_number');
-    let value = parseInt(input.value, 10) || 0;
-    if (value > 1) input.value = value - 1;
+  navigator.clipboard.writeText(url).then(() => {
+    const copyIcon = button.querySelector(".copy-icon");
+    const checkIcon = button.querySelector(".check-icon");
+
+    copyIcon.classList.remove("active");
+    checkIcon.classList.add("active");
+
+    setTimeout(() => {
+      checkIcon.classList.remove("active");
+      copyIcon.classList.add("active");
+    }, 1500);
+  });
+}
+
+
+
+function changeAttendees(delta) {
+    const input = document.getElementById("attendees_number");
+    let val = parseInt(input.value, 10) || 1;
+    val += delta;
+    if (val < 1) val = 1;
+    if (val > 99) val = 99;
+    input.value = val.toString().padStart(2, "0");
   }
 
 

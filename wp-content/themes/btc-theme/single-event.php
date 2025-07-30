@@ -79,7 +79,22 @@ if ($latitude && $longitude) {
         </div>
         <div class="button_container">
             <div class="copy_address">
-                <button><img src="<?php echo get_template_directory_uri() . '/assets/images/copy.svg'; ?>" alt="" /> Copy Address</button>
+               <button id="copyBtn" onclick="copyAddress(this)"  data-lat="<?php echo esc_attr($latitude); ?>" data-lng="<?php echo esc_attr($longitude); ?>">
+                <span class="icon-wrapper">
+                    <img
+                    class="copy-icon active"
+                    src="<?php echo get_template_directory_uri() . '/assets/images/copy.svg'; ?>"
+                    alt="Copy"
+                    />
+                    <img
+                    class="check-icon"
+                    src="<?php echo get_template_directory_uri() . '/assets/images/check.png'; ?>"
+                    alt="Copied"
+                    />
+                </span>
+                Copy Address
+                </button>
+
             </div>
             <a target="_blank" href="https://www.google.com/maps?q=<?php echo $latitude ?>,<?php echo $longitude ?>" class="cta">Open in Maps <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" /></a>
         </div>
@@ -183,7 +198,7 @@ if ($gallery && is_array($gallery)) {
         <div class="phone_number">
             <label for="phoneno">Phone number</label>
             <br />
-            <input id="phoneno" type="tel" name="phone" placeholder="Enter your phone number" />
+            <input id="phoneno" type="tel" autocomplete="new-number" name="phone" placeholder="Enter your phone number" />
         </div>
         <div class="reason_to_attend">
             <label for="reason">Reason to Attend</label>
@@ -197,7 +212,7 @@ if ($gallery && is_array($gallery)) {
                 <div class="input-group">
                     <div
                         class="value-button descrease"
-                        onclick="decreaseValue()"
+                        onclick="changeAttendees(-1)"
                         value="Decrease Value">
                         <img src="<?php echo get_template_directory_uri() . '/assets/images/minus.svg'; ?>" alt="" />
                     </div>
@@ -205,13 +220,14 @@ if ($gallery && is_array($gallery)) {
                         name="no_of_attendees"
                         type="number"
                         id="attendees_number"
-                        value="1"
-                        min="1"
+                        value="01"
+                        min="01"
                         max="99"
+                        maxlength="2"
                         readonly />
                     <div
                         class="value-button increase"
-                        onclick="increaseValue()"
+                         onclick="changeAttendees(1)"
                         value="Increase Value">
                         <img src="<?php echo get_template_directory_uri() . '/assets/images/plus.svg'; ?>" alt="" />
                     </div>
@@ -225,6 +241,9 @@ if ($gallery && is_array($gallery)) {
             </div>
         </div>
     </form>
+    <div class="event_form_error_container">
+        <p class="event_form_error"></p>
+    </div>
 </section>
 
 <?php
