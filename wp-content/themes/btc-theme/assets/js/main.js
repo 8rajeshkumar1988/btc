@@ -155,7 +155,7 @@ $(document).ready(function () {
           this.classList.add("error_input");
           // this.focus();
         } else {
-            this.classList.remove("error_input");
+          this.classList.remove("error_input");
         }
       });
     });
@@ -226,17 +226,17 @@ $(document).ready(function () {
 
 
 
-    gsap.from('.footerCopy', {
-      y: 100,
-      opacity: 0,
-      ease: "'power4.out'",
-      duration: 0.8,
-      scrollTrigger: {
-        trigger: '.footerCopy',
-        start: "top 90%",
-        toggleActions: "play none none reverse",
-      },
-    });
+  gsap.from('.footerCopy', {
+    y: 100,
+    opacity: 0,
+    ease: "'power4.out'",
+    duration: 0.8,
+    scrollTrigger: {
+      trigger: '.footerCopy',
+      start: "top 90%",
+      toggleActions: "play none none reverse",
+    },
+  });
 
 
 
@@ -253,6 +253,26 @@ $(document).ready(function () {
       stagger: 0.3, // ✅ stagger between children      
     });
   });
+
+
+  const marqeeImgs = gsap.utils.toArray('.marquee-container img');
+  gsap.from(marqeeImgs, {
+    scale: 0,
+    opacity: 0,
+    ease: "power4.out",
+    duration: 1.2,
+    stagger: {
+      each: 0.05,
+      from: "random"
+    },
+    scrollTrigger: {
+      trigger: '.marquee-content',
+      start: "top 90%",
+      toggleActions: "play none none reverse",
+    }
+  });
+
+
 
 
 });

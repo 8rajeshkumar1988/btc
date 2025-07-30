@@ -43,9 +43,6 @@ function toggleNavButtons(swiperInstance) {
 
   const nextBtn = document.querySelector('.about_btc-next');
   const prevBtn = document.querySelector('.about_btc-prev');
-  console.log(totalSlides);
-  console.log(slidesPerView);
-  console.log(totalSlides <= slidesPerView);
   if (totalSlides <= slidesPerView) {
     nextBtn.style.display = 'none';
     prevBtn.style.display = 'none';
@@ -185,9 +182,9 @@ $(document).ready(function () {
   gsap.utils.toArray("#vision_mission .videoC").forEach((videoDiv) => {
     gsap.from(videoDiv, {
       y: 100,
-      opacity: 0,      
+      opacity: 0,
       ease: "power4.out",
-      duration: 1.2,      
+      duration: 1.2,
       scrollTrigger: {
         trigger: videoDiv,
         start: "top 80%",
@@ -200,18 +197,94 @@ $(document).ready(function () {
   gsap.utils.toArray("#our_leadership .leader_card").forEach((leader, i) => {
     gsap.from(leader, {
       y: 100,
-      opacity: 0,      
+      opacity: 0,
       ease: "power4.out",
-      duration: 1.2,  
+      duration: 1.2,
       delay: i * 0.1,
       scrollTrigger: {
         trigger: leader,
-        start: "top 90%",
+        start: "top 80%",
         toggleActions: "restart none none reverse",
       }
     });
   });
 
+
+  gsap.fromTo('#product_page_details .left ', {
+    y: -80
+  }, {
+    y: 80,
+    ease: "none",
+    duration: 1.2,
+    scrollTrigger: {
+      trigger: '#product_page_details .left',
+      start: "top 100%",
+      end: "130% 0%",
+      toggleActions: "play none none reverse",
+      scrub: true
+    }
+  })
+
+
+  gsap.fromTo('#product_page_details .right ', {
+    y: -110
+  }, {
+    y: 110,
+    ease: "none",
+    duration: 1.2,
+    scrollTrigger: {
+      trigger: '#product_page_details .right',
+      start: "top 100%",
+      end: "120% 0%",
+      toggleActions: "play none none reverse",
+      scrub: true,
+    }
+  })
+
+
+
+  gsap.from('#our_impact .impact_wrapper', {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    duration: 1.2,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: '#our_impact',
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    }
+  });
+
+
+  gsap.utils.toArray("#our_impact .impact_wrapper.open").forEach((leader, i) => {
+    gsap.from(leader, {
+      backgroundPosition: "100% 0%",
+      ease: "none",
+      scrollTrigger: {
+        trigger: leader,
+        start: "top 90%",
+        end: "bottom top",
+        toggleActions: "restart none none reverse",
+        scrub: true
+      }
+    });
+  });
+
+ gsap.utils.toArray("#certificates_compliances .certificate_card").forEach((card, i) => {
+  gsap.from(card, {
+    y: 100,
+    opacity: 0,
+    // ease: "power4.out",
+    duration: 1.2,
+    delay: 0.1 * i,
+    scrollTrigger: {
+      trigger: card,
+      start: "top 90%",
+      toggleActions: "restart none none reverse",
+    }
+  });
+});
 
 
 
