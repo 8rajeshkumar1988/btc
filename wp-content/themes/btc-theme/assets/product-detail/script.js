@@ -47,6 +47,7 @@ var spotlight_slider = new Swiper(".spotlight_slider", {
 });
 
 $(document).ready(function () {
+
   gsap.utils.toArray("#explore_products .product_image").forEach((card, i) => {
     const media = card.querySelector(".productsImages");
     if (!media) return;
@@ -79,4 +80,21 @@ $(document).ready(function () {
       },
     });
   });
+
+
+
+  gsap.from("#faqs .faq, #faqs .faq p, #faqs .faq li", {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    duration: 1.2,
+    stagger: 0.05,
+    scrollTrigger: {
+      trigger: "#faqs .accordian",
+      start: "top 70%",
+      toggleActions: "play none none reverse",
+    },
+  });
+
+
 });

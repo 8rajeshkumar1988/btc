@@ -6,17 +6,22 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    & > svg {
+    overflow: hidden;
+    & > svg, .lottie {
         position: absolute;
         height: 100%;
         width: auto;
-        right: 0;
+        right: -5%;
         top: 0;
+    }
+    .content_wrapper{
+        position: relative;
     }
     .content {
         position: relative;
         padding: 40px;
         background-color: #fff;
+        bottom: 100px;
         h2 {
             font-size: var(--font-46);
             line-height: 1.3;
@@ -56,16 +61,18 @@
             position: relative;
             width: 100%;
             aspect-ratio: 6/4;
+            overflow: hidden;
             img {
-                height: 100%;
+                height: calc(100% + 200px);
                 width: 100%;
                 object-fit: cover;
+                transform: translateY(-200px);
             }
             p {
                 position: absolute;
                 padding: var(--font-24);
                 width: 100%;
-                bottom: 1%;
+                bottom: 0%;
                 left: 0;
                 font-size: var(--font-46);
                 font-weight: 500;
@@ -75,6 +82,7 @@
             }
         }
         .text {
+            height: fit-content;
             p,
             li {
                 font-size: var(--font-20);
@@ -315,7 +323,7 @@
     #globalSearch{
         max-height: 700px;
         height: auto;
-        & >  svg{
+        & >  svg, .lottie{
             width: 105%;
             height: auto;
         }
@@ -401,7 +409,7 @@
 
 @media screen and (max-width: 768px) {
     #globalSearch{
-        & > svg{
+        & > svg, .lottie{
             width: 130%;
             height: auto;
         }

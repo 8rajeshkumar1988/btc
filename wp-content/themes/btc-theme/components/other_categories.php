@@ -15,7 +15,7 @@
 
    <section id="explore_other_categories">
      <div class="explore_other_head">
-       <div class="heading">
+       <div class="heading" animateHeading> 
          <h2>Explore Other Categories</h2>
        </div>
        <div class="explore_other_buttons">

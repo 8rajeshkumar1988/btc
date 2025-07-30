@@ -37,6 +37,7 @@ the_post();
       </h1>
     </div>
     <div class="layer"></div>
+    <div class="layer2"></div>
   </div>
 </section>
 
@@ -62,7 +63,7 @@ $faqs = get_post_meta(get_the_ID(), 'category_faqs', true);
 if (!empty($faqs)) { ?>
   <section id="faqs">
     <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" />
-    <div class="heading">
+    <div class="heading" animateHeading>
       <p>Your Questions, Answered</p>
       <h2>Frequently Asked Questions</h2>
     </div>

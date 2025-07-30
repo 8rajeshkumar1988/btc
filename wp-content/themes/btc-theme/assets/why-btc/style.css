@@ -6,18 +6,23 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
+  overflow: hidden;
 }
-#globalSearch > svg {
+#globalSearch > svg, #globalSearch .lottie {
   position: absolute;
   height: 100%;
   width: auto;
-  right: 0;
+  right: -5%;
   top: 0;
+}
+#globalSearch .content_wrapper {
+  position: relative;
 }
 #globalSearch .content {
   position: relative;
   padding: 40px;
   background-color: #fff;
+  bottom: 100px;
 }
 #globalSearch .content h2 {
   font-size: var(--font-46);
@@ -58,24 +63,30 @@
   position: relative;
   width: 100%;
   aspect-ratio: 6/4;
+  overflow: hidden;
 }
 #sustainableManufacturer > div .img img {
-  height: 100%;
+  height: calc(100% + 200px);
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transform: translateY(-200px);
 }
 #sustainableManufacturer > div .img p {
   position: absolute;
   padding: var(--font-24);
   width: 100%;
-  bottom: 1%;
+  bottom: 0%;
   left: 0;
   font-size: var(--font-46);
   font-weight: 500;
   line-height: 1.2;
   color: #f7f7f7;
   background: linear-gradient(360deg, rgba(0, 0, 0, 0.84) 0%, rgba(0, 0, 0, 0) 100%);
+}
+#sustainableManufacturer > div .text {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 #sustainableManufacturer > div .text p,
 #sustainableManufacturer > div .text li {
@@ -307,7 +318,7 @@
     max-height: 700px;
     height: auto;
   }
-  #globalSearch > svg {
+  #globalSearch > svg, #globalSearch .lottie {
     width: 105%;
     height: auto;
   }
@@ -379,7 +390,7 @@
   }
 }
 @media screen and (max-width: 768px) {
-  #globalSearch > svg {
+  #globalSearch > svg, #globalSearch .lottie {
     width: 130%;
     height: auto;
   }

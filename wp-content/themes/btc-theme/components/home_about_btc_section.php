@@ -12,7 +12,6 @@ $key_pointers = new WP_Query(array(
 ));
 ?>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
 <section id="aboutBtc">
     <div class="worldMap" id="lottie-animation">
         <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>

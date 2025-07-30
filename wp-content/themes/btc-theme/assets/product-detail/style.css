@@ -209,6 +209,18 @@ body {
   padding-left: var(--paddingX);
   padding-right: var(--paddingX);
 }
+#explore_other_categories .explore_other_categories_container .explore_other_categories .swiper-slide .category_image > img {
+  transform: translateX(-120px);
+}
+#explore_other_categories .explore_other_categories_container .explore_other_categories .swiper-slide.swiper-slide-next .category_image > img {
+  transform: translateX(-80px);
+}
+#explore_other_categories .explore_other_categories_container .explore_other_categories .swiper-slide.swiper-slide-active .category_image > img {
+  transform: translateX(-40px);
+}
+#explore_other_categories .explore_other_categories_container .explore_other_categories .swiper-slide.swiper-slide-prev .category_image > img {
+  transform: translateX(0px);
+}
 #explore_other_categories .explore_other_categories_container .explore_other_categories .category_item .category_image {
   width: 100%;
   aspect-ratio: 526/450;
@@ -217,12 +229,13 @@ body {
   display: block;
 }
 #explore_other_categories .explore_other_categories_container .explore_other_categories .category_item .category_image > img {
-  width: 100%;
+  width: calc(100% + 120px);
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
   inset: 0;
+  transition: transform 1s ease-in-out;
 }
 #explore_other_categories .explore_other_categories_container .explore_other_categories .category_item .category_image p {
   white-space: nowrap;
