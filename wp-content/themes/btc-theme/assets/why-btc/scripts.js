@@ -42,7 +42,7 @@ const homeBtcSwiper = new Swiper(".home-btc-swiper", {
             trigger: "#globalSearch",
             start: "top 100%",
             end: "top 0%",
-            scrub: true,
+               scrub: true,
             toggleActions: "play none none reverse",
         }
     });

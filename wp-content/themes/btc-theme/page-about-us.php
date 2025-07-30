@@ -173,7 +173,7 @@ if ($leaderships->have_posts()) {
 
                         ?>
                     </div>
-                    <div class="leader_detail">
+                    <div class="leader_detail" animateHeading>
                         <h2 class="leader_title"><?php the_title(); ?></h2>
 
                         <p class="leader_description"><?php echo get_field('jobtitle'); ?></p>
@@ -202,22 +202,26 @@ if ($leaderships->have_posts()) {
         </h2>
     </div>
     <div class="shareholder_logos">
-        <div class="logo">
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/arise_logo.png" ?>" alt="" />
+        <div class="left">
+            <div class="logo">
+                <img src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/arise_logo.png" ?>" alt="" />
+            </div>
+            <div class="logo">
+                <img src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/LCB.png" ?>" alt="" />
+            </div>
+            <div class="logo">
+                <img
+                    src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/caisse_de_dpots_et_consignations_du_benin_cover.png" ?>"
+                    alt="" />
+            </div>
         </div>
-        <div class="logo">
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/LCB.png" ?>" alt="" />
-        </div>
-        <div class="logo">
-            <img
-                src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/caisse_de_dpots_et_consignations_du_benin_cover.png" ?>"
-                alt="" />
-        </div>
-        <div class="logo">
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SBTCLOGONEW.png" ?>" alt="" />
-        </div>
-        <div class="logo">
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SODECO.png" ?>" alt="" />
+        <div class="right">
+            <div class="logo">
+                <img src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SBTCLOGONEW.png" ?>" alt="" />
+            </div>
+            <div class="logo">
+                <img src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SODECO.png" ?>" alt="" />
+            </div>
         </div>
     </div>
 </section>
@@ -226,10 +230,10 @@ if ($leaderships->have_posts()) {
         <h2>Powered By</h2>
     </div>
     <div class="arise_container">
-        <div class="logo_container">
+        <div class="logo_container" animateHeading>
             <img src="<?php echo get_template_directory_uri() . "/assets/images/arise_logo.png" ?>" alt="" />
         </div>
-        <div class="description">
+        <div class="description" animateHeading>
             <p>
                 BTC is part of <strong>Arise IIP</strong>, a pan-African industrial
                 platform with interests in wood, cashew, soya, cocoa processing,
@@ -301,9 +305,8 @@ if ($leaderships->have_posts()) {
                 </div>
             </div>
         </div>
-
         <!-- PEOPLE -->
-        <div data-section="people" class="impact_wrapper bg-people open">
+        <div data-section="people" class="impact_wrapper bg-people open ">
             <div class="overlay"></div>
             <div class="impact_wrapper_head">
                 <h2>PEOPLE</h2>
@@ -342,7 +345,6 @@ if ($leaderships->have_posts()) {
                 </div>
             </div>
         </div>
-
         <!-- PLANET -->
         <div data-section="planet" class="impact_wrapper bg-planet">
             <div class="overlay"></div>
