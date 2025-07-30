@@ -133,14 +133,47 @@ $("#whatsapp_checkbox").on("change", function () {
 
   $("#btc-event-form").on("submit", function (e) {
     e.preventDefault();
-
     const $form = $(this);
+    let isValid = true;
+    $form.find(".error_input").removeClass("error_input");
+    const $name = $($form.find('[name="name"]'));
+    if (!$name.val().trim()) {
+      isValid = false;
+      $name.addClass("error_input");
+    }
+   
+    const $email = $($form.find('[name="email"]'));
+    const emailVal = $email.val().trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailVal)) {
+      isValid = false;
+      $email.addClass("error_input");
+    }
+
+    const $reason = $($form.find('[name="reason_to_attend"]'));
+    if (!$reason.val().trim()) {
+      isValid = false;
+      $reason.addClass("error_input");
+    }
+
+    const $phone = $($form.find('[name="phone"]'));
+    const phoneVal = $phone.val().trim();
+    const phonePattern = /^[0-9]{7,15}$/;
+    if (!phonePattern.test(phoneVal)) {
+      isValid = false;
+      $phone.addClass("error_input");
+    }
+    if (!isValid) {
+      return false;
+    }
+    const phoneInput = $form.find('[name="phone"]')[0];
+    const phone = phoneInput._intlTelInstance.getNumber();
     const data = {
       action: "save_event",
       nonce: aaLead.event_nonce,
       name: $form.find('[name="name"]').val(),
       email: $form.find('[name="email"]').val(),
-      phone: $form.find('[name="phone"]').val(),
+      phone: phone,
       reason_to_attend: $form.find('[name="reason_to_attend"]').val(),
       no_of_attendees: $form.find('[name="no_of_attendees"]').val(),
       source_url: window.location.href,
@@ -151,7 +184,7 @@ $("#whatsapp_checkbox").on("change", function () {
         alert(response.data);
         $form.trigger("reset");
       } else {
-        alert("Error: " + response.data);
+        $(".event_form_error").text(response.data);
       }
     });
   });
