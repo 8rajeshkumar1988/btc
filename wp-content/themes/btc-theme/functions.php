@@ -55,6 +55,9 @@ function btc_files()
             true // Load in footer (true = footer, false = header)
         );
     }
+    if (is_page('thank-you')) {
+        wp_enqueue_style('btc_thank_styles', get_theme_file_uri('/assets/thank-you/style.css'));
+    }
     if (is_page('capabilities')) {
         wp_enqueue_style('btc_capabilities_styles', get_theme_file_uri('/assets/capabilities/style.css'));
         wp_enqueue_script(

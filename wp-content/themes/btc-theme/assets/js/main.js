@@ -60,6 +60,37 @@ function scrollToSectionById(id) {
   });
 }
 
+function shareToFacebook() {
+  const url = event.currentTarget.dataset.url;
+  const fbURL = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+  window.open(fbURL, '_blank', 'noopener,noreferrer,width=600,height=400');
+}
+
+function shareToTwitter() {
+  const el = event.currentTarget;
+  const url = el.dataset.url;
+  const title = el.dataset.title || '';
+  const twitterURL = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
+  window.open(twitterURL, '_blank', 'noopener,noreferrer,width=600,height=400');
+}
+
+function shareToLinkedIn() {
+  const url = event.currentTarget.dataset.url;
+  const linkedInURL = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+  window.open(linkedInURL, '_blank', 'noopener,noreferrer,width=600,height=400');
+}
+
+function shareToWhatsApp() {
+  const el = event.currentTarget;
+  const url = el.dataset.url;
+  const title = el.dataset.title || '';
+  const message = `${title} - ${url}`;
+  const whatsappURL = `https://wa.me/?text=${encodeURIComponent(message)}`;
+  window.open(whatsappURL, '_blank', 'noopener,noreferrer,width=600,height=400');
+}
+
+
+
 
 // header js
 $(document).ready(function () {
