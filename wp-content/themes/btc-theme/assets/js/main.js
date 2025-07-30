@@ -221,7 +221,6 @@ $(document).ready(function () {
       // markers: true
     },
     transform: "translate(0%, -10%)",
-    ease: "power4.out",
     duration: 1.2,
   });
 

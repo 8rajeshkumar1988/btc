@@ -31,7 +31,7 @@ the_post();
 
     <div class="content">
         <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / About Us</p>
-        <div class="heading">
+        <div class="heading" animateHeadingBanner>
             <p><?php the_title(); ?></p>
             <?php the_content(); ?>
         </div>

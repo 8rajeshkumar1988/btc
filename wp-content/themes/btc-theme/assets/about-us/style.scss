@@ -33,7 +33,7 @@ body {
     }
   }
   .about_btc_button_container {
-    padding: 40px var(--paddingX);
+    padding: var(--spaceBelow_heading) var(--paddingX) var(--paddingY);
     display: flex;
     justify-content: flex-end;
   }
@@ -71,10 +71,10 @@ body {
     margin-top: var(--spaceBelow_heading);
 
     .about_btc {
-      padding-left: var(--paddingX);
+      padding: 0 var(--paddingX);
       .category_item {
-        padding: clamp(1.25rem, 1rem + 1.25vw, 2.5rem);
-        // border: 1px solid;
+        padding: var(--font-20);
+        height: auto;
         background-color: #ffffff;
         .category_image {
           width: 100%;
@@ -100,7 +100,7 @@ body {
           margin-top: var(--font-20);
           margin-bottom: 0;
           text-decoration: none;
-          font-size: var(--font-20);
+          font-size: var(--font-16);
           font-weight: 300;
           color: var(--tertiaryBlack);
           display: block;
@@ -600,11 +600,11 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
-  #about_btc {
-    .about_btc_buttons {
-      display: none;
-    }
-  }
+  // #about_btc {
+  //   .about_btc_buttons {
+  //     display: none;
+  //   }
+  // }
   #vision_mission {
     display: flex;
     flex-direction: column;
