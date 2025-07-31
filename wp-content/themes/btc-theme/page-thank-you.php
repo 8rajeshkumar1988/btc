@@ -22,15 +22,11 @@ the_post();
 $args = [
     'post_type'      => 'post',
     'post_status'    => 'publish',
-    'posts_per_page' => -1,
-    'meta_key'       => 'published_at',
-    'orderby'        => 'meta_value_num',
-    'order'          => 'DESC',
-    'cat'            => 1,
+    'posts_per_page' => 10,
+    'orderby'        => 'rand',   // Random order
+    'cat'            => 1,        // Category ID
 ];
-if (!empty($tag_slug)) {
-    $args['tag'] = $tag_slug;
-}
+
 
 $news = new WP_Query($args);
 if ($news->have_posts()) {
