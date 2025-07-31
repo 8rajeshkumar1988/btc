@@ -185,7 +185,7 @@ the_post();
     muted
     loop></video>
   <div class="custom_product_detail">
-    <div class="custom_product_detail_head">
+    <div class="custom_product_detail_head" animateHeading>
       <h2>Custom Products</h2>
       <p>
         We offer a wide range of customization options to bring your unique
@@ -193,7 +193,7 @@ the_post();
       </p>
     </div>
     <div class="custom_product_detail_list">
-      <div>
+      <div animateHeading>
         <img src="<?php echo get_template_directory_uri() . '/assets/images/machine.png'; ?>" alt="" />
         <p>
           Custom printing, <br />
@@ -201,7 +201,7 @@ the_post();
           to suit your brand's needs.
         </p>
       </div>
-      <div>
+      <div animateHeading>
         <img src="<?php echo get_template_directory_uri() . '/assets/images/shirtIcon.png'; ?>" alt="" />
         <p>
           Made-to-order <br />
@@ -210,7 +210,7 @@ the_post();
         </p>
       </div>
     </div>
-    <button class="cta leadpopup">
+    <button class="cta leadpopup" ctaButton >
       Start Customizing Today <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" />
     </button>
   </div>

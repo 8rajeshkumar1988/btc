@@ -551,10 +551,14 @@
   #ourCapabilities .rightContent {
     padding-top: calc(var(--paddingY) * 2);
   }
+  #linkedIn_video {
+    height: auto;
+    aspect-ratio: 16/10;
+  }
 }
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
   #aboutBtc > .worldMap {
-    width: 100%;
+    width: 140%;
     height: auto;
     top: calc(var(--paddingY) * 2.5);
   }
@@ -604,7 +608,7 @@
     left: 0;
     width: 100%;
     height: auto;
-    top: var(--paddingY);
+    top: calc(var(--paddingY) + 15px);
     max-width: unset;
     align-items: center;
   }
@@ -665,6 +669,15 @@
   #ourCapabilities .btnssNew {
     height: var(--navBtn);
     bottom: 0;
+  }
+  #linkedIn_video {
+    height: 50dvh;
+    width: 100%;
+  }
+  #linkedIn_video video {
+    position: initial;
+    height: calc(100% + 200px);
+    transform: translateY(-200px);
   }
 }
 @media screen and (max-width: 450px) {
