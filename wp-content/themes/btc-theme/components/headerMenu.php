@@ -11,7 +11,7 @@
         <img class="open" src="<?php echo get_template_directory_uri(); ?>/assets/images/quill_hamburger_black.svg" 
         alt="quill_hamburger">
         <?php else : ?>
-            <img class="open" src="<?php echo get_template_directory_uri(); ?>/assets/images/quill_hamburger.svg" >
+            <img class="open" alt="quill_hamburger" src="<?php echo get_template_directory_uri(); ?>/assets/images/quill_hamburger.svg" >
                 <?php endif; ?>
             <img class="close" src="<?php echo get_template_directory_uri(); ?>/assets/images/closeSvg.svg" alt="closeSvg">
     </button>

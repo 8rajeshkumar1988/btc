@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixed Scale Slides</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+       
+        background: #111;
+        font-family: sans-serif;
+        touch-action: none; /* prevent scrolling */
+      }
+      .container{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+      .image-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        width: 80vw;
+        height: 80vh;
+        background: #444;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: white;
+        z-index: 10;
+        pointer-events: none;
+        transition: background 0.3s;
+      }
+
+      .slide1 {
+        background: #e74c3c;
+      }
+      .slide2 {
+        background: #3498db;
+      }
+      .slide3 {
+        background: #2ecc71;
+      }
+      section{
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+
+    </section>
+    <div class="container">
+        <div class="image-wrapper slide1">Slide 1</div>
+        <div class="image-wrapper slide2">Slide 2</div>
+        <div class="image-wrapper slide3">Slide 3</div>
+    </div>
+    <section>
+
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Observer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+const slides = gsap.utils.toArray(".image-wrapper");
+let currentIndex = 0;
+let isTransitioning = false;
+let observer;
+let observerActive = false;
+
+// Initialize slides
+gsap.set(slides, { scale: 0, zIndex: 10 });
+gsap.set(slides[0], { scale: 1, zIndex: 20 });
+
+function goToSlide(index, direction) {
+  if (
+    index === currentIndex ||
+    index < 0 ||
+    index >= slides.length ||
+    isTransitioning
+  )
+    return;
+
+  isTransitioning = true;
+  const current = slides[currentIndex];
+  const next = slides[index];
+
+  gsap.set(next, { scale: 0, zIndex: 20 });
+
+  const tl = gsap.timeline({
+    onComplete: () => {
+      gsap.set(current, { zIndex: 10 });
+      currentIndex = index;
+
+      // Wait 1.5s before allowing next transition
+      setTimeout(() => {
+        isTransitioning = false;
+
+        // End conditions
+        if (direction === "down" && currentIndex === slides.length - 1) {
+          disableObserver();
+        }
+        if (direction === "up" && currentIndex === 0) {
+          disableObserver();
+        }
+      }, 1500);
+    },
+  });
+
+  tl.to(current, { scale: 0, duration: 0.6, ease: "power2.inOut" }, 0)
+    .to(next, { scale: 1, duration: 0.6, ease: "power2.inOut" }, 0);
+}
+
+function enableObserver() {
+  if (observerActive) return;
+  observerActive = true;
+
+  observer = Observer.create({
+    target: window,
+    type: "wheel,touch",
+    preventDefault: true,
+    tolerance: 10,
+    onDown: () => {
+      if (!isTransitioning && currentIndex + 1 < slides.length) {
+        goToSlide(currentIndex + 1, "down");
+      }
+    },
+    onUp: () => {
+      if (!isTransitioning && currentIndex - 1 >= 0) {
+        goToSlide(currentIndex - 1, "up");
+      }
+    },
+  });
+}
+
+function disableObserver() {
+  observerActive = false;
+  observer?.kill();
+  document.body.style.overflow = "auto";
+  ScrollTrigger.getById("container-pin")?.kill();
+}
+
+// ScrollTrigger pin behavior
+ScrollTrigger.create({
+  id: "container-pin",
+  trigger: ".container",
+  start: "top top",
+  end: () => "+=" + (window.innerHeight * slides.length),
+  pin: true,
+  pinSpacing: false,
+  onEnter: () => {
+    enableObserver();
+    document.body.style.overflow = "hidden";
+  },
+  onLeave: () => {
+    disableObserver();
+  },
+  onEnterBack: () => {
+    enableObserver();
+    document.body.style.overflow = "hidden";
+  },
+  onLeaveBack: () => {
+    disableObserver();
+  },
+});
+
+</script>
+
+  </body>
+</html>
