@@ -16,7 +16,7 @@
             <img class="close" src="<?php echo get_template_directory_uri(); ?>/assets/images/closeSvg.svg" alt="closeSvg">
     </button>
 </header>
-<section id="header" class="">
+<section id="header" data-lenis-prevent class="">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" class="logoBlue">
     <div class="left">
 

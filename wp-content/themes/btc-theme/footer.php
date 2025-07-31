@@ -51,7 +51,7 @@
             <a href="<?php echo site_url('/contact-us') ?>">Contact Us</a>
         </div>
         <div>
-            <a href="" class="title">Media</a>
+            <p class="title">Media</p>
             <a href="<?php echo site_url('/blogs') ?>">News & Blogs</a>
             <a href="<?php echo site_url('/all-event') ?>">Events & Engagements</a>
         </div>

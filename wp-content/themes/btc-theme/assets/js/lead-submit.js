@@ -193,7 +193,28 @@ $("#whatsapp_checkbox").on("change", function () {
   $("#btc-subscribe-form").on("submit", function (e) {
     e.preventDefault();
     const error_text = document.querySelector(".newsletter_error");
+    $(".subscribe_success").text('');
     const $form = $(this);
+    let isValid = true;
+    $form.find(".error_input").removeClass("error_input");
+    const $name = $($form.find('[name="name"]'));
+    if (!$name.val().trim()) {
+      isValid = false;
+      $name.addClass("error_input");
+    }
+   
+    const $email = $($form.find('[name="email"]'));
+    const emailVal = $email.val().trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailVal)) {
+      isValid = false;
+      $email.addClass("error_input");
+    }
+
+    if (!isValid) {
+      error_text.innerText = "Please fill all the fields*";
+      return false;
+    }
     const data = {
       action: "save_subscribe",
       nonce: aaLead.subscribe_nonce,
@@ -201,17 +222,16 @@ $("#whatsapp_checkbox").on("change", function () {
       email: $form.find('[name="email"]').val(),
       source_url: window.location.href,
     };
-    error_text;
+    error_text.innerText = "";
 
     $.post(aaLead.ajax_url, data, function (response) {
       if (response.success) {
-        alert(response.data);
+        console.log(response.data);
+        $(".subscribe_success").text(response.data);
         $form.trigger("reset");
-        error_text.innerText = "";
         
       } else {
         error_text.innerText = response.data;
-        // alert("Error: " + response.data);
       }
     });
   });

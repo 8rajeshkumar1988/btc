@@ -144,7 +144,7 @@ if ($news->have_posts()) {
 
                     ?>
                         <div class="swiper-slide blog_card">
-                            <div class="blog_image">
+                            <a href="<?php the_permalink(); ?>" class="blog_image">
                                 <?php
                                 $top_post_ids[] = get_the_ID();
                                 $thumbnail_id = get_post_thumbnail_id();
@@ -162,7 +162,7 @@ if ($news->have_posts()) {
                                 echo  $image;
 
                                 ?>
-                            </div>
+                            </a>
                             <div class="blog_description">
                                 <p><?php
                                     $date_raw = get_field('published_at');
@@ -235,7 +235,7 @@ if ($sarticles->have_posts()) {
 
             ?>
                 <div class="explore_media_card">
-                    <div class="explore_media_image">
+                    <a href="<?php the_permalink(); ?>" class="explore_media_image">
                         <?php
 
                         $thumbnail_id = get_post_thumbnail_id();
@@ -270,7 +270,7 @@ if ($sarticles->have_posts()) {
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <a href="<?php the_permalink(); ?>" class="cta explore_media_cta">View Article <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""></a>
                 </div>
             <?php } ?>

@@ -22,15 +22,11 @@ the_post();
 $args = [
     'post_type'      => 'post',
     'post_status'    => 'publish',
-    'posts_per_page' => -1,
-    'meta_key'       => 'published_at',
-    'orderby'        => 'meta_value_num',
-    'order'          => 'DESC',
-    'cat'            => 1,
+    'posts_per_page' => 10,
+    'orderby'        => 'rand',   // Random order
+    'cat'            => 1,        // Category ID
 ];
-if (!empty($tag_slug)) {
-    $args['tag'] = $tag_slug;
-}
+
 
 $news = new WP_Query($args);
 if ($news->have_posts()) {
@@ -50,7 +46,7 @@ if ($news->have_posts()) {
 
                     ?>
                         <div class="swiper-slide blog_card">
-                            <div class="blog_image">
+                            <a href="<?php the_permalink(); ?>" class="blog_image">
                                 <?php
                                 $top_post_ids[] = get_the_ID();
                                 $thumbnail_id = get_post_thumbnail_id();
@@ -68,7 +64,7 @@ if ($news->have_posts()) {
                                 echo  $image;
 
                                 ?>
-                            </div>
+                            </a>
                             <div class="blog_description">
                                 <p><?php
                                     $date_raw = get_field('published_at');

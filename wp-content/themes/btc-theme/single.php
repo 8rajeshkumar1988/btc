@@ -113,7 +113,7 @@ if ($posts->have_posts()) {
           ?>
 
             <div class="swiper-slide category_item">
-              <a href="./index.html" class="category_image">
+              <a href="<?php the_permalink(); ?>" class="category_image">
                 <?php
 
                 $thumbnail_id = get_post_thumbnail_id();

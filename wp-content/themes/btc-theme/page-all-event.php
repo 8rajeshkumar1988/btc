@@ -144,7 +144,7 @@ if ($upcomingEvents->have_posts()) {
   <section id="upcoming_events">
     <div class="heading" animateHeading>
       <p>Don't Miss</p>
-      <h2>Upcoming events</h2>
+      <h2>Upcoming Events</h2>
     </div>
     <div class="our_impact_container">
       <?php
@@ -256,7 +256,7 @@ if ($pastEvents->have_posts()) {
                 ?>
               </div>
               <div class="event_description">
-                <h2>BTC at FutureTextiles Summit 2025</h2>
+                <h2><?php the_title(); ?></h2>
                 <div class="event_date">
                   <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender.png" ?>" alt="" />
                   <p><?php echo date('j F Y', strtotime(get_field('event_from_date'))); ?>
