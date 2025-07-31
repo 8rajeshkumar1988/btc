@@ -28,7 +28,7 @@ body {
     // padding: 0 var(--paddingX);
     // padding-left: var(--paddingX);
     position: relative;
-    margin-top: 40px;
+    margin-top: var(--spaceBelow_heading);
     .swiper {
       overflow: visible;
     }
@@ -61,9 +61,9 @@ body {
         // backdrop-filter: blur(10px);
         position: relative;
         z-index: 1;
-        padding: 40px;
+        padding: var(--spaceBelow_heading);
         display: flex;
-        gap: 40px;
+        gap: var(--spaceBelow_heading);
         flex-direction: column;
         justify-content: center;
         .news_info {
@@ -160,7 +160,7 @@ body {
     }
   }
   .more_news_container {
-    margin-top: 40px;
+    margin-top: var(--spaceBelow_heading);
 
     .about_more_news {
       padding-left: var(--paddingX);
@@ -225,7 +225,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: clamp(1.25rem, -6.6129rem + 9.6774vw, 5rem);
-    margin-top: 40px;
+    margin-top: var(--spaceBelow_heading);
     .explore_media_card {
       position: relative;
       overflow: hidden;

@@ -26,7 +26,7 @@ body {
 }
 #news_media #news_spotlight {
   position: relative;
-  margin-top: 40px;
+  margin-top: var(--spaceBelow_heading);
 }
 #news_media #news_spotlight .swiper {
   overflow: visible;
@@ -43,9 +43,9 @@ body {
   height: 100%;
   position: relative;
   z-index: 1;
-  padding: 40px;
+  padding: var(--spaceBelow_heading);
   display: flex;
-  gap: 40px;
+  gap: var(--spaceBelow_heading);
   flex-direction: column;
   justify-content: center;
 }
@@ -151,7 +151,7 @@ body {
   transform: rotate(180deg);
 }
 #more_news .more_news_container {
-  margin-top: 40px;
+  margin-top: var(--spaceBelow_heading);
 }
 #more_news .more_news_container .about_more_news {
   padding-left: var(--paddingX);
@@ -211,7 +211,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: clamp(1.25rem, -6.6129rem + 9.6774vw, 5rem);
-  margin-top: 40px;
+  margin-top: var(--spaceBelow_heading);
 }
 #explore_media .explore_media_container .explore_media_card {
   position: relative;
