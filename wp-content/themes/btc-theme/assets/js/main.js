@@ -1,9 +1,14 @@
 let lenis;
 gsap.registerPlugin(SplitText);
 
-const scrollToTopOnReload = () => {
-  window.scrollTo(0, 0);
+window.onload = function () {
+  lenis.scrollTo(0, {
+    offset: 0,         
+    duration: 0,     
+    immediate: false,  
+  });
 };
+
 
 
 $(document).ready(function () {
