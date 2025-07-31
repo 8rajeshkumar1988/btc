@@ -1,9 +1,6 @@
 let lenis;
 gsap.registerPlugin(SplitText);
 
-const scrollToTopOnReload = () => {
-  window.scrollTo(0, 0);
-};
 
 
 $(document).ready(function () {

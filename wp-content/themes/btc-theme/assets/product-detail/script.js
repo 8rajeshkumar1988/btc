@@ -33,9 +33,9 @@ var explore_other_categories = new Swiper(".explore_other_categories", {
 });
 
 var spotlight_slider = new Swiper(".spotlight_slider", {
-  slidesPerView: 1.2,
-  initialSlide: 1,
-  spaceBetween: 30,
+  slidesPerView: 1.1,
+  initialSlide: 0,
+  spaceBetween: 40,
   centeredSlides: true,
   watchSlidesProgress: true,
   speed: 1500,
@@ -44,6 +44,14 @@ var spotlight_slider = new Swiper(".spotlight_slider", {
     nextEl: ".product_spotlight-next",
     prevEl: ".product_spotlight-prev",
   },
+  breakpoints: {
+    768: {
+      slidesPerView: 1.2,
+      spaceBetween: 30,
+      initialSlide: 1,
+    },
+  },
+
 });
 
 $(document).ready(function () {
@@ -91,10 +99,21 @@ $(document).ready(function () {
     stagger: 0.05,
     scrollTrigger: {
       trigger: "#faqs .accordian",
-      start: "top 70%",
+      start: "top 80%",
       toggleActions: "play none none reverse",
     },
   });
 
-
+  gsap.from("#explore_other_categories .swiper-slide", {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    duration: 1.2,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: "#explore_other_categories .swiper-wrapper",
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+  });
 });

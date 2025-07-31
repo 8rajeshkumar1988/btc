@@ -382,3 +382,32 @@ body {
     }
   }
 }
+
+
+
+@media screen and (max-width: 500px) {
+  #product_spotlight{
+    padding: var(--paddingY) 0px;
+  }
+  #explore_products{
+     .explore_products_container{
+       .products_item{
+         .product_image{
+          aspect-ratio: 1 / 1.2;
+         }
+       }
+     }
+  }
+
+  #explore_other_categories{
+    .explore_other_categories_container{
+       .explore_other_categories{
+         .category_item {
+          .category_image{
+            aspect-ratio: 1 / 1.2;
+          }
+         }
+       }
+    }
+  }
+}

@@ -390,7 +390,7 @@ body {
 }
 @media screen and (max-width: 480px) {
   #category_listing .category_list .category_list_card .category_list_card_img {
-    aspect-ratio: 1/1.3;
+    aspect-ratio: 1/1.2;
     max-height: 500px;
   }
 }/*# sourceMappingURL=style.css.map */
