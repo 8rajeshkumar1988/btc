@@ -969,7 +969,7 @@ header {
 
 @media screen and (max-width: 1024px) {
   :root {
-    --font-18: 16px;
+    --font-18:   clamp(0.9375rem, 0.8071rem + 0.4967vw, 1.125rem);
   }
   #lead_popup_form {
     form {

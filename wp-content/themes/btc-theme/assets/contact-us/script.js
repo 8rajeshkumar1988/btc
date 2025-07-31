@@ -14,3 +14,48 @@ $(".faq").click(function () {
   }
 });
 
+
+$(document).ready(function () {
+  gsap.from("#faqs .faq, #faqs .faq p, #faqs .faq li", {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    duration: 1.2,
+    stagger: 0.05,
+    scrollTrigger: {
+      trigger: "#faqs .accordian",
+      start: "top 70%",
+      toggleActions: "play none none reverse",
+    },
+  });
+
+
+  gsap.from('.virtual_container', {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    duration: 1.2,
+    scrollTrigger: {
+      trigger: '.virtual_container',
+      start: "top 85%",
+      toggleActions: "play none none reverse",
+    }
+  })
+
+  
+  gsap.to('.virtual_container iframe', {
+    y: 50,
+    ease: "none",
+    scrollTrigger: {
+      trigger: '.virtual_container',
+      start: "top 85%",
+      toggleActions: "play none none reverse",
+      scrub: true
+    }
+  })
+
+
+});
+
+
+

@@ -196,12 +196,15 @@ body {
   .virtual_container {
     position: relative;
     margin-top: 40px;
-    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 16/8;
+    overflow: hidden;
   }
 
   .virtual_container iframe {
     width: 100%;
-    aspect-ratio: 16/9;
+    height: calc(100% + 120px);
+    transform: translateY(-150px);
     border: 0;
     pointer-events: none; /* Only iframe is non-clickable initially */
   }
