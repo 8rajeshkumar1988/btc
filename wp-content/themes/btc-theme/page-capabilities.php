@@ -202,7 +202,7 @@ get_header();
 
 <section id="sustainability_details">
   <div class="sustainability_info">
-    <div>
+    <div class="leftt">
       <div class="heading">
         <h2>Sustainability</h2>
       </div>
@@ -221,7 +221,7 @@ get_header();
     </div>
   </div>
   <div class="technology_and_innovation">
-    <div class="heading">
+    <div class="heading" animateHeading>
       <h2>Technology and Innovation</h2>
     </div>
     <div class="tai_container">

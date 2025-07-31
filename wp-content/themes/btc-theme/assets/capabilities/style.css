@@ -38,6 +38,7 @@ body {
   aspect-ratio: 285/351;
   position: relative;
   min-width: 280px;
+  overflow: hidden;
 }
 #vertical_integration .cards_wrapper .card::after {
   content: "";
@@ -151,10 +152,11 @@ body {
 #sustainability_details .sustainability_info .image_wrapper img {
   position: absolute;
   inset: 0;
-  height: 100%;
+  height: calc(100% + 100px);
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  pointer-events: none;
 }
 #sustainability_details .technology_and_innovation .heading {
   padding-top: var(--paddingY);
