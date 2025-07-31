@@ -1,9 +1,4 @@
-let spotlight_slider = new Swiper(".spotlight_slider", {
-  slidesPerView: "auto",
-  spaceBetween: 30,
-});
-
-const about_more_news = new Swiper(".about_more_news", {
+const about_more_news_thank = new Swiper(".about_more_news", {
   slidesPerView: 1,
   spaceBetween: 20,
 
