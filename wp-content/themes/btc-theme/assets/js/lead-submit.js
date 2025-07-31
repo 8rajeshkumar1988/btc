@@ -122,9 +122,10 @@ $("#whatsapp_checkbox").on("change", function () {
 
     $.post(aaLead.ajax_url, data, function (response) {
       if (response.success) {
-        alert(response.data);
+        // alert(response.data);
         $form.trigger("reset");
         $(".lead_form_error").text("");
+        window.location.href = "/thank-you/";
       } else {
         $(".lead_form_error").text(response.data);
       }
@@ -181,8 +182,8 @@ $("#whatsapp_checkbox").on("change", function () {
 
     $.post(aaLead.ajax_url, data, function (response) {
       if (response.success) {
-        alert(response.data);
         $form.trigger("reset");
+        window.location.href = "/thank-you/";
       } else {
         $(".event_form_error").text(response.data);
       }

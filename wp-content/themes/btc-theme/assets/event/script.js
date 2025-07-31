@@ -1,4 +1,4 @@
-var swiper1 = new Swiper(".event_btc", {
+let swiper1 = new Swiper(".event_btc", {
   slidesPerView: 1.05,
   spaceBetween: 20,
 
@@ -17,7 +17,11 @@ var swiper1 = new Swiper(".event_btc", {
     },
   },
 });
-var swiper2 = new Swiper(".hero-slider", {
+
+
+
+
+let swiper2 = new Swiper(".hero-slider", {
   slidesPerView: 1,
   spaceBetween: 0,
   grabCursor: true,
