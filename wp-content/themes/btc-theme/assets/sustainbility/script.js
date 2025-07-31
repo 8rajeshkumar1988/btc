@@ -148,4 +148,35 @@ function pauseLenisFor(ms) {
 }
 
 
+
+
+  gsap.from('#sustainability_details h2, #sustainability_details p ', {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    duration: 1.5,
+    stagger: 0.3,
+    scrollTrigger: {
+        trigger: '#sustainability_details',
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+    }
+  })
+
+   gsap.utils.toArray("#certificates_compliances .certificate_card").forEach((card, i) => {
+  gsap.from(card, {
+    y: 100,
+    opacity: 0,
+    // ease: "power4.out",
+    duration: 1.2,
+    delay: 0.1 * i,
+    scrollTrigger: {
+      trigger: card,
+      start: "top 90%",
+      toggleActions: "restart none none reverse",
+    }
+  });
+});
+
+
 })

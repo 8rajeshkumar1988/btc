@@ -86,3 +86,24 @@
         <p class="lead_form_error"></p>
     </div>
 </form>
+
+
+
+
+<script>
+    $(document).ready(function() {
+        gsap.from('#aa-lead-form > div', {
+            opacity: 0,
+            y: 100,
+            duration: 1,
+            delay: 0.5,
+            ease: "power4.out",
+            stagger: 0.08,
+            scrollTrigger: {
+                trigger: "#aa-lead-form",
+                start: "top 85%",
+                toggleActions: "play none none reverse",
+            }
+        });
+    });
+</script>
