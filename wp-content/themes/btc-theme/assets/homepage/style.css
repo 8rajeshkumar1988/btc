@@ -3,6 +3,7 @@
   width: 100%;
   position: relative;
   padding: var(--paddingY) var(--paddingX) var(--paddingY);
+  overflow: hidden;
 }
 #aboutBtc .worldMap {
   position: absolute;
@@ -129,28 +130,45 @@
 #ourProducts .content .ourProducts > .swiper-wrapper {
   height: calc(clamp(23.75rem, 8.0357rem + 24.5536vw, 37.5rem) + 150px);
 }
-#ourProducts .content .ourProducts .items.swiper-slide-active > div {
+#ourProducts .content .ourProducts .items.swiper-slide-active > div,
+#ourProducts .content .ourProducts .items.swiper-slide-prev > div {
   height: calc(clamp(23.75rem, 8.0357rem + 24.5536vw, 37.5rem) + 150px);
 }
-#ourProducts .content .ourProducts .items.swiper-slide-active > div p {
+#ourProducts .content .ourProducts .items.swiper-slide-active > div p,
+#ourProducts .content .ourProducts .items.swiper-slide-prev > div p {
   opacity: 1;
 }
-#ourProducts .content .ourProducts .items.swiper-slide-active > p {
+#ourProducts .content .ourProducts .items.swiper-slide-active > p,
+#ourProducts .content .ourProducts .items.swiper-slide-prev > p {
   opacity: 0;
 }
+#ourProducts .content .ourProducts .items.swiper-slide > div > img {
+  transform: translateX(-150px);
+}
+#ourProducts .content .ourProducts .items.swiper-slide-active > div > img {
+  transform: translateX(-50px);
+}
+#ourProducts .content .ourProducts .items.swiper-slide-prev > div > img {
+  transform: translateX(0px);
+}
+#ourProducts .content .ourProducts .items.swiper-slide-next > div > img {
+  transform: translateX(-100px);
+}
 #ourProducts .content .ourProducts .items > div {
-  transition: all 0.3s ease;
+  transition: all 1s ease;
   position: relative;
   width: 100%;
   height: clamp(23.75rem, 8.0357rem + 24.5536vw, 37.5rem);
+  overflow: hidden;
 }
 #ourProducts .content .ourProducts .items > div > img {
   position: absolute;
   inset: 0;
-  width: 100%;
+  width: calc(100% + 150px);
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 1s ease-in-out;
 }
 #ourProducts .content .ourProducts .items > div .cta {
   position: absolute;
@@ -344,7 +362,8 @@
   opacity: 0;
   transform: translateX(-150px);
 }
-#ourCapabilities .swiper-slide .text, #ourCapabilities .swiper-slide-next .text {
+#ourCapabilities .swiper-slide .text,
+#ourCapabilities .swiper-slide-next .text {
   transition: all 0.8s ease-in-out;
   opacity: 0;
   transform: translateX(150px);

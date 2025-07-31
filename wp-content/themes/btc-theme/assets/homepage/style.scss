@@ -3,6 +3,7 @@
     width: 100%;
     position: relative;
     padding: var(--paddingY) var(--paddingX) var(--paddingY);
+    overflow: hidden;
     .worldMap {
         position: absolute;
         top: var(--paddingY);
@@ -133,7 +134,8 @@
             & > .swiper-wrapper {
                 height: calc(clamp(23.75rem, 8.0357rem + 24.5536vw, 37.5rem) + 150px);
             }
-            .items.swiper-slide-active {
+            .items.swiper-slide-active,
+            .items.swiper-slide-prev {
                 & > div {
                     height: calc(clamp(23.75rem, 8.0357rem + 24.5536vw, 37.5rem) + 150px);
                     p {
@@ -144,18 +146,49 @@
                     opacity: 0;
                 }
             }
+            .items.swiper-slide {
+                & > div {
+                    & > img {
+                        transform: translateX(-150px);
+                    }
+                }
+            }
+            .items.swiper-slide-active {
+                & > div {
+                    & > img {
+                        transform: translateX(-50px);
+                    }
+                }
+            }
+            .items.swiper-slide-prev {
+                & > div {
+                    & > img {
+                        transform: translateX(0px);
+                    }
+                }
+            }
+            .items.swiper-slide-next {
+                & > div {
+                    & > img {
+                        transform: translateX(-100px);
+                    }
+                }
+            }
+
             .items {
                 & > div {
-                    transition: all 0.3s ease;
+                    transition: all 1s ease;
                     position: relative;
                     width: 100%;
                     height: clamp(23.75rem, 8.0357rem + 24.5536vw, 37.5rem);
+                    overflow: hidden;
                     & > img {
                         position: absolute;
                         inset: 0;
-                        width: 100%;
+                        width: calc(100% + 150px);
                         height: 100%;
                         object-fit: cover;
+                        transition: all 1s ease-in-out;
                     }
                     .cta {
                         position: absolute;
@@ -359,12 +392,13 @@
         }
     }
     .swiper-slide.swiper-slide-prev {
-        .text {      
-            opacity: 0;      
+        .text {
+            opacity: 0;
             transform: translateX(-150px);
         }
     }
-    .swiper-slide, .swiper-slide-next {
+    .swiper-slide,
+    .swiper-slide-next {
         .text {
             transition: all 0.8s ease-in-out;
             opacity: 0;
@@ -462,11 +496,11 @@
         display: block;
         .spiralImage.active {
             width: auto;
-            height:  clamp(30rem, 7.7218rem + 27.4194vw, 40.625rem);
+            height: clamp(30rem, 7.7218rem + 27.4194vw, 40.625rem);
         }
         .spiralImage {
             position: absolute;
-            height:  clamp(30rem, 7.7218rem + 27.4194vw, 40.625rem);
+            height: clamp(30rem, 7.7218rem + 27.4194vw, 40.625rem);
             width: auto;
             aspect-ratio: 3/4.5;
             left: 0%;
@@ -490,7 +524,7 @@
     height: 90dvh;
     width: 100%;
     min-height: 400px;
-    position: relative;    
+    position: relative;
     video {
         position: fixed;
         z-index: -1;
@@ -501,7 +535,7 @@
         object-fit: cover;
     }
 }
-.blankSpace{
+.blankSpace {
     width: 100%;
     background-color: #fffff4;
     padding: calc(var(--paddingY) / 2);
@@ -712,14 +746,14 @@
         }
     }
     #ourCapabilities {
-        .swiper-slide{
-            .text{
-                img{
+        .swiper-slide {
+            .text {
+                img {
                     margin: 2% 0 4%;
                 }
             }
         }
-        .btnssNew{
+        .btnssNew {
             height: var(--navBtn);
             bottom: 0;
         }

@@ -31,7 +31,7 @@ $(document).ready(function () {
     //     delay: 2500,
     //     disableOnInteraction: false,
     // },
-
+    speed: 1000,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -304,20 +304,23 @@ $(document).ready(function () {
   });
 });
 
+
+
 $(document).ready(function () {
-  $(".worldMap path").each(function () {
-    gsap.from(this, {
-      opacity: 0,
-      duration: 1,
-      ease: "power2.out",
-      stagger: 0.01,
-      scrollTrigger: {
-        trigger: this,
-        start: "top 90%",
-        toggleActions: "play none none reverse",
-      },
-    });
+
+  gsap.fromTo('.worldMap', {
+    y: '-20%',
+  }, {
+    y: '20%',
+    ease: "none",
+    scrollTrigger: {
+      trigger: '.worldMap',
+      start: "top 90%",
+      toggleActions: "play none none reverse",
+      scrub: true,
+    },
   });
+
 
   gsap.from(".sliderAbout", {
     y: 100,
