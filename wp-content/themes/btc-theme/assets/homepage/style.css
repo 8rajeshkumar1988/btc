@@ -633,6 +633,7 @@
   #ourProducts .content .ourProducts .items > p {
     opacity: 0;
     margin-top: 28px;
+    transition: all 1s;
   }
   #ourProducts .content .ourProducts .items > div {
     height: 100%;
@@ -650,6 +651,12 @@
   #ourProducts .content .ourProducts .items.swiper-slide-active > p {
     opacity: 1;
     margin-top: 28px;
+  }
+  #ourProducts .content .ourProducts .items.swiper-slide-prev > div {
+    height: 100%;
+  }
+  #ourProducts .content .ourProducts .items.swiper-slide-prev > div p {
+    opacity: 0;
   }
   #ourProducts .content .ourProducts > .swiper-wrapper {
     height: 100%;
