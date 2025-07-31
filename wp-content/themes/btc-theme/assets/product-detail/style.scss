@@ -184,6 +184,7 @@ body {
       }
     }
   }
+  
   .explore_other_buttons {
     display: flex;
     gap: 15px;
@@ -213,6 +214,11 @@ body {
         transform: rotate(180deg);
       }
     }
+  }
+  .in_mobile_explore{
+    display: none;
+    padding: 0 var(--paddingX);
+    justify-content: flex-end
   }
   .explore_other_categories_container {
     .explore_other_categories {      
@@ -351,6 +357,9 @@ body {
   #explore_other_categories {
     .explore_other_buttons {
       display: none;
+    }
+    .in_mobile_explore{
+      display: flex;
     }
   }
   #product_spotlight{

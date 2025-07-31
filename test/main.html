@@ -1,67 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        #iframe {
-            display: none; /* Hide the iframe initially */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #F0EBF8; /* Semi-transparent background */
-            z-index: 999;
-            justify-content: center;
-            align-items: center;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-        }
-        #closeButton {
-                position: absolute;
-    top: 20px;
-    right: 20px;
-    aspect-ratio: 1;
-    padding: 10px;
-    background-color: red;
-    color: white;
-    border: none;
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-    display: grid;
-    place-items: center;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blur Gradient Header</title>
+  <style>
+    body {
+      margin: 0;
+      height: 2000px;
+      background: #111;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 80px;
+      background: transparent;
+      z-index: 10;
+      pointer-events: none; /* so content below can be interacted with if needed */
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(255,255,255,0) 100%);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .content {
+      padding-top: 100px;
+      font-family: sans-serif;
+    }
+  </style>
 </head>
 <body>
 
-    <button id="openButton">Open iframe</button>
+  <header></header>
 
-    <div id="iframe">
-        <button id="closeButton">X</button>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSemd19fT6a-4P-Wb8c3WenvIRIA2_G6vXnodr2xTpAC5bNLAA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
-
-    <script>
-        const openButton = document.getElementById('openButton');
-        const iframeDiv = document.getElementById('iframe');
-        const closeButton = document.getElementById('closeButton');
-
-        // Show iframe when button is clicked
-        openButton.addEventListener('click', () => {
-            iframeDiv.style.display = 'flex'; // Make iframe visible
-        });
-
-        // Close iframe when close button is clicked
-        closeButton.addEventListener('click', () => {
-            iframeDiv.style.display = 'none'; // Hide iframe
-        });
-    </script>
+  <div class="content">
+    <h1>Static Blur Gradient Header</h1>
+    <p>Header stays fixed and blurred from top to bottom like a gradient.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac erat vitae elit tincidunt suscipit...</p>
+    <!-- Add more content -->
+  </div>
 
 </body>
 </html>

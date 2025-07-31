@@ -79,6 +79,14 @@
          <!-- <div class="swiper-pagination"></div> -->
        </div>
      </div>
+      <div class="explore_other_buttons in_mobile_explore">
+         <button class="explore_other-prev">
+           <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
+         </button>
+         <button class="explore_other-next">
+           <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
+         </button>
+       </div>
    </section>
 
 

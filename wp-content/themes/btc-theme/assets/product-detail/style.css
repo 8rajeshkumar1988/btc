@@ -203,6 +203,11 @@ body {
 #explore_other_categories .explore_other_buttons .explore_other-prev img {
   transform: rotate(180deg);
 }
+#explore_other_categories .in_mobile_explore {
+  display: none;
+  padding: 0 var(--paddingX);
+  justify-content: flex-end;
+}
 #explore_other_categories .explore_other_categories_container .explore_other_categories {
   padding-left: var(--paddingX);
   padding-right: var(--paddingX);
@@ -288,6 +293,9 @@ body {
   }
   #explore_other_categories .explore_other_buttons {
     display: none;
+  }
+  #explore_other_categories .in_mobile_explore {
+    display: flex;
   }
   #product_spotlight .swiper-slide {
     aspect-ratio: 9/16;
