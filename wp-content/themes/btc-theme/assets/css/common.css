@@ -238,12 +238,25 @@ body {
   overflow: hidden;
 }
 #our_social .social_media .social_media_card > img {
-  width: calc(100% + 100px);
+  width: calc(100% + 45px);
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
   inset: 0;
+  transition: transform 1s ease;
+}
+#our_social .social_media .social_media_card.swiper-slide img {
+  transform: translateX(0px);
+}
+#our_social .social_media .social_media_card.swiper-slide-active img {
+  transform: translateX(-30px);
+}
+#our_social .social_media .social_media_card.swiper-slide-prev img {
+  transform: translateX(-15px);
+}
+#our_social .social_media .social_media_card.swiper-slide-next img {
+  transform: translateX(-45px);
 }
 #our_social .social_media .social_media_card .social_icon {
   width: clamp(1.5rem, 1.3rem + 1vw, 2.5rem);
