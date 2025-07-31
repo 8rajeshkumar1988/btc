@@ -1,5 +1,11 @@
 let lenis;
 gsap.registerPlugin(SplitText);
+
+const scrollToTopOnReload = () => {
+  window.scrollTo(0, 0);
+};
+
+
 $(document).ready(function () {
   lenis = new Lenis();
 
@@ -106,7 +112,7 @@ $(document).ready(function () {
       $("#header .logoBlue").css({ opacity: "1" });
     } else {
       lenis.start();
-      $("body").css({ overflow: "auto" }); 
+      $("body").css({ overflow: "auto" });
       $("#header").removeClass("active");
       $(".heroBanner").removeClass("activated");
       setTimeout(function () {
@@ -195,18 +201,18 @@ $(document).ready(function () {
   }
 
 
- $(".leadpopup").on("click", function () {
-  const $popupForm = $("#lead_popup_form");
+  $(".leadpopup").on("click", function () {
+    const $popupForm = $("#lead_popup_form");
 
-  if ($popupForm.length) {
-    $popupForm.fadeIn(300);
-    $("body").css({ overflow: "hidden" });
+    if ($popupForm.length) {
+      $popupForm.fadeIn(300);
+      $("body").css({ overflow: "hidden" });
 
-    if (typeof lenis !== "undefined" && typeof lenis.stop === "function") {
-      lenis.stop();
+      if (typeof lenis !== "undefined" && typeof lenis.stop === "function") {
+        lenis.stop();
+      }
     }
-  }
-});
+  });
 
 
   // Close popup with fadeOut
@@ -317,18 +323,18 @@ $(document).ready(function () {
     }
   });
 
-$('.heroBanner > img, .heroBanner > video').each(function () {
-  gsap.to(this, {
-    y: '50dvh',
-    ease: "none",
-    scrollTrigger: {
-      trigger: this,
-      start: "bottom 90%",
-      toggleActions: "play none none reverse",
-      scrub: true
-    }
-  });
-})
+  $('.heroBanner > img, .heroBanner > video').each(function () {
+    gsap.to(this, {
+      y: '50dvh',
+      ease: "none",
+      scrollTrigger: {
+        trigger: this,
+        start: "bottom 90%",
+        toggleActions: "play none none reverse",
+        scrub: true
+      }
+    });
+  })
 
 
 });
