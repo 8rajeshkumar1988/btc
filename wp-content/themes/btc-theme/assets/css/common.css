@@ -40,6 +40,7 @@ body {
 .heroBanner {
   transition: transform 0.2s ease-in-out;
   transform-origin: bottom;
+  overflow: hidden;
   filter: blur(0px) brightness(1);
   position: relative;
   height: 95vh;

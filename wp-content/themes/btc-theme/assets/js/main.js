@@ -308,7 +308,18 @@ $(document).ready(function () {
     }
   });
 
-
+$('.heroBanner > img, .heroBanner > video').each(function () {
+  gsap.to(this, {
+    y: '50dvh',
+    ease: "none",
+    scrollTrigger: {
+      trigger: this,
+      start: "bottom 90%",
+      toggleActions: "play none none reverse",
+      scrub: true
+    }
+  });
+})
 
 
 });

@@ -156,7 +156,7 @@ the_post();
   </div>
 </section>
 <section id="certificates_compliances">
-  <div class="heading">
+  <div class="heading" animateHeading>
     <p>CERTIFICATIONS & COMPLIANCE</p>
     <h2>Compliance You Can Trust</h2>
   </div>
