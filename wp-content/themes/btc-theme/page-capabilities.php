@@ -202,7 +202,7 @@ get_header();
 
 <section id="sustainability_details">
   <div class="sustainability_info">
-    <div>
+    <div class="leftt">
       <div class="heading">
         <h2>Sustainability</h2>
       </div>
@@ -221,7 +221,7 @@ get_header();
     </div>
   </div>
   <div class="technology_and_innovation">
-    <div class="heading">
+    <div class="heading" animateHeading>
       <h2>Technology and Innovation</h2>
     </div>
     <div class="tai_container">
@@ -271,7 +271,7 @@ get_header();
     </div>
   </div>
   <div class="logistics_shipping_efficiency_container">
-    <div class="category_item">
+    <div class="category_item first">
       <h2>Airport</h2>
       <div class="category_image">
         <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/airport.jpg'; ?>" alt="" />
@@ -282,7 +282,7 @@ get_header();
         logistics and reduced transit times.
       </p>
     </div>
-    <div class="category_item">
+    <div class="category_item second">
       <h2>Sea Port</h2>
       <div class="category_image">
         <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/sea_port.jpg'; ?>" alt="" />
@@ -292,7 +292,7 @@ get_header();
         produced can be loaded and shipped to port in 30mins.
       </p>
     </div>
-    <div class="category_item">
+    <div class="category_item third">
       <h2>Dry Port</h2>
       <div class="category_image">
         <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/dry_port.jpg'; ?>" alt="" />

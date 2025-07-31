@@ -30,19 +30,19 @@ the_post();
     <div class="content">
         <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / Contact Us</p>
         <div>
-            <div class="heading">
+            <div class="heading"  animateHeadingBanner>
                 <p><?php the_title(); ?></p>
                 <?php the_content(); ?>
                 <button onclick="scrollToSectionById('lead_form')" class="cta" >Reach Out to Us now <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
             </div>
-            <div class="contacts">
+            <div class="contacts" animateHeadingBanner>
                 <p>Benin Textile Corporation</p>
                 <a href="">H7R3+Q7, Ouézoumé, Benin</a>
-                <div>
+                <div animateHeadingBanner>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/mailIcon.svg" ?>" alt="">
                     <a href="mailto:marketing.btc@btc.com">marketing.btc@btc.com</a>
                 </div>
-                <div>
+                <div animateHeadingBanner>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/callIcon.svg" ?>" alt="">
                     <a href="tel:+229 5145127009">+229 5145127009</a>
                 </div>
@@ -53,7 +53,7 @@ the_post();
     </div>
 </section>
 <section id="lead_form">
-    <div class="heading">
+    <div class="heading" animateHeading>
         <h2>
             Are you a Brand/Buying House <br />
             looking for a one stop textile solution?
