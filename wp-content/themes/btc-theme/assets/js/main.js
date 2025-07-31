@@ -1,13 +1,13 @@
 let lenis;
 gsap.registerPlugin(SplitText);
 
-window.onload = function () {
-  lenis.scrollTo(0, {
-    offset: 0,         
-    duration: 0,     
-    immediate: false,  
-  });
-};
+// window.onload = function () {
+//   lenis.scrollTo(0, {
+//     offset: 0,         
+//     duration: 0,     
+//     immediate: false,  
+//   });
+// };
 
 
 

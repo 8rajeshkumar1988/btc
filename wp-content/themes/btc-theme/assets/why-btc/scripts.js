@@ -30,6 +30,11 @@ const homeBtcSwiper = new Swiper(".home-btc-swiper", {
         .forEach((el) => el.classList.remove("blurring"));
     },
   },
+
+  navigation: {
+    nextEl: ".why_btc-next",
+    prevEl: ".why_btc-prev",
+  },
 });
 
 

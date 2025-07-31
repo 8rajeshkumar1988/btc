@@ -175,6 +175,31 @@
   font-weight: 500;
 }
 
+.why_btc_buttons {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: var(--spaceBelow_heading);
+}
+.why_btc_buttons button {
+  padding: 15px;
+  height: var(--navBtn);
+  width: var(--navBtn);
+  background-color: #d4ff32;
+  border: 0px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.9);
+}
+.why_btc_buttons button.swiper-button-disabled {
+  background-color: #e4e4e4;
+}
+.why_btc_buttons .why_btc-prev img {
+  transform: rotate(180deg);
+}
+
 #homeOfBtc {
   position: relative;
   padding: var(--paddingY) var(--paddingX);

@@ -2754,11 +2754,12 @@ get_header();
         <p>Home of BTC</p>
         <h3>GDIZ – Glo-Djigbé Industrial Zone</h3>
     </div>
-    <div class="content  ">
+    <div class="content">
         <div class="first" animateHeading>
             <p>BTC is proudly based in <strong>GDIZ - Glo-Djigbé Industrial Zone</strong>, a public-private development project backed by the Government of Benin and ARISE IIP, built to offer world-class industrial infrastructure and business facilitation.</p>
         </div>
-        <div class="second home-btc-swiper" animateHeading>
+       <div>
+         <div class="second home-btc-swiper" animateHeading>
             <p class="title">Why GDIZ Matters to Our Clients</p>
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -2795,6 +2796,15 @@ get_header();
                 </div>
             </div>
         </div>
+        <div class="why_btc_buttons">
+            <button class="why_btc-prev">
+            <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+            </button>
+            <button class="why_btc-next">
+            <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+            </button>
+        </div>
+       </div>
     </div>
 </section>
 
