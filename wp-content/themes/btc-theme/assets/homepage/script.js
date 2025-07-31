@@ -307,11 +307,11 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-
+  const isMobile = window.innerWidth < 1024;
   gsap.fromTo('.worldMap', {
-    y: '-20%',
+    y: isMobile ? '-10%' : '-20%',
   }, {
-    y: '20%',
+    y:  isMobile ? '10%' : '20%',
     ease: "none",
     scrollTrigger: {
       trigger: '.worldMap',
@@ -343,9 +343,9 @@ $(document).ready(function () {
     opacity: 0,
     ease: "power4.out",
     duration: 1.2,
-    stagger: 0.1,
+    stagger: 0.2,
     scrollTrigger: {
-      trigger: ".ourProducts",
+      trigger: ".ourProducts .swiper-wrapper",
       start: "top 80%",
       toggleActions: "play none none reverse",
     },
@@ -391,5 +391,17 @@ $(document).ready(function () {
     },
   });
 
+  if(window.innerWidth < 600){
+    gsap.from("#linkedIn_video > video", {
+      y: 0,
+      scrollTrigger: {
+        trigger: "#linkedIn_video",
+        start: "top 70%",
+        end: "bottom 10%",
+        toggleActions: "play none none reverse",
+        scrub: true,
+      },
+    });
+  }
 
 });
