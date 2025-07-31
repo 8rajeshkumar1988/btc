@@ -99,12 +99,14 @@ $(document).ready(function () {
 
     if ($(this).hasClass("open")) {
       lenis.stop();
+      $("body").css({ overflow: "hidden" });
       $(".heroBanner").addClass("activated");
       $("#header").addClass("active");
       $("header .logo").css({ opacity: "0" });
       $("#header .logoBlue").css({ opacity: "1" });
     } else {
       lenis.start();
+      $("body").css({ overflow: "auto" }); 
       $("#header").removeClass("active");
       $(".heroBanner").removeClass("activated");
       setTimeout(function () {
