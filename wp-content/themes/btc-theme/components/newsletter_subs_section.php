@@ -5,7 +5,7 @@
     }
 </style>
 <section id="newsletter">
-    <div class="heading">
+    <div class="heading" animateHeading>
         <p>Never Miss an Update</p>
         <h2>Sign Up for Our Newsletter</h2>
     </div>
@@ -20,8 +20,7 @@
                 required
                 class="text-control__input"
                 placeholder="Enter your name" />
-        </div>
-        
+        </div>        
         <div class="email_g">
             <label for="email">Email*</label>
             <br />
@@ -36,5 +35,21 @@
 </section>
 
 
-
+<script>
+    $(document).ready(function () {
+        gsap.from('.newsletter_form > div', {
+            opacity: 0,
+            y: 100,
+            duration: 1,
+            delay: 0.5,
+            ease: "power4.out",
+            stagger: 0.1,
+            scrollTrigger: {
+                trigger: ".newsletter_form",
+                start: "top 85%",
+                toggleActions: "play none none reverse",
+            }
+        })
+    })
+</script>
 

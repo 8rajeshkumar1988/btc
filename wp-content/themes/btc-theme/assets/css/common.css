@@ -40,6 +40,7 @@ body {
 .heroBanner {
   transition: transform 0.2s ease-in-out;
   transform-origin: bottom;
+  overflow: hidden;
   filter: blur(0px) brightness(1);
   position: relative;
   height: 95vh;
@@ -937,7 +938,7 @@ header button.open .close {
 }
 @media screen and (max-width: 1024px) {
   :root {
-    --font-18: 16px;
+    --font-18: clamp(0.9375rem, 0.8071rem + 0.4967vw, 1.125rem);
   }
   #lead_popup_form form {
     grid-template-columns: repeat(2, 1fr);
