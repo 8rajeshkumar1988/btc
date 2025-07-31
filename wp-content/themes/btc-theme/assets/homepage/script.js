@@ -1,14 +1,21 @@
 $(document).ready(function () {
-  const sliderAbout = new Swiper(".sliderAbout", {
+  const sliderAbout = new Swiper(".slides_about_container", {
     slidesPerView: 1,
     spaceBetween: 0,
     loop: false,
     grabCursor: true, // 👈 adds grab cursor on hover
     speed: 800,
-    // autoplay: {
-    //     delay: 5000, // change delay as needed
-    //     disableOnInteraction: false, // keeps autoplay after manual swipe
-    // },
+    grabCursor: true,
+      effect: "creative",
+      creativeEffect: {
+        prev: {
+          // shadow: true,
+          translate: [0, 0, -400],
+        },
+        next: {
+          translate: ["100%", 0, 0],
+        },
+      },
     pagination: {
       el: ".swiper-pagination",
       clickable: true, // optional: makes pagination dots clickable
@@ -31,7 +38,7 @@ $(document).ready(function () {
     //     delay: 2500,
     //     disableOnInteraction: false,
     // },
-
+    speed: 1000,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -304,20 +311,23 @@ $(document).ready(function () {
   });
 });
 
+
+
 $(document).ready(function () {
-  $(".worldMap path").each(function () {
-    gsap.from(this, {
-      opacity: 0,
-      duration: 1,
-      ease: "power2.out",
-      stagger: 0.01,
-      scrollTrigger: {
-        trigger: this,
-        start: "top 90%",
-        toggleActions: "play none none reverse",
-      },
-    });
+
+  gsap.fromTo('.worldMap', {
+    y: '-20%',
+  }, {
+    y: '20%',
+    ease: "none",
+    scrollTrigger: {
+      trigger: '.worldMap',
+      start: "top 90%",
+      toggleActions: "play none none reverse",
+      scrub: true,
+    },
   });
+
 
   gsap.from(".sliderAbout", {
     y: 100,

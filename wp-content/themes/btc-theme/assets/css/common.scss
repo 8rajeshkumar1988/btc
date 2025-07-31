@@ -246,8 +246,9 @@ body {
       gap: 20px;
       background-color: aqua;
       aspect-ratio: 286/358;
+      overflow: hidden;
       & > img {
-        width: 100%;
+        width: calc(100% + 100px);
         height: 100%;
         object-fit: cover;
         position: absolute;
@@ -1089,7 +1090,7 @@ header {
     --spaceBelow_heading: 30px;
   }
   .heroBanner {
-    height: 95vh;
+    height: 95dvh;
     aspect-ratio: initial;
   }
 

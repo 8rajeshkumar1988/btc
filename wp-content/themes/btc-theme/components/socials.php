@@ -77,9 +77,23 @@
 
 <script>
     const social_media = new Swiper(".social_media", {
-        slidesPerView: "auto",
+        slidesPerView: 1.2,
         spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        
+         autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        speed: 600,
+        breakpoints: {
+            480: {
+                slidesPerView: "auto",
+            },
+        },
     });
+
     gsap.from(".social_media_wrapper > a", {
         y: 100,
         opacity: 0,

@@ -235,9 +235,10 @@ body {
   gap: 20px;
   background-color: aqua;
   aspect-ratio: 286/358;
+  overflow: hidden;
 }
 #our_social .social_media .social_media_card > img {
-  width: 100%;
+  width: calc(100% + 100px);
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1049,7 +1050,7 @@ header button.open .close {
     --spaceBelow_heading: 30px;
   }
   .heroBanner {
-    height: 95vh;
+    height: 95dvh;
     aspect-ratio: initial;
   }
   #newsletter .newsletter_form {

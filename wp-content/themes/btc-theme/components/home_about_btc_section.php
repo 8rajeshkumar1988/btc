@@ -24,8 +24,9 @@ $key_pointers = new WP_Query(array(
             <p>ABOUT BTC</p>
             <h2>Driven by Craft. <br>Powered by Scale.</h2>
         </div>
-        <div class="sliderAbout swiper ">
-            <div class="slides_about swiper-wrapper">
+        <div class="sliderAbout ">
+            <div class="slides_about_container">
+              <div class="slides_about swiper-wrapper">
                 <?php if ($key_pointers->have_posts()) {
 
                     while ($key_pointers->have_posts()) {
@@ -47,11 +48,12 @@ $key_pointers = new WP_Query(array(
                 } ?>
 
             </div>
-            <div class="navigation_about">
-                <button class="swiper-button-prev prev"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
-                <button class="swiper-button-next next"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
+          </div>
+          <div class="navigation_about">
+              <button class="swiper-button-prev prev"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
+              <button class="swiper-button-next next"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
+          </div>
             </div>
-        </div>
         <a class="cta" href="<?php echo home_url('/about-us'); ?>" ctaButton>Know More About BTC <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Know More About BTC"></a>
     </div>
 </section>
