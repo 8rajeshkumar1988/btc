@@ -218,6 +218,7 @@ body {
   overflow: hidden;
 }
 #explore_media .explore_media_container .explore_media_card .explore_media_image {
+  text-decoration: none;
   aspect-ratio: 1;
   width: 100%;
   position: relative;

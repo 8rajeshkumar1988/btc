@@ -46,7 +46,7 @@ if ($news->have_posts()) {
 
                     ?>
                         <div class="swiper-slide blog_card">
-                            <div class="blog_image">
+                            <a href="<?php the_permalink(); ?>" class="blog_image">
                                 <?php
                                 $top_post_ids[] = get_the_ID();
                                 $thumbnail_id = get_post_thumbnail_id();
@@ -64,7 +64,7 @@ if ($news->have_posts()) {
                                 echo  $image;
 
                                 ?>
-                            </div>
+                            </a>
                             <div class="blog_description">
                                 <p><?php
                                     $date_raw = get_field('published_at');

@@ -231,6 +231,7 @@ body {
       overflow: hidden;
       // width: 400px;
       .explore_media_image {
+        text-decoration: none;
         &::after {
           content: "";
           position: absolute;
