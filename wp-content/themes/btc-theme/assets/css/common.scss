@@ -348,7 +348,7 @@ textarea {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 20px;
-    margin-top: 40px;
+    margin-top: var(--spaceBelow_heading);
     label {
       font-size: var(--font-16);
       // margin-bottom: 20px;
@@ -372,7 +372,7 @@ textarea {
     .cta {
       grid-area: 2 / 1 / 3 / 3;
       height: fit-content;
-      margin-top: 30px;
+      margin-top: 20px;
     }
   }
 }
@@ -1098,6 +1098,9 @@ header {
       display: flex;
       flex-direction: column;
     }
+  }
+  #newsletter .newsletter_form input{
+    margin-top: 10px;  
   }
   #our_clients {
     .marquee-content {

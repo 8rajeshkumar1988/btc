@@ -3,8 +3,8 @@
   background: white;
   display: grid;
   place-items: center;
-  height: 90vh;
-  max-height: 768px;
+  height: 80vh;
+  max-height: 600px;
   text-align: center;
 }
 .thankYou #thankYouLottie {

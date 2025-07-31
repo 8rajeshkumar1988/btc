@@ -1,7 +1,7 @@
 <style>
     .newsletter_error{
         color:#ff0000;
-        margin-top: 20px;
+        margin-top: 10px;
     }
 </style>
 <section id="newsletter">
@@ -17,14 +17,14 @@
                 id="first_name"
                 type="text"
                 name="name"
-                required
+                
                 class="text-control__input"
                 placeholder="Enter your name" />
         </div>        
         <div class="email_g">
             <label for="email">Email*</label>
             <br />
-            <input id="email" required type="email" name="email" placeholder="Enter your email" />
+            <input id="email"  type="email" name="email" placeholder="Enter your email" />
         </div>
         <button class="cta">
             Subscribe
@@ -32,6 +32,7 @@
         </button>
     </form>
     <p class="newsletter_error"></p>
+    <p class="subscribe_success"></p>
 </section>
 
 
