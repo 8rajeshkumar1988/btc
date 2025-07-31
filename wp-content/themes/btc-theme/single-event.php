@@ -171,74 +171,85 @@ if ($gallery && is_array($gallery)) {
 }
 ?>
 
+<?php
+$today = date('Ymd');
+$event_Start_Date = get_field('event_from_date');
+$event_End_Date = get_field('event_to_date');
 
-<section id="event_registration">
-    <div class="heading">
-        <p>Never Miss an opportunity</p>
-        <h2>Register Now</h2>
-    </div>
-    <form class="event_reg_form" id="btc-event-form">
-        <div class="f_name">
-            <label for="first_name"> Name</label>
-            <br />
-            <input id="first_name" type="text" name="name" placeholder="Enter your name" />
+if ($event_Start_Date && $event_End_Date) {
+    if ($today >= $event_Start_Date && $today <= $event_End_Date) {
+?>
+    <section id="event_registration">
+        <div class="heading">
+            <p>Never Miss an opportunity </p>
+            <h2>Register Now</h2>
         </div>
-
-        <div class="email_g">
-            <label for="email">Your e-mail</label>
-            <br />
-            <input id="email" type="email" name="email" placeholder="Enter your email" />
-        </div>
-        <div class="phone_number">
-            <label for="phoneno">Phone number</label>
-            <br />
-            <input id="phoneno" type="tel" autocomplete="new-number" name="phone" placeholder="Enter your phone number" />
-        </div>
-        <div class="reason_to_attend">
-            <label for="reason">Reason to Attend</label>
-            <br />
-            <textarea name="reason_to_attend" id="reason"></textarea>
-        </div>
-        <div class="no_of_attendees">
-            <label for="attendees_number">No. of Attendees</label>
-            <br />
-            <div class="combine_box">
-                <div class="input-group">
-                    <div
-                        class="value-button descrease"
-                        onclick="changeAttendees(-1)"
-                        value="Decrease Value">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/images/minus.svg'; ?>" alt="" />
-                    </div>
-                    <input
-                        name="no_of_attendees"
-                        type="number"
-                        id="attendees_number"
-                        value="01"
-                        min="01"
-                        max="99"
-                        maxlength="2"
-                        readonly />
-                    <div
-                        class="value-button increase"
-                         onclick="changeAttendees(1)"
-                        value="Increase Value">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/images/plus.svg'; ?>" alt="" />
-                    </div>
-                </div>
-                <button class="cta">
-                    Subscribe
-                    <img
-                        src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>"
-                        alt="right arrow" />
-                </button>
+        <form class="event_reg_form" id="btc-event-form">
+            <div class="f_name">
+                <label for="first_name"> Name</label>
+                <br />
+                <input id="first_name" type="text" name="name" placeholder="Enter your name" />
             </div>
+
+            <div class="email_g">
+                <label for="email">Your e-mail</label>
+                <br />
+                <input id="email" type="email" name="email" placeholder="Enter your email" />
+            </div>
+            <div class="phone_number">
+                <label for="phoneno">Phone number</label>
+                <br />
+                <input id="phoneno" type="tel" autocomplete="new-number" name="phone" placeholder="Enter your phone number" />
+            </div>
+            <div class="reason_to_attend">
+                <label for="reason">Reason to Attend</label>
+                <br />
+                <textarea name="reason_to_attend" id="reason"></textarea>
+            </div>
+            <div class="no_of_attendees">
+                <label for="attendees_number">No. of Attendees</label>
+                <br />
+                <div class="combine_box">
+                    <div class="input-group">
+                        <div
+                            class="value-button descrease"
+                            onclick="changeAttendees(-1)"
+                            value="Decrease Value">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/images/minus.svg'; ?>" alt="" />
+                        </div>
+                        <input
+                            name="no_of_attendees"
+                            type="number"
+                            id="attendees_number"
+                            value="01"
+                            min="01"
+                            max="99"
+                            maxlength="2"
+                            readonly />
+                        <div
+                            class="value-button increase"
+                            onclick="changeAttendees(1)"
+                            value="Increase Value">
+                            <img src="<?php echo get_template_directory_uri() . '/assets/images/plus.svg'; ?>" alt="" />
+                        </div>
+                    </div>
+                    <button class="cta">
+                        Subscribe
+                        <img
+                            src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>"
+                            alt="right arrow" />
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="event_form_error_container">
+            <p class="event_form_error"></p>
         </div>
-    </form>
-    <div class="event_form_error_container">
-        <p class="event_form_error"></p>
-    </div>
-</section>
+    </section>
+<?php
+    }
+}
+?>
 
 <?php
 $otherEvents = new WP_Query(array(

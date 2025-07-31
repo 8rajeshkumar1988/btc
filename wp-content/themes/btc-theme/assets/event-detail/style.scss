@@ -448,6 +448,7 @@
 }
 .event-content {
   padding: 0 var(--paddingX);
+  padding-bottom: var(--spaceBelow_heading);
   h2 {
     font-size: var(--font-46);
     font-weight: 400;

@@ -79,11 +79,11 @@ if ($tag && isset($tag->term_id)) {
                                 ?>
                                 <div class="news_info">
                                     <div class="news_tag">
-                                        <p><?php
+                                        <!-- <p><?php
                                             $categories = get_the_category();
                                             if (! empty($categories)) {
-                                                echo esc_html($categories[0]->name); // Show the first category
-                                            } ?></p>
+                                                echo esc_html($categories[0]->name);
+                                            } ?></p> -->
                                         <p><?php
                                             $date_raw = get_field('published_at');
                                             if ($date_raw) {
@@ -254,9 +254,9 @@ if ($sarticles->have_posts()) {
 
                         ?>
                         <div class="explore_media_description">
-                            <div class="blog_tag">
+                            <!-- <div class="blog_tag">
                                 <p>BLOG</p>
-                            </div>
+                            </div> -->
                             <div class="blog_desciption">
                                 <h2><?php the_title(); ?></h2>
                                 <!-- <p><?php the_excerpt(); ?></p> -->

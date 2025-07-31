@@ -245,7 +245,7 @@ body {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   height: 100%;
 }
 #explore_media .explore_media_container .explore_media_card .explore_media_image .explore_media_description .blog_tag {

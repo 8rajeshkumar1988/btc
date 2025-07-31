@@ -195,11 +195,16 @@ $(document).ready(function () {
 
   $(".leadpopup").on("click", function () {
     $("#lead_popup_form").fadeIn(300);
+    $("body").css({ overflow: "hidden" });
+    lenis.stop();
+
   });
 
   // Close popup with fadeOut
   $("#closeleadpopup").on("click", function () {
     $("#lead_popup_form").fadeOut(300);
+    // $("body").css({ overflow: "auto" });
+    lenis.start();
   });
 });
 
