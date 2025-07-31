@@ -41,7 +41,7 @@ const st = ScrollTrigger.create({
   // end: () => `+=${slides.length * window.innerHeight}`,
   pin: true,
   pinSpacing: true,
-  anticipatePin: 1,
+  anticipatePin: 0,
   // markers: false,
   invalidateOnRefresh: true,
   onEnter: () => enableObserver(),
@@ -86,7 +86,7 @@ function goToSlide(index, direction) {
   });
 
   if (direction === "down") {
-    gsap.set(slides[index], { scale: 0 }); // Ensure slide is ready
+    gsap.set(slides[index], { scale: 0 }); 
     tl.to(slides[index], {
       scale: 1,
       duration: 1,

@@ -113,6 +113,9 @@ body {
   font-size: var(--font-46);
   font-weight: 400;
 }
+.blog_content ul {
+  margin-left: 1rem;
+}
 .blog_content p {
   font-size: var(--font-18);
   font-weight: 400;
