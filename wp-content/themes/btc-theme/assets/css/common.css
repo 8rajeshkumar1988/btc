@@ -1049,7 +1049,7 @@ header button.open .close {
     --spaceBelow_heading: 30px;
   }
   .heroBanner {
-    height: 95vh;
+    height: 95dvh;
     aspect-ratio: initial;
   }
   #newsletter .newsletter_form {
