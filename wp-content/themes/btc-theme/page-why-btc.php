@@ -2815,7 +2815,7 @@ get_header();
         </div>
         <div>
             <div class="img">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/roleOfbtc2.jpg"  ?>" alt="">
+                <img src="<?php echo get_template_directory_uri() . "/assets/images/roleOfBtc2.jpg"  ?>" alt="">
             </div>
             <div class="text">
                 <p>By producing at the source, BTC creates value within Benin—training local talent, advancing tech adoption, and reducing reliance on imported textiles. Our vertically integrated system supports the country’s development while delivering efficiency, traceability, and quality for global partners.</p>

@@ -53,7 +53,9 @@
           </div>
           <div class="product_detail">
             <h2 class="product_title"><?php the_title(); ?></h2>
-            <p class="product_description"><?php echo wp_kses_post(wp_trim_words($description, 30)); ?></p>
+            <p class="product_description">
+              <?php echo esc_html(mb_strimwidth(strip_tags($description), 0, 150, '...')); ?>
+            </p>
           </div>
         </div>
     <?php

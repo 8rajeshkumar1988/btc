@@ -193,12 +193,19 @@ $(document).ready(function () {
   }
 
 
-  $(".leadpopup").on("click", function () {
-    $("#lead_popup_form").fadeIn(300);
-    $("body").css({ overflow: "hidden" });
-    lenis.stop();
+ $(".leadpopup").on("click", function () {
+  const $popupForm = $("#lead_popup_form");
 
-  });
+  if ($popupForm.length) {
+    $popupForm.fadeIn(300);
+    $("body").css({ overflow: "hidden" });
+
+    if (typeof lenis !== "undefined" && typeof lenis.stop === "function") {
+      lenis.stop();
+    }
+  }
+});
+
 
   // Close popup with fadeOut
   $("#closeleadpopup").on("click", function () {
