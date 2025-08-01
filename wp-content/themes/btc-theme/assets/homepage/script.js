@@ -21,8 +21,8 @@ $(document).ready(function () {
       clickable: true, // optional: makes pagination dots clickable
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".aboutNext",
+      prevEl: ".aboutPrev",
     },
   });
 
@@ -44,8 +44,8 @@ $(document).ready(function () {
       clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".productNext",
+      prevEl: ".productPrev",
     },
   });
 
@@ -95,8 +95,8 @@ $(document).ready(function () {
         // clickable: true,
       },
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".capabilitiesNext",
+        prevEl: ".capabilitiesPrev",
       },
     });
   };
@@ -345,7 +345,7 @@ $(document).ready(function () {
 
   // our products
 
-  gsap.from(".ourProducts  .swiper-slide", {
+  gsap.from(".ourProducts .swiper-slide", {
     y: 100,
     opacity: 0,
     ease: "power4.out",
