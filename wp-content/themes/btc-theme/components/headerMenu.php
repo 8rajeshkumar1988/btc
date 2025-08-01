@@ -1,13 +1,13 @@
 <header>
     <a href="/btc">
-        <?php if (is_home() || is_tag() || (is_single() && get_post_type() === 'post') || is_page('thank-you')) : ?>
+        <?php if (is_home() || is_tag() || (is_single() && get_post_type() === 'post') || is_page('thank-you') || is_404()) : ?>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/headerLogo.svg" alt="Logo" class="logo">
         <?php else : ?>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/HeaderLogoWhite.svg" alt="White Logo" class="logo">
         <?php endif; ?>
     </a>
     <button class="headerBtn">
-        <?php if (is_home() || is_tag() || (is_single() && get_post_type() === 'post') || is_page('thank-you')) : ?>
+        <?php if (is_home() || is_tag() || (is_single() && get_post_type() === 'post') || is_page('thank-you') || is_404()) : ?>
         <img class="open" src="<?php echo get_template_directory_uri(); ?>/assets/images/quill_hamburger_black.svg" 
         alt="quill_hamburger">
         <?php else : ?>

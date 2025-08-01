@@ -30,6 +30,18 @@ $(document).ready(function () {
   });
 
 
+  gsap.from('.contacts', {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    delay: 0.7,
+    duration: 1.2,
+    scrollTrigger: {
+      trigger: '.contacts',
+      start: "top 100%",
+      toggleActions: "play none none reverse",
+    }
+  })
   // gsap.from('.virtual_container', {
   //   y: 100,
   //   opacity: 0,

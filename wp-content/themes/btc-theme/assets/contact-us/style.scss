@@ -73,6 +73,7 @@ body {
       color: var(--blue);
       font-weight: 600;
     }
+    margin-bottom: var(--spaceBelow_heading);
   }
   .iti{
     margin-top: 15px;
@@ -83,7 +84,6 @@ body {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
     row-gap: 30px;
-    margin-top: 40px;
   }
   label {
     font-size: var(--font-14);
@@ -267,6 +267,13 @@ body {
   #lead_form {
     form {
       grid-template-columns: repeat(2, 1fr);
+      row-gap: 20px;
+      input,
+      select,
+      textarea {
+        
+        margin-top: 10px;
+      }
     }
     .textareaDiv {
       grid-area: auto;

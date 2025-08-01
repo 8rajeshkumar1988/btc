@@ -98,7 +98,7 @@ get_header();
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/dyeing.png'; ?>" alt="" />
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/Dyeing.png'; ?>" alt="" />
           </div>
           <h3 class="title">Dyeing</h3>
         </div>

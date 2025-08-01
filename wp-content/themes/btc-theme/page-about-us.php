@@ -222,6 +222,9 @@ if ($leaderships->have_posts()) {
             <div class="logo">
                 <img src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SODECO.png" ?>" alt="" />
             </div>
+            <div class="logo">
+                <img src="<?php echo get_template_directory_uri() . "/assets/images/Africa_Cotton_logo.svg" ?>" alt="" />
+            </div>
         </div>
     </div>
 </section>
