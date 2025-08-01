@@ -1,5 +1,5 @@
 <header>
-    <a href="/btc">
+    <a href="<?php echo site_url('/') ?>">
         <?php if (is_home() || is_tag() || (is_single() && get_post_type() === 'post') || is_page('thank-you') || is_404()) : ?>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/headerLogo.svg" alt="Logo" class="logo">
         <?php else : ?>
