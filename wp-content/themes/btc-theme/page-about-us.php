@@ -173,8 +173,10 @@ if ($leaderships->have_posts()) {
 
                         ?>
                     </div>
-                    <div class="leader_detail" animateHeading>
-                        <h2 class="leader_title"><?php the_title(); ?></h2>
+                    <div class="leader_detail" >
+                        <div style="display: flex;gap: 10px;align-items: center;">
+                            <h2 class="leader_title"><?php the_title(); ?> </h2><span style="transform: rotate(45deg);font-size: var(--font-24);color: var(--green);">↑</span>
+                        </div>
 
                         <p class="leader_description"><?php echo get_field('jobtitle'); ?></p>
                         <div  class="leader_bio" ><?php the_content(); ?></div>

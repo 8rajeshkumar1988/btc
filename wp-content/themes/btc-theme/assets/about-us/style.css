@@ -197,6 +197,7 @@ body {
   position: relative;
   overflow: hidden;
   display: block;
+  cursor: pointer;
 }
 #our_leadership .our_leadership_container .leader_card .leader_image {
   position: relative;

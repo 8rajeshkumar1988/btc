@@ -590,7 +590,7 @@ header {
 }
 #header {
   position: fixed;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   padding-top: calc(
     clamp(1.5625rem, -1.7137rem + 4.0323vw, 3.125rem) * 2 + clamp(2.5rem, 0.5343rem + 2.4194vw, 3.4375rem)

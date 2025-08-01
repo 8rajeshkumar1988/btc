@@ -203,7 +203,7 @@ $(document).ready(function () {
         delay: i * 0.1,
         scrollTrigger: {
           trigger: leader,
-          start: "top 80%",
+          start: "top 90%",
           toggleActions: "restart none none reverse",
         }
       });
