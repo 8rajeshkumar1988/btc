@@ -294,6 +294,50 @@ function btc_ajax_save_lead()
         wp_send_json_error('Name and Email are required.');
     }
     $dt_ist = new DateTime('now', new DateTimeZone('Asia/Kolkata'));
+
+    
+    $created_date = $dt_ist->format('Y-m-d'); // Used for comparing same-day leads
+
+    // ✅ Check if a lead exists with same email/phone, same source_url, and same created date
+    $existing_leads = get_posts([
+        'post_type'   => 'lead',
+        'post_status' => 'publish',
+        'numberposts' => 1,
+        'meta_query'  => [
+            'relation' => 'AND',
+            [
+                'key'     => 'source_url',
+                'value'   => $source_url,
+                'compare' => '='
+            ],
+            [
+                'key'     => 'created_on',
+                'value'   => $created_date,
+                'compare' => 'LIKE' // match any time on that date
+            ],
+            [
+                'relation' => 'OR',
+                [
+                    'key'     => 'email',
+                    'value'   => $email,
+                    'compare' => '='
+                ],
+                [
+                    'key'     => 'phone_number',
+                    'value'   => $phone,
+                    'compare' => '='
+                ]
+            ]
+        ]
+    ]);
+
+    if (!empty($existing_leads)) {
+        wp_send_json_error('You have already submitted a lead today with this email or phone number.');
+    }
+
+
+
+
     $post_id = wp_insert_post([
         'post_type'   => 'lead',
         'post_status' => 'publish',
