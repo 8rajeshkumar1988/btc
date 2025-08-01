@@ -143,7 +143,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="parent_pers">
+    <div class="parent_pers" id="textile_processing">
         <div class="containers">
             <div class="top">
                 <h3><span>(04)</span>Excellence in Textile Processing</h3>
@@ -153,15 +153,37 @@ get_header();
                     <div class="inner_top">
                         <div class="copy">
                             <div class="tag_div">
-                                <div class="tags active">DYEING</div>
-                                <div class="tags">PRINTING</div>
-                                <div class="tags">EMBROIDERY</div>
+                                <div class="tags active" data-tab="dyeing">DYEING</div>
+                                <div class="tags unactive" data-tab="printing">PRINTING</div>
+                                <div class="tags unactive" data-tab="embroidery">EMBROIDERY</div>
                             </div>
-                            <p>The fabrics are dyed using water-efficient, eco-friendly dyeing techniques. We minimize water waste and ensure that the dyes used are non-toxic and biodegradable</p>
                         </div>
                         <p class="count">(04)</p>
                     </div>
-                    <div class="inner_bottom">
+                    <div class="inner_bottom" id="dyeing">
+                        <p>The Fabrics are dyed using water-efficient, eco-friendly dyeing techniques. We minimize water waste and ensure that the dyes used are non-toxic and biodegradable</p>
+                        <div class="first">
+                            <p class="title">Process</p>
+                            <p class="subCopy">Fabrics are dyed in vibrant colors or specific shades, using methods that reduce the environmental impact</p>
+                        </div>
+                        <div class="second">
+                            <p class="title">Key Feature</p>
+                            <p class="subCopy">Sustainability is at the forefront, and we aim to use 100% eco-friendly dyes for all garments</p>
+                        </div>
+                    </div>
+                    <div class="inner_bottom" id="printing">
+                        <p>We offer advanced printing techniques that bring designs to life - from bold graphics to subtle textures - with lasting clarity and vibrancy.</p>
+                        <div class="first">
+                            <p class="title">Process</p>
+                            <p class="subCopy">Fabrics are dyed in vibrant colors or specific shades, using methods that reduce the environmental impact</p>
+                        </div>
+                        <div class="second">
+                            <p class="title">Key Feature</p>
+                            <p class="subCopy">Sustainability is at the forefront, and we aim to use 100% eco-friendly dyes for all garments</p>
+                        </div>
+                    </div>
+                    <div class="inner_bottom" id="embroidery">
+                        <p>Embroidery adds texture, identity, and elegance to garments - whether it's for logos, monograms, or artistic patterns.</p>
                         <div class="first">
                             <p class="title">Process</p>
                             <p class="subCopy">Fabrics are dyed in vibrant colors or specific shades, using methods that reduce the environmental impact</p>
@@ -312,10 +334,10 @@ get_header();
                         <p class="count">(09)</p>
                     </div>
                     <div class="inner_bottom">
-                        <!-- <div class="first">
+                        <div class="first">
                             <p class="title">Process</p>
-                            <p class="subCopy">Products are shipped via sea, air, and land transport, with priority given to reducing environmental impact.</p>
-                        </div> -->
+                            <p class="subCopy">Customers receive detailed information via QR codes, allowing them to verify product origin, material composition and environmental impact at every stage.</p>
+                        </div>
                         <div class="first">
                             <p class="title">Key Feature</p>
                             <p class="subCopy">The customer enjoys a product made with eco-conscious processes, with full visibility into its journey from farm to fashion.</p>

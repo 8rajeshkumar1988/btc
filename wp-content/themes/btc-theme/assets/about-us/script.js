@@ -193,23 +193,41 @@ $(document).ready(function () {
     });
   });
 
-
-  gsap.utils.toArray("#our_leadership .leader_card").forEach((leader, i) => {
-    gsap.from(leader, {
-      y: 100,
-      opacity: 0,
-      ease: "power4.out",
-      duration: 1.2,
-      delay: i * 0.1,
-      scrollTrigger: {
-        trigger: leader,
-        start: "top 80%",
-        toggleActions: "restart none none reverse",
-      }
+  if (window.innerWidth > 768) {   
+    gsap.utils.toArray("#our_leadership .leader_card").forEach((leader, i) => {
+      gsap.from(leader, {
+        y: 100,
+        opacity: 0,
+        ease: "power4.out",
+        duration: 1.2,
+        delay: i * 0.1,
+        scrollTrigger: {
+          trigger: leader,
+          start: "top 80%",
+          toggleActions: "restart none none reverse",
+        }
+      });
     });
-  });
+  }else{
+     gsap.utils.toArray("#our_leadership .leader_card").forEach((leader, i) => {
+      gsap.from(leader, {
+        y: 100,
+        opacity: 0,
+        ease: "power4.out",
+        duration: 1,
+        // delay: i * 0.1,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: leader,
+          start: "top 90%",
+          toggleActions: "play none none reverse",
+        }
+      });
+    });
+  }
 
-
+if (window.innerWidth > 1024) {
+  
   gsap.fromTo('#product_page_details .left ', {
     y: -80
   }, {
@@ -240,6 +258,20 @@ $(document).ready(function () {
       scrub: true,
     }
   })
+}else{
+   gsap.from('#product_page_details .left img, #product_page_details .right img ', {
+    y: 100,
+    opacity: 0,
+    ease: "power4.out",
+    duration: 1.2,
+    stagger: 0.2,    
+    scrollTrigger: {
+      trigger: '#product_page_details .left',
+      start: "top 90%",
+      toggleActions: "play none none reverse",
+    }
+  })
+}
 
 
 
@@ -257,19 +289,40 @@ $(document).ready(function () {
   });
 
 
-  gsap.utils.toArray("#our_impact .impact_wrapper.open").forEach((leader, i) => {
-    gsap.from(leader, {
-      backgroundPosition: "100% 0%",
-      ease: "none",
-      scrollTrigger: {
-        trigger: leader,
-        start: "top 90%",
-        end: "bottom top",
-        toggleActions: "restart none none reverse",
-        scrub: true
-      }
+  if (window.innerWidth > 1024) {
+      gsap.utils.toArray("#our_impact .impact_wrapper.open").forEach((leader, i) => {
+        gsap.from(leader, {
+          backgroundPosition: "100% 0%",
+          ease: "none",
+          scrollTrigger: {
+            trigger: leader,
+            start: "top 90%",
+            end: "bottom top",
+            toggleActions: "restart none none reverse",
+            scrub: true
+          }
+        });
+      });
+  }else{
+    gsap.utils.toArray("#our_impact .impact_wrapper.open").forEach((leader, i) => {
+      gsap.fromTo(leader,
+        { backgroundPosition: "100% 0%" },
+        {
+          backgroundPosition: "90% 50%",
+          ease: "none",
+          scrollTrigger: {
+            trigger: leader,
+            start: "top 90%",
+            end: "bottom top",
+            toggleActions: "restart none none reverse",
+            scrub: true
+          }
+        }
+      );
     });
-  });
+  }
+
+
 
  gsap.utils.toArray("#certificates_compliances .certificate_card").forEach((card, i) => {
   gsap.from(card, {

@@ -55,7 +55,7 @@ the_post();
 <section id="lead_form">
     <div class="heading" animateHeading>
         <h2>
-            Are you a Brand/Buying House <br />
+            Are you a Brand/Retailer/Buying House <br />
             looking for a one stop textile solution?
         </h2>
     </div>

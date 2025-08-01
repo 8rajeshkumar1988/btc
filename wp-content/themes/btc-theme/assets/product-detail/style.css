@@ -163,7 +163,6 @@ body {
 
 #explore_other_categories {
   padding: var(--paddingY) 0px;
-  padding-bottom: 0;
 }
 #explore_other_categories .explore_other_head {
   padding: 0px var(--paddingX);

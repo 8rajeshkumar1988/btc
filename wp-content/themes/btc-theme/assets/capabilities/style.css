@@ -336,7 +336,6 @@ body {
     grid-template-columns: 1fr;
   }
   #sustainability_details .technology_and_innovation .tai_container .static {
-    grid-template-columns: 1fr;
     gap: 20px;
   }
   #sustainability_details .technology_and_innovation .tai_container .static > div {
@@ -345,5 +344,10 @@ body {
   }
   #sustainability_details .technology_and_innovation .tai_container .static > div p {
     text-align: start;
+  }
+}
+@media screen and (max-width: 520px) {
+  #sustainability_details .technology_and_innovation .tai_container .static {
+    grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=style.css.map */

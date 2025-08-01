@@ -1,20 +1,39 @@
 $(document).ready(function () {
-    gsap.utils.toArray(".cards_wrapper .card").forEach((card, i) => {
-        gsap.from(card, {
-            rotationY: 90,
-            x: -100,
-            transformOrigin: "center bottom",
-            autoAlpha: 0,
-            duration: 1.2,
-            ease: "back.out(1.6)",
-            delay: i * 0.1,
-            scrollTrigger: {
-                trigger: card,
-                start: "top 80%",
-                toggleActions: "play none none none"
-            }
+    if (window.innerWidth > 1024) {
+        gsap.utils.toArray(".cards_wrapper .card").forEach((card, i) => {
+            gsap.from(card, {
+                rotationY: 90,
+                x: -100,
+                transformOrigin: "center bottom",
+                autoAlpha: 0,
+                duration: 1.2,
+                ease: "back.out(1.6)",
+                delay: i * 0.1,
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                }
+            });
         });
-    });
+    }else{
+        gsap.utils.toArray(".cards_wrapper .card").forEach((card, i) => {
+            gsap.from(card, {
+                rotationY: 20,
+                y: 100,
+                transformOrigin: "center bottom",
+                autoAlpha: 0,
+                duration: 1.2,
+                ease: "back.out(1.1)",
+                // delay: i * 0.1,
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 90%",
+                    toggleActions: "play none none none"
+                }
+            });
+        });
+    }
 
     gsap.utils.toArray("#vertical_integration .card > img").forEach((img) => {
         gsap.fromTo(
@@ -61,7 +80,7 @@ $(document).ready(function () {
     })
 
     gsap.fromTo('#sustainability_details .sustainability_info .leftt', {
-        y: 80
+        y: window.innerWidth > 1024 ? 80 : 20
     }, {
         y: -20,
         ease: "none",
@@ -85,33 +104,51 @@ $(document).ready(function () {
             toggleActions: "play none none reverse",
         }
     })
-    gsap.from('#sustainability_details .tai_container .dynamic_desc p, #sustainability_details .tai_container .dynamic_desc li', {
-        y: 100,
-        opacity: 0,
-        ease: "power4.out",
-        duration: 1.2,
-        stagger: 0.1,
-        scrollTrigger: {
-            trigger: '#sustainability_details .tai_container',
-            start: "top 80%",
-            toggleActions: "play none none reverse",
-        }
-    })
-
-    gsap.fromTo('#sustainability_details .tai_container .dynamic_desc', {
+    if (window.innerWidth > 1024) {
+        gsap.from('#sustainability_details .tai_container .dynamic_desc p, #sustainability_details .tai_container .dynamic_desc li', {
+            y: 100,
+            opacity: 0,
+            ease: "power4.out",
+            duration: 1.2,
+            stagger: 0.1,
+            scrollTrigger: {
+                trigger: '#sustainability_details .tai_container',
+                start: "top 80%",
+                toggleActions: "play none none reverse",
+            }
+        })
+    }else{
+        gsap.from('#sustainability_details .tai_container .dynamic_desc p, #sustainability_details .tai_container .dynamic_desc li', {
+            y: 100,
+            opacity: 0,
+            ease: "power4.out",
+            duration: 1.2,
+            stagger: 0.1,
+            scrollTrigger: {
+                trigger: '#sustainability_details .tai_container .dynamic_desc p',
+                start: "top 90%",
+                toggleActions: "play none none reverse",
+            }
+        })
+    }
+   
+    if (window.innerWidth > 1024) {
+        gsap.fromTo('#sustainability_details .tai_container .dynamic_desc', {
         y: -100
-    }, {
-        y: 0,
-        ease: "none",
-        scrollTrigger: {
-            trigger: '#sustainability_details .tai_container',
-            start: "top bottom",
-            end: "bottom 20%",
-            scrub: true
-        }
-    });
+        }, {
+            y: 0,
+            ease: "none",
+            scrollTrigger: {
+                trigger: '#sustainability_details .tai_container',
+                start: "top bottom",
+                end: "bottom 20%",
+                scrub: true
+            }
+        });
+    }
+    
 
-    gsap.from('.logistics_shipping_efficiency_container .first h2, .logistics_shipping_efficiency_container .first p, .logistics_shipping_efficiency_container .first img', {
+    gsap.from('.logistics_shipping_efficiency_container .first h2, .logistics_shipping_efficiency_container .first p, .logistics_shipping_efficiency_container .first .category_image', {
         y: 100,
         opacity: 0,
         ease: "power4.out",
@@ -123,7 +160,7 @@ $(document).ready(function () {
             toggleActions: "play none none reverse",
         }
     })
-    gsap.from('.logistics_shipping_efficiency_container .second h2, .logistics_shipping_efficiency_container .second p, .logistics_shipping_efficiency_container .second img', {
+    gsap.from('.logistics_shipping_efficiency_container .second h2, .logistics_shipping_efficiency_container .second p, .logistics_shipping_efficiency_container .second .category_image', {
         y: 100,
         opacity: 0,
         ease: "power4.out",
@@ -136,7 +173,7 @@ $(document).ready(function () {
             toggleActions: "play none none reverse",
         }
     })
-    gsap.from('.logistics_shipping_efficiency_container .third h2, .logistics_shipping_efficiency_container .third p, .logistics_shipping_efficiency_container .third img', {
+    gsap.from('.logistics_shipping_efficiency_container .third h2, .logistics_shipping_efficiency_container .third p, .logistics_shipping_efficiency_container .third .category_image', {
         y: 100,
         opacity: 0,
         ease: "power4.out",

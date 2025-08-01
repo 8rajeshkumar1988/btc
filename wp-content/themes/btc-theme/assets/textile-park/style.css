@@ -24,17 +24,18 @@
   font-size: var(--font-46);
   font-weight: 200;
   color: var(--primaryBlack);
+  line-height: 1.4;
 }
 #textile_details h2 strong,
 #textile_details h2 span {
   font-weight: 600;
   color: var(--blue);
+  line-height: 1.4;
 }
 #textile_details .description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
   gap: 40px;
 }
 #textile_details .description p {
@@ -162,6 +163,10 @@
   font-weight: 600;
   color: var(--secondaryBlack);
 }
+#parking .containers .bottom .left .inner_top .tag_div .tags.unactive {
+  background-color: #dadada;
+  color: #6c6c6c;
+}
 #parking .containers .bottom .left .inner_top .copy * {
   font-size: var(--font-20);
   color: var(--secondaryBlack);
@@ -179,6 +184,9 @@
   flex-direction: column;
   height: 100%;
   justify-content: space-around;
+}
+#parking .containers .bottom .left .inner_bottom > p {
+  color: var(--secondaryBlack);
 }
 #parking .containers .bottom .left .inner_bottom > div {
   width: 50%;
@@ -209,6 +217,12 @@
   -o-object-fit: cover;
      object-fit: cover;
   transform: translateY(-100px);
+}
+#parking #textile_processing .inner_bottom {
+  display: none;
+}
+#parking #textile_processing #dyeing {
+  display: flex;
 }
 
 @media screen and (max-width: 1024px) {
@@ -262,6 +276,33 @@
     width: 100%;
     min-width: unset;
   }
+  #parking .containers .bottom .right {
+    max-height: 500px;
+  }
+  #parking #textile_processing #dyeing {
+    display: grid;
+  }
+  #parking #textile_processing #dyeing p {
+    grid-area: 1/1/2/3;
+  }
+  #parking #textile_processing #dyeing .first {
+    grid-area: 2/1/3/2;
+  }
+  #parking #textile_processing #dyeing .second {
+    grid-area: 2/2/3/3;
+  }
+  #parking #textile_processing .inner_bottom {
+    margin: 0 !important;
+  }
+  #parking #textile_processing .inner_bottom p {
+    grid-area: 1/1/2/3;
+  }
+  #parking #textile_processing .inner_bottom .first {
+    grid-area: 2/1/3/2;
+  }
+  #parking #textile_processing .inner_bottom .second {
+    grid-area: 2/2/3/3;
+  }
 }
 @media screen and (max-width: 500px) {
   #parking .containers {
@@ -310,5 +351,8 @@
   #parking .containers .bottom .left .inner_bottom > div {
     width: 100%;
     min-width: unset;
+  }
+  #parking #textile_processing #dyeing {
+    display: grid;
   }
 }/*# sourceMappingURL=style.css.map */

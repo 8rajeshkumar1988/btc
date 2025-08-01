@@ -10,7 +10,7 @@
     </div>
     <div class="heading">
         <h2>
-            Are you a Brand/Buying House 
+            Are you a Brand/Retailer/Buying House 
             looking for a one stop textile solution?
         </h2>
     </div>

@@ -317,7 +317,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin: 40px 0px;
+    margin: var(--spaceBelow_heading) 0px;
     .impact_wrapper {
       position: relative;
       overflow: hidden;
@@ -670,7 +670,7 @@ body {
 
   #our_impact {
     .our_impact_container {
-      margin: 20px 0px;
+      // margin: 20px 0px;
       .impact_wrapper {
         .impact_wrapper_head {
           padding: 20px;
