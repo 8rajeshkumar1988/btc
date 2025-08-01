@@ -174,6 +174,7 @@ $event_Start_Date = get_field('event_from_date');
 
 
 if ($event_Start_Date) {
+    $event_id = get_the_ID();
     if ($today < $event_Start_Date) {
 ?>
         <section id="event_registration">
@@ -182,21 +183,22 @@ if ($event_Start_Date) {
                 <h2>Register Now</h2>
             </div>
             <form class="event_reg_form" id="btc-event-form">
+                <input type="hidden" name="event_id" value="<?php echo $event_id; ?>">
                 <div class="f_name">
                     <label for="first_name"> Name</label>
                     <br />
-                    <input id="first_name" type="text" name="name" placeholder="Enter your name" />
+                    <input id="first_name" class="text-control__input" type="text" name="name" placeholder="Enter your name" />
                 </div>
 
                 <div class="email_g">
                     <label for="email">Your e-mail</label>
                     <br />
-                    <input id="email" type="email" name="email" placeholder="Enter your email" />
+                    <input id="email" type="email" class="email-input" name="email" placeholder="Enter your email" />
                 </div>
                 <div class="phone_number">
                     <label for="phoneno">Phone number</label>
                     <br />
-                    <input id="phoneno" type="tel" autocomplete="new-number" name="phone" placeholder="Enter your phone number" />
+                    <input id="phoneno" type="tel" class="phone-input" autocomplete="new-number" name="phone" placeholder="Enter your phone number" />
                 </div>
                 <div class="reason_to_attend">
                     <label for="reason">Reason to Attend</label>

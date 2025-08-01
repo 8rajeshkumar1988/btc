@@ -342,13 +342,49 @@ function btc_ajax_save_event()
     $reason_to_attend = sanitize_textarea_field($_POST['reason_to_attend'] ?? '');
     $no_of_attendees = sanitize_textarea_field($_POST['no_of_attendees'] ?? '');
     $source_url = sanitize_text_field($_POST['source_url'] ?? '');
+    $event_id          = intval($_POST['event_id'] ?? 0);
 
 
 
-
-    if (empty($name) || empty($email)) {
-        wp_send_json_error('Name and Email are required.');
+    if (empty($name) || empty($email) || empty($event_id)) {
+        wp_send_json_error('Name, Email and Event are required.');
     }
+
+    $existing = get_posts([
+        'post_type'   => 'event_registration',
+        'post_status' => 'publish',
+        'numberposts' => 1,
+        'meta_query'  => [
+            'relation' => 'AND',
+            [
+                'key'     => 'event',
+                'value'   => $event_id,
+                'compare' => '='
+            ],
+            [
+                'relation' => 'OR',
+                [
+                    'key'     => 'email',
+                    'value'   => $email,
+                    'compare' => '='
+                ],
+                [
+                    'key'     => 'phone_number',
+                    'value'   => $phone,
+                    'compare' => '='
+                ]
+            ]
+        ]
+    ]);
+
+    #print_r($existing); exit;
+
+    if (!empty($existing)) {
+        wp_send_json_error('You have already registered for this event using this email or phone number.');
+    }
+
+
+
     $dt_ist = new DateTime('now', new DateTimeZone('Asia/Kolkata'));
     $post_id = wp_insert_post([
         'post_type'   => 'event_registration',
@@ -372,6 +408,7 @@ function btc_ajax_save_event()
     update_field('source_url', $source_url, $post_id);
 
     update_field('created_on', $dt_ist->format('Y-m-d H:i'), $post_id);
+    update_field('event', $event_id, $post_id);
 
     wp_send_json_success('You have been registered. Thank you!');
 }

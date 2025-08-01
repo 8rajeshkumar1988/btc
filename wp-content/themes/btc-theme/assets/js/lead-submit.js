@@ -137,6 +137,7 @@ $("#whatsapp_checkbox").on("change", function () {
     const $form = $(this);
     let isValid = true;
     $form.find(".error_input").removeClass("error_input");
+    
     const $name = $($form.find('[name="name"]'));
     if (!$name.val().trim()) {
       isValid = false;
@@ -174,6 +175,7 @@ $("#whatsapp_checkbox").on("change", function () {
       nonce: aaLead.event_nonce,
       name: $form.find('[name="name"]').val(),
       email: $form.find('[name="email"]').val(),
+      event_id: $form.find('[name="event_id"]').val(),
       phone: phone,
       reason_to_attend: $form.find('[name="reason_to_attend"]').val(),
       no_of_attendees: $form.find('[name="no_of_attendees"]').val(),
