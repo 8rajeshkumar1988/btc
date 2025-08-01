@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name:       BTC Post Types
  * Plugin URI:        https://btcorpnet.com/
@@ -372,7 +373,7 @@ function my_custom_meta_box()
         'sort_order_meta',                  // ID
         'Sort Order',                       // Title
         'render_sort_order_meta_box',      // Callback
-        ['client','page' ,'category', 'customization_type', 'leadership', 'homecapability', 'product', 'customiz_category', 'socialmedia', 'infra_legacy_pointer'],                // Post types
+        ['client', 'page', 'category', 'customization_type', 'leadership', 'homecapability', 'product', 'customiz_category', 'socialmedia', 'infra_legacy_pointer'],                // Post types
         'side',                             // Context: 'side' = right sidebar
         'default'                           // Priority
     );
@@ -781,12 +782,14 @@ function btc_event_registration_custom_columns($columns)
         'phone_number'    => 'Phone',
         'reason_to_attend'         => 'Reason to Attend',
         'no_of_attendees'         => 'No of Attendees',
+        'event'         => 'Event',
         'source_url'      => 'Page URL',
         'created_on'      => 'Created On',
     );
     return $new_columns;
 }
 add_filter('manage_edit-event_registration_columns', 'btc_event_registration_custom_columns');
+
 
 
 
@@ -809,6 +812,22 @@ function btc_event_registration_custom_column_content($column, $post_id)
             break;
         case 'no_of_attendees':
             echo esc_html(get_field('no_of_attendees', $post_id));
+            break;
+        case 'event':
+            $events = get_field('event', $post_id);
+
+            if (!empty($events)) {
+                if (is_array($events)) {
+                    $event_names = array_map(function ($event) {
+                        return get_the_title($event->ID);
+                    }, $events);
+                    echo esc_html(implode(', ', $event_names));
+                } elseif (is_object($events)) {
+                    echo esc_html(get_the_title($events->ID));
+                }
+            } else {
+                echo '—';
+            }
             break;
         case 'source_url':
             echo esc_html(get_field('source_url', $post_id));
