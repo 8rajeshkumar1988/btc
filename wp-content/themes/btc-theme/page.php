@@ -3,9 +3,7 @@
 get_header();
 
 ?>
-<style>
-    
-</style>
+
 <section class="heroBanner">
    <div>
      <h1><?php the_title() ?></h1>

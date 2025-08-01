@@ -76,8 +76,8 @@ if (!$liveEvents->have_posts()) {
             <div class="content">
               <p class="breadcrub">&nbsp;</p>
               <div class="heading">
-                <p style="font-weight: 400;margin-bottom: 20px;">SPOTLIGHT</p>
                 <div class="event_description">
+                  <p style="font-weight: 400;margin-bottom: 20px;">SPOTLIGHT</p>
                   <h1><?php the_title() ?></h1>
                   <div class="event_date">
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender-white.png" ?>" alt="" />
