@@ -8,12 +8,12 @@
     </a>
     <button class="headerBtn">
         <?php if (is_home() || is_tag() || (is_single() && get_post_type() === 'post') || is_page('thank-you') || is_404()) : ?>
-        <img class="open" src="<?php echo get_template_directory_uri(); ?>/assets/images/quill_hamburger_black.svg" 
-        alt="quill_hamburger">
+            <img class="open" src="<?php echo get_template_directory_uri(); ?>/assets/images/quill_hamburger_black.svg"
+                alt="quill_hamburger">
         <?php else : ?>
-            <img class="open" alt="quill_hamburger" src="<?php echo get_template_directory_uri(); ?>/assets/images/quill_hamburger.svg" >
-                <?php endif; ?>
-            <img class="close" src="<?php echo get_template_directory_uri(); ?>/assets/images/closeSvg.svg" alt="closeSvg">
+            <img class="open" alt="quill_hamburger" src="<?php echo get_template_directory_uri(); ?>/assets/images/quill_hamburger.svg">
+        <?php endif; ?>
+        <img class="close" src="<?php echo get_template_directory_uri(); ?>/assets/images/closeSvg.svg" alt="closeSvg">
     </button>
 </header>
 <section id="header" data-lenis-prevent class="">
@@ -233,18 +233,7 @@
                 </div>
             <?php } ?>
             <div class="mediaArea">
-                <div>
-                    <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/images/insta.png'; ?>"
-                            alt="instagram"></a>
-                    <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/images/facebook.png'; ?>"
-                            alt="facebook"></a>
-                    <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/images/x.png'; ?>"
-                            alt="twitter"></a>
-                    <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/images/linkedin.png'; ?>"
-                            alt="linkedin"></a>
-                    <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/images/youtube.png'; ?>"
-                            alt="youtube"></a>
-                </div>
+                <?php get_template_part('components/social_links'); ?>
                 <p>All Rights Reserved. BTC</p>
             </div>
         </div>
