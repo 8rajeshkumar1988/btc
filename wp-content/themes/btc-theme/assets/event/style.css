@@ -74,6 +74,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 #spotlight .hero_slider_buttons button img {
   height: 100%;
@@ -250,11 +251,12 @@ body {
   color: #000;
 }
 #event_archive .event_btc_button_container {
-  padding: 40px var(--paddingX) var(--paddingY) var(--paddingX);
+  padding: 0px var(--paddingX) var(--paddingY) var(--paddingX);
   display: flex;
   justify-content: flex-end;
 }
 #event_archive .event_btc_buttons {
+  padding-top: 30px;
   display: flex;
   gap: 15px;
 }
@@ -267,6 +269,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 #event_archive .event_btc_buttons button img {
   height: 100%;
@@ -283,7 +286,7 @@ body {
   transform: rotate(180deg);
 }
 #event_archive .event_btc_container {
-  margin-top: 40px;
+  margin-top: var(--spaceBelow_heading);
 }
 #event_archive .event_btc_container .event_btc {
   padding: 0 var(--paddingX);
@@ -293,7 +296,7 @@ body {
 }
 #event_archive .event_btc_container .event_btc .event_item .event_image {
   width: 100%;
-  aspect-ratio: 341/194;
+  aspect-ratio: 16/9;
   position: relative;
   overflow: hidden;
   display: block;
@@ -305,6 +308,7 @@ body {
      object-fit: cover;
   position: absolute;
   inset: 0;
+  transition: transform 1s ease-in-out;
 }
 #event_archive .event_btc_container .event_btc .event_item .event_description {
   display: flex;

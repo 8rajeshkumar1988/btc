@@ -201,6 +201,8 @@ if ($upcomingEvents->have_posts()) {
     </div>
   </section>
 <?php } ?>
+
+
 <?php
 $pastEvents = new WP_Query(array(
   'post_type' => 'event',
@@ -249,7 +251,7 @@ if ($pastEvents->have_posts()) {
                     $title_text = get_the_title();
                   }
 
-                  $image = '<img  src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+                  $image = '<img class="eventImage"  src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
                   echo $image;
                 }
 

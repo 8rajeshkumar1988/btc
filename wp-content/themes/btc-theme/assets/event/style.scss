@@ -73,6 +73,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
       img {
         height: 100%;
         width: 100%;
@@ -266,11 +267,12 @@ body {
     }
   }
   .event_btc_button_container {
-    padding: 40px var(--paddingX) var(--paddingY) var(--paddingX);
+    padding: 0px var(--paddingX) var(--paddingY) var(--paddingX);
     display: flex;
     justify-content: flex-end;
   }
   .event_btc_buttons {
+    padding-top: 30px;
     display: flex;
     gap: 15px;
     button {
@@ -282,6 +284,8 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
+
       img {
         height: 100%;
         width: 100%;
@@ -301,16 +305,44 @@ body {
     }
   }
   .event_btc_container {
-    margin-top: 40px;
+    margin-top: var(--spaceBelow_heading);
 
     .event_btc {
       padding: 0 var(--paddingX);
+      // .swiper-slide{
+      //   .event_image{
+      //     & > img{
+      //       transform: translateX(-120px);          
+      //     }
+      //   }
+      // }
+      // .swiper-slide.swiper-slide-next{
+      //   .event_image{
+      //     & > img{
+      //       transform: translateX(-80px);
+      //     }
+      //   }
+      // }
+      // .swiper-slide.swiper-slide-active{
+      //   .event_image{
+      //     & > img{  
+      //       transform: translateX(-40px);
+      //     }
+      //   }
+      // }
+      // .swiper-slide.swiper-slide-prev{
+      //   .event_image{
+      //     & > img{
+      //       transform: translateX(0px);
+      //     }
+      //   }
+      // }
       .event_item {
         // width: calc((100% - (var(--paddingX) * 2)) / 3);
         min-width: 320px;
         .event_image {
           width: 100%;
-          aspect-ratio: 341/194;
+          aspect-ratio: 16/9;
           position: relative;
           overflow: hidden;
           display: block;
@@ -320,6 +352,8 @@ body {
             object-fit: cover;
             position: absolute;
             inset: 0;
+            transition: transform 1s ease-in-out;
+
           }
         }
         .event_description {
