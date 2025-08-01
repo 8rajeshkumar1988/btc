@@ -39,8 +39,13 @@ get_header();
 </section>
 
 <section id="globalSearch">
-   <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
-        <dotlottie-wc class="lottie" id="myLottie" src=<?php echo get_template_directory_uri() . '/assets/images/animation.lottie'; ?> style="width: 100%;height: 100%"   speed="1" freezeOnOffscreen="true" loop="false" autoplay="false"></dotlottie-wc>
+    <!-- class="lottie" id="myLottie" -->
+   <div class="worldMap lottie" id="lottie-animation">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+        <div id="lottieCanvas">
+
+        </div>
+    </div>
     <div class="content_wrapper">
         <div class="content" animateHeading>
             <h2>Strategic Location & <br>Global Reach</h2>
@@ -2833,7 +2838,78 @@ get_header();
         </div>
     </div>
 </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let anim_lottie;
 
+    const canvas = document.getElementById("lottieCanvas");
+
+    anim_lottie = lottie.loadAnimation({
+      container: canvas, 
+      renderer: "canvas", 
+      loop: false,
+      autoplay: false,
+      path: "<?php echo get_template_directory_uri() . '/assets/images/world_map_lottie.json'; ?>" // your .json file path
+    });
+
+    let isReversing = false;
+    let reverseCompleteHandler;
+
+    const play_lottie = () => {
+    if (!anim_lottie) return;
+
+    // If it's reversing, cancel the reverse and resume forward play
+    if (isReversing) {
+        isReversing = false;
+        anim_lottie.removeEventListener("complete", reverseCompleteHandler);
+        anim_lottie.setDirection(1); // forward
+        anim_lottie.play();
+        return;
+    }
+
+    anim_lottie.setDirection(1); // ensure it's forward
+    anim_lottie.play();
+    };
+
+    const reverseAndReset = () => {
+    if (!anim_lottie || isReversing) return;
+
+    isReversing = true;
+    anim_lottie.setDirection(-1);
+    anim_lottie.play();
+
+    // Define the complete handler and store reference for removal
+    reverseCompleteHandler = () => {
+        anim_lottie.removeEventListener("complete", reverseCompleteHandler);
+        anim_lottie.stop();
+        anim_lottie.goToAndStop(0, true);
+        anim_lottie.setDirection(1);
+        isReversing = false;
+    };
+
+    anim_lottie.addEventListener("complete", reverseCompleteHandler);
+    };
+
+
+
+
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            play_lottie();
+          } else {
+            reverseAndReset();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(canvas);
+  });
+</script>
 
 <?php
 get_footer();

@@ -61,6 +61,9 @@ body {
   padding: var(--paddingY) var(--paddingX);
   background-color: #fff;
 }
+#lead_form .heading {
+  max-width: clamp(50rem, 8.3333rem + 55.5556vw, 75rem);
+}
 #lead_form .heading h2 {
   color: var(--blue);
   font-weight: 600;
@@ -189,8 +192,7 @@ body {
 }
 #virtual_factory_experience .virtual_container iframe {
   width: 100%;
-  height: calc(100% + 120px);
-  transform: translateY(-150px);
+  height: 100%;
   border: 0;
   pointer-events: none; /* Only iframe is non-clickable initially */
 }
@@ -264,8 +266,9 @@ body {
     align-items: flex-start;
     gap: var(--spaceBelow_heading);
   }
-  #virtual_factory_experience .virtual_container iframe {
+  #virtual_factory_experience .virtual_container {
     aspect-ratio: 9/16;
+    max-height: 600px;
   }
   #lead_form form {
     grid-template-columns: 1fr;

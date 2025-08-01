@@ -172,7 +172,10 @@
         }
     }
 }
-
+#lottieCanvas {
+    width: 100%;
+    height: 100%;
+}
 .why_btc_buttons{
     position: relative;
     display: flex;
@@ -454,6 +457,22 @@
             height: auto;
         }
     }
+    #sustainableManufacturer > div {
+        .text{
+           transform: none;
+        }
+        .img{
+            aspect-ratio: 4/4.5;
+            img{
+                height:calc(100% + 100px) ;
+                transform: translateY(-100px);
+            }
+        }
+    }
+    #roleOfbtc .content > div .text{
+        transform: none;
+    }
+    
     #roleOfbtc {
         .content {
             & > div {

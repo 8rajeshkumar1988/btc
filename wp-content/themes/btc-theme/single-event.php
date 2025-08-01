@@ -33,17 +33,17 @@ get_header();
     <p class="breadcrub">
         <a href="<?php echo site_url('/') ?>">Home</a> / <a href="<?php echo site_url('/all-event') ?>">Events & Engagements</a> / <?php the_title() ?>
     </p>
-<div class="social_links">
-  <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/insta.png" alt="instagram" onclick="shareToInsta()" /> -->
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="facebook" onclick="shareToFacebook()"  data-url="<?php echo esc_url(get_permalink()); ?>"
-  data-title="<?php echo esc_attr(get_the_title()); ?>" />
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/x.png" alt="twitter" onclick="shareToTwitter()"  data-url="<?php echo esc_url(get_permalink()); ?>"
-  data-title="<?php echo esc_attr(get_the_title()); ?>" />
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.png" alt="linkedin" onclick="shareToLinkedIn()"  data-url="<?php echo esc_url(get_permalink()); ?>"
-  data-title="<?php echo esc_attr(get_the_title()); ?>" />
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/whatsapp.png" alt="whatsapp" onclick="shareToWhatsApp()"  data-url="<?php echo esc_url(get_permalink()); ?>"
-  data-title="<?php echo esc_attr(get_the_title()); ?>" />
-</div>
+    <div class="social_links">
+        <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/insta.png" alt="instagram" onclick="shareToInsta()" /> -->
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="facebook" onclick="shareToFacebook()" data-url="<?php echo esc_url(get_permalink()); ?>"
+            data-title="<?php echo esc_attr(get_the_title()); ?>" />
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/x.png" alt="twitter" onclick="shareToTwitter()" data-url="<?php echo esc_url(get_permalink()); ?>"
+            data-title="<?php echo esc_attr(get_the_title()); ?>" />
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.png" alt="linkedin" onclick="shareToLinkedIn()" data-url="<?php echo esc_url(get_permalink()); ?>"
+            data-title="<?php echo esc_attr(get_the_title()); ?>" />
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/whatsapp.png" alt="whatsapp" onclick="shareToWhatsApp()" data-url="<?php echo esc_url(get_permalink()); ?>"
+            data-title="<?php echo esc_attr(get_the_title()); ?>" />
+    </div>
 </div>
 <div class="event-content">
     <?php the_content(); ?>
@@ -73,20 +73,18 @@ if ($latitude && $longitude) {
         </div>
         <div class="button_container">
             <div class="copy_address">
-               <button id="copyBtn" onclick="copyAddress(this)"  data-lat="<?php echo esc_attr($latitude); ?>" data-lng="<?php echo esc_attr($longitude); ?>">
-                <span class="icon-wrapper">
-                    <img
-                    class="copy-icon active"
-                    src="<?php echo get_template_directory_uri() . '/assets/images/copy.svg'; ?>"
-                    alt="Copy"
-                    />
-                    <img
-                    class="check-icon"
-                    src="<?php echo get_template_directory_uri() . '/assets/images/check.png'; ?>"
-                    alt="Copied"
-                    />
-                </span>
-                Copy Address
+                <button id="copyBtn" onclick="copyAddress(this)" data-lat="<?php echo esc_attr($latitude); ?>" data-lng="<?php echo esc_attr($longitude); ?>">
+                    <span class="icon-wrapper">
+                        <img
+                            class="copy-icon active"
+                            src="<?php echo get_template_directory_uri() . '/assets/images/copy.svg'; ?>"
+                            alt="Copy" />
+                        <img
+                            class="check-icon"
+                            src="<?php echo get_template_directory_uri() . '/assets/images/check.png'; ?>"
+                            alt="Copied" />
+                    </span>
+                    Copy Address
                 </button>
 
             </div>
@@ -148,8 +146,7 @@ if ($gallery && is_array($gallery)) {
                             <div class="swiper-slide-container">
                                 <img
                                     src="<?php echo esc_url($thumbnail[0]); ?>"
-                                    alt="<?php echo esc_attr($alt ?: $title); ?>"
-                                     />
+                                    alt="<?php echo esc_attr($alt ?: $title); ?>" />
                             </div>
                         </div>
                     <?php } ?>
@@ -174,78 +171,78 @@ if ($gallery && is_array($gallery)) {
 <?php
 $today = date('Ymd');
 $event_Start_Date = get_field('event_from_date');
-$event_End_Date = get_field('event_to_date');
 
-if ($event_Start_Date && $event_End_Date) {
-    if ($today >= $event_Start_Date && $today <= $event_End_Date) {
+
+if ($event_Start_Date) {
+    if ($today < $event_Start_Date) {
 ?>
-    <section id="event_registration">
-        <div class="heading">
-            <p>Never Miss an opportunity </p>
-            <h2>Register Now</h2>
-        </div>
-        <form class="event_reg_form" id="btc-event-form">
-            <div class="f_name">
-                <label for="first_name"> Name</label>
-                <br />
-                <input id="first_name" type="text" name="name" placeholder="Enter your name" />
+        <section id="event_registration">
+            <div class="heading">
+                <p>Never Miss an opportunity </p>
+                <h2>Register Now</h2>
             </div>
-
-            <div class="email_g">
-                <label for="email">Your e-mail</label>
-                <br />
-                <input id="email" type="email" name="email" placeholder="Enter your email" />
-            </div>
-            <div class="phone_number">
-                <label for="phoneno">Phone number</label>
-                <br />
-                <input id="phoneno" type="tel" autocomplete="new-number" name="phone" placeholder="Enter your phone number" />
-            </div>
-            <div class="reason_to_attend">
-                <label for="reason">Reason to Attend</label>
-                <br />
-                <textarea name="reason_to_attend" id="reason"></textarea>
-            </div>
-            <div class="no_of_attendees">
-                <label for="attendees_number">No. of Attendees</label>
-                <br />
-                <div class="combine_box">
-                    <div class="input-group">
-                        <div
-                            class="value-button descrease"
-                            onclick="changeAttendees(-1)"
-                            value="Decrease Value">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/images/minus.svg'; ?>" alt="" />
-                        </div>
-                        <input
-                            name="no_of_attendees"
-                            type="number"
-                            id="attendees_number"
-                            value="01"
-                            min="01"
-                            max="99"
-                            maxlength="2"
-                            readonly />
-                        <div
-                            class="value-button increase"
-                            onclick="changeAttendees(1)"
-                            value="Increase Value">
-                            <img src="<?php echo get_template_directory_uri() . '/assets/images/plus.svg'; ?>" alt="" />
-                        </div>
-                    </div>
-                    <button class="cta">
-                        Subscribe
-                        <img
-                            src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>"
-                            alt="right arrow" />
-                    </button>
+            <form class="event_reg_form" id="btc-event-form">
+                <div class="f_name">
+                    <label for="first_name"> Name</label>
+                    <br />
+                    <input id="first_name" type="text" name="name" placeholder="Enter your name" />
                 </div>
+
+                <div class="email_g">
+                    <label for="email">Your e-mail</label>
+                    <br />
+                    <input id="email" type="email" name="email" placeholder="Enter your email" />
+                </div>
+                <div class="phone_number">
+                    <label for="phoneno">Phone number</label>
+                    <br />
+                    <input id="phoneno" type="tel" autocomplete="new-number" name="phone" placeholder="Enter your phone number" />
+                </div>
+                <div class="reason_to_attend">
+                    <label for="reason">Reason to Attend</label>
+                    <br />
+                    <textarea name="reason_to_attend" id="reason"></textarea>
+                </div>
+                <div class="no_of_attendees">
+                    <label for="attendees_number">No. of Attendees</label>
+                    <br />
+                    <div class="combine_box">
+                        <div class="input-group">
+                            <div
+                                class="value-button descrease"
+                                onclick="changeAttendees(-1)"
+                                value="Decrease Value">
+                                <img src="<?php echo get_template_directory_uri() . '/assets/images/minus.svg'; ?>" alt="" />
+                            </div>
+                            <input
+                                name="no_of_attendees"
+                                type="number"
+                                id="attendees_number"
+                                value="01"
+                                min="01"
+                                max="99"
+                                maxlength="2"
+                                readonly />
+                            <div
+                                class="value-button increase"
+                                onclick="changeAttendees(1)"
+                                value="Increase Value">
+                                <img src="<?php echo get_template_directory_uri() . '/assets/images/plus.svg'; ?>" alt="" />
+                            </div>
+                        </div>
+                        <button class="cta">
+                            Subscribe
+                            <img
+                                src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>"
+                                alt="right arrow" />
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="event_form_error_container">
+                <p class="event_form_error"></p>
             </div>
-        </form>
-        <div class="event_form_error_container">
-            <p class="event_form_error"></p>
-        </div>
-    </section>
+        </section>
 <?php
     }
 }
