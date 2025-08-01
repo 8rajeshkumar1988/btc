@@ -60,46 +60,47 @@ $(document).ready(function () {
         toggleActions: "play none none reverse",
       },
     });
-  } else {
-    gsap.fromTo(
-      "#globalSearch",
-      { y: 100 },
-      {
-        y: 0,
-        ease: "none",
-        scrollTrigger: {
-          trigger: "#globalSearch",
-          start: "top 100%",
-          end: "top 0%",
-          scrub: true,
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-    gsap.from("#globalSearch .content", {
-      y: 50,
-      opacity: 0,
-      duration: 1.2,
-      ease: "power4.out",
+    gsap.to("#globalSearch .content_wrapper", {
+      y: 150,
+      ease: "none",
       scrollTrigger: {
-        trigger: "#globalSearch .content",
-        start: "top 90%",
+        trigger: "#globalSearch .content_wrapper",
+        start: "top 85%",
+        end: "top 0%",
         toggleActions: "play none none reverse",
+        scrub: true,
       },
     });
+  } else {
+    // gsap.fromTo(
+    //   "#globalSearch",
+    //   { y: 100 },
+    //   {
+    //     y: 0,
+    //     ease: "none",
+    //     scrollTrigger: {
+    //       trigger: "#globalSearch",
+    //       start: "top 100%",
+    //       end: "top 0%",
+    //       scrub: true,
+    //       toggleActions: "play none none reverse",
+    //     },
+    //   }
+    // );
+    // gsap.from("#globalSearch .content", {
+    //   y: 50,
+    //   opacity: 0,
+    //   duration: 1.2,
+    //   ease: "power4.out",
+    //   scrollTrigger: {
+    //     trigger: "#globalSearch .content",
+    //     start: "top 90%",
+    //     toggleActions: "play none none reverse",
+    //   },
+    // });
   }
 
-  gsap.to("#globalSearch .content_wrapper", {
-    y: 150,
-    ease: "none",
-    scrollTrigger: {
-      trigger: "#globalSearch .content_wrapper",
-      start: "top 85%",
-      end: "top 0%",
-      toggleActions: "play none none reverse",
-      scrub: true,
-    },
-  });
+
 
   gsap.utils.toArray("#sustainableManufacturer .img img").forEach((img) => {
     gsap.to(img, {

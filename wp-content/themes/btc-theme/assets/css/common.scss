@@ -69,7 +69,7 @@ body {
         color: #fff;
         margin-top: var(--headingTop);
         line-height: 1.2;
-        z-index: 1;        
+        z-index: 1;
       }
       p {
         position: relative;
@@ -112,7 +112,7 @@ body {
       background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000000cf 100%);
     }
   }
-  .content [animateHeadingBanner]{
+  .content [animateHeadingBanner] {
     * {
       opacity: 0;
       transform: translateY(100px);
@@ -120,11 +120,9 @@ body {
   }
 }
 
-.cta {
+.cta.new {
   all: unset;
-  background-color: var(--green);
   color: #000;
-  padding:clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) clamp(1.875rem, 0.3339rem + 1.8051vw, 2.5rem);
   text-transform: uppercase;
   font-size: var(--font-20);
   width: fit-content;
@@ -134,20 +132,71 @@ body {
   align-items: center;
   gap: 10px;
   z-index: 1;
-  img {
-    background-color: white;
-    height: 25px;
-    width: 25px;
-    padding: 3px;
-    filter: invert(1);
-    transform: rotate(-45deg) translateX(0px);
+  span {
+    padding: clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) clamp(1.875rem, 0.3339rem + 1.8051vw, 2.5rem);
+    background-color: var(--green);
     transition: all 0.3s ease-in-out;
   }
+  img {
+    position: absolute;
+    height: 65%;
+    width: auto;
+    padding: 5px;
+    filter: invert(1);
+    background-color: #fff;
+    transform: rotate(-45deg) translateX(0px);
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;
+    left: 95%;
+    pointer-events: none;
+  }
   &:hover {
+    span {
+      padding: clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem)
+        calc(clamp(1.875rem, 0.3339rem + 1.8051vw, 2.5rem) + 30px) clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem)
+        clamp(1.875rem, 0.3339rem + 1.8051vw, 2.5rem);
+    }
     img {
       background-color: transparent;
-      transform: rotate(0deg) translateX(10px);
+      transform: rotate(0deg);
       filter: invert(0);
+      left: calc(100% - (clamp(1.875rem, 0.3339rem + 1.8051vw, 2.5rem) * 1.5));
+    }
+  }
+}
+.cta {
+  all: unset;
+  color: #000;
+  text-transform: uppercase;
+  font-size: var(--font-20);
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+  padding: clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) clamp(1.875rem, 0.3339rem + 1.8051vw, 2.5rem);
+  background-color: var(--green);
+  img {
+    height: 65%;
+    width: auto;
+    padding: 5px;
+    filter: invert(1);
+    background-color: #fff;
+    transform: rotate(-45deg) translate(10px, 10px); ;
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;    
+    pointer-events: none;
+  }
+  &:hover {
+    span {
+    }
+    img {
+      background-color: transparent;
+      transform: rotate(0deg) translate(20px, 0px); ;
+      filter: invert(0);
+      left: calc(100% - (clamp(1.875rem, 0.3339rem + 1.8051vw, 2.5rem) * 1.5));
     }
   }
 }
@@ -255,23 +304,23 @@ body {
         inset: 0;
         transition: transform 1s ease;
       }
-      &.swiper-slide{
-        img{
+      &.swiper-slide {
+        img {
           transform: translateX(0px);
         }
       }
-      &.swiper-slide-active{
-        img{
+      &.swiper-slide-active {
+        img {
           transform: translateX(-30px);
         }
       }
       &.swiper-slide-prev {
-        img{
+        img {
           transform: translateX(-15px);
         }
       }
       &.swiper-slide-next {
-        img{
+        img {
           transform: translateX(-45px);
         }
       }
@@ -399,7 +448,7 @@ textarea {
   }
 }
 
-#footer_img_frame{
+#footer_img_frame {
   background-color: #fffff4;
 }
 
@@ -992,7 +1041,7 @@ header {
 
 @media screen and (max-width: 1024px) {
   :root {
-    --font-18:   clamp(0.9375rem, 0.8071rem + 0.4967vw, 1.125rem);
+    --font-18: clamp(0.9375rem, 0.8071rem + 0.4967vw, 1.125rem);
   }
   #lead_popup_form {
     form {
@@ -1111,7 +1160,7 @@ header {
     --spaceBelow_heading: 30px;
   }
   .heroBanner {
-    height: 95dvh;
+    height: calc(95vh - 50px);
     aspect-ratio: initial;
   }
 
@@ -1121,8 +1170,8 @@ header {
       flex-direction: column;
     }
   }
-  #newsletter .newsletter_form input{
-    margin-top: 10px;  
+  #newsletter .newsletter_form input {
+    margin-top: 10px;
   }
   #our_clients {
     .marquee-content {
@@ -1275,7 +1324,7 @@ header {
         gap: calc(var(--font-14) / 3);
         margin-top: auto;
         padding-left: calc(var(--font-46) / 1.5);
-        margin-bottom: var(--font-18);
+        margin-bottom: 5dvh;
         .right {
           display: none;
         }

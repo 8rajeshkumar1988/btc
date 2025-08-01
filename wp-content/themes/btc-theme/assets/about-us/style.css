@@ -578,6 +578,7 @@ body {
   #product_page_details .shareholder_logos .logo {
     height: auto;
     width: clamp(8.75rem, 3.9694rem + 18.2119vw, 15.625rem);
+    height: calc(clamp(8.75rem, 3.9694rem + 18.2119vw, 15.625rem) / 1.5);
   }
 }
 @media screen and (max-width: 768px) {

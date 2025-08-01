@@ -329,7 +329,7 @@ $(document).ready(function () {
   });
 
 
-  gsap.from(".sliderAbout", {
+  gsap.from(".sliderAbout, #aboutBtc .cta", {
     y: 100,
     opacity: 0,
     ease: "power4.out",
@@ -368,7 +368,8 @@ $(document).ready(function () {
     scrollTrigger: {
       trigger: ".spiralImage",
       start: "top 80%",
-      toggleActions: "play none none reverse",
+      toggleActions: "play none none none",
+      once: true,
     },
   });
 
@@ -410,5 +411,8 @@ $(document).ready(function () {
       },
     });
   }
+
+
+
 
 });

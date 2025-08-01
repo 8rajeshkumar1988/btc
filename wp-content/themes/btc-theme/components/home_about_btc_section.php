@@ -54,7 +54,7 @@ $key_pointers = new WP_Query(array(
               <button class="swiper-button-next next aboutNext"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
           </div>
             </div>
-        <a class="cta" href="<?php echo home_url('/about-us'); ?>" ctaButton>Know More About BTC <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Know More About BTC"></a>
+        <a class="cta new" href="<?php echo home_url('/about-us'); ?>" ><span>Know More About BTC</span> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Know More About BTC"></a>
     </div>
 </section>
 
