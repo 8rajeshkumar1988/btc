@@ -442,11 +442,11 @@
     width: 130%;
     height: auto;
   }
+  #globalSearch .content {
+    bottom: 0;
+  }
   #sustainableManufacturer > div .text {
     transform: none;
-  }
-  #sustainableManufacturer > div .img {
-    aspect-ratio: 4/4.5;
   }
   #sustainableManufacturer > div .img img {
     height: calc(100% + 100px);

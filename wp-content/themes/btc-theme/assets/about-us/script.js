@@ -280,10 +280,10 @@ if (window.innerWidth > 1024) {
     opacity: 0,
     ease: "power4.out",
     duration: 1.2,
-    stagger: 0.2,
+    stagger: 0.4,
     scrollTrigger: {
-      trigger: '#our_impact',
-      start: "top 80%",
+      trigger: '#our_impact  .impact_wrapper',
+      start: "top 85%",
       toggleActions: "play none none reverse",
     }
   });
@@ -308,7 +308,7 @@ if (window.innerWidth > 1024) {
       gsap.fromTo(leader,
         { backgroundPosition: "100% 0%" },
         {
-          backgroundPosition: "90% 50%",
+          backgroundPosition: "90% 0%",
           ease: "none",
           scrollTrigger: {
             trigger: leader,

@@ -179,10 +179,10 @@ $(document).ready(function () {
     gsap.fromTo(
       "#glance > svg",
       {
-        top: "-50dvh",
+        top: "-20dvh",
       },
       {
-        top: "50dvh",
+        top: "20dvh",
         ease: "none",
         scrollTrigger: {
           trigger: "#glance",
@@ -197,15 +197,15 @@ $(document).ready(function () {
     gsap.fromTo(
       "#glance > svg",
       {
-        top: "10vh",
+        top: "-5vh",
       },
       {
-        top: "-5vh",
+        top: "5vh",
         ease: "none",
         scrollTrigger: {
           trigger: "#glance",
           start: "top 100%",
-          end: "bottom 0%",
+          end: "top 0%",
           scrub: true,
           toggleActions: "play none none reverse",
         },
@@ -220,7 +220,7 @@ $(document).ready(function () {
     ease: "power4.out",
     scrollTrigger: {
       trigger: "#glance .subContent",
-      start: "top 100%",
+      start: "top 85%",
       end: "bottom 0%",
       toggleActions: "play none none reverse",
     },
