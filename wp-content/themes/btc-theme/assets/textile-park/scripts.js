@@ -13,6 +13,14 @@ $(document).ready(function () {
         end: "bottom 0%",
         toggleActions: "play none none reverse",
         scrub: true,
+        onEnter: () => {
+          if (window.innerWidth < 1024) {
+            lenis.stop();
+            setTimeout(() => {
+              lenis.start();
+            }, 500)
+          }
+        },
       },
     });
   });
@@ -30,49 +38,49 @@ $(document).ready(function () {
 
   //       });
   //     });
-$("#textile_processing .tags").click(function () {
-  const tab = $(this).data("tab");
-  if ($(this).hasClass("active")) return;
+  $("#textile_processing .tags").click(function () {
+    const tab = $(this).data("tab");
+    if ($(this).hasClass("active")) return;
 
-  // Toggle active/unactive tags
-  $("#textile_processing .tags").removeClass("active").addClass("unactive");
-  $(this).addClass("active").removeClass("unactive");
+    // Toggle active/unactive tags
+    $("#textile_processing .tags").removeClass("active").addClass("unactive");
+    $(this).addClass("active").removeClass("unactive");
 
-  // Animate content switch
-  const $currentContent = $("#textile_processing .inner_bottom:visible");
-  const $nextContent = $("#" + tab);
+    // Animate content switch
+    const $currentContent = $("#textile_processing .inner_bottom:visible");
+    const $nextContent = $("#" + tab);
 
-  // Animate current content's children out
-  gsap.to($currentContent.children(), {
-    opacity: 0,
-    y: 40,
-    ease: "power4.out",
-    duration: 0.5,
-    onComplete: () => {
-      $currentContent.css("display", "none");
-      if (window.innerWidth > 1024) {
+    // Animate current content's children out
+    gsap.to($currentContent.children(), {
+      opacity: 0,
+      y: 40,
+      ease: "power4.out",
+      duration: 0.5,
+      onComplete: () => {
+        $currentContent.css("display", "none");
+        if (window.innerWidth > 1024) {
           $nextContent.css("display", "flex");
-      }else{
+        } else {
           $nextContent.css("display", "grid");
+        }
+
+        // Prepare next content's children
+        gsap.set($nextContent.children(), {
+          opacity: 0,
+          y: 40,
+        });
+
+        // Animate next content's children in
+        gsap.to($nextContent.children(), {
+          opacity: 1,
+          y: 0,
+          ease: "power4.out",
+          duration: 0.3,
+          stagger: 0.1,
+        });
       }
-
-      // Prepare next content's children
-      gsap.set($nextContent.children(), {
-        opacity: 0,
-        y: 40,
-      });
-
-      // Animate next content's children in
-      gsap.to($nextContent.children(), {
-        opacity: 1,
-        y: 0,
-        ease: "power4.out",
-        duration: 0.3,
-        stagger: 0.1,
-      });
-    }
+    });
   });
-});
 
 
   if (window.innerWidth > 1024) {
