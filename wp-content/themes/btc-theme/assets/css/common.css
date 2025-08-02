@@ -291,16 +291,16 @@ body {
   inset: 0;
   transition: transform 1s ease;
 }
-#our_social .social_media .social_media_card.swiper-slide img {
+#our_social .social_media .social_media_card.swiper-slide > img {
   transform: translateX(0px);
 }
-#our_social .social_media .social_media_card.swiper-slide-active img {
+#our_social .social_media .social_media_card.swiper-slide-active > img {
   transform: translateX(-30px);
 }
-#our_social .social_media .social_media_card.swiper-slide-prev img {
+#our_social .social_media .social_media_card.swiper-slide-prev > img {
   transform: translateX(-15px);
 }
-#our_social .social_media .social_media_card.swiper-slide-next img {
+#our_social .social_media .social_media_card.swiper-slide-next > img {
   transform: translateX(-45px);
 }
 #our_social .social_media .social_media_card .social_icon {
@@ -834,7 +834,7 @@ header button.open .close {
 #lead_popup_form .heading h2 {
   color: var(--blue);
   font-weight: 500;
-  max-width: 900px;
+  max-width: 950px;
   font-size: calc(var(--font-46) - 15px);
 }
 #lead_popup_form .iti {

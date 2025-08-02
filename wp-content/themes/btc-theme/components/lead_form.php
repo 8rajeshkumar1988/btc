@@ -2,12 +2,12 @@
     <div>
         <label for="name">Name*</label>
         <br />
-        <input id="name" name="name" type="text" class="text-control__input" placeholder="Enter your name" />
+        <input id="name" name="name" type="text" class="text-control__input"  />
     </div>
     <div>
         <label for="email">Email*</label>
         <br />
-        <input id="email" name="email" class="email-input" type="email" placeholder="Enter your email" />
+        <input id="email" name="email" class="email-input" type="email"  />
     </div>
     <div>
         <label for="enquiry_type">Enquiry Type*</label>
@@ -21,7 +21,7 @@
     <div>
         <label for="phone">Phone Number*</label>
         <br />
-        <input id="phone" name="phone" autocomplete="new-phone" class="phone-input" type="tel" placeholder="Enter your phone number" />
+        <input id="phone" name="phone" autocomplete="new-phone" class="phone-input" type="tel"  />
     </div>
     <div>
         <label for="company">Company Name*</label>
@@ -30,7 +30,7 @@
             id="company"
             type="text"
             name="company_name"
-            placeholder="Enter your company name" />
+             />
     </div>
 
     <div class="whatsapp_input">
@@ -45,7 +45,7 @@
             id="whatsapp_number"
             type="tel"
             name="whatsapp" class="phone-input"
-            placeholder="Enter your Whatsapp number" />
+             />
     </div>
     <div>
         <label for="Organization">Organization Type*</label>
@@ -54,7 +54,7 @@
             id="Organization"
             type="text"
             name="org_type"
-            placeholder="Enter your Organization Type" />
+             />
     </div>
     <div class="textareaDiv">
         <label for="requirements">Tell Us About Your Requirements*</label>
@@ -63,13 +63,13 @@
             id="requirements"
             rows="3"
             name="requirements"
-            placeholder="Enter your requirements"></textarea>
+           ></textarea>
     </div>
     <div>
         <div class="policy_container">
             <input type="checkbox" checked id="policy_checkbox" name="tandc" />
             <label for="policy_checkbox" class="policy_label">
-                I agree to the BTC privacy policy.*
+                I agree to the BTC <a href="/privacy-policy" style="color: #000">privacy policy</a>.*
             </label>
         </div>
     </div>

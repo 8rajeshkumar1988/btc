@@ -154,7 +154,9 @@ if ($posts->have_posts()) {
       </button>
     </div>
   </section>
-<?php } ?>
+  <?php } ?>
+  
+  <?php get_template_part('components/newsletter_subs_section'); ?>
 <?php
 get_footer();
 

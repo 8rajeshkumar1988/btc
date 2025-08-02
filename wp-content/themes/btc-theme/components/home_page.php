@@ -114,7 +114,7 @@
     <div class="accordian">
         <div class="faq default-open" >
             <div class="head">
-                <p>Carbon Footprint of factory</p>
+                <p>Carbon Footprint of Factory</p>
                 <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
             </div>
             <div class="ans" style="display: none;">
@@ -128,7 +128,7 @@
         </div>
         <div class="faq" >
             <div class="head">
-                <p>Sustainable infra</p>
+                <p>Sustainable Infra</p>
                 <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
             </div>
             <div class="ans" style="display: none;">
@@ -250,7 +250,10 @@
 <?php get_template_part('components/clients'); ?>
 
 <section id="linkedIn_video">
-    <video src="<?php echo get_template_directory_uri() . '/assets/images/homeVideoSec.mp4'; ?>" autoplay loop muted playsinline></video>
+    <video poster="<?php echo get_template_directory_uri() . '/assets/images/home/BTC_Gate.jpg'; ?>"  autoplay loop muted playsinline>
+        <source src="<?php echo get_template_directory_uri() . '/assets/images/homeVideoSec.mp4'; ?>" type="video/mp4">
+        <source src="<?php echo get_template_directory_uri(); ?>/assets/images/homeVideoSec.webm" type="video/webm">
+    </video>
 </section>
 <div class="blankSpace"></div>
 

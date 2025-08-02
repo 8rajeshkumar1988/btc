@@ -233,7 +233,7 @@ if ($event_Start_Date) {
                             </div>
                         </div>
                         <button class="cta">
-                            Subscribe
+                            Submit
                             <img
                                 src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>"
                                 alt="right arrow" />
@@ -273,6 +273,43 @@ if ($otherEvents->have_posts()) {
         <div class="event_btc_container">
             <div class="swiper event_btc">
                 <div class="swiper-wrapper">
+                    <?php
+                    $counter = 1;
+                    while ($otherEvents->have_posts()) {
+                        $otherEvents->the_post(); ?>
+                        <a href="<?php the_permalink(); ?>" class="swiper-slide event_item">
+                            <div class="event_image">
+                                <?php
+                                $banner_image = get_field('banner_image');
+                                if ($banner_image) {
+                                    $image_url = isset($banner_image['sizes']['full']) ? $banner_image['sizes']['full'] : $banner_image['url'];
+                                    $alt_text = isset($banner_image['alt']) ? $banner_image['alt'] : '';
+
+                                    echo '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+                                }
+
+                                ?>
+                                <p class="cta">
+                                    View Event
+                                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+                                </p>
+                            </div>
+                            <div class="event_description">
+                                <h2><?php the_title(); ?></h2>
+                                <div class="event_date">
+                                    <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender.png" ?>" alt="" />
+                                    <p><?php echo date('j F Y', strtotime(get_field('event_from_date'))); ?>
+                                        <?php if (get_field('event_to_date') != get_field('event_from_date')) { ?>
+                                            - <?php echo date('j F Y', strtotime(get_field('event_to_date')));
+                                            } ?></p>
+                                </div>
+                                <div class="event_location">
+                                    <img src="<?php echo get_template_directory_uri() . "/assets/images/event/location.png" ?>" alt="location" />
+                                    <p><?php echo get_field('event_location'); ?></p>
+                                </div>
+                            </div>
+                        </a>
+                    <?php } ?>
                     <?php
                     $counter = 1;
                     while ($otherEvents->have_posts()) {

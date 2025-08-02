@@ -107,6 +107,10 @@ body {
   color: var(--tertiaryBlack);
   display: block;
 }
+#about_btc .about_btc_container .about_btc .category_item .category_description strong {
+  color: #000;
+  font-weight: 300;
+}
 
 #vision_mission {
   padding: var(--paddingY) var(--paddingX);

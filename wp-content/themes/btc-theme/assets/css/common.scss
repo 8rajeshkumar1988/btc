@@ -305,22 +305,22 @@ body {
         transition: transform 1s ease;
       }
       &.swiper-slide {
-        img {
+        & > img {
           transform: translateX(0px);
         }
       }
       &.swiper-slide-active {
-        img {
+        & > img {
           transform: translateX(-30px);
         }
       }
       &.swiper-slide-prev {
-        img {
+        & > img {
           transform: translateX(-15px);
         }
       }
       &.swiper-slide-next {
-        img {
+        & > img {
           transform: translateX(-45px);
         }
       }
@@ -860,7 +860,7 @@ header {
     h2 {
       color: var(--blue);
       font-weight: 500;
-      max-width: 900px;
+      max-width: 950px;
       font-size: calc(var(--font-46) - 15px);
     }
   }

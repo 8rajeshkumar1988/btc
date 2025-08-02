@@ -6,9 +6,9 @@
         <div class="content">
             <div class="heading" animateHeading>
                 <p>Contact Us</p>
-                <h3>Looking for Seamless, <br>Scalable Manufacturing?</h3>
+                <h3>Looking for Seamless, <br>Scalable Textile Manufacturing?</h3>
             </div>
-            <p class='footerCopy'>We offer end-to-end apparel manufacturing under one roof, built for brands and buying houses ready to scale.</p>
+            <p class='footerCopy'>We offer end-to-end apparel manufacturing under one roof, built for brands, retailers and buying houses ready to scale.</p>
             <button ctaButton onclick="scrollToSectionById('lead_form')" class="cta leadpopup">Contact Us <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
         </div>
     </div>
@@ -19,7 +19,7 @@
         <div>
             <!-- <p class="title">Leading Textile Manufacturer & Exporter</p> -->
             <p class="title">Leading Textile Manufacturer & Exporter</p>
-            <p class="copy">BTC, located in Benin, is West Africa’s first fully vertically integrated textile factory, transforming rain-fed, non-GMO CmiA-certified cotton into premium apparels</p>
+            <p class="copy">BTC, located in Benin, is West Africa’s first fully vertically integrated textile factory, transforming rain-fed, non-GMO CmiA-certified cotton into premium apparels.</p>
         </div>
     </div>
     <div class="middle">
@@ -63,7 +63,7 @@
             </div>
             <div>
                 <p class="title">Email</p>
-                <a href="mailto:sales@btcorpnet.com">sales@btcorpnet.com</a>
+                <a href="mailto:info.btc@arisenet.com">info.btc@arisenet.com</a>
             </div>
             <div>
                 <p class="title">Phone</p>
@@ -78,7 +78,7 @@
                 <a href="">Privacy Policy</a>
                 <a href="">Terms & Conditions</a>
             </div>
-            <p>All Rights Reserved. BTC</p>
+            <p>© All Rights Reserved 2025 - Benin Textile Corporation, Arise IIP</p>
         </div>
         <div class="right">
             <a href="<?php echo site_url('/privacy-policy') ?>">Privacy Policy</a>

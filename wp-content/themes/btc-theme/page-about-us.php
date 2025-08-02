@@ -47,7 +47,7 @@ the_post();
         <div class="heading" animateHeading>
             <p>About BTC</p>
             <h2>
-                Providing Agility, Quality, <br />
+                Providing Agility, Quality <br />
                 and Sustainability.
             </h2>
         </div>
@@ -57,13 +57,14 @@ the_post();
             <div class="swiper-wrapper">
                 <div class="swiper-slide category_item" animateHeading>
                     <div class="category_image">
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/about-sec-1.jpg"  ?>" alt="" />
+                        <img src="<?php echo get_template_directory_uri() . "/assets/images/home/BTC_Gate.jpg"  ?>" alt="" />
                     </div>
                     <p class="category_description" >
                         BTC, located in Benin, is West Africa's first fully vertically
-                        integrated factory, transforming rain-fed, non-GMO
-                        CmiA-certified cotton—widely recognized and trusted by ginning
-                        associations and industry stakeholders—into premium apparel.
+                        integrated factory, transforming rain-fed, <strong>
+                        non-GMO CmiA-certified cotton
+                        </strong>—widely recognized and <strong>trusted by ginning
+                        associations</strong> and industry stakeholders—into premium apparel.
                     </p>
                 </div>
                 <div class="swiper-slide category_item" animateHeading>
@@ -85,7 +86,7 @@ the_post();
                         We produce high-quality yarns, fabrics, and garments, including
                         T-shirts, polos, hoodies, and more. Our eco-conscious
                         processes—such as yarn dyeing, printing, and embroidery combine
-                        cutting-edge technology
+                        cutting-edge technology.
                     </p>
                 </div>
             </div>
@@ -283,24 +284,18 @@ if ($leaderships->have_posts()) {
                 <div class="content-details">
                     <div class="content-detail">
                         <div>
-                            <h2>7000</h2>
-                            <p>
-                                Beninese nationals will be directly employed across both
-                                shifts
-                            </p>
+                            <h2>200+</h2>
+                            <p>Local and regional partners engaged across cotton sourcing, logistics, and services</p>
                         </div>
                         <div>
-                            <h2>7000-8000</h2>
-                            <p>Driving indirect jobs across supply and services</p>
+                            <h2>10+</h2>
+                            <p>Strategic partnerships with global apparel brands for sustainable sourcing</p>
                         </div>
                     </div>
                     <ul>
-                        <li>Skilling of Local man power for life time through GTC</li>
-                        <li>Local Entrepreneurial development through EDS scheme</li>
-                        <li>
-                            The vertical supply chain Eco system shall cater to other
-                            garment manufacturers in the region
-                        </li>
+                        <li>Knowledge transfer programs with international technical partners</li>
+                        <li>Inclusive growth through long-term contracts with farmer cooperatives</li>
+                        <li>Partnership with government and NGOs to boost textile ecosystem development</li>
                     </ul>
                 </div>
                 <div class="content-btn">
@@ -363,24 +358,18 @@ if ($leaderships->have_posts()) {
                 <div class="content-details">
                     <div class="content-detail">
                         <div>
-                            <h2>7000</h2>
-                            <p>
-                                Beninese nationals will be directly employed across both
-                                shifts
-                            </p>
+                            <!-- <h2>7000</h2> -->
+                            <p>We reduce emissions and waste through sustainable sourcing and clean production.</p>
                         </div>
-                        <div>
+                        <!-- <div>
                             <h2>7000-8000</h2>
                             <p>Driving indirect jobs across supply and services</p>
-                        </div>
+                        </div> -->
                     </div>
                     <ul>
-                        <li>Skilling of Local man power for life time through GTC</li>
-                        <li>Local Entrepreneurial development through EDS scheme</li>
-                        <li>
-                            The vertical supply chain Eco system shall cater to other
-                            garment manufacturers in the region
-                        </li>
+                        <li>CMiA-certified cotton for eco-friendly sourcing</li>
+                        <li>Zero Liquid Discharge (ZLD) for water recycling</li>
+                        <li>Clean energy and low-impact manufacturing</li>
                     </ul>
                 </div>
                 <div class="content-btn">

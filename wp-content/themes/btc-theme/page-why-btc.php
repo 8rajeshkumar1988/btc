@@ -82,13 +82,14 @@ get_header();
             </ul>
         </div>
         <div class="img">
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/FullTraceability.jpg"  ?>" alt="SustainableManufacturing" />
+            <img src="<?php echo get_template_directory_uri() . "/assets/images/whybtc/full-traceability-benin-textile.jpg"  ?>" alt="SustainableManufacturing" />
             <p>Full <br>Traceability</p>
         </div>
     </div>
     <div>
         <div class="img">
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/PeoplePrinciples.jpg"  ?>" alt="SustainableManufacturing" />
+            <!-- <img src="<?php echo get_template_directory_uri() . "/assets/images/PeoplePrinciples.jpg"  ?>" alt="SustainableManufacturing" /> -->
+            <img src="<?php echo get_template_directory_uri() . "/assets/images/vision.jpg"  ?>" alt="SustainableManufacturing" />
             <p>People & <br>Principles</p>
         </div>
         <div class="text">
@@ -102,11 +103,11 @@ get_header();
     </div>
     <div>
         <div class="text">
-            <p>We trace every product from cotton field to customer, in real time.</p>
+            <p>With every process under one roof, we move faster, better and with control.</p>
             <ul>
-                <li>Blockchain-backed tracking across all stages</li>
-                <li>FibreTrace® and GOTS-certified sourcing</li>
-                <li>QR-coded batches for transparent visibility</li>
+                <li>In-house spinning, knitting, dyeing and garmenting</li>
+                <li>End-to-end quality assurance</li>
+                <li>Shorter timelines, fewer inefficiencies</li>
             </ul>
         </div>
         <div class="img">
@@ -116,15 +117,15 @@ get_header();
     </div>
     <div>
         <div class="img">
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/vision.jpg"  ?>" alt="SustainableManufacturing" />
+            <img src="<?php echo get_template_directory_uri() . "/assets/images/Partners-Benin-Textile-Corporation-Apparel-Manufacturing-2.jpg"  ?>" alt="SustainableManufacturing" />
             <p>Visionary <br>Partnerships</p>
         </div>
         <div class="text">
-            <p>Our workforce policies are built on fairness, safety and compliance.</p>
+            <p>Our investors back more than business, they power Africa’s industrial future.</p>
             <ul>
-                <li>Living wages across all roles</li>
-                <li>WRAP, ISO & Oeko-Tex certified operations</li>
-                <li>Audited via Higg Index for social performance</li>
+                <li>Arise IIP: Pan-African industrial platform</li>
+                <li>CDCB: Benin’s national growth enabler</li>
+                <li>Benin Cotton, SODECO, LCB, SBTC: CottonvValue chain anchors</li>
             </ul>
         </div>
     </div>
@@ -2839,7 +2840,7 @@ get_header();
     <div class="content">
         <div>
             <div class="text">
-                <p>Benin is the <strong>largest producer of cotton in Africa</strong> with volumes exceeding 300,000 MT annually. It is ranked <strong>9th globally</strong> in 2020/2021 (Source: <a target="_blank" href="https://www.statista.com/">Statista</a> ) and GDIZ aims to leverage this opportunity complying with the Beninese government’s ambitious plans to accelerate cotton transformation and skyrocket the textile business.</p>
+                <p>Benin is the <strong>largest producer of cotton in Africa</strong> with volumes exceeding 300,000 MT annually. It is ranked <strong>9th globally</strong>  and GDIZ aims to leverage this opportunity complying with the Beninese government’s ambitious plans to <strong>accelerate cotton transformation</strong> and <strong>skyrocket the textile business.</strong></p>
             </div>
             <div class="img">
                 <img src="<?php echo get_template_directory_uri() . "/assets/images/roleOfBtc1.jpg"  ?>" alt="">
@@ -2847,10 +2848,10 @@ get_header();
         </div>
         <div>
             <div class="img">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/roleOfBtc2.jpg"  ?>" alt="">
+                <img src="<?php echo get_template_directory_uri() . "/assets/images/Benin-training-local-talent-Benin-Textile.jpg"  ?>" alt="">
             </div>
             <div class="text">
-                <p>By producing at the source, BTC creates value within Benin—training local talent, advancing tech adoption, and reducing reliance on imported textiles. Our vertically integrated system supports the country’s development while delivering efficiency, traceability, and quality for global partners.</p>
+                <p>By producing at the source, BTC creates value within Benin<strong>—training local talent, advancing tech adoption, and reducing reliance on imported textiles.</strong> Our vertically integrated system supports the country’s development while delivering efficiency, traceability and <strong>quality for global partners.</strong></p>
             </div>
         </div>
     </div>

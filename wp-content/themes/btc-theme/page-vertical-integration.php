@@ -78,7 +78,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/cotton.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Gossypium_sp_MS4007.jpg'; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -108,7 +108,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/spinning.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Spinning-25.jpg'; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -138,7 +138,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/precision.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Knitting-05.jpg'; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -175,27 +175,27 @@ get_header();
                         <p>We offer advanced printing techniques that bring designs to life - from bold graphics to subtle textures - with lasting clarity and vibrancy.</p>
                         <div class="first">
                             <p class="title">Process</p>
-                            <p class="subCopy">Fabrics are dyed in vibrant colors or specific shades, using methods that reduce the environmental impact</p>
+                            <p class="subCopy">Depending on the fabric and design needs, we use sublimation, pigment, rotary screen, or heat transfer printing.</p>
                         </div>
                         <div class="second">
                             <p class="title">Key Feature</p>
-                            <p class="subCopy">Sustainability is at the forefront, and we aim to use 100% eco-friendly dyes for all garments</p>
+                            <p class="subCopy">High-resolution prints that stay sharp, wash after wash - with an emphasis on eco-inks and low-impact processes.</p>
                         </div>
                     </div>
                     <div class="inner_bottom" id="embroidery">
                         <p>Embroidery adds texture, identity, and elegance to garments - whether it's for logos, monograms, or artistic patterns.</p>
                         <div class="first">
                             <p class="title">Process</p>
-                            <p class="subCopy">Fabrics are dyed in vibrant colors or specific shades, using methods that reduce the environmental impact</p>
+                            <p class="subCopy">Using automated multi-head embroidery machines, threads are stitched directly into the fabric for durability and precision. </p>
                         </div>
                         <div class="second">
                             <p class="title">Key Feature</p>
-                            <p class="subCopy">Sustainability is at the forefront, and we aim to use 100% eco-friendly dyes for all garments</p>
+                            <p class="subCopy">Intricate detailing with excellent thread density and long-lasting durability, tailored to premium fashion.</p>
                         </div>
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/processing.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Dyeing-and-Processing-BTC-6.jpg'; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -225,7 +225,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/manufacturing.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/SHOOTING-OUVRIERS-GTC.jpg'; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -255,7 +255,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/manufacturing.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Quality-control-BTC.jpg'; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -285,7 +285,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/manufacturing.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/whybtc/full-traceability-benin-textile.jpg'; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -315,7 +315,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/manufacturing.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Logistics-img.jpg'; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -345,7 +345,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/manufacturing.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Quality-control.jpg'; ?>" alt="">
                 </div>
             </div>
         </div>

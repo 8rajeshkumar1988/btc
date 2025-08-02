@@ -250,7 +250,7 @@
 #explore_other_event .event_btc_container .event_btc .event_item {
   text-decoration: none;
   cursor: unset;
-  min-width: 320px;
+  min-width: clamp(17.5rem, 15.4927rem + 5.8394vw, 22.5rem);
 }
 #explore_other_event .event_btc_container .event_btc .event_item .event_image {
   width: 100%;

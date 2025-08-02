@@ -171,7 +171,7 @@ get_header();
           </h3>
           <div class="card_desc">
             <p>Machinery Partner</p>
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/Juki.png'; ?>" alt="" />
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/juki.png'; ?>" alt="" />
           </div>
         </div>
       </div>

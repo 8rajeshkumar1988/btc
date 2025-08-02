@@ -40,7 +40,7 @@ the_post();
                 <a href="">H7R3+Q7, Ouézoumé, Benin</a>
                 <div animateHeadingBanner>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/mailIcon.svg" ?>" alt="">
-                    <a href="mailto:marketing.btc@btc.com">marketing.btc@btc.com</a>
+                    <a href="mailto:info.btc@arisenet.com">info.btc@arisenet.com</a>
                 </div>
                 <div animateHeadingBanner>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/callIcon.svg" ?>" alt="">

@@ -11,7 +11,7 @@
 #globalSearch > svg, #globalSearch .lottie {
   position: absolute;
   height: 100%;
-  width: auto;
+  width: 100%;
   right: -5%;
   top: 0;
 }
