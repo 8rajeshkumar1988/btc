@@ -3,19 +3,19 @@ $(document).ready(function () {
     slidesPerView: 1,
     spaceBetween: 0,
     loop: false,
-   
+
     speed: 800,
     grabCursor: true,
-      effect: "creative",
-      creativeEffect: {
-        prev: {
-          // shadow: true,
-          translate: [0, 0, -400],
-        },
-        next: {
-          translate: ["100%", 0, 0],
-        },
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        // shadow: true,
+        translate: [0, 0, -400],
       },
+      next: {
+        translate: ["100%", 0, 0],
+      },
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true, // optional: makes pagination dots clickable
@@ -66,7 +66,7 @@ $(document).ready(function () {
   });
 
   // ourCapabilities
-
+  let capabilitiesSwiper = null;
   const resetSpiral = () => {
     $(".swiper-slide").css("position", "relative");
     $(".spiralImage").css("transform", "unset");
@@ -76,7 +76,12 @@ $(document).ready(function () {
   const makeSwiper = () => {
     $(".spiralImage").addClass("active");
     resetSpiral();
-    const swiperCapabilities = new Swiper(".ourCapabilities", {
+
+    if (capabilitiesSwiper) {
+      capabilitiesSwiper.destroy(true, true);
+    }
+
+    capabilitiesSwiper = new Swiper(".ourCapabilities", {
       spaceBetween: window.innerWidth > 1024 ? 40 : 30,
       centeredSlides: true,
       slidesPerView: "auto",
@@ -172,6 +177,19 @@ $(document).ready(function () {
     swirlTimeline = gsap.timeline({
       onComplete: () => {
         makeSwiper(); // ✅ called after timeline completes
+        setTimeout(() => {
+          swirlTimeline.reverse();
+          if (capabilitiesSwiper) {
+            capabilitiesSwiper.destroy(true, true);
+            capabilitiesSwiper = null;
+          }
+
+          $(".swiper-slide").css("position", "initial");    
+          $(".swiper-slide").css("transform", "initial");    
+    $(".spiralImage").removeClass("active");
+    $(".spiralImage").css("position", "absolute");
+    $(".empty").css("display", "block");
+        }, 5000)
       },
     });
 
@@ -211,6 +229,8 @@ $(document).ready(function () {
               x: xDisplacementFir - 5,
               y: 0,
               scale: 1,
+              duration: 1.2,
+              ease: 'power4.out',
             },
             0
           );
@@ -222,6 +242,8 @@ $(document).ready(function () {
               x: -containerWidth / 2 + img.offsetWidth / 2 + additionNal - 5,
               y: 0,
               scale: 1,
+              duration: 1.2,
+              ease: 'power4.out',
               onComplete: () => {
                 $(".spiralImage").css("width", "90vw");
               },
@@ -235,6 +257,8 @@ $(document).ready(function () {
           {
             x: xDisplacementSec,
             y: 0,
+            duration: 1.2,
+            ease: 'power4.out',
             scale: 1,
           },
           0
@@ -249,7 +273,8 @@ $(document).ready(function () {
             x: path.x,
             y: path.y,
             scale: 0.9,
-            duration: 1,
+            duration: 1.2,
+            ease: 'power4.out',
           },
           0
         );
@@ -318,7 +343,7 @@ $(document).ready(function () {
   gsap.fromTo('.worldMap', {
     y: isMobile ? '-10%' : '-20%',
   }, {
-    y:  isMobile ? '10%' : '20%',
+    y: isMobile ? '10%' : '20%',
     ease: "none",
     scrollTrigger: {
       trigger: '.worldMap',
@@ -369,9 +394,15 @@ $(document).ready(function () {
       trigger: ".spiralImage",
       start: "top 80%",
       toggleActions: "play none none none",
-      once: true,
+      onEnter: () => {
+        $("#exploreWhatWeDo").css("pointer-events", "none");
+        setTimeout(() => {
+          $("#exploreWhatWeDo").css("pointer-events", "all");
+        }, 1500)
+      },
     },
   });
+
 
 
   gsap.from("[ourCapabilitiesRightContent]", {
@@ -399,7 +430,7 @@ $(document).ready(function () {
     },
   });
 
-  if(window.innerWidth < 600){
+  if (window.innerWidth < 600) {
     gsap.from("#linkedIn_video > video", {
       y: 0,
       scrollTrigger: {

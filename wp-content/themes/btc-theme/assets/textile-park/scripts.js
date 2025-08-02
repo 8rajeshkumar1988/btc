@@ -9,7 +9,7 @@ $(document).ready(function () {
       ease: "none",
       scrollTrigger: {
         trigger: this,
-        start: "top 0%",
+        start: "top -20%",
         end: "bottom 0%",
         toggleActions: "play none none reverse",
         scrub: true,
@@ -18,7 +18,7 @@ $(document).ready(function () {
             lenis.stop();
             setTimeout(() => {
               lenis.start();
-            }, 500)
+            }, 100)
           }
         },
       },
