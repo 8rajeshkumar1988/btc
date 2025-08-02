@@ -208,11 +208,12 @@
   color: #000;
 }
 #explore_other_event .event_btc_button_container {
-  padding: 40px var(--paddingX) var(--paddingY) var(--paddingX);
+  padding: 0px var(--paddingX) var(--paddingY) var(--paddingX);
   display: flex;
   justify-content: flex-end;
 }
 #explore_other_event .event_btc_buttons {
+  padding-top: var(--spaceBelow_heading);
   display: flex;
   gap: 15px;
 }
@@ -241,7 +242,7 @@
   transform: rotate(180deg);
 }
 #explore_other_event .event_btc_container {
-  margin-top: 40px;
+  margin-top: var(--spaceBelow_heading);
 }
 #explore_other_event .event_btc_container .event_btc {
   padding: 0 var(--paddingX);

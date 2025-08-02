@@ -2785,14 +2785,14 @@ get_header();
                 </div>
                 <div class="swiper-slide">
                     <div>
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/readyToUse.svg"  ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri() . "/assets/images/utility-infrastructure.png"  ?>" alt="">
                         <div>
                             <p class="titles">Utility Infrastructure</p>
                             <p class="copy">24/7 power supply, water, steam, and waste management systems</p>
                         </div>
                     </div>
                     <div>
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/accessoryEcosystem.svg"  ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri() . "/assets/images/clearance.png"  ?>" alt="">
                         <div>
                             <p class="titles">Dry Port & Pre-Customs Clearance</p>
                             <p class="copy">All goods can be customs-cleared within the zone, drastically reducing port congestion delays</p>
@@ -2801,14 +2801,14 @@ get_header();
                 </div>
                 <div class="swiper-slide">
                     <div>
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/readyToUse.svg"  ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri() . "/assets/images/logistics-hub.png"  ?>" alt="">
                         <div>
                             <p class="titles">Logistics Hub</p>
                             <p class="copy">Integrated logistics services make export and import seamless and time-efficient</p>
                         </div>
                     </div>
                     <div>
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/accessoryEcosystem.svg"  ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri() . "/assets/images/eco-design-principles.png"  ?>" alt="">
                         <div>
                             <p class="titles">Eco-Industrial Design</p>
                             <p class="copy">Focused on sustainability, traceability, and digital manufacturing systems</p>

@@ -3,7 +3,7 @@ $(document).ready(function () {
     slidesPerView: 1,
     spaceBetween: 0,
     loop: false,
-    grabCursor: true, // 👈 adds grab cursor on hover
+   
     speed: 800,
     grabCursor: true,
       effect: "creative",
