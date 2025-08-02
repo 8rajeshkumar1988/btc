@@ -328,7 +328,7 @@ $(document).ready(function () {
     }
   });
 
-  $('.heroBanner > img, .heroBanner > video').each(function () {
+  $('.heroBanner > img, .heroBanner > video, .hero-slider .swiper-slide > img, .hero-slider .swiper-slide > video ').each(function () {
     gsap.to(this, {
       y: '50dvh',
       ease: "none",

@@ -303,8 +303,8 @@
   margin-right: 10px;
 }
 #explore_other_event .event_btc_container .event_btc .event_item .event_description .cta {
-  padding: 10px 20px;
-  font-size: 16px;
+  transform: scale(0.8);
+  transform-origin: left;
 }
 
 #event_registration {

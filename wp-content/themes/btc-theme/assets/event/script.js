@@ -1,7 +1,7 @@
 let swiper1 = new Swiper(" .event_btc", {
   slidesPerView: 1.05,
   spaceBetween: 20,
-  initialSlide: 2,
+  // initialSlide: 2,
   centerSlides: true,
   navigation: {
     nextEl: ".event_btc-next",
@@ -9,7 +9,13 @@ let swiper1 = new Swiper(" .event_btc", {
   },
 
   breakpoints: {
+    550: {
+      slidesPerView: 1.5,
+    },
     768: {
+      slidesPerView: 2.1,
+    },
+    1100: {
       slidesPerView: 3,
     },
   },
