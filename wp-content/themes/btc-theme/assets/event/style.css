@@ -116,8 +116,8 @@ body {
   font-weight: 400;
 }
 #spotlight .event_description .cta {
-  padding: 12px 24px;
-  font-size: 16px;
+  transform: scale(0.8);
+  transform-origin: left;
 }
 
 #upcoming_events {
@@ -146,7 +146,7 @@ body {
   inset: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
+  height: calc(100% + 100px);
   z-index: -1;
 }
 #upcoming_events .our_impact_container .impact_wrapper .overlay {
@@ -235,8 +235,8 @@ body {
   font-size: var(--font-18);
 }
 #upcoming_events .our_impact_container .impact_wrapper .content .content-bottom .cta {
-  padding: 12px 24px;
-  font-size: 16px;
+  transform: scale(0.8);
+  transform-origin: left;
 }
 
 #event_archive {
@@ -292,7 +292,7 @@ body {
   padding: 0 var(--paddingX);
 }
 #event_archive .event_btc_container .event_btc .event_item {
-  min-width: 320px;
+  min-width: clamp(17.5rem, 15.4927rem + 5.8394vw, 22.5rem);
 }
 #event_archive .event_btc_container .event_btc .event_item .event_image {
   width: 100%;
@@ -338,8 +338,8 @@ body {
   margin-right: 10px;
 }
 #event_archive .event_btc_container .event_btc .event_item .event_description .cta {
-  padding: 10px 20px;
-  font-size: 16px;
+  transform: scale(0.8);
+  transform-origin: left;
 }
 
 @media screen and (max-width: 1024px) {

@@ -119,8 +119,8 @@ body {
       }
     }
     .cta {
-      padding: 12px 24px;
-      font-size: 16px;
+      transform: scale(0.8);
+      transform-origin: left;
     }
   }
 }
@@ -148,7 +148,7 @@ body {
         position: absolute;
         inset: 0;
         object-fit: cover;
-        height: 100%;
+        height: calc(100% + 100px);
         z-index: -1;
       }
       .overlay {
@@ -236,8 +236,8 @@ body {
             }
           }
           .cta {
-            padding: 12px 24px;
-            font-size: 16px;
+            transform: scale(0.8);
+            transform-origin: left;
           }
         }
       }
@@ -339,7 +339,7 @@ body {
       // }
       .event_item {
         // width: calc((100% - (var(--paddingX) * 2)) / 3);
-        min-width: 320px;
+        min-width: clamp(17.5rem, 15.4927rem + 5.8394vw, 22.5rem);
         .event_image {
           width: 100%;
           aspect-ratio: 16/9;
@@ -382,8 +382,8 @@ body {
             font-weight: 400;
           }
           .cta {
-            padding: 10px 20px;
-            font-size: 16px;
+            transform: scale(0.8);
+          transform-origin: left;
           }
         }
       }

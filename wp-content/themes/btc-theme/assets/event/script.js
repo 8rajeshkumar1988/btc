@@ -1,7 +1,7 @@
 let swiper1 = new Swiper(" .event_btc", {
   slidesPerView: 1.05,
   spaceBetween: 20,
-  initialSlide: 2,
+  // initialSlide: 2,
   centerSlides: true,
   navigation: {
     nextEl: ".event_btc-next",
@@ -9,7 +9,13 @@ let swiper1 = new Swiper(" .event_btc", {
   },
 
   breakpoints: {
+    550: {
+      slidesPerView: 1.5,
+    },
     768: {
+      slidesPerView: 2.1,
+    },
+    1100: {
       slidesPerView: 3,
     },
   },
@@ -84,6 +90,101 @@ let eventSwiper = new Swiper("#spotlight .hero-slider", {
     },
   },
 });
+
+
+
+
+  let impactScrollTrigger;
+
+$(document).ready(function () {
+  $(".impact_wrapper.open .content").css("display", "grid").show();
+
+  $(".impact_wrapper").click(function () {
+    const $clicked = $(this);
+
+    if ($clicked.hasClass("open")) return;
+
+    const $previousOpen = $(".impact_wrapper.open");
+
+    // $previousOpen.css("background-position", "50% 50%");
+
+    $previousOpen.find(".content").slideUp(800);
+
+    $previousOpen.removeClass("open");
+
+    $clicked.addClass("open");
+    $clicked.find(".content").css("display", "grid").hide().slideDown(800);
+
+    if (impactScrollTrigger) {
+      impactScrollTrigger.kill();
+      impactScrollTrigger = null;
+    }
+
+    const selector = "#upcoming_events .impact_wrapper.open > img";
+
+    if (window.innerWidth > 1024) {
+      impactScrollTrigger = gsap.from(selector, {
+         y: -100,
+        ease: "none",
+        scrollTrigger: {
+          trigger: selector,
+          start: "top 90%",
+          end: "bottom top",
+          toggleActions: "restart none none reverse",
+          scrub: true,
+        },
+      });
+    } else {
+      impactScrollTrigger = gsap.from(
+        selector,{
+          y: -100,
+          ease: "none",
+          scrollTrigger: {
+            trigger: selector,
+            start: "top 90%",
+            end: "bottom top",
+            toggleActions: "restart none none reverse",
+            scrub: true,
+          },
+        }
+      );
+    }
+  });
+
+  const defaultSelector = "#upcoming_events .impact_wrapper.open > img";
+  if ($(defaultSelector).length) {
+    if (window.innerWidth > 1024) {
+      impactScrollTrigger = gsap.from(defaultSelector, {
+        y: -100,
+        ease: "none",
+        scrollTrigger: {
+          trigger: defaultSelector,
+          start: "top 80%",
+          end: "bottom top",
+          toggleActions: "restart none none reverse",
+          scrub: true,
+        },
+      });
+    } else {
+      impactScrollTrigger = gsap.from(
+        defaultSelector,{
+          y: -100,
+          ease: "none",
+          scrollTrigger: {
+            trigger: defaultSelector,
+            start: "top 90%",
+            end: "bottom top",
+            toggleActions: "restart none none reverse",
+            scrub: true,
+          },
+        }
+      );
+    }
+  }
+});
+
+
+
 
 
 function toggleNavButtons(swiperInstance) {
@@ -167,20 +268,4 @@ function toggleNavButtons(swiperInstance) {
 //   },
 // });
 
-$(document).ready(function () {
-  $(".impact_wrapper.open .content").css("display", "grid").show();
 
-  $(".impact_wrapper").click(function () {
-    const $clicked = $(this);
-
-    if ($clicked.hasClass("open")) {
-      return;
-    }
-
-    $(".impact_wrapper.open .content").slideUp(800);
-    $(".impact_wrapper").removeClass("open");
-
-    $clicked.addClass("open");
-    $clicked.find(".content").css("display", "grid").hide().slideDown(800);
-  });
-});
