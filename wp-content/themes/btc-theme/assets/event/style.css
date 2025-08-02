@@ -146,7 +146,7 @@ body {
   inset: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
+  height: calc(100% + 100px);
   z-index: -1;
 }
 #upcoming_events .our_impact_container .impact_wrapper .overlay {
