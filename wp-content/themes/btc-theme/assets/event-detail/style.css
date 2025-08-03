@@ -128,7 +128,7 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-#event_gallery .gallery-thumbs .swiper-slide-active {
+#event_gallery .gallery-thumbs .swiper-slide-thumb-active {
   opacity: 1;
 }
 

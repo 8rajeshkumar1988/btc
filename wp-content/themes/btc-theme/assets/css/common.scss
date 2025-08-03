@@ -31,6 +31,22 @@ body {
   background-color: #fffff4;
 }
 
+.hover {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  width: fit-content;
+  background-size: 0% 1px;
+  transition: background-size cubic-bezier(0,.5,0,1) 0.5s;
+}
+
+.hover:hover,
+.hover:focus {
+  text-decoration: none;
+  background-size: 100% 1px;
+}
+
 .heroBanner.activated {
   transform: translateY(150px) scale(1, 1);
   filter: blur(10px) brightness(0.8);

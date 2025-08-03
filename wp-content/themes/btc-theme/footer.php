@@ -36,25 +36,25 @@
         if ($cats->have_posts()) {
         ?>
             <div>
-                <a href="<?php echo site_url('/products') ?>" class="title">Products</a>
+                <a href="<?php echo site_url('/products') ?>" class="title hover">Products</a>
                 <?php while ($cats->have_posts()) {
                     $cats->the_post(); ?>
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    <a href="<?php the_permalink(); ?>" class="hover"><?php the_title(); ?></a>
                 <?php } ?>
             </div>
         <?php } ?>
         <div>
-            <a href="<?php echo site_url('/about-us') ?>" class="title">About Us</a>
-            <a href="<?php echo site_url('/capabilities') ?>">Capabilities</a>
-            <a href="<?php echo site_url('/sustainability') ?>">Sustainability</a>
-            <a href="<?php echo site_url('/why-btc') ?>">Why BTC</a>
-            <a href="<?php echo site_url('/vertical-integration') ?>">Vertical Integration</a>
-            <a href="<?php echo site_url('/contact-us') ?>">Contact Us</a>
+            <a href="<?php echo site_url('/about-us') ?>" class="title hover">About Us</a>
+            <a href="<?php echo site_url('/capabilities') ?>" class="hover">Capabilities</a>
+            <a href="<?php echo site_url('/sustainability') ?>" class="hover">Sustainability</a>
+            <a href="<?php echo site_url('/why-btc') ?>" class="hover">Why BTC</a>
+            <a href="<?php echo site_url('/vertical-integration') ?>" class="hover">Vertical Integration</a>
+            <a href="<?php echo site_url('/contact-us') ?>" class="hover">Contact Us</a>
         </div>
         <div>
             <p class="title">Media</p>
-            <a href="<?php echo site_url('/blogs') ?>">News & Blogs</a>
-            <a href="<?php echo site_url('/all-event') ?>">Events & Engagements</a>
+            <a href="<?php echo site_url('/blogs') ?>" class="hover">News & Blogs</a>
+            <a href="<?php echo site_url('/all-event') ?>" class="hover">Events & Engagements</a>
         </div>
         <div>
             <div>
@@ -63,11 +63,11 @@
             </div>
             <div>
                 <p class="title">Email</p>
-                <a href="mailto:info.btc@arisenet.com">info.btc@arisenet.com</a>
+                <a href="mailto:info.btc@arisenet.com" class="hover">info.btc@arisenet.com</a>
             </div>
             <div>
                 <p class="title">Phone</p>
-                <a href="tel:+229 5145127009">+229 5145127009</a>
+                <a href="tel:+229 5145127009" class="hover">+229 5145127009</a>
             </div>
         </div>
     </div>
@@ -75,14 +75,14 @@
         <div class="left">
            <?php get_template_part('components/social_links'); ?>
             <div class="right">
-                <a href="">Privacy Policy</a>
-                <a href="">Terms & Conditions</a>
+                <a href="" >Privacy Policy</a>
+                <a href="" >Terms & Conditions</a>
             </div>
             <p>© All Rights Reserved 2025 - Benin Textile Corporation, Arise IIP</p>
         </div>
         <div class="right">
-            <a href="<?php echo site_url('/privacy-policy') ?>">Privacy Policy</a>
-            <a href="<?php echo site_url('/terms-and-conditions') ?>">Terms & Conditions</a>
+            <a href="<?php echo site_url('/privacy-policy') ?>" class="hover">Privacy Policy</a>
+            <a href="<?php echo site_url('/terms-and-conditions') ?>" class="hover">Terms & Conditions</a>
         </div>
     </div>
 </footer>

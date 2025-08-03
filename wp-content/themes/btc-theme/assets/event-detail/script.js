@@ -91,22 +91,22 @@ function changeAttendees(delta) {
   input.value = val.toString().padStart(2, "0");
 }
 
-var galleryTop = new Swiper(".gallery-top", {
-  spaceBetween: 10,
-  navigation: {
-    nextEl: ".gallery-button-next",
-    prevEl: ".gallery-button-prev",
-  },
-});
-var galleryThumbs = new Swiper(".gallery-thumbs", {
-  spaceBetween: 10,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  touchRatio: 0.2,
+ const galleryThumbs = new Swiper(".gallery-thumbs", {
+    spaceBetween: 10,
+    slidesPerView: "auto",
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+  });
 
-  // slideToClickedSlide: true,
-  // loop: true,
-  // loopedSlides: 4
-});
-galleryTop.controller.control = galleryThumbs;
-galleryThumbs.controller.control = galleryTop;
+  const galleryTop = new Swiper(".gallery-top", {
+    spaceBetween: 0,
+    parallax: true,
+    speed: 1200,
+    navigation: {
+      nextEl: ".gallery-button-next",
+      prevEl: ".gallery-button-prev",
+    },
+    thumbs: {
+      swiper: galleryThumbs,
+    },
+  });
