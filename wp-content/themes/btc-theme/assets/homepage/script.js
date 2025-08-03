@@ -87,7 +87,7 @@ $(document).ready(function () {
       slidesPerView: "auto",
       loop: false,
       grabCursor: true,
-      speed: 800,
+      speed: 1000,
       // initialSlide: 3,
       // autoplay: {
       //     delay: 2500,
@@ -177,19 +177,6 @@ $(document).ready(function () {
     swirlTimeline = gsap.timeline({
       onComplete: () => {
         makeSwiper(); // ✅ called after timeline completes
-        setTimeout(() => {
-          swirlTimeline.reverse();
-          if (capabilitiesSwiper) {
-            capabilitiesSwiper.destroy(true, true);
-            capabilitiesSwiper = null;
-          }
-
-          $(".swiper-slide").css("position", "initial");    
-          $(".swiper-slide").css("transform", "initial");    
-    $(".spiralImage").removeClass("active");
-    $(".spiralImage").css("position", "absolute");
-    $(".empty").css("display", "block");
-        }, 5000)
       },
     });
 
@@ -230,7 +217,7 @@ $(document).ready(function () {
               y: 0,
               scale: 1,
               duration: 1.2,
-              ease: 'power4.out',
+              ease: "ease",
             },
             0
           );
@@ -243,7 +230,7 @@ $(document).ready(function () {
               y: 0,
               scale: 1,
               duration: 1.2,
-              ease: 'power4.out',
+              ease: "ease",
               onComplete: () => {
                 $(".spiralImage").css("width", "90vw");
               },
@@ -258,7 +245,7 @@ $(document).ready(function () {
             x: xDisplacementSec,
             y: 0,
             duration: 1.2,
-            ease: 'power4.out',
+            ease: "ease",
             scale: 1,
           },
           0
@@ -274,7 +261,7 @@ $(document).ready(function () {
             y: path.y,
             scale: 0.9,
             duration: 1.2,
-            ease: 'power4.out',
+            ease: "ease",
           },
           0
         );
@@ -325,34 +312,69 @@ $(document).ready(function () {
         },
         0
       );
+      swirlTimeline.to(
+        '#closeCapabilities',
+        {
+          opacity: 1,
+          pointerEvents: "auto",
+          duration: 0.3,
+        },
+        0.5
+      )
     });
   });
 
   // ✅ Reset button to reverse the animation
-  document.getElementById("resetButton").addEventListener("click", () => {
-    if (swirlTimeline) {
-      swirlTimeline.reverse();
+document.getElementById("closeCapabilities").addEventListener("click", () => {
+  if (!capabilitiesSwiper) return;
+
+  const currentIndex = capabilitiesSwiper.realIndex;
+  const delay = currentIndex * 300; // delay = animation time = 0ms, 200ms, 400ms, etc.
+
+  // Step 1: Move to the first slide with a duration equal to delay
+  capabilitiesSwiper.slideTo(0, delay);
+
+  // Step 2: Wait for the animation to complete (same duration)
+  setTimeout(() => {
+    swirlTimeline.reverse();
+
+    if (capabilitiesSwiper) {
+      capabilitiesSwiper.destroy(true, true);
+      capabilitiesSwiper = null;
     }
-  });
+    
+    $(".swiper-slide").css("position", "initial");
+    $(".swiper-slide").css("transform", "initial");
+    $(".spiralImage").removeClass("active");
+    $(".spiralImage").css('width', 'auto');
+    $(".spiralImage").css("position", "absolute");
+    $(".empty").css("display", "block");
+    $(".swiper-slide:first-child .text").css("opacity", "0");
+  }, delay);
 });
 
 
 
+});
+
 $(document).ready(function () {
   const isMobile = window.innerWidth < 1024;
-  gsap.fromTo('.worldMap', {
-    y: isMobile ? '-10%' : '-20%',
-  }, {
-    y: isMobile ? '10%' : '20%',
-    ease: "none",
-    scrollTrigger: {
-      trigger: '.worldMap',
-      start: "top 90%",
-      toggleActions: "play none none reverse",
-      scrub: true,
+  gsap.fromTo(
+    ".worldMap",
+    {
+      y: isMobile ? "-10%" : "-20%",
     },
-  });
-
+    {
+      y: isMobile ? "10%" : "20%",
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".worldMap",
+        start: "top 90%",
+        toggleActions: "play none none reverse",
+        scrub: true,
+      },
+    }
+  );
 
   gsap.from(".sliderAbout, #aboutBtc .cta", {
     y: 100,
@@ -366,7 +388,6 @@ $(document).ready(function () {
       toggleActions: "play none none reverse",
     },
   });
-
 
   // our products
 
@@ -383,7 +404,6 @@ $(document).ready(function () {
     },
   });
 
-
   gsap.from(".spiralImage", {
     y: 200,
     opacity: 0,
@@ -398,12 +418,10 @@ $(document).ready(function () {
         $("#exploreWhatWeDo").css("pointer-events", "none");
         setTimeout(() => {
           $("#exploreWhatWeDo").css("pointer-events", "all");
-        }, 1500)
+        }, 1500);
       },
     },
   });
-
-
 
   gsap.from("[ourCapabilitiesRightContent]", {
     y: 100,
@@ -417,18 +435,21 @@ $(document).ready(function () {
     },
   });
 
-  gsap.from("#sustainabiltyStandard .faq, #sustainabiltyStandard .faq p, #sustainabiltyStandard .faq li", {
-    y: 100,
-    opacity: 0,
-    ease: "power4.out",
-    duration: 1.2,
-    stagger: 0.05,
-    scrollTrigger: {
-      trigger: "#sustainabiltyStandard .accordian",
-      start: "top 70%",
-      toggleActions: "play none none reverse",
-    },
-  });
+  gsap.from(
+    "#sustainabiltyStandard .faq, #sustainabiltyStandard .faq p, #sustainabiltyStandard .faq li",
+    {
+      y: 100,
+      opacity: 0,
+      ease: "power4.out",
+      duration: 1.2,
+      stagger: 0.05,
+      scrollTrigger: {
+        trigger: "#sustainabiltyStandard .accordian",
+        start: "top 70%",
+        toggleActions: "play none none reverse",
+      },
+    }
+  );
 
   if (window.innerWidth < 600) {
     gsap.from("#linkedIn_video > video", {
@@ -442,8 +463,4 @@ $(document).ready(function () {
       },
     });
   }
-
-
-
-
 });
