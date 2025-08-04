@@ -67,11 +67,12 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  overflow: hidden;
 }
 .blog_hero > div > img {
   position: absolute;
   inset: 0;
-  height: 100%;
+  height: calc(100% + 100px);
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
