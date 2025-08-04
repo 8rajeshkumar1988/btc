@@ -25,7 +25,11 @@
   --headingTop: 5px;
   --paddingY: clamp(6.25rem, 1.0417rem + 6.9444vw, 9.375rem);
   --navBtn: clamp(3.125rem, -0.8065rem + 4.8387vw, 5rem);
-  --spaceBelow_heading: clamp(2.1875rem, 0.625rem + 2.0833vw, 3.125rem);
+  --spaceBelow_heading: clamp(
+    2.1875rem,
+    0.625rem + 2.0833vw,
+    3.125rem
+  );
 }
 
 body {
@@ -58,7 +62,7 @@ body {
 .loader {
   width: 60px;
   aspect-ratio: 4;
-  --c:#68773075 90%, #0000;
+  --c: #68773075 90%, #0000;
   background: radial-gradient(circle closest-side at left 6px top 50%, var(--c)), radial-gradient(circle closest-side, var(--c)), radial-gradient(circle closest-side at right 6px top 50%, var(--c));
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -1032,7 +1036,11 @@ header button.open .close {
 @media screen and (max-width: 1546px) {
   :root {
     --paddingX: 5%;
-    --paddingY: clamp(5rem, -4.1734rem + 11.2903vw, 9.375rem);
+    --paddingY: clamp(
+      5rem,
+      -4.1734rem + 11.2903vw,
+      9.375rem
+    );
   }
   #footerContact {
     aspect-ratio: 16/7;
@@ -1154,6 +1162,15 @@ header button.open .close {
     height: calc(95vh - 50px);
     aspect-ratio: initial;
   }
+  .cta:hover {
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+  .cta:hover img {
+    background-color: transparent;
+    transform: none;
+    left: 0;
+  }
   #newsletter .newsletter_form {
     display: flex;
     flex-direction: column;
@@ -1166,7 +1183,7 @@ header button.open .close {
     width: 110px;
   }
   #our_social > .cta {
-    display: block;
+    display: flex;
     margin: var(--spaceBelow_heading) 0;
     margin-left: var(--paddingX);
   }

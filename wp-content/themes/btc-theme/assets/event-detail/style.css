@@ -18,12 +18,12 @@
 }
 .breadcrub_container .breadcrub {
   color: #666662;
-  font-size: 20px;
+  font-size: var(--font-18);
 }
 .breadcrub_container .breadcrub a {
   color: #666662;
   text-decoration: none;
-  font-size: 20px;
+  font-size: var(--font-18);
 }
 .breadcrub_container .social_links {
   display: flex;
@@ -269,10 +269,10 @@
 }
 #explore_other_event .event_btc_container .event_btc .event_item .event_image p {
   position: absolute;
-  bottom: 30px;
-  right: 30px;
-  padding: 12px 24px;
-  font-size: 18px;
+  bottom: 20px;
+  right: 20px;
+  transform: scale(0.7);
+  transform-origin: right bottom;
   cursor: pointer;
 }
 #explore_other_event .event_btc_container .event_btc .event_item .event_description {

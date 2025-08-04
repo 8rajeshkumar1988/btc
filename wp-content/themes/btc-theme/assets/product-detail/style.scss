@@ -43,6 +43,7 @@ body {
     }
     .product_detail {
       width: 30%;
+      min-width: 400px;
       max-width: 600px;
       height: 100%;
       background: #00000080;
@@ -344,6 +345,7 @@ body {
     .swiper-slide {
       .product_detail{
         width: fit-content;
+        min-width: auto;
       }
     }
   }

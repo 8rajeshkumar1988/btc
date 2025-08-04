@@ -39,6 +39,7 @@ body {
 }
 #product_spotlight .swiper-slide .product_detail {
   width: 30%;
+  min-width: 400px;
   max-width: 600px;
   height: 100%;
   background: rgba(0, 0, 0, 0.5019607843);
@@ -284,6 +285,7 @@ body {
   #product_spotlight .swiper-slide .product_detail {
     width: -moz-fit-content;
     width: fit-content;
+    min-width: auto;
   }
 }
 @media screen and (max-width: 768px) {

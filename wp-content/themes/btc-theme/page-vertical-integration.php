@@ -338,7 +338,7 @@ get_header();
                             <p class="title">Process</p>
                             <p class="subCopy">Customers receive detailed information via QR codes, allowing them to verify product origin, material composition and environmental impact at every stage.</p>
                         </div>
-                        <div class="first">
+                        <div class="second">
                             <p class="title">Key Feature</p>
                             <p class="subCopy">The customer enjoys a product made with eco-conscious processes, with full visibility into its journey from farm to fashion.</p>
                         </div>
