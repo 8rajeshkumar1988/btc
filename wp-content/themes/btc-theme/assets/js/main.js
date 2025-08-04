@@ -1,19 +1,20 @@
 let lenis;
 gsap.registerPlugin(SplitText);
 
-window.onload = function () {
-  scrollToTop()
-};
-
-  function scrollToTop() {
-    lenis.scrollTo(0, {
-      offset: 0,          // adjust offset if needed
-      duration: 1,      // smooth duration in seconds
-      immediate: false,   // true = no animation
-    });
-  }
-
-$(document).ready(function () {
+// window.onload = function () {
+  // };
+  
+  // function scrollToTop() {
+  //   // lenis.scrollTo(0, {
+  //     //   offset: 0,          // adjust offset if needed
+  //     //   duration: 1,      // smooth duration in seconds
+  //     //   immediate: false,   // true = no animation
+  //     // });
+  //     console.log("Scroll to top");
+  //   }
+  //   scrollToTop()
+  
+  $(document).ready(function () {
   lenis = new Lenis();
 
   lenis.on("scroll", ScrollTrigger.update);
