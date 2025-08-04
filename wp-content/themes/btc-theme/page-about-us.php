@@ -119,8 +119,10 @@ the_post();
             global standards for quality and environmental responsibility.
         </p>
     </div>
-    <div class="vision_mission_container videoC">        
-        <video autoplay loop muted playsinline src="<?php echo get_template_directory_uri() . "/assets/images/mission.mp4"  ?>"></video>
+    <div class="vision_mission_container videoC">     
+        <video autoplay loop muted playsinline poster="<?php echo get_template_directory_uri() . "/assets/images/mission_banner.webp"  ?>">
+            <source src="<?php echo get_template_directory_uri() . "/assets/images/mission.mp4"  ?>" >
+        </video>   
     </div>
     <div class="vision_mission_container text" animateHeading>
         <h2>Mission</h2>

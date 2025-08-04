@@ -15,7 +15,7 @@
 </section>
 <footer>
     <div class="top">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/footerlogo.svg'; ?>" alt="btc logo">
+        <a href="/"><img src="<?php echo get_template_directory_uri() . '/assets/images/footerlogo.svg'; ?>" alt="btc logo"></a>
         <div>
             <!-- <p class="title">Leading Textile Manufacturer & Exporter</p> -->
             <p class="title">Leading Textile Manufacturer & Exporter</p>
