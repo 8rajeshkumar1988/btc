@@ -507,9 +507,8 @@ textarea {
   & > img {
     position: absolute;
     inset: 0;
-    width: 105%;
-    height: 112%;
-    transform: translate(-5%, 0%);
+    width: 100%;
+    height: calc(100% + 100px);
     object-fit: cover;
     object-position: left;
     pointer-events: none;
