@@ -349,6 +349,17 @@
         z-index: 0;
         pointer-events: none;
     }
+    .closeCapabilities{
+        position: absolute;
+        height: calc(var(--font-46) - 10px);
+        width: calc(var(--font-46) - 10px);        
+        right: var(--paddingX);
+        top: calc(var(--font-24) / 1);
+        opacity: 0;
+        pointer-events: none;
+        cursor: pointer;
+        z-index: 1  ;
+    }
     .leftContent {
         position: absolute;
         height: fit-content;

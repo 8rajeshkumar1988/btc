@@ -315,6 +315,17 @@
   z-index: 0;
   pointer-events: none;
 }
+#ourCapabilities .closeCapabilities {
+  position: absolute;
+  height: calc(var(--font-46) - 10px);
+  width: calc(var(--font-46) - 10px);
+  right: var(--paddingX);
+  top: calc(var(--font-24) / 1);
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  z-index: 1;
+}
 #ourCapabilities .leftContent {
   position: absolute;
   height: -moz-fit-content;

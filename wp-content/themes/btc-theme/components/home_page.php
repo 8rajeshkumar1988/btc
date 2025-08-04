@@ -176,6 +176,7 @@
 
 <section id="ourCapabilities">
     <img src="<?php echo get_template_directory_uri() . '/assets/images/capabilities_back.png'; ?>" alt="" class="back">
+    
     <div class="leftContent heading" animateHeading>
         <p>Our Capabilities</p>
         <h3>From Farm To Fashion</h3>
@@ -238,9 +239,12 @@
         </div>
         <div class="btnssNew">
             <button class="swiper-button-next capabilitiesNext"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
-            <button class="swiper-button-prev capabilitiesPrev"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <button class="swiper-button-prev capabilitiesPrev swiper-button-disabled"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
         </div>
     </div>
+
+
+    <img src="<?php echo get_template_directory_uri() . '/assets/images/closeSvg.svg'; ?>" alt="" class="closeCapabilities" id="closeCapabilities">
 </section>
 
 
