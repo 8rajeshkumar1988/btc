@@ -1,6 +1,6 @@
 $(document).ready(function () {
   const homeBtcSwiper = new Swiper(".home-btc-swiper", {
-    grabCursor: true,
+    // grabCursor: true,
     effect: "creative",
     speed: 600,
     creativeEffect: {

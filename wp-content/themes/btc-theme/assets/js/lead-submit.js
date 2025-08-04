@@ -45,12 +45,15 @@ $("#whatsapp_checkbox").on("change", function () {
 
   $("#aa-lead-form").on("submit", function (e) {
     e.preventDefault();
-
+    const loader = '<span class="loader"></span>';
+    const initial_text = `Submit <img src="../wp-content/themes/btc-theme/assets/images/right_arrow.svg" alt="">`;
     const $form = $(this);
     let isValid = true;
     $form.find(".error_input").removeClass("error_input");
     $form.find(".error_text").removeClass("error_text");
     $(".lead_form_error").text("");
+
+
 
     const $name = $($form.find('[name="name"]'));
     if (!$name.val().trim()) {
@@ -98,6 +101,9 @@ $("#whatsapp_checkbox").on("change", function () {
       return false;
     }
 
+    $(".lead_form_submit").html(loader);
+    $(".lead_form_submit").attr("disabled", "disabled");
+
     const phoneInput = $form.find('[name="phone"]')[0];
     const phone = phoneInput._intlTelInstance.getNumber();
 
@@ -125,9 +131,13 @@ $("#whatsapp_checkbox").on("change", function () {
         // alert(response.data);
         $form.trigger("reset");
         $(".lead_form_error").text("");
+        $(".lead_form_submit").html(initial_text);
+        $(".lead_form_submit").attr("disabled", false);
         window.location.href = "/thank-you/";
       } else {
         $(".lead_form_error").text(response.data);
+         $(".lead_form_submit").html(initial_text);
+          $(".lead_form_submit").attr("disabled", false);
       }
     });
   });
@@ -195,6 +205,7 @@ $("#whatsapp_checkbox").on("change", function () {
   $("#btc-subscribe-form").on("submit", function (e) {
     e.preventDefault();
     const error_text = document.querySelector(".newsletter_error");
+
     $(".subscribe_success").text('');
     const $form = $(this);
     let isValid = true;
@@ -204,6 +215,9 @@ $("#whatsapp_checkbox").on("change", function () {
       isValid = false;
       $name.addClass("error_input");
     }
+
+    /* HTML: <div class="loader"></div> */
+
    
     const $email = $($form.find('[name="email"]'));
     const emailVal = $email.val().trim();

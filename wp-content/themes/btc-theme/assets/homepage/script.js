@@ -5,15 +5,20 @@ $(document).ready(function () {
     loop: false,
 
     speed: 800,
-    grabCursor: true,
     effect: "creative",
+    // speed: 600,
     creativeEffect: {
       prev: {
-        // shadow: true,
         translate: [0, 0, -400],
+        opacity: 0,
       },
       next: {
         translate: ["100%", 0, 0],
+        opacity: 0,
+      },
+      current: {
+        translate: [0, 0, 0],
+        opacity: 1,
       },
     },
     pagination: {
@@ -53,6 +58,9 @@ $(document).ready(function () {
 
   $(".faq").click(function () {
     const item = $(this);
+    if(item.hasClass("default-open")){
+     return;  
+    }
     $(".faq.default-open .ans").slideUp(500);
     const answer = item.find(".ans");
     if (item.hasClass("default-open")) {

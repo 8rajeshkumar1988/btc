@@ -161,13 +161,26 @@
             </div>
             <div class="ans" style="display: none;">
                 <p>We meet leading global standards in quality, safety, and sustainability.</p>
-                <ul>
-                    <li>ISO 9001/45001/14001 - Environmental & safety management</li>
-                    <li>CMiA - Sustainable African cotton</li>
-                    <li>OekoTex - Tested for harmful substances</li>
-                    <li>WRAP - Ethical labor and legal compliance</li>
-                    <li>LEED - Green, energy-saving buildings</li>
-                    <li>CTPAT - Secure supply chain for US exports</li>
+                <ul class="certificates">
+                    <li>
+                        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ISO.png" ?>" alt=" ISO 9001/45001/14001 - Environmental & safety management">
+                        ISO 9001/45001/14001 - Environmental & safety management
+                    </li>
+                    <li>
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/cotton_made_in_africa.png" ?>" alt="CMiA - Sustainable African cotton">    
+                    CMiA - Sustainable African cotton</li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/oekotex.png" ?>" alt="OekoTex - Tested for harmful substances">
+                        OekoTex - Tested for harmful substances</li>
+                    <li>
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/wrap.png" ?>" alt="WRAP - Ethical labor and legal compliance">    
+                    WRAP - Ethical labor and legal compliance</li>
+                    <li>
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/leed.png" ?>" alt="LEED - Green, energy-saving buildings">    
+                    LEED - Green, energy-saving buildings</li>
+                    <li>
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ctpat.png" ?>" alt="CTPAT - Secure supply chain for US exports">    
+                    CTPAT - Secure supply chain for US exports</li>
                 </ul>
             </div>
         </div>

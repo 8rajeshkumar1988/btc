@@ -49,6 +49,28 @@ body {
   background-size: 100% 1px;
 }
 
+.lead_form_submit {
+  width: 150px !important;
+  height: 30px !important;
+  justify-content: center !important;
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: 4;
+  --c:#68773075 90%, #0000;
+  background: radial-gradient(circle closest-side at left 6px top 50%, var(--c)), radial-gradient(circle closest-side, var(--c)), radial-gradient(circle closest-side at right 6px top 50%, var(--c));
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  animation: l4 1s infinite alternate;
+}
+
+@keyframes l4 {
+  to {
+    width: 25px;
+    aspect-ratio: 1;
+  }
+}
 .heroBanner.activated {
   transform: translateY(150px) scale(1, 1);
   filter: blur(10px) brightness(0.8);
@@ -188,21 +210,24 @@ body {
   z-index: 1;
   padding: clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) clamp(1.875rem, 0.3339rem + 1.8051vw, 2.5rem);
   background-color: var(--green);
+  transition: letter-spacing 0.3s ease-in-out, font-weight 0.3s ease-in-out;
+  transform-origin: left;
 }
 .cta img {
-  height: 65%;
+  height: 70%;
   width: auto;
-  padding: 5px;
-  filter: invert(1);
-  background-color: #fff;
-  transform: rotate(-45deg) translate(10px, 10px);
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transform: rotate(-45deg);
   transform-origin: center;
   pointer-events: none;
 }
+.cta:hover {
+  font-weight: 600;
+  letter-spacing: 2px;
+}
 .cta:hover img {
   background-color: transparent;
-  transform: rotate(0deg) translate(20px, 0px);
+  transform: rotate(0deg) translate(5px, -1px);
   filter: invert(0);
   left: calc(100% - clamp(1.875rem, 0.3339rem + 1.8051vw, 2.5rem) * 1.5);
 }
@@ -361,6 +386,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  cursor: pointer;
 }
 #faqs .accordian .faq .head .open {
   width: 20px;
@@ -960,6 +986,7 @@ header button.open .close {
 }
 #lead_popup_form .btn_container .lead_form_error {
   color: #ff0000;
+  text-align: right;
 }
 
 .error_input {

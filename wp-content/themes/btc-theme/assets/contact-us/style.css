@@ -174,6 +174,7 @@ body {
 }
 #lead_form .btn_container .lead_form_error {
   color: #ff0000;
+  text-align: right;
 }
 
 #virtual_factory_experience {

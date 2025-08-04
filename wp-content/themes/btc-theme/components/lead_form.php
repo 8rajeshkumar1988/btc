@@ -69,7 +69,7 @@
         <div class="policy_container">
             <input type="checkbox" checked id="policy_checkbox" name="tandc" />
             <label for="policy_checkbox" class="policy_label">
-                I agree to the BTC <a href="/privacy-policy" style="color: #000">privacy policy</a>.*
+                I agree to the BTC <a href="/privacy-policy" target="_blank" style="color: #000">privacy policy</a>.*
             </label>
         </div>
     </div>
@@ -82,7 +82,7 @@
         </div>
     </div>
     <div class="btn_container">
-        <button class="cta">Submit <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
+        <button class="cta lead_form_submit">Submit <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
         <p class="lead_form_error"></p>
     </div>
 </form>

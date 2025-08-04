@@ -168,7 +168,7 @@ the_post();
   <div class="cc_container">
     <div class="certificate_card">
       <div class="certificate_logo">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ISO.png" ?>" alt="">
+        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ISO.png" ?>" alt="ISO Certificate">
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">IMS:ISO 9001/45001/ 14001</h3>
