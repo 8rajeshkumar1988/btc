@@ -53,7 +53,7 @@
     .description {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: clamp(18.75rem, -46.7742rem + 80.6452vw, 50rem);
+      gap: clamp(18.75rem, 16.25rem + 12.5vw, 31.25rem);
       ul {
         padding-left: 1rem;
       }

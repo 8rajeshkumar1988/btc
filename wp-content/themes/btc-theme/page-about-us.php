@@ -106,7 +106,10 @@ the_post();
 </section>
 <section id="vision_mission">
     <div class="vision_mission_container videoC">
-        <video autoplay loop muted playsinline  src="<?php echo get_template_directory_uri() . "/assets/images/vision.mp4"  ?>"></video>
+        <video autoplay loop muted playsinline poster="<?php echo get_template_directory_uri() . "/assets/images/vision_banner.webp"  ?>">
+            <source src="<?php echo get_template_directory_uri() . "/assets/images/vision.mp4"  ?>" >
+        </video>
+
     </div>
     <div class="vision_mission_container text" animateHeading>
         <h2>Vision</h2>

@@ -3,6 +3,11 @@ $(document).ready(function () {
     // grabCursor: true,
     effect: "creative",
     speed: 600,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true,
+    },
     creativeEffect: {
       prev: {
         translate: [0, 0, -400],

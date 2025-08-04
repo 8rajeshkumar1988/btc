@@ -1174,6 +1174,9 @@ header {
           align-items: center;
           justify-content: flex-start;
           gap: 5px;
+          &:hover{
+            color: #fff;
+          }
         }
       }
       .mediaArea {

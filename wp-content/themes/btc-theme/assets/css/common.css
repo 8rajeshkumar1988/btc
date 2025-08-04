@@ -1115,6 +1115,9 @@ header button.open .close {
     justify-content: flex-start;
     gap: 5px;
   }
+  #header .right .extended a:hover {
+    color: #fff;
+  }
   #header .right .mediaArea {
     display: flex;
     flex-direction: column;
