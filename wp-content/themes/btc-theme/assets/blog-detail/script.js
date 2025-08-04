@@ -75,23 +75,23 @@ function toggleNavButtons(swiperInstance) {
     });
   });
 
-   gsap.utils.toArray(".blog_hero > div").forEach((wrap, i) => {
-    const img = wrap.querySelector("img");
-    if (!img) return;
-    gsap.from(img, {
+  //  gsap.utils.toArray(".blog_hero > div").forEach((wrap, i) => {
+  //   const img = wrap.querySelector("img");
+  //   if (!img) return;
+    gsap.from(".blog_hero > div > img", {
       y: -100,
       // opacity: 0,
       ease: "none",
       // duration: 1.2,
       // stagger: 0.2,
       scrollTrigger: {
-        trigger: wrap,
+        trigger: ".blog_hero > div",
         start: "top 90%",
         end: "bottom top",
         scrub: true, 
         // toggleActions: "play none none reverse",
       },
-    });
+    // });
   });
 
 $(".recommendations_categories .category_item").each(function (index) {

@@ -205,7 +205,8 @@ $("#whatsapp_checkbox").on("change", function () {
   $("#btc-subscribe-form").on("submit", function (e) {
     e.preventDefault();
     const error_text = document.querySelector(".newsletter_error");
-
+    const loader = '<span class="loader"></span>';
+    const initial_text = `Subscribe <img src="../wp-content/themes/btc-theme/assets/images/right_arrow.svg" alt="">`;
     $(".subscribe_success").text('');
     const $form = $(this);
     let isValid = true;
@@ -231,6 +232,9 @@ $("#whatsapp_checkbox").on("change", function () {
       error_text.innerText = "Please fill all the fields*";
       return false;
     }
+
+    $(".subscribeCta").html(loader);
+    $(".subscribeCta").attr("disabled", "disabled");
     const data = {
       action: "save_subscribe",
       nonce: aaLead.subscribe_nonce,
@@ -244,10 +248,14 @@ $("#whatsapp_checkbox").on("change", function () {
       if (response.success) {
         console.log(response.data);
         $(".subscribe_success").text(response.data);
+        $(".subscribeCta").html(initial_text);
+        $(".subscribeCta").attr("disabled", false);
         $form.trigger("reset");
         
       } else {
         error_text.innerText = response.data;
+        $(".subscribeCta").html(initial_text);
+        $(".subscribeCta").attr("disabled", false);
       }
     });
   });

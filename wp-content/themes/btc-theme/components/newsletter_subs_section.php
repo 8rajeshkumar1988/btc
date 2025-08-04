@@ -26,13 +26,15 @@
             <br />
             <input id="email"  type="email" name="email" placeholder="Enter your email" />
         </div>
-        <button class="cta">
+        <div class="subscribe_btn">
+            <button class="cta subscribeCta">
             Subscribe
             <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg"  ?>" alt="right arrow" />
-        </button>
+            </button>
+            <p class="newsletter_error"></p>
+            <p class="subscribe_success"></p>
+        </div>
     </form>
-    <p class="newsletter_error"></p>
-    <p class="subscribe_success"></p>
 </section>
 
 

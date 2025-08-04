@@ -36,7 +36,6 @@ get_header();
         <a href="<?php echo site_url('/') ?>">Home</a> / <a href="<?php echo site_url('/all-event') ?>">Events & Engagements</a> / <?php the_title() ?>
     </p>
     <div class="social_links">
-        <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/insta.png" alt="instagram" onclick="shareToInsta()" /> -->
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="facebook" onclick="shareToFacebook()" data-url="<?php echo esc_url(get_permalink()); ?>"
             data-title="<?php echo esc_attr(get_the_title()); ?>" />
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/x.png" alt="twitter" onclick="shareToTwitter()" data-url="<?php echo esc_url(get_permalink()); ?>"

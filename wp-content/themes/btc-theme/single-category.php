@@ -7,12 +7,10 @@ the_post();
   <?php
   $banner_video = get_field('banner_video');
   $banner_image = get_field('banner_image');
+  $image_url = "";
   if ($banner_image) {
     $image_url = isset($banner_image['sizes']['full']) ? $banner_image['sizes']['full'] : $banner_image['url'];
     $alt_text = isset($banner_image['alt']) ? $banner_image['alt'] : '';
-  } else {
-    $image_url = "";
-    $alt_text = the_title();
   }
 
   if ($banner_video) {
