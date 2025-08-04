@@ -276,8 +276,7 @@ $(document).ready(function () {
       scrub: true,
       // markers: true
     },
-    transform: "translate(0%, -10%)",
-    duration: 1.2,
+    y: -100,    
   });
 
 
@@ -324,22 +323,38 @@ $(document).ready(function () {
     scrollTrigger: {
       trigger: '.marquee-content',
       start: "top 90%",
-      toggleActions: "play none none reverse",
+      toggleActions: "play none none none",
     }
   });
 
   $('.heroBanner > img, .heroBanner > video, .hero-slider .swiper-slide > img, .hero-slider .swiper-slide > video ').each(function () {
-    gsap.to(this, {
-      y: '50dvh',
-      ease: "none",
-      scrollTrigger: {
-        trigger: this,
-        start: "bottom 90%",
-        toggleActions: "play none none reverse",
-        scrub: true
-      }
-    });
+    if (window.innerWidth > 1200) {
+      gsap.to(this, {
+        y: '50dvh',
+        ease: "none",
+        scrollTrigger: {
+          trigger: this,
+          start: `${window.innerWidth < 768 ? "bottom 85%" : "bottom 90%"}`,
+          toggleActions: "play none none reverse",
+          scrub: true,
+        }
+      });
+    } else {
+      const heightThis = this.getBoundingClientRect().height
+      console.log(heightThis)
+      gsap.to(this, {
+        y: `${(heightThis / 2)}px`,
+        ease: "none",
+        scrollTrigger: {
+          trigger: this,
+          start: `bottom ${heightThis}px`,
+          toggleActions: "play none none reverse",
+          scrub: true,
+        }
+      });
+    }
   })
 
+ 
 
 });

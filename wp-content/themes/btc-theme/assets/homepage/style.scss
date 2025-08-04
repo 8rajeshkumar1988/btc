@@ -269,7 +269,8 @@
     display: grid;
     grid-template-columns: 47% 48%;
     gap: 5%;
-    padding: var(--paddingY) var(--paddingX) var(--paddingY);
+    padding: 0 var(--paddingX) ;
+    height:  clamp(68.75rem, 37.9287rem + 36.1011vw, 81.25rem);
     align-items: center;
     position: relative;
     overflow: hidden;
@@ -594,8 +595,10 @@
 
 @media screen and (max-width: 1024px) {
     #sustainabiltyStandard {
+        padding: var(--paddingY) var(--paddingX);
         padding-bottom: calc(var(--paddingY) * 2);
         grid-template-columns: auto;
+        height: auto;
         .heading {
             max-width: 500px;
         }

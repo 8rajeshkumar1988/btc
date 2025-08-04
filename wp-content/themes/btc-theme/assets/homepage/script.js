@@ -58,8 +58,8 @@ $(document).ready(function () {
 
   $(".faq").click(function () {
     const item = $(this);
-    if(item.hasClass("default-open")){
-     return;  
+    if (item.hasClass("default-open")) {
+      return;
     }
     $(".faq.default-open .ans").slideUp(500);
     const answer = item.find(".ans");
@@ -333,33 +333,33 @@ $(document).ready(function () {
   });
 
   // ✅ Reset button to reverse the animation
-document.getElementById("closeCapabilities").addEventListener("click", () => {
-  if (!capabilitiesSwiper) return;
+  document.getElementById("closeCapabilities").addEventListener("click", () => {
+    if (!capabilitiesSwiper) return;
 
-  const currentIndex = capabilitiesSwiper.realIndex;
-  const delay = currentIndex * 300; // delay = animation time = 0ms, 200ms, 400ms, etc.
+    const currentIndex = capabilitiesSwiper.realIndex;
+    const delay = currentIndex * 300; // delay = animation time = 0ms, 200ms, 400ms, etc.
 
-  // Step 1: Move to the first slide with a duration equal to delay
-  capabilitiesSwiper.slideTo(0, delay);
+    // Step 1: Move to the first slide with a duration equal to delay
+    capabilitiesSwiper.slideTo(0, delay);
 
-  // Step 2: Wait for the animation to complete (same duration)
-  setTimeout(() => {
-    swirlTimeline.reverse();
+    // Step 2: Wait for the animation to complete (same duration)
+    setTimeout(() => {
+      swirlTimeline.reverse();
 
-    if (capabilitiesSwiper) {
-      capabilitiesSwiper.destroy(true, true);
-      capabilitiesSwiper = null;
-    }
-    
-    $(".swiper-slide").css("position", "initial");
-    $(".swiper-slide").css("transform", "initial");
-    $(".spiralImage").removeClass("active");
-    $(".spiralImage").css('width', 'auto');
-    $(".spiralImage").css("position", "absolute");
-    $(".empty").css("display", "block");
-    $(".swiper-slide:first-child .text").css("opacity", "0");
-  }, delay);
-});
+      if (capabilitiesSwiper) {
+        capabilitiesSwiper.destroy(true, true);
+        capabilitiesSwiper = null;
+      }
+
+      $(".swiper-slide").css("position", "initial");
+      $(".swiper-slide").css("transform", "initial");
+      $(".spiralImage").removeClass("active");
+      $(".spiralImage").css('width', 'auto');
+      $(".spiralImage").css("position", "absolute");
+      $(".empty").css("display", "block");
+      $(".swiper-slide:first-child .text").css("opacity", "0");
+    }, delay);
+  });
 
 
 
@@ -470,5 +470,25 @@ $(document).ready(function () {
         scrub: true,
       },
     });
+  } else {
+    const linkedInVideoHie = $('#linkedIn_video').height()
+    console.log(linkedInVideoHie);
+    gsap.fromTo('#linkedIn_video > video', {
+      y: `${(linkedInVideoHie / 2)}px`,
+    }, {
+      
+      y: `-${(linkedInVideoHie / 2)}px`,
+      ease: "none",
+      scrollTrigger: {
+        trigger: '#linkedIn_video',
+        start: `top 90%`,
+        end: `bottom 0%`,
+        toggleActions: "play none none reverse",
+        scrub: true,
+      }
+    })
   }
 });
+
+
+
