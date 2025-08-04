@@ -66,15 +66,15 @@ the_post();
   <div class="category_container">
     <div class="category_card">
       <h2>MEN</h2>
-      <video src="<?php echo get_template_directory_uri() . '/assets/images/product1.mp4'; ?>" autoplay loop muted></video>
+      <video src="<?php echo get_template_directory_uri() . '/assets/images/product1.mp4'; ?>" poster="<?php echo get_template_directory_uri() . '/assets/images/mens_banner.jpg'; ?>" autoplay loop muted></video>
     </div>
     <div class="category_card">
       <h2>WOMEN</h2>
-      <video src="<?php echo get_template_directory_uri() . '/assets/images/product2.mp4'; ?>" autoplay loop muted></video>
+      <video src="<?php echo get_template_directory_uri() . '/assets/images/product2.mp4'; ?>" poster="<?php echo get_template_directory_uri() . '/assets/images/women_banner.jpg'; ?>" autoplay loop muted></video>
     </div>
     <div class="category_card">
       <h2>KIDS</h2>
-      <video src="<?php echo get_template_directory_uri() . '/assets/images/product3.mp4'; ?>" autoplay loop muted></video>
+      <video src="<?php echo get_template_directory_uri() . '/assets/images/product3.mp4'; ?>" poster="<?php echo get_template_directory_uri() . '/assets/images/kid_banner.jpg'; ?>" autoplay loop muted></video>
     </div>
   </div>
 </section>
