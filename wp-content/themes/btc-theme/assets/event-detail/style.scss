@@ -22,12 +22,12 @@
   padding: 0px var(--paddingX);
   .breadcrub {
     color: #666662;
-    font-size: 20px;
+    font-size: var(--font-18);
 
     a {
       color: #666662;
       text-decoration: none;
-      font-size: 20px;
+      font-size: var(--font-18);
     }
   }
   .social_links {
@@ -289,10 +289,10 @@
           }
           p {
             position: absolute;
-            bottom: 30px;
-            right: 30px;
-            padding: 12px 24px;
-            font-size: 18px;
+            bottom: 20px;
+            right: 20px;
+            transform: scale(0.7);
+            transform-origin: right bottom;
             cursor: pointer;
           }
         }

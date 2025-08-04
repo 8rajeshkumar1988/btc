@@ -237,7 +237,7 @@ if ($pastEvents->have_posts()) {
           while ($pastEvents->have_posts()) {
             $pastEvents->the_post(); ?>
             <div class="swiper-slide event_item">
-              <div class="event_image">
+              <a href="<?php the_permalink(); ?>" class="event_image">
                 <?php
                 if (has_post_thumbnail()) {
                   $thumbnail_id = get_post_thumbnail_id();
@@ -256,7 +256,7 @@ if ($pastEvents->have_posts()) {
                 }
 
                 ?>
-              </div>
+              </a>
               <div class="event_description">
                 <h2><?php the_title(); ?></h2>
                 <div class="event_date">

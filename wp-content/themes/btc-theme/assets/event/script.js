@@ -97,6 +97,8 @@ let eventSwiper = new Swiper("#spotlight .hero-slider", {
   let impactScrollTrigger;
 
 $(document).ready(function () {
+
+
   $(".impact_wrapper.open .content").css("display", "grid").show();
 
   $(".impact_wrapper").click(function () {

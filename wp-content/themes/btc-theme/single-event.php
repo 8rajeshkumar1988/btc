@@ -26,6 +26,8 @@ get_header();
             <!-- <p>Previous Events</p> -->
             <h1><?php the_title(); ?></h1>
         </div>
+        <div class="layer"></div>
+        <div class="layer2"></div>
     </div>
 </section>
 
