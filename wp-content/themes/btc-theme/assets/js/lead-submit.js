@@ -51,7 +51,8 @@ $("#whatsapp_checkbox").on("change", function () {
     let isValid = true;
     $form.find(".error_input").removeClass("error_input");
     $form.find(".error_text").removeClass("error_text");
-    $(".lead_form_error").text("");
+    $(".lead_form_error").text("").hide();
+
 
 
 
@@ -94,7 +95,7 @@ $("#whatsapp_checkbox").on("change", function () {
     const $policy = $($form.find('[name="tandc"]'));
     if (!$policy.is(":checked")) {
       isValid = false;
-      $(".lead_form_error").text("*Please accept the terms and conditions.");
+      $(".lead_form_error").text("*Please accept the terms and conditions.").show();
     }
 
     if (!isValid) {
@@ -130,12 +131,12 @@ $("#whatsapp_checkbox").on("change", function () {
       if (response.success) {
         // alert(response.data);
         $form.trigger("reset");
-        $(".lead_form_error").text("");
+        $(".lead_form_error").text("").hide();
         $(".lead_form_submit").html(initial_text);
         $(".lead_form_submit").attr("disabled", false);
         window.location.href = "/thank-you/";
       } else {
-        $(".lead_form_error").text(response.data);
+        $(".lead_form_error").text(response.data).show();
          $(".lead_form_submit").html(initial_text);
           $(".lead_form_submit").attr("disabled", false);
       }

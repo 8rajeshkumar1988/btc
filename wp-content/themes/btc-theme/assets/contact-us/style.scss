@@ -176,6 +176,7 @@ body {
     flex-direction: column;
     align-items: flex-end;
     .lead_form_error{
+      display: none;
       color: #ff0000;
       text-align: right;
     }

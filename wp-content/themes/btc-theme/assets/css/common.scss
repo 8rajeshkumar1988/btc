@@ -52,7 +52,7 @@ body {
 }
 // /* HTML: <div class="loader"></div> */
 .lead_form_submit {
-  width: 150px !important;
+  width: 130px !important;
   height: 30px !important;
   justify-content: center !important;
 }
@@ -1227,6 +1227,9 @@ header {
     --font-14: 13px;
     --font-16: 15px;
     --spaceBelow_heading: 30px;
+  }
+  .lead_form_submit {
+    width: 85px;
   }
   .heroBanner {
     height: calc(95vh - 50px);
