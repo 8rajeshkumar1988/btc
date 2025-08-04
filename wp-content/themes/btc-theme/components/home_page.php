@@ -179,7 +179,7 @@
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/leed.png" ?>" alt="LEED - Green, energy-saving buildings">    
                     LEED - Green, energy-saving buildings</li>
                     <li>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ctpat.png" ?>" alt="CTPAT - Secure supply chain for US exports">    
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/CTPAT_Master_Logo.png" ?>" alt="CTPAT - Secure supply chain for US exports">    
                     CTPAT - Secure supply chain for US exports</li>
                 </ul>
             </div>
