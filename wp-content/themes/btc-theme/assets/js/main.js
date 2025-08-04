@@ -1,15 +1,17 @@
 let lenis;
 gsap.registerPlugin(SplitText);
 
-// window.onload = function () {
-//   lenis.scrollTo(0, {
-//     offset: 0,         
-//     duration: 0,     
-//     immediate: false,  
-//   });
-// };
+window.onload = function () {
+  scrollToTop()
+};
 
-
+  function scrollToTop() {
+    lenis.scrollTo(0, {
+      offset: 0,          // adjust offset if needed
+      duration: 1,      // smooth duration in seconds
+      immediate: false,   // true = no animation
+    });
+  }
 
 $(document).ready(function () {
   lenis = new Lenis();
@@ -24,6 +26,24 @@ $(document).ready(function () {
 
   gsap.registerPlugin(ScrollTrigger);
 
+
+  const backToTop = document.getElementById("backToTop");
+  const arrowPath = document.querySelector(".arrow-path");
+
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      const triggerHeight = window.innerHeight * 0.5; // 150vh
+
+      if (scrollY > triggerHeight) {
+        backToTop.classList.add("show");
+         arrowPath.style.animation = "none";
+    void arrowPath.offsetWidth; // Force reflow
+    arrowPath.style.animation = "drawArrow 2s ease forwards";
+      } else {
+        backToTop.classList.remove("show");
+        arrowPath.style.animation = "none";
+      }
+    });
 
 
 

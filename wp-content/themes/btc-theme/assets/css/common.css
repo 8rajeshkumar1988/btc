@@ -1150,6 +1150,46 @@ header button.open .close {
     color: #c9c9c9;
   }
 }
+.backtoTop {
+  all: unset;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: -60px;
+  right: clamp(1.25rem, 0.5536rem + 2.1429vw, 3.125rem);
+  background-color: var(--green);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: bottom 0.5s ease, opacity 0.5s ease;
+  z-index: 999999999999;
+}
+.backtoTop svg {
+  width: 24px;
+  height: 24px;
+}
+
+.backtoTop.show {
+  bottom: 20px;
+  opacity: 1;
+}
+
+.arrow-path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+}
+
+@keyframes drawArrow {
+  to {
+    stroke-dashoffset: 0;
+    fill: #000;
+  }
+}
 @media screen and (max-width: 1200px) {
   .heroBanner {
     height: auto;
