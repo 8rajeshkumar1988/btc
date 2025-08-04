@@ -15,6 +15,17 @@ gsap.registerPlugin(SplitText);
   //   scrollToTop()
   
   $(document).ready(function () {
+
+    document.querySelectorAll(".leadpopup").forEach(el => {
+      el.removeAttribute("ctabutton");
+    });
+
+// Remove 'animateheading' from headings inside .our_clients
+document.querySelectorAll("#our_clients .heading").forEach(el => {
+  el.removeAttribute("animateheading");
+});
+
+
   lenis = new Lenis();
 
   lenis.on("scroll", ScrollTrigger.update);
