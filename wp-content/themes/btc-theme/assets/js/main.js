@@ -16,7 +16,7 @@ gsap.registerPlugin(SplitText);
   
   $(document).ready(function () {
 
-    document.querySelectorAll(".leadpopup").forEach(el => {
+    document.querySelectorAll("#customization .leadpopup").forEach(el => {
       el.removeAttribute("ctabutton");
     });
 
