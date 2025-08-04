@@ -50,11 +50,10 @@ the_post();
 
   </div>
 </section>
-
-<section class="traceability traceability2">
+<section class="traceability">
   <div
     class="image-wrapper"
-    >
+    style=" top: 0; left: 0; transform: none">
     <img
       src="<?php echo get_template_directory_uri() . '/assets/images/PeoplePrinciples.jpg'; ?>"
       alt="Image 1" />
@@ -89,7 +88,7 @@ the_post();
   </div>
   <div
     class="image-wrapper"
-    >
+    style=" top: 0; left: 0; transform: none">
     <img
       src="<?php echo get_template_directory_uri() . '/assets/images/VerticalIntegration.jpg'; ?>"
       alt="Image 1" />
@@ -124,7 +123,7 @@ the_post();
   </div>
   <div
     class="image-wrapper"
-    >
+    style=" top: 0; left: 0; transform: none">
     <img src="<?php echo get_template_directory_uri() . '/assets/images/backTrace.jpg'; ?>" alt="Image 1" />
     <div class="traceability_content">
       <div class="heading">
@@ -156,10 +155,6 @@ the_post();
     </div>
   </div>
 </section>
-<div class="scroll-trigger"></div>
-<div class="scroll-trigger"></div>
-<div class="scroll-trigger"></div>
-<div class="scroll-trigger"></div>
 <section id="certificates_compliances">
   <div class="heading" animateHeading>
     <p>CERTIFICATIONS & COMPLIANCE</p>
