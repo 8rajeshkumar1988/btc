@@ -313,7 +313,7 @@
   height: max-content;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   text-align: center;
   align-items: center;
 }

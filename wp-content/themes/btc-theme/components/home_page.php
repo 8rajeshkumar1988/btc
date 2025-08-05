@@ -164,23 +164,23 @@
                 <ul class="certificates">
                     <li>
                         <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ISO.png" ?>" alt=" ISO 9001/45001/14001 - Environmental & safety management">
-                        ISO 9001/45001/14001 - Environmental & safety management
+                        Environmental & safety management
                     </li>
                     <li>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/cotton_made_in_africa.png" ?>" alt="CMiA - Sustainable African cotton">    
-                    CMiA - Sustainable African cotton</li>
+                    Sustainable African cotton</li>
                     <li>
                         <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/oekotex.png" ?>" alt="OekoTex - Tested for harmful substances">
-                        OekoTex - Tested for harmful substances</li>
+                        Tested for harmful substances</li>
                     <li>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/wrap.png" ?>" alt="WRAP - Ethical labor and legal compliance">    
-                    WRAP - Ethical labor and legal compliance</li>
+                    Ethical labor and legal compliance</li>
                     <li>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/leed.png" ?>" alt="LEED - Green, energy-saving buildings">    
-                    LEED - Green, energy-saving buildings</li>
+                    Green, energy-saving buildings</li>
                     <li>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/CTPAT_Master_Logo.png" ?>" alt="CTPAT - Secure supply chain for US exports">    
-                    CTPAT - Secure supply chain for US exports</li>
+                    Secure supply chain for US exports</li>
                 </ul>
             </div>
         </div>

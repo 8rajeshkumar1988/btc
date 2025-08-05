@@ -155,7 +155,7 @@
                 <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/images/youtube.png'; ?>"
                         alt="youtube"></a>
             </div>
-            <p>All Rights Reserved. BTC</p>
+            <p>Copyright© 2025, Benin Textile Corporation</p>
         </div>
     </div>
     <?php

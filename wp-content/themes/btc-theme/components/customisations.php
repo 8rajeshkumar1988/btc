@@ -2,7 +2,7 @@
      <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern_product.png'; ?>" alt="" />
      <div class="heading" animateHeading>
          <p>Customisations</p>
-         <h2>Flexibility Woven In</h2>
+         <h2>Flexibility Knitted In</h2>
      </div>
      <div class="customization_container">
          <div class="customization_buttons">

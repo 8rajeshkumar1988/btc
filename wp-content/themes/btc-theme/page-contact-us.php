@@ -33,7 +33,7 @@ the_post();
             <div class="heading"  animateHeadingBanner>
                 <p><?php the_title(); ?></p>
                 <?php the_content(); ?>
-                <button onclick="scrollToSectionById('lead_form')" class="cta" >Reach Out to Us now <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
+                <button onclick="scrollToSectionById('lead_form')"  class="cta" >Reach Out to Us now <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
             </div>
             <div class="contacts" animateHeadingBanner>
                 <p>Benin Textile Corporation</p>

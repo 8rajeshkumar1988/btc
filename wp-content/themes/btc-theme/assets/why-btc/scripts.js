@@ -182,7 +182,7 @@ $(document).ready(function () {
 
   if (window.innerWidth > 1024) {
     gsap.fromTo(
-      "#glance > svg",
+      "#glance > .svg",
       {
         top: "-20dvh",
       },
@@ -200,7 +200,7 @@ $(document).ready(function () {
     );
   } else {
     gsap.fromTo(
-      "#glance > svg",
+      "#glance > .svg",
       {
         top: "-5vh",
       },

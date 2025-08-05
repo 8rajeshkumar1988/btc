@@ -6,6 +6,9 @@ body {
   padding: calc(var(--paddingY) / 2) 0px;
   position: relative;
 }
+#product_spotlight .product_spotlight-next, #product_spotlight .product_spotlight-prev {
+  cursor: pointer;
+}
 #product_spotlight > img {
   position: absolute;
   inset: 0;

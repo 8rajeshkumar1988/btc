@@ -115,11 +115,12 @@
 }
 #sustainability_details h2 {
   font-size: var(--font-46);
-  line-height: 1.5;
+  line-height: 1.2;
   font-weight: 300;
 }
 #sustainability_details h2 span {
   font-weight: 500;
+  line-height: 1.2;
   color: var(--blue);
 }
 #sustainability_details .description {
@@ -127,7 +128,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
-  gap: var(--spaceBelow_heading);
+  gap: var(--font-20);
 }
 #sustainability_details .description p {
   font-size: var(--font-20);

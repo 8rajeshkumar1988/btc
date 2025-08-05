@@ -153,16 +153,22 @@ the_post();
           </a>
 
           <div class="category_list_card_detail">
-            <a href="<?php the_permalink(); ?>" class="category_list_card_title" style="color: <?php echo esc_attr($title_color); ?>">
+            <a href="<?php the_permalink(); ?>" class="category_list_card_title" style="color: #000000">
               <?php the_title(); ?>
             </a>
+            <!-- <a href="<?php the_permalink(); ?>" class="category_list_card_title" style="color: <?php echo esc_attr($title_color); ?>">
+              <?php the_title(); ?>
+            </a> -->
 
             <?php if ($products->have_posts()) : ?>
               <div class="category_tags">
                 <?php while ($products->have_posts()) : $products->the_post(); ?>
-                  <p style="color: <?php echo esc_attr($tags_color_code); ?>; background-color: <?php echo esc_attr($tags_background_color_code); ?>;">
+                  <p style="color: #000000; background-color: #efefef;">
                     <?php the_title(); ?>
                   </p>
+                  <!-- <p style="color: <?php echo esc_attr($tags_color_code); ?>; background-color: <?php echo esc_attr($tags_background_color_code); ?>;">
+                    <?php the_title(); ?>
+                  </p> -->
                 <?php endwhile; ?>
               </div>
               <?php wp_reset_postdata(); ?>

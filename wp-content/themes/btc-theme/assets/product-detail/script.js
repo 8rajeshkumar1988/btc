@@ -34,11 +34,11 @@ var explore_other_categories = new Swiper(".explore_other_categories", {
 
 var spotlight_slider = new Swiper(".spotlight_slider", {
   slidesPerView: 1.1,
-  initialSlide: 0,
   spaceBetween: 40,
   centeredSlides: true,
   watchSlidesProgress: true,
   speed: 1500,
+  loop: true,
   watchSlidesVisibility: true,
   navigation: {
     nextEl: ".product_spotlight-next",
@@ -48,11 +48,22 @@ var spotlight_slider = new Swiper(".spotlight_slider", {
     768: {
       slidesPerView: 1.2,
       spaceBetween: 30,
-      initialSlide: 1,
     },
   },
-
+  on: {
+    init: function () {
+      // Count only real slides (not duplicated ones due to loop)
+      const realSlides = this.slides.filter(slide => !slide.classList.contains('swiper-slide-duplicate'));
+      
+      if (realSlides.length <= 1) {
+        document.querySelector(".product_spotlight-next").style.display = "none";
+        document.querySelector(".product_spotlight-prev").style.display = "none";
+        document.querySelector(".product_spotlight_bottom").style.display = "none";
+      }
+    }
+  }
 });
+
 
 $(document).ready(function () {
 
