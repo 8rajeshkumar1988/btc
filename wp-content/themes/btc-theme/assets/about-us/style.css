@@ -519,13 +519,13 @@ body {
   color: var(--blue);
 }
 #popup .pop_container .pop_content #popupPara {
-  font-size: var(--font-30);
+  font-size: var(--font-24);
 }
 #popup .pop_container .pop_content #leader_bio {
   margin-top: 40px;
 }
 #popup .pop_container .pop_content #leader_bio p {
-  font-size: var(--font-20);
+  font-size: var(--font-18);
   color: var(--secondaryBlack);
 }
 
