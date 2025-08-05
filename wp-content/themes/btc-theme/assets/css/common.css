@@ -1162,7 +1162,7 @@ header button.open .close {
   place-items: center;
   cursor: pointer;
   transition: bottom 0.5s ease, opacity 0.5s ease;
-  z-index: 999999999999;
+  z-index: 999999999;
 }
 .backtoTop svg {
   width: 24px;

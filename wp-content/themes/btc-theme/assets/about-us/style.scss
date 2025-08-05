@@ -505,7 +505,7 @@ body {
   // background-color: #fff;
   overflow: hidden;
   padding: clamp(1.875rem, -6.5385rem + 9.6154vw, 5rem);
-  z-index: 9999;
+  z-index: 9999999999999;
   backdrop-filter: blur(10px);
   #closeBtn {
     all: unset;
