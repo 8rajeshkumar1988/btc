@@ -150,20 +150,30 @@ document.addEventListener("DOMContentLoaded", function () {
   const popupHeading = document.getElementById("popupHeading");
   const popupPara = document.getElementById("popupPara");
   const popupleaderBio = document.getElementById("leader_bio");
+  const linkedinProfile = document.getElementById("linkedin_profile");
   const closeBtn = document.getElementById("closeBtn");
 
   cards.forEach((card) => {
     card.addEventListener("click", () => {
+      popupImg.src = "";
       const img = card.querySelector("img");
       const heading = card.querySelector(".leader_title");
       const para = card.querySelector(".leader_description");
       const leaderBio = card.querySelector(".leader_bio");
+      const linkedin_link = card.querySelector(".linkedin_profile");
 
       // Set content
+
       popupImg.src = img.src;
       popupHeading.innerText = heading.innerText;
       popupPara.innerText = para.innerText;
       popupleaderBio.innerHTML = leaderBio.innerHTML;
+      if (linkedin_link.innerText) {
+        linkedinProfile.style.display = "block";
+      } else {
+        linkedinProfile.style.display = "none";
+      }
+      linkedinProfile.href = linkedin_link.innerText;
 
       // Show popup and fade in
       popup.classList.remove("hidden");

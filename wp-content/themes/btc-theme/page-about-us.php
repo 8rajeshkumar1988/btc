@@ -186,6 +186,7 @@ if ($leaderships->have_posts()) {
 
                         <p class="leader_description"><?php echo get_field('jobtitle'); ?></p>
                         <div  class="leader_bio" ><?php the_content(); ?></div>
+                        <p style="display:none;" class="linkedin_profile"><?php the_field('linkedin_profile'); ?></p>
                     </div>
                 </div>
             <?php
@@ -456,7 +457,10 @@ if ($leaderships->have_posts()) {
     <img id="popupImg" src="" />
     <div class="pop_content" data-lenis-prevent>
         <h2 id="popupHeading"></h2>
-        <p id="popupPara"></p>
+        <div style="display: flex;gap: 10px;align-items: center;">
+            <p id="popupPara"></p>
+            <a class="linkedin_icon" target="_blank" id="linkedin_profile" href="">  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.png" alt="linkedin" /></a>
+        </div>
         <div id="leader_bio"></div>
     </div>
     </div>
