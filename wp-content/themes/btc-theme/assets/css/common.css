@@ -851,7 +851,7 @@ header button.open .close {
   position: fixed;
   display: none;
   inset: 0;
-  z-index: 999;
+  z-index: 9999999999;
   align-content: center;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
