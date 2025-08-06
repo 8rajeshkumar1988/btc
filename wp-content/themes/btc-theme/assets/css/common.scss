@@ -156,7 +156,7 @@ header.sticky {
       bottom: 0;
       left: 0;
       z-index: 0;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000de 100%);
       pointer-events: none;
     }
     .layer2 {
@@ -167,7 +167,7 @@ header.sticky {
       top: 0;
       left: 0;
       z-index: 0;
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000000cf 100%);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(0 0 0 / 71%) 100%);
     }
   }
   .content [animateHeadingBanner] {
