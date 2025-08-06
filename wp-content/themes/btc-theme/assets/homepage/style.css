@@ -168,10 +168,10 @@
   position: absolute;
   inset: 0;
   width: calc(100% + 150px);
-  height: 100%;
+  height: calc(100% + 50px);
   -o-object-fit: cover;
      object-fit: cover;
-  transition: all 1s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 #ourProducts .content .ourProducts .items > div .cta {
   position: absolute;
@@ -331,6 +331,12 @@
   overflow: hidden;
   background: linear-gradient(180deg, #2f2874 0%, #201a5b 100%);
   position: relative;
+}
+#ourCapabilities .swiper-pagination {
+  display: none;
+}
+#ourCapabilities .swiper-pagination-bullet-active {
+  background-color: var(--green);
 }
 #ourCapabilities .back {
   position: absolute;
@@ -519,6 +525,20 @@
   width: 100%;
   min-height: 400px;
   position: relative;
+  padding: calc(var(--paddingY) / 2) var(--paddingX);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(180deg, transparent 0%, #000000 100%);
+}
+#linkedIn_video .heading h3 {
+  color: #fff;
+}
+#linkedIn_video .heading p {
+  color: var(--green);
+}
+#linkedIn_video .heading button, #linkedIn_video .heading a {
+  margin-top: var(--spaceBelow_heading);
 }
 #linkedIn_video video {
   position: fixed;

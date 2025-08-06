@@ -35,10 +35,9 @@ body {
   background-color: #fffff4;
 }
 
-.sticky {
+header.sticky {
   position: fixed;
-  top: 0;
-  padding: 30px var(--paddingX);
+  top: 0;  
   z-index: 100;
   background: linear-gradient(
     0deg,

@@ -191,9 +191,9 @@
                         position: absolute;
                         inset: 0;
                         width: calc(100% + 150px);
-                        height: 100%;
+                        height: calc(100% + 50px);
                         object-fit: cover;
-                        transition: all 1s ease-in-out;
+                        transition: transform 1s ease-in-out;
                     }
                     .cta {
                         position: absolute;
@@ -363,6 +363,12 @@
 }
 
 #ourCapabilities {
+    .swiper-pagination{
+        display: none;
+    }
+    .swiper-pagination-bullet-active{
+        background-color: var(--green);
+    }
     overflow: hidden;
     background: linear-gradient(180deg, #2f2874 0%, #201a5b 100%);
     position: relative;
@@ -566,6 +572,22 @@
     width: 100%;
     min-height: 400px;
     position: relative;
+    padding: calc(var(--paddingY) / 2) var(--paddingX);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(180deg, transparent 0%, #000000 100%);    
+    .heading{
+        h3{
+            color: #fff;
+        }
+        p{
+            color: var(--green);
+        }
+        button, a{
+            margin-top: var(--spaceBelow_heading);
+        }
+    }
     video {
         position: fixed;
         z-index: -1;
