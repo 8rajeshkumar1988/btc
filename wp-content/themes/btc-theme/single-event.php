@@ -198,10 +198,12 @@ if ($event_Start_Date) {
                     <br />
                     <input id="email" type="email" class="email-input" name="email" placeholder="Enter your email" />
                 </div>
-                <div class="phone_number">
+                <div class="phone_number" style="position: relative;z-index: 2;" >
                     <label for="phoneno">Phone number</label>
                     <br />
-                    <input id="phoneno" type="tel" class="phone-input" autocomplete="new-number" name="phone" placeholder="Enter your phone number" />
+                    <span data-lenis-prevent>
+                        <input id="phoneno" type="tel" class="phone-input" autocomplete="new-number" name="phone" placeholder="Enter your phone number" />
+                    </span>
                 </div>
                 <div class="reason_to_attend">
                     <label for="reason">Reason to Attend</label>

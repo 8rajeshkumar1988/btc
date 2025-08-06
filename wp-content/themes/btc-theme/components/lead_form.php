@@ -18,10 +18,12 @@
             <option value="Careers">Careers</option>
         </select>
     </div>
-    <div style="position: relative;z-index: 2;" data-lenis-prevent>
+    <div style="position: relative;z-index: 2;" >
         <label for="phone">Phone Number*</label>
         <br />
-        <input id="phone" name="phone" autocomplete="new-phone" class="phone-input" type="tel"  />
+        <span data-lenis-prevent>
+            <input id="phone" name="phone" autocomplete="new-phone" class="phone-input" type="tel"  />
+        </span>
     </div>
     <div>
         <label for="company">Company Name*</label>
@@ -33,7 +35,7 @@
              />
     </div>
 
-    <div class="whatsapp_input" style="position: relative;z-index: 1;" data-lenis-prevent>
+    <div class="whatsapp_input" style="position: relative;z-index: 1;" >
         <div class="whatsapp_container">
             <label for="whatsapp_number">Whatsapp Number</label>
             <div class="checkbox_container">
@@ -41,11 +43,14 @@
                 <label for="whatsapp_checkbox">Same as phone number</label>
             </div>
         </div>
-        <input
+        <span >
+
+            <input
             id="whatsapp_number"
             type="tel"
             name="whatsapp" class="phone-input"
-             />
+            />
+        </span>
     </div>
     <div>
         <label for="Organization">Organization Type*</label>
