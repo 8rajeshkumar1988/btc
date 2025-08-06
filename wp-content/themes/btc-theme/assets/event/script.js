@@ -49,17 +49,10 @@ let eventSwiper = new Swiper("#spotlight .hero-slider", {
   slidesPerView: 1,
   spaceBetween: 0,
   // grabCursor: true,
-  speed: 1000,
-  effect: "creative",
-  creativeEffect: {
-    prev: {
-      shadow: true,
-      translate: ["-20%", 0, -1],
-    },
-    next: {
-      translate: ["100%", 0, 0],
-    },
-  },
+  speed: 800,
+   effect: "fade",
+
+
   navigation: {
     nextEl: ".hero_slider-next",
     prevEl: ".hero_slider-prev",
@@ -82,7 +75,7 @@ let eventSwiper = new Swiper("#spotlight .hero-slider", {
         gsap.to(children, {
           opacity: 1,
           y: 0,
-          duration: 0.6,
+          duration: 0.3,
           stagger: 0.1,
           ease: "power2.out",
         });
