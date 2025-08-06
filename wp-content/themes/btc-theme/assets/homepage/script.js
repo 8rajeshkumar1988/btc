@@ -178,9 +178,10 @@ $(document).ready(function () {
   setInitialLayout();
 
   // ✅ Swirl animation triggered by center image click
-  document.getElementById("exploreWhatWeDo").addEventListener("click", () => {
-    // Prevent replay if already played
-    if (swirlTimeline && swirlTimeline.progress() === 1) return;
+  
+
+  const exloreCapabilities = () =>{
+   if (swirlTimeline && swirlTimeline.progress() === 1) return;
 
     swirlTimeline = gsap.timeline({
       onComplete: () => {
@@ -306,6 +307,7 @@ $(document).ready(function () {
           y: 0,
           scale: 1,
           opacity: 1,
+          delay: 0.5,
           duration: 0,
         },
         0
@@ -330,7 +332,16 @@ $(document).ready(function () {
         0.5
       )
     });
+  }
+  document.getElementById("exploreWhatWeDo").addEventListener("click", () => {
+    exloreCapabilities()
   });
+  images.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      console.log(img)
+      exloreCapabilities();
+    });
+  })
 
   // ✅ Reset button to reverse the animation
   document.getElementById("closeCapabilities").addEventListener("click", () => {
@@ -426,6 +437,7 @@ $(document).ready(function () {
         $("#exploreWhatWeDo").css("pointer-events", "none");
         setTimeout(() => {
           $("#exploreWhatWeDo").css("pointer-events", "all");
+          $(".spiralImage").css("pointer-events", "all");
         }, 1500);
       },
     },

@@ -544,6 +544,7 @@
             width: auto;
             aspect-ratio: 3/4.5;
             left: 0%;
+            pointer-events: none;
             object-fit: cover;
             transform: translate(0%, 0%);
             img {

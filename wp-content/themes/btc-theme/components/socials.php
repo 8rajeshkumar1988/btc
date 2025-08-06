@@ -1,5 +1,5 @@
 <section id="our_social">
-    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC pattern.svg'; ?>" alt="" />
+    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC pattern.svg'; ?>" alt="btcPattern" btcPattern />
 
     <div class="our_social_head">
         <div class="heading" animateHeading>
