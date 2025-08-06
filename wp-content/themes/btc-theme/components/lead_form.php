@@ -18,6 +18,7 @@
             <option value="Careers">Careers</option>
         </select>
     </div>
+    
     <div style="position: relative;z-index: 2;" >
         <label for="phone">Phone Number*</label>
         <br />
@@ -43,7 +44,7 @@
                 <label for="whatsapp_checkbox">Same as phone number</label>
             </div>
         </div>
-        <span >
+        <span data-lenis-prevent>
 
             <input
             id="whatsapp_number"
