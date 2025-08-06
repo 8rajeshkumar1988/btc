@@ -36,6 +36,16 @@ body {
   background-color: #fffff4;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  padding: 30px var(--paddingX);
+  z-index: 100;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 .hover {
   text-decoration: none;
   background-image: linear-gradient(currentColor, currentColor);
@@ -792,6 +802,8 @@ header button.open .close {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 #header .left .bannerArea .content {
   display: flex;
@@ -869,9 +881,6 @@ header button.open .close {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   overflow: auto;
-}
-#lead_popup_form .iti__country-list {
-  z-index: 9999999999999;
 }
 #lead_popup_form .popup_container {
   background-color: #fff;
@@ -1225,7 +1234,7 @@ header button.open .close {
     --spaceBelow_heading: 30px;
   }
   .lead_form_submit {
-    width: 85px;
+    width: 85px !important;
   }
   .heroBanner {
     height: calc(95vh - 50px);

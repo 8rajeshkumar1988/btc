@@ -51,7 +51,7 @@ the_post();
   </div>
 </section>
 
-<section class="traceability traceability2">
+<!-- <section class="traceability traceability2">
   <div
     class="image-wrapper"
     >
@@ -155,11 +155,164 @@ the_post();
       </div>
     </div>
   </div>
+</section> -->
+<section id="traceability">
+    <div class="parent_pers">
+        <div class="containers">
+            <div class="top">
+                <h3><span>(01)</span>Access To Local Cotton</h3>
+            </div>
+            <div class="bottom">
+                <div class="left">
+                    <div class="inner_top">
+                        <div class="copy">
+                            <p>We begin by sourcing rain-fed, non-GMO CmiA-certified cotton (Cotton made in Africa) directly from trusted, sustainable farms. This guarantees high-quality, traceable, and eco-friendly cotton. </p>
+                        </div>
+                        <p class="count">(01)</p>
+                    </div>
+                    <div class="inner_bottom">
+                        <div class="first">
+                            <p class="title">Process</p>
+                            <p class="subCopy">The cotton is carefully cultivated, picked, and prepared for further processing</p>
+                        </div>
+                        <div class="second">
+                            <p class="title">Key Feature</p>
+                            <p class="subCopy">Ethical sourcing practices ensure fair labor and environmental responsibility</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Gossypium_sp_MS4007.jpg'; ?>" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parent_pers">
+        <div class="containers">
+            <div class="top">
+                <h3><span>(02)</span>High-Performance Spinning</h3>
+            </div>
+            <div class="bottom">
+                <div class="left">
+                    <div class="inner_top">
+                        <div class="copy">
+                            <p>Our raw cotton is spun into high-quality yarn at our in-house spinning facilities. This step converts raw cotton fibers into threads, making them ready for the next stages.</p>
+                        </div>
+                        <p class="count">(02)</p>
+                    </div>
+                    <div class="inner_bottom">
+                        <div class="first">
+                            <p class="title">Technology Used</p>
+                            <p class="subCopy">Advanced spinning machines provide consistency in thread quality and strength</p>
+                        </div>
+                        <div class="second">
+                            <p class="title">Key Feature</p>
+                            <p class="subCopy">The yarn is designed to maintain its integrity for durability and softness, which is crucial for the longevity of the final garment</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Spinning-25.jpg'; ?>" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parent_pers">
+        <div class="containers">
+            <div class="top">
+                <h3><span>(03)</span>Knitting with Precision</h3>
+            </div>
+            <div class="bottom">
+                <div class="left">
+                    <div class="inner_top">
+                        <div class="copy">
+                            <p>The spun yarn is knitted into fabric at our facilities. We offer various fabric types (e.g., cotton knits, fabrics) depending on the garment style</p>
+                        </div>
+                        <p class="count">(03)</p>
+                    </div>
+                    <div class="inner_bottom">
+                        <div class="first">
+                            <p class="title">Technology Used</p>
+                            <p class="subCopy">High-tech looms and knitting machines enable us to create fabrics with intricate patterns and optimal texture</p>
+                        </div>
+                        <div class="second">
+                            <p class="title">Key Feature</p>
+                            <p class="subCopy">Our knitting processes result in breathable, high-quality textiles suitable for a variety of garment types</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Knitting-05.jpg'; ?>" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parent_pers">
+        <div class="containers">
+            <div class="top">
+                <h3><span>(03)</span>Knitting with Precision</h3>
+            </div>
+            <div class="bottom">
+                <div class="left">
+                    <div class="inner_top">
+                        <div class="copy">
+                            <p>The spun yarn is knitted into fabric at our facilities. We offer various fabric types (e.g., cotton knits, fabrics) depending on the garment style</p>
+                        </div>
+                        <p class="count">(03)</p>
+                    </div>
+                    <div class="inner_bottom">
+                        <div class="first">
+                            <p class="title">Technology Used</p>
+                            <p class="subCopy">High-tech looms and knitting machines enable us to create fabrics with intricate patterns and optimal texture</p>
+                        </div>
+                        <div class="second">
+                            <p class="title">Key Feature</p>
+                            <p class="subCopy">Our knitting processes result in breathable, high-quality textiles suitable for a variety of garment types</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Knitting-05.jpg'; ?>" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parent_pers">
+        <div class="containers">
+            <div class="top">
+                <h3><span>(05)</span> Garment Manufacturing</h3>
+            </div>
+            <div class="bottom">
+                <div class="left">
+                    <div class="inner_top">
+                        <div class="copy">
+                            <p>After dyeing, fabric is precision-cut and expertly stitched, with all elements - seams, zippers and buttons are assembled to create the final garment.</p>
+                        </div>
+                        <p class="count">(05)</p>
+                    </div>
+                    <div class="inner_bottom">
+                        <div class="first">
+                            <p class="title">Technology Used</p>
+                            <p class="subCopy">Automated stitching machines, along with expert seamstresses, ensure precise construction and high-quality finishing</p>
+                        </div>
+                        <div class="second">
+                            <p class="title">Key Feature</p>
+                            <p class="subCopy">Customizations like embroidery, screen printing, and other design details are added in this stage</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/SHOOTING-OUVRIERS-GTC.jpg'; ?>" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+   
 </section>
+<!-- <div class="scroll-trigger"></div>
 <div class="scroll-trigger"></div>
 <div class="scroll-trigger"></div>
-<div class="scroll-trigger"></div>
-<div class="scroll-trigger"></div>
+<div class="scroll-trigger"></div> -->
 <section id="certificates_compliances">
   <div class="heading" animateHeading>
     <p>CERTIFICATIONS & COMPLIANCE</p>

@@ -427,6 +427,7 @@
   #homeOfBtc .content {
     display: flex;
     flex-direction: column;
+    gap: 20px;
   }
   #homeOfBtc .content .second .swiper-wrapper .swiper-slide > div img {
     width: 80px;

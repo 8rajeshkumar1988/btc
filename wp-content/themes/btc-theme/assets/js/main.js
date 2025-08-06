@@ -254,9 +254,10 @@ $(document).ready(function () {
 
   // Close popup with fadeOut
   $("#closeleadpopup").on("click", function () {
+    lenis.start();
+    $("body").css({ overflow: "auto" });
     $("#lead_popup_form").fadeOut(300);
     // $("body").css({ overflow: "auto" });
-    lenis.start();
   });
 });
 

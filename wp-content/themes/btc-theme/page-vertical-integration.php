@@ -153,14 +153,14 @@ get_header();
                     <div class="inner_top">
                         <div class="copy">
                             <div class="tag_div">
-                                <div class="tags active" data-tab="dyeing">DYEING</div>
-                                <div class="tags unactive" data-tab="printing">PRINTING</div>
-                                <div class="tags unactive" data-tab="embroidery">EMBROIDERY</div>
+                                <div class="tags active" data-tab="dyeing" data-img="<?php echo get_template_directory_uri() . '/assets/images/Dyeing-and-Processing-BTC-6.jpg'; ?>">DYEING</div>
+                                <div class="tags unactive" data-tab="printing" data-img="<?php echo get_template_directory_uri() . '/assets/images/printing_machine.webp'; ?>">PRINTING</div>
+                                <div class="tags unactive" data-tab="embroidery" data-img="<?php echo get_template_directory_uri() . '/assets/images/embroidery_machine.webp'; ?>">EMBROIDERY</div>
                             </div>
                         </div>
                         <p class="count">(04)</p>
                     </div>
-                    <div class="inner_bottom" id="dyeing">
+                    <div class="inner_bottom"  id="dyeing">
                         <p>The Fabrics are dyed using water-efficient, eco-friendly dyeing techniques. We minimize water waste and ensure that the dyes used are non-toxic and biodegradable</p>
                         <div class="first">
                             <p class="title">Process</p>
@@ -195,7 +195,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Dyeing-and-Processing-BTC-6.jpg'; ?>" alt="">
+                    <img id="textile_processing_img" src="<?php echo get_template_directory_uri() . '/assets/images/Dyeing-and-Processing-BTC-6.jpg'; ?>" alt="">
                 </div>
             </div>
         </div>

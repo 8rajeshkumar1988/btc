@@ -38,49 +38,70 @@ $(document).ready(function () {
 
   //       });
   //     });
-  $("#textile_processing .tags").click(function () {
-    const tab = $(this).data("tab");
-    if ($(this).hasClass("active")) return;
 
-    // Toggle active/unactive tags
-    $("#textile_processing .tags").removeClass("active").addClass("unactive");
-    $(this).addClass("active").removeClass("unactive");
 
-    // Animate content switch
-    const $currentContent = $("#textile_processing .inner_bottom:visible");
-    const $nextContent = $("#" + tab);
+let currentTween = null;
 
-    // Animate current content's children out
-    gsap.to($currentContent.children(), {
-      opacity: 0,
-      y: 40,
-      ease: "power4.out",
-      duration: 0.5,
-      onComplete: () => {
-        $currentContent.css("display", "none");
-        if (window.innerWidth > 1024) {
-          $nextContent.css("display", "flex");
-        } else {
-          $nextContent.css("display", "grid");
-        }
+$("#textile_processing .tags").click(function () {
+  const tab = $(this).data("tab");
+  const newImageSrc = $(this).data("img"); // Add data-img attribute on .tags
+  if ($(this).hasClass("active")) return;
 
-        // Prepare next content's children
-        gsap.set($nextContent.children(), {
-          opacity: 0,
-          y: 40,
-        });
+  if (currentTween) currentTween.kill();
 
-        // Animate next content's children in
-        gsap.to($nextContent.children(), {
-          opacity: 1,
-          y: 0,
-          ease: "power4.out",
-          duration: 0.3,
-          stagger: 0.1,
-        });
+  $("#textile_processing .tags").removeClass("active").addClass("unactive");
+  $(this).addClass("active").removeClass("unactive");
+
+  const $currentContent = $("#textile_processing .inner_bottom:visible");
+  const $nextContent = $("#" + tab);
+  const $image = $("#textile_processing_img");
+
+  // Animate current content out
+  currentTween = gsap.to($currentContent.children(), {
+    opacity: 0,
+    y: 40,
+    ease: "power4.out",
+    duration: 0.3,
+    onComplete: () => {
+      $currentContent.css("display", "none");
+
+      if (window.innerWidth > 1024) {
+        $nextContent.css("display", "flex");
+      } else {
+        $nextContent.css("display", "grid");
       }
-    });
+
+      gsap.set($nextContent.children(), {
+        opacity: 0,
+        y: 40,
+      });
+
+      gsap.to($nextContent.children(), {
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+        duration: 0.3,
+        stagger: 0.1,
+      });
+    }
   });
+
+  // ✅ Image Transition
+  gsap.to($image, {
+    opacity: 0,
+    duration: 0.3,
+    onComplete: () => {
+      $image.attr("src", newImageSrc); // Change image source
+      gsap.to($image, {
+        opacity: 1,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    }
+  });
+});
+
+
 
 
   if (window.innerWidth > 1024) {
