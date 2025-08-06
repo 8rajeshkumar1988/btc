@@ -2,28 +2,28 @@ let lenis;
 gsap.registerPlugin(SplitText);
 
 // window.onload = function () {
-  // };
-  
-  function scrollToTop() {
-    lenis.scrollTo(0, {
-        offset: 0,          // adjust offset if needed
-        duration: 1,      // smooth duration in seconds
-        immediate: false,   // true = no animation
-      });
-      // console.log("Scroll to top");
-    }
-  //   scrollToTop()
-  
-  $(document).ready(function () {
+// };
 
-    document.querySelectorAll("#customization .leadpopup").forEach(el => {
-      el.removeAttribute("ctabutton");
-    });
+function scrollToTop() {
+  lenis.scrollTo(0, {
+    offset: 0,          // adjust offset if needed
+    duration: 1,      // smooth duration in seconds
+    immediate: false,   // true = no animation
+  });
+  // console.log("Scroll to top");
+}
+//   scrollToTop()
 
-// Remove 'animateheading' from headings inside .our_clients
-document.querySelectorAll("#our_clients .heading").forEach(el => {
-  el.removeAttribute("animateheading");
-});
+$(document).ready(function () {
+
+  document.querySelectorAll("#customization .leadpopup").forEach(el => {
+    el.removeAttribute("ctabutton");
+  });
+
+  // Remove 'animateheading' from headings inside .our_clients
+  document.querySelectorAll("#our_clients .heading").forEach(el => {
+    el.removeAttribute("animateheading");
+  });
 
 
   lenis = new Lenis();
@@ -31,7 +31,7 @@ document.querySelectorAll("#our_clients .heading").forEach(el => {
   lenis.on("scroll", ScrollTrigger.update);
 
   gsap.ticker.add((time) => {
-    lenis.raf(time * 500);
+    lenis.raf(time * 600);
   });
 
   gsap.ticker.lagSmoothing(2000);
@@ -42,27 +42,27 @@ document.querySelectorAll("#our_clients .heading").forEach(el => {
   const backToTop = document.getElementById("backToTop");
   const arrowPath = document.querySelector(".arrow-path");
 
-    window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-      const triggerHeight = window.innerHeight * 0.5; // 150vh
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const triggerHeight = window.innerHeight * 0.5; // 150vh
 
-      if (scrollY > triggerHeight) {
-        backToTop.classList.add("show");
-         arrowPath.style.animation = "none";
-    void arrowPath.offsetWidth; // Force reflow
-    arrowPath.style.animation = "drawArrow 2s ease forwards";
-      } else {
-        backToTop.classList.remove("show");
-        arrowPath.style.animation = "none";
-      }
-    });
+    if (scrollY > triggerHeight) {
+      backToTop.classList.add("show");
+      arrowPath.style.animation = "none";
+      void arrowPath.offsetWidth; // Force reflow
+      arrowPath.style.animation = "drawArrow 2s ease forwards";
+    } else {
+      backToTop.classList.remove("show");
+      arrowPath.style.animation = "none";
+    }
+  });
 
 
 
   const leftTrack = document.querySelector(".left-slide");
   const leftContent = leftTrack.querySelector(".marquee-content");
   const leftContentWidth = leftContent.offsetWidth;
-  const speed = 50;
+  const speed = 100;
   const duration = leftContentWidth / speed;
 
   gsap.to(leftTrack, {
@@ -309,7 +309,7 @@ $(document).ready(function () {
       scrub: true,
       // markers: true
     },
-    y: -100,    
+    y: -100,
   });
 
 
@@ -350,7 +350,7 @@ $(document).ready(function () {
     ease: "power4.out",
     duration: 1.2,
     stagger: {
-      each: 0.05,
+      each: 0.01,
       from: "random"
     },
     scrollTrigger: {
@@ -388,6 +388,25 @@ $(document).ready(function () {
     }
   })
 
- 
 
 });
+
+
+$(document).ready(function () {
+  const flag = window.innerWidth > 1024 
+  gsap.utils.toArray("[btcPattern]").forEach((item, i) => {
+    gsap.fromTo(item, {
+      y: flag ? -150 : -80
+    }, {
+      y: flag ? 150 : 80,
+      ease: "none",
+      scrollTrigger: {
+        trigger: item,
+        start: "top 100%",
+        end: "bottom top",
+        scrub: true,
+      },
+    })
+  })
+})
+

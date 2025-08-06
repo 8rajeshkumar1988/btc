@@ -84,7 +84,7 @@ $(document).ready(function () {
   const makeSwiper = () => {
     $(".spiralImage").addClass("active");
     resetSpiral();
-
+    $('.swiper-pagination').show(0);
     if (capabilitiesSwiper) {
       capabilitiesSwiper.destroy(true, true);
     }
@@ -105,7 +105,7 @@ $(document).ready(function () {
       simulateTouch: false,
       pagination: {
         el: ".swiper-pagination",
-        // clickable: true,
+        //  type: "fraction",
       },
       navigation: {
         nextEl: ".capabilitiesNext",
@@ -178,13 +178,14 @@ $(document).ready(function () {
   setInitialLayout();
 
   // ✅ Swirl animation triggered by center image click
-  document.getElementById("exploreWhatWeDo").addEventListener("click", () => {
-    // Prevent replay if already played
+
+
+  const exloreCapabilities = () => {
     if (swirlTimeline && swirlTimeline.progress() === 1) return;
 
     swirlTimeline = gsap.timeline({
       onComplete: () => {
-        makeSwiper(); // ✅ called after timeline completes
+        makeSwiper(); // ✅ called after timeline completes        
       },
     });
 
@@ -306,6 +307,7 @@ $(document).ready(function () {
           y: 0,
           scale: 1,
           opacity: 1,
+          delay: 0.5,
           duration: 0,
         },
         0
@@ -330,11 +332,21 @@ $(document).ready(function () {
         0.5
       )
     });
+  }
+  document.getElementById("exploreWhatWeDo").addEventListener("click", () => {
+    exloreCapabilities()
   });
+  images.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      console.log(img)
+      exloreCapabilities();
+    });
+  })
 
   // ✅ Reset button to reverse the animation
   document.getElementById("closeCapabilities").addEventListener("click", () => {
     if (!capabilitiesSwiper) return;
+    $('.swiper-pagination').hide(0);
 
     const currentIndex = capabilitiesSwiper.realIndex;
     const delay = currentIndex * 300; // delay = animation time = 0ms, 200ms, 400ms, etc.
@@ -411,6 +423,21 @@ $(document).ready(function () {
       toggleActions: "play none none reverse",
     },
   });
+  gsap.utils.toArray("#ourProducts .content .ourProducts .items > div > img").forEach((item) => {
+    gsap.fromTo(item, {
+      top: '-50px'
+    }, {
+      top: '50px',
+      ease: "none",
+      scrollTrigger: {
+        trigger: item.closest(".items"),
+        start: "top 100%",
+        end: "bottom 0%",
+        toggleActions: "play none none reverse",
+        scrub: true
+      },
+    });
+  })
 
   gsap.from(".spiralImage", {
     y: 200,
@@ -426,6 +453,7 @@ $(document).ready(function () {
         $("#exploreWhatWeDo").css("pointer-events", "none");
         setTimeout(() => {
           $("#exploreWhatWeDo").css("pointer-events", "all");
+          $(".spiralImage").css("pointer-events", "all");
         }, 1500);
       },
     },
@@ -476,7 +504,7 @@ $(document).ready(function () {
     gsap.fromTo('#linkedIn_video > video', {
       y: `${(linkedInVideoHie / 2)}px`,
     }, {
-      
+
       y: `-${(linkedInVideoHie / 2)}px`,
       ease: "none",
       scrollTrigger: {
