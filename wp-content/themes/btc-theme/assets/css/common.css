@@ -148,7 +148,7 @@ header.sticky {
   bottom: 0;
   left: 0;
   z-index: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8705882353) 100%);
   pointer-events: none;
 }
 .heroBanner .content .layer2 {
@@ -159,7 +159,7 @@ header.sticky {
   top: 0;
   left: 0;
   z-index: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8117647059) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.71) 100%);
 }
 .heroBanner .content [animateHeadingBanner] *:not(img):not(:has(img)) {
   opacity: 0;
