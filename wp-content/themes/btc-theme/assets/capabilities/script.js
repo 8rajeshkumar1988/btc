@@ -7,7 +7,7 @@ $(document).ready(function () {
                 transformOrigin: "center bottom",
                 autoAlpha: 0,
                 duration: 1.2,
-                ease: "back.out(1.6)",
+                ease: "back.out(0.3)",
                 delay: i * 0.1,
                 scrollTrigger: {
                     trigger: card,

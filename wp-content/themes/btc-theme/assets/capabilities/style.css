@@ -92,6 +92,7 @@ body {
   line-height: 1.2;
 }
 #vertical_integration .cards_wrapper .card .card_info .card_body h3 span {
+  line-height: 1.2;
   color: var(--green);
 }
 #vertical_integration .cards_wrapper .card .card_info .card_body .card_desc {
