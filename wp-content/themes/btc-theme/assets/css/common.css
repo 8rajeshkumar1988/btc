@@ -36,13 +36,17 @@ body {
   background-color: #fffff4;
 }
 
+header.scrolled {
+  top: -100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 header.sticky {
-  position: fixed;
   top: 0;
-  z-index: 100;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
 .hover {
@@ -644,13 +648,15 @@ footer .bottom .right * {
 }
 
 header {
-  position: absolute;
+  position: fixed;
+  top: 0;
   z-index: 99;
   width: 100%;
   padding: clamp(1.5625rem, -1.7137rem + 4.0323vw, 3.125rem) var(--paddingX);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.5s ease;
 }
 header a {
   line-height: 1;
@@ -880,6 +886,7 @@ header button.open .close {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6588235294);
 }
 #lead_popup_form .popup_container {
   background-color: #fff;
@@ -1407,4 +1414,21 @@ header button.open .close {
     font-size: var(--font-14);
     color: #c9c9c9;
   }
+}
+.progessBar {
+  position: fixed;
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--tertiaryBlack);
+  z-index: 999;
+}
+.progessBar div {
+  width: 0;
+  height: 100%;
+  background-color: var(--green);
+  transition: width 0.1s ease;
+  border-radius: 0px 10px 10px 0px;
 }/*# sourceMappingURL=common.css.map */

@@ -94,6 +94,12 @@
         </div>
     </div>
 </footer>
+
+
+<div class="progessBar">
+    <div id="bar"></div>
+</div>
+
 </body>
 
 </html>
