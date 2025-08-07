@@ -270,6 +270,37 @@ header.sticky {
   margin-top: var(--headingTop);
 }
 
+#progress_indication {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  z-index: 1111;
+  transform: translateX(40px) translateY(-50%);
+  display: flex;
+  opacity: 0;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.1176470588);
+  padding: 6px 4px;
+  border-radius: 20px;
+}
+
+.progress-dots .dot {
+  width: 6px;
+  height: 12px;
+  border-radius: 20px;
+  background: gray;
+  opacity: 0.4;
+  transition: 0.3s;
+}
+
+.progress-dots .dot.active {
+  background: var(--green);
+  opacity: 1;
+  height: 24px;
+}
+
 #our_clients {
   position: relative;
   background-color: #fffff4;
@@ -1180,6 +1211,10 @@ header button.open .close {
     font-size: var(--font-14);
     color: #c9c9c9;
   }
+  #footerContact {
+    aspect-ratio: unset;
+    padding: calc(var(--paddingY) / 2) calc(var(--paddingX) / 2);
+  }
 }
 .backtoTop {
   all: unset;
@@ -1281,6 +1316,9 @@ header button.open .close {
     padding: var(--paddingY) var(--paddingX);
     width: auto;
     min-width: initial;
+  }
+  #footerContact .content .heading h3 {
+    white-space: unset;
   }
   #footerContact > img {
     -o-object-position: right;
@@ -1417,7 +1455,7 @@ header button.open .close {
 }
 .progessBar {
   position: fixed;
-  height: 5px;
+  height: 4px;
   bottom: 0;
   left: 0;
   right: 0;

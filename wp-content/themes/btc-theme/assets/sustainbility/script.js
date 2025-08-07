@@ -218,6 +218,67 @@ $(document).ready(function () {
     });
   });
 
+  document.querySelectorAll("#traceability .parent_pers").forEach((_, index) => {
+  const dot = document.createElement("div");
+  dot.classList.add("dot");
+  if (index === 0) dot.classList.add("active");
+  document.getElementById("progress_indication").appendChild(dot);
+});
+
+function updateActiveDot(activeIndex) {
+  document.querySelectorAll("#progress_indication .dot").forEach((dot, i) => {
+    dot.classList.toggle("active", i === activeIndex);
+  });
+}
+
+let progressVisible = false;
+
+function checktraceabilityInViewAndActiveDot() {
+  const traceability = document.getElementById("traceability");
+  const progress = document.getElementById("progress_indication");
+  const traceabilityRect = traceability.getBoundingClientRect();
+
+  const inView = traceabilityRect.top < window.innerHeight / 2 && traceabilityRect.bottom > window.innerHeight / 2;
+
+  if (inView && !progressVisible) {
+    progressVisible = true;
+    gsap.to(progress, {
+      x: 0,
+      autoAlpha: 1,
+      duration: 0.5,
+      ease: "power2.out"
+    });
+  } else if (!inView && progressVisible) {
+    progressVisible = false;
+    gsap.to(progress, {
+      x: 40,
+      autoAlpha: 0,
+      duration: 0.2,
+      ease: "power2.in"
+    });
+  }
+
+  if (!inView) return;
+
+  // Highlight the active dot
+  const parentPersList = document.querySelectorAll("#traceability .parent_pers");
+  let activeIndex = 0;
+
+  parentPersList.forEach((el, index) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+      activeIndex = index;
+    }
+  });
+
+  updateActiveDot(activeIndex);
+}
+
+
+window.addEventListener("scroll", checktraceabilityInViewAndActiveDot);
+window.addEventListener("resize", checktraceabilityInViewAndActiveDot);
+
+checktraceabilityInViewAndActiveDot();
 
   gsap.from("#sustainability_details h2, #sustainability_details p ", {
     y: 100,
