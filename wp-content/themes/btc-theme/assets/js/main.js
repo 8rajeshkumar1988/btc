@@ -393,7 +393,7 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-  const flag = window.innerWidth > 1024 
+  const flag = window.innerWidth > 1024
   gsap.utils.toArray("[btcPattern]").forEach((item, i) => {
     gsap.fromTo(item, {
       y: flag ? -150 : -80
@@ -408,5 +408,45 @@ $(document).ready(function () {
       },
     })
   })
+
+
+
+  let exitedToTop = false;
+  let scrolledPast200 = false;
+
+  window.addEventListener("mousemove", function (e) {
+    if (e.clientY <= 150 && !exitedToTop) {
+      console.log("Cursor exited at the top of the viewport!");
+      $('header').addClass('sticky');
+      exitedToTop = true;
+    } else if (e.clientY > 150 && exitedToTop) {
+      console.log("Cursor re-entered the viewport!");
+      $('header').removeClass('sticky');
+      exitedToTop = false;
+    }
+  });
+
+  window.addEventListener("scroll", function () {
+    const scrollTop = window.scrollY || window.pageYOffset;
+
+    if (scrollTop > 200 && !scrolledPast200) {
+      console.log("Scrolled more than 200px");
+      $('header').addClass('scrolled');
+      scrolledPast200 = true;
+    } else if (scrollTop <= 200 && scrolledPast200) {
+      $('header').removeClass('scrolled');
+      scrolledPast200 = false;
+    }
+  });
+
 })
 
+
+
+$(document).on("scroll", function(){
+  var pixels = $(document).scrollTop();
+  var pageHeight = $(document).height() - $(window).height();
+  var progress = 100 * pixels / pageHeight;
+  
+  $("#bar").css("width", progress + "%");
+})
