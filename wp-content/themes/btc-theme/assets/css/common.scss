@@ -1247,6 +1247,11 @@ header {
       }
     }
   }
+
+  #footerContact{
+    aspect-ratio: unset;
+    padding: calc(var(--paddingY) / 2) calc(var(--paddingX) / 2);
+  }
 }
 
 .backtoTop {
@@ -1368,6 +1373,11 @@ header {
       padding: var(--paddingY) var(--paddingX);
       width: auto;
       min-width: initial;
+      .heading {
+        h3 {
+          white-space: unset;
+        }
+      }
     }
     & > img {
       object-position: right;

@@ -1180,6 +1180,10 @@ header button.open .close {
     font-size: var(--font-14);
     color: #c9c9c9;
   }
+  #footerContact {
+    aspect-ratio: unset;
+    padding: calc(var(--paddingY) / 2) calc(var(--paddingX) / 2);
+  }
 }
 .backtoTop {
   all: unset;
@@ -1281,6 +1285,9 @@ header button.open .close {
     padding: var(--paddingY) var(--paddingX);
     width: auto;
     min-width: initial;
+  }
+  #footerContact .content .heading h3 {
+    white-space: unset;
   }
   #footerContact > img {
     -o-object-position: right;

@@ -843,7 +843,7 @@
         height: 50dvh;
         width: 100%;
         video {
-            position: initial;
+            position: absolute;
             height: calc(100% + 200px);
             transform: translateY(-200px);
         }
