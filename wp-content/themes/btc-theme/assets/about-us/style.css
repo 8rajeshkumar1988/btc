@@ -230,6 +230,18 @@ body {
   color: #fff;
   font-size: var(--font-18);
   font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#our_leadership .our_leadership_container .leader_card .leader_detail .leader_description a {
+  height: clamp(1.875rem, 1.765rem + 0.3521vw, 2.1875rem);
+}
+#our_leadership .our_leadership_container .leader_card .leader_detail .leader_description a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #our_leadership .our_leadership_container .leader_card .leader_detail .leader_bio {
   display: none;
@@ -469,8 +481,7 @@ body {
   overflow: hidden;
   padding: clamp(1.875rem, -6.5385rem + 9.6154vw, 5rem);
   z-index: 9999999999999;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  transition: none;
 }
 #popup #closeBtn {
   all: unset;
@@ -520,6 +531,21 @@ body {
 }
 #popup .pop_container .pop_content #popupPara {
   font-size: var(--font-24);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#popup .pop_container .pop_content #popupPara a {
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1;
+  display: inline-block;
+}
+#popup .pop_container .pop_content #popupPara a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #popup .pop_container .pop_content #leader_bio {
   margin-top: 40px;
@@ -527,17 +553,6 @@ body {
 #popup .pop_container .pop_content #leader_bio p {
   font-size: var(--font-18);
   color: var(--secondaryBlack);
-}
-
-.linkedin_icon {
-  width: 40px;
-  height: 40px;
-}
-.linkedin_icon img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 @media screen and (max-width: 1200px) {
@@ -552,6 +567,7 @@ body {
   }
   #popup .pop_container {
     grid-template-columns: 1fr;
+    grid-template-rows: max-content;
     gap: 30px;
     overflow: scroll;
   }

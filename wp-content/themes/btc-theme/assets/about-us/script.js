@@ -143,6 +143,65 @@ $(document).ready(function () {
   }
 });
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   const cards = document.querySelectorAll(".leader_card");
+//   const popup = document.getElementById("popup");
+//   const popupImg = document.getElementById("popupImg");
+//   const popupHeading = document.getElementById("popupHeading");
+//   const popupPara = document.getElementById("popupPara");
+//   const popupleaderBio = document.getElementById("leader_bio");
+//   const linkedinProfile = document.getElementById("linkedin_profile");
+//   const closeBtn = document.getElementById("closeBtn");
+
+//   cards.forEach((card) => {
+//     card.addEventListener("click", () => {
+//       popupImg.src = "";
+//       const img = card.querySelector("img");
+//       const heading = card.querySelector(".leader_title");
+//       const para = card.querySelector(".leader_description");
+//       const leaderBio = card.querySelector(".leader_bio");
+//       const linkedin_link = card.querySelector(".linkedin_profile");
+
+//       // Set content
+
+//       popupImg.src = img.src;
+//       popupHeading.innerText = heading.innerText;
+//       popupPara.innerText = para.innerText;
+//       popupleaderBio.innerHTML = leaderBio.innerHTML;
+//       if (linkedin_link.innerText) {
+//         linkedinProfile.style.display = "block";
+//       } else {
+//         linkedinProfile.style.display = "none";
+//       }
+//       linkedinProfile.href = linkedin_link.innerText;
+
+//       // Show popup and fade in
+//       popup.classList.remove("hidden");
+//       lenis.stop();
+//       gsap.fromTo(
+//         popup,
+//         { autoAlpha: 0 },
+//         { autoAlpha: 1, duration: 0.6, ease: "power2.out" }
+//       );
+//     });
+//   });
+
+//   closeBtn.addEventListener("click", () => {
+//     // Fade out popup
+//     gsap.to(popup, {
+//       autoAlpha: 0,
+//       duration: 0.4,
+//       ease: "power2.in",
+//       onComplete: () => {
+//         popup.classList.add("hidden");
+//         lenis.start();
+//       },
+//     });
+//   });
+// });
+// $(document).on("click", ".card a", function (event) {
+//   event.stopPropagation();
+// });
 document.addEventListener("DOMContentLoaded", function () {
   const cards = document.querySelectorAll(".leader_card");
   const popup = document.getElementById("popup");
@@ -150,51 +209,136 @@ document.addEventListener("DOMContentLoaded", function () {
   const popupHeading = document.getElementById("popupHeading");
   const popupPara = document.getElementById("popupPara");
   const popupleaderBio = document.getElementById("leader_bio");
-  const linkedinProfile = document.getElementById("linkedin_profile");
   const closeBtn = document.getElementById("closeBtn");
+  const popContainer = document.querySelector(".pop_container");
+
+  let lastImageRect = null;
+  let lastCardHeading = null;
+  let lastClickedImage = null;
 
   cards.forEach((card) => {
+    card.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.stopPropagation();
+      });
+    });
     card.addEventListener("click", () => {
-      popupImg.src = "";
       const img = card.querySelector("img");
       const heading = card.querySelector(".leader_title");
       const para = card.querySelector(".leader_description");
       const leaderBio = card.querySelector(".leader_bio");
-      const linkedin_link = card.querySelector(".linkedin_profile");
 
-      // Set content
+      lastClickedImage = img;
+      lastImageRect = img.getBoundingClientRect();
+      lastCardHeading = heading;
 
       popupImg.src = img.src;
       popupHeading.innerText = heading.innerText;
-      popupPara.innerText = para.innerText;
+      popupPara.innerHTML = para.innerHTML;
       popupleaderBio.innerHTML = leaderBio.innerHTML;
-      if (linkedin_link.innerText) {
-        linkedinProfile.style.display = "block";
-      } else {
-        linkedinProfile.style.display = "none";
-      }
-      linkedinProfile.href = linkedin_link.innerText;
 
-      // Show popup and fade in
       popup.classList.remove("hidden");
-      lenis.stop();
-      gsap.fromTo(
-        popup,
-        { autoAlpha: 0 },
-        { autoAlpha: 1, duration: 0.6, ease: "power2.out" }
-      );
+      popup.offsetHeight;
+
+      // Get final container position
+      const containerRect = popContainer.getBoundingClientRect();
+
+      // Start animation from card image position
+      gsap.to("#popup", {
+        duration: 1,
+        backdropFilter: "blur(10px)",
+        backgroundColor: "rgba(0, 0, 0, 0.2)",
+        ease: "power1.out",
+      });
+      gsap.set(popContainer, {
+        position: "absolute",
+        top: lastImageRect.top,
+        left: lastImageRect.left,
+        width: lastImageRect.width,
+        height: lastImageRect.height,
+        // scale: 0.95,
+        opacity: 0,
+        overflow: "hidden",
+        zIndex: 1000,
+      });
+
+      gsap.to(popContainer, {
+        top: containerRect.top,
+        left: containerRect.left,
+        width: containerRect.width,
+        height: containerRect.height,
+        // scale: 1,
+        opacity: 1,
+        duration: 0.7,
+        ease: "power3.inOut",
+        onComplete: () => {
+          gsap.set(popContainer, { clearProps: "all" });
+        },
+      });
+
+      gsap.set([popupHeading, popupPara, popupleaderBio], {
+        autoAlpha: 0,
+        x: 50,
+      });
+
+      gsap.to([popupHeading, popupPara, popupleaderBio], {
+        autoAlpha: 1,
+        x: 0,
+        duration: 0.5,
+        delay: 0.5,
+        stagger: 0.1,
+        ease: "power2.out",
+      });
+
+      // gsap.set(heading, { autoAlpha: 0 });
     });
   });
 
   closeBtn.addEventListener("click", () => {
-    // Fade out popup
-    gsap.to(popup, {
+    const rect = lastImageRect;
+
+    const currentRect = popContainer.getBoundingClientRect();
+    const backdrop = document.querySelector("#popup");
+
+    gsap.to("#popup", {
+      duration: 1,
+      backdropFilter: "blur(0px)",
+      backgroundColor: "rgba(0, 0, 0, 0)",
+      ease: "power1.out",
+    });
+
+    gsap.set(popContainer, {
+      position: "absolute",
+      top: currentRect.top,
+      left: currentRect.left,
+      width: currentRect.width,
+      height: currentRect.height,
+      zIndex: 1000,
+    });
+
+    gsap.to([popupHeading, popupPara, popupleaderBio], {
       autoAlpha: 0,
-      duration: 0.4,
+      x: 50,
+      duration: 0.3,
       ease: "power2.in",
+    });
+
+    gsap.to([popContainer], {
+      top: rect.top,
+      left: rect.left,
+      width: rect.width,
+      height: rect.height,
+      // scale: 0.95,
+      opacity: 0,
+      duration: 0.6,
+      ease: "power3.inOut",
       onComplete: () => {
         popup.classList.add("hidden");
-        lenis.start();
+        gsap.set(popContainer, { clearProps: "all" });
+        //  gsap.set(backdrop, { clearProps: "all" });
+        if (lastCardHeading) {
+          gsap.set(lastCardHeading, { autoAlpha: 1 });
+        }
       },
     });
   });

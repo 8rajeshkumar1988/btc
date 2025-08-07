@@ -16,15 +16,7 @@ $key_pointers = new WP_Query(array(
     <div class="worldMap" id="lottie-animation">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
-         <lottie-player
-                 style="height: 100%;
-    width: 100%;
-    position: relative;
-    display: block;"
-                 id="firstLottie"
-                 src="<?php echo get_template_directory_uri() . '/assets/images/world_map_lottie.json'; ?>"
-  >
-  </lottie-player>  
+         <lottie-player style="height: 100%;width: 100%;position: relative;display: block;" id="firstLottie" src="<?php echo get_template_directory_uri() . '/assets/images/world_map_lottie.json'; ?>"></lottie-player>  
     </div>
     <div class="content">
         <div class="headNum heading" animateHeading>

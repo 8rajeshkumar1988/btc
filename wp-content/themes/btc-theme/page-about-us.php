@@ -184,9 +184,17 @@ if ($leaderships->have_posts()) {
                             <h2 class="leader_title"><?php the_title(); ?> </h2><span style="transform: rotate(45deg);font-size: var(--font-24);color: var(--green);">↑</span>
                         </div>
 
-                        <p class="leader_description"><?php echo get_field('jobtitle'); ?></p>
+                        <p class="leader_description">
+                            <?php echo get_field('jobtitle'); ?>
+                            
+                            <?php if (get_field('linkedin_profile')): ?>
+                                <a href="<?php the_field('linkedin_profile'); ?>" target="_blank" rel="noopener">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.png" alt="linkedin" />
+                                </a>
+                            <?php endif; ?>
+                        </p>
+
                         <div  class="leader_bio" ><?php the_content(); ?></div>
-                        <p style="display:none;" class="linkedin_profile"><?php the_field('linkedin_profile'); ?></p>
                     </div>
                 </div>
             <?php
@@ -459,7 +467,7 @@ if ($leaderships->have_posts()) {
         <h2 id="popupHeading"></h2>
         <div style="display: flex;gap: 10px;align-items: center;">
             <p id="popupPara"></p>
-            <a class="linkedin_icon" target="_blank" id="linkedin_profile" href="">  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.png" alt="linkedin" /></a>
+            <!-- <a class="linkedin_icon" target="_blank" id="linkedin_profile" href="">  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.png" alt="linkedin" /></a> -->
         </div>
         <div id="leader_bio"></div>
     </div>
