@@ -202,6 +202,12 @@
   text-overflow: ellipsis;
   line-height: 1.4;
 }
+#more_news .more_news_container .about_more_news .blog_card .blog_description a {
+  font-weight: 400;
+}
+#more_news .more_news_container .about_more_news .blog_card .blog_description a:hover {
+  font-weight: 600;
+}
 
 #explore_media {
   padding: var(--paddingY) var(--paddingX);

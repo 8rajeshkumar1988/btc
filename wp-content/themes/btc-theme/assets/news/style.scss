@@ -212,6 +212,12 @@
             text-overflow: ellipsis;
             line-height: 1.4;
           }
+          a{
+            font-weight: 400;
+            &:hover{
+              font-weight: 600;
+            }
+          }
         }
       }
     }

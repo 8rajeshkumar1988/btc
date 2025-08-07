@@ -429,11 +429,11 @@ $(document).ready(function () {
   window.addEventListener("scroll", function () {
     const scrollTop = window.scrollY || window.pageYOffset;
 
-    if (scrollTop > 200 && !scrolledPast200) {
-      console.log("Scrolled more than 200px");
+    if (scrollTop > 30 && !scrolledPast200) {
+      // console.log("Scrolled more than 200px");
       $('header').addClass('scrolled');
       scrolledPast200 = true;
-    } else if (scrollTop <= 200 && scrolledPast200) {
+    } else if (scrollTop <= 30 && scrolledPast200) {
       $('header').removeClass('scrolled');
       scrolledPast200 = false;
     }
