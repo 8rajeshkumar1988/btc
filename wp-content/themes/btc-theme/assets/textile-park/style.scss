@@ -25,12 +25,12 @@
         font-size: var(--font-46);
         font-weight: 200;
         color: var(--primaryBlack);
-        line-height: 1.4;
+        line-height: 1.2;
         strong,
         span {
             font-weight: 600;
             color: var(--blue);
-            line-height: 1.4;
+            line-height: 1.2;
         }
     }
     .description {
@@ -38,7 +38,7 @@
         flex-direction: column;
         justify-content: space-between;
         // align-items: flex-end;
-        gap: 40px;
+        gap: var(--font-20);
         p {
             font-size: var(--font-20);
             line-height: 1.5;

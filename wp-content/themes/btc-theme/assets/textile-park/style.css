@@ -24,19 +24,19 @@
   font-size: var(--font-46);
   font-weight: 200;
   color: var(--primaryBlack);
-  line-height: 1.4;
+  line-height: 1.2;
 }
 #textile_details h2 strong,
 #textile_details h2 span {
   font-weight: 600;
   color: var(--blue);
-  line-height: 1.4;
+  line-height: 1.2;
 }
 #textile_details .description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 40px;
+  gap: var(--font-20);
 }
 #textile_details .description p {
   font-size: var(--font-20);
