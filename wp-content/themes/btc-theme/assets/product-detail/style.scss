@@ -285,31 +285,31 @@ body {
           line-height: 1;
           text-transform: uppercase;
           font-weight: 500;
-          color: #594ec2;
+          color: var(--secondaryBlack);
           display: block;
         }
       }
 
-      .category_item:nth-child(2) {
-        .category_title {
-          color: #ddbb91;
-        }
-      }
-      .category_item:nth-child(3) {
-        .category_title {
-          color: #63c7ff;
-        }
-      }
-      .category_item:nth-child(4) {
-        .category_title {
-          color: #553f2f;
-        }
-      }
-      .category_item:nth-child(5) {
-        .category_title {
-          color: #8e5947;
-        }
-      }
+      // .category_item:nth-child(2) {
+      //   .category_title {
+      //     color: #ddbb91;
+      //   }
+      // }
+      // .category_item:nth-child(3) {
+      //   .category_title {
+      //     color: #63c7ff;
+      //   }
+      // }
+      // .category_item:nth-child(4) {
+      //   .category_title {
+      //     color: #553f2f;
+      //   }
+      // }
+      // .category_item:nth-child(5) {
+      //   .category_title {
+      //     color: #8e5947;
+      //   }
+      // }
     }
   }
 }

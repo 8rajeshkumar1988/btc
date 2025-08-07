@@ -36,8 +36,8 @@ get_header();
         <div class="layer2"></div>
     </div>
 </section>
-
 <section id="textile_details">
+    
     <img src="<?php echo get_template_directory_uri() . '/assets/images/textilePattern.png'; ?>" alt="" />
     <div animateHeading>
         <p>Textile Park</p>
@@ -52,6 +52,7 @@ get_header();
     </div>
 </section>
 
+<div id="progress_indication" class="progress-dots"></div>
 <section id="parking">
     <div class="parent_pers">
         <div class="containers">

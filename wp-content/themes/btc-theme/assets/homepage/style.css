@@ -335,8 +335,28 @@
 #ourCapabilities .swiper-pagination {
   display: none;
 }
-#ourCapabilities .swiper-pagination-bullet-active {
-  background-color: var(--green);
+#ourCapabilities .swiper-pagination {
+  text-align: center;
+}
+#ourCapabilities .swiper-pagination .swiper-pagination-bullet {
+  width: 9px;
+  height: 5px;
+  display: inline-block;
+  background: #fff;
+  opacity: 0.2;
+  margin: 0 3px;
+  border-radius: 20px;
+  transition: opacity 0.5s, background-color 0.5s, width 0.5s;
+  transition-delay: 0.5s, 0.5s, 0s;
+}
+#ourCapabilities .swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+}
+#ourCapabilities .swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #ffffff;
+  width: 40px;
+  transition-delay: 0s;
 }
 #ourCapabilities .back {
   position: absolute;
@@ -537,7 +557,8 @@
 #linkedIn_video .heading p {
   color: var(--green);
 }
-#linkedIn_video .heading button, #linkedIn_video .heading a {
+#linkedIn_video .heading button,
+#linkedIn_video .heading a {
   margin-top: var(--spaceBelow_heading);
 }
 #linkedIn_video video {

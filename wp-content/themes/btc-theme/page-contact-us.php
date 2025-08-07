@@ -161,19 +161,31 @@ get_footer();
 
 ?>
 <script>
-    const overlay = document.getElementById("mapOverlay");
-    const closeBtn = document.getElementById("closeBtn");
-    const iframe = document.getElementById("mapIframe");
+const overlay = document.getElementById("mapOverlay");
+const closeBtn = document.getElementById("closeBtn");
+const iframe = document.getElementById("mapIframe");
 
-    overlay.addEventListener("dblclick", () => {
-        iframe.style.pointerEvents = "auto";
-        overlay.style.display = "none";
-        closeBtn.style.display = "block";
-    });
+// Utility: Detect mobile
+const isMobile = window.matchMedia("(pointer: coarse)").matches;
 
-    closeBtn.addEventListener("click", () => {
-        iframe.style.pointerEvents = "none";
-        overlay.style.display = "flex";
-        closeBtn.style.display = "none";
-    });
+// Use "click" on mobile, "dblclick" on desktop
+const activateMap = () => {
+  iframe.style.pointerEvents = "auto";
+  overlay.style.display = "none";
+  closeBtn.style.display = "block";
+};
+
+if (isMobile) {
+  overlay.addEventListener("click", activateMap);
+} else {
+  overlay.addEventListener("dblclick", activateMap);
+}
+
+closeBtn.addEventListener("click", () => {
+    console.log("close");
+  iframe.style.pointerEvents = "none";
+  overlay.style.display = "flex";
+  closeBtn.style.display = "none";
+});
+
 </script>

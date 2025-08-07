@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   $("#parking .containers").each(function (index) {
     const isEven = index % 2 === 0;
     gsap.to(this, {
@@ -24,6 +25,72 @@ $(document).ready(function () {
       },
     });
   });
+
+// Create dots dynamically
+document.querySelectorAll("#parking .parent_pers").forEach((_, index) => {
+  const dot = document.createElement("div");
+  dot.classList.add("dot");
+  if (index === 0) dot.classList.add("active");
+  document.getElementById("progress_indication").appendChild(dot);
+});
+
+function updateActiveDot(activeIndex) {
+  document.querySelectorAll("#progress_indication .dot").forEach((dot, i) => {
+    dot.classList.toggle("active", i === activeIndex);
+  });
+}
+
+let progressVisible = false;
+
+function checkParkingInViewAndActiveDot() {
+  const parking = document.getElementById("parking");
+  const progress = document.getElementById("progress_indication");
+  const parkingRect = parking.getBoundingClientRect();
+
+  const inView = parkingRect.top < window.innerHeight / 2 && parkingRect.bottom > window.innerHeight / 2;
+
+  if (inView && !progressVisible) {
+    progressVisible = true;
+    gsap.to(progress, {
+      x: 0,
+      autoAlpha: 1,
+      duration: 0.5,
+      ease: "power2.out"
+    });
+  } else if (!inView && progressVisible) {
+    progressVisible = false;
+    gsap.to(progress, {
+      x: 40,
+      autoAlpha: 0,
+      duration: 0.2,
+      ease: "power2.in"
+    });
+  }
+
+  if (!inView) return;
+
+  // Highlight the active dot
+  const parentPersList = document.querySelectorAll("#parking .parent_pers");
+  let activeIndex = 0;
+
+  parentPersList.forEach((el, index) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+      activeIndex = index;
+    }
+  });
+
+  updateActiveDot(activeIndex);
+}
+
+
+window.addEventListener("scroll", checkParkingInViewAndActiveDot);
+window.addEventListener("resize", checkParkingInViewAndActiveDot);
+
+checkParkingInViewAndActiveDot();
+
+
+
 
   //   gsap.utils
   //     .toArray(

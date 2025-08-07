@@ -156,6 +156,7 @@ the_post();
     </div>
   </div>
 </section> -->
+<div id="progress_indication" class="progress-dots"></div>
 <section id="traceability">
     <div class="parent_pers">
         <div class="containers">

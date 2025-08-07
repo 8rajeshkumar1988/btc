@@ -256,20 +256,8 @@ body {
   line-height: 1;
   text-transform: uppercase;
   font-weight: 500;
-  color: #594ec2;
+  color: var(--secondaryBlack);
   display: block;
-}
-#explore_other_categories .explore_other_categories_container .explore_other_categories .category_item:nth-child(2) .category_title {
-  color: #ddbb91;
-}
-#explore_other_categories .explore_other_categories_container .explore_other_categories .category_item:nth-child(3) .category_title {
-  color: #63c7ff;
-}
-#explore_other_categories .explore_other_categories_container .explore_other_categories .category_item:nth-child(4) .category_title {
-  color: #553f2f;
-}
-#explore_other_categories .explore_other_categories_container .explore_other_categories .category_item:nth-child(5) .category_title {
-  color: #8e5947;
 }
 
 .swiper {
