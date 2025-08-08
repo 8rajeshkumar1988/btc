@@ -459,9 +459,11 @@
     * {
       font-size: var(--font-46);
       font-weight: 400;
-      strong{
-        font-weight: 600;
-      }
+      line-height: 1.2;
+    }
+    strong{
+      line-height: 1.2;
+      font-weight: 600;
     }
   }
   h3{
@@ -471,9 +473,12 @@
     * {
       font-size: clamp(1.5rem, 1.35rem + 0.75vw, 2.25rem);
       font-weight: 400;
-      strong{
-        font-weight: 600;
-      }
+      line-height: 1.2;
+    }
+    strong{
+      font-weight: 600;
+      line-height: 1.2;
+
     }
   }
   .cta{

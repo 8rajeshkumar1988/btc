@@ -438,8 +438,10 @@
 .event-content h2 * {
   font-size: var(--font-46);
   font-weight: 400;
+  line-height: 1.2;
 }
-.event-content h2 * strong {
+.event-content h2 strong {
+  line-height: 1.2;
   font-weight: 600;
 }
 .event-content h3 {
@@ -450,9 +452,11 @@
 .event-content h3 * {
   font-size: clamp(1.5rem, 1.35rem + 0.75vw, 2.25rem);
   font-weight: 400;
+  line-height: 1.2;
 }
-.event-content h3 * strong {
+.event-content h3 strong {
   font-weight: 600;
+  line-height: 1.2;
 }
 .event-content .cta {
   margin: var(--font-16) 0px;
