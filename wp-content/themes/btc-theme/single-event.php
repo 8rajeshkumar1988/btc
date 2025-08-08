@@ -47,6 +47,11 @@ get_header();
     </div>
 </div>
 <div class="event-content">
+    <h2>About Event</h2>
+    <div class="cta"><?php echo date('j F Y', strtotime(get_field('event_from_date'))); ?>
+                      <?php if (get_field('event_to_date') != get_field('event_from_date')) { ?>
+                        - <?php echo date('j F Y', strtotime(get_field('event_to_date')));
+                        } ?></div>
     <?php the_content(); ?>
 </div>
 
