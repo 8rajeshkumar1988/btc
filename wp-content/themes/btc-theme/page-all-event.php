@@ -6,7 +6,7 @@ get_header();
 
 <?php
 $today = date('Ymd');
-
+$top_post_ids = array();
 $liveEvents = new WP_Query(array(
   'post_type' => 'event',
   'meta_key' => 'event_from_date',
@@ -59,7 +59,9 @@ if (!$liveEvents->have_posts()) {
     <div class="hero-slider swiper">
       <div class="swiper-wrapper">
         <?php while ($liveEvents->have_posts()) {
-          $liveEvents->the_post(); ?>
+          $liveEvents->the_post(); 
+          $top_post_ids[] = get_the_ID();
+          ?>
           <div class="swiper-slide">
             <?php
             $banner_image = get_field('banner_image');
@@ -210,15 +212,16 @@ $pastEvents = new WP_Query(array(
   'posts_per_page' => -1, // or set to any number like 10
   'meta_key' => 'event_to_date',
   'orderby' => 'meta_value_num',
-  'order' => 'DESC', // latest past events first
-  // 'meta_query' => array(
-  //   array(
-  //     'key' => 'event_to_date',
-  //     'value' => $today,
-  //     'compare' => '<',
-  //     'type' => 'NUMERIC'
-  //   ),
-  // )
+  'order' => 'DESC',
+  'post__not_in'   => $top_post_ids,
+  'meta_query' => array(
+    array(
+      'key' => 'event_to_date',
+      'value' => $today,
+      'compare' => '<',
+      'type' => 'NUMERIC'
+    ),
+  )
 ));
 
 if ($pastEvents->have_posts()) {
