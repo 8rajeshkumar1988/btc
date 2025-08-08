@@ -473,6 +473,10 @@
   }
   ul{
     margin-left: 1rem;
+    li{
+      font-size: var(--font-18);
+      margin-bottom: 10px;
+    }
   }
   p {
     font-size: var(--font-18);

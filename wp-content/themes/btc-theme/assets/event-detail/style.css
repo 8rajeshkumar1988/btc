@@ -452,6 +452,10 @@
 .event-content ul {
   margin-left: 1rem;
 }
+.event-content ul li {
+  font-size: var(--font-18);
+  margin-bottom: 10px;
+}
 .event-content p {
   font-size: var(--font-18);
   font-weight: 400;
