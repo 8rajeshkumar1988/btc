@@ -64,13 +64,14 @@
 
 
                             echo '<img  src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
-                        } else {
-                            $banner_video = get_field('banner_video', $post_id);
+                        } 
+                        // else {
+                        //     $banner_video = get_field('banner_video', $post_id);
 
-                            if ($banner_video && !empty($banner_video['url'])) {
-                                echo '<video playsinline autoplay muted loop src="' . esc_url($banner_video['url']) . '"></video>';
-                            }
-                        }
+                        //     if ($banner_video && !empty($banner_video['url'])) {
+                        //         echo '<video playsinline autoplay muted loop src="' . esc_url($banner_video['url']) . '"></video>';
+                        //     }
+                        // }
                         ?>
                     </div>
                     <div class="content">

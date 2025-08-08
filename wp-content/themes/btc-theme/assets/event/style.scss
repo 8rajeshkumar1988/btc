@@ -44,6 +44,11 @@ body {
           line-height: 1.1;
           max-width: 600px;
           margin-bottom: 20px;
+          display: -webkit-box;
+          line-clamp: 2;
+          -webkit-line-clamp: 2; /* Limit to 2 lines */
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
         p {
           color: #fff;

@@ -951,7 +951,7 @@ header button.open .close {
   color: var(--blue);
   font-weight: 500;
   max-width: 950px;
-  font-size: calc(var(--font-46) - 15px);
+  font-size: clamp(2rem, 1.775rem + 1.125vw, 3.125rem);
 }
 #lead_popup_form .iti {
   margin-top: 10px;

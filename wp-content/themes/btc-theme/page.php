@@ -7,7 +7,7 @@ get_header();
 <section class="heroBanner">
    <div>
      <h1><?php the_title() ?></h1>
-     <p>Last updated: <?php get_field('last_updated') ?></p>
+     <p>Last updated: <?php the_field('last_updated') ?></p>
    </div>
 </section>
 <div class="default_content">
@@ -16,5 +16,4 @@ get_header();
 
 <?php
 get_footer();
-
 ?>

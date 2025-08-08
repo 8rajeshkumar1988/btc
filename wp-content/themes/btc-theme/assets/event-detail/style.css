@@ -438,6 +438,9 @@
   font-size: var(--font-46);
   font-weight: 400;
 }
+.event-content h2 * strong {
+  font-weight: 600;
+}
 .event-content ul {
   margin-left: 1rem;
 }
