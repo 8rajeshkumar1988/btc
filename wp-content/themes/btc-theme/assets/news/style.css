@@ -212,6 +212,8 @@
 #explore_media {
   padding: var(--paddingY) var(--paddingX);
   background: #fff;
+  position: relative;
+  z-index: 1;
 }
 #explore_media .explore_media_container {
   display: grid;

@@ -73,6 +73,8 @@ get_header();
 </section>
 
 <div class="blog_content">
+    <img class="pattern" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="BTC pattern" />
+
   <?php the_content(); ?>
 </div>
 

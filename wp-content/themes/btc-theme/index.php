@@ -211,7 +211,7 @@ $args = [
     'orderby'        => 'meta_value_num',
     'order'          => 'DESC',
     'cat'            => 3,
-
+    'post__not_in'   => $top_post_ids,
 ];
 if (!empty($tag_slug)) {
     $args['tag'] = $tag_slug;
