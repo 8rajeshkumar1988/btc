@@ -45,12 +45,10 @@ the_post();
   </h2>
   <div class="description">
     <p>
-      From everyday essentials to custom designs, our collection is crafted
-      with care to meet both style and sustainability needs.
+      Whether you're building a fashion collection, a basics line, or a specialized product range, our team works with you to bring your creative and technical vision to life. 
     </p>
     <p>
-      Explore our products, made from eco-friendly, traceable cotton, and
-      discover the perfect fit for your brand.
+      The flexibility we offer is built on deep textile expertise, vertical integration and a clear commitment to quality and customization at scale.
     </p>
     <button class="cta leadpopup" ctaButton >
       Get in Touch <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" />

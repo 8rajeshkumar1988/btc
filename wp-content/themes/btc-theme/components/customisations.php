@@ -73,6 +73,8 @@
                                     'compare' => '=',
                                 ],
                             ],
+                            'orderby'        => 'meta_value_num',
+                            'order'          => 'ASC',
                         ]);
                         if ($products->have_posts()) { ?>
 

@@ -109,7 +109,7 @@
             <p>Sustainability Standards</p>
             <h3>Compliant With Global Sustainability Standards</h3>
         </div>
-        <button class="cta" ctaButton>Learn More <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+        <button class="cta leadpopup" ctaButton>Learn More <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
     </div>
     <div class="accordian">
         <div class="faq default-open" >

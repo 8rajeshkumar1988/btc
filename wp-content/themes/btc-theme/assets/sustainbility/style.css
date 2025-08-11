@@ -227,9 +227,12 @@
   color: #6c6c6c;
 }
 #traceability .containers .bottom .left .inner_top .copy * {
-  font-size: var(--font-20);
+  font-size: var(--font-24);
   color: var(--secondaryBlack);
   font-weight: 300;
+}
+#traceability .containers .bottom .left .inner_top .copy strong {
+  font-weight: 500;
 }
 #traceability .containers .bottom .left .inner_top .count {
   height: -moz-fit-content;
@@ -248,13 +251,19 @@
   color: var(--secondaryBlack);
 }
 #traceability .containers .bottom .left .inner_bottom > div {
-  width: 50%;
+  width: 100%;
   min-width: 500px;
 }
+#traceability .containers .bottom .left .inner_bottom .subCopy {
+  margin-bottom: 20px;
+}
 #traceability .containers .bottom .left .inner_bottom * {
-  font-size: var(--font-20);
+  font-size: var(--font-18);
   color: #000;
   font-weight: 300;
+}
+#traceability .containers .bottom .left .inner_bottom strong {
+  font-weight: 600;
 }
 #traceability .containers .bottom .left .inner_bottom .title {
   font-weight: 500;
@@ -419,7 +428,7 @@
   #traceability .containers .bottom .left .inner_bottom {
     margin-top: 15px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 15px;
   }
   #traceability .containers .bottom .left .inner_bottom * {
@@ -522,7 +531,7 @@
   #traceability .containers .bottom .left .inner_bottom {
     margin-top: 15px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 15px;
   }
   #traceability .containers .bottom .left .inner_bottom * {

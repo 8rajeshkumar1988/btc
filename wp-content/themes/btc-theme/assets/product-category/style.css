@@ -14,7 +14,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   padding: var(--paddingY) var(--paddingX);
   gap: clamp(2.5rem, -2.7419rem + 6.4516vw, 5rem);
-  align-items: center;
+  align-items: start;
 }
 #product_page_details > img {
   position: absolute;

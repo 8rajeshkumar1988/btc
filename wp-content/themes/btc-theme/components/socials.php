@@ -6,10 +6,10 @@
             <p>Our Socials</p>
             <h2>Behind the Seams</h2>
         </div>
-        <button class="cta" ctaButton>
+        <a href="https://www.linkedin.com/company/benin-textile-corporation/" target="_blank" class="cta" ctaButton>
             follow our threads
             <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
-        </button>
+        </a>
     </div>
     <div class="swiper social_media">
         <div class="swiper-wrapper social_media_wrapper">
@@ -70,10 +70,10 @@
         </div>
     </div>
 
-    <button class="cta" ctaButton >
+    <a href="https://www.linkedin.com/company/benin-textile-corporation/" target="_blank" class="cta" ctaButton >
         follow our threads
         <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
-    </button>
+    </a>
 </section>
 
 

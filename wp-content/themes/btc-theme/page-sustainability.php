@@ -161,25 +161,28 @@ the_post();
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
-                <h3><span>(01)</span>Access To Local Cotton</h3>
+                <h3><span>(01)</span>Rooted in Africa</h3>
             </div>
             <div class="bottom">
                 <div class="left">
                     <div class="inner_top">
                         <div class="copy">
-                            <p>We begin by sourcing rain-fed, non-GMO CmiA-certified cotton (Cotton made in Africa) directly from trusted, sustainable farms. This guarantees high-quality, traceable, and eco-friendly cotton. </p>
+                            <p><strong>Local Cotton. Local Value.</strong></p>
                         </div>
                         <p class="count">(01)</p>
                     </div>
                     <div class="inner_bottom">
                         <div class="first">
-                            <p class="title">Process</p>
-                            <p class="subCopy">The cotton is carefully cultivated, picked, and prepared for further processing</p>
+                            <!-- <p class="title">Process</p> -->
+                            <p class="subCopy"><strong>Source with Intention:</strong> Our journey begins with responsibly grown cotton cultivated, harvested and ginned entirely within Africa, close to our manufacturing hubs.</p>
+                            <p class="subCopy"><strong>Empowering Communities:</strong> We partner directly with local farmers and cooperatives, supporting income stability and agricultural resilience in rural economies.</p>
+                            <p class="subCopy"><strong>Reducing Carbon Footprint:</strong> Proximity eliminates the need for global freight, dramatically reducing transport emissions at the raw material stage.</p>
+                            <p class="subCopy"><strong>Enabling True Traceability:</strong> Full visibility from seed to yarn ensures greater accountability, ethical compliance, and environmental transparency.</p>
                         </div>
-                        <div class="second">
+                        <!-- <div class="second">
                             <p class="title">Key Feature</p>
                             <p class="subCopy">Ethical sourcing practices ensure fair labor and environmental responsibility</p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="right">
@@ -191,25 +194,27 @@ the_post();
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
-                <h3><span>(02)</span>High-Performance Spinning</h3>
+                <h3><span>(02)</span>Smarter Spinning</h3>
             </div>
             <div class="bottom">
                 <div class="left">
                     <div class="inner_top">
                         <div class="copy">
-                            <p>Our raw cotton is spun into high-quality yarn at our in-house spinning facilities. This step converts raw cotton fibers into threads, making them ready for the next stages.</p>
+                            <p><strong>Less Waste. More Longevity.</strong></p>
                         </div>
                         <p class="count">(02)</p>
                     </div>
                     <div class="inner_bottom">
                         <div class="first">
-                            <p class="title">Technology Used</p>
-                            <p class="subCopy">Advanced spinning machines provide consistency in thread quality and strength</p>
+                            <p class="subCopy"><strong>Engineered for Efficiency:</strong> Our automated spinning lines extract maximum value from every fiber, using intelligent settings to reduce breakage and loss.</p>
+                            <p class="subCopy"><strong>Energy-Optimized Operations:</strong> We invest in low-energy spindle technology that reduces power consumption without compromising performance.</p>
+                            <p class="subCopy"><strong>Stronger, Smarter Yarns:</strong> The result is premium-strength yarns with fewer defects and longer lifecycle potential.</p>
+                            <p class="subCopy"><strong>Built to Last:</strong> Longer-lasting textiles mean reduced frequency of replacement lowering resource use across the value chain.</p>
                         </div>
-                        <div class="second">
+                        <!-- <div class="second">
                             <p class="title">Key Feature</p>
                             <p class="subCopy">The yarn is designed to maintain its integrity for durability and softness, which is crucial for the longevity of the final garment</p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="right">
@@ -221,25 +226,25 @@ the_post();
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
-                <h3><span>(03)</span>Knitting with Precision</h3>
+                <h3><span>(03)</span>Precision Knitting, Reduced Waste</h3>
             </div>
             <div class="bottom">
                 <div class="left">
                     <div class="inner_top">
                         <div class="copy">
-                            <p>The spun yarn is knitted into fabric at our facilities. We offer various fabric types (e.g., cotton knits, fabrics) depending on the garment style</p>
+                            <p><strong>Every Loop Matters.</strong></p>
                         </div>
                         <p class="count">(03)</p>
                     </div>
                     <div class="inner_bottom">
                         <div class="first">
-                            <p class="title">Technology Used</p>
-                            <p class="subCopy">High-tech looms and knitting machines enable us to create fabrics with intricate patterns and optimal texture</p>
+                            <!-- <p class="title">Technology Used</p> -->
+                            <p class="subCopy"><strong>Technology-Driven Accuracy:</strong> Our circular knitting machines are calibrated to maintain uniform tension and loop formation, minimizing production inconsistencies.</p>
+                            <p class="subCopy"><strong>Fewer Defects, Less Waste:</strong> Precision knitting leads to significantly fewer offcuts, reducing raw material wastage at the fabric stage.</p>
+                            <p class="subCopy"><strong>Controlled Production Runs:</strong> Advanced monitoring ensures repeatable quality across batches streamlining both planning and output.</p>
+                            <p class="subCopy"><strong>Performance with Purpose:</strong> Each metre of fabric is optimized to deliver aesthetic and structural consistency with minimal environmental toll.</p>
                         </div>
-                        <div class="second">
-                            <p class="title">Key Feature</p>
-                            <p class="subCopy">Our knitting processes result in breathable, high-quality textiles suitable for a variety of garment types</p>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="right">
@@ -251,25 +256,28 @@ the_post();
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
-                <h3><span>(03)</span>Knitting with Precision</h3>
+                <h3><span>(04)</span>Low-Impact Dyeing</h3>
             </div>
             <div class="bottom">
                 <div class="left">
                     <div class="inner_top">
                         <div class="copy">
-                            <p>The spun yarn is knitted into fabric at our facilities. We offer various fabric types (e.g., cotton knits, fabrics) depending on the garment style</p>
+                            <p><strong>Cleaner Color. Greener Process.</strong></p>
                         </div>
-                        <p class="count">(03)</p>
+                        <p class="count">(04)</p>
                     </div>
                     <div class="inner_bottom">
                         <div class="first">
-                            <p class="title">Technology Used</p>
-                            <p class="subCopy">High-tech looms and knitting machines enable us to create fabrics with intricate patterns and optimal texture</p>
+                            <!-- <p class="title">Technology Used</p> -->
+                            <p class="subCopy"><strong>Water-Efficient Systems:</strong> We use low-liquor ratio dyeing machines that reduce freshwater consumption by up to 50% compared to conventional methods.</p>
+                            <p class="subCopy"><strong>Enzyme-Based Finishing:</strong> Softening and performance enhancement are done using enzyme treatments instead of harsh chemical alternatives.</p>
+                            <p class="subCopy"><strong>Lower Emissions, Cleaner Output:</strong> Advanced effluent treatment and process optimization significantly cut down on emissions and chemical discharge.</p>
+                            <p class="subCopy"><strong>Color That Cares:</strong> The final result is vibrantly dyed fabric that meets global standards without burdening the environment.</p>
                         </div>
-                        <div class="second">
+                        <!-- <div class="second">
                             <p class="title">Key Feature</p>
                             <p class="subCopy">Our knitting processes result in breathable, high-quality textiles suitable for a variety of garment types</p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="right">
@@ -281,25 +289,28 @@ the_post();
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
-                <h3><span>(05)</span> Garment Manufacturing</h3>
+                <h3><span>(05)</span> Sustainable by Structure</h3>
             </div>
             <div class="bottom">
                 <div class="left">
                     <div class="inner_top">
                         <div class="copy">
-                            <p>After dyeing, fabric is precision-cut and expertly stitched, with all elements - seams, zippers and buttons are assembled to create the final garment.</p>
+                            <p><strong>A Fully Vertical, Fully Conscious Supply Chain.</strong></p>
                         </div>
                         <p class="count">(05)</p>
                     </div>
                     <div class="inner_bottom">
                         <div class="first">
-                            <p class="title">Technology Used</p>
-                            <p class="subCopy">Automated stitching machines, along with expert seamstresses, ensure precise construction and high-quality finishing</p>
+                            <!-- <p class="title">Technology Used</p> -->
+                            <p class="subCopy"><strong>End-to-End Visibility:</strong> With spinning, knitting, dyeing, and garmenting housed within the same ecosystem, every step is monitored and optimized for sustainability.</p>
+                            <p class="subCopy"><strong>Minimal Transport Emissions:</strong> Internal logistics replace long-distance transport, eliminating avoidable carbon output.</p>
+                            <p class="subCopy"><strong>Less Handling, Less Waste:</strong> Fewer interdependencies mean reduced material damage and lower packaging requirements between stages.</p>
+                            <p class="subCopy"><strong>Speed with Responsibility:</strong> Our vertical model accelerates delivery timelines while upholding environmental commitments across the board.</p>
                         </div>
-                        <div class="second">
+                        <!-- <div class="second">
                             <p class="title">Key Feature</p>
                             <p class="subCopy">Customizations like embroidery, screen printing, and other design details are added in this stage</p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="right">
