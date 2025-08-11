@@ -878,8 +878,8 @@
         height: 50dvh;
         width: 100%;
         video {
-            position: initial;
-            height: calc(100% + 200px);
+            // position: initial;
+            // height: calc(100% + 200px);
             transform: translateY(-200px);
         }
     }

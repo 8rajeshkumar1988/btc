@@ -761,8 +761,6 @@
     width: 100%;
   }
   #linkedIn_video video {
-    position: initial;
-    height: calc(100% + 200px);
     transform: translateY(-200px);
   }
 }
