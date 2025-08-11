@@ -148,6 +148,9 @@ body {
   font-weight: 400;
   color: #000;
 }
+.blog_content p strong {
+  font-weight: 600;
+}
 
 #recommendations_categories {
   background-color: #ffffff;
