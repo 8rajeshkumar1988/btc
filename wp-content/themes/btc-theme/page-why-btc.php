@@ -151,7 +151,7 @@ get_header();
         <div class='subContent'>
             <div>
                 <p class="title">GDP</p>
-                <p class="copy">$59.241 Bn</p>
+                <p class="copy">$59.241 BN</p>
             </div>
             <div>
                 <p class="title">GDP Growth</p>
@@ -281,7 +281,7 @@ get_header();
     <div class="content">
         <div>
             <div class="text">
-                <p>Benin is the <strong>largest producer of cotton in Africa</strong> with volumes exceeding 300,000 MT annually. It is ranked <strong>9th globally</strong>  and GDIZ aims to leverage this opportunity complying with the Beninese government’s ambitious plans to <strong>accelerate cotton transformation</strong> and <strong>skyrocket the textile business.</strong></p>
+                <p>Benin is the <strong>largest producer of cotton in Africa</strong> with volumes exceeding 300,000 MT annually. </p> <br> <p> It is ranked <strong>9th globally</strong>  and GDIZ aims to leverage this opportunity complying with the Beninese government’s ambitious plans to <strong>accelerate cotton transformation</strong> and <strong>skyrocket the textile business.</strong></p>
             </div>
             <div class="img">
                 <img src="<?php echo get_template_directory_uri() . "/assets/images/roleOfBtc1.jpg"  ?>" alt="">
@@ -292,7 +292,7 @@ get_header();
                 <img src="<?php echo get_template_directory_uri() . "/assets/images/Benin-training-local-talent-Benin-Textile.jpg"  ?>" alt="">
             </div>
             <div class="text">
-                <p>By producing at the source, BTC creates value within Benin<strong>—training local talent, advancing tech adoption, and reducing reliance on imported textiles.</strong> Our vertically integrated system supports the country’s development while delivering efficiency, traceability and <strong>quality for global partners.</strong></p>
+                <p>By producing at the source, BTC creates value within Benin<strong>—training local talent, advancing tech adoption, and reducing reliance on imported textiles.</strong> </p> <br> <p> Our vertically integrated system supports the country’s development while delivering efficiency, traceability and <strong>quality for global partners.</strong></p>
             </div>
         </div>
     </div>

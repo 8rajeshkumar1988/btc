@@ -290,7 +290,7 @@ body {
     display: flex;
   }
   #product_spotlight .swiper-slide {
-    aspect-ratio: 9/16;
+    aspect-ratio: 4/5;
   }
   #product_spotlight .swiper-slide .product_detail {
     width: 100%;

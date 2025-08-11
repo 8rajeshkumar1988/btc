@@ -88,8 +88,8 @@
             line-height: 1.5;
             color: #fff;
             display: -webkit-box;
-            line-clamp: 3;
-            -webkit-line-clamp: 3; /* Max 3 lines */
+            line-clamp: 2;
+            -webkit-line-clamp: 2; /* Max 3 lines */
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;

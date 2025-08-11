@@ -240,7 +240,7 @@ if ($leaderships->have_posts()) {
                 <img src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SODECO.png" ?>" alt="" />
             </div>
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/Africa_Cotton_logo.svg" ?>" alt="" />
+                <img src="<?php echo get_template_directory_uri() . "/assets/images/Logo_Cotton-made-in-africa.png" ?>" alt="" />
             </div>
         </div>
     </div>
@@ -407,7 +407,7 @@ if ($leaderships->have_posts()) {
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">IMS:ISO 9001/45001/ 14001</h3>
-                <p>For effective environmental management system.</p>
+                <p>For effective environmental management system</p>
             </div>
         </div>
         <div class="certificate_card">
@@ -434,7 +434,7 @@ if ($leaderships->have_posts()) {
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">Worldwide Responsible Accredited Production (WRAP)</h3>
-                <p>For Compliance with Laws and Workplace Regulations. Freedom of Association and Collective Bargaining</p>
+                <p>For Compliance with Laws and Workplace Regulations</p>
             </div>
         </div>
         <div class="certificate_card">

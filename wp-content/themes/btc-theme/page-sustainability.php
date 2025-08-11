@@ -281,7 +281,7 @@ the_post();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Knitting-05.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Dyeing-and-Processing-BTC-6.jpg'; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -314,7 +314,7 @@ the_post();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/SHOOTING-OUVRIERS-GTC.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Quality-control.jpg'; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -337,7 +337,7 @@ the_post();
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">IMS:ISO 9001/45001/ 14001</h3>
-        <p>For effective environmental management system.</p>
+        <p>For effective environmental management system</p>
       </div>
     </div>
     <div class="certificate_card">
@@ -364,7 +364,7 @@ the_post();
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">Worldwide Responsible Accredited Production (WRAP)</h3>
-        <p>For Compliance with Laws and Workplace Regulations. Freedom of Association and Collective Bargaining</p>
+        <p>For Compliance with Laws and Workplace Regulations</p>
       </div>
     </div>
     <div class="certificate_card">
