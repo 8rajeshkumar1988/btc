@@ -483,16 +483,16 @@
 .event-content ul {
   margin-left: 1rem;
 }
-.event-content p {
+.event-content p, .event-content li {
   font-size: var(--font-18);
   font-weight: 400;
 }
-.event-content p * {
+.event-content p *, .event-content li * {
   font-size: var(--font-18);
   font-weight: 400;
   color: #000;
 }
-.event-content p strong {
+.event-content p strong, .event-content li strong {
   font-weight: 600;
 }
 

@@ -154,16 +154,16 @@ body {
 .blog_content ul {
   margin-left: 1rem;
 }
-.blog_content p {
+.blog_content p, .blog_content li {
   font-size: var(--font-18);
   font-weight: 400;
 }
-.blog_content p * {
+.blog_content p *, .blog_content li * {
   font-size: var(--font-18);
   font-weight: 400;
   color: #000;
 }
-.blog_content p strong {
+.blog_content p strong, .blog_content li strong {
   font-weight: 600;
 }
 
