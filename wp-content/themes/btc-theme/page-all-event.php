@@ -83,9 +83,9 @@ if (!$liveEvents->have_posts()) {
                   <h1><?php the_title() ?></h1>
                   <div class="event_date">
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender-white.png" ?>" alt="" />
-                    <p><?php echo date('j F Y', strtotime(get_field('event_from_date'))); ?>
+                    <p><?php echo date('j M Y', strtotime(get_field('event_from_date'))); ?>
                       <?php if (get_field('event_to_date') != get_field('event_from_date')) { ?>
-                        - <?php echo date('j F Y', strtotime(get_field('event_to_date')));
+                        - <?php echo date('j M Y', strtotime(get_field('event_to_date')));
                         } ?></p>
                   </div>
                   <div class="event_location">
@@ -181,11 +181,12 @@ if ($upcomingEvents->have_posts()) {
               <div class="content-bottom">
                 <div class="event_date">
                   <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender-white.png" ?>" alt="" />
-                  <p><?php echo date('j F Y', strtotime(get_field('event_from_date'))); ?>
+                  <p><?php echo date('j M Y', strtotime(get_field('event_from_date'))); ?>
                     <?php if (get_field('event_to_date') != get_field('event_from_date')) { ?>
-                      - <?php echo date('j F Y', strtotime(get_field('event_to_date')));
+                      - <?php echo date('j M Y', strtotime(get_field('event_to_date')));
                       } ?></p>
                 </div>
+                <!-- j F Y -->
                 <div class="event_location">
                   <img src="<?php echo get_template_directory_uri() . "/assets/images/event/location-white.png" ?>" alt="" />
                   <p><?php echo get_field('event_location'); ?></p>
@@ -264,9 +265,9 @@ if ($pastEvents->have_posts()) {
                 <h2><?php the_title(); ?></h2>
                 <div class="event_date">
                   <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender.png" ?>" alt="" />
-                  <p><?php echo date('j F Y', strtotime(get_field('event_from_date'))); ?>
+                  <p><?php echo date('j M Y', strtotime(get_field('event_from_date'))); ?>
                     <?php if (get_field('event_to_date') != get_field('event_from_date')) { ?>
-                      - <?php echo date('j F Y', strtotime(get_field('event_to_date')));
+                      - <?php echo date('j M Y', strtotime(get_field('event_to_date')));
                       } ?></p>
                 </div>
                 <div class="event_location">

@@ -87,7 +87,9 @@ if ($tag && isset($tag->term_id)) {
                                         <p><?php
                                             $date_raw = get_field('published_at');
                                             if ($date_raw) {
-                                                echo date('j F Y', strtotime($date_raw));
+                                                echo date('j M Y', strtotime($date_raw));
+                                            }else{
+                                                 echo get_the_date();
                                             }
                                             ?></p>
                                     </div>
@@ -167,7 +169,7 @@ if ($news->have_posts()) {
                                 <p><?php
                                     $date_raw = get_field('published_at');
                                     if ($date_raw) {
-                                        echo date('j F Y', strtotime($date_raw));
+                                        echo date('j M Y', strtotime($date_raw));
                                     }
                                     ?></p>
                                 <h3>
@@ -264,7 +266,7 @@ if ($sarticles->have_posts()) {
                                     <?php
                                     $date_raw = get_field('published_at');
                                     if ($date_raw) {
-                                        echo date('j F Y', strtotime($date_raw));
+                                        echo date('j M Y', strtotime($date_raw));
                                     }
                                     ?>
                                 </p>

@@ -50,10 +50,13 @@ get_header();
     <img class="pattern" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="BTC pattern" />
 
     <h2>About Event</h2>
-    <div class="cta"><?php echo date('j F Y', strtotime(get_field('event_from_date'))); ?>
-                      <?php if (get_field('event_to_date') != get_field('event_from_date')) { ?>
-                        - <?php echo date('j F Y', strtotime(get_field('event_to_date')));
-                        } ?></div>
+    <div class="cta">
+    <?php echo date('j M Y', strtotime(get_field('event_from_date'))); ?>
+    <?php if (get_field('event_to_date') != get_field('event_from_date')) { ?>
+        - <?php echo date('j M Y', strtotime(get_field('event_to_date'))); ?>
+    <?php } ?>
+    </div>
+
     <?php the_content(); ?>
 </div>
 
@@ -311,9 +314,9 @@ if ($otherEvents->have_posts()) {
                                 <h2><?php the_title(); ?></h2>
                                 <div class="event_date">
                                     <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender.png" ?>" alt="" />
-                                    <p><?php echo date('j F Y', strtotime(get_field('event_from_date'))); ?>
+                                    <p><?php echo date('j M Y', strtotime(get_field('event_from_date'))); ?>
                                         <?php if (get_field('event_to_date') != get_field('event_from_date')) { ?>
-                                            - <?php echo date('j F Y', strtotime(get_field('event_to_date')));
+                                            - <?php echo date('j M Y', strtotime(get_field('event_to_date')));
                                             } ?></p>
                                 </div>
                                 <div class="event_location">

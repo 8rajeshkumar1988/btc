@@ -53,7 +53,15 @@ get_header();
 
 
   <div class="tags">
-    <p class="date"><?php echo get_the_date(); ?></p>
+    <p class="date">
+      <?php 
+      $date_raw = get_field('published_at');
+      if ($date_raw) {
+          echo date('j M Y', strtotime($date_raw));
+      }else{
+            echo get_the_date();
+      } ?>
+    </p>
     <?php
     $tags = get_the_tags();
     if ($tags) {
