@@ -47,6 +47,8 @@ get_header();
     </div>
 </div>
 <div class="event-content">
+    <img class="pattern" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="BTC pattern" />
+
     <h2>About Event</h2>
     <div class="cta"><?php echo date('j F Y', strtotime(get_field('event_from_date'))); ?>
                       <?php if (get_field('event_to_date') != get_field('event_from_date')) { ?>
