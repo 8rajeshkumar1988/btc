@@ -54,7 +54,7 @@
           <div class="product_detail">
             <h2 class="product_title"><?php the_title(); ?></h2>
             <p class="product_description">
-              <?php echo esc_html(mb_strimwidth(strip_tags($description), 0, 150, '...')); ?>
+              <?php echo esc_html(mb_strimwidth(strip_tags($description), 0, 160, '...')); ?>
             </p>
           </div>
         </div>

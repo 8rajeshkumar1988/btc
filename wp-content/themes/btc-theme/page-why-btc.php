@@ -46,9 +46,9 @@ get_header();
         <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
          <lottie-player
                  style="height: 100%;
-    width: 100%;
-    position: relative;
-    display: block;"
+                width: 100%;
+                position: relative;
+                display: block;"
                   id="lottieCanvas"
                  src="<?php echo get_template_directory_uri() . '/assets/images/world_map_lottie.json'; ?>"
   >
