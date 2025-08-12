@@ -314,8 +314,8 @@ header.sticky {
   
 }
 .progress-dots .dot {
-  width: 6px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 20px;
   background: gray;
   opacity: 0.4;
@@ -324,7 +324,7 @@ header.sticky {
 .progress-dots .dot.active {
   background: var(--green);
   opacity: 1;
-  height: 24px;
+  height: 30px;
 }
 
 
