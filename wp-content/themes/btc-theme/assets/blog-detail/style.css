@@ -275,7 +275,6 @@ body {
   }
   #newsletter .newsletter_form .subscribe_btn .subscribeCta {
     width: 120px;
-    display: grid;
     place-items: center;
   }
   #recommendations_categories .recommendations_buttons {
