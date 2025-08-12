@@ -116,14 +116,14 @@ body {
     top: -20%;
   }
   * {
-    font-weight: 400;
+    font-weight: 300;
   }
   h2 {
     font-size: var(--font-46);
-    font-weight: 400;
+    font-weight: 300;
   }
   strong {
-    font-weight: 600;
+    font-weight: 500;
   }
   h2,
   h3,
@@ -152,14 +152,14 @@ body {
   }
   p,li {
     font-size: var(--font-18);
-    font-weight: 400;
+    font-weight: 300;
     * {
       font-size: var(--font-18);
-      font-weight: 400;
+      font-weight: 300;
       color: #000;
     }
     strong {
-      font-weight: 600;
+      font-weight: 500;
     }
   }
 }

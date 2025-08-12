@@ -17,14 +17,14 @@
 .default_content {
   padding: clamp(2.5rem, 2rem + 2.5vw, 5rem) var(--paddingX);
   * {
-    font-weight: 400;
+    font-weight: 300;
   }
   h2 {
     font-size: var(--font-46);
-    font-weight: 400;
+    font-weight: 300;
   }
   strong {
-    font-weight: 600;
+    font-weight: 500;
   }
   h2,
   h3,
@@ -58,15 +58,15 @@
   p,
   li {
     font-size: var(--font-16);
-    font-weight: 400;
+    font-weight: 300;
     margin-bottom: 20px;
     * {
       font-size: var(--font-16);
-      font-weight: 400;
+      font-weight: 300;
       color: #000;
     }
     strong {
-      font-weight: 600;
+      font-weight: 500;
     }
   }
   li{

@@ -19,14 +19,14 @@
   padding: clamp(2.5rem, 2rem + 2.5vw, 5rem) var(--paddingX);
 }
 .default_content * {
-  font-weight: 400;
+  font-weight: 300;
 }
 .default_content h2 {
   font-size: var(--font-46);
-  font-weight: 400;
+  font-weight: 300;
 }
 .default_content strong {
-  font-weight: 600;
+  font-weight: 500;
 }
 .default_content h2,
 .default_content h3,
@@ -64,18 +64,18 @@
 .default_content p,
 .default_content li {
   font-size: var(--font-16);
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 20px;
 }
 .default_content p *,
 .default_content li * {
   font-size: var(--font-16);
-  font-weight: 400;
+  font-weight: 300;
   color: #000;
 }
 .default_content p strong,
 .default_content li strong {
-  font-weight: 600;
+  font-weight: 500;
 }
 .default_content li {
   margin-bottom: 10px;

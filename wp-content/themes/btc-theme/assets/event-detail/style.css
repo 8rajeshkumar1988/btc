@@ -445,14 +445,14 @@
   top: -20%;
 }
 .event-content * {
-  font-weight: 400;
+  font-weight: 300;
 }
 .event-content h2 {
   font-size: var(--font-46);
-  font-weight: 400;
+  font-weight: 300;
 }
 .event-content strong {
-  font-weight: 600;
+  font-weight: 500;
 }
 .event-content h2,
 .event-content h3,
@@ -485,15 +485,15 @@
 }
 .event-content p, .event-content li {
   font-size: var(--font-18);
-  font-weight: 400;
+  font-weight: 300;
 }
 .event-content p *, .event-content li * {
   font-size: var(--font-18);
-  font-weight: 400;
+  font-weight: 300;
   color: #000;
 }
 .event-content p strong, .event-content li strong {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 768px) {
