@@ -339,7 +339,7 @@ if ($leaderships->have_posts()) {
                             </p>
                         </div>
                         <div>
-                            <h2>7000-8000</h2>
+                            <h2>7000 - 8000</h2>
                             <p>Driving indirect jobs across supply and services</p>
                         </div>
                     </div>
