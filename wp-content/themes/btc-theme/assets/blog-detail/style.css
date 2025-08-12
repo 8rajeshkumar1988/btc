@@ -151,8 +151,8 @@ body {
 .blog_content h6 {
   font-size: clamp(1.125rem, 0.95rem + 0.875vw, 2rem);
 }
-.blog_content ul {
-  margin-left: 1rem;
+.blog_content ul, .blog_content ol {
+  margin-left: 1.5rem;
 }
 .blog_content p, .blog_content li {
   font-size: var(--font-18);

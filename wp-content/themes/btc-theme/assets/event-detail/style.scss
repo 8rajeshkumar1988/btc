@@ -500,8 +500,8 @@
   h6 {
     font-size: clamp(1.125rem, 0.95rem + 0.875vw, 2rem);
   }
-  ul {
-    margin-left: 1rem;
+  ul,ol {
+    margin-left: 1.5rem;
   }
   p,li {
     font-size: var(--font-18);

@@ -480,8 +480,8 @@
 .event-content h6 {
   font-size: clamp(1.125rem, 0.95rem + 0.875vw, 2rem);
 }
-.event-content ul {
-  margin-left: 1rem;
+.event-content ul, .event-content ol {
+  margin-left: 1.5rem;
 }
 .event-content p, .event-content li {
   font-size: var(--font-18);

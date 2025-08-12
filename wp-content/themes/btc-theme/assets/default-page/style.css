@@ -55,8 +55,8 @@
 .default_content h6 {
   font-size: clamp(1.125rem, 0.95rem + 0.875vw, 2rem);
 }
-.default_content ul {
-  margin-left: 1rem;
+.default_content ul, .default_content ol {
+  margin-left: 1.5rem;
 }
 .default_content hr {
   margin: 20px 0px;
