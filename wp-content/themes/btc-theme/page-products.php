@@ -187,6 +187,7 @@ the_post();
     src="<?php echo get_template_directory_uri() . '/assets/images/BTC_custom_products_video.mp4'; ?>"
     autoplay
     muted
+    playsinline
     loop></video>
   <div class="custom_product_detail">
     <div class="custom_product_detail_head" animateHeading>

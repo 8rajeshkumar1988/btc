@@ -391,6 +391,21 @@ $(document).ready(function () {
 
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Find all videos
+    const videos = document.querySelectorAll("video");
+
+    videos.forEach(video => {
+        // Ensure autoplay requirements are met
+        video.muted = true; // Safari requires muted for autoplay
+        video.playsInline = true; // Prevent fullscreen on iOS
+
+        // Try to play
+        video.play().catch(err => {
+            console.warn("Video couldn't autoplay:", err);
+        });
+    });
+});
 
 $(document).ready(function () {
   const flag = window.innerWidth > 1024
