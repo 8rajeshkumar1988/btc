@@ -751,6 +751,7 @@ header button.open .close {
   display: flex;
   flex-direction: column;
   border-left: 1px solid #e8e8e8;
+  overflow: auto;
 }
 #header .right a {
   padding: 15px 0;
