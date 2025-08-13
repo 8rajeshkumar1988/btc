@@ -7,6 +7,13 @@ body {
      object-position: center top;
 }
 
+video {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
 #product_page_details {
   background-color: #fffff4;
   position: relative;

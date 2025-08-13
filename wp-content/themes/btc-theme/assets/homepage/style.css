@@ -647,9 +647,13 @@
   #aboutBtc .content .sliderAbout .slides_about .tiles {
     gap: 30px;
     min-height: 350px;
+    padding: 15px;
   }
   #aboutBtc .content .sliderAbout .slides_about .tiles > div:first-child .number {
     font-size: calc(var(--font-46) * 2);
+  }
+  #aboutBtc .content .sliderAbout .slides_about .tiles > div:first-child .tag {
+    padding: 10px;
   }
   #aboutBtc .content .sliderAbout .navigation_about button {
     padding: 7px;

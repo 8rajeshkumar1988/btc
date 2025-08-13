@@ -4,6 +4,10 @@ body {
 .heroBanner img {
   object-position: center top;
 }
+video{
+  user-select: none;
+  pointer-events: none;
+}
 #product_page_details {
   background-color: #fffff4;
   position: relative;
