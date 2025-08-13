@@ -695,3 +695,78 @@ function my_breadcrumb_schema()
     );
     echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
 }
+
+
+function my_article_schema()
+{
+    if (is_single() && get_post_type() === 'post') {
+        global $post;
+
+        $article_schema = array(
+            "@context" => "https://schema.org",
+            "@type"    => "Article",
+            "mainEntityOfPage" => array(
+                "@type" => "WebPage",
+                "@id"   => get_permalink()
+            ),
+            "headline" => get_the_title(),
+            "description" => wp_strip_all_tags(get_the_excerpt(), true),
+            "image" => array(
+                wp_get_attachment_url(get_post_thumbnail_id($post->ID))
+            ),
+            "author" => array(
+                "@type" => "Person",
+                "name"  => get_the_author()
+            ),
+            "publisher" => array(
+                "@type" => "Organization",
+                "name"  => get_bloginfo('name'),
+                "logo"  => array(
+                    "@type" => "ImageObject",
+                    "url"   => "https://btcorpnet.com/wp-content/themes/btc-theme/assets/images/footerlogo.svg" // Change to your logo URL
+                )
+            ),
+            "datePublished" => get_the_date('c'),
+            "dateModified"  => get_the_modified_date('c')
+        );
+
+        echo '<script type="application/ld+json">' . json_encode($article_schema) . '</script>';
+    }
+
+    if (is_single() && get_post_type() === 'event') { // Change to your event condition if needed
+        global $post;
+
+        $event_schema = array(
+            "@context" => "https://schema.org",
+            "@type"    => "Event",
+            "name"     => get_the_title(),
+            "description" => wp_strip_all_tags(get_the_excerpt(), true),
+            "startDate" => get_post_meta($post->ID, 'event_from_date', true), // YYYY-MM-DDTHH:MM:SS+00:00
+            "endDate"   => get_post_meta($post->ID, 'event_to_date', true),   // YYYY-MM-DDTHH:MM:SS+00:00
+            "eventStatus" => "https://schema.org/EventScheduled",
+            "eventAttendanceMode" => "https://schema.org/OfflineEventAttendanceMode",
+            "location" => array(
+                "@type" => "Place",
+                "name"  => get_post_meta($post->ID, 'event_location', true),
+                // "address" => array(
+                //     "@type" => "PostalAddress",
+                //     "streetAddress"   => get_post_meta($post->ID, 'event_street', true),
+                //     "addressLocality" => get_post_meta($post->ID, 'event_city', true),
+                //     "postalCode"      => get_post_meta($post->ID, 'event_postcode', true),
+                //     "addressCountry"  => get_post_meta($post->ID, 'event_country', true)
+                // )
+            ),
+            "image" => array(
+                wp_get_attachment_url(get_post_thumbnail_id($post->ID))
+            ),
+            "organizer" => array(
+                "@type" => "Organization",
+                "name"  => get_bloginfo('name'),
+                "url"   => home_url('/')
+            )
+        );
+
+        echo '<script type="application/ld+json">' . json_encode($event_schema) . '</script>';
+    }
+}
+add_action('wp_head', 'my_article_schema');
