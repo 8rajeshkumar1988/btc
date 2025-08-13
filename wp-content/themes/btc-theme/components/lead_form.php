@@ -12,11 +12,13 @@
     <div>
         <label for="enquiry_type">Enquiry Type*</label>
         <br />
-        <select id="enquiry_type" name="enquiry_type">
-            <option value="General">General</option>
-            <option value="Business">Business</option>
-            <option value="Careers">Careers</option>
-        </select>
+        <span class="enquiry_type_box">
+            <select id="enquiry_type" name="enquiry_type">
+                <option value="General">General</option>
+                <option value="Business">Business</option>
+                <option value="Careers">Careers</option>
+            </select>
+        </span>
     </div>
     
     <div style="position: relative;z-index: 2;" >

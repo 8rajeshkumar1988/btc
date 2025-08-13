@@ -971,12 +971,31 @@ header button.open .close {
 #lead_popup_form input,
 #lead_popup_form select,
 #lead_popup_form textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   width: 100%;
   border: 1px solid #d9d9d9;
   border-radius: 10px;
   padding: 8px;
   margin-top: 10px;
   font-size: var(--font-14);
+}
+#lead_popup_form .enquiry_type_box {
+  position: relative;
+}
+#lead_popup_form .enquiry_type_box::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 6px;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 6 5-6z"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none; /* Let clicks go through */
 }
 #lead_popup_form #phone,
 #lead_popup_form #whatsapp_number {

@@ -1013,6 +1013,9 @@ header {
   input,
   select,
   textarea {
+    -webkit-appearance: none; 
+    -moz-appearance: none;   
+    appearance: none;         
     width: 100%;
     border: 1px solid #d9d9d9;
     border-radius: 10px;
@@ -1020,6 +1023,22 @@ header {
     margin-top: 10px;
     font-size: var(--font-14);
   }
+  .enquiry_type_box{
+    position: relative;
+  }
+  .enquiry_type_box::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 6px;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 6 5-6z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none; /* Let clicks go through */
+}
   #phone,
   #whatsapp_number {
     padding-left: 55px;
