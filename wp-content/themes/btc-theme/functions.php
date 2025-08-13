@@ -295,7 +295,7 @@ function btc_ajax_save_lead()
     }
     $dt_ist = new DateTime('now', new DateTimeZone('Asia/Kolkata'));
 
-    
+
     $created_date = $dt_ist->format('Y-m-d'); // Used for comparing same-day leads
 
     // ✅ Check if a lead exists with same email/phone, same source_url, and same created date
@@ -534,3 +534,164 @@ add_action('wp_ajax_nopriv_save_subscribe', 'btc_ajax_save_subscribe');
 //     wp_dequeue_style('wp-block-library-theme'); // Theme styles for editor
 //     wp_dequeue_style('global-styles'); // theme.json-generated styles
 // }, 20);
+
+
+
+
+function my_breadcrumb_schema()
+{
+    if (is_front_page() || is_page('home-testing')) {
+        return; // Don't show breadcrumb on the homepage
+    }
+
+    global $post;
+    $breadcrumbs = array();
+    $position = 1;
+
+    // Home link
+    $breadcrumbs[] = array(
+        '@type' => 'ListItem',
+        'position' => $position++,
+        'name' => 'Home',
+        'item' => home_url('/')
+    );
+
+
+
+    if (is_page('products')) {
+        $breadcrumbs[] = array(
+            '@type' => 'ListItem',
+            'position' => $position++,
+            'name' => get_the_title(),
+            'item' => get_permalink()
+        );
+    } else if (is_singular('category')) {
+
+        $breadcrumbs[] = array(
+            '@type' => 'ListItem',
+            'position' => $position++,
+            'name' => "Our Products",
+            'item' => home_url("/products")
+        );
+
+        $breadcrumbs[] = array(
+            '@type' => 'ListItem',
+            'position' => $position++,
+            'name' => get_the_title(),
+            'item' => get_permalink()
+        );
+    } else if (is_single() && get_post_type() === 'post') {
+
+        $breadcrumbs[] = array(
+            '@type' => 'ListItem',
+            'position' => $position++,
+            'name' => "Blogs",
+            'item' => home_url("/blogs")
+        );
+
+        $breadcrumbs[] = array(
+            '@type' => 'ListItem',
+            'position' => $position++,
+            'name' => get_the_title(),
+            'item' => get_permalink()
+        );
+    } else if (is_single() && get_post_type() === 'event') {
+        $breadcrumbs[] = array(
+            '@type' => 'ListItem',
+            'position' => $position++,
+            'name' => "Events & Engagements",
+            'item' => home_url("/all-event")
+        );
+
+        $breadcrumbs[] = array(
+            '@type' => 'ListItem',
+            'position' => $position++,
+            'name' => get_the_title(),
+            'item' => get_permalink()
+        );
+    } else  if (is_home() || is_tag()) {
+
+        $breadcrumbs[] = array(
+            '@type' => 'ListItem',
+            'position' => $position++,
+            'name' => "Blogs",
+            'item' => home_url("/blogs")
+        );
+    } else {
+
+        $breadcrumbs[] = array(
+            '@type' => 'ListItem',
+            'position' => $position++,
+            'name' => get_the_title(),
+            'item' => get_permalink()
+        );
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Posts
+    // if (is_single()) {
+    //     $categories = get_the_category($post->ID);
+    //     if (!empty($categories)) {
+    //         $cat = $categories[0];
+    //         $breadcrumbs[] = array(
+    //             '@type' => 'ListItem',
+    //             'position' => $position++,
+    //             'name' => $cat->name,
+    //             'item' => get_category_link($cat->term_id)
+    //         );
+    //     }
+    //     $breadcrumbs[] = array(
+    //         '@type' => 'ListItem',
+    //         'position' => $position++,
+    //         'name' => get_the_title(),
+    //         'item' => get_permalink()
+    //     );
+
+    //     // Pages
+    // } elseif (is_page()) {
+    //     $ancestors = array_reverse(get_post_ancestors($post->ID));
+    //     foreach ($ancestors as $ancestor_id) {
+    //         $breadcrumbs[] = array(
+    //             '@type' => 'ListItem',
+    //             'position' => $position++,
+    //             'name' => get_the_title($ancestor_id),
+    //             'item' => get_permalink($ancestor_id)
+    //         );
+    //     }
+    //     $breadcrumbs[] = array(
+    //         '@type' => 'ListItem',
+    //         'position' => $position++,
+    //         'name' => get_the_title(),
+    //         'item' => get_permalink()
+    //     );
+
+    //     // Categories
+    // } elseif (is_category()) {
+    //     $breadcrumbs[] = array(
+    //         '@type' => 'ListItem',
+    //         'position' => $position++,
+    //         'name' => single_cat_title('', false),
+    //         'item' => get_category_link(get_queried_object_id())
+    //     );
+    // }
+
+    // Output JSON-LD schema
+    $schema = array(
+        '@context' => 'https://schema.org',
+        '@type'    => 'BreadcrumbList',
+        'itemListElement' => $breadcrumbs
+    );
+    echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
+}
