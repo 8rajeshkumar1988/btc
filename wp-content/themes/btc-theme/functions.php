@@ -697,7 +697,7 @@ function my_breadcrumb_schema()
 }
 
 
-function my_article_schema()
+function page_schema()
 {
     if (is_single() && get_post_type() === 'post') {
         global $post;
@@ -768,5 +768,61 @@ function my_article_schema()
 
         echo '<script type="application/ld+json">' . json_encode($event_schema) . '</script>';
     }
+
+    if (is_front_page() || is_page('home-testing')) {
+        $schema = array(
+            "@context" => "https://schema.org",
+            "@type"    => "Organization",
+            "name"     => get_bloginfo('name'),
+            "url"      => home_url('/'),
+            "logo"     => "https://btcorpnet.com/wp-content/themes/btc-theme/assets/images/footerlogo.svg",
+            "contactPoint" => array(
+                array(
+                    "@type" => "ContactPoint",
+                    "telephone" => "+229 5145127009", // change phone
+                    "contactType" => "Customer Service",
+                    "areaServed" => "BJ",
+                    "availableLanguage" => "en"
+                )
+            ),
+            "sameAs" => array(
+                "https://www.linkedin.com/company/benin-textile-corporation/",
+            )
+        );
+        echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
+
+        $site_url   = home_url( '/' );
+        $site_name  = get_bloginfo( 'name' );
+        $site_desc  = get_bloginfo( 'description' );
+        $modified   = get_the_modified_date( 'c' ); // ISO 8601 format
+        $published  = get_the_date( 'c', get_option( 'page_on_front' ) ); // homepage publish date
+        
+        $schema = [
+            "@context" => "https://schema.org",
+            "@type" => "WebPage",
+            "@id" => $site_url . "#webpage",
+            "url" => $site_url,
+            "name" => $site_name,
+            "isPartOf" => [
+                "@type" => "WebSite",
+                "@id" => $site_url
+            ],
+            "about" => [
+                "@type" => "Organization",
+                "@id" => "https://btcorpnet.com/about-us/",
+            ],
+            "description" => $site_desc,
+            "inLanguage" => get_bloginfo( 'language' ),
+            "datePublished" => $published,
+            "dateModified" => $modified,
+            "potentialAction" => [
+                "@type" => "ReadAction",
+                "target" => [ $site_url ]
+            ]
+        ];
+        echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
+       
+
+    }
 }
-add_action('wp_head', 'my_article_schema');
+add_action('wp_head', 'page_schema');
