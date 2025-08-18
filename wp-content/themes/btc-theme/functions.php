@@ -791,12 +791,12 @@ function page_schema()
         );
         echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
 
-        $site_url   = home_url( '/' );
-        $site_name  = get_bloginfo( 'name' );
-        $site_desc  = get_bloginfo( 'description' );
-        $modified   = get_the_modified_date( 'c' ); // ISO 8601 format
-        $published  = get_the_date( 'c', get_option( 'page_on_front' ) ); // homepage publish date
-        
+        $site_url   = home_url('/');
+        $site_name  = get_bloginfo('name');
+        $site_desc  = "BTC, located in Benin, is West Africa’s first fully vertically integrated textile factory, transforming rain-fed, non-GMO CmiA-certified cotton into premium apparels.";
+        $modified   = get_the_modified_date('c'); // ISO 8601 format
+        $published  = get_the_date('c', get_option('page_on_front')); // homepage publish date
+
         $schema = [
             "@context" => "https://schema.org",
             "@type" => "WebPage",
@@ -812,17 +812,54 @@ function page_schema()
                 "@id" => "https://btcorpnet.com/about-us/",
             ],
             "description" => $site_desc,
-            "inLanguage" => get_bloginfo( 'language' ),
+            "inLanguage" => get_bloginfo('language'),
             "datePublished" => $published,
             "dateModified" => $modified,
             "potentialAction" => [
                 "@type" => "ReadAction",
-                "target" => [ $site_url ]
+                "target" => [$site_url]
             ]
         ];
         echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
-       
+    }
 
+    if (is_page('products')) {
+        // Example: fetch 10 latest posts (or products if WooCommerce)
+        $args = [
+            'posts_per_page' => -1,
+            'post_type'      => 'category',
+            'post_status'    => 'publish',
+            'meta_key'       => '_sort_order',
+            'orderby'        => 'meta_value_num',
+            'order'          => 'ASC',
+        ];
+        $query = new WP_Query($args);
+
+        if ($query->have_posts()) {
+            $items = [];
+            $position = 1;
+
+            while ($query->have_posts()) {
+                $query->the_post();
+                $items[] = [
+                    "@type"    => "ListItem",
+                    "position" => $position++,
+                    "url"      => get_permalink(),
+                    "name"     => get_the_title()
+                ];
+            }
+            wp_reset_postdata();
+
+            if (! empty($items)) {
+                $schema = [
+                    "@context" => "https://schema.org",
+                    "@type"    => "ItemList",
+                    "itemListElement" => $items
+                ];
+
+                 echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
+            }
+        }
     }
 }
 add_action('wp_head', 'page_schema');
