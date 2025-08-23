@@ -47,6 +47,7 @@
   ?>
 
   <?php wp_head(); ?>
+  <?php my_breadcrumb_schema(); ?>
 </head>
 
 
