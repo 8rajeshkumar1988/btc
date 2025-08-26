@@ -67,9 +67,9 @@ player.addEventListener("ready", () => {
 			  player: "#firstLottie",
 			  actions: [
         {
-            visibility:[0.2, 1.0],
+            visibility:[0.2, 2.0],
             type: "seek",
-            frames: [0, 250],
+            frames: [0, 1000],
         },
         ]
 			});

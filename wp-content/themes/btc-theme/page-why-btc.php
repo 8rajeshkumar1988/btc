@@ -3,22 +3,22 @@ get_header();
 ?>
 <section class="heroBanner">
 
-<?php
+    <?php
     $banner_video = get_field('banner_video');
-      $thumbnail_id = get_post_thumbnail_id();
-        $image_url = wp_get_attachment_url($thumbnail_id);
-        $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
-        $title_text = get_the_title($thumbnail_id);
-        if (empty($alt_text)) {
-            $alt_text = get_the_title();
-        }
-        if (empty($title_text)) {
-            $title_text = get_the_title();
-        }
+    $thumbnail_id = get_post_thumbnail_id();
+    $image_url = wp_get_attachment_url($thumbnail_id);
+    $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+    $title_text = get_the_title($thumbnail_id);
+    if (empty($alt_text)) {
+        $alt_text = get_the_title();
+    }
+    if (empty($title_text)) {
+        $title_text = get_the_title();
+    }
 
 
     if ($banner_video) {
-        echo '<video playsinline autoplay muted loop poster="'.$image_url.'" src="' . esc_url($banner_video['url']) . '"></video>';
+        echo '<video playsinline autoplay muted loop poster="' . $image_url . '" src="' . esc_url($banner_video['url']) . '"></video>';
     } else  if (has_post_thumbnail()) {
         $image = '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
         echo $image;
@@ -40,19 +40,18 @@ get_header();
 
 <section id="globalSearch">
     <!-- class="lottie" id="myLottie" -->
-   <div class="worldMap lottie" id="lottie-animation">
+    <div class="worldMap lottie" id="lottie-animation">
 
-         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
-         <lottie-player
-                 style="height: 100%;
+        <lottie-player
+            style="height: 100%;
                 width: 100%;
                 position: relative;
                 display: block;"
-                  id="lottieCanvas"
-                 src="<?php echo get_template_directory_uri() . '/assets/images/world_map_lottie.json'; ?>"
-  >
-  </lottie-player>
+            id="lottieCanvas"
+            src="<?php echo get_template_directory_uri() . '/assets/images/world_map_lottie.json'; ?>">
+        </lottie-player>
     </div>
     <div class="content_wrapper">
         <div class="content" animateHeading>
@@ -180,19 +179,18 @@ get_header();
 
 <style>
     .swiper-slide {
-  transition: filter 0.3s ease;
-}
+        transition: filter 0.3s ease;
+    }
 
-/* Blur only during transition */
-.blurring.swiper-slide-prev,
-.blurring.swiper-slide-next {
-  filter: blur(6px);
-}
+    /* Blur only during transition */
+    .blurring.swiper-slide-prev,
+    .blurring.swiper-slide-next {
+        filter: blur(6px);
+    }
 
-.blurring.swiper-slide-active {
-  filter: blur(0);
-}
-
+    .blurring.swiper-slide-active {
+        filter: blur(0);
+    }
 </style>
 
 <section id="homeOfBtc">
@@ -205,70 +203,70 @@ get_header();
         <div class="first" animateHeading>
             <p>BTC is proudly based in <strong>GDIZ - Glo-Djigbé Industrial Zone</strong>, a public-private development project backed by the Government of Benin and ARISE IIP, built to offer world-class industrial infrastructure and business facilitation.</p>
         </div>
-       <div>
-         <div class="second home-btc-swiper">
-            <p class="title">Why GDIZ Matters to Our Clients</p>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div>
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/readyToUse.svg"  ?>" alt="">
+        <div>
+            <div class="second home-btc-swiper">
+                <p class="title">Why GDIZ Matters to Our Clients</p>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
                         <div>
-                            <p class="titles">Ready-To-Use Infra & Industrial Setup</p>
-                            <p class="copy">Purpose-built for textile, apparel, and agro-industrial businesses</p>
+                            <img src="<?php echo get_template_directory_uri() . "/assets/images/readyToUse.svg"  ?>" alt="">
+                            <div>
+                                <p class="titles">Ready-To-Use Infra & Industrial Setup</p>
+                                <p class="copy">Purpose-built for textile, apparel, and agro-industrial businesses</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="<?php echo get_template_directory_uri() . "/assets/images/accessoryEcosystem.svg"  ?>" alt="">
+                            <div>
+                                <p class="titles">Accessory Ecosystem</p>
+                                <p class="copy">On-site availability of trims, accessories, and fabric finishing partners</p>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/accessoryEcosystem.svg"  ?>" alt="">
+                    <div class="swiper-slide">
                         <div>
-                            <p class="titles">Accessory Ecosystem</p>
-                            <p class="copy">On-site availability of trims, accessories, and fabric finishing partners</p>
+                            <img src="<?php echo get_template_directory_uri() . "/assets/images/utility-infrastructure.png"  ?>" alt="">
+                            <div>
+                                <p class="titles">Utility Infrastructure</p>
+                                <p class="copy">24/7 power supply, water, steam, and waste management systems</p>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="<?php echo get_template_directory_uri() . "/assets/images/clearance.png"  ?>" alt="">
+                            <div>
+                                <p class="titles">Dry Port & Pre-Customs Clearance</p>
+                                <p class="copy">All goods can be customs-cleared within the zone, drastically reducing port congestion delays</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div>
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/utility-infrastructure.png"  ?>" alt="">
+                    <div class="swiper-slide">
                         <div>
-                            <p class="titles">Utility Infrastructure</p>
-                            <p class="copy">24/7 power supply, water, steam, and waste management systems</p>
+                            <img src="<?php echo get_template_directory_uri() . "/assets/images/logistics-hub.png"  ?>" alt="">
+                            <div>
+                                <p class="titles">Logistics Hub</p>
+                                <p class="copy">Integrated logistics services make export and import seamless and time-efficient</p>
+                            </div>
                         </div>
-                    </div>
-                    <div>
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/clearance.png"  ?>" alt="">
                         <div>
-                            <p class="titles">Dry Port & Pre-Customs Clearance</p>
-                            <p class="copy">All goods can be customs-cleared within the zone, drastically reducing port congestion delays</p>
+                            <img src="<?php echo get_template_directory_uri() . "/assets/images/eco-design-principles.png"  ?>" alt="">
+                            <div>
+                                <p class="titles">Eco-Industrial Design</p>
+                                <p class="copy">Focused on sustainability, traceability, and digital manufacturing systems</p>
+                            </div>
                         </div>
+
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div>
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/logistics-hub.png"  ?>" alt="">
-                        <div>
-                            <p class="titles">Logistics Hub</p>
-                            <p class="copy">Integrated logistics services make export and import seamless and time-efficient</p>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/eco-design-principles.png"  ?>" alt="">
-                        <div>
-                            <p class="titles">Eco-Industrial Design</p>
-                            <p class="copy">Focused on sustainability, traceability, and digital manufacturing systems</p>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
+            <div class="why_btc_buttons">
+                <button class="why_btc-prev">
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+                </button>
+                <button class="why_btc-next">
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+                </button>
+            </div>
         </div>
-        <div class="why_btc_buttons">
-            <button class="why_btc-prev">
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
-            </button>
-            <button class="why_btc-next">
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
-            </button>
-        </div>
-       </div>
     </div>
 </section>
 
@@ -281,7 +279,8 @@ get_header();
     <div class="content">
         <div>
             <div class="text">
-                <p>Benin is the <strong>largest producer of cotton in Africa</strong> with volumes exceeding 300,000 MT annually. </p> <br> <p> It is ranked <strong>9th globally</strong>  and GDIZ aims to leverage this opportunity complying with the Beninese government’s ambitious plans to <strong>accelerate cotton transformation</strong> and <strong>skyrocket the textile business.</strong></p>
+                <p>Benin is the <strong>largest producer of cotton in Africa</strong> with volumes exceeding 300,000 MT annually. </p> <br>
+                <p> It is ranked <strong>9th globally</strong> and GDIZ aims to leverage this opportunity complying with the Beninese government’s ambitious plans to <strong>accelerate cotton transformation</strong> and <strong>skyrocket the textile business.</strong></p>
             </div>
             <div class="img">
                 <img src="<?php echo get_template_directory_uri() . "/assets/images/roleOfBtc1.jpg"  ?>" alt="">
@@ -292,29 +291,28 @@ get_header();
                 <img src="<?php echo get_template_directory_uri() . "/assets/images/Benin-training-local-talent-Benin-Textile.jpg"  ?>" alt="">
             </div>
             <div class="text">
-                <p>By producing at the source, BTC creates value within Benin<strong>—training local talent, advancing tech adoption, and reducing reliance on imported textiles.</strong> </p> <br> <p> Our vertically integrated system supports the country’s development while delivering efficiency, traceability and <strong>quality for global partners.</strong></p>
+                <p>By producing at the source, BTC creates value within Benin<strong>—training local talent, advancing tech adoption, and reducing reliance on imported textiles.</strong> </p> <br>
+                <p> Our vertically integrated system supports the country’s development while delivering efficiency, traceability and <strong>quality for global partners.</strong></p>
             </div>
         </div>
     </div>
 </section>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-     let player = document.getElementById("lottieCanvas");
+    document.addEventListener("DOMContentLoaded", function() {
+        let player = document.getElementById("lottieCanvas");
 
-player.addEventListener("ready", () => {
-  LottieInteractivity.create({
-			  mode:"scroll",
-			  player: "#lottieCanvas",
-			  actions: [
-        {
-            visibility:[0.2, 1.0],
-            type: "seek",
-            frames: [0, 250],
-        },
-        ]
-			});
-});
-  });
+        player.addEventListener("ready", () => {
+            LottieInteractivity.create({
+                mode: "scroll",
+                player: "#lottieCanvas",
+                actions: [{
+                    visibility: [0.2, 2.0],
+                    type: "seek",
+                    frames: [0, 1000],
+                }, ]
+            });
+        });
+    });
 </script>
 
 <?php

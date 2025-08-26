@@ -132,7 +132,7 @@ body {
 #explore_products .explore_products_container .products_item {
   position: relative;
   overflow: hidden;
-  display: block;
+  display: grid;
 }
 #explore_products .explore_products_container .products_item .product_image {
   position: relative;
@@ -151,6 +151,9 @@ body {
 #explore_products .explore_products_container .products_item .product_detail {
   margin-top: 20px;
   padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 #explore_products .explore_products_container .products_item .product_detail .product_title {
   color: var(--blue);
@@ -163,6 +166,11 @@ body {
   font-size: var(--font-14);
   margin: 10px 0px;
   font-weight: 300;
+}
+#explore_products .explore_products_container .products_item .product_detail button {
+  transform: scale(0.8);
+  transform-origin: left;
+  margin-top: auto;
 }
 
 #explore_other_categories {

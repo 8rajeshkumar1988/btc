@@ -56,6 +56,7 @@
             <p class="product_description">
               <?php echo esc_html(mb_strimwidth(strip_tags($description), 0, 160, '...')); ?>
             </p>
+            <button class="leadpopup cta">Start Your Line <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
           </div>
         </div>
     <?php

@@ -31,9 +31,18 @@ $(document).ready(function () {
     },
   });
 
+
+  gsap.to('.homePage_banner .heading *' , {
+    y: 0,
+    opacity: 1,
+    ease: "power4.out",
+    duration: 1.2,
+    stagger: 0.1,
+  })
+
+
   // my products
-  const slidesPerViewProduct =
-    window.innerWidth > 820 ? 2.2 : window.innerWidth > 600 ? 1.8 : 1;
+  const slidesPerViewProduct = window.innerWidth > 1920 ? 2.5 : window.innerWidth > 820 ? 2.2 : window.innerWidth > 600 ? 1.8 : 1;
   const ourProducts = new Swiper(".ourProducts", {
     spaceBetween: 30,
     centeredSlides: false,
@@ -458,18 +467,20 @@ $(document).ready(function () {
       },
     },
   });
-
-  gsap.from("[ourCapabilitiesRightContent]", {
-    y: 100,
-    opacity: 0,
-    ease: "power4.out",
-    duration: 1.2,
-    scrollTrigger: {
-      trigger: "[ourCapabilitiesRightContent]",
-      start: "top 80%",
-      toggleActions: "play none none reverse",
-    },
-  });
+  if (window.innerWidth > 1024) {
+    gsap.from("[ourCapabilitiesRightContent] , .rightContent button", {
+      y: 100,
+      opacity: 0,
+      ease: "power4.out",
+      duration: 1.2,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: "[ourCapabilitiesRightContent]",
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  }
 
   gsap.from(
     "#sustainabiltyStandard .faq, #sustainabiltyStandard .faq p, #sustainabiltyStandard .faq li",

@@ -1,4 +1,4 @@
-<section class="heroBanner">
+<section class="heroBanner homePage_banner">
     <?php
     $banner_video = get_field('banner_video');
       $thumbnail_id = get_post_thumbnail_id();
@@ -26,9 +26,12 @@
 
     <div class="content">
         <p class="breadcrub">&nbsp;</p>
-        <div class="heading" animateHeadingBanner>
-            <p><?php the_title(); ?></p>
-            <?php the_content(); ?>
+        <div class="heading" >
+            <div>
+                <p><?php the_title(); ?></p>
+                <?php the_content(); ?>
+            </div>
+            <button class="cta leadpopup">Start your line<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
         </div>
         <div class="layer"></div>
         <div class="layer2"></div>
@@ -188,7 +191,7 @@
 </section>
 
 <section id="ourCapabilities">
-    <img src="<?php echo get_template_directory_uri() . '/assets/images/capabilities_back.png'; ?>" alt="" class="back" btcPattern>
+    <img src="<?php echo get_template_directory_uri() . '/assets/images/capabilities_back.png'; ?>" alt="" class="back" btcPattern />
     
     <div class="leftContent heading" animateHeading>
         <p>Our Capabilities</p>
@@ -197,7 +200,7 @@
     <div class="rightContent">
         <p ourCapabilitiesRightContent>BTC combines <span>state-of-the-art technology</span> with sustainable practices, ensuring every product
             is crafted with care, precision and environmental responsibility.</p>
-        <button id="exploreWhatWeDo" ctaButton  class="cta">Explore What We Do<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+        <button id="exploreWhatWeDo"   class="cta">Explore What We Do<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
     </div>
     <div class="cap_container swiper ourCapabilities">
         <div class="swiper-wrapper">

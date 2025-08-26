@@ -1,3 +1,18 @@
+.homePage_banner .content .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+.homePage_banner .content .heading * {
+  transform: translateY(100px);
+  opacity: 0;
+}
+.homePage_banner .content .heading button {
+  margin-top: var(--font-24);
+}
+
 #aboutBtc {
   background-color: #fffff4;
   width: 100%;
@@ -337,6 +352,7 @@
 }
 #ourCapabilities .swiper-pagination {
   text-align: center;
+  bottom: 20px;
 }
 #ourCapabilities .swiper-pagination .swiper-pagination-bullet {
   width: 9px;
@@ -699,7 +715,7 @@
     height: auto;
     right: 0;
     width: 100%;
-    bottom: var(--paddingY);
+    bottom: calc(var(--paddingY) + 50px);
     padding: 0 var(--paddingX);
     align-items: center;
   }

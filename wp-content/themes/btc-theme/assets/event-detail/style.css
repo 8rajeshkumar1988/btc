@@ -446,6 +446,7 @@
 }
 .event-content * {
   font-weight: 300;
+  color: var(--tertiaryBlack);
 }
 .event-content h2 {
   font-size: var(--font-46);
@@ -460,6 +461,8 @@
 .event-content h5,
 .event-content h6 {
   line-height: 1.3;
+  color: var(--primaryBlack);
+  font-weight: 400;
 }
 .event-content h2 *,
 .event-content h3 *,
@@ -490,7 +493,7 @@
 .event-content p *, .event-content li * {
   font-size: var(--font-18);
   font-weight: 300;
-  color: #000;
+  color: var(--secondaryBlack);
 }
 .event-content p strong, .event-content li strong {
   font-weight: 500;
