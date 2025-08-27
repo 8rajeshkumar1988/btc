@@ -40,7 +40,7 @@ the_post();
   </div>
 </section>
 <section id="sustainability_details">
-  <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" />
+  <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt=""  btcPattern />
   <h2>
     <span>BTC</span> is committed <br> to being a <br> <span>sustainable brand</span>
   </h2>

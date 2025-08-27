@@ -38,7 +38,7 @@ get_header();
 </section>
 <section id="textile_details">
     
-    <img src="<?php echo get_template_directory_uri() . '/assets/images/textilePattern.png'; ?>" alt="" />
+    <img src="<?php echo get_template_directory_uri() . '/assets/images/textilePattern.png'; ?>" alt="" btcPattern />
     <div animateHeading>
         <p>Textile Park</p>
         <h2>

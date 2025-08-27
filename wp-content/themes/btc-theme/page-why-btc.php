@@ -67,7 +67,7 @@ get_header();
 <section id="sustainableManufacturer">
     <div>
         <div class="img">
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/SustainableManufacturing.jpg"  ?>" alt="SustainableManufacturing" />
+            <img src="<?php echo get_template_directory_uri() . "/assets/images/SustainableManufacturing.jpg"  ?>" alt="SustainableManufacturing"  />
             <p>Sustainable <br>Manufacturing</p>
         </div>
         <div class="text">
@@ -136,7 +136,7 @@ get_header();
             </ul>
         </div>
     </div>
-    <img class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/whyPattern.png"  ?>" alt="SustainableManufacturing" />
+    <img class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/whyPattern.png"  ?>" alt="SustainableManufacturing" btcPattern />
 </section>
 
 <section id="glance">
@@ -271,7 +271,7 @@ get_header();
 </section>
 
 <section id="roleOfbtc">
-    <img class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="">
+    <img class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" btcPattern>
     <div class="heading" animateHeading>
         <p>Driving Local Impact, Creating Global Change</p>
         <h3>BTC's Role in Benin's Next Chapter</h3>

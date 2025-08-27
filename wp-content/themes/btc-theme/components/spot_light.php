@@ -25,7 +25,7 @@ if ($products->have_posts()) {
 ?>
 
     <section id="product_spotlight">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" />
+        <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
         <div class="swiper spotlight_slider">
             <div class="swiper-wrapper">
                 <?php

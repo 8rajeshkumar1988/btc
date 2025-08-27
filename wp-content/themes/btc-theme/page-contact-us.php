@@ -68,7 +68,7 @@ $faqs = get_post_meta(get_the_ID(), 'category_faqs', true);
 
 if (!empty($faqs)) { ?>
     <section id="faqs">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" />
+        <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
         <div class="heading" animateHeading>
             <p>Your Questions, Answered</p>
             <h2>Frequently Asked Questions</h2>

@@ -41,7 +41,7 @@ get_header();
 </section>
 
 <section id="vertical_integration">
-  <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" />
+  <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt=""  btcPattern/>
   <div class="heading" animateHeading>
     <h2>Vertical Integration</h2>
     <p>
@@ -259,7 +259,7 @@ get_header();
 </section>
 
 <section id="logistics_shipping_efficiency">
-  <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" />
+  <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
 
   <div class="logistics_shipping_efficiency_head">
     <div class="heading" animateHeading>

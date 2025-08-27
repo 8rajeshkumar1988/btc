@@ -40,8 +40,8 @@ the_post();
     </div>
 </section>
 <section id="about_btc">
-    <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" />
-    <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" />
+    <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" btcPattern />
+    <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" btcPattern />
 
     <div class="about_btc_head">
         <div class="heading" animateHeading>
@@ -151,7 +151,7 @@ $leaderships = new WP_Query(array(
 if ($leaderships->have_posts()) {
 ?>
     <section id="our_leadership">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" />
+        <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt=""  btcPattern />
         <div class="heading" animateHeading>
             <p>Our Leadership</p>
             <h2>Visionaries Shaping the Future</h2>
@@ -209,7 +209,7 @@ if ($leaderships->have_posts()) {
 <?php }
 ?>
 <section id="product_page_details">
-    <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="" />
+    <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt=""  btcPattern />
     <div class="heading" animateHeading>
         <p>Our Shareholders</p>
         <h2>
