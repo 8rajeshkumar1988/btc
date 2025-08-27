@@ -433,17 +433,22 @@ $(document).ready(function () {
     const scrollTop = window.scrollY; // or $(window).scrollTop();
 
     // Run effect only if page is scrolled more than 200px
-    if (scrollTop > 200) {
-      if (e.clientY <= 150 && !exitedToTop) {
-        console.log("Cursor exited at the top of the viewport!");
-        $('header').addClass('sticky');
-        exitedToTop = true;
-      } else if (e.clientY > 150 && exitedToTop) {
-        console.log("Cursor re-entered the viewport!");
-        $('header').removeClass('sticky');
-        exitedToTop = false;
+    if (window.innerWidth > 1024) {
+      if (scrollTop > 200) {
+        if (e.clientY <= 100 && !exitedToTop) {
+          console.log("Cursor exited at the top of the viewport!");
+          $('header').addClass('sticky');
+          exitedToTop = true;
+        } else if (e.clientY > 100 && exitedToTop) {
+          console.log("Cursor re-entered the viewport!");
+          if (!$('#header').hasClass('active')) {
+            $('header').removeClass('sticky');
+          }
+          exitedToTop = false;
+        }
       }
     }
+
   });
 
   window.addEventListener("scroll", function () {
