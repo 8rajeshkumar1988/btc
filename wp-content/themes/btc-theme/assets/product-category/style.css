@@ -305,6 +305,10 @@ video {
 #customization .customization_container .customization_text.active {
   display: block;
 }
+#customization .customization_container #value img {
+  transform: unset;
+  padding-left: 0;
+}
 #customization .customization_container .customization_cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

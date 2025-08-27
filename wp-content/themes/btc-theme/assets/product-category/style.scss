@@ -318,6 +318,12 @@ video{
         display: block;
       }
     }
+    #value{
+      img{
+        transform: unset;
+       padding-left: 0; 
+      }
+    }
     .customization_cards {
       display: grid;
       grid-template-columns: repeat(2, 1fr);

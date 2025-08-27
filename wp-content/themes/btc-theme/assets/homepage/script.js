@@ -32,7 +32,7 @@ $(document).ready(function () {
   });
 
 
-  gsap.to('.homePage_banner .heading *' , {
+  gsap.to('.homePage_banner .heading > div *, .homePage_banner .heading button' , {
     y: 0,
     opacity: 1,
     ease: "power4.out",
