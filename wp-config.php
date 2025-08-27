@@ -99,7 +99,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 define( 'WP_CACHE', true );
-
+define('HOME_PAGE', "/home-testing");
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';

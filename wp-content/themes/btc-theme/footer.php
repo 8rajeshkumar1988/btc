@@ -23,7 +23,7 @@
 
 <footer>
     <div class="top">
-        <a href="/"><img src="<?php echo get_template_directory_uri() . '/assets/images/footerlogo.svg'; ?>" alt="btc logo"></a>
+        <a href="<?php echo site_url(HOME_PAGE) ?>"><img src="<?php echo get_template_directory_uri() . '/assets/images/footerlogo.svg'; ?>" alt="btc logo"></a>
         <div>
             <!-- <p class="title">Leading Textile Manufacturer & Exporter</p> -->
             <p class="title">Leading Textile Manufacturer & Exporter</p>

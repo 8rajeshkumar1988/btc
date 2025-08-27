@@ -27,7 +27,7 @@ get_header();
 
 
     <div class="content">
-        <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / <?php the_title() ?></p>
+        <p class="breadcrub"><a href="<?php echo site_url(HOME_PAGE) ?>">Home</a> / <?php the_title() ?></p>
         <div class="heading" animateHeadingBanner>
             <p><?php the_title(); ?></p>
             <?php the_content(); ?>

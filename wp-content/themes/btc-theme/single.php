@@ -35,7 +35,7 @@ get_header();
   </div>
   <div class="breadcrub_container">
     <p class="breadcrub">
-      <a href="<?php echo site_url('/') ?>">Home</a> / <a href="<?php echo site_url('/blogs') ?>"><?php echo  $cat_name; ?></a> / <?php the_title(); ?>
+      <a href="<?php echo site_url(HOME_PAGE) ?>">Home</a> / <a href="<?php echo site_url('/blogs') ?>"><?php echo  $cat_name; ?></a> / <?php the_title(); ?>
       
     </p>
 <div class="social_links">

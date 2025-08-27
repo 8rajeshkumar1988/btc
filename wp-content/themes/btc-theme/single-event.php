@@ -33,7 +33,7 @@ get_header();
 
 <div class="breadcrub_container">
     <p class="breadcrub">
-        <a href="<?php echo site_url('/') ?>">Home</a> / <a href="<?php echo site_url('/all-event') ?>">Events & Engagements</a> / <?php the_title() ?>
+        <a href="<?php echo site_url(HOME_PAGE) ?>">Home</a> / <a href="<?php echo site_url('/all-event') ?>">Events & Engagements</a> / <?php the_title() ?>
     </p>
     <div class="social_links">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="facebook" onclick="shareToFacebook()" data-url="<?php echo esc_url(get_permalink()); ?>"

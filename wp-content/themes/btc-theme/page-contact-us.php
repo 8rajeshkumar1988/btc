@@ -28,7 +28,7 @@ the_post();
 
     ?>
     <div class="content">
-        <p class="breadcrub"><a href="<?php echo site_url('/') ?>">Home</a> / Contact Us</p>
+        <p class="breadcrub"><a href="<?php echo site_url(HOME_PAGE) ?>">Home</a> / Contact Us</p>
         <div>
             <div class="heading"  animateHeadingBanner>
                 <p><?php the_title(); ?></p>
