@@ -392,19 +392,19 @@ $(document).ready(function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Find all videos
-    const videos = document.querySelectorAll("video");
+  // Find all videos
+  const videos = document.querySelectorAll("video");
 
-    videos.forEach(video => {
-        // Ensure autoplay requirements are met
-        video.muted = true; // Safari requires muted for autoplay
-        video.playsInline = true; // Prevent fullscreen on iOS
+  videos.forEach(video => {
+    // Ensure autoplay requirements are met
+    video.muted = true; // Safari requires muted for autoplay
+    video.playsInline = true; // Prevent fullscreen on iOS
 
-        // Try to play
-        video.play().catch(err => {
-            console.warn("Video couldn't autoplay:", err);
-        });
+    // Try to play
+    video.play().catch(err => {
+      console.warn("Video couldn't autoplay:", err);
     });
+  });
 });
 
 $(document).ready(function () {
@@ -430,14 +430,19 @@ $(document).ready(function () {
   let scrolledPast200 = false;
 
   window.addEventListener("mousemove", function (e) {
-    if (e.clientY <= 150 && !exitedToTop) {
-      console.log("Cursor exited at the top of the viewport!");
-      $('header').addClass('sticky');
-      exitedToTop = true;
-    } else if (e.clientY > 150 && exitedToTop) {
-      console.log("Cursor re-entered the viewport!");
-      $('header').removeClass('sticky');
-      exitedToTop = false;
+    const scrollTop = window.scrollY; // or $(window).scrollTop();
+
+    // Run effect only if page is scrolled more than 200px
+    if (scrollTop > 200) {
+      if (e.clientY <= 150 && !exitedToTop) {
+        console.log("Cursor exited at the top of the viewport!");
+        $('header').addClass('sticky');
+        exitedToTop = true;
+      } else if (e.clientY > 150 && exitedToTop) {
+        console.log("Cursor re-entered the viewport!");
+        $('header').removeClass('sticky');
+        exitedToTop = false;
+      }
     }
   });
 
@@ -458,10 +463,10 @@ $(document).ready(function () {
 
 
 
-$(document).on("scroll", function(){
+$(document).on("scroll", function () {
   var pixels = $(document).scrollTop();
   var pageHeight = $(document).height() - $(window).height();
   var progress = 100 * pixels / pageHeight;
-  
+
   $("#bar").css("width", progress + "%");
 })

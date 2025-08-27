@@ -30,10 +30,8 @@ the_post();
   <div class="content">
     <p class="breadcrub"><a href="<?php echo site_url(HOME_PAGE) ?>">Home</a> / Sustainability</p>
     <div class="heading" animateHeadingBanner>
-      <p>SUSTAINABILITY</p>
-      <h1>
-        Eco-Innovation at <br> Every Stage
-      </h1>
+       <p><?php the_title(); ?></p>
+      <?php the_content(); ?>
     </div>
     <div class="layer"></div>
     <div class="layer2"></div>
