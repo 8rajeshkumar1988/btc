@@ -67,7 +67,7 @@
         <div>
             <div>
                 <p class="title">Address</p>
-                <p>H7R3+Q7, Ouézoumé, Benin, Africa</p>
+                <p>Ilot C/SB, Tangbo-Djèvié, Plot F-1, Maison Etat Béninois, Zè - Benin</p>
             </div>
             <div>
                 <p class="title">Email</p>

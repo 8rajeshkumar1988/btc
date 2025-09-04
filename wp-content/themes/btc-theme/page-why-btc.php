@@ -279,7 +279,7 @@ get_header();
     <div class="content">
         <div>
             <div class="text">
-                <p>Benin is the <strong>largest producer of cotton in Africa</strong> with volumes exceeding 300,000 MT annually. </p> <br>
+                <p>Benin is the <strong>largest producer of cotton in Africa</strong> with volumes exceeding 400,000 MT annually. </p> <br>
                 <p> It is ranked <strong>9th globally</strong> and GDIZ aims to leverage this opportunity complying with the Beninese government’s ambitious plans to <strong>accelerate cotton transformation</strong> and <strong>skyrocket the textile business.</strong></p>
             </div>
             <div class="img">

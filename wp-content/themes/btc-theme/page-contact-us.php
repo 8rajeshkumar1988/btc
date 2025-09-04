@@ -37,7 +37,7 @@ the_post();
             </div>
             <div class="contacts" animateHeadingBanner>
                 <p>Benin Textile Corporation</p>
-                <a href="">H7R3+Q7, Ouézoumé, Benin</a>
+                <a href="">Ilot C/SB, Tangbo-Djèvié, Plot F-1, <br> Maison Etat Béninois, Zè - Benin</a>
                 <div animateHeadingBanner>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/mailIcon.svg" ?>" alt="">
                     <a href="mailto:info.btc@arisenet.com">info.btc@arisenet.com</a>
