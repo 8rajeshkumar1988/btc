@@ -1,28 +1,27 @@
-.homePage_banner{
-  .content{
-    .heading{
+.homePage_banner {
+  .content {
+    .heading {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       flex-wrap: wrap;
       z-index: 1;
-      & > div{
-        *{
+      & > div {
+        * {
           transform: translateY(100px);
           opacity: 0;
         }
       }
-      button{
+      button {
         transform: translateY(100px);
         opacity: 0;
       }
-      button{
+      button {
         margin-top: var(--font-24);
       }
     }
   }
 }
-
 
 #aboutBtc {
   background-color: #fffff4;
@@ -396,7 +395,7 @@
 
   .swiper-pagination {
     text-align: center;
-    bottom: 20px;// margin-top: 50px;
+    bottom: 20px; // margin-top: 50px;
 
     & .swiper-pagination-bullet {
       width: 9px;
@@ -407,9 +406,18 @@
       margin: 0 3px;
       -webkit-border-radius: 20px;
       border-radius: 20px;
-      -webkit-transition: opacity 0.5s, background-color 0.5s, width 0.5s;
-      -o-transition: opacity 0.5s, background-color 0.5s, width 0.5s;
-      transition: opacity 0.5s, background-color 0.5s, width 0.5s;
+      -webkit-transition:
+        opacity 0.5s,
+        background-color 0.5s,
+        width 0.5s;
+      -o-transition:
+        opacity 0.5s,
+        background-color 0.5s,
+        width 0.5s;
+      transition:
+        opacity 0.5s,
+        background-color 0.5s,
+        width 0.5s;
       -webkit-transition-delay: 0.5s, 0.5s, 0s;
       -o-transition-delay: 0.5s, 0.5s, 0s;
       transition-delay: 0.5s, 0.5s, 0s;
@@ -417,7 +425,7 @@
   }
 
   & .swiper-pagination-clickable .swiper-pagination-bullet {
-    cursor: pointer;
+    cursor: default;
   }
 
   & .swiper-pagination .swiper-pagination-bullet-active {
@@ -533,9 +541,23 @@
           color: var(--green);
         }
       }
-      img {
+      .line {
         width: 100%;
         margin: 2% 0 5%;
+        height: 2px;
+        background: linear-gradient(to left, transparent 50%, #7A6FE7 50%);
+        background-size:20px 2px, 100% 2px;
+        position: relative;
+        & > div{
+          position: absolute;
+          height: 18px;
+          width: 18px;
+          background-color: #7A6FE7;
+          border-radius: 50%;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: all 1s ease-in-out;
+        }
       }
       p {
         padding-right: 10vw;
@@ -713,8 +735,7 @@
     }
     .cap_container {
       aspect-ratio: unset;
-      padding: clamp(9.375rem, -3.75rem + 27.3438vw, 13.75rem) var(--paddingX)
-        var(--paddingY);
+      padding: clamp(9.375rem, -3.75rem + 27.3438vw, 13.75rem) var(--paddingX) var(--paddingY);
       .spiralImage {
         width: clamp(15.625rem, -3.125rem + 39.0625vw, 21.875rem);
         height: clamp(25rem, 6.25rem + 39.0625vw, 31.25rem);
@@ -763,7 +784,7 @@
               .number {
                 font-size: calc(var(--font-46) * 2);
               }
-              .tag{
+              .tag {
                 padding: 10px;
               }
             }
@@ -800,8 +821,7 @@
     }
     .cap_container {
       aspect-ratio: unset;
-      padding: clamp(9.375rem, -3.75rem + 27.3438vw, 13.75rem) var(--paddingX)
-        var(--paddingY);
+      padding: clamp(9.375rem, -3.75rem + 27.3438vw, 13.75rem) var(--paddingX) var(--paddingY);
       .spiralImage {
         width: clamp(15.625rem, -3.2328rem + 71.8391vw, 31.25rem);
         height: 400px;
@@ -905,15 +925,15 @@
     }
   }
 
-    #linkedIn_video {
-        height: 50dvh;
-        width: 100%;
-        video {
-            // position: initial;
-            // height: calc(100% + 200px);
-            transform: translateY(-200px);
-        }
+  #linkedIn_video {
+    height: 50dvh;
+    width: 100%;
+    video {
+      // position: initial;
+      // height: calc(100% + 200px);
+      transform: translateY(-200px);
     }
+  }
 }
 
 @media screen and (max-width: 450px) {

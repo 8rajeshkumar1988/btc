@@ -32,7 +32,7 @@ $(document).ready(function () {
   });
 
 
-  gsap.to('.homePage_banner .heading > div *, .homePage_banner .heading button' , {
+  gsap.to('.homePage_banner .heading > div *, .homePage_banner .heading button', {
     y: 0,
     opacity: 1,
     ease: "power4.out",
@@ -97,12 +97,17 @@ $(document).ready(function () {
     if (capabilitiesSwiper) {
       capabilitiesSwiper.destroy(true, true);
     }
+    const moveDot = (percentage) => {
+      $('#ourCapabilities .line > div').css('left', percentage + '%');
+    }
+
 
     capabilitiesSwiper = new Swiper(".ourCapabilities", {
       spaceBetween: window.innerWidth > 1024 ? 40 : 30,
       centeredSlides: true,
       slidesPerView: "auto",
       loop: false,
+
       grabCursor: true,
       speed: 1000,
       // initialSlide: 3,
@@ -120,6 +125,10 @@ $(document).ready(function () {
         nextEl: ".capabilitiesNext",
         prevEl: ".capabilitiesPrev",
       },
+    });
+    const slidesLength = capabilitiesSwiper.slides.length
+    capabilitiesSwiper.on("slideChange", function () {
+      moveDot((100 / (slidesLength - 1)) * this.realIndex);
     });
   };
 
@@ -210,7 +219,7 @@ $(document).ready(function () {
           -containerWidth / 2 + img.offsetWidth / 2 + additionNal - 2;
         xDisplacementSec =
           containerWidth / 2 - img.offsetWidth / 1 + images[1].offsetWidth + 60;
-        console.log(" > 1025");
+        // console.log(" > 1025");
       } else if (window.innerWidth > 1024) {
         xDisplacementFir =
           -containerWidth / 2 + img.offsetWidth / 2 + additionNal - 2;
@@ -219,12 +228,12 @@ $(document).ready(function () {
           img.offsetWidth / 1 +
           images[1].offsetWidth * 1.5 +
           34;
-        console.log(" > 1025");
+        // console.log(" > 1025");
       } else {
         xDisplacementFir = $(".cap_container").width() / -20;
         xDisplacementSec =
           containerWidth - img.offsetWidth / 1 + (isDesk ? 60 : 200) + 30;
-        console.log(" < 1025");
+        // console.log(" < 1025");
       }
       if (isCenter) {
         if (window.innerWidth > 768) {
@@ -347,7 +356,7 @@ $(document).ready(function () {
   });
   images.forEach((img, index) => {
     img.addEventListener("click", () => {
-      console.log(img)
+      // console.log(img)
       exloreCapabilities();
     });
   })
@@ -511,7 +520,7 @@ $(document).ready(function () {
     });
   } else {
     const linkedInVideoHie = $('#linkedIn_video').height()
-    console.log(linkedInVideoHie);
+    // console.log(linkedInVideoHie);
     gsap.fromTo('#linkedIn_video > video', {
       y: `${(linkedInVideoHie / 2)}px`,
     }, {

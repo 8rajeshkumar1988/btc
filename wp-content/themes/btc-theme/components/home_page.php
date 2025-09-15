@@ -243,7 +243,8 @@
                         <div class="empty"></div>
                         <div class="text">
                             <h3><?php the_title(); ?></h3>
-                            <img class="line" src="<?php echo get_template_directory_uri() . '/assets/images/line.svg'; ?>" alt="">
+                            <!-- <img class="line" src="<?php echo get_template_directory_uri() . '/assets/images/line.svg'; ?>" alt=""> -->
+                            <div class="line"><div></div></div>
                             <p><?php echo nl2br(get_field('content')); ?></p>
                         </div>
                     </div>

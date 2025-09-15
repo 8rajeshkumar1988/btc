@@ -371,7 +371,7 @@
   transition-delay: 0.5s, 0.5s, 0s;
 }
 #ourCapabilities .swiper-pagination-clickable .swiper-pagination-bullet {
-  cursor: pointer;
+  cursor: default;
 }
 #ourCapabilities .swiper-pagination .swiper-pagination-bullet-active {
   opacity: 1;
@@ -475,9 +475,23 @@
 #ourCapabilities .swiper-slide .text h3 line-he span {
   color: var(--green);
 }
-#ourCapabilities .swiper-slide .text img {
+#ourCapabilities .swiper-slide .text .line {
   width: 100%;
   margin: 2% 0 5%;
+  height: 2px;
+  background: linear-gradient(to left, transparent 50%, #7A6FE7 50%);
+  background-size: 20px 2px, 100% 2px;
+  position: relative;
+}
+#ourCapabilities .swiper-slide .text .line > div {
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background-color: #7A6FE7;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 1s ease-in-out;
 }
 #ourCapabilities .swiper-slide .text p {
   padding-right: 10vw;
