@@ -184,7 +184,7 @@ the_post();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Gossypium_sp_MS4007.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/local_cotton_local_value.webp'; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -381,6 +381,15 @@ the_post();
       <div class="certificate_description">
         <h3 class="certificate_title">CTPAT (Customs Trade Partnership Against Terrorism)</h3>
         <p>For highest level of cargo security for shipping to USA</p>
+      </div>
+    </div>
+    <div class="certificate_card">
+      <div class="certificate_logo">
+        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/bsci.png" ?>" alt="bsci">
+      </div>
+      <div class="certificate_description">
+        <h3 class="certificate_title">BSCI (Business Social Compliance Initiative)</h3>
+        <p>For meeting global ethical sourcing standards.</p>
       </div>
     </div>
   </div>

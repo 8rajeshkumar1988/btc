@@ -184,6 +184,9 @@
                     <li>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/CTPAT_Master_Logo.png" ?>" alt="CTPAT - Secure supply chain for US exports">    
                     Secure supply chain for US exports</li>
+                    <li>
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/bsci.png" ?>" alt="bsci">    
+                    Meeting global ethical sourcing standards</li>
                 </ul>
             </div>
         </div>

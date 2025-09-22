@@ -79,7 +79,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Gossypium_sp_MS4007.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/access_to_local_cotton.webp'; ?>" alt="access_to_local_cotton">
                 </div>
             </div>
         </div>
