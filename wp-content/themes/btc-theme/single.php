@@ -39,7 +39,7 @@ get_header();
       </div>
     </div>
   </div>
-  <div class="breadcrub_container">
+  <div class="data_container">
   <div class="tags">
     <p class="date">
       <?php 
@@ -75,6 +75,11 @@ get_header();
   data-title="<?php echo esc_attr(get_the_title()); ?>" />
 </div>
   </div>
+<div style="
+    height: 2px;
+    background: linear-gradient(to left, transparent 50%, #555555ff 50%);
+    background-size: 20px 2px, 100% 2px;
+    position: relative;"></div>
 
 
 

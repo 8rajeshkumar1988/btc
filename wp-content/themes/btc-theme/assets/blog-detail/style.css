@@ -10,28 +10,33 @@ body {
   min-height: 95vh;
   height: auto;
 }
-.blog_hero .breadcrub_container {
+.blog_hero .breadcrub_container,
+.blog_hero .data_container {
   display: flex;
   justify-content: space-between;
   gap: 40px;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 40px;
+  margin-bottom: var(--spaceBelow_heading);
 }
-.blog_hero .breadcrub_container .breadcrub {
+.blog_hero .breadcrub_container .breadcrub,
+.blog_hero .data_container .breadcrub {
   color: #666662;
   font-size: var(--font-18);
 }
-.blog_hero .breadcrub_container .breadcrub a {
+.blog_hero .breadcrub_container .breadcrub a,
+.blog_hero .data_container .breadcrub a {
   color: #666662;
   text-decoration: none;
   font-size: var(--font-18);
 }
-.blog_hero .breadcrub_container .social_links {
+.blog_hero .breadcrub_container .social_links,
+.blog_hero .data_container .social_links {
   display: flex;
   gap: 10px;
 }
-.blog_hero .breadcrub_container .social_links img {
+.blog_hero .breadcrub_container .social_links img,
+.blog_hero .data_container .social_links img {
   width: var(--font-24);
   height: var(--font-24);
   cursor: pointer;
@@ -40,14 +45,16 @@ body {
   filter: grayscale(1);
   object-fit: contain;
 }
+.blog_hero .data_container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .blog_hero .tags {
   display: flex;
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-  width: 100%;
   justify-content: flex-start;
-  margin: 40px 0px;
   margin-bottom: 0px;
 }
 .blog_hero .tags a,
@@ -105,8 +112,9 @@ body {
 }
 
 .blog_content {
-  padding: 0 var(--paddingX);
   padding-bottom: var(--spaceBelow_heading);
+  max-width: 960px;
+  margin: 0 auto;
 }
 .blog_content .pattern {
   position: absolute;
@@ -258,17 +266,19 @@ body {
   text-overflow: ellipsis;
 }
 
+@media screen and (max-width: 1024px) {
+  .blog_content {
+    padding: var(--spaceBelow_heading) var(--paddingX);
+    padding-top: 0%;
+  }
+}
 @media screen and (max-width: 768px) {
   .blog_hero {
     padding: 82px var(--paddingX) 40px;
   }
-  .blog_hero .breadcrub_container {
+  .blog_hero .breadcrub_container,
+  .blog_hero .data_container {
     gap: 20px;
-    margin-top: 20px;
-  }
-  .blog_hero .tags {
-    margin: 20px 0px;
-    margin-bottom: 0;
   }
   .blog_hero > div .content {
     padding: 20px;

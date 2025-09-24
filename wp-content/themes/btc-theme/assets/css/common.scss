@@ -22,13 +22,9 @@
   --blue: #342c7e;
   --paddingX: 10%;
   --headingTop: 5px;
-  --paddingY: clamp(6.25rem, 1.0417rem + 6.9444vw, 9.375rem); // 100 - 150
+  --paddingY: clamp(3.75rem, 2.9167rem + 1.7361vw, 5rem); // 60 - 100
   --navBtn: clamp(3.125rem, -0.8065rem + 4.8387vw, 5rem); //50 - 80
-  --spaceBelow_heading: clamp(
-    2.1875rem,
-    0.625rem + 2.0833vw,
-    3.125rem
-  ); //35 - 50
+  --spaceBelow_heading: clamp(1.875rem, 1.4583rem + 0.8681vw, 2.5rem); //30 - 40
 }
 
 body {
@@ -147,11 +143,11 @@ header.sticky {
       position: relative;
       z-index: 1;
       font-size: var(--font-16);
-      color: #ffffff99;
+      color: #ffffff;
       * {
         text-decoration: none;
         // color: var(--secondaryBlack);
-        color: #ffffff99;
+        color: #fff;
       }
     }
     .layer {
@@ -172,7 +168,8 @@ header.sticky {
       top: 0;
       left: 0;
       z-index: 0;
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(0 0 0 / 71%) 100%);
+      // background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(0 0 0 / 71%) 100%);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0% -157%, rgb(0 0 0 / 79%) 100%);
     }
   }
   .content [animateHeadingBanner] {
@@ -285,6 +282,7 @@ header.sticky {
     color: var(--tertiaryBlack);
     font-weight: 700;
     text-transform: uppercase;
+    line-height: 1;
   }
   h1,
   h2,
@@ -346,7 +344,7 @@ header.sticky {
   }
 
   .marquee-track.left-slide {
-    margin: var(--spaceBelow_heading) 0 calc(var(--spaceBelow_heading) * 1.5);
+    margin: calc(var(--spaceBelow_heading) * 1.5) 0 calc(var(--spaceBelow_heading) * 1.5);
   }
   .marquee-track {
     display: flex;
@@ -358,7 +356,7 @@ header.sticky {
   }
 
   .marquee-content img {
-    height: clamp(3.125rem, 1.0417rem + 2.7778vw, 4.375rem); // 50-70
+    height: clamp(2.5rem, 2.0833rem + 0.8681vw, 3.125rem); // 40 - 50
     margin-right: clamp(2.5rem, 2rem + 2.5vw, 5rem);
     object-fit: contain;
   }
@@ -473,6 +471,9 @@ header.sticky {
   }
   .accordian {
     position: relative;
+    .faq:first-child {
+      padding-top: 0;
+    }
     .faq {
       border-bottom: 1px solid grey;
       padding: 40px 0px;
@@ -503,7 +504,7 @@ header.sticky {
         li {
           color: var(--tertiaryBlack);
           font-size: var(--font-20);
-          padding-top: 40px;
+          padding-top: 20px;
           font-weight: 300;
           span {
             color: var(--secondaryBlack);

@@ -73,7 +73,6 @@ body {
   padding: 0 var(--paddingX);
 }
 #about_btc .about_btc_container .about_btc .category_item {
-  padding: var(--font-20);
   height: auto;
   background-color: #ffffff;
 }
@@ -100,13 +99,12 @@ body {
   right: 30px;
 }
 #about_btc .about_btc_container .about_btc .category_item .category_description {
-  margin-top: var(--font-20);
-  margin-bottom: 0;
   text-decoration: none;
   font-size: var(--font-16);
   font-weight: 300;
   color: var(--tertiaryBlack);
   display: block;
+  padding: var(--font-16);
 }
 #about_btc .about_btc_container .about_btc .category_item .category_description strong {
   color: #000;
@@ -180,6 +178,7 @@ body {
   opacity: 0.01;
   top: -20%;
   left: 10%;
+  pointer-events: none;
 }
 #our_leadership .heading {
   position: relative;
@@ -295,11 +294,14 @@ body {
   background-color: #fff;
 }
 #arise_details .heading {
-  margin-bottom: 80px;
+  margin-bottom: var(--spaceBelow_heading);
+}
+#arise_details .heading h2 {
+  margin: 0;
 }
 #arise_details .arise_container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: clamp(21.875rem, 13.5417rem + 17.3611vw, 34.375rem) auto;
   gap: var(--font-46);
   align-items: center;
 }
@@ -325,7 +327,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin: var(--spaceBelow_heading) 0px;
+  margin: var(--spaceBelow_heading) 0px 0;
 }
 #our_impact .our_impact_container .impact_wrapper {
   position: relative;
@@ -441,7 +443,6 @@ body {
   grid-template-columns: 160px auto;
   align-items: center;
   gap: 16px;
-  padding: 16px 0px;
   padding-right: clamp(0rem, -1rem + 5vw, 5rem);
 }
 #certificates_compliances .cc_container .certificate_card .certificate_logo img {
@@ -590,7 +591,8 @@ body {
     grid-template-columns: 1fr;
   }
   #arise_details .arise_container .logo_container img {
-    width: 60%;
+    width: 45%;
+    min-width: 150px;
   }
   #arise_details .arise_container .description {
     align-items: flex-start;
