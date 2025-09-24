@@ -4,6 +4,19 @@ get_header();
 
 ?>
 <section class="blog_hero">
+  <div class="breadcrub_container">
+    <p class="breadcrub">
+      <?php
+            $categories = get_the_category();
+            if (! empty($categories)) {
+              echo esc_html($categories[0]->name); // Show the first category
+              $cat_name = $categories[0]->name;
+            } else {
+              $cat_name = "Blogs";
+            } ?>
+      <a href="<?php echo site_url(HOME_PAGE) ?>">Home</a> / <a href="<?php echo site_url('/blogs') ?>"><?php echo  $cat_name; ?></a> / <?php the_title(); ?>
+    </p>
+  </div>
   <div>
     <?php
     $banner_image = get_field('banner_image_desktop');
@@ -19,14 +32,7 @@ get_header();
     ?>
     <div class="content">
       <div class="heading">
-        <p><?php
-            $categories = get_the_category();
-            if (! empty($categories)) {
-              echo esc_html($categories[0]->name); // Show the first category
-              $cat_name = $categories[0]->name;
-            } else {
-              $cat_name = "Blogs";
-            } ?></p>
+        <p><?php echo  $cat_name; ?></p>
         <h1>
           <?php the_title(); ?>
         </h1>
@@ -34,24 +40,6 @@ get_header();
     </div>
   </div>
   <div class="breadcrub_container">
-    <p class="breadcrub">
-      <a href="<?php echo site_url(HOME_PAGE) ?>">Home</a> / <a href="<?php echo site_url('/blogs') ?>"><?php echo  $cat_name; ?></a> / <?php the_title(); ?>
-      
-    </p>
-<div class="social_links">
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="facebook" onclick="shareToFacebook()"  data-url="<?php echo esc_url(get_permalink()); ?>"
-  data-title="<?php echo esc_attr(get_the_title()); ?>" />
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/x.png" alt="twitter" onclick="shareToTwitter()"  data-url="<?php echo esc_url(get_permalink()); ?>"
-  data-title="<?php echo esc_attr(get_the_title()); ?>" />
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.png" alt="linkedin" onclick="shareToLinkedIn()"  data-url="<?php echo esc_url(get_permalink()); ?>"
-  data-title="<?php echo esc_attr(get_the_title()); ?>" />
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/whatsapp.png" alt="whatsapp" onclick="shareToWhatsApp()"  data-url="<?php echo esc_url(get_permalink()); ?>"
-  data-title="<?php echo esc_attr(get_the_title()); ?>" />
-</div>
-  </div>
-
-
-
   <div class="tags">
     <p class="date">
       <?php 
@@ -76,6 +64,21 @@ get_header();
 
 
   </div>
+<div class="social_links">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="facebook" onclick="shareToFacebook()"  data-url="<?php echo esc_url(get_permalink()); ?>"
+  data-title="<?php echo esc_attr(get_the_title()); ?>" />
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/x.png" alt="twitter" onclick="shareToTwitter()"  data-url="<?php echo esc_url(get_permalink()); ?>"
+  data-title="<?php echo esc_attr(get_the_title()); ?>" />
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.png" alt="linkedin" onclick="shareToLinkedIn()"  data-url="<?php echo esc_url(get_permalink()); ?>"
+  data-title="<?php echo esc_attr(get_the_title()); ?>" />
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/whatsapp.png" alt="whatsapp" onclick="shareToWhatsApp()"  data-url="<?php echo esc_url(get_permalink()); ?>"
+  data-title="<?php echo esc_attr(get_the_title()); ?>" />
+</div>
+  </div>
+
+
+
+
 
 
 </section>

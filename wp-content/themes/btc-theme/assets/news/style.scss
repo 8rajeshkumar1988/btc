@@ -5,6 +5,17 @@
   padding: var(--paddingY) var(--paddingX);
   position: relative;
   overflow: hidden;
+  .breadcrub {
+      position: relative;
+      z-index: 1;
+      font-size: var(--font-16);
+      color: #00000099;
+      * {
+        text-decoration: none;
+        // color: var(--secondaryBlack);
+        color: #00000099;
+      }
+    }
   & > img {
     position: absolute;
     inset: 0;
