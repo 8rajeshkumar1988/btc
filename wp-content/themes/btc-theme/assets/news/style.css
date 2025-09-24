@@ -7,6 +7,16 @@
   position: relative;
   overflow: hidden;
 }
+#news_media .breadcrub {
+  position: relative;
+  z-index: 1;
+  font-size: var(--font-16);
+  color: rgba(0, 0, 0, 0.6);
+}
+#news_media .breadcrub * {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+}
 #news_media > img {
   position: absolute;
   inset: 0;

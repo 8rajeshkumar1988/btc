@@ -14,8 +14,8 @@ if ($tag && isset($tag->term_id)) {
 ?>
 
 
-
 <section id="news_media">
+    <p class="breadcrub"><a href="<?php echo site_url(HOME_PAGE) ?>">Home</a> / Blogs</p>
     <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="" />
     <div class="heading">
         <h2>
