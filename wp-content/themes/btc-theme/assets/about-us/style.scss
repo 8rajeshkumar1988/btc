@@ -75,7 +75,7 @@ body {
     .about_btc {
       padding: 0 var(--paddingX);
       .category_item {
-        padding: var(--font-20);
+        
         height: auto;
         background-color: #ffffff;
         .category_image {
@@ -100,13 +100,12 @@ body {
           }
         }
         .category_description {
-          margin-top: var(--font-20);
-          margin-bottom: 0;
           text-decoration: none;
           font-size: var(--font-16);
           font-weight: 300;
           color: var(--tertiaryBlack);
           display: block;
+          padding: var(--font-16);
           strong{
             color: #000;
             font-weight: 300;
@@ -188,6 +187,7 @@ body {
     opacity: 0.01;
     top: -20%;
     left: 10%;
+    pointer-events: none;
   }
   .heading {
     position: relative;
@@ -301,11 +301,14 @@ body {
   padding: var(--paddingY) var(--paddingX);
   background-color: #fff;
   .heading {
-    margin-bottom: 80px;
+    margin-bottom: var(--spaceBelow_heading);
+    h2{
+      margin: 0;
+    }
   }
   .arise_container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: clamp(21.875rem, 13.5417rem + 17.3611vw, 34.375rem) auto;
     gap: var(--font-46);
     align-items: center;
     .logo_container {
@@ -334,7 +337,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin: var(--spaceBelow_heading) 0px;
+    margin: var(--spaceBelow_heading) 0px 0;
     .impact_wrapper {
       position: relative;
       overflow: hidden;
@@ -464,8 +467,7 @@ body {
       display: grid;
       grid-template-columns: 160px auto;
       align-items: center;
-      gap: 16px;
-      padding: 16px 0px;
+      gap: 16px;      
       padding-right: clamp(0rem, -1rem + 5vw, 5rem);
       // border: 1px solid #ddd;
       // border-radius: 8px;
@@ -633,7 +635,8 @@ body {
     .arise_container {
       .logo_container {
         img {
-          width: 60%;
+          width: 45%;
+          min-width: 150px;
         }
       }
       grid-template-columns: 1fr;

@@ -455,6 +455,15 @@ if ($leaderships->have_posts()) {
                 <p>For highest level of cargo security for shipping to USA</p>
             </div>
         </div>
+        <div class="certificate_card">
+            <div class="certificate_logo">
+                <img src="<?php echo get_template_directory_uri() . "/assets/images/bsci.png" ?>" alt="bsci">
+            </div>
+            <div class="certificate_description">
+                <h3 class="certificate_title">BSCI (Business Social Compliance Initiative)</h3>
+                <p>For meeting global ethical sourcing standards</p>
+            </div>
+        </div>
     </div>
 </section>
 <div id="popup"  class="hidden">

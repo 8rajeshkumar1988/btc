@@ -389,7 +389,7 @@ the_post();
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">BSCI (Business Social Compliance Initiative)</h3>
-        <p>For meeting global ethical sourcing standards.</p>
+        <p>For meeting global ethical sourcing standards</p>
       </div>
     </div>
   </div>

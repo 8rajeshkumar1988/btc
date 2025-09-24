@@ -258,8 +258,7 @@
   display: grid;
   grid-template-columns: 47% 48%;
   gap: 5%;
-  padding: 0 var(--paddingX);
-  height: clamp(68.75rem, 37.9287rem + 36.1011vw, 81.25rem);
+  padding: var(--paddingY) var(--paddingX);
   align-items: center;
   position: relative;
   overflow: hidden;
@@ -277,6 +276,9 @@
 }
 #sustainabiltyStandard .accordian {
   position: relative;
+}
+#sustainabiltyStandard .accordian .faq:first-child {
+  padding-top: 0;
 }
 #sustainabiltyStandard .accordian .faq {
   border-bottom: 1px solid grey;
@@ -300,6 +302,7 @@
   font-size: var(--font-24);
   color: var(--text-color);
   font-weight: 300;
+  line-height: 1;
 }
 #sustainabiltyStandard .accordian .faq .ans {
   padding-right: 30px;
@@ -580,7 +583,7 @@
   width: 100%;
   min-height: 400px;
   position: relative;
-  padding: calc(var(--paddingY) / 2) var(--paddingX);
+  padding: var(--paddingY) var(--paddingX);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

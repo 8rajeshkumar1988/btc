@@ -10,15 +10,15 @@ var swiper = new Swiper(".about_btc", {
   breakpoints: {
     1200: {
       slidesPerView: 3,
-      spaceBetween: 20,
+      spaceBetween: 30,
     },
     1024: {
       slidesPerView: 2.1,
-      spaceBetween: 20,
+      spaceBetween: 30,
     },
     768: {
       slidesPerView: 1.5,
-      spaceBetween: 20,
+      spaceBetween: 30,
     },
     550: {
       slidesPerView: 1.3,
@@ -454,10 +454,10 @@ $(document).ready(function () {
     gsap.fromTo(
       "#product_page_details .left ",
       {
-        y: -80,
+        y: -50,
       },
       {
-        y: 80,
+        y: 50,
         ease: "none",
         duration: 1.2,
         scrollTrigger: {
@@ -473,10 +473,10 @@ $(document).ready(function () {
     gsap.fromTo(
       "#product_page_details .right ",
       {
-        y: -110,
+        y: -80,
       },
       {
-        y: 110,
+        y: 80,
         ease: "none",
         duration: 1.2,
         scrollTrigger: {
