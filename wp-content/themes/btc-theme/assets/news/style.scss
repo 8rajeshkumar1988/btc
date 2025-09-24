@@ -2,7 +2,7 @@
   --heading: clamp(2.25rem, 1.875rem + 1.875vw, 4.125rem);
 }
 #news_media {
-  padding: var(--paddingY) var(--paddingX);
+  padding: calc(clamp(1.5625rem, -1.7137rem + 4.0323vw, 3.125rem) * 2 + clamp(2.5rem, 0.5343rem + 2.4194vw, 3.4375rem)) var(--paddingX) var(--spaceBelow_heading);
   position: relative;
   overflow: hidden;
   .breadcrub {
