@@ -68,7 +68,6 @@ video {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  padding-top: var(--spaceBelow_heading);
   position: relative;
 }
 #product_category .category_container .category_card {

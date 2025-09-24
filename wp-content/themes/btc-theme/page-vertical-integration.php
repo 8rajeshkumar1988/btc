@@ -286,7 +286,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/whybtc/full-traceability-benin-textile.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/whybtc/packaging.webp'; ?>" alt="">
                 </div>
             </div>
         </div>

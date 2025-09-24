@@ -59,7 +59,7 @@ video{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    padding-top: var(--spaceBelow_heading);
+    // padding-top: var(--spaceBelow_heading);
     position: relative;
     // overflow: hidden;
     // .category_card:first-child {
