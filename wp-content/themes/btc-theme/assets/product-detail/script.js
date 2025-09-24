@@ -34,7 +34,7 @@ var explore_other_categories = new Swiper(".explore_other_categories", {
 
 var spotlight_slider = new Swiper(".spotlight_slider", {
   slidesPerView: 1.1,
-  spaceBetween: 40,
+  spaceBetween: 30,
   centeredSlides: true,
   watchSlidesProgress: true,
   speed: 1500,
@@ -59,6 +59,7 @@ var spotlight_slider = new Swiper(".spotlight_slider", {
         document.querySelector(".product_spotlight-next").style.display = "none";
         document.querySelector(".product_spotlight-prev").style.display = "none";
         document.querySelector(".product_spotlight_bottom").style.display = "none";
+        document.querySelector("#product_spotlight").style.padding = "clamp(2.5rem, -1.7857rem + 6.6964vw, 6.25rem) 0";
       }
     }
   }

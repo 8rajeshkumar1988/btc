@@ -57,10 +57,10 @@ the_post();
 </section>
 
 <section id="product_category">
-  <div class="heading" animateHeading>
+  <!-- <div class="heading" animateHeading>
     <p>Clothing That Fits All</p>
     <h2>Trendy, Timeless, Tailored</h2>
-  </div>
+  </div> -->
   <div class="category_container">
     <div class="category_card">
       <h2>MEN</h2>

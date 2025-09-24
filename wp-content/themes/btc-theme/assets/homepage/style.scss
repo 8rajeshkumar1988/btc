@@ -171,6 +171,7 @@
           height: calc(clamp(23.75rem, 8.0357rem + 24.5536vw, 37.5rem) + 150px);
           p {
             opacity: 1;
+            transition: all 0.8s;
           }
         }
         & > p {
@@ -497,7 +498,7 @@
       }
     }
     button {
-      margin-top: var(--font-24);
+      margin-top: var(--spaceBelow_heading);
       white-space: pre;
     }
   }
