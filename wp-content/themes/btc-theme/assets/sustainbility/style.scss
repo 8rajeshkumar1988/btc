@@ -265,7 +265,8 @@
           display: flex;
           flex-direction: column;
           height: 100%;
-          justify-content: space-around;
+          justify-content: start;
+          margin-top:  var(--spaceBelow_heading);
           & > p {
             color: var(--secondaryBlack);
           }
@@ -332,6 +333,7 @@
     right: 0;
     width: 80%;
     z-index: -1;
+    pointer-events: none;
   }
   h2 {
     font-size: var(--font-46);
@@ -378,7 +380,7 @@
 
     .certificate_card {
       display: grid;
-      grid-template-columns: 160px auto;
+      grid-template-columns: clamp(6.25rem, 4.5833rem + 3.4722vw, 8.75rem) auto;
       align-items: center;
       gap: 16px;
       padding: 16px 0px;

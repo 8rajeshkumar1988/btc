@@ -16,6 +16,7 @@ body {
 }
 #vertical_integration .heading h2 {
   text-align: center;
+  margin: 0;
 }
 #vertical_integration .heading p {
   font-weight: 300;
@@ -30,7 +31,7 @@ body {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: var(--spaceBelow_heading);
   justify-content: center;
 }
 #vertical_integration .cards_wrapper .card {
@@ -117,10 +118,11 @@ body {
   background: linear-gradient(180deg, #2f2874 0%, #201a5b 100%);
 }
 #sustainability_details .heading {
-  margin-bottom: 40px;
+  margin-bottom: var(--spaceBelow_heading);
 }
 #sustainability_details .heading h2 {
   color: #ffffff;
+  margin: 0;
 }
 #sustainability_details .sustainability_info {
   display: grid;
@@ -171,7 +173,7 @@ body {
 #sustainability_details .technology_and_innovation .tai_container .static {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 30px;
 }
 #sustainability_details .technology_and_innovation .tai_container .static > div {
   flex: 1;
@@ -180,7 +182,7 @@ body {
   gap: 10px;
   text-align: center;
   color: #ffffff;
-  padding: 20px;
+  padding: 0;
 }
 #sustainability_details .technology_and_innovation .tai_container .static > div h3 {
   color: var(--green);
@@ -223,6 +225,7 @@ body {
 }
 #logistics_shipping_efficiency .logistics_shipping_efficiency_head .heading h2 {
   color: var(--secondaryBlack);
+  margin: 0;
 }
 #logistics_shipping_efficiency .logistics_shipping_efficiency_head .heading p {
   margin-top: 20px;
@@ -231,7 +234,7 @@ body {
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: var(--spaceBelow_heading);
 }
 #logistics_shipping_efficiency .logistics_shipping_efficiency_container .category_item {
   padding: 30px;

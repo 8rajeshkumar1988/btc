@@ -128,24 +128,25 @@ $(document).ready(function () {
                 trigger: '#sustainability_details .tai_container .dynamic_desc p',
                 start: "top 90%",
                 toggleActions: "play none none reverse",
+                markers:true
             }
         })
     }
    
-    if (window.innerWidth > 1024) {
-        gsap.fromTo('#sustainability_details .tai_container .dynamic_desc', {
-        y: -100
-        }, {
-            y: 0,
-            ease: "none",
-            scrollTrigger: {
-                trigger: '#sustainability_details .tai_container',
-                start: "top bottom",
-                end: "bottom 20%",
-                scrub: true
-            }
-        });
-    }
+    // if (window.innerWidth > 1024) {
+    //     gsap.fromTo('#sustainability_details .tai_container .dynamic_desc', {
+    //     y: -50
+    //     }, {
+    //         y: 0,
+    //         ease: "none",
+    //         scrollTrigger: {
+    //             trigger: '#sustainability_details .tai_container',
+    //             start: "top bottom",
+    //             end: "bottom 20%",
+    //             scrub: true
+    //         }
+    //     });
+    // }
     
 
     gsap.from('.logistics_shipping_efficiency_container .first h2, .logistics_shipping_efficiency_container .first p, .logistics_shipping_efficiency_container .first .category_image', {

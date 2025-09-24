@@ -17,6 +17,7 @@ body {
   .heading {
     h2 {
       text-align: center;
+      margin: 0;
     }
     p {
       font-weight: 300;
@@ -32,7 +33,7 @@ body {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: var(--spaceBelow_heading);
     justify-content: center;
     .card {
       width: calc((100% - var(--paddingX)) / 4);
@@ -121,8 +122,9 @@ body {
   .heading {
     h2 {
       color: #ffffff;
+      margin: 0;
     }
-    margin-bottom: 40px;
+    margin-bottom: var(--spaceBelow_heading);
   }
   .sustainability_info {
     display: grid;
@@ -172,7 +174,7 @@ body {
       .static {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 30px;
         & > div {
           flex: 1;
           display: flex;
@@ -180,7 +182,7 @@ body {
           gap: 10px;
           text-align: center;
           color: #ffffff;
-          padding: 20px;
+          padding: 0;
           h3 {
             color: var(--green);
             font-size: 40px;
@@ -230,6 +232,7 @@ body {
     .heading {
       h2 {
         color: var(--secondaryBlack);
+        margin: 0;
       }
       p {
         margin-top: 20px;
@@ -241,7 +244,7 @@ body {
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: var(--spaceBelow_heading);
     .category_item {
       padding: 30px;
       background-color: #ffffff;

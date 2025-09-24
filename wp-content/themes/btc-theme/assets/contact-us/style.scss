@@ -72,6 +72,7 @@ body {
     h2 {
       color: var(--blue);
       font-weight: 600;
+      margin: 0;
     }
     margin-bottom: var(--spaceBelow_heading);
   }
@@ -191,7 +192,7 @@ body {
 }
 
 #virtual_factory_experience {
-  padding: calc(var(--paddingY) / 2) var(--paddingX);
+  padding: calc(var(--paddingY) / 1) var(--paddingX);
   background-color: white;
   .heading {
     text-align: center;

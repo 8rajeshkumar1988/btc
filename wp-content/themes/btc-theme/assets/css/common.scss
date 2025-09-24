@@ -22,7 +22,7 @@
   --blue: #342c7e;
   --paddingX: 10%;
   --headingTop: 5px;
-  --paddingY: clamp(3.75rem, 2.9167rem + 1.7361vw, 5rem); // 60 - 100
+  --paddingY: clamp(2.5rem, -1.7857rem + 6.6964vw, 6.25rem); // 40 - 100   1920
   --navBtn: clamp(3.125rem, -0.8065rem + 4.8387vw, 5rem); //50 - 80
   --spaceBelow_heading: clamp(1.875rem, 1.4583rem + 0.8681vw, 2.5rem); //30 - 40
 }
@@ -1186,11 +1186,11 @@ header {
 @media screen and (max-width: 1546px) {
   :root {
     --paddingX: 5%;
-    --paddingY: clamp(
-      5rem,
-      -4.1734rem + 11.2903vw,
-      9.375rem
-    ); // 1300 - 1920  80 - 100
+    // --paddingY: clamp(
+    //   5rem,
+    //   -4.1734rem + 11.2903vw,
+    //   9.375rem
+    // ); // 1300 - 1546  40 - 60
   }
   #footerContact {
     aspect-ratio: 16/7;
@@ -1360,7 +1360,7 @@ header {
     --font-46: 30px;
     --font-20: 16px;
     --navBtn: 45px;
-    --paddingY: 50px;
+    --paddingY: 40px;
     --font-24: 20px;
     --font-14: 13px;
     --font-16: 15px;
