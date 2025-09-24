@@ -21,7 +21,9 @@ get_header();
 
     ?>
     <div class="content">
-        <p></p>
+       <p class="breadcrub">
+        <a href="<?php echo site_url(HOME_PAGE) ?>">Home</a> / <a href="<?php echo site_url('/all-event') ?>">Events & Engagements</a> / <?php the_title() ?>
+        </p>
         <div class="heroText">
             <!-- <p>Previous Events</p> -->
             <h1><?php the_title(); ?></h1>
@@ -32,9 +34,12 @@ get_header();
 </section>
 
 <div class="breadcrub_container">
-    <p class="breadcrub">
-        <a href="<?php echo site_url(HOME_PAGE) ?>">Home</a> / <a href="<?php echo site_url('/all-event') ?>">Events & Engagements</a> / <?php the_title() ?>
-    </p>
+     <div class="cta" style="pointer-events: none;font-size: var(--font-16);">
+    <?php echo date('j M Y', strtotime(get_field('event_from_date'))); ?>
+    <?php if (get_field('event_to_date') != get_field('event_from_date')) { ?>
+        - <?php echo date('j M Y', strtotime(get_field('event_to_date'))); ?>
+    <?php } ?>
+    </div>
     <div class="social_links">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="facebook" onclick="shareToFacebook()" data-url="<?php echo esc_url(get_permalink()); ?>"
             data-title="<?php echo esc_attr(get_the_title()); ?>" />
@@ -45,17 +50,18 @@ get_header();
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/whatsapp.png" alt="whatsapp" onclick="shareToWhatsApp()" data-url="<?php echo esc_url(get_permalink()); ?>"
             data-title="<?php echo esc_attr(get_the_title()); ?>" />
     </div>
+    
 </div>
+<div style="
+    height: 2px;
+    background: linear-gradient(to left, transparent 50%, #f1f1f1ff 50%);
+    background-size: 20px 2px, 100% 2px;
+    position: relative;"></div>
 <div class="event-content">
     <img class="pattern" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="BTC pattern" />
 
-    <h2>About Event</h2>
-    <div class="cta">
-    <?php echo date('j M Y', strtotime(get_field('event_from_date'))); ?>
-    <?php if (get_field('event_to_date') != get_field('event_from_date')) { ?>
-        - <?php echo date('j M Y', strtotime(get_field('event_to_date'))); ?>
-    <?php } ?>
-    </div>
+    <h4 style="margin-bottom: 20px;">About Event</h4>
+   
 
     <?php the_content(); ?>
 </div>
