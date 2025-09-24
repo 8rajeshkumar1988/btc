@@ -9,7 +9,7 @@ get_header();
       <?php
             $categories = get_the_category();
             if (! empty($categories)) {
-              echo esc_html($categories[0]->name); // Show the first category
+              // echo esc_html($categories[0]->name); // Show the first category
               $cat_name = $categories[0]->name;
             } else {
               $cat_name = "Blogs";
@@ -77,7 +77,7 @@ get_header();
   </div>
 <div style="
     height: 2px;
-    background: linear-gradient(to left, transparent 50%, #555555ff 50%);
+    background: linear-gradient(to left, transparent 50%, #d9d9d9 50%);
     background-size: 20px 2px, 100% 2px;
     position: relative;"></div>
 

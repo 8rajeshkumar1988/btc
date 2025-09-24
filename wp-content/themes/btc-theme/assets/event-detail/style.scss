@@ -18,7 +18,7 @@
   gap: 40px;
   flex-wrap: wrap;
   align-items: center;
-  margin: 40px 0px;
+  margin: 20px 0px;
   padding: 0px var(--paddingX);
   .breadcrub {
     color: #666662;
@@ -153,7 +153,7 @@
 #event_location {
   padding: var(--paddingY) var(--paddingX);
   .iframe {
-    margin: 40px 0px;
+    margin: var(--spaceBelow_heading) 0px;
     width: 100%;
     height: 400px;
     iframe {
@@ -450,9 +450,11 @@
   }
 }
 .event-content {
-  padding: 0 var(--paddingX);
+  // padding: 0 var(--paddingX);
   padding-bottom: var(--spaceBelow_heading);
-
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: var(--spaceBelow_heading);
   .cta {
     margin: var(--font-16) 0px;
     &:hover {
@@ -520,6 +522,11 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .event-content{
+  padding: 0 var(--paddingX);
+  }
+}
 @media screen and (max-width: 768px) {
   #event_gallery .gallery-top {
     aspect-ratio: 16/9;
@@ -528,7 +535,7 @@
     max-width: 50px;
   }
   .breadcrub_container {
-    margin: 20px 0px;
+    // margin: 20px 0px;
     gap: 20px;
   }
 
