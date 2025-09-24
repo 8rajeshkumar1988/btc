@@ -68,7 +68,7 @@ video {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  padding-top: 40px;
+  padding-top: var(--spaceBelow_heading);
   position: relative;
 }
 #product_category .category_container .category_card {
@@ -140,7 +140,7 @@ video {
   flex-wrap: wrap;
   gap: 10px;
   max-width: 600px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 #category_listing .category_list .category_list_card .category_list_card_detail .category_tags p {
   font-size: var(--font-18);
@@ -187,7 +187,8 @@ video {
 #custom_product {
   padding: var(--paddingY) var(--paddingX);
   position: relative;
-  height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
   max-height: 1080px;
 }
 #custom_product .custom_product_detail_head {
@@ -240,7 +241,7 @@ video {
   max-width: 900px;
   width: 100%;
   gap: 40px;
-  margin: 30px 0px;
+  margin: calc(var(--spaceBelow_heading) * 1.5) 0px;
 }
 #custom_product .custom_product_detail .custom_product_detail_list > div {
   display: flex;

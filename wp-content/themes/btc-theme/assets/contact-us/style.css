@@ -68,6 +68,7 @@ body {
 #lead_form .heading h2 {
   color: var(--blue);
   font-weight: 600;
+  margin: 0;
 }
 #lead_form .iti {
   margin-top: 15px;
@@ -179,7 +180,7 @@ body {
 }
 
 #virtual_factory_experience {
-  padding: calc(var(--paddingY) / 2) var(--paddingX);
+  padding: calc(var(--paddingY) / 1) var(--paddingX);
   background-color: white;
 }
 #virtual_factory_experience .heading {
