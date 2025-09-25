@@ -22,8 +22,12 @@ var explore_other_categories = new Swiper(".explore_other_categories", {
     nextEl: ".explore_other-next",
     prevEl: ".explore_other-prev",
   },
-  speed: 1000,
-
+  loop: true,
+  speed: 800,
+   autoplay: {
+      delay: 3000,
+      disableOnInteraction: true,
+    },
   breakpoints: {
     768: {
       slidesPerView: 2.5,
@@ -39,6 +43,10 @@ var spotlight_slider = new Swiper(".spotlight_slider", {
   watchSlidesProgress: true,
   speed: 1500,
   loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: true,
+  },
   watchSlidesVisibility: true,
   navigation: {
     nextEl: ".product_spotlight-next",
@@ -54,7 +62,7 @@ var spotlight_slider = new Swiper(".spotlight_slider", {
     init: function () {
       // Count only real slides (not duplicated ones due to loop)
       const realSlides = this.slides.filter(slide => !slide.classList.contains('swiper-slide-duplicate'));
-      
+
       if (realSlides.length <= 1) {
         document.querySelector(".product_spotlight-next").style.display = "none";
         document.querySelector(".product_spotlight-prev").style.display = "none";

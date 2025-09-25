@@ -57,7 +57,7 @@ $(document).ready(function () {
     if (!video) return;
 
     gsap.to(video, {
-      y: -200, // move up by 100px
+      y: 0, // move up by 100px
       ease: "none",
       delay: index * 0.2, // simulate stagger (adjust value as needed)
       scrollTrigger: {
@@ -118,7 +118,7 @@ $(document).ready(function () {
     if (!media) return;
 
     gsap.to(media, {
-      y: -100,
+      y: 0,
       ease: "none",
       delay: i * 0.2,
       scrollTrigger: {

@@ -120,7 +120,7 @@ $(document).ready(function () {
     });
   });
 
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 1024) {
     gsap.utils.toArray("#sustainableManufacturer .text").forEach((text) => {
       gsap.to(text, {
         y: "-25%",
@@ -165,19 +165,34 @@ $(document).ready(function () {
 
   gsap.utils.toArray("#sustainableManufacturer .text").forEach((container) => {
     const items = container.querySelectorAll("p, li");
-    gsap.from(items, {
-      y: 100,
-      opacity: 0,
-      ease: "power4.out",
-      duration: 1.2,
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: container,
-        start: "top 80%",
-        end: "bottom top",
-        toggleActions: "play none none reverse",
-      },
-    });
+    if (window.innerWidth > 1024) {
+      gsap.from(items, {
+        y: 100,
+        opacity: 0,
+        ease: "power4.out",
+        duration: 1.2,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: container,
+          start: "top 80%",
+          end: "bottom top",
+          toggleActions: "play none none reverse",
+        },
+      });
+    } else {
+      gsap.from(items, {
+        y: 100,
+        opacity: 0,
+        ease: "power4.out",
+        duration: 1.2,
+        scrollTrigger: {
+          trigger: container,
+          start: "top 80%",
+          end: "bottom top",
+          toggleActions: "play none none reverse",
+        },
+      });
+    }
   });
 
   if (window.innerWidth > 1024) {
@@ -217,19 +232,48 @@ $(document).ready(function () {
       }
     );
   }
-  gsap.from("#glance .subContent > div", {
-    y: 100,
-    opacity: 0,
-    stagger: 0.3,
-    duration: 1.2,
-    ease: "power4.out",
-    scrollTrigger: {
-      trigger: "#glance .subContent",
-      start: "top 85%",
-      end: "bottom 0%",
-      toggleActions: "play none none reverse",
-    },
-  });
+  if(window.innerWidth > 1024) {
+    gsap.from("#glance .first, #glance .second", {
+      y: 100,
+      opacity: 0,
+      stagger: 0.01,
+      duration: 1.2,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: "#glance .subContent",
+        start: "top 85%",
+        end: "bottom 0%",
+        toggleActions: "play none none reverse",
+      },
+    })
+    gsap.from("#glance .subContent > div", {
+      y: 100,
+      opacity: 0,
+      stagger: 0.2,
+      duration: 1.2,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: "#glance .subContent",
+        start: "top 85%",
+        end: "bottom 0%",
+        toggleActions: "play none none reverse",
+      },
+    });
+  } else{
+    gsap.from("#glance .first, #glance .second, #glance .subContent > div", {
+      y: 100,
+      opacity: 0,
+      stagger: 0.1,
+      duration: 1.2,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: "#glance .subContent",
+        start: "top 90%",
+        end: "bottom 0%",
+        toggleActions: "play none none reverse",
+      },
+    })
+  }
 
   gsap.utils.toArray("#roleOfbtc .img img").forEach((img) => {
     gsap.to(img, {

@@ -384,7 +384,7 @@ $(document).ready(function () {
     });
   });
 
-  gsap.utils.toArray("#vision_mission .videoC video").forEach((img) => {
+  gsap.utils.toArray("#vision_mission .videoC video, #vision_mission .videoC img").forEach((img) => {
     gsap.to(img, {
       y: 0,
       ease: "none",
@@ -536,7 +536,7 @@ $(document).ready(function () {
           delay: 0.1 * i,
           scrollTrigger: {
             trigger: card,
-            start: "top 95%",
+            start: "top 90%",
             toggleActions: "restart none none reverse",
           },
         });
@@ -556,6 +556,5 @@ $(document).ready(function () {
           },
         });
       });
-
   }
 });
