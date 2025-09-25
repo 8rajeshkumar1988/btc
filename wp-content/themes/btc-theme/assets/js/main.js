@@ -319,13 +319,14 @@ $(document).ready(function () {
 
 
 
-  gsap.from('.footerCopy', {
+  gsap.from('#footerContact .content p, #footerContact .content h3, #footerContact .content button', {
     y: 100,
     opacity: 0,
     ease: "'power4.out'",
     duration: 0.8,
+    stagger: 0.2,
     scrollTrigger: {
-      trigger: '.footerCopy',
+      trigger: '#footerContact',
       start: "top 90%",
       toggleActions: "play none none reverse",
     },

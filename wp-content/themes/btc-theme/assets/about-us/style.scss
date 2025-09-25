@@ -488,10 +488,11 @@ body {
         gap: 12px;
 
         .certificate_title {
+          all: unset;
           font-size: var(--font-18);
           font-weight: 400;
           margin: 0;
-          color: var(--green);
+          color: var(--green) !important;
           line-height: 1.3;
         }
 
