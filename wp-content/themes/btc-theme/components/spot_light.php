@@ -96,10 +96,10 @@ foreach ($slides as $slide) {
         </div>
         <div class="product_spotlight_bottom">
             <div class="product_spotlight_buttons">
-                <button class="product_spotlight-prev">
+                <button class="product_spotlight-prev navBtnColor globalNavigation  ">
                     <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
                 </button>
-                <button class="product_spotlight-next">
+                <button class="product_spotlight-next navBtnColor globalNavigation">
                     <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
                 </button>
             </div>

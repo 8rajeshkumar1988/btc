@@ -275,6 +275,7 @@ header.sticky {
 
 .navBtnColor {
   background-color: var(--green);
+  border: 0;
 }
 
 .heading p {
@@ -477,8 +478,8 @@ header.sticky {
   cursor: pointer;
 }
 #faqs .accordian .faq .head .open {
-  width: 20px;
-  height: 20px;
+  width: var(--font-16);
+  height: var(--font-16);
   cursor: pointer;
   display: block;
   transform: translateY(-3px);
