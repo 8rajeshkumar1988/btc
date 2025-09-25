@@ -166,7 +166,7 @@ the_post();
         <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ISO.png" ?>" alt="">
       </div>
       <div class="certificate_description">
-        <h3 class="certificate_title">IMS:ISO 9001/45001/ 14001</h3>
+        <h3 class="certificate_title">IMS:ISO 9001&#8203;/45001&#8203;/14001</h3>
         <p>For effective environmental management system</p>
       </div>
     </div>

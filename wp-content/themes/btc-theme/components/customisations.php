@@ -1,7 +1,7 @@
  <section id="customization">
      <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern_product.png'; ?>" alt=""  btcPattern/>
      <div class="heading" animateHeading>
-         <p>Customisations</p>
+         <p>Customizations</p>
          <h2>Flexibility Knitted In</h2>
      </div>
      <div class="customization_container">

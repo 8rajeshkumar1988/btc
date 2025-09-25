@@ -88,10 +88,12 @@
             display: flex;
             gap: 10px;
             p {
-              padding: 8px 20px;
+              padding: clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) calc(clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) * 2);
               color: #fff;
               background-color: var(--blue);
               width: fit-content;
+              font-size: var(--font-16);
+              line-height: 1.6;
             }
           }
           p {

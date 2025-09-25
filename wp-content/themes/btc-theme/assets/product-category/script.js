@@ -1,5 +1,11 @@
+flaggged = false;
 $(document).ready(function () {
+  $('#footerContact *').css({'transform': 'none', 'opacity': '1'});
   $(".customization_buttons .cta").click(function () {
+
+    
+    
+
     const tab = $(this).data("tab");
     if ($(this).hasClass("active")) return;
     $(".customization_buttons .cta").removeClass("active").addClass("unactive");
@@ -26,7 +32,6 @@ $(document).ready(function () {
 
     const $currentCards = $(".customization_cards.active");
     const $nextCards = $("#" + tab);
-    console.log($nextCards);
     gsap.to($currentCards, {
       opacity: 0,
       y: 20,

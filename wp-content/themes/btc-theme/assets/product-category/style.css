@@ -143,11 +143,10 @@ video {
   margin-top: 10px;
 }
 #category_listing .category_list .category_list_card .category_list_card_detail .category_tags p {
-  font-size: var(--font-18);
-  line-height: 1.5;
+  font-size: var(--font-16);
   background-color: #b5c0ee;
   color: var(--secondaryBlack);
-  padding: 8px 20px;
+  padding: clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) calc(clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) * 2);
   font-weight: 300;
 }
 #category_listing .category_list .category_list_card:nth-child(2) .category_list_card_title {

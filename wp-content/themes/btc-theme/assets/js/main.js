@@ -14,6 +14,8 @@ function scrollToTop() {
 }
 //   scrollToTop()
 
+let flaggged = true;
+let animatedFooter;
 $(document).ready(function () {
 
   document.querySelectorAll("#customization .leadpopup").forEach(el => {
@@ -41,27 +43,27 @@ $(document).ready(function () {
 
   const backToTop = document.getElementById("backToTop");
   const arrowPath = document.querySelector(".arrow-path");
-let lastScrollY = window.scrollY;
+  let lastScrollY = window.scrollY;
 
-window.addEventListener("scroll", () => {
-  const scrollY = window.scrollY;
-  const triggerHeight = window.innerHeight * 1.5; // 250vh
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const triggerHeight = window.innerHeight * 1.5; // 250vh
 
-  if (scrollY > triggerHeight) {
-  // if (scrollY > triggerHeight && scrollY < lastScrollY) {
-    // scrolling UP & beyond trigger height
-    backToTop.classList.add("show");
-    arrowPath.style.animation = "none";
-    void arrowPath.offsetWidth; // Force reflow
-    arrowPath.style.animation = "drawArrow 2s ease forwards";
-  } else {
-    // scrolling DOWN or above trigger height
-    backToTop.classList.remove("show");
-    arrowPath.style.animation = "none";
-  }
+    if (scrollY > triggerHeight) {
+      // if (scrollY > triggerHeight && scrollY < lastScrollY) {
+      // scrolling UP & beyond trigger height
+      backToTop.classList.add("show");
+      arrowPath.style.animation = "none";
+      void arrowPath.offsetWidth; // Force reflow
+      arrowPath.style.animation = "drawArrow 2s ease forwards";
+    } else {
+      // scrolling DOWN or above trigger height
+      backToTop.classList.remove("show");
+      arrowPath.style.animation = "none";
+    }
 
-  lastScrollY = scrollY; // update scroll position
-});
+    lastScrollY = scrollY; // update scroll position
+  });
 
 
   const leftTrack = document.querySelector(".left-slide");
@@ -245,6 +247,7 @@ $(document).ready(function () {
 
   $(".leadpopup").on("click", function () {
     const $popupForm = $("#lead_popup_form");
+    $('#lead_popup_form').scrollTop(0);
 
     if ($popupForm.length) {
       $popupForm.fadeIn(300);
@@ -317,22 +320,24 @@ $(document).ready(function () {
     y: -100,
   });
 
-
-
-  gsap.from('#footerContact .content p, #footerContact .content h3, #footerContact .content button', {
-    y: 100,
-    opacity: 0,
-    ease: "'power4.out'",
-    duration: 0.8,
-    stagger: 0.2,
-    scrollTrigger: {
-      trigger: '#footerContact',
-      start: "top 90%",
-      toggleActions: "play none none reverse",
-    },
-  });
-
-
+  animatedFooter = ()=>{
+    if (flaggged) {
+      console.log("flaggged");
+      gsap.to('#footerContact .content p, #footerContact .content h3, #footerContact .content button', {
+        y: 0,
+        opacity: 1,
+        ease: "'power4.out'",
+        duration: 0.8,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: '#footerContact',
+          start: "top 90%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    }
+  }
+animatedFooter()
 
 
   $("[animateHeadingBanner]").each(function () {

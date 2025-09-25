@@ -130,10 +130,6 @@ body {
   font-size: var(--font-18);
   font-weight: 400;
 }
-#spotlight .event_description .cta {
-  transform: scale(0.8);
-  transform-origin: left;
-}
 
 #upcoming_events {
   padding: var(--paddingY) var(--paddingX);
@@ -338,10 +334,6 @@ body {
   height: 30px;
   aspect-ratio: 1;
   margin-right: 10px;
-}
-#event_archive .event_btc_container .event_btc .event_item .event_description .cta {
-  transform: scale(0.8);
-  transform-origin: left;
 }
 
 @media screen and (max-width: 1024px) {

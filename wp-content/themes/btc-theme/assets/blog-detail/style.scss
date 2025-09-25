@@ -55,11 +55,11 @@ body {
     margin-bottom: 0px;
     a,
     p {
-      padding: 5px 15px;
+      padding: clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) calc(clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) * 2);
       text-decoration: none;
       color: #000000;
       background-color: var(--green);
-      font-size: var(--font-18);
+      font-size: var(--font-16);
     }
     .date {
       background-color: var(--blue);
@@ -241,8 +241,6 @@ body {
             position: absolute;
             bottom: 20px;
             right: 20px;
-            transform-origin: right bottom;
-            transform: scale(0.8);
           }
         }
         .category_title {

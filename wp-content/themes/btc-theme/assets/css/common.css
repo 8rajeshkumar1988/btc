@@ -24,7 +24,7 @@
   --paddingX: 10%;
   --headingTop: 5px;
   --paddingY: clamp(2.5rem, -1.7857rem + 6.6964vw, 6.25rem);
-  --navBtn: clamp(2.875rem, 0.5634rem + 2.7076vw, 3.8125rem);
+  --navBtn: clamp(2.5rem, 0.6507rem + 2.1661vw, 3.25rem);
   --navbtcpadding: clamp(0.5rem, -0.5787rem + 1.2635vw, 0.9375rem);
   --spaceBelow_heading: clamp(1.875rem, 1.4583rem + 0.8681vw, 2.5rem);
 }
@@ -182,7 +182,7 @@ header.sticky {
   z-index: 1;
 }
 .cta.new span {
-  padding: clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) clamp(1.875rem, 0.3339rem + 1.8051vw, 2.5rem);
+  padding: clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) clamp(1.5625rem, 0.0214rem + 1.8051vw, 2.1875rem);
   background-color: var(--green);
   transition: all 0.3s ease-in-out;
 }
@@ -213,7 +213,7 @@ header.sticky {
   all: unset;
   color: #000;
   text-transform: uppercase;
-  font-size: var(--font-20);
+  font-size: calc(var(--font-16) - 0px);
   width: -moz-fit-content;
   width: fit-content;
   position: relative;
@@ -222,7 +222,7 @@ header.sticky {
   align-items: center;
   gap: 10px;
   z-index: 1;
-  padding: clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) clamp(1.875rem, 0.3339rem + 1.8051vw, 2.5rem);
+  padding: clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) calc(clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) * 2);
   background-color: var(--green);
   transition: letter-spacing 0.3s ease-in-out, font-weight 0.3s ease-in-out;
   transform-origin: left;
@@ -560,6 +560,13 @@ textarea {
   background-color: #fffff4;
 }
 
+#footerContact .content p,
+#footerContact .content h3,
+#footerContact .content button {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
 #footerContact {
   position: relative;
   aspect-ratio: 16/8;
@@ -626,7 +633,7 @@ footer .top {
   align-items: center;
   gap: calc(var(--paddingY) / 2);
 }
-footer .top > img {
+footer .top a img {
   height: clamp(5.625rem, 0.4167rem + 6.9444vw, 8.75rem);
 }
 footer .top .title {
@@ -1377,15 +1384,15 @@ header button.open .close {
   }
   footer {
     gap: 60px;
-    padding-bottom: 50px;
+    padding-bottom: 65px;
     padding-top: 38%;
   }
   footer .top {
     flex-direction: column;
     align-items: flex-start;
   }
-  footer .top > img {
-    height: 70px;
+  footer .top a img {
+    height: 50px;
   }
   footer .top .copy {
     line-height: 1.5;
