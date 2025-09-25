@@ -9,12 +9,22 @@ body {
 #spotlight {
   position: relative;
 }
+#spotlight .breadcrub {
+  position: relative;
+  z-index: 1;
+  font-size: var(--font-16);
+  color: #ffffff;
+}
+#spotlight .breadcrub * {
+  text-decoration: none;
+  color: #fff;
+}
 #spotlight .hero-slider {
   height: 95vh;
 }
 #spotlight .hero-slider .swiper-slide {
   position: relative;
-  padding: 150px var(--paddingX) var(--spaceBelow_heading);
+  padding: calc(clamp(1.5625rem, -1.7137rem + 4.0323vw, 3.125rem) * 2 + clamp(2.5rem, 0.5343rem + 2.4194vw, 3.4375rem)) var(--paddingX) var(--spaceBelow_heading);
 }
 #spotlight .hero-slider .swiper-slide::after {
   content: "";
