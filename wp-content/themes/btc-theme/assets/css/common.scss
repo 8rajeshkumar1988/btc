@@ -23,7 +23,8 @@
   --paddingX: 10%;
   --headingTop: 5px;
   --paddingY: clamp(2.5rem, -1.7857rem + 6.6964vw, 6.25rem); // 40 - 100   1920
-  --navBtn: clamp(3.125rem, -0.8065rem + 4.8387vw, 5rem); //50 - 80
+  --navBtn: clamp(2.875rem, 0.5634rem + 2.7076vw, 3.8125rem); //46 - 61  1366 - 1920   
+  --navbtcpadding: clamp(0.5rem, -0.5787rem + 1.2635vw, 0.9375rem); //8 - 15 1366 - 1920 
   --spaceBelow_heading: clamp(1.875rem, 1.4583rem + 0.8681vw, 2.5rem); //30 - 40
 }
 
@@ -64,11 +65,7 @@ header.sticky {
   background-size: 100% 1px;
 }
 // /* HTML: <div class="loader"></div> */
-.lead_form_submit {
-  width: 130px !important;
-  height: 30px !important;
-  justify-content: center !important;
-}
+
 .loader {
   width: 60px;
   aspect-ratio: 4;
@@ -276,6 +273,40 @@ header.sticky {
   }
 }
 
+
+.globalNavigation{
+      position: relative;
+    padding: var(--navbtcpadding);
+    height: var(--navBtn);
+    width: var(--navBtn);
+    background-color: #3b3b3b;
+    border: 1px solid #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: unset;
+    left: unset;
+    margin: unset;
+    top: unset;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    &::after,
+    &::before {
+      content: "";
+    }
+}
+.navBtnInvert{
+  img{
+    filter: invert(1);
+  }
+}
+.navBtnColor{
+  background-color: var(--green);
+}
+
+
 .heading {
   p {
     font-size: var(--font-20);
@@ -476,7 +507,7 @@ header.sticky {
     }
     .faq {
       border-bottom: 1px solid grey;
-      padding: 40px 0px;
+      padding: var(--font-20) 0;
       .head {
         display: flex;
         justify-content: space-between;
@@ -492,7 +523,7 @@ header.sticky {
           transition: all 0.3s;
         }
         p {
-          font-size: var(--font-24);
+          font-size: var(--font-20);
           color: var(--text-color);
           font-weight: 500;
         }
@@ -503,8 +534,8 @@ header.sticky {
         p,
         li {
           color: var(--tertiaryBlack);
-          font-size: var(--font-20);
-          padding-top: 20px;
+          font-size: var(--font-16);
+          padding-top: var(--font-14);
           font-weight: 300;
           span {
             color: var(--secondaryBlack);
@@ -1309,8 +1340,8 @@ header {
 
 .backtoTop {
   all: unset;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   position: fixed;
   bottom: -60px;
   right: clamp(1.25rem, 0.5536rem + 2.1429vw, 3.125rem);
@@ -1321,8 +1352,9 @@ header {
   transition: bottom 0.5s ease, opacity 0.5s ease;
   z-index: 999999999;
   svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
+    stroke-width: 1px ;
   }
 }
 .backtoTop.show {
@@ -1359,12 +1391,20 @@ header {
     --font-66: 38px;
     --font-46: 30px;
     --font-20: 16px;
-    --navBtn: 45px;
+    --navBtn: 40px;
     --paddingY: 40px;
     --font-24: 20px;
     --font-14: 13px;
     --font-16: 15px;
     --spaceBelow_heading: 30px;
+  }
+  .backtoTop{
+    height: 35px;
+    width: 35px;
+    svg{
+      height: 15px;
+      width: 15px;
+    }
   }
   .lead_form_submit {
     width: 85px !important;

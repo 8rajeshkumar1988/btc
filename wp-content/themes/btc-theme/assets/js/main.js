@@ -41,22 +41,27 @@ $(document).ready(function () {
 
   const backToTop = document.getElementById("backToTop");
   const arrowPath = document.querySelector(".arrow-path");
+let lastScrollY = window.scrollY;
 
-  window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
-    const triggerHeight = window.innerHeight * 0.5; // 150vh
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+  const triggerHeight = window.innerHeight * 1.5; // 250vh
 
-    if (scrollY > triggerHeight) {
-      backToTop.classList.add("show");
-      arrowPath.style.animation = "none";
-      void arrowPath.offsetWidth; // Force reflow
-      arrowPath.style.animation = "drawArrow 2s ease forwards";
-    } else {
-      backToTop.classList.remove("show");
-      arrowPath.style.animation = "none";
-    }
-  });
+  if (scrollY > triggerHeight) {
+  // if (scrollY > triggerHeight && scrollY < lastScrollY) {
+    // scrolling UP & beyond trigger height
+    backToTop.classList.add("show");
+    arrowPath.style.animation = "none";
+    void arrowPath.offsetWidth; // Force reflow
+    arrowPath.style.animation = "drawArrow 2s ease forwards";
+  } else {
+    // scrolling DOWN or above trigger height
+    backToTop.classList.remove("show");
+    arrowPath.style.animation = "none";
+  }
 
+  lastScrollY = scrollY; // update scroll position
+});
 
 
   const leftTrack = document.querySelector(".left-slide");

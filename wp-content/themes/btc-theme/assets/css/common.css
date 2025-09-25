@@ -24,7 +24,8 @@
   --paddingX: 10%;
   --headingTop: 5px;
   --paddingY: clamp(2.5rem, -1.7857rem + 6.6964vw, 6.25rem);
-  --navBtn: clamp(3.125rem, -0.8065rem + 4.8387vw, 5rem);
+  --navBtn: clamp(2.875rem, 0.5634rem + 2.7076vw, 3.8125rem);
+  --navbtcpadding: clamp(0.5rem, -0.5787rem + 1.2635vw, 0.9375rem);
   --spaceBelow_heading: clamp(1.875rem, 1.4583rem + 0.8681vw, 2.5rem);
 }
 
@@ -60,12 +61,6 @@ header.sticky {
 .hover:focus {
   text-decoration: none;
   background-size: 100% 1px;
-}
-
-.lead_form_submit {
-  width: 130px !important;
-  height: 30px !important;
-  justify-content: center !important;
 }
 
 .loader {
@@ -249,6 +244,37 @@ header.sticky {
   transform: rotate(0deg) translate(5px, -1px);
   filter: invert(0);
   left: calc(100% - clamp(1.875rem, 0.3339rem + 1.8051vw, 2.5rem) * 1.5);
+}
+
+.globalNavigation {
+  position: relative;
+  padding: var(--navbtcpadding);
+  height: var(--navBtn);
+  width: var(--navBtn);
+  background-color: #3b3b3b;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: unset;
+  left: unset;
+  margin: unset;
+  top: unset;
+}
+.globalNavigation img {
+  height: 100%;
+  width: 100%;
+}
+.globalNavigation::after, .globalNavigation::before {
+  content: "";
+}
+
+.navBtnInvert img {
+  filter: invert(1);
+}
+
+.navBtnColor {
+  background-color: var(--green);
 }
 
 .heading p {
@@ -441,7 +467,7 @@ header.sticky {
 }
 #faqs .accordian .faq {
   border-bottom: 1px solid grey;
-  padding: 40px 0px;
+  padding: var(--font-20) 0;
 }
 #faqs .accordian .faq .head {
   display: flex;
@@ -459,7 +485,7 @@ header.sticky {
   transition: all 0.3s;
 }
 #faqs .accordian .faq .head p {
-  font-size: var(--font-24);
+  font-size: var(--font-20);
   color: var(--text-color);
   font-weight: 500;
 }
@@ -470,8 +496,8 @@ header.sticky {
 #faqs .accordian .faq .ans p,
 #faqs .accordian .faq .ans li {
   color: var(--tertiaryBlack);
-  font-size: var(--font-20);
-  padding-top: 20px;
+  font-size: var(--font-16);
+  padding-top: var(--font-14);
   font-weight: 300;
 }
 #faqs .accordian .faq .ans p span,
@@ -1230,8 +1256,8 @@ header button.open .close {
 }
 .backtoTop {
   all: unset;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   position: fixed;
   bottom: -60px;
   right: clamp(1.25rem, 0.5536rem + 2.1429vw, 3.125rem);
@@ -1243,8 +1269,9 @@ header button.open .close {
   z-index: 999999999;
 }
 .backtoTop svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
+  stroke-width: 1px;
 }
 
 .backtoTop.show {
@@ -1279,12 +1306,20 @@ header button.open .close {
     --font-66: 38px;
     --font-46: 30px;
     --font-20: 16px;
-    --navBtn: 45px;
+    --navBtn: 40px;
     --paddingY: 40px;
     --font-24: 20px;
     --font-14: 13px;
     --font-16: 15px;
     --spaceBelow_heading: 30px;
+  }
+  .backtoTop {
+    height: 35px;
+    width: 35px;
+  }
+  .backtoTop svg {
+    height: 15px;
+    width: 15px;
   }
   .lead_form_submit {
     width: 85px !important;

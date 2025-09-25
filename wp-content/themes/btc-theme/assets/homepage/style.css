@@ -283,7 +283,7 @@
 }
 #sustainabiltyStandard .accordian .faq {
   border-bottom: 1px solid grey;
-  padding: max(20px, 4%) 0;
+  padding: var(--font-20) 0;
 }
 #sustainabiltyStandard .accordian .faq .head {
   display: flex;
@@ -292,8 +292,8 @@
   gap: 30px;
 }
 #sustainabiltyStandard .accordian .faq .head .open {
-  width: 20px;
-  height: 20px;
+  width: var(--font-16);
+  height: var(--font-16);
   cursor: pointer;
   display: block;
   transform: translateY(-3px);
@@ -313,7 +313,7 @@
 #sustainabiltyStandard .accordian .faq .ans li {
   color: var(--tertiaryBlack);
   font-size: var(--font-20);
-  padding-top: 3%;
+  padding-top: var(--font-14);
   font-weight: 300;
 }
 #sustainabiltyStandard .accordian .faq .ans p span,
@@ -362,6 +362,7 @@
 #ourCapabilities .swiper-pagination {
   text-align: center;
   bottom: 20px;
+  pointer-events: none;
 }
 #ourCapabilities .swiper-pagination .swiper-pagination-bullet {
   width: 9px;
@@ -392,8 +393,8 @@
 }
 #ourCapabilities .closeCapabilities {
   position: absolute;
-  height: calc(var(--font-46) - 10px);
-  width: calc(var(--font-46) - 10px);
+  height: 40px;
+  width: 40px;
   right: var(--paddingX);
   top: calc(var(--font-24) / 1);
   opacity: 0;
@@ -618,6 +619,12 @@
   padding: calc(var(--paddingY) / 2);
 }
 
+@media screen and (max-width: 1546px) {
+  #ourCapabilities .closeCapabilities {
+    height: 30px;
+    width: 30px;
+  }
+}
 @media screen and (max-width: 1024px) {
   #sustainabiltyStandard {
     padding: var(--paddingY) var(--paddingX);
@@ -675,6 +682,12 @@
   }
 }
 @media screen and (max-width: 768px) {
+  #ourCapabilities .btnssNew button {
+    padding: 10px;
+  }
+  #ourCapabilities .swiper-pagination {
+    bottom: 5px;
+  }
   #aboutBtc > .worldMap {
     width: 140%;
     height: auto;
@@ -715,7 +728,7 @@
   }
   #ourCapabilities .cap_container {
     aspect-ratio: unset;
-    padding: clamp(9.375rem, -3.75rem + 27.3438vw, 13.75rem) var(--paddingX) var(--paddingY);
+    padding: clamp(9.375rem, -3.75rem + 27.3438vw, 13.75rem) var(--paddingX) calc(var(--paddingY) * 1.8);
   }
   #ourCapabilities .cap_container .spiralImage {
     width: clamp(15.625rem, -3.2328rem + 71.8391vw, 31.25rem);
@@ -730,7 +743,7 @@
     left: 0;
     width: 100%;
     height: auto;
-    top: calc(var(--paddingY) + 15px);
+    top: calc(var(--paddingY) + 30px);
     max-width: unset;
     align-items: center;
   }

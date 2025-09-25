@@ -2,11 +2,15 @@ $(document).ready(function () {
   const sliderAbout = new Swiper(".slides_about_container", {
     slidesPerView: 1,
     spaceBetween: 0,
-    loop: false,
+    loop: true,
 
     speed: 800,
     effect: "creative",
-    // speed: 600,
+  
+    autoplay: {
+        delay: 3000,
+        // disableOnInteraction: false,
+    },
     creativeEffect: {
       prev: {
         translate: [0, 0, -400],
@@ -48,11 +52,11 @@ $(document).ready(function () {
     centeredSlides: false,
     slidesPerView: slidesPerViewProduct,
     loop: true,
-    // autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false,
-    // },
-    speed: 1000,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    speed: 800,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -109,12 +113,12 @@ $(document).ready(function () {
       loop: false,
 
       grabCursor: true,
-      speed: 1000,
+      speed: 800,
       // initialSlide: 3,
-      // autoplay: {
-      //     delay: 2500,
-      //     disableOnInteraction: false,
-      // },
+      autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+      },
       allowTouchMove: true, // 👈 disables swipe/drag
       simulateTouch: false,
       pagination: {
