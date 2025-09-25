@@ -528,10 +528,6 @@ textarea {
   flex-direction: column;
   align-items: flex-end;
 }
-#newsletter .newsletter_form .subscribe_btn .subscribeCta {
-  width: 175px;
-  height: 40px;
-}
 
 #footer_img_frame {
   background-color: #fffff4;
