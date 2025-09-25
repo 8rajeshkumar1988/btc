@@ -9,6 +9,16 @@ body {
 #spotlight {
   position: relative;
 }
+#spotlight .breadcrub {
+  position: relative;
+  z-index: 1;
+  font-size: var(--font-16);
+  color: #ffffff;
+}
+#spotlight .breadcrub * {
+  text-decoration: none;
+  color: #fff;
+}
 #spotlight .hero-slider {
   height: 95vh;
 }

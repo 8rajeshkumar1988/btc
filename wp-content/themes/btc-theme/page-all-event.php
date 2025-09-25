@@ -76,7 +76,9 @@ if (!$liveEvents->have_posts()) {
 
             
             <div class="content">
-              <p class="breadcrub">&nbsp;</p>
+              <p class="breadcrub">
+                <a href="<?php echo site_url(HOME_PAGE) ?>">Home</a> /  Events & Engagements
+              </p>
               <div class="heading">
                 <div class="event_description">
                   <p style="font-weight: 400;margin-bottom: 20px;">SPOTLIGHT</p>

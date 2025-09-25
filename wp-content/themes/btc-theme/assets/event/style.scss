@@ -7,6 +7,17 @@ body {
 
 #spotlight {
   position: relative;
+  .breadcrub {
+      position: relative;
+      z-index: 1;
+      font-size: var(--font-16);
+      color: #ffffff;
+      * {
+        text-decoration: none;
+        // color: var(--secondaryBlack);
+        color: #fff;
+      }
+    }
   .hero-slider {
     height: 95vh;
     .swiper-slide {
