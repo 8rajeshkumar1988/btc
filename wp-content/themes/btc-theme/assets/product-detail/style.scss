@@ -365,6 +365,8 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
+
+
   #explore_products {
     .explore_products_container {
       grid-template-columns: 1fr;
@@ -377,8 +379,11 @@ body {
     .in_mobile_explore{
       display: flex;
     }
-  }
+  }  
   #product_spotlight{
+    .product_spotlight_bottom{
+      margin-top: 20px;
+    }
     .swiper-slide {
       aspect-ratio: 4/5;
       .product_detail{

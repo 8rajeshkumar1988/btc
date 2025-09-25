@@ -130,7 +130,7 @@ video {
   text-decoration: none;
   font-size: var(--font-46);
   line-height: 1.5;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 400;
   color: #594ec2;
 }
@@ -380,6 +380,13 @@ video {
   }
   #category_listing .category_list {
     grid-template-columns: 1fr;
+  }
+  #category_listing .category_list .category_list_card .category_list_card_img p {
+    bottom: 20px;
+    right: 20px;
+  }
+  #category_listing .category_list .category_list_card .category_list_card_detail {
+    margin-top: 10px;
   }
   #custom_product {
     height: auto;

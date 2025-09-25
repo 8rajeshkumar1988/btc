@@ -518,21 +518,38 @@ $(document).ready(function () {
       toggleActions: "play none none reverse",
     },
   });
-
-  gsap.utils
-    .toArray("#certificates_compliances .certificate_card")
-    .forEach((card, i) => {
-      gsap.from(card, {
-        y: 100,
-        opacity: 0,
-        // ease: "power4.out",
-        duration: 1.2,
-        delay: 0.1 * i,
-        scrollTrigger: {
-          trigger: card,
-          start: "top 90%",
-          toggleActions: "restart none none reverse",
-        },
+  if (window.innerWidth > 1024) {
+    gsap.utils
+      .toArray("#certificates_compliances .certificate_card")
+      .forEach((card, i) => {
+        gsap.from(card, {
+          y: 100,
+          opacity: 0,
+          // ease: "power4.out",
+          duration: 1.2,
+          delay: 0.1 * i,
+          scrollTrigger: {
+            trigger: card,
+            start: "top 95%",
+            toggleActions: "restart none none reverse",
+          },
+        });
       });
-    });
+  } else {
+    gsap.utils
+      .toArray("#certificates_compliances .certificate_card")
+      .forEach((card, i) => {
+        gsap.from(card, {
+          y: 100,
+          opacity: 0,          
+          duration: 1.2,
+          scrollTrigger: {
+            trigger: card,
+            start: "top 95%",
+            toggleActions: "restart none none reverse",
+          },
+        });
+      });
+
+  }
 });

@@ -285,6 +285,9 @@ body {
   #explore_other_categories .in_mobile_explore {
     display: flex;
   }
+  #product_spotlight .product_spotlight_bottom {
+    margin-top: 20px;
+  }
   #product_spotlight .swiper-slide {
     aspect-ratio: 4/5;
   }
