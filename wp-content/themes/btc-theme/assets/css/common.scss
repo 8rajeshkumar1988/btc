@@ -23,7 +23,8 @@
   --paddingX: 10%;
   --headingTop: 5px;
   --paddingY: clamp(2.5rem, -1.7857rem + 6.6964vw, 6.25rem); // 40 - 100   1920
-  --navBtn: clamp(3.125rem, -0.8065rem + 4.8387vw, 5rem); //50 - 80
+  --navBtn: clamp(2.875rem, 0.5634rem + 2.7076vw, 3.8125rem); //46 - 61  1366 - 1920   
+  --navbtcpadding: clamp(0.5rem, -0.5787rem + 1.2635vw, 0.9375rem); //8 - 15 1366 - 1920 
   --spaceBelow_heading: clamp(1.875rem, 1.4583rem + 0.8681vw, 2.5rem); //30 - 40
 }
 
@@ -271,6 +272,40 @@ header.sticky {
     }
   }
 }
+
+
+.globalNavigation{
+      position: relative;
+    padding: var(--navbtcpadding);
+    height: var(--navBtn);
+    width: var(--navBtn);
+    background-color: #3b3b3b;
+    border: 1px solid #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: unset;
+    left: unset;
+    margin: unset;
+    top: unset;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    &::after,
+    &::before {
+      content: "";
+    }
+}
+.navBtnInvert{
+  img{
+    filter: invert(1);
+  }
+}
+.navBtnColor{
+  background-color: var(--green);
+}
+
 
 .heading {
   p {
