@@ -16,7 +16,7 @@ $(document).ready(function () {
                 }
             });
         });
-    }else{
+    } else {
         gsap.utils.toArray(".cards_wrapper .card").forEach((card, i) => {
             gsap.from(card, {
                 rotationY: 20,
@@ -36,9 +36,8 @@ $(document).ready(function () {
     }
 
     gsap.utils.toArray("#vertical_integration .card > img").forEach((img) => {
-        gsap.fromTo(
+        gsap.to(
             img,
-            { y: -120 },
             {
                 y: 0,
                 ease: "none",
@@ -53,10 +52,8 @@ $(document).ready(function () {
     });
 
 
-    gsap.fromTo('#sustainability_details .image_wrapper img', {
-        y: -150
-    }, {
-        y: 50,
+    gsap.to('#sustainability_details .image_wrapper img', {
+        y: 0,
         ease: "none",
         scrollTrigger: {
             trigger: '#sustainability_details .image_wrapper',
@@ -71,7 +68,7 @@ $(document).ready(function () {
         opacity: 0,
         ease: "power4.out",
         duration: 1.2,
-        stagger: 0.2,
+        stagger: window.innerWidth > 1024 ? 0.2 : 0.05,
         scrollTrigger: {
             trigger: '#sustainability_details .sustainability_info',
             start: "top 80%",
@@ -80,9 +77,9 @@ $(document).ready(function () {
     })
 
     gsap.fromTo('#sustainability_details .sustainability_info .leftt', {
-        y: window.innerWidth > 1024 ? 80 : 20
+        y: window.innerWidth > 1024 ? 50 : 0
     }, {
-        y: -20,
+        y: window.innerWidth > 1024 ? -50 : 0,
         ease: "none",
         scrollTrigger: {
             trigger: '#sustainability_details .sustainability_info .leftt',
@@ -117,7 +114,7 @@ $(document).ready(function () {
                 toggleActions: "play none none reverse",
             }
         })
-    }else{
+    } else {
         gsap.from('#sustainability_details .tai_container .dynamic_desc p, #sustainability_details .tai_container .dynamic_desc li', {
             y: 100,
             opacity: 0,
@@ -132,7 +129,7 @@ $(document).ready(function () {
             }
         })
     }
-   
+
     // if (window.innerWidth > 1024) {
     //     gsap.fromTo('#sustainability_details .tai_container .dynamic_desc', {
     //     y: -50
@@ -147,7 +144,7 @@ $(document).ready(function () {
     //         }
     //     });
     // }
-    
+
 
     gsap.from('.logistics_shipping_efficiency_container .first h2, .logistics_shipping_efficiency_container .first p, .logistics_shipping_efficiency_container .first .category_image', {
         y: 100,
@@ -189,11 +186,10 @@ $(document).ready(function () {
     })
 
     gsap.utils.toArray('.logistics_shipping_efficiency_container img').forEach((img) => {
-        gsap.fromTo(
+        gsap.to(
             img,
-            { top: -100 },
             {
-                top: 50,
+                y: 0,
                 ease: "none",
                 scrollTrigger: {
                     trigger: img,

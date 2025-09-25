@@ -8,7 +8,8 @@
   justify-content: flex-start;
   overflow: hidden;
 }
-#globalSearch > svg, #globalSearch .lottie {
+#globalSearch > svg,
+#globalSearch .lottie {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -66,11 +67,11 @@
   overflow: hidden;
 }
 #sustainableManufacturer > div .img img {
-  height: calc(100% + 200px);
+  height: calc(100% + 100px);
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transform: translateY(-200px);
+  transform: translateY(-100px);
   pointer-events: none;
 }
 #sustainableManufacturer > div .img p {
@@ -251,7 +252,7 @@
   margin-top: calc(var(--font-20) * 1.5);
 }
 #homeOfBtc .content .second .swiper-wrapper .swiper-slide {
-  background: linear-gradient(180deg, #F8FBFF 0%, #F1F6FF 100%);
+  background: linear-gradient(180deg, #f8fbff 0%, #f1f6ff 100%);
   display: flex;
   flex-direction: column;
   gap: calc(var(--font-20) * 2);
@@ -323,7 +324,7 @@
 }
 #roleOfbtc .content > div .img img {
   width: 100%;
-  height: calc(100% + 200px);
+  height: calc(100% + 100px);
   -o-object-fit: cover;
      object-fit: cover;
   transform: translateY(-200px);
@@ -362,11 +363,15 @@
   }
 }
 @media screen and (max-width: 1024px) {
+  #sustainableManufacturer > div .text {
+    transform: none;
+  }
   #globalSearch {
     max-height: 700px;
     height: auto;
   }
-  #globalSearch > svg, #globalSearch .lottie {
+  #globalSearch > svg,
+  #globalSearch .lottie {
     width: 105%;
     height: auto;
   }
@@ -397,25 +402,11 @@
     flex-direction: column-reverse;
   }
   #glance {
+    height: auto;
     aspect-ratio: unset;
-    overflow: hidden;
-  }
-  #glance > .svg {
-    position: relative;
-    width: 120%;
   }
   #glance .content {
-    position: relative;
-    width: 100%;
-    padding: var(--paddingX);
-  }
-  #glance .content .subContent {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-  #glance .content .subContent > div {
-    width: calc((90vw - 20px) / 2);
+    min-width: 715px;
   }
   #homeOfBtc {
     overflow: hidden;
@@ -439,7 +430,30 @@
   }
 }
 @media screen and (max-width: 768px) {
-  #globalSearch > svg, #globalSearch .lottie {
+  #glance {
+    aspect-ratio: unset;
+    overflow: hidden;
+  }
+  #glance > .svg {
+    position: relative;
+    width: 100%;
+  }
+  #glance .content {
+    position: relative;
+    width: 100%;
+    min-width: unset;
+    padding: var(--paddingX);
+  }
+  #glance .content .subContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  #glance .content .subContent > div {
+    width: calc((90vw - 20px) / 2);
+  }
+  #globalSearch > svg,
+  #globalSearch .lottie {
     width: 130%;
     height: auto;
   }
@@ -450,8 +464,8 @@
     transform: none;
   }
   #sustainableManufacturer > div .img img {
-    height: calc(100% + 100px);
-    transform: translateY(-100px);
+    height: calc(100% + 50px);
+    transform: translateY(-50px);
   }
   #roleOfbtc .content > div .text {
     transform: none;
@@ -463,7 +477,11 @@
   }
   #roleOfbtc .content > div .img {
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 0.9;
+  }
+  #roleOfbtc .content > div .img img {
+    height: calc(100% + 50px);
+    transform: translateY(-50px);
   }
   #roleOfbtc .content > div:nth-child(even) {
     display: flex;

@@ -143,7 +143,7 @@ get_header();
     <img class="svg" src="<?php echo get_template_directory_uri() . "/assets/images/world-map-btc.svg"  ?>" alt="Benin At A Glance">
 
     <div class="content">
-        <div animateHeading>
+        <div >
             <p class="first">West Africa’s Growing Economy Hub</p>
             <p class="second">Benin At A Glance</p>
         </div>
@@ -204,7 +204,7 @@ get_header();
             <p>BTC is proudly based in <strong>GDIZ - Glo-Djigbé Industrial Zone</strong>, a public-private development project backed by the Government of Benin and ARISE IIP, built to offer world-class industrial infrastructure and business facilitation.</p>
         </div>
         <div>
-            <div class="second home-btc-swiper">
+            <div class="second home-btc-swiper" animateheading>
                 <p class="title">Why GDIZ Matters to Our Clients</p>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">

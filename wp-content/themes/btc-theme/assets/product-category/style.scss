@@ -82,7 +82,8 @@ video{
       img,
       video {
         width: 100%;
-        height: calc(100% + 200px);
+        height: calc(100% + 100px);
+        transform: translateY(-100px);
         position: absolute;
         object-fit: cover;
         z-index: -1;
@@ -104,10 +105,11 @@ video{
         aspect-ratio: 526/450;
         overflow: hidden;
         position: relative;
-        video,
-        img {
+        &> video,
+         &> img {
           width: 100%;
           height: calc(100% + 100px);
+          transform: translateY(-100px);
           object-fit: cover;
           pointer-events: none;
         }
@@ -366,7 +368,7 @@ video{
     }
   }
   .leadpopup {
-    margin: 0 auto;
+    margin: 20px auto 0;
   }
 }
 
@@ -403,6 +405,10 @@ video{
     .category_container {
       grid-template-columns: 1fr;
       .category_card {
+        video, img{
+          height: calc(100% + 50px);
+          transform: translateY(-50px);
+        }
         h2 {
           font-size: 30px;
           right: 20px;
@@ -416,6 +422,10 @@ video{
       grid-template-columns: 1fr;
        .category_list_card{
         .category_list_card_img{
+          &> img{
+            height: calc(100% + 50px);
+            transform: translateY(-50px);
+          }
           p{
             bottom: 20px;
             right: 20px;

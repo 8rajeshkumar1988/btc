@@ -153,10 +153,10 @@ body {
 #vision_mission .vision_mission_container img,
 #vision_mission .vision_mission_container video {
   width: 100%;
-  height: calc(100% + 150px);
+  height: calc(100% + 100px);
   -o-object-fit: cover;
      object-fit: cover;
-  transform: translateY(-150px);
+  transform: translateY(-100px);
 }
 #vision_mission .swiper {
   width: 100%;
@@ -622,8 +622,12 @@ body {
     flex-direction: column;
     gap: 40px;
   }
-  .vision_mission_container {
+  #vision_mission .vision_mission_container {
     width: 100%;
+  }
+  #vision_mission .vision_mission_container img, #vision_mission .vision_mission_container video {
+    height: calc(100% + 50px);
+    transform: translateY(-50px);
   }
   #our_leadership .our_leadership_container {
     grid-template-columns: 1fr;

@@ -192,7 +192,7 @@
 //   });
 // }
 $(document).ready(function () {
-    $("#traceability .containers").each(function (index) {
+  $("#traceability .containers").each(function (index) {
     const isEven = index % 2 === 0;
     gsap.to(this, {
       transform: isEven
@@ -219,66 +219,66 @@ $(document).ready(function () {
   });
 
   document.querySelectorAll("#traceability .parent_pers").forEach((_, index) => {
-  const dot = document.createElement("div");
-  dot.classList.add("dot");
-  if (index === 0) dot.classList.add("active");
-  document.getElementById("progress_indication").appendChild(dot);
-});
-
-function updateActiveDot(activeIndex) {
-  document.querySelectorAll("#progress_indication .dot").forEach((dot, i) => {
-    dot.classList.toggle("active", i === activeIndex);
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    if (index === 0) dot.classList.add("active");
+    document.getElementById("progress_indication").appendChild(dot);
   });
-}
 
-let progressVisible = false;
-
-function checktraceabilityInViewAndActiveDot() {
-  const traceability = document.getElementById("traceability");
-  const progress = document.getElementById("progress_indication");
-  const traceabilityRect = traceability.getBoundingClientRect();
-
-  const inView = traceabilityRect.top < window.innerHeight / 2 && traceabilityRect.bottom > window.innerHeight / 2;
-
-  if (inView && !progressVisible) {
-    progressVisible = true;
-    gsap.to(progress, {
-      x: 0,
-      autoAlpha: 1,
-      duration: 0.5,
-      ease: "power2.out"
-    });
-  } else if (!inView && progressVisible) {
-    progressVisible = false;
-    gsap.to(progress, {
-      x: 40,
-      autoAlpha: 0,
-      duration: 0.2,
-      ease: "power2.in"
+  function updateActiveDot(activeIndex) {
+    document.querySelectorAll("#progress_indication .dot").forEach((dot, i) => {
+      dot.classList.toggle("active", i === activeIndex);
     });
   }
 
-  if (!inView) return;
+  let progressVisible = false;
 
-  // Highlight the active dot
-  const parentPersList = document.querySelectorAll("#traceability .parent_pers");
-  let activeIndex = 0;
+  function checktraceabilityInViewAndActiveDot() {
+    const traceability = document.getElementById("traceability");
+    const progress = document.getElementById("progress_indication");
+    const traceabilityRect = traceability.getBoundingClientRect();
 
-  parentPersList.forEach((el, index) => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
-      activeIndex = index;
+    const inView = traceabilityRect.top < window.innerHeight / 2 && traceabilityRect.bottom > window.innerHeight / 2;
+
+    if (inView && !progressVisible) {
+      progressVisible = true;
+      gsap.to(progress, {
+        x: 0,
+        autoAlpha: 1,
+        duration: 0.5,
+        ease: "power2.out"
+      });
+    } else if (!inView && progressVisible) {
+      progressVisible = false;
+      gsap.to(progress, {
+        x: 40,
+        autoAlpha: 0,
+        duration: 0.2,
+        ease: "power2.in"
+      });
     }
-  });
 
-  updateActiveDot(activeIndex);
-}
+    if (!inView) return;
+
+    // Highlight the active dot
+    const parentPersList = document.querySelectorAll("#traceability .parent_pers");
+    let activeIndex = 0;
+
+    parentPersList.forEach((el, index) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) {
+        activeIndex = index;
+      }
+    });
+
+    updateActiveDot(activeIndex);
+  }
 
 
-window.addEventListener("scroll", checktraceabilityInViewAndActiveDot);
-window.addEventListener("resize", checktraceabilityInViewAndActiveDot);
+  window.addEventListener("scroll", checktraceabilityInViewAndActiveDot);
+  window.addEventListener("resize", checktraceabilityInViewAndActiveDot);
 
-checktraceabilityInViewAndActiveDot();
+  checktraceabilityInViewAndActiveDot();
 
   gsap.from("#sustainability_details h2, #sustainability_details p ", {
     y: 100,
@@ -293,20 +293,37 @@ checktraceabilityInViewAndActiveDot();
     },
   });
 
-  gsap.utils
-    .toArray("#certificates_compliances .certificate_card")
-    .forEach((card, i) => {
-      gsap.from(card, {
-        y: 100,
-        opacity: 0,
-        // ease: "power4.out",
-        duration: 1.2,
-        delay: 0.1 * i,
-        scrollTrigger: {
-          trigger: card,
-          start: "top 90%",
-          toggleActions: "restart none none reverse",
-        },
+  if (window.innerWidth > 1024) {
+    gsap.utils
+      .toArray("#certificates_compliances .certificate_card")
+      .forEach((card, i) => {
+        gsap.from(card, {
+          y: 100,
+          opacity: 0,
+          // ease: "power4.out",
+          duration: 1.2,
+          delay: 0.1 * i,
+          scrollTrigger: {
+            trigger: card,
+            start: "top 95%",
+            toggleActions: "restart none none reverse",
+          },
+        });
       });
-    });
+  } else {
+    gsap.utils
+      .toArray("#certificates_compliances .certificate_card")
+      .forEach((card, i) => {
+        gsap.from(card, {
+          y: 100,
+          opacity: 0,
+          duration: 1.2,
+          scrollTrigger: {
+            trigger: card,
+            start: "top 95%",
+            toggleActions: "restart none none reverse",
+          },
+        });
+      });
+  }
 });
