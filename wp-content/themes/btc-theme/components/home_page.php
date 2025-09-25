@@ -97,8 +97,8 @@
                 ?>
             </div>
             <div class="btnss">
-                <button class="swiper-button-next productNext"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
-                <button class="swiper-button-prev productPrev"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+                <button class="swiper-button-next productNext globalNavigation navBtnColor"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+                <button class="swiper-button-prev productPrev globalNavigation navBtnColor"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
             </div>
         </div>
     </div>
@@ -259,8 +259,8 @@
         </div>
         <div class="swiper-pagination"></div>
         <div class="btnssNew">
-            <button class="swiper-button-next capabilitiesNext"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
-            <button class="swiper-button-prev capabilitiesPrev swiper-button-disabled"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <button class="swiper-button-next capabilitiesNext globalNavigation navBtnColor"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <button class="swiper-button-prev capabilitiesPrev swiper-button-disabled navBtnColor globalNavigation"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
         </div>
     </div>
 

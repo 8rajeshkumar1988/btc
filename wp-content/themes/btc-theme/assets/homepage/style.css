@@ -101,36 +101,13 @@
   display: flex;
   gap: 15px;
 }
-#aboutBtc .content .sliderAbout .navigation_about button {
-  position: relative;
-  padding: 15px;
-  height: var(--navBtn);
-  width: var(--navBtn);
-  background-color: #3b3b3b;
-  border: 1px solid #d9d9d9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  right: unset;
-  left: unset;
-  margin: unset;
-  top: unset;
-}
-#aboutBtc .content .sliderAbout .navigation_about button img {
-  height: 100%;
-  width: 100%;
-  filter: invert(1);
-}
-#aboutBtc .content .sliderAbout .navigation_about button::after, #aboutBtc .content .sliderAbout .navigation_about button::before {
-  content: "";
-}
 #aboutBtc .content .sliderAbout .navigation_about .prev {
   position: relative;
 }
 #aboutBtc .content .sliderAbout .navigation_about .prev img {
   transform: rotate(180deg);
 }
-#aboutBtc .cta {
+#aboutBtc .ctaContainer_about {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -218,7 +195,7 @@
 }
 #ourProducts .content .ourProducts .btnss {
   position: absolute;
-  right: 10%;
+  right: var(--paddingX);
   bottom: 0%;
   z-index: 9;
   display: flex;
@@ -234,24 +211,6 @@
 }
 #ourProducts .content .ourProducts .btnss .swiper-button-disabled img {
   opacity: 0.4;
-}
-#ourProducts .content .ourProducts .btnss button {
-  padding: 15px;
-  height: var(--navBtn);
-  width: var(--navBtn);
-  border: 0;
-  background-color: var(--green);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: unset;
-}
-#ourProducts .content .ourProducts .btnss button:after, #ourProducts .content .ourProducts .btnss button:before {
-  display: none;
-}
-#ourProducts .content .ourProducts .btnss button img {
-  height: 100%;
-  width: 100%;
 }
 
 #sustainabiltyStandard {
@@ -529,22 +488,7 @@
   opacity: 0.4;
 }
 #ourCapabilities .btnssNew button {
-  padding: 15px;
-  height: var(--navBtn);
-  width: var(--navBtn);
-  border: 0;
-  background-color: var(--green);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: unset;
-}
-#ourCapabilities .btnssNew button:after, #ourCapabilities .btnssNew button:before {
-  display: none;
-}
-#ourCapabilities .btnssNew button img {
-  height: 100%;
-  width: 100%;
+  margin: auto;
 }
 #ourCapabilities .cap_container {
   position: relative;
@@ -640,9 +584,6 @@
     width: 100%;
     min-width: unset;
   }
-  #aboutBtc .content .sliderAbout .navigation_about button {
-    padding: 7px;
-  }
   #ourCapabilities .swiper-slide {
     height: clamp(25rem, 6.25rem + 39.0625vw, 31.25rem);
     gap: 40px;
@@ -682,9 +623,6 @@
   }
 }
 @media screen and (max-width: 768px) {
-  #ourCapabilities .btnssNew button {
-    padding: 10px;
-  }
   #ourCapabilities .swiper-pagination {
     bottom: 5px;
   }
@@ -707,11 +645,14 @@
   #aboutBtc .content .sliderAbout .slides_about .tiles > div:first-child .tag {
     padding: 10px;
   }
-  #aboutBtc .content .sliderAbout .navigation_about button {
-    padding: 7px;
+  #aboutBtc .content .sliderAbout .navigation_about {
+    justify-content: flex-end;
   }
   #ourProducts .content {
     padding: 0 var(--paddingX);
+  }
+  #ourProducts .content .ourProducts .btnss {
+    right: 0;
   }
   #ourCapabilities .swiper-slide {
     height: auto;
@@ -759,6 +700,14 @@
     max-width: 400px;
     text-align: center;
   }
+  #aboutBtc .content .sliderAbout {
+    max-width: 100%;
+  }
+  #aboutBtc .ctaContainer_about {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 @media screen and (max-width: 600px) {
   #ourProducts .content .ourProducts {
@@ -801,16 +750,18 @@
     height: var(--navBtn);
     margin-top: 20px;
   }
-  #ourProducts .content .ourProducts .btnss button {
-    margin: 0;
-    padding: 7px;
+  #aboutBtc .content {
+    gap: 20px;
+  }
+  #aboutBtc .content .sliderAbout {
+    gap: 20px;
   }
   #ourCapabilities .swiper-slide .text img {
     margin: 2% 0 4%;
   }
   #ourCapabilities .btnssNew {
     height: var(--navBtn);
-    bottom: 0;
+    bottom: 25px;
   }
   #linkedIn_video {
     height: 50dvh;
@@ -818,10 +769,5 @@
   }
   #linkedIn_video video {
     transform: translateY(-200px);
-  }
-}
-@media screen and (max-width: 450px) {
-  #aboutBtc .cta {
-    position: relative;
   }
 }/*# sourceMappingURL=style.css.map */

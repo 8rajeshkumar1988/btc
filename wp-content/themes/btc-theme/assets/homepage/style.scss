@@ -112,28 +112,28 @@
         display: flex;
         gap: 15px;
         button {
-          position: relative;
-          padding: 15px;
-          height: var(--navBtn);
-          width: var(--navBtn);
-          background-color: #3b3b3b;
-          border: 1px solid #d9d9d9;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          right: unset;
-          left: unset;
-          margin: unset;
-          top: unset;
-          img {
-            height: 100%;
-            width: 100%;
-            filter: invert(1);
-          }
-          &::after,
-          &::before {
-            content: "";
-          }
+          // position: relative;
+          // padding: 15px;
+          // height: var(--navBtn);
+          // width: var(--navBtn);
+          // background-color: #3b3b3b;
+          // border: 1px solid #d9d9d9;
+          // display: flex;
+          // align-items: center;
+          // justify-content: center;
+          // right: unset;
+          // left: unset;
+          // margin: unset;
+          // top: unset;
+          // img {
+          //   height: 100%;
+          //   width: 100%;
+          //   filter: invert(1);
+          // }
+          // &::after,
+          // &::before {
+          //   content: "";
+          // }
         }
         .prev {
           position: relative;
@@ -144,7 +144,7 @@
       }
     }
   }
-  .cta {
+  .ctaContainer_about {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -248,7 +248,7 @@
       }
       .btnss {
         position: absolute;
-        right: 10%;
+        right: var(--paddingX);
         bottom: 0%;
         z-index: 9;
         display: flex;
@@ -267,25 +267,25 @@
           }
         }
 
-        button {
-          padding: 15px;
-          height: var(--navBtn);
-          width: var(--navBtn);
-          border: 0;
-          background-color: var(--green);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: unset;
-          &:after,
-          &:before {
-            display: none;
-          }
-          img {
-            height: 100%;
-            width: 100%;
-          }
-        }
+        // button {
+        //   padding: 15px;
+        //   height: var(--navBtn);
+        //   width: var(--navBtn);
+        //   border: 0;
+        //   background-color: var(--green);
+        //   display: flex;
+        //   align-items: center;
+        //   justify-content: center;
+        //   position: unset;
+        //   &:after,
+        //   &:before {
+        //     display: none;
+        //   }
+        //   img {
+        //     height: 100%;
+        //     width: 100%;
+        //   }
+        // }
       }
     }
   }
@@ -601,23 +601,24 @@
     }
 
     button {
-      padding: 15px;
-      height: var(--navBtn);
-      width: var(--navBtn);
-      border: 0;
-      background-color: var(--green);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: unset;
-      &:after,
-      &:before {
-        display: none;
-      }
-      img {
-        height: 100%;
-        width: 100%;
-      }
+      margin: auto;
+      // padding: 15px;
+      // height: var(--navBtn);
+      // width: var(--navBtn);
+      // border: 0;
+      // background-color: var(--green);
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+      // position: unset;
+      // &:after,
+      // &:before {
+      //   display: none;
+      // }
+      // img {
+      //   height: 100%;
+      //   width: 100%;
+      // }
     }
   }
   .cap_container {
@@ -726,9 +727,9 @@
         width: 100%;
         min-width: unset;
         .navigation_about {
-          button {
-            padding: 7px;
-          }
+          // button {
+          //   padding: 7px;
+          // }
         }
       }
     }
@@ -777,13 +778,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  #ourCapabilities{
-     .btnssNew{
-       button{
-        padding: 10px;
-       }
-     }
-  }
+  // #ourCapabilities{
+  //    .btnssNew{
+  //      button{
+  //       padding: 10px;
+  //      }
+  //    }
+  // }
 #ourCapabilities {
   .swiper-pagination{
     bottom: 5px;
@@ -797,7 +798,7 @@
     }
     .content {
       .sliderAbout {
-        margin-top: clamp(9.375rem, 19.5652rem + -40.7609vw, 0rem);
+        margin-top:clamp(9.375rem, 19.5652rem - 40.7609vw, 0rem);
         .slides_about {
           .tiles {
             gap: 30px;
@@ -814,9 +815,10 @@
           }
         }
         .navigation_about {
-          button {
-            padding: 7px;
-          }
+          justify-content: flex-end;
+          // button {
+          //   padding: 7px;
+          // }
         }
       }
     }
@@ -825,6 +827,9 @@
   #ourProducts {
     .content {
       padding: 0 var(--paddingX);
+      .ourProducts .btnss{
+        right: 0;
+      }
     }
   }
 
@@ -874,6 +879,18 @@
         max-width: 400px;
         text-align: center;
       }
+    }
+  }
+    #aboutBtc {
+      .content {
+        .sliderAbout{
+          max-width: 100%;
+        }
+      }
+    .ctaContainer_about {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
     }
   }
 }
@@ -926,14 +943,26 @@
           position: initial;
           height: var(--navBtn);
           margin-top: 20px;
-          button {
-            margin: 0;
-            padding: 7px;
-          }
+          // button {
+          //   margin: 0;
+          //   padding: 7px;
+          // }
         }
       }
     }
   }
+
+    #aboutBtc {
+    
+    .content {
+      gap: 20px;
+      .sliderAbout {
+        gap: 20px;
+      }
+    }
+  }
+
+
   #ourCapabilities {
     .swiper-slide {
       .text {
@@ -944,7 +973,7 @@
     }
     .btnssNew {
       height: var(--navBtn);
-      bottom: 0;
+      bottom: 25px;
     }
   }
 
@@ -959,10 +988,4 @@
   }
 }
 
-@media screen and (max-width: 450px) {
-  #aboutBtc {
-    .cta {
-      position: relative;
-    }
-  }
-}
+

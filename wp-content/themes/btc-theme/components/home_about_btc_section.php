@@ -49,11 +49,13 @@ $key_pointers = new WP_Query(array(
             </div>
           </div>
           <div class="navigation_about">
-              <button class="swiper-button-prev prev aboutPrev"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
-              <button class="swiper-button-next next aboutNext"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
+              <button class="swiper-button-prev prev aboutPrev globalNavigation navBtnInvert"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
+              <button class="swiper-button-next next aboutNext globalNavigation navBtnInvert"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
           </div>
             </div>
-        <a class="cta" href="<?php echo home_url('/about-us'); ?>" >Know More About BTC <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Know More About BTC"></a>
+        <div class="ctaContainer_about">
+            <a class="cta" href="<?php echo home_url('/about-us'); ?>" >Know More About BTC <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Know More About BTC"></a>
+        </div>
     </div>
 </section>
 
