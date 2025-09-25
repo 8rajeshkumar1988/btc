@@ -128,7 +128,7 @@ $(document).ready(function () {
                 trigger: '#sustainability_details .tai_container .dynamic_desc p',
                 start: "top 90%",
                 toggleActions: "play none none reverse",
-                markers:true
+                // markers:true
             }
         })
     }
