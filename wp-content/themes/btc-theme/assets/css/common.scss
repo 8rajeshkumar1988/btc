@@ -275,6 +275,7 @@ header.sticky {
 
 
 .globalNavigation{
+  cursor: pointer;
       position: relative;
     padding: var(--navbtcpadding);
     height: var(--navBtn);
@@ -314,7 +315,7 @@ header.sticky {
     color: var(--tertiaryBlack);
     font-weight: 700;
     text-transform: uppercase;
-    line-height: 1;
+    // line-height: 1;
   }
   h1,
   h2,

@@ -341,10 +341,10 @@ if ($otherEvents->have_posts()) {
         </div>
         <div class="event_btc_button_container">
             <div class="event_btc_buttons">
-                <button class="event_btc-prev">
+                <button class="event_btc-prev globalNavigation navBtnColor">
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
                 </button>
-                <button class="event_btc-next">
+                <button class="event_btc-next globalNavigation navBtnColor">
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
                 </button>
             </div>

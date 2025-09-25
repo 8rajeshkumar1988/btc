@@ -42,21 +42,6 @@ body {
   display: flex;
   gap: 15px;
 }
-#about_btc .about_btc_buttons button {
-  padding: 15px;
-  height: var(--navBtn);
-  width: var(--navBtn);
-  background-color: #d4ff32;
-  border: 0px solid #d9d9d9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#about_btc .about_btc_buttons button img {
-  height: 100%;
-  width: 100%;
-  opacity: 1;
-}
 #about_btc .about_btc_buttons button.swiper-button-disabled {
   background-color: #e4e4e4;
 }
@@ -360,13 +345,7 @@ body {
   font-weight: 700;
 }
 #our_impact .our_impact_container .impact_wrapper .impact_wrapper_head .open-btn {
-  padding: 10px;
-  height: var(--navBtn);
-  width: var(--navBtn);
-  border: 0px solid #d9d9d9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #d9d9d9;
   transition: all 0.4s;
 }
 #our_impact .our_impact_container .impact_wrapper .impact_wrapper_head .open-btn img {
@@ -649,13 +628,6 @@ body {
     padding: 20px;
   }
   #our_impact .our_impact_container .impact_wrapper .impact_wrapper_head .open-btn {
-    padding: 10px;
-    height: var(--navBtn);
-    width: var(--navBtn);
-    border: 0px solid #d9d9d9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: all 0.4s;
   }
   #our_impact .our_impact_container .impact_wrapper .impact_wrapper_head .open-btn img {

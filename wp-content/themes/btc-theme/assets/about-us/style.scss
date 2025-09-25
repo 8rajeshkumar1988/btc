@@ -42,21 +42,21 @@ body {
     padding-top: var();
     display: flex;
     gap: 15px;
-    button {
-      padding: 15px;
-      height: var(--navBtn);
-      width: var(--navBtn);
-      background-color: #d4ff32;
-      border: 0px solid #d9d9d9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img {
-        height: 100%;
-        width: 100%;
-        opacity: 1;
-      }
-    }
+    // button {
+    //   padding: 15px;
+    //   height: var(--navBtn);
+    //   width: var(--navBtn);
+    //   background-color: #d4ff32;
+    //   border: 0px solid #d9d9d9;
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   img {
+    //     height: 100%;
+    //     width: 100%;
+    //     opacity: 1;
+    //   }
+    // }
     button.swiper-button-disabled {
       background-color: #e4e4e4;
       img {
@@ -368,14 +368,14 @@ body {
           font-weight: 700;
         }
         .open-btn {
-          padding: 10px;
-          height: var(--navBtn);
-          width: var(--navBtn);
-          // background-color: #d4ff32;
-          border: 0px solid #d9d9d9;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          // padding: 10px;
+          // height: var(--navBtn);
+          // width: var(--navBtn);
+          background-color: #d9d9d9;
+          // border: 0px solid #d9d9d9;
+          // display: flex;
+          // align-items: center;
+          // justify-content: center;
           transition: all 0.4s;
           img {
             transform: rotate(90deg);
@@ -714,14 +714,16 @@ body {
         .impact_wrapper_head {
           padding: 20px;
           .open-btn {
-            padding: 10px;
-            height: var(--navBtn);
-            width: var(--navBtn);
+            // padding: 10px;
+            // height: var(--navBtn);
+            // width: var(--navBtn);
             // background-color: #d4ff32;
-            border: 0px solid #d9d9d9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            // border: 0px solid #d9d9d9;
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+            // background-color: #d9d9d9;
+
             transition: all 0.4s;
             img {
               transform: rotate(90deg);

@@ -19,10 +19,10 @@
          <h2>Explore Other Categories</h2>
        </div>
        <div class="explore_other_buttons">
-         <button class="explore_other-prev">
+         <button class="explore_other-prev globalNavigation navBtnColor">
            <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
          </button>
-         <button class="explore_other-next">
+         <button class="explore_other-next globalNavigation navBtnColor">
            <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
          </button>
        </div>
@@ -80,10 +80,10 @@
        </div>
      </div>
       <div class="explore_other_buttons in_mobile_explore">
-         <button class="explore_other-prev">
+         <button class="explore_other-prev globalNavigation navBtnColor">
            <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
          </button>
-         <button class="explore_other-next">
+         <button class="explore_other-next globalNavigation navBtnColor">
            <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
          </button>
        </div>

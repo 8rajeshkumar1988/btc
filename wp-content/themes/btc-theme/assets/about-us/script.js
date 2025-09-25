@@ -1,16 +1,22 @@
 var swiper = new Swiper(".about_btc", {
   slidesPerView: 1,
   spaceBetween: 20,
-
+  loop:true,
   navigation: {
     nextEl: ".about_btc-next",
     prevEl: ".about_btc-prev",
   },
-  speed: 1000,
+   autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  speed: 800,
   breakpoints: {
     1200: {
       slidesPerView: 3,
       spaceBetween: 30,
+       autoplay: false,
+        loop: false,  
     },
     1024: {
       slidesPerView: 2.1,

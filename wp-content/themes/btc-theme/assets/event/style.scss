@@ -178,7 +178,7 @@ body {
       }
       .impact_wrapper_head {
         position: relative;
-        padding: 20px 40px;
+        padding: 20px var(--spaceBelow_heading);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -196,14 +196,14 @@ body {
         }
 
         .open-btn {
-          padding: 10px;
-          height: var(--navBtn);
-          width: var(--navBtn);
-          // background-color: #d4ff32;
-          border: 0px solid #d9d9d9;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          // padding: 10px;
+          // height: var(--navBtn);
+          // width: var(--navBtn);
+          background-color: #d9d9d9;
+          // border: 0px solid #d9d9d9;
+          // display: flex;
+          // align-items: center;
+          // justify-content: center;
           transition: all 0.4s;
           img {
             transform: rotate(90deg);
@@ -219,17 +219,22 @@ body {
         z-index: 1;
         color: #fff;
         gap: 40px;
-        padding: 40px;
+        padding: var(--spaceBelow_heading);
         .content-details {
           height: 100%;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           gap: 150px;
-          p {
+         p {
             font-size: var(--font-20);
             max-width: 400px;
+            display: -webkit-box;            /* Needed for multi-line truncation */
+            -webkit-line-clamp: 3;          /* Limit to 3 lines */
+            -webkit-box-orient: vertical;   /* Ensure proper box orientation */
+            overflow: hidden;               /* Hide content that overflows */
           }
+
         }
         .content-bottom {
           display: flex;
@@ -293,21 +298,21 @@ body {
     display: flex;
     gap: 15px;
     button {
-      padding: 15px;
-      height: var(--navBtn);
-      width: var(--navBtn);
-      background-color: #d4ff32;
-      border: 0px solid #d9d9d9;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
+      // padding: 15px;
+      // height: var(--navBtn);
+      // width: var(--navBtn);
+      // background-color: #d4ff32;
+      // border: 0px solid #d9d9d9;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+      // cursor: pointer;
 
-      img {
-        height: 100%;
-        width: 100%;
-        opacity: 1;
-      }
+      // img {
+      //   height: 100%;
+      //   width: 100%;
+      //   opacity: 1;
+      // }
     }
     button.swiper-button-disabled {
       background-color: #e4e4e4;

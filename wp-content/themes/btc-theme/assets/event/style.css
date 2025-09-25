@@ -175,7 +175,7 @@ body {
 }
 #upcoming_events .our_impact_container .impact_wrapper .impact_wrapper_head {
   position: relative;
-  padding: 20px 40px;
+  padding: 20px var(--spaceBelow_heading);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -192,13 +192,7 @@ body {
   text-overflow: ellipsis;
 }
 #upcoming_events .our_impact_container .impact_wrapper .impact_wrapper_head .open-btn {
-  padding: 10px;
-  height: var(--navBtn);
-  width: var(--navBtn);
-  border: 0px solid #d9d9d9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #d9d9d9;
   transition: all 0.4s;
 }
 #upcoming_events .our_impact_container .impact_wrapper .impact_wrapper_head .open-btn img {
@@ -212,7 +206,7 @@ body {
   z-index: 1;
   color: #fff;
   gap: 40px;
-  padding: 40px;
+  padding: var(--spaceBelow_heading);
 }
 #upcoming_events .our_impact_container .impact_wrapper .content .content-details {
   height: 100%;
@@ -224,6 +218,10 @@ body {
 #upcoming_events .our_impact_container .impact_wrapper .content .content-details p {
   font-size: var(--font-20);
   max-width: 400px;
+  display: -webkit-box; /* Needed for multi-line truncation */
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical; /* Ensure proper box orientation */
+  overflow: hidden; /* Hide content that overflows */
 }
 #upcoming_events .our_impact_container .impact_wrapper .content .content-bottom {
   display: flex;
@@ -274,22 +272,6 @@ body {
   padding-top: 30px;
   display: flex;
   gap: 15px;
-}
-#event_archive .event_btc_buttons button {
-  padding: 15px;
-  height: var(--navBtn);
-  width: var(--navBtn);
-  background-color: #d4ff32;
-  border: 0px solid #d9d9d9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-#event_archive .event_btc_buttons button img {
-  height: 100%;
-  width: 100%;
-  opacity: 1;
 }
 #event_archive .event_btc_buttons button.swiper-button-disabled {
   background-color: #e4e4e4;

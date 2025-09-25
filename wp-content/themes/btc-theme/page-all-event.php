@@ -169,7 +169,7 @@ if ($upcomingEvents->have_posts()) {
           <div class="overlay"></div>
           <div class="impact_wrapper_head">
             <h2><?php the_title() ?></h2>
-            <button class="open-btn">
+            <button class="open-btn globalNavigation">
               <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>"
                 alt="right arrow" />
             </button>
@@ -291,10 +291,10 @@ if ($pastEvents->have_posts()) {
     </div>
     <div class="event_btc_button_container">
       <div class="event_btc_buttons">
-        <button class="event_btc-prev">
+        <button class="event_btc-prev globalNavigation navBtnColor">
           <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
         </button>
-        <button class="event_btc-next">
+        <button class="event_btc-next globalNavigation navBtnColor">
           <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
         </button>
       </div>

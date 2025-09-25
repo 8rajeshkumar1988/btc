@@ -259,10 +259,10 @@ get_header();
                 </div>
             </div>
             <div class="why_btc_buttons">
-                <button class="why_btc-prev">
+                <button class="why_btc-prev globalNavigation navBtnColor">
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
                 </button>
-                <button class="why_btc-next">
+                <button class="why_btc-next globalNavigation navBtnColor">
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
                 </button>
             </div>

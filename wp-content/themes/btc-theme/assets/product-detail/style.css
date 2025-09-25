@@ -178,21 +178,6 @@ body {
   display: flex;
   gap: 15px;
 }
-#explore_other_categories .explore_other_buttons button {
-  padding: 15px;
-  height: var(--navBtn);
-  width: var(--navBtn);
-  background-color: #d4ff32;
-  border: 0px solid #d9d9d9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#explore_other_categories .explore_other_buttons button img {
-  height: 100%;
-  width: 100%;
-  opacity: 1;
-}
 #explore_other_categories .explore_other_buttons button.swiper-button-disabled {
   background-color: #e4e4e4;
 }
@@ -284,6 +269,7 @@ body {
   }
   #explore_other_categories .in_mobile_explore {
     display: flex;
+    margin-top: 20px;
   }
   #product_spotlight .product_spotlight_bottom {
     margin-top: 20px;
