@@ -26,7 +26,7 @@ $(document).ready(function () {
     });
   });
 
-// Create dots dynamically
+// Create dots dynamically 
 document.querySelectorAll("#parking .parent_pers").forEach((_, index) => {
   const dot = document.createElement("div");
   dot.classList.add("dot");
