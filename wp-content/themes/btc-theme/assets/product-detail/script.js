@@ -100,7 +100,7 @@ $(document).ready(function () {
       opacity: 0,
       ease: "power4.out",
       duration: 1.2,
-      delay: index * 0.08,
+      // delay: window.innerWidth < 1024 ? 0 : index * 0.08,
       scrollTrigger: {
         trigger: this,
         start: "top 90%",

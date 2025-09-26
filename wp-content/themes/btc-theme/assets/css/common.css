@@ -944,7 +944,7 @@ header button.open .close {
   position: fixed;
   display: none;
   inset: 0;
-  z-index: 9999999999;
+  z-index: 99999;
   align-content: center;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -1524,4 +1524,24 @@ header button.open .close {
   background-color: var(--green);
   transition: width 0.1s ease;
   border-radius: 0px 10px 10px 0px;
+}
+
+.iti-mobile .iti--container {
+  z-index: 9999999999999 !important;
+}
+
+.iti__country-list {
+  position: absolute;
+  z-index: 2;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 0 -1px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  max-height: 200px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }/*# sourceMappingURL=common.css.map */
