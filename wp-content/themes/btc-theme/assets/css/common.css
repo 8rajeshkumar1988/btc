@@ -950,6 +950,11 @@ header button.open .close {
           backdrop-filter: blur(10px);
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.6588235294);
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 #lead_popup_form .popup_container {
   background-color: #fff;

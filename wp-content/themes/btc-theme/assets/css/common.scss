@@ -987,8 +987,12 @@ header {
   align-content: center;
   backdrop-filter: blur(10px);
   overflow: auto;
-  background-color: #000000a8;
-
+  background-color: #000000a8;  
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   .popup_container {
     background-color: #fff;
     padding: 50px 72px;

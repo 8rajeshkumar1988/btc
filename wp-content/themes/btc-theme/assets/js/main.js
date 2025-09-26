@@ -250,10 +250,11 @@ $(document).ready(function () {
 
   $(".leadpopup").on("click", function () {
     const $popupForm = $("#lead_popup_form");
+    $('.backtoTop').hide()
 
     if ($popupForm.length) {
       $popupForm.fadeIn(300, function () {
-        $popupForm.scrollTop(0); // reset after animation
+        // $popupForm.scrollTop(50); // reset after animation
       });
 
       // $("body").css({ overflow: "hidden" });
@@ -272,6 +273,7 @@ $(document).ready(function () {
     if (window.innerWidth > 1024) {
       lenis.start();
     }
+    $('.backtoTop').show()
     $("body").css({ overflow: "auto" });
     $("#lead_popup_form").fadeOut(300);
     // $("body").css({ overflow: "auto" });
@@ -500,45 +502,39 @@ $(document).on("scroll", function () {
 })
 
 
+
+
 $(document).ready(function () {
-  function isOverlapping(div1, div2) {
-  const d1 = div1.getBoundingClientRect();
-  const d2 = div2.getBoundingClientRect();
+   function isOverlapping($div1, $div2) {
+    const d1 = $div1[0].getBoundingClientRect();
+    const d2 = $div2[0].getBoundingClientRect();
 
-  return !(
-    d1.right < d2.left ||
-    d1.left > d2.right ||
-    d1.bottom < d2.top ||
-    d1.top > d2.bottom
-  );
-}
-
-function checkOverlap() {
-  const fixedBtn = document.querySelector('.backtoTop');
-  const targets = document.querySelectorAll('.globalNavigation, .cta');
-  let overlap = false;
-
-  targets.forEach(el => {
-    if (isOverlapping(fixedBtn, el)) {
-      overlap = true;
-    }
-  });
-
-  if (overlap) {
-    fixedBtn.style.opacity = "0";
-    fixedBtn.style.visibility = "hidden";
-    fixedBtn.style.pointerEvents = "none";
-  } else {
-    fixedBtn.style.opacity = "1";
-    fixedBtn.style.visibility = "visible";
-    fixedBtn.style.pointerEvents = "auto";
+    return !(
+      d1.right < d2.left ||
+      d1.left > d2.right ||
+      d1.bottom < d2.top ||
+      d1.top > d2.bottom
+    );
   }
-}
 
-window.addEventListener('scroll', checkOverlap);
-window.addEventListener('resize', checkOverlap);
+  function checkOverlap() {
+    const $fixedBtn = $('.backtoTop');
+    let overlap = false;
 
-// Run on load
-checkOverlap();
+    $('.globalNavigation, .cta').each(function () {
+      if (isOverlapping($fixedBtn, $(this))) {
+        overlap = true;
+      }
+    });
+
+    if (overlap) {
+      $fixedBtn.css({ opacity: 0, visibility: "hidden", pointerEvents: "none" });
+    } else {
+      $fixedBtn.css({ opacity: 1, visibility: "visible", pointerEvents: "auto" });
+    }
+  }
+
+  $(window).on('scroll resize', checkOverlap);
+  checkOverlap();
 
 })
