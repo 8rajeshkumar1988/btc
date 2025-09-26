@@ -306,7 +306,7 @@
 }
 @media screen and (max-width: 500px) {
   #parking .containers {
-    gap: 25px;
+    gap: 10px;
     padding: var(--spaceBelow_heading) var(--paddingX);
   }
   #parking .containers .top h3 span {
@@ -320,7 +320,7 @@
     justify-content: flex-end;
   }
   #parking .containers .bottom .right {
-    max-height: 350px;
+    max-height: 280px;
   }
   #parking .containers .bottom .left .inner_top {
     grid-template-columns: 1fr;

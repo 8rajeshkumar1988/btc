@@ -17,21 +17,22 @@ $(".faq").click(function () {
 var explore_other_categories = new Swiper(".explore_other_categories", {
   slidesPerView: 1.1,
   spaceBetween: 20,
-
+centeredSlides: true,
   navigation: {
     nextEl: ".explore_other-next",
     prevEl: ".explore_other-prev",
   },
   loop: true,
   speed: 800,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: true,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: true,
+  // },
   breakpoints: {
     768: {
       slidesPerView: 2.5,
       spaceBetween: 20,
+      centeredSlides: false,
     },
   },
 });

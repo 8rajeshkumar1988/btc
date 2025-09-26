@@ -497,7 +497,7 @@
 }
 @media screen and (max-width: 500px) {
   #traceability .containers {
-    gap: 25px;
+    gap: 10px;
     padding: var(--spaceBelow_heading) var(--paddingX);
   }
   #traceability .containers .top h3 span {
@@ -511,7 +511,7 @@
     justify-content: flex-end;
   }
   #traceability .containers .bottom .right {
-    max-height: 350px;
+    max-height: 280px;
   }
   #traceability .containers .bottom .left .inner_top {
     grid-template-columns: 1fr;
@@ -535,6 +535,9 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
+  }
+  #traceability .containers .bottom .left .inner_bottom .subCopy {
+    margin-bottom: 10px;
   }
   #traceability .containers .bottom .left .inner_bottom * {
     font-size: var(--font-14);

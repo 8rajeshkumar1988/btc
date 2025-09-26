@@ -166,7 +166,7 @@ get_header();
         </div>
         <div class="card_body">
           <h3>
-            <span>1391</span> <br />
+            <span>1,391</span> <br />
             Stitching <br> Machines
           </h3>
           <div class="card_desc">
@@ -265,7 +265,7 @@ get_header();
     <div class="heading" animateHeading>
       <h2>Logistics & Shipping Efficiency</h2>
       <p style="font-weight: 300; text-transform: none">
-        Strategically located in West Africa, our proximity to <br />
+        Strategically located in West Africa, our proximity to 
         major markets ensures timely delivery.
       </p>
     </div>

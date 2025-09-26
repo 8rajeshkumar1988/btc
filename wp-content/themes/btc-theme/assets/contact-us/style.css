@@ -95,7 +95,8 @@ body {
   margin-top: 15px;
   font-size: var(--font-14);
 }
-#lead_form #phone, #lead_form #whatsapp_number {
+#lead_form #phone,
+#lead_form #whatsapp_number {
   padding-left: 55px;
 }
 #lead_form input[type=checkbox] {
@@ -270,11 +271,56 @@ body {
     margin: 0;
   }
 }
+.contacts {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .heroBanner > .content > div {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--spaceBelow_heading);
+  }
+  .heroBanner > .content > div .contacts {
+    display: none;
+  }
+  .contacts {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--paddingY) var(--paddingX);
+    background-color: #fffff4;
+  }
+  .contacts > p {
+    font-size: var(--font-24);
+    color: var(--primaryBlack);
+    text-transform: capitalize;
+    font-weight: 400;
+  }
+  .contacts > a {
+    font-size: var(--font-20);
+    color: var(--tertiaryBlack);
+    font-weight: 300;
+    text-decoration: none;
+    margin: var(--font-14) 0 0;
+  }
+  .contacts div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: var(--font-14);
+  }
+  .contacts div * {
+    font-weight: var(--font-14);
+    color: #000000;
+    font-weight: 300;
+    text-decoration: none;
+  }
+  .contacts div img {
+    height: var(--font-20);
+    width: var(--font-20);
   }
   #virtual_factory_experience .virtual_container {
     aspect-ratio: 9/16;

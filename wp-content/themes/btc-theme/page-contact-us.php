@@ -30,10 +30,10 @@ the_post();
     <div class="content">
         <p class="breadcrub"><a href="<?php echo site_url(HOME_PAGE) ?>">Home</a> / Contact Us</p>
         <div>
-            <div class="heading"  animateHeadingBanner>
+            <div class="heading" animateHeadingBanner>
                 <p><?php the_title(); ?></p>
                 <?php the_content(); ?>
-                <button onclick="scrollToSectionById('lead_form')"  class="cta" >Reach Out to Us now <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
+                <button onclick="scrollToSectionById('lead_form')" class="cta">Reach Out to Us now <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
             </div>
             <div class="contacts" animateHeadingBanner>
                 <p>Benin Textile Corporation</p>
@@ -52,10 +52,25 @@ the_post();
         <div class="layer2"></div>
     </div>
 </section>
+
+<div class="contacts" animateHeadingBanner>
+    <p>Benin Textile Corporation</p>
+    <a href="">Ilot C/SB, Tangbo-Djèvié, Plot F-1,  Maison Etat Béninois, Zè - Benin</a>
+    <div animateHeadingBanner>
+        <img src="<?php echo get_template_directory_uri() . "/assets/images/mailIcon.svg" ?>" alt="">
+        <a href="mailto:info.btc@arisenet.com">info.btc@arisenet.com</a>
+    </div>
+    <div animateHeadingBanner>
+        <img src="<?php echo get_template_directory_uri() . "/assets/images/callIcon.svg" ?>" alt="">
+        <a href="tel:+229 5145127009">+229 5145127009</a>
+    </div>
+</div>
+
+
 <section id="lead_form">
     <div class="heading" animateHeading>
         <h2>
-            Are you a Brand/Retailer/Buying House 
+            Are you a Brand/Retailer/Buying House
             looking for a one stop textile solution?
         </h2>
     </div>
@@ -131,7 +146,7 @@ if (!empty($faqs)) { ?>
         </div>
         <iframe
             id="mapIframe"
-            src="https://www.google.com/maps/embed?pb=!4v1752237216067!6m8!1m7!1sCAoSHENJQUJJaEFuNjhNcjFncDBiSHN0enBrb29uUlc.!2m2!1d-4.683459!2d11.8169195!3f224.67!4f5.239999999999995!5f0.7820865974627469"
+            src="https://www.google.com/maps/embed?pb=!4v1750745964493!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ18xcEhsZFE.!2m2!1d6.6122587!2d2.2602099!3f30.63!4f-2.480000000000004!5f0.7820865974627469"
             allowfullscreen=""
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             loading="lazy"
@@ -161,31 +176,30 @@ get_footer();
 
 ?>
 <script>
-const overlay = document.getElementById("mapOverlay");
-const closeBtn = document.getElementById("closeBtn");
-const iframe = document.getElementById("mapIframe");
+    const overlay = document.getElementById("mapOverlay");
+    const closeBtn = document.getElementById("closeBtn");
+    const iframe = document.getElementById("mapIframe");
 
-// Utility: Detect mobile
-const isMobile = window.matchMedia("(pointer: coarse)").matches;
+    // Utility: Detect mobile
+    const isMobile = window.matchMedia("(pointer: coarse)").matches;
 
-// Use "click" on mobile, "dblclick" on desktop
-const activateMap = () => {
-  iframe.style.pointerEvents = "auto";
-  overlay.style.display = "none";
-  closeBtn.style.display = "block";
-};
+    // Use "click" on mobile, "dblclick" on desktop
+    const activateMap = () => {
+        iframe.style.pointerEvents = "auto";
+        overlay.style.display = "none";
+        closeBtn.style.display = "block";
+    };
 
-if (isMobile) {
-  overlay.addEventListener("click", activateMap);
-} else {
-  overlay.addEventListener("dblclick", activateMap);
-}
+    if (isMobile) {
+        overlay.addEventListener("click", activateMap);
+    } else {
+        overlay.addEventListener("dblclick", activateMap);
+    }
 
-closeBtn.addEventListener("click", () => {
-    console.log("close");
-  iframe.style.pointerEvents = "none";
-  overlay.style.display = "flex";
-  closeBtn.style.display = "none";
-});
-
+    closeBtn.addEventListener("click", () => {
+        console.log("close");
+        iframe.style.pointerEvents = "none";
+        overlay.style.display = "flex";
+        closeBtn.style.display = "none";
+    });
 </script>

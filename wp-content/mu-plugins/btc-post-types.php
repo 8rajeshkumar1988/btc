@@ -628,6 +628,7 @@ function save_custom_dropdown_data($post_id)
     }
 
     update_post_meta($post_id, '_spotlight_image', !empty($_POST['spotlight_image']) ? esc_url_raw($_POST['spotlight_image']) : '');
+    update_post_meta($post_id, '_spotlight_image_mobile', !empty($_POST['spotlight_image_mobile']) ? esc_url_raw($_POST['spotlight_image_mobile']) : '');
 }
 add_action('save_post', 'save_custom_dropdown_data');
 

@@ -6,7 +6,14 @@ body {
   padding: 30px 0 var(--spaceBelow_heading);
   position: relative;
 }
-#product_spotlight .product_spotlight-next, #product_spotlight .product_spotlight-prev {
+#product_spotlight .product_spot {
+  display: block;
+}
+#product_spotlight .product_spot_mobile {
+  display: none;
+}
+#product_spotlight .product_spotlight-next,
+#product_spotlight .product_spotlight-prev {
   cursor: pointer;
 }
 #product_spotlight > img {
@@ -127,7 +134,8 @@ body {
   aspect-ratio: 345/295;
   overflow: hidden;
 }
-#explore_products .explore_products_container .products_item .product_image video, #explore_products .explore_products_container .products_item .product_image img {
+#explore_products .explore_products_container .products_item .product_image video,
+#explore_products .explore_products_container .products_item .product_image img {
   width: 100%;
   height: calc(100% + 100px);
   -o-object-fit: cover;
@@ -259,6 +267,12 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
+  #product_spotlight .product_spot {
+    display: none;
+  }
+  #product_spotlight .product_spot_mobile {
+    display: block;
+  }
   #product_spotlight .swiper-slide.swiper-slide-next > img {
     transform: translateX(-80px);
   }
@@ -280,6 +294,18 @@ body {
   #explore_other_categories .in_mobile_explore {
     display: flex;
     margin-top: 20px;
+  }
+  #explore_other_categories .explore_other_categories_container .explore_other_categories .category_item .category_image > img {
+    width: calc(100% + 50px);
+  }
+  #explore_other_categories .explore_other_categories_container .explore_other_categories .swiper-slide.swiper-slide-active .category_image > img {
+    transform: translateX(-25px);
+  }
+  #explore_other_categories .explore_other_categories_container .explore_other_categories .swiper-slide.swiper-slide-prev .category_image > img {
+    transform: translateX(0px);
+  }
+  #explore_other_categories .explore_other_categories_container .explore_other_categories .swiper-slide.swiper-slide-next .category_image > img {
+    transform: translateX(50px);
   }
   #product_spotlight .product_spotlight_bottom {
     margin-top: 20px;

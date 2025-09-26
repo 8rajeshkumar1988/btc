@@ -26,9 +26,7 @@ body {
         flex-direction: column;
         align-items: flex-start;
         padding: clamp(1.875rem, 0.3125rem + 2.0833vw, 2.8125rem);
-        padding-right: calc(
-          clamp(1.875rem, 0.3125rem + 2.0833vw, 2.8125rem) * 2.5
-        );
+        padding-right: calc(clamp(1.875rem, 0.3125rem + 2.0833vw, 2.8125rem) * 2.5);
         background-color: #fff;
         & > p {
           font-size: var(--font-24);
@@ -76,7 +74,7 @@ body {
     }
     margin-bottom: var(--spaceBelow_heading);
   }
-  .iti{
+  .iti {
     margin-top: 15px;
     width: 100%;
   }
@@ -100,7 +98,8 @@ body {
     margin-top: 15px;
     font-size: var(--font-14);
   }
-  #phone,#whatsapp_number{
+  #phone,
+  #whatsapp_number {
     padding-left: 55px;
   }
   input[type="checkbox"] {
@@ -176,7 +175,7 @@ body {
     gap: 10px;
     flex-direction: column;
     align-items: flex-end;
-    .lead_form_error{
+    .lead_form_error {
       display: none;
       color: #ff0000;
       text-align: right;
@@ -259,7 +258,6 @@ body {
   }
 }
 
-
 // @media screen and (max-width: 1600px) {
 //   #leaf_form {
 //     .heading {
@@ -275,7 +273,6 @@ body {
       input,
       select,
       textarea {
-        
         margin-top: 10px;
       }
     }
@@ -290,7 +287,9 @@ body {
       margin: 0;
     }
   }
- 
+}
+.contacts {
+  display: none;
 }
 @media screen and (max-width: 768px) {
   .heroBanner {
@@ -299,6 +298,48 @@ body {
         flex-direction: column;
         align-items: flex-start;
         gap: var(--spaceBelow_heading);
+        .contacts {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .contacts {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--paddingY) var(--paddingX);    
+    background-color: #fffff4;
+    & > p {
+      font-size: var(--font-24);
+      color: var(--primaryBlack);
+      text-transform: capitalize;
+      font-weight: 400;
+    }
+    & > a {
+      font-size: var(--font-20);
+      color: var(--tertiaryBlack);
+      font-weight: 300;
+      text-decoration: none;
+      margin: var(--font-14) 0 0;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: var(--font-14);
+      * {
+        font-weight: var(--font-14);
+        color: #000000;
+        font-weight: 300;
+        text-decoration: none;
+      }
+      img {
+        height: var(--font-20);
+        width: var(--font-20);
       }
     }
   }
@@ -317,7 +358,6 @@ body {
       grid-area: 5 / 1 / 6 / 2;
     }
   }
- 
 }
 
 @media screen and (max-width: 500px) {

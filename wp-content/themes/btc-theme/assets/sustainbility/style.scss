@@ -558,7 +558,7 @@
 @media screen and (max-width: 500px) {
   #traceability {
     .containers {
-      gap: 25px;
+      gap: 10px;
       padding: var(--spaceBelow_heading) var(--paddingX);
       .top {
         h3 {
@@ -574,7 +574,7 @@
         gap: 20px;
         justify-content: flex-end;
         .right {
-          max-height: 350px;
+          max-height: 280px;
         }
         .left {
           .inner_top {
@@ -599,6 +599,9 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 15px;
+            .subCopy{
+              margin-bottom: 10px;
+            }
             * {
               font-size: var(--font-14);
             }
