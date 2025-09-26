@@ -207,12 +207,12 @@ $(document).ready(function () {
         toggleActions: "play none none reverse",
         scrub: true,
         onEnter: () => {
-          if (window.innerWidth < 1024) {
-            lenis.stop();
-            setTimeout(() => {
-              lenis.start();
-            }, 100)
-          }
+          // if (window.innerWidth < 1024) {
+          //   lenis.stop();
+          //   setTimeout(() => {
+          //     lenis.start();
+          //   }, 100)
+          // }
         },
       },
     });

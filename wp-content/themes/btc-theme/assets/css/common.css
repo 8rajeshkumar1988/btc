@@ -1273,7 +1273,7 @@ header button.open .close {
   display: grid;
   place-items: center;
   cursor: pointer;
-  transition: bottom 0.5s ease, opacity 0.5s ease;
+  transition: all 0.3s ease;
   z-index: 999999999;
 }
 .backtoTop svg {
