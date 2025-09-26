@@ -1434,6 +1434,10 @@ header button.open .close {
   .heroBanner .content {
     padding-top: 82px;
   }
+  #lead_popup_form {
+    align-items: unset;
+    align-content: unset;
+  }
   #lead_popup_form .popup_container {
     width: 100%;
     padding: 60px 20px;

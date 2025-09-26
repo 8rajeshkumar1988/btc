@@ -1536,6 +1536,8 @@ header {
   }
 
   #lead_popup_form {
+    align-items: unset;
+    align-content: unset;
     .popup_container {
       width: 100%;
       padding: 60px 20px;
