@@ -466,78 +466,94 @@ function render_event_gallery_meta_box($post)
 
 function render_is_spotlight_checkbox($post)
 {
-    // Get saved value
-    $value = get_post_meta($post->ID, '_is_spotlight', true);
-    $checked = $value === 'yes' ? 'checked' : '';
+    // Ensure media modal is available
+    wp_enqueue_media();
 
-    $spotlight_image = get_post_meta($post->ID, '_spotlight_image', true);
+    // Get saved values
+    $is_spotlight = get_post_meta($post->ID, '_is_spotlight', true);
+    $checked      = $is_spotlight === 'yes' ? 'checked' : '';
 
-    echo '<label><input type="checkbox" name="is_spotlight" value="yes" ' . $checked . '> Mark as Spotlight Product</label>';
-?>
-    <!-- Spotlight Image Field -->
-    <div class="custom-image-field" style="margin-top: 15px;">
-        <p><strong>Spotlight Image</strong></p>
+    $spotlight_image         = get_post_meta($post->ID, '_spotlight_image', true); // Desktop
+    $spotlight_image_mobile  = get_post_meta($post->ID, '_spotlight_image_mobile', true); // Mobile
+    ?>
+    <label>
+        <input type="checkbox" name="is_spotlight" value="yes" <?php echo esc_attr($checked); ?>>
+        Mark as Spotlight Product
+    </label>
+
+    <!-- Desktop Spotlight Image -->
+    <div class="custom-image-field" style="margin-top:15px;">
+        <p><strong>Spotlight Image (Desktop)</strong></p>
         <div class="preview">
             <?php if ($spotlight_image): ?>
-                <img src="<?php echo esc_url($spotlight_image); ?>" style="max-width:100%; height:auto;" />
+                <img src="<?php echo esc_url($spotlight_image); ?>" style="max-width:100%;height:auto;" />
             <?php endif; ?>
         </div>
         <input type="hidden" name="spotlight_image" id="spotlight_image" value="<?php echo esc_attr($spotlight_image); ?>" />
-        <button type="button" class="button upload_image_button" data-target="#spotlight_image" <?php echo $spotlight_image ? 'style="display:none;"' : ''; ?>>Set Spotlight Image</button>
-        <button type="button" class="button replace_image_button" data-target="#spotlight_image" <?php echo !$spotlight_image ? 'style="display:none;"' : ''; ?>>Replace</button>
-        <button type="button" class="button remove_image_button" data-target="#spotlight_image" <?php echo !$spotlight_image ? 'style="display:none;"' : ''; ?>>Remove</button>
+        <button type="button" class="button upload_image_button"  data-target="#spotlight_image"  <?php echo $spotlight_image ? 'style="display:none;"' : ''; ?>>Set Spotlight Image</button>
+        <button type="button" class="button replace_image_button" data-target="#spotlight_image"  <?php echo !$spotlight_image ? 'style="display:none;"' : ''; ?>>Replace</button>
+        <button type="button" class="button remove_image_button"  data-target="#spotlight_image"  <?php echo !$spotlight_image ? 'style="display:none;"' : ''; ?>>Remove</button>
+    </div>
+
+    <!-- Mobile Spotlight Image -->
+    <div class="custom-image-field" style="margin-top:15px;">
+        <p><strong>Spotlight Image (Mobile)</strong></p>
+        <div class="preview">
+            <?php if ($spotlight_image_mobile): ?>
+                <img src="<?php echo esc_url($spotlight_image_mobile); ?>" style="max-width:100%;height:auto;" />
+            <?php endif; ?>
+        </div>
+        <input type="hidden" name="spotlight_image_mobile" id="spotlight_image_mobile" value="<?php echo esc_attr($spotlight_image_mobile); ?>" />
+        <button type="button" class="button upload_image_button"  data-target="#spotlight_image_mobile"  <?php echo $spotlight_image_mobile ? 'style="display:none;"' : ''; ?>>Set Mobile Image</button>
+        <button type="button" class="button replace_image_button" data-target="#spotlight_image_mobile"  <?php echo !$spotlight_image_mobile ? 'style="display:none;"' : ''; ?>>Replace</button>
+        <button type="button" class="button remove_image_button"  data-target="#spotlight_image_mobile"  <?php echo !$spotlight_image_mobile ? 'style="display:none;"' : ''; ?>>Remove</button>
     </div>
 
     <script>
-        jQuery(document).ready(function($) {
-            function updateButtons(inputField, imageUrl) {
-                var wrapper = inputField.closest('.custom-image-field');
-                var preview = wrapper.find('.preview');
-                var uploadBtn = wrapper.find('.upload_image_button');
-                var replaceBtn = wrapper.find('.replace_image_button');
-                var removeBtn = wrapper.find('.remove_image_button');
+    jQuery(document).ready(function($) {
+        function updateButtons(inputField, imageUrl) {
+            var wrapper   = inputField.closest('.custom-image-field');
+            var preview   = wrapper.find('.preview');
+            var uploadBtn = wrapper.find('.upload_image_button');
+            var replaceBtn= wrapper.find('.replace_image_button');
+            var removeBtn = wrapper.find('.remove_image_button');
 
-                if (imageUrl) {
-                    preview.html('<img src="' + imageUrl + '" style="max-width:100%; height:auto;" />');
-                    inputField.val(imageUrl);
-                    uploadBtn.hide();
-                    replaceBtn.show();
-                    removeBtn.show();
-                } else {
-                    preview.empty();
-                    inputField.val('');
-                    uploadBtn.show();
-                    replaceBtn.hide();
-                    removeBtn.hide();
-                }
+            if (imageUrl) {
+                preview.html('<img src="' + imageUrl + '" style="max-width:100%;height:auto;" />');
+                inputField.val(imageUrl);
+                uploadBtn.hide();
+                replaceBtn.show();
+                removeBtn.show();
+            } else {
+                preview.empty();
+                inputField.val('');
+                uploadBtn.show();
+                replaceBtn.hide();
+                removeBtn.hide();
             }
+        }
 
-            $('.upload_image_button, .replace_image_button').on('click', function(e) {
-                e.preventDefault();
-                var inputField = $($(this).data('target'));
-
-                var custom_uploader = wp.media({
-                    title: 'Select Image',
-                    button: {
-                        text: 'Use this image'
-                    },
-                    multiple: false
-                }).on('select', function() {
-                    var attachment = custom_uploader.state().get('selection').first().toJSON();
-                    updateButtons(inputField, attachment.url);
-                }).open();
-            });
-
-            $('.remove_image_button').on('click', function(e) {
-                e.preventDefault();
-                var inputField = $($(this).data('target'));
-                updateButtons(inputField, '');
-            });
+        $('.upload_image_button, .replace_image_button').on('click', function(e) {
+            e.preventDefault();
+            var inputField = $($(this).data('target'));
+            var custom_uploader = wp.media({
+                title: 'Select Image',
+                button: { text: 'Use this image' },
+                multiple: false
+            }).on('select', function() {
+                var attachment = custom_uploader.state().get('selection').first().toJSON();
+                updateButtons(inputField, attachment.url);
+            }).open();
         });
+
+        $('.remove_image_button').on('click', function(e) {
+            e.preventDefault();
+            var inputField = $($(this).data('target'));
+            updateButtons(inputField, '');
+        });
+    });
     </script>
-
-<?php
-
+    <?php
 }
 
 function render_custom_dropdown($post)
