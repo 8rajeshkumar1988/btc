@@ -184,7 +184,7 @@ the_post();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/local_cotton_local_value.webp'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/sustain_cotton.webp'; ?>" alt="">
                 </div>
             </div>
         </div>
