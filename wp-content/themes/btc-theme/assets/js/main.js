@@ -27,14 +27,13 @@ $(document).ready(function () {
     el.removeAttribute("animateheading");
   });
 
-
-  lenis = new Lenis();
-
-  lenis.on("scroll", ScrollTrigger.update);
-
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 600);
-  });
+  if (window.innerWidth > 1024) {
+    lenis = new Lenis();
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 600);
+    });
+  }
 
   gsap.ticker.lagSmoothing(2000);
 
@@ -148,14 +147,18 @@ $(document).ready(function () {
     $(this).toggleClass("open");
 
     if ($(this).hasClass("open")) {
-      lenis.stop();
+       if (window.innerWidth > 1024) {
+         lenis.stop();
+       }
       $("body").css({ overflow: "hidden" });
       $(".heroBanner").addClass("activated");
       $("#header").addClass("active");
       $("header .logo").css({ opacity: "0" });
       $("#header .logoBlue").css({ opacity: "1" });
     } else {
-      lenis.start();
+ if (window.innerWidth > 1024) {
+   lenis.start();
+ }
       $("body").css({ overflow: "auto" });
       $("#header").removeClass("active");
       $(".heroBanner").removeClass("activated");
@@ -254,7 +257,9 @@ $(document).ready(function () {
       $("body").css({ overflow: "hidden" });
 
       if (typeof lenis !== "undefined" && typeof lenis.stop === "function") {
-        lenis.stop();
+         if (window.innerWidth > 1024) {
+           lenis.stop();
+         }
       }
     }
   });
@@ -262,7 +267,9 @@ $(document).ready(function () {
 
   // Close popup with fadeOut
   $("#closeleadpopup").on("click", function () {
-    lenis.start();
+     if (window.innerWidth > 1024) {
+       lenis.start();
+     }
     $("body").css({ overflow: "auto" });
     $("#lead_popup_form").fadeOut(300);
     // $("body").css({ overflow: "auto" });
@@ -320,7 +327,7 @@ $(document).ready(function () {
     y: -100,
   });
 
-  animatedFooter = ()=>{
+  animatedFooter = () => {
     if (flaggged) {
       console.log("flaggged");
       gsap.to('#footerContact .content p, #footerContact .content h3, #footerContact .content button', {
@@ -337,7 +344,7 @@ $(document).ready(function () {
       });
     }
   }
-animatedFooter()
+  animatedFooter()
 
 
   $("[animateHeadingBanner]").each(function () {

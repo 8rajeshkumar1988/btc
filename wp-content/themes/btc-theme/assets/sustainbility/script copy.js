@@ -141,9 +141,13 @@ $(document).ready(function () {
   }
 
   function pauseLenisFor(ms) {
-    lenis.stop();
+     if (window.innerWidth > 1024) {
+       lenis.stop();
+     }
     setTimeout(() => {
-      lenis.start();
+       if (window.innerWidth > 1024) {
+         lenis.start();
+       }
     }, ms);
   }
 
