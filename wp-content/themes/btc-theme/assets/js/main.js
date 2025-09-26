@@ -148,7 +148,7 @@ $(document).ready(function () {
 
     if ($(this).hasClass("open")) {
       // if (window.innerWidth > 1024) {
-        lenis.stop();
+      lenis.stop();
       // }
       $("body").css({ overflow: "hidden" });
       $(".heroBanner").addClass("activated");
@@ -157,7 +157,7 @@ $(document).ready(function () {
       $("#header .logoBlue").css({ opacity: "1" });
     } else {
       // if (window.innerWidth > 1024) {
-        lenis.start();
+      lenis.start();
       // }
       $("body").css({ overflow: "auto" });
       $("#header").removeClass("active");
@@ -383,10 +383,10 @@ $(document).ready(function () {
   });
 
   $('.heroBanner > img, .heroBanner > video, .hero-slider .swiper-slide > img, .hero-slider .swiper-slide > video ').each(function () {
+    const heightVH = window.innerHeight / 3
     if (window.innerWidth > 1200) {
       gsap.to(this, {
-        y: '50dvh',
-        ease: "none",
+        y: heightVH,
         scrollTrigger: {
           trigger: this,
           start: `${window.innerWidth < 768 ? "bottom 85%" : "bottom 90%"}`,
@@ -395,14 +395,11 @@ $(document).ready(function () {
         }
       });
     } else {
-      const heightThis = this.getBoundingClientRect().height
-      console.log(heightThis)
       gsap.to(this, {
-        y: `${(heightThis / 2)}px`,
-        ease: "none",
+        y: heightVH,
         scrollTrigger: {
           trigger: this,
-          start: `bottom ${heightThis}px`,
+          start: `${window.innerWidth < 768 ? "bottom 85%" : "bottom 90%"}`,
           toggleActions: "play none none reverse",
           scrub: true,
         }
@@ -505,7 +502,7 @@ $(document).on("scroll", function () {
 
 
 $(document).ready(function () {
-   function isOverlapping($div1, $div2) {
+  function isOverlapping($div1, $div2) {
     const d1 = $div1[0].getBoundingClientRect();
     const d2 = $div2[0].getBoundingClientRect();
 
