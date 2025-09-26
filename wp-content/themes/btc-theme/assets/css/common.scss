@@ -987,7 +987,7 @@ header {
   align-content: center;
   backdrop-filter: blur(10px);
   overflow: auto;
-  background-color: #000000a8;  
+  background-color: #000000a8;
   height: 100vh;
   top: 0;
   left: 0;
@@ -1396,6 +1396,12 @@ header {
     --font-16: 15px;
     --spaceBelow_heading: 30px;
   }
+
+  #our_clients {
+    .marquee-track.left-slide {
+      margin: calc(var(--spaceBelow_heading) * 1.5) 0 calc(var(--spaceBelow_heading) * 1.0);
+    }
+  }
   .backtoTop {
     height: 35px;
     width: 35px;
@@ -1642,23 +1648,21 @@ header {
   }
 }
 
-
-
-.iti-mobile .iti--container{
+.iti-mobile .iti--container {
   z-index: 9999999999999 !important;
 }
-.iti__country-list{
-    position: absolute;
-    z-index: 2;
-    list-style: none;
-    text-align: left;
-    padding: 0;
-    margin: 0 0 0 -1px;
-    box-shadow: 1px 1px 4px rgba(0,0,0,.2);
-    background-color: #fff;
-    border: 1px solid #ccc;
-    white-space: nowrap;
-    max-height: 200px;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+.iti__country-list {
+  position: absolute;
+  z-index: 2;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 0 -1px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  max-height: 200px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
