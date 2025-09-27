@@ -1508,6 +1508,12 @@ header {
       justify-content: center;
       .left {
         align-items: center;
+        & >div{
+          img{
+            height: calc(var(--font-24) + 4px);
+            width: calc(var(--font-24) + 4px);
+          }
+        }
         .right {
           display: flex;
         }
@@ -1609,13 +1615,13 @@ header {
         }
         & > div {
           display: flex;
-          gap: 5px;
+          gap: 10px;
           a {
             all: unset;
           }
           img {
-            width: var(--font-20);
-            height: var(--font-20);
+            width: calc(var(--font-24) + 4px);
+            height: calc(var(--font-24) + 4px);
             aspect-ratio: 1;
             object-fit: contain;
             filter: grayscale(1) brightness(1.5);
