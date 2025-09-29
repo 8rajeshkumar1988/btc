@@ -135,6 +135,9 @@ $("#whatsapp_checkbox").on("change", function () {
         $(".lead_form_submit").html(initial_text);
         $(".lead_form_submit").attr("disabled", false);
         window.location.href = "/thank-you/";
+        setTimeout(() => {
+          $form.trigger("reset");
+        },500)
       } else {
         $(".lead_form_error").text(response.data).show();
          $(".lead_form_submit").html(initial_text);

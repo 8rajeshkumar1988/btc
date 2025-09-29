@@ -201,9 +201,23 @@ body {
   position: absolute;
   inset: 0;
 }
+#our_leadership .our_leadership_container .leader_card .linkedin_icon_name {
+  display: none;
+}
 #our_leadership .our_leadership_container .leader_card .leader_detail {
   margin-top: 20px;
-  padding-right: 40px;
+  padding-right: 0px;
+}
+#our_leadership .our_leadership_container .leader_card .leader_detail > div {
+  justify-content: space-between;
+}
+#our_leadership .our_leadership_container .leader_card .leader_detail a {
+  margin-left: auto;
+}
+#our_leadership .our_leadership_container .leader_card .leader_detail img {
+  height: 28px;
+  width: 28px;
+  margin-left: auto;
 }
 #our_leadership .our_leadership_container .leader_card .leader_detail .leader_title {
   color: var(--green);
@@ -463,6 +477,9 @@ body {
   padding: clamp(1.875rem, -6.5385rem + 9.6154vw, 5rem);
   z-index: 9999999999999;
   transition: none;
+}
+#popup .linkedin_icon_name {
+  display: block !important;
 }
 #popup #closeBtn {
   all: unset;

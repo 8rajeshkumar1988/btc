@@ -24,10 +24,10 @@ centeredSlides: true,
   },
   loop: true,
   speed: 800,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: true,
-  // },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: true,
+  },
   breakpoints: {
     768: {
       slidesPerView: 2.5,

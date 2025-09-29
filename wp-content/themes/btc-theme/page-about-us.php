@@ -178,18 +178,24 @@ if ($leaderships->have_posts()) {
                         echo $image;
 
                         ?>
+                       
                     </div>
                     <div class="leader_detail" >
                         <div style="display: flex;gap: 10px;align-items: center;">
-                            <h2 class="leader_title"><?php the_title(); ?> </h2><span style="transform: rotate(45deg);font-size: var(--font-24);color: var(--green);">↑</span>
+                            <h2 class="leader_title"><?php the_title(); ?> </h2><span style="transform: rotate(45deg);font-size: var(--font-24);color: var(--green); margin-right:auto;">↑</span> 
+                             <?php if (get_field('linkedin_profile')): ?>
+                                <a href="<?php the_field('linkedin_profile'); ?>" target="_blank" rel="noopener">
+                                    <img class='linkedin_icon' src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin_blue.png" alt="linkedin" />
+                                </a>
+                            <?php endif; ?>
                         </div>
 
                         <p class="leader_description">
                             <?php echo get_field('jobtitle'); ?>
                             
                             <?php if (get_field('linkedin_profile')): ?>
-                                <a href="<?php the_field('linkedin_profile'); ?>" target="_blank" rel="noopener">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.png" alt="linkedin" />
+                                <a class="linkedin_icon_name" href="<?php the_field('linkedin_profile'); ?>" target="_blank" rel="noopener">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin_blue.png" alt="linkedin" />
                                 </a>
                             <?php endif; ?>
                         </p>

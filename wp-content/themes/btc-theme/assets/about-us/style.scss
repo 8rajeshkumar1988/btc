@@ -221,10 +221,32 @@ body {
           position: absolute;
           inset: 0;
         }
+        // .linkedin_icon{
+        //   height: 25px;
+        //   width: 25px;
+        //   inset: unset;
+        //   top: 10px;
+        //   right: 10px;
+        //   opacity: 0.8;
+        // }
+      }
+      .linkedin_icon_name{
+        display: none;
       }
       .leader_detail {
         margin-top: 20px;
-        padding-right: 40px;
+        padding-right: 0px;
+        & > div{
+          justify-content: space-between;
+        }
+        a{
+          margin-left: auto;
+        }
+        img{
+          height: 28px;
+          width: 28px;
+          margin-left: auto;
+        }
         .leader_title {
           color: var(--green);
           font-size: var(--font-24);
@@ -523,6 +545,9 @@ body {
   // backdrop-filter: blur(10px);
   // background: #0000003f;
   transition: none;
+  .linkedin_icon_name{
+        display: block !important;
+      }
   #closeBtn {
     all: unset;
     line-height: 1;
