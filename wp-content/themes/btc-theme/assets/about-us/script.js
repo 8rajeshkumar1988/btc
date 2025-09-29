@@ -233,7 +233,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const heading = card.querySelector(".leader_title");
       const para = card.querySelector(".leader_description");
       const leaderBio = card.querySelector(".leader_bio");
-
+      $("body").css({ overflow: "hidden" });
+      if (typeof lenis !== "undefined" && typeof lenis.stop === "function") {
+        if (window.innerWidth > 1024) {
+          lenis.stop();
+        }
+      }
       lastClickedImage = img;
       lastImageRect = img.getBoundingClientRect();
       lastCardHeading = heading;
@@ -305,7 +310,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const currentRect = popContainer.getBoundingClientRect();
     const backdrop = document.querySelector("#popup");
-
+    if (window.innerWidth > 1024) {
+      lenis.start();
+    }
+    $("body").css({ overflow: "auto" });
     gsap.to("#popup", {
       duration: 1,
       backdropFilter: "blur(0px)",

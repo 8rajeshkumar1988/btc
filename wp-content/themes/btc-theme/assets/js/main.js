@@ -257,7 +257,7 @@ $(document).ready(function () {
         // $popupForm.scrollTop(50); // reset after animation
       });
 
-      // $("body").css({ overflow: "hidden" });
+      $("body").css({ overflow: "hidden" });
 
       if (typeof lenis !== "undefined" && typeof lenis.stop === "function") {
         if (window.innerWidth > 1024) {
@@ -273,8 +273,8 @@ $(document).ready(function () {
     if (window.innerWidth > 1024) {
       lenis.start();
     }
-    $('.backtoTop').show()
     $("body").css({ overflow: "auto" });
+    $('.backtoTop').show()
     $("#lead_popup_form").fadeOut(300);
     // $("body").css({ overflow: "auto" });
   });
