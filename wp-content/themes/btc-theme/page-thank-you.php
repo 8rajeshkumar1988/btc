@@ -8,7 +8,7 @@ the_post();
     <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
     <div class="content_wrapper">
         <dotlottie-wc class="lottie" id="thankYouLottie" src=<?php echo get_template_directory_uri() . '/assets/images/complete.lottie'; ?>    autoplay></dotlottie-wc>
-        <div class="content" animateHeading>
+        <div class="content" animateHeading style="margin-top: 80px;">
             <h1>Thank You</h1>
             <p>We have received your query. <br> Our team will get back to you shortly.</p>
         </div>

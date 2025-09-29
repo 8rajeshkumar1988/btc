@@ -130,14 +130,13 @@ $("#whatsapp_checkbox").on("change", function () {
     $.post(aaLead.ajax_url, data, function (response) {
       if (response.success) {
         // alert(response.data);
-        $form.trigger("reset");
         $(".lead_form_error").text("").hide();
         $(".lead_form_submit").html(initial_text);
         $(".lead_form_submit").attr("disabled", false);
         window.location.href = "/thank-you/";
         setTimeout(() => {
           $form.trigger("reset");
-        },500)
+        },1000)
       } else {
         $(".lead_form_error").text(response.data).show();
          $(".lead_form_submit").html(initial_text);
