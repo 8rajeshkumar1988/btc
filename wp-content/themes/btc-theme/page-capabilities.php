@@ -88,7 +88,7 @@ get_header();
           </h3>
           <div class="card_desc">
             <p>Machinery Partner</p>
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/terrot.png'; ?>" alt="" />
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/shima-seiki-logo.png'; ?>" alt="" />
           </div>
         </div>
       </div>
@@ -115,6 +115,27 @@ get_header();
       </div>
     </div>
     <div class="card">
+      <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/dyeing_machines.jpg'; ?>" alt="" />
+      <div class="card_info">
+        <div class="card_head">
+          <div class="icon">
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/finishing.png'; ?>" alt="" />
+          </div>
+          <h3 class="title">Finishing </h3>
+        </div>
+        <div class="card_body">
+          <h3>
+            <span>11</span> <br />
+            Finishing  <br> Machines
+          </h3>
+          <div class="card_desc">
+            <p>Machinery Partner</p>
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/thiess.png'; ?>" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
       <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/printing.jpg'; ?>" alt="" />
       <div class="card_info">
         <div class="card_head">
@@ -125,11 +146,11 @@ get_header();
         </div>
         <div class="card_body">
           <h3>
-            <span>14</span> <br />Printing <br> Machines
+            <span>03</span> <br />Printing <br> Machines
           </h3>
           <div class="card_desc">
             <p>Machinery Partner</p>
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/thiess.png'; ?>" alt="" />
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/roq-newn.png'; ?>" alt="" />
           </div>
         </div>
       </div>
@@ -166,7 +187,7 @@ get_header();
         </div>
         <div class="card_body">
           <h3>
-            <span>1,391</span> <br />
+            <span>1,400</span> <br />
             Stitching <br> Machines
           </h3>
           <div class="card_desc">
@@ -227,16 +248,16 @@ get_header();
     <div class="tai_container">
       <div class="static">
         <div>
-          <h3>2782 m/c</h3>
-          <p>Production with 1391 Stitching <br> machines x 2 shifts</p>
+          <h3>2400 m/c</h3>
+          <p>Production with 1400 Stitching <br> machines x 2 shifts</p>
         </div>
         <div>
           <h3>11.4 Ha</h3>
           <p>Vertically Integrated <br>Knitting unit area</p>
         </div>
         <div>
-          <h3>7000 Tons</h3>
-          <p>Knit fabric production <br> annually</p>
+          <h3>9000 Tons</h3>
+          <p>Knit fabric production <br>annually</p>
         </div>
         <div>
           <h3>24 Mn</h3>
