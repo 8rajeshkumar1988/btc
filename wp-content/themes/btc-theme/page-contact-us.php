@@ -146,7 +146,7 @@ if (!empty($faqs)) { ?>
         </div>
         <iframe
             id="mapIframe"
-            src="https://www.google.com/maps/embed?pb=!4v1750745964493!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ18xcEhsZFE.!2m2!1d6.6122587!2d2.2602099!3f30.63!4f-2.480000000000004!5f0.7820865974627469"
+            src="https://www.google.com/maps/embed?pb=!4v1759739537174!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ185cFhCVnc.!2m2!1d6.591976939661488!2d2.253402297200847!3f163.59926650107263!4f-7.095464900417852!5f0.7820865974627469"
             allowfullscreen=""
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             loading="lazy"
