@@ -16,6 +16,7 @@
             <select id="enquiry_type" name="enquiry_type">
                 <option value="General">General</option>
                 <option value="Business">Business</option>
+                <option value="Entrepreneur">Entrepreneur</option>
                 <option value="Careers">Careers</option>
             </select>
         </span>
