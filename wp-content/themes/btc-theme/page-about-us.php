@@ -251,7 +251,7 @@ if ($leaderships->have_posts()) {
         </div>
     </div>
 </section>
-<section id="arise_details">
+<!-- <section id="arise_details">
     <div class="heading" animateHeading>
         <h2>Powered By</h2>
     </div>
@@ -274,13 +274,10 @@ if ($leaderships->have_posts()) {
                 <strong>Benin's GDIZ (Glo Djigbé Industrial Zone),</strong> Arise's
                 textile initiative aims to convert locally grown cotton into
                 finished textiles and garments.
-            </p>
-            <!-- <button class="cta">
-          Get in Touch <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
-        </button> -->
+            </p>           
         </div>
     </div>
-</section>
+</section> -->
 <section id="our_impact">
     <div class="heading" animateHeading>
         <p>Our Impact</p>

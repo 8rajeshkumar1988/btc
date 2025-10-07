@@ -320,7 +320,7 @@ body {
 }
 
 #our_impact {
-  padding: var(--paddingY) var(--paddingX);
+  padding: 0 var(--paddingX) var(--paddingY);
 }
 #our_impact .our_impact_container {
   display: flex;
