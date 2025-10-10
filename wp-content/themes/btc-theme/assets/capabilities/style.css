@@ -47,7 +47,7 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6156862745);
+  background: rgba(0, 0, 0, 0.7411764706);
 }
 #vertical_integration .cards_wrapper .card > img {
   width: 100%;
@@ -133,6 +133,7 @@ body {
 #vertical_integration .cards_wrapper .card .card_info .card_body .card_desc.double > div img {
   width: calc(50% - 10px);
   flex: 1;
+  filter: grayscale(1) brightness(5);
 }
 
 #sustainability_details {
