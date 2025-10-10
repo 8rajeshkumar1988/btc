@@ -111,6 +111,27 @@ body {
               width: 50%;
             }
           }
+          .card_desc.double {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-direction: column  ;
+            margin-top: 15px;
+            P {
+              font-size: var(--font-16);
+              color: #ffffff;
+              width: 100%;
+            }
+            & > div{
+              display: flex;
+              gap: 20px;
+              align-items: center;
+              img{
+                width: calc(50% - 10px);
+                flex: 1;
+              }
+            }
+          }
         }
       }
     }

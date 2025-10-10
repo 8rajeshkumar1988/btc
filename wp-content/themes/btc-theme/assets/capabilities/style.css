@@ -113,6 +113,27 @@ body {
 #vertical_integration .cards_wrapper .card .card_info .card_body .card_desc img {
   width: 50%;
 }
+#vertical_integration .cards_wrapper .card .card_info .card_body .card_desc.double {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+}
+#vertical_integration .cards_wrapper .card .card_info .card_body .card_desc.double P {
+  font-size: var(--font-16);
+  color: #ffffff;
+  width: 100%;
+}
+#vertical_integration .cards_wrapper .card .card_info .card_body .card_desc.double > div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+#vertical_integration .cards_wrapper .card .card_info .card_body .card_desc.double > div img {
+  width: calc(50% - 10px);
+  flex: 1;
+}
 
 #sustainability_details {
   padding: var(--paddingY) var(--paddingX);

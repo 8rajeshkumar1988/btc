@@ -67,17 +67,17 @@ get_header();
           </h3>
           <div class="card_desc">
             <p>Machinery Partner</p>
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/reter.png'; ?>" alt="" />
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/reter.png'; ?>" alt="reter" />
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/first.jpg'; ?>" alt="" />
+      <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/first.jpg'; ?>" alt="first" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/knitting.png'; ?>" alt="" />
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/knitting.png'; ?>" alt="knitting" />
           </div>
           <h3 class="title">Knitting</h3>
         </div>
@@ -86,19 +86,22 @@ get_header();
             <span>83</span> <br />
             Knitting & Collar <br> Machines
           </h3>
-          <div class="card_desc">
+          <div class="card_desc double">
             <p>Machinery Partner</p>
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/shima-seiki-logo.png'; ?>" alt="" />
+            <div>
+              <img src="<?php echo get_template_directory_uri() . '/assets/images/shima-seiki-logo.png'; ?>" alt="shima-seiki-logo" />
+              <img src="<?php echo get_template_directory_uri() . '/assets/images/terrot.png'; ?>" alt="terrot" />
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/dyeing_machines.jpg'; ?>" alt="" />
+      <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/dyeing_machines.jpg'; ?>" alt="dyeing_machines" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/Dyeing.png'; ?>" alt="" />
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/Dyeing.png'; ?>" alt="Dyeing" />
           </div>
           <h3 class="title">Dyeing</h3>
         </div>
@@ -109,17 +112,17 @@ get_header();
           </h3>
           <div class="card_desc">
             <p>Machinery Partner</p>
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/thiess.png'; ?>" alt="" />
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/thiess.png'; ?>" alt="thiess" />
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/dyeing_machines.jpg'; ?>" alt="" />
+      <img src="<?php echo get_template_directory_uri() . '/assets/images/finishing_section.jpg'; ?>" alt="dyeing_machines" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/finishing.png'; ?>" alt="" />
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/finishing.png'; ?>" alt="finishing" />
           </div>
           <h3 class="title">Finishing </h3>
         </div>
@@ -128,15 +131,18 @@ get_header();
             <span>11</span> <br />
             Finishing  <br> Machines
           </h3>
-          <div class="card_desc">
+          <div class="card_desc double">
             <p>Machinery Partner</p>
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/thiess.png'; ?>" alt="" />
+            <div>
+              <img src="<?php echo get_template_directory_uri() . '/assets/images/brucknerlogo.png'; ?>" alt="" />
+              <img src="<?php echo get_template_directory_uri() . '/assets/images/lafer.png'; ?>" alt="" />
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/printing.jpg'; ?>" alt="" />
+      <img src="<?php echo get_template_directory_uri() . '/assets/images/printing_section.jpg'; ?>" alt="" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">

@@ -335,14 +335,14 @@ if ($leaderships->have_posts()) {
                 <div class="content-details">
                     <div class="content-detail">
                         <div>
-                            <h2>7000</h2>
+                            <h2>3,306</h2>
                             <p>
                                 Beninese nationals will be directly employed across both
                                 shifts
                             </p>
                         </div>
                         <div>
-                            <h2>7000 - 8000</h2>
+                            <h2>3,306 - 5,000</h2>
                             <p>Driving indirect jobs across supply and services</p>
                         </div>
                     </div>
