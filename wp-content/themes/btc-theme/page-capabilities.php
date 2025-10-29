@@ -312,7 +312,7 @@ get_header();
     <div class="category_item second">
       <h2>Sea Port</h2>
       <div class="category_image">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/sea_port.jpg'; ?>" alt="" />
+        <img src="<?php echo get_template_directory_uri() . '/assets/images/sea_port.jpg'; ?>" alt="" />
       </div>
       <p class="category_description">
         Cotonou Sea Port access within <span>40kms/30kms</span> Goods

@@ -42,12 +42,13 @@ get_header();
     <div animateHeading>
         <p>Textile Park</p>
         <h2>
-            At BTC, we take pride in our <strong> fully vertically integrated system</strong>
+            At BTC, we take pride in our <strong> Fully vertical Integrated manufacturing system. 
+</strong>
         </h2>
     </div>
     <div class="description" animateHeading>
         <p>Where every step of the production process - from raw cotton to the finished garment is meticulously managed under one roof.</p>
-        <p>This ensures quality control, efficiency, and sustainability at every stage.</p>
+        <p>This ensures quality control, efficiency, compliance, traceability and sustainability at every stage.</p>
 
     </div>
 </section>

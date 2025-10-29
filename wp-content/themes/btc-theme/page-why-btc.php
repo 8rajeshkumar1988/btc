@@ -71,7 +71,7 @@ get_header();
             <p>Sustainable <br>Manufacturing</p>
         </div>
         <div class="text">
-            <p>Every step is designed to lower impact and raise industry standards.</p>
+            <p>Every step is designed to lower environmental impact and raise industry standards.</p>
             <ul>
                 <li>CmiA-certified cotton for ethical sourcing</li>
                 <li>ZLD systems for 100% water recycling</li>
@@ -81,11 +81,11 @@ get_header();
     </div>
     <div>
         <div class="text">
-            <p>We trace every product from cotton field to customer, in real time.</p>
+            <p>CMIA (Cotton Made in Africa) HIP as well Mass balance certified cotton sourcing.</p>
             <ul>
                 <li>Blockchain-backed tracking across all stages</li>
                 <li>FibreTrace® and GOTS-certified sourcing</li>
-                <li>QR-coded batches for transparent visibility</li>
+                <li>QR codes batches for transparency</li>
             </ul>
         </div>
         <div class="img">
@@ -103,8 +103,8 @@ get_header();
             <p>Our workforce policies are built on fairness, safety and compliance.</p>
             <ul>
                 <li>Living wages across all roles</li>
-                <li>WRAP, ISO & Oeko-Tex certified operations</li>
-                <li>Audited via Higg Index for social performance</li>
+                <li>Wrap, BSCI, ISO, Oekotex, SMETA, OCS certified operations</li>
+                <li>Audited via Higg Index for environmental and Social performance</li>
             </ul>
         </div>
     </div>
@@ -114,7 +114,7 @@ get_header();
             <ul>
                 <li>In-house spinning, knitting, dyeing and garmenting</li>
                 <li>End-to-end quality assurance</li>
-                <li>Shorter timelines, fewer inefficiencies</li>
+                <li>Shorter timelines, higher efficiencies</li>
             </ul>
         </div>
         <div class="img">
