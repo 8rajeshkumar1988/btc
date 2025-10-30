@@ -65,9 +65,11 @@ get_header();
             <span>32,832</span> <br />
             High-Performance <br> Spindles
           </h3>
-          <div class="card_desc">
+          <div class="card_desc double">
             <p>Machinery Partner</p>
+            <div>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/reter.png'; ?>" alt="reter" />
+            </div>
           </div>
         </div>
       </div>
@@ -110,9 +112,11 @@ get_header();
             <span>14</span> <br />
             Dyeing <br> Machines
           </h3>
-          <div class="card_desc">
+          <div class="card_desc double">
             <p>Machinery Partner</p>
+            <div>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/thiess.png'; ?>" alt="thiess" />
+            </div>
           </div>
         </div>
       </div>
@@ -154,9 +158,11 @@ get_header();
           <h3>
             <span>03</span> <br />Printing <br> Machines
           </h3>
-          <div class="card_desc">
+          <div class="card_desc double">
             <p>Machinery Partner</p>
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/roq-newn.png'; ?>" alt="" />
+            <div>
+              <img src="<?php echo get_template_directory_uri() . '/assets/images/roq-newn.png'; ?>" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -175,9 +181,11 @@ get_header();
             <span>9 Needle <br> 18 Head </span> <br />
             Computerized <br> Machine
           </h3>
-          <div class="card_desc">
+          <div class="card_desc double">
             <p>Machinery Partner</p>
+            <div>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/barudan.png'; ?>" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -196,9 +204,11 @@ get_header();
             <span>1,400</span> <br />
             Stitching <br> Machines
           </h3>
-          <div class="card_desc">
+          <div class="card_desc double">
             <p>Machinery Partner</p>
+            <div>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/juki.png'; ?>" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -217,9 +227,11 @@ get_header();
             <span>16</span> <br />
             Laundry <br> Machines
           </h3>
-          <div class="card_desc">
+          <div class="card_desc double">
             <p>Machinery Partner</p>
+            <div>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/ramsons.png'; ?>" alt="" />
+            </div>
           </div>
         </div>
       </div>

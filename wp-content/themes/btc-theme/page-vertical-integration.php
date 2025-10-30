@@ -42,7 +42,7 @@ get_header();
     <div animateHeading>
         <p>Textile Park</p>
         <h2>
-            At BTC, we take pride in our <strong> Fully vertical Integrated manufacturing system. 
+            At BTC, we take pride in our <strong> Fully vertical Integrated manufacturing system
 </strong>
         </h2>
     </div>

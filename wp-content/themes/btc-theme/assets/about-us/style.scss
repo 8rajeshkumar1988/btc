@@ -246,6 +246,7 @@ body {
           height: 28px;
           width: 28px;
           margin-left: auto;
+          filter: invert(1);
         }
         .leader_title {
           color: var(--green);

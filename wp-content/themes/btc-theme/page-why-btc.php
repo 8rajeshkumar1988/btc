@@ -128,11 +128,11 @@ get_header();
             <p>Visionary <br>Partnerships</p>
         </div>
         <div class="text">
-            <p>Our investors back more than business, they power Africa’s industrial future.</p>
+            <p>Our investors back more than business they power Africa’s industrial future.</p>
             <ul>
                 <li>Arise IIP: Pan-African industrial platform</li>
                 <li>CDCB: Benin’s national growth enabler</li>
-                <li>Benin Cotton, SODECO, LCB, SBTC: CottonvValue chain anchors</li>
+                <li>Benin Cotton, SODECO, LCB, SBTC: Cotton value-chain anchors</li>
             </ul>
         </div>
     </div>

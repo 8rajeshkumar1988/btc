@@ -123,12 +123,17 @@ body {
               width: 100%;
             }
             & > div{
-              display: flex;
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
               gap: 20px;
               align-items: center;
+              height: 60px;
+              width: 100%;
               img{
-                width: calc(50% - 10px);
-                flex: 1;
+                width: calc(100% - 0px);
+                height: 60px;
+                object-fit: contain;
+                object-position: left;
                 filter: grayscale(1) brightness(5);
               }
             }

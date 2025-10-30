@@ -7,6 +7,12 @@ body {
   .product_spot {
     display: block;
   }
+  .swiper{
+    width: 100vw;
+  }
+  .swiper-slide {
+      width: 80vw;
+  }
   .product_spot_mobile {
     display: none;
   }
@@ -351,6 +357,17 @@ body {
   .heading {
     padding: 0 var(--paddingX);
   }
+}
+
+@media screen and (max-width:1546px){
+ #product_spotlight {
+  .swiper{
+    width: 100vw;
+  }
+  .swiper-slide {
+      width: 90vw;
+  }
+ } 
 }
 
 @media screen and (max-width: 1200px) {

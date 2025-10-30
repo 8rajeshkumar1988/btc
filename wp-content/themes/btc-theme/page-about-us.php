@@ -185,7 +185,7 @@ if ($leaderships->have_posts()) {
                             <h2 class="leader_title"><?php the_title(); ?> </h2><span style="transform: rotate(45deg);font-size: var(--font-24);color: var(--green); margin-right:auto;">↑</span> 
                              <?php if (get_field('linkedin_profile')): ?>
                                 <a href="<?php the_field('linkedin_profile'); ?>" target="_blank" rel="noopener">
-                                    <img class='linkedin_icon' src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin_blue.png" alt="linkedin" />
+                                    <img class='linkedin_icon' src="<?php echo get_template_directory_uri(); ?>/assets/images/linked.png" alt="linkedin" />
                                 </a>
                             <?php endif; ?>
                         </div>

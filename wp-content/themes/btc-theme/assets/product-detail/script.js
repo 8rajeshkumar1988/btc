@@ -38,7 +38,7 @@ centeredSlides: true,
 });
 
 var spotlight_slider = new Swiper(".spotlight_slider", {
-  slidesPerView: 1.1,
+  slidesPerView: 'auto',
   spaceBetween: 30,
   centeredSlides: true,
   watchSlidesProgress: true,
@@ -55,7 +55,7 @@ var spotlight_slider = new Swiper(".spotlight_slider", {
   },
   breakpoints: {
     768: {
-      slidesPerView: 1.2,
+      slidesPerView: 'auto',
       spaceBetween: 30,
     },
   },

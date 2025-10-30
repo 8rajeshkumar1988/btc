@@ -27,7 +27,8 @@
 #aboutBtc .worldMap {
   position: absolute;
   top: var(--paddingY);
-  right: -3%;
+  transform: translateX(7%);
+  right: 0;
   width: 88%;
   height: calc(100% - 300px);
 }
@@ -225,7 +226,7 @@
 }
 #sustainabiltyStandard .back_svg {
   position: absolute;
-  height: 100%;
+  height: 100vh;
   pointer-events: none;
 }
 #sustainabiltyStandard .leftContent {
@@ -376,7 +377,7 @@
 }
 #ourCapabilities .leftContent p {
   color: var(--green);
-  opacity: 0.6;
+  opacity: 1 !important;
 }
 #ourCapabilities .leftContent h3 {
   color: #fff;
@@ -578,6 +579,9 @@
   }
   #sustainabiltyStandard .heading {
     max-width: 500px;
+  }
+  #aboutBtc .worldMap {
+    transform: translateX(0);
   }
   #aboutBtc .content .sliderAbout {
     max-width: 400px;

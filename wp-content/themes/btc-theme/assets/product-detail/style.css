@@ -9,6 +9,12 @@ body {
 #product_spotlight .product_spot {
   display: block;
 }
+#product_spotlight .swiper {
+  width: 100vw;
+}
+#product_spotlight .swiper-slide {
+  width: 80vw;
+}
 #product_spotlight .product_spot_mobile {
   display: none;
 }
@@ -256,6 +262,14 @@ body {
   padding: 0 var(--paddingX);
 }
 
+@media screen and (max-width: 1546px) {
+  #product_spotlight .swiper {
+    width: 100vw;
+  }
+  #product_spotlight .swiper-slide {
+    width: 90vw;
+  }
+}
 @media screen and (max-width: 1200px) {
   #explore_products .explore_products_container {
     grid-template-columns: repeat(2, 1fr);
