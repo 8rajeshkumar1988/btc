@@ -68,11 +68,11 @@ the_post();
     </div>
     <div class="category_card">
       <h2>WOMEN</h2>
-      <video src="<?php echo get_template_directory_uri() . '/assets/images/product1_safari-2.mp4'; ?>" poster="<?php echo get_template_directory_uri() . '/assets/images/women_banner.jpg'; ?>" autoplay loop muted playsinline></video>
+      <video src="<?php echo get_template_directory_uri() . '/assets/images/women.webm'; ?>" poster="<?php echo get_template_directory_uri() . '/assets/images/women_banner.jpg'; ?>" autoplay loop muted playsinline></video>
     </div>
     <div class="category_card">
       <h2>KIDS</h2>
-      <video src="<?php echo get_template_directory_uri() . '/assets/images/product1_safari-3.mp4'; ?>" poster="<?php echo get_template_directory_uri() . '/assets/images/kid_banner.jpg'; ?>" autoplay loop muted playsinline></video>
+      <video src="<?php echo get_template_directory_uri() . '/assets/images/kid.webm'; ?>" poster="<?php echo get_template_directory_uri() . '/assets/images/kid_banner.jpg'; ?>" autoplay loop muted playsinline></video>
     </div>
   </div>
 </section>
