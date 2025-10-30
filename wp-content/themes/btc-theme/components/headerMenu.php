@@ -94,7 +94,7 @@
                                         }
             
             
-                                        echo '<img  src="' . esc_url($get_field('slider_2')) . '" alt="' . esc_attr($alt_text) . '">';
+                                        echo '<img  src="' . esc_url(get_field('slider_2')) . '" alt="' . esc_attr($alt_text) . '">';
                                     } 
                                     // else {
                                     //     $banner_video = get_field('banner_video', $post_id);
