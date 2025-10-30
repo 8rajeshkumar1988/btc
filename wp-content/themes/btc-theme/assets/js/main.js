@@ -138,23 +138,6 @@ function shareToWhatsApp() {
   window.open(whatsappURL, '_blank', 'noopener,noreferrer,width=600,height=400');
 }
 
-$(document).ready(function () {
-  var headerMenuSwiper = new Swiper("#headerMenuSwiper", {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    centeredSlides: true,
-    // navigation: {
-    //   nextEl: ".explore_other-next",
-    //   prevEl: ".explore_other-prev",
-    // },
-    loop: true,
-    speed: 800,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: true,
-    },
-  });
-})
 
 // header js
 $(document).ready(function () {
