@@ -131,7 +131,7 @@ get_header();
                     <div class="inner_bottom">
                         <div class="first">
                             <p class="title">Technology Used</p>
-                            <p class="subCopy">High-tech looms and knitting machines enable us to create fabrics with intricate patterns and optimal texture</p>
+                            <p class="subCopy">High-tech <strong style="">circular knitting as well as flat knitting </strong> machines  enable us to create fabrics with intricate patterns and optimal texture</p>
                         </div>
                         <div class="second">
                             <p class="title">Key Feature</p>
@@ -218,7 +218,7 @@ get_header();
                     <div class="inner_bottom">
                         <div class="first">
                             <p class="title">Technology Used</p>
-                            <p class="subCopy">Automated stitching machines, along with expert seamstresses, ensure precise construction and high-quality finishing</p>
+                            <p class="subCopy">Automated spreading, automated cutting and highly automation stitching along with expert seam stresses ensures precise construction and high quality finishing.</p>
                         </div>
                         <div class="second">
                             <p class="title">Key Feature</p>
@@ -331,18 +331,18 @@ get_header();
                 <div class="left">
                     <div class="inner_top">
                         <div class="copy">
-                            <p>Final Product: The finished product reaches the end customer, complete with full traceability through our blockchain system, ensuring the highest standards of sustainability and transparency.</p>
+                            <p>Final Product: The finished product reaches the end customer with full traceability, powered by our integrated SAP and blockchain systems for end-to-end transparency.</p>
                         </div>
                         <p class="count">(09)</p>
                     </div>
                     <div class="inner_bottom">
                         <div class="first">
                             <p class="title">Process</p>
-                            <p class="subCopy">Customers receive detailed information via QR codes, allowing them to verify product origin, material composition and environmental impact at every stage.</p>
+                            <p class="subCopy">Our SAP-integrated platform connects internal teams and customers in real time, enabling seamless order tracking, status updates, and complete visibility across every stage of production.</p>
                         </div>
                         <div class="second">
                             <p class="title">Key Feature</p>
-                            <p class="subCopy">The customer enjoys a product made with eco-conscious processes, with full visibility into its journey from farm to fashion.</p>
+                            <p class="subCopy">An interactive dashboard ensures transparency and confidence, allowing customers to monitor their order journey from start to finish.</p>
                         </div>
                     </div>
                 </div>

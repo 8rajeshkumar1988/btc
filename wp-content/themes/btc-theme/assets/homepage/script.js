@@ -8,7 +8,7 @@ $(document).ready(function () {
     effect: "creative",
   
     autoplay: {
-        delay: 3000,
+        delay: 18000,
         // disableOnInteraction: false,
     },
     creativeEffect: {

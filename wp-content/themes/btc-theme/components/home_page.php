@@ -123,7 +123,7 @@
             <div class="ans" style="display: none;">
                 <p>We reduce emissions and waste through sustainable sourcing and clean production.</p>
                 <ul>
-                    <li>CMiA-certified cotton for eco-friendly sourcing</li>
+                    <li>CMiA-certified local portal cotton for eco-friendly sourcing</li>
                     <li>Zero Liquid Discharge (ZLD) for water recycling</li>
                     <li>Clean energy and low-impact manufacturing</li>
                 </ul>
@@ -152,7 +152,7 @@
                 <p>Smart tech drives our efficient, eco-conscious production.</p>
                 <ul>
                     <li>Blockchain for end-to-end traceability</li>
-                    <li>Advanced machinery for speed and accuracy</li>
+                    <li>Advanced technology for speed and accuracy</li>
                     <li>3D design and automated sampling</li>
                 </ul>
             </div>

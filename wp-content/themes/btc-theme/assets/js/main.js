@@ -548,5 +548,41 @@ $(document).ready(function () {
 
   $(window).on('scroll resize', checkOverlap);
   checkOverlap();
+  $(window).on('scroll resize', checkOverlap_for_header);
+  checkOverlap_for_header();
+
+  function checkOverlap_for_header() {
+    const $fixedBtn = $('.headerBtn');
+    let overlap = false;
+
+    $('.closeCapabilities, .cta, .btnssNew > button, .btnss > button, .product_spotlight_buttons > button, .explore_other_buttons > button, .open-btn, .why_btc_buttons > button').each(function () {
+      if (isVerticallyNearOrOverlapping($fixedBtn, $(this), 30)) {
+        overlap = true;
+        return false; // break the loop
+      }
+    });
+
+    if (overlap) {
+      $fixedBtn.css({ opacity: 0, visibility: "hidden", pointerEvents: "none" });
+    } else {
+      $fixedBtn.css({ opacity: 1, visibility: "visible", pointerEvents: "auto" });
+    }
+  }
+
+  // Check overlap or vertical proximity (top/bottom only)
+  function isVerticallyNearOrOverlapping($el1, $el2, buffer = 0) {
+    const rect1 = $el1[0].getBoundingClientRect();
+    const rect2 = $el2[0].getBoundingClientRect();
+
+    // Check horizontal overlap (must overlap on X-axis)
+    const horizontallyOverlapping = !(rect1.right < rect2.left || rect1.left > rect2.right);
+
+    // Check vertical overlap or proximity within buffer
+    const verticallyClose =
+      rect1.bottom > rect2.top - buffer && rect1.top < rect2.bottom + buffer;
+
+    return horizontallyOverlapping && verticallyClose;
+  }
+
 
 })

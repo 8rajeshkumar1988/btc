@@ -135,6 +135,35 @@
                                     ?>
                                 </div>
                             <?php endif; ?>
+                            <?php if (get_field('slider_4')): ?> 
+                                <div class="img swiper-slide">
+                                    <?php
+            
+                                    if (has_post_thumbnail($post_id)) {
+                                        $thumbnail_id = get_post_thumbnail_id($post_id);
+                                        $image_url = wp_get_attachment_url($thumbnail_id);
+                                        $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+                                        $title_text = get_the_title($thumbnail_id);
+                                        if (empty($alt_text)) {
+                                            $alt_text = get_the_title($post_id);
+                                        }
+                                        if (empty($title_text)) {
+                                            $title_text = get_the_title($post_id);
+                                        }
+            
+            
+                                        echo '<img  src="' . esc_url(get_field('slider_4')) . '" alt="' . esc_attr($alt_text) . '">';
+                                    } 
+                                    // else {
+                                    //     $banner_video = get_field('banner_video', $post_id);
+            
+                                    //     if ($banner_video && !empty($banner_video['url'])) {
+                                    //         echo '<video playsinline autoplay muted loop src="' . esc_url($banner_video['url']) . '"></video>';
+                                    //     }
+                                    // }
+                                    ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="content">

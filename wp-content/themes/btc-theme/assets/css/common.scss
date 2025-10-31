@@ -94,6 +94,7 @@ header.sticky {
   width: 100%;
   z-index: 1;
   & > video,
+  & > .capabilitySwiper,
   & > img {
     position: absolute;
     width: 100%;
@@ -124,7 +125,7 @@ header.sticky {
       p {
         position: relative;
         z-index: 1;
-        font-size: var(--font-20);
+        font-size: calc(var(--font-20) + 5px);
         font-weight: 700;
         color: #ffffff99;
         text-transform: uppercase;
@@ -751,9 +752,11 @@ footer {
 header {
   a {
     line-height: 1;
+    pointer-events: visible;
   }
   position: fixed;
   top: 0;
+  pointer-events: none;
   z-index: 99;
   width: 100%;
   padding: clamp(1.5625rem, -1.7137rem + 4.0323vw, 3.125rem) var(--paddingX);
@@ -767,6 +770,7 @@ header {
   button {
     all: unset;
     cursor: pointer;
+    pointer-events: visible;
     img {
       pointer-events: none;
       height: clamp(2.1875rem, 0.877rem + 1.6129vw, 2.8125rem);

@@ -57,7 +57,7 @@ get_header();
         <div class="content" animateHeading>
             <h2>Strategic Location & <br>Global Reach</h2>
             <ul>
-                <li>Proximity to key markets in the USA & EU</li>
+                <li>Proximity to key markets in the US, EU, UK & UAE</li>
                 <li>Quick turnarounds through air and sea connectivity</li>
             </ul>
         </div>
@@ -125,14 +125,14 @@ get_header();
     <div>
         <div class="img">
             <img src="<?php echo get_template_directory_uri() . "/assets/images/Partners-Benin-Textile-Corporation-Apparel-Manufacturing-2.jpg"  ?>" alt="SustainableManufacturing" />
-            <p>Visionary <br>Partnerships</p>
+            <p>Strategic <br>Partnerships</p>
         </div>
         <div class="text">
-            <p>Our investors back more than business they power Africa’s industrial future.</p>
+            <p>We focus on long-term, value-creating partnerships built on trust and collaboration.</p>
             <ul>
-                <li>Arise IIP: Pan-African industrial platform</li>
-                <li>CDCB: Benin’s national growth enabler</li>
-                <li>Benin Cotton, SODECO, LCB, SBTC: Cotton value-chain anchors</li>
+                <li>Reliable, long-term capacities ensuring consistent supply</li>
+                <li>Sustainable, growth-oriented solutions for our partners</li>
+                <li>Transparent, customer-first engagement approach</li>
             </ul>
         </div>
     </div>

@@ -2,6 +2,40 @@ body {
   background-color: #fffff4;
 }
 
+.heroBanner.capabilities .capabilitySwiper {
+  z-index: 0;
+}
+.heroBanner.capabilities .capabilitySwiper .swiper-slide img,
+.heroBanner.capabilities .capabilitySwiper .swiper-slide video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.heroBanner.capabilities .swiper-pagination_capabilities {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.heroBanner.capabilities .swiper-pagination_capabilities span {
+  width: 9px;
+  height: 5px;
+  display: inline-block;
+  background: #fff;
+  opacity: 0.8;
+  margin: 0 3px;
+  border-radius: 20px;
+  transition: opacity 0.5s, background-color 0.5s, width 0.5s;
+  transition-delay: 0.5s, 0.5s, 0s;
+}
+.heroBanner.capabilities .swiper-pagination_capabilities .swiper-pagination-bullet-active {
+  width: 40px;
+  background-color: var(--green);
+}
+
 #vertical_integration {
   position: relative;
   padding: var(--paddingY) calc(var(--paddingX) / 2);
@@ -218,6 +252,7 @@ body {
 #sustainability_details .technology_and_innovation .tai_container .static > div h3 {
   color: var(--green);
   font-size: 40px;
+  line-height: 1.1;
 }
 #sustainability_details .technology_and_innovation .tai_container .dynamic_desc p {
   margin-bottom: 30px;
@@ -293,7 +328,7 @@ body {
   inset: 0;
 }
 #logistics_shipping_efficiency .logistics_shipping_efficiency_container .category_item .category_description {
-  margin: 40px 20px;
+  margin: 20px 20px;
   margin-bottom: 0;
   text-decoration: none;
   font-size: var(--font-18);
@@ -379,7 +414,8 @@ body {
   #sustainability_details .sustainability_info {
     grid-template-columns: 1fr;
   }
-  #sustainability_details .sustainability_info p, #sustainability_details .sustainability_info li {
+  #sustainability_details .sustainability_info p,
+  #sustainability_details .sustainability_info li {
     margin-bottom: 10px;
   }
   #sustainability_details .sustainability_info .image_wrapper img {
@@ -389,7 +425,8 @@ body {
   #sustainability_details .technology_and_innovation .tai_container {
     grid-template-columns: 1fr;
   }
-  #sustainability_details .technology_and_innovation .tai_container .dynamic_desc p, #sustainability_details .technology_and_innovation .tai_container .dynamic_desc li {
+  #sustainability_details .technology_and_innovation .tai_container .dynamic_desc p,
+  #sustainability_details .technology_and_innovation .tai_container .dynamic_desc li {
     margin-bottom: 10px;
   }
   #sustainability_details .technology_and_innovation .tai_container .static {

@@ -26,7 +26,7 @@
         <a href="<?php echo site_url(HOME_PAGE) ?>"><img src="<?php echo get_template_directory_uri() . '/assets/images/footerlogo.svg'; ?>" alt="btc logo"></a>
         <div>
             <!-- <p class="title">Leading Textile Manufacturer & Exporter</p> -->
-            <p class="title">Leading Textile Manufacturer & Exporter</p>
+            <p class="title">Leading Textile Manufacturer & Garment Exporter</p>
             <p class="copy">BTC, located in Benin, is West Africa’s first fully vertically integrated textile factory, transforming rain-fed, non-GMO CmiA-certified cotton into premium apparels.</p>
         </div>
     </div>

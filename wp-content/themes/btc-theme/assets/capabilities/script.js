@@ -203,3 +203,23 @@ $(document).ready(function () {
 
 
 });
+
+
+
+$(document).ready(function () {
+    var capabilitySwiper = new Swiper(".capabilitySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        speed: 800,
+        autoplay: {
+            delay: 5000,
+            //   disableOnInteraction: true,
+        },
+        pagination: {
+            el: ".swiper-pagination_capabilities",
+            clickable: true,
+        },
+    });
+})

@@ -3,30 +3,57 @@
 get_header();
 
 ?>
-<section class="heroBanner">
-  <?php
+<section class="heroBanner capabilities">
+ <?php
   $banner_video = get_field('banner_video');
   $thumbnail_id = get_post_thumbnail_id();
   $image_url = wp_get_attachment_url($thumbnail_id);
   $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
   $title_text = get_the_title($thumbnail_id);
+
   if (empty($alt_text)) {
     $alt_text = get_the_title();
   }
   if (empty($title_text)) {
     $title_text = get_the_title();
   }
-
-
-  if ($banner_video) {
-    echo '<video playsinline autoplay muted loop poster="' . $image_url . '" src="' . esc_url($banner_video['url']) . '"></video>';
-  } else  if (has_post_thumbnail()) {
-    $image = '<img  src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
-    echo $image;
-  }
-
   ?>
 
+  <div class='swiper capabilitySwiper'>
+    <div class='swiper-wrapper'>
+      <div class='swiper-slide'>
+        <?php
+        if ($banner_video) {
+          echo '<video playsinline autoplay muted loop poster="' . esc_url($image_url) . '" src="' . esc_url($banner_video['url']) . '"></video>';
+        } elseif (has_post_thumbnail()) {
+          echo '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+        }
+        ?>
+      </div>
+      <?php if (get_field('slider_2')): ?> 
+        <div class='swiper-slide'>
+          <?php          
+            echo '<img src="' . esc_url(get_field('slider_2')) . '" alt="' . esc_attr($alt_text) . '">';
+          ?>
+        </div>
+      <?php endif; ?>
+      <?php if (get_field('slider_3')): ?> 
+        <div class='swiper-slide'>
+          <?php          
+            echo '<img src="' . esc_url(get_field('slider_3')) . '" alt="' . esc_attr($alt_text) . '">';
+          ?>
+        </div>
+      <?php endif; ?>
+      <?php if (get_field('slider_4')): ?> 
+        <div class='swiper-slide'>
+          <?php          
+            echo '<img src="' . esc_url(get_field('slider_4')) . '" alt="' . esc_attr($alt_text) . '">';
+          ?>
+        </div>
+      <?php endif; ?>
+    </div>
+     
+  </div>
 
 
   <div class="content">
@@ -37,6 +64,7 @@ get_header();
     </div>
     <div class="layer"></div>
     <div class="layer2"></div>
+     <div class="swiper-pagination_capabilities"></div>
   </div>
 </section>
 
@@ -250,7 +278,7 @@ get_header();
         carbon footprint and waste.
       </p>
       <ul>
-        <li>CmiA-certified cotton for eco-friendly sourcing.</li>
+        <li>CMIA certified local cotton for eco-friendly sourcing.</li>
         <li>Zero Liquid Discharge (ZLD) technology for water recycling.</li>
         <li>Clean energy and eco-conscious manufacturing processes.</li>
       </ul>
@@ -266,7 +294,7 @@ get_header();
     <div class="tai_container">
       <div class="static">
         <div>
-          <h3>2400 m/c</h3>
+          <h3>2400 machine capacity</h3>
           <p>Production with 1400 Stitching <br> machines x 2 shifts</p>
         </div>
         <div>
@@ -327,8 +355,7 @@ get_header();
         <img src="<?php echo get_template_directory_uri() . '/assets/images/sea_port.jpg'; ?>" alt="" />
       </div>
       <p class="category_description">
-        Cotonou Sea Port access within <span>40kms/30kms</span> Goods
-        produced can be loaded and shipped to port in 30mins.
+       Located just 40 km from the seaport, our facility ensures goods reach the port within 30 minutes for faster global dispatch.
       </p>
     </div>
     <div class="category_item third">
@@ -337,9 +364,7 @@ get_header();
         <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/dry_port.jpg'; ?>" alt="" />
       </div>
       <p class="category_description">
-        Dry Port
-        <span>inside the zone where custom clearance happens,</span> without
-        hassles. In other countries, the custom clearance happens at port.
+       Dry Port inside the zone where custom clearance happens, without hassles.
       </p>
     </div>
     <!-- <div class="swiper-pagination"></div> -->
