@@ -197,7 +197,7 @@
     //         background-color: #e4e4e4;
     //     }
     // }
-    .why_btc-prev img{
+    .why_btc-prev img {
         transform: rotate(180deg);
     }
 }
@@ -340,11 +340,18 @@
     }
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1546px) {
+    #globalSearch {
+        & > svg,
+        .lottie {
+            right: -10%;
+        }
+    }
+
     #globalSearch {
         aspect-ratio: unset;
         padding-top: clamp(12.5rem, 5.375rem + 30vw, 20.75rem);
-       
+
         .content {
             padding: 20px;
         }
@@ -360,12 +367,32 @@
     }
 }
 
+@media screen and (max-width: 1400px) {
+    #globalSearch {
+        & > svg,
+        .lottie {
+            right: 0;
+            transform: translateX(6.8%);
+        }
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    #globalSearch {
+        & > svg,
+        .lottie {
+            right: 0;
+            transform: translateX(3.5%);
+        }
+    }
+}
+
 @media screen and (max-width: 1024px) {
     #sustainableManufacturer > div {
         .text {
             transform: none;
         }
-    }
+    }  
     #globalSearch {
         max-height: 700px;
         height: auto;
@@ -373,6 +400,7 @@
         .lottie {
             width: 105%;
             height: auto;
+            transform: translateX(0);
         }
     }
     #sustainableManufacturer {
@@ -501,7 +529,7 @@
                 .img {
                     width: 100%;
                     aspect-ratio: 0.9;
-                    img{
+                    img {
                         height: calc(100% + 50px);
                         transform: translateY(-50px);
                     }

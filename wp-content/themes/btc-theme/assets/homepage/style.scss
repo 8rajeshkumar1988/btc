@@ -697,7 +697,12 @@
 }
 
 @media screen and (max-width: 1546px) {
-  
+
+  #aboutBtc {
+    .worldMap{
+      transform: translateX(10%);
+    }
+  }
 
   #ourCapabilities {
     .closeCapabilities {
@@ -715,6 +720,15 @@
     }
   }
 }
+
+@media screen and (max-width: 1366px) {
+   #aboutBtc {
+    .worldMap{
+      transform: translateX(8%);
+    }
+  }
+}
+
 
 @media screen and (max-width: 1024px) {
 

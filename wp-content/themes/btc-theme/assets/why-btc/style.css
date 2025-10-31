@@ -330,7 +330,11 @@
   font-weight: 600;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1546px) {
+  #globalSearch > svg,
+  #globalSearch .lottie {
+    right: -10%;
+  }
   #globalSearch {
     aspect-ratio: unset;
     padding-top: clamp(12.5rem, 5.375rem + 30vw, 20.75rem);
@@ -348,6 +352,20 @@
     grid-template-columns: calc(45% - 30px) 55%;
   }
 }
+@media screen and (max-width: 1400px) {
+  #globalSearch > svg,
+  #globalSearch .lottie {
+    right: 0;
+    transform: translateX(6.8%);
+  }
+}
+@media screen and (max-width: 1220px) {
+  #globalSearch > svg,
+  #globalSearch .lottie {
+    right: 0;
+    transform: translateX(3.5%);
+  }
+}
 @media screen and (max-width: 1024px) {
   #sustainableManufacturer > div .text {
     transform: none;
@@ -360,6 +378,7 @@
   #globalSearch .lottie {
     width: 105%;
     height: auto;
+    transform: translateX(0);
   }
   #sustainableManufacturer {
     padding: 0 var(--paddingX) var(--paddingY);
