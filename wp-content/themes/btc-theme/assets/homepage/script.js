@@ -116,7 +116,7 @@ $(document).ready(function () {
       speed: 800,
       // initialSlide: 3,
       autoplay: {
-          delay: 12000,
+          delay: 18500,
           disableOnInteraction: false,
       },
       allowTouchMove: true, // 👈 disables swipe/drag
