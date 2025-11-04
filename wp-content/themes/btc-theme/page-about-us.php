@@ -467,6 +467,24 @@ if ($leaderships->have_posts()) {
                 <p>For meeting global ethical sourcing standards</p>
             </div>
         </div>
+        <div class="certificate_card">
+      <div class="certificate_logo">
+        <img src="<?php echo get_template_directory_uri() . "/assets/images/higgindex.png" ?>" alt="higgindex">
+      </div>
+      <div class="certificate_description">
+        <h3 class="certificate_title">Higg Index Certification</h3>
+        <p>Sustainable performance benchmarking</p>
+      </div>
+    </div>
+    <div class="certificate_card">
+      <div class="certificate_logo">
+        <img src="<?php echo get_template_directory_uri() . "/assets/images/smeta.png" ?>" alt="smeta">
+      </div>
+      <div class="certificate_description">
+        <h3 class="certificate_title">SMETA (Sedex Members Ethical Trade Audit)</h3>
+        <p>Ethical labor & trade compliance</p>
+      </div>
+    </div>
     </div>
 </section>
 <div id="popup"  class="hidden">
