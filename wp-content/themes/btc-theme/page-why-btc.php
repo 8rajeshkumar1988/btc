@@ -73,7 +73,7 @@ get_header();
         <div class="text">
             <p>Every step is designed to lower environmental impact and raise industry standards.</p>
             <ul>
-                <li>CmiA-certified cotton for ethical sourcing</li>
+                <li>CmiA-certified local cotton for ethical sourcing</li>
                 <li>ZLD systems for 100% water recycling</li>
                 <li>LEED-certified facilities using clean energy</li>
             </ul>
@@ -81,7 +81,7 @@ get_header();
     </div>
     <div>
         <div class="text">
-            <p>CMIA (Cotton Made in Africa) HIP as well Mass balance certified cotton sourcing.</p>
+            <p>CmiA (Cotton Made in Africa) HIP as well Mass balance certified local cotton sourcing.</p>
             <ul>
                 <li>Blockchain-backed tracking across all stages</li>
                 <li>FibreTrace® and GOTS-certified sourcing</li>
@@ -150,11 +150,11 @@ get_header();
         <div class='subContent'>
             <div>
                 <p class="title">GDP</p>
-                <p class="copy">$59.241 BN</p>
+                <p class="copy">$21.48 BN</p>
             </div>
             <div>
                 <p class="title">GDP Growth</p>
-                <p class="copy">6.4%</p>
+                <p class="copy">7.5%</p>
             </div>
             <div>
                 <p class="title">Currency</p>
@@ -162,11 +162,11 @@ get_header();
             </div>
             <div>
                 <p class="title">Population</p>
-                <p class="copy">14.8 MN</p>
+                <p class="copy">14.4 MN</p>
             </div>
             <div>
                 <p class="title">Region</p>
-                <p class="copy2" style="text-transform: uppercase;">West Africa (300 MN Inhabitants)</p>
+                <p class="copy2" style="text-transform: uppercase;">West Africa (456 MN Inhabitants)</p>
             </div>
             <div>
                 <p class="title">Affiliations</p>
@@ -194,7 +194,8 @@ get_header();
 </style>
 
 <section id="homeOfBtc">
-    <img class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/homeOfBtc.png"  ?>" alt="">
+    <!-- <img class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/homeOfBtc.png"  ?>" alt=""> -->
+    
     <div class="heading" animateHeading>
         <p>Home of BTC</p>
         <h3>GDIZ – Glo-Djigbé Industrial Zone</h3>
@@ -268,6 +269,8 @@ get_header();
             </div>
         </div>
     </div>
+    <img class="layer desk" src="<?php echo get_template_directory_uri() . "/assets/images/gate1.webp"  ?>" alt="">
+    <img class="layer mobile" src="<?php echo get_template_directory_uri() . "/assets/images/gate2.webp"  ?>" alt="">
 </section>
 
 <section id="roleOfbtc">

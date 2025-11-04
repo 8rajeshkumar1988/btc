@@ -115,10 +115,10 @@ $(document).ready(function () {
       grabCursor: true,
       speed: 800,
       // initialSlide: 3,
-      autoplay: {
-          delay: 18500,
-          disableOnInteraction: false,
-      },
+      // autoplay: {
+      //     delay: 18500,
+      //     disableOnInteraction: false,
+      // },
       allowTouchMove: true, // 👈 disables swipe/drag
       simulateTouch: false,
       pagination: {

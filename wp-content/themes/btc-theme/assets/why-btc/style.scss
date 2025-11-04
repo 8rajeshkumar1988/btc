@@ -204,27 +204,32 @@
 
 #homeOfBtc {
     position: relative;
-    padding: var(--paddingY) var(--paddingX);
-    padding-bottom: clamp(12.5rem, -7.1573rem + 24.1935vw, 21.875rem);
+    overflow: hidden;
     background: linear-gradient(180deg, #ffffff 0%, #ecf3ff 100%);
     .layer {
-        position: absolute;
+        // position: absolute;
         width: 100%;
         bottom: 0;
         left: 0;
         pointer-events: none;
     }
+    .mobile{
+        display: none;
+    }
     .heading {
+        padding: var(--paddingY) var(--paddingX);
+        padding-bottom: var(--spaceBelow_heading);
         h3 {
             color: var(--blue);
         }
     }
     display: flex;
     flex-direction: column;
-    gap: var(--spaceBelow_heading);
+    
     .content {
+        padding: 0 var(--paddingX);
         display: grid;
-        grid-template-columns: 45% 45%;
+        grid-template-columns: 100%;
         gap: 10%;
         .first * {
             font-size: var(--font-20);
@@ -237,7 +242,6 @@
             }
         }
         .second {
-            overflow: hidden;
             .title {
                 color: var(--secondaryBlack);
                 font-size: var(--font-20);
@@ -246,9 +250,9 @@
             .swiper-wrapper {
                 margin-top: calc(var(--font-20) * 1.5);
                 .swiper-slide {
-                    background: linear-gradient(180deg, #f8fbff 0%, #f1f6ff 100%);
-                    display: flex;
-                    flex-direction: column;
+                    background: transparent;
+                    display: grid;
+                    grid-template-columns: 50% 50%;
                     gap: calc(var(--font-20) * 2);
                     & > div {
                         display: flex;
@@ -442,10 +446,6 @@
 
     #homeOfBtc {
         overflow: hidden;
-        padding-bottom: clamp(14.375rem, 21.5865rem + -28.8462vw, 3.125rem);
-        .layer {
-            width: 160%;
-        }
         .content {
             display: flex;
             flex-direction: column;
@@ -516,6 +516,24 @@
             }
         }
     }
+    #homeOfBtc{
+        .mobile{
+            display: block;
+        }
+        .desk{
+            display: none;
+        }
+        .content{
+            .second{
+                .swiper-wrapper{
+                    .swiper-slide{
+                      display: flex;
+                      flex-direction: column;
+                    }
+                }
+            }
+        }
+    }    
     #roleOfbtc .content > div .text {
         transform: none;
     }

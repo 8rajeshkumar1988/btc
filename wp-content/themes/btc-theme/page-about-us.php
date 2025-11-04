@@ -62,7 +62,7 @@ the_post();
                     <p class="category_description" >
                         BTC, located in Benin, is West Africa's first fully vertically
                         integrated factory, transforming rain-fed, <strong>
-                        non-GMO CmiA-certified cotton
+                        non-GMO CmiA-certified local cotton
                         </strong>—widely recognized and <strong>trusted by ginning
                         associations</strong> and industry stakeholders—into premium apparel.
                     </p>
@@ -72,7 +72,7 @@ the_post();
                         <img src="<?php echo get_template_directory_uri() . "/assets/images/about-sec-2.jpg" ?>" alt="" />
                     </div>
                     <p class="category_description">
-                        In addition to CmiA cotton, we also work with organic cotton,
+                        In addition to CmiA-certified local cotton, we also work with organic cotton,
                         regenerative cotton, and other sustainable cotton types. From
                         spinning to garmenting, we ensure quality, efficiency, and
                         sustainability at every stage.
@@ -384,7 +384,7 @@ if ($leaderships->have_posts()) {
                         </div> -->
                     </div>
                     <ul>
-                        <li>CMiA-certified cotton for eco-friendly sourcing</li>
+                        <li>CmiA-certified local cotton for eco-friendly sourcing</li>
                         <li>Zero Liquid Discharge (ZLD) for water recycling</li>
                         <li>Clean energy and low-impact manufacturing</li>
                     </ul>

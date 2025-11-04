@@ -190,13 +190,14 @@ get_header();
             <p>Machinery Partner</p>
             <div>
               <img src="<?php echo get_template_directory_uri() . '/assets/images/roq-newn.png'; ?>" alt="" />
+              <img src="<?php echo get_template_directory_uri() . '/assets/images/impress.png'; ?>" alt="" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/embroidery.png'; ?>" alt="" />
+      <img src="<?php echo get_template_directory_uri() . '/assets/images/embroidery.jpg'; ?>" alt="" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
@@ -236,13 +237,14 @@ get_header();
             <p>Machinery Partner</p>
             <div>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/juki.png'; ?>" alt="" />
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/pegasus.png'; ?>" alt="" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/laundry.jpg'; ?>" alt="" />
+      <img src="<?php echo get_template_directory_uri() . '/assets/images/laundry_machine.jpg'; ?>" alt="" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
@@ -252,7 +254,7 @@ get_header();
         </div>
         <div class="card_body">
           <h3>
-            <span>16</span> <br />
+            <span>17</span> <br />
             Laundry <br> Machines
           </h3>
           <div class="card_desc double">
@@ -278,7 +280,7 @@ get_header();
         carbon footprint and waste.
       </p>
       <ul>
-        <li>CMIA certified local cotton for eco-friendly sourcing.</li>
+        <li>CmiA certified local cotton for eco-friendly sourcing.</li>
         <li>Zero Liquid Discharge (ZLD) technology for water recycling.</li>
         <li>Clean energy and eco-conscious manufacturing processes.</li>
       </ul>
@@ -294,7 +296,7 @@ get_header();
     <div class="tai_container">
       <div class="static">
         <div>
-          <h3>2400 machine capacity</h3>
+          <h3>2400 M.Cap</h3>
           <p>Production with 1400 Stitching <br> machines x 2 shifts</p>
         </div>
         <div>
@@ -355,7 +357,7 @@ get_header();
         <img src="<?php echo get_template_directory_uri() . '/assets/images/sea_port.jpg'; ?>" alt="" />
       </div>
       <p class="category_description">
-       Located just 40 km from the seaport, our facility ensures goods reach the port within 30 minutes for faster global dispatch.
+       Located just <span> 40 km from the seaport</span>, our facility ensures goods reach the port<span> within 30 minutes for faster global dispatch</span>.
       </p>
     </div>
     <div class="category_item third">
@@ -364,7 +366,7 @@ get_header();
         <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/dry_port.jpg'; ?>" alt="" />
       </div>
       <p class="category_description">
-       Dry Port inside the zone where custom clearance happens, without hassles.
+       Dry Port inside the zone where <span> custom clearance  happens, without hassles</span>.
       </p>
     </div>
     <!-- <div class="swiper-pagination"></div> -->

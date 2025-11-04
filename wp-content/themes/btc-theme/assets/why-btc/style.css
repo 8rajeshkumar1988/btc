@@ -194,26 +194,31 @@
 
 #homeOfBtc {
   position: relative;
-  padding: var(--paddingY) var(--paddingX);
-  padding-bottom: clamp(12.5rem, -7.1573rem + 24.1935vw, 21.875rem);
+  overflow: hidden;
   background: linear-gradient(180deg, #ffffff 0%, #ecf3ff 100%);
   display: flex;
   flex-direction: column;
-  gap: var(--spaceBelow_heading);
 }
 #homeOfBtc .layer {
-  position: absolute;
   width: 100%;
   bottom: 0;
   left: 0;
   pointer-events: none;
 }
+#homeOfBtc .mobile {
+  display: none;
+}
+#homeOfBtc .heading {
+  padding: var(--paddingY) var(--paddingX);
+  padding-bottom: var(--spaceBelow_heading);
+}
 #homeOfBtc .heading h3 {
   color: var(--blue);
 }
 #homeOfBtc .content {
+  padding: 0 var(--paddingX);
   display: grid;
-  grid-template-columns: 45% 45%;
+  grid-template-columns: 100%;
   gap: 10%;
 }
 #homeOfBtc .content .first * {
@@ -226,9 +231,6 @@
 #homeOfBtc .content .first * b {
   font-weight: 600;
 }
-#homeOfBtc .content .second {
-  overflow: hidden;
-}
 #homeOfBtc .content .second .title {
   color: var(--secondaryBlack);
   font-size: var(--font-20);
@@ -238,9 +240,9 @@
   margin-top: calc(var(--font-20) * 1.5);
 }
 #homeOfBtc .content .second .swiper-wrapper .swiper-slide {
-  background: linear-gradient(180deg, #f8fbff 0%, #f1f6ff 100%);
-  display: flex;
-  flex-direction: column;
+  background: transparent;
+  display: grid;
+  grid-template-columns: 50% 50%;
   gap: calc(var(--font-20) * 2);
 }
 #homeOfBtc .content .second .swiper-wrapper .swiper-slide > div {
@@ -415,10 +417,6 @@
   }
   #homeOfBtc {
     overflow: hidden;
-    padding-bottom: clamp(14.375rem, 21.5865rem - 28.8462vw, 3.125rem);
-  }
-  #homeOfBtc .layer {
-    width: 160%;
   }
   #homeOfBtc .content {
     display: flex;
@@ -471,6 +469,16 @@
   #sustainableManufacturer > div .img img {
     height: calc(100% + 50px);
     transform: translateY(-50px);
+  }
+  #homeOfBtc .mobile {
+    display: block;
+  }
+  #homeOfBtc .desk {
+    display: none;
+  }
+  #homeOfBtc .content .second .swiper-wrapper .swiper-slide {
+    display: flex;
+    flex-direction: column;
   }
   #roleOfbtc .content > div .text {
     transform: none;

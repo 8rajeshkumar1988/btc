@@ -74,7 +74,7 @@ the_post();
           <p>We partner with world leaders in traceability</p>
           <ul>
             <li>FibreTrace</li>
-            <li>Cotton Made in Africa (CMIA)</li>
+            <li>Cotton Made in Africa (CmiA)</li>
             <li>Global Organic Textile Standard (GOTS)</li>
             <li>
               Blockchain technology enables us to track every stage of
@@ -109,7 +109,7 @@ the_post();
           <p>We partner with world leaders in traceability</p>
           <ul>
             <li>FibreTrace</li>
-            <li>Cotton Made in Africa (CMIA)</li>
+            <li>Cotton Made in Africa (CmiA)</li>
             <li>Global Organic Textile Standard (GOTS)</li>
             <li>
               Blockchain technology enables us to track every stage of
@@ -142,7 +142,7 @@ the_post();
           <p>We partner with world leaders in traceability</p>
           <ul>
             <li>FibreTrace</li>
-            <li>Cotton Made in Africa (CMIA)</li>
+            <li>Cotton Made in Africa (CmiA)</li>
             <li>Global Organic Textile Standard (GOTS)</li>
             <li>
               Blockchain technology enables us to track every stage of
@@ -175,7 +175,7 @@ the_post();
         <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/cotton_made_in_africa.png" ?>" alt="">
       </div>
       <div class="certificate_description">
-        <h3 class="certificate_title">Cotton Made in Africa (CMiA)</h3>
+        <h3 class="certificate_title">Cotton Made in Africa (CmiA)</h3>
         <p>For sustainable cotton from Africa</p>
       </div>
     </div>

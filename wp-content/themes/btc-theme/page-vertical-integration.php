@@ -64,7 +64,7 @@ get_header();
                 <div class="left">
                     <div class="inner_top">
                         <div class="copy">
-                            <p>We begin by sourcing rain-fed, non-GMO CmiA-certified cotton (Cotton made in Africa) directly from trusted, sustainable farms. This guarantees high-quality, traceable, and eco-friendly cotton. </p>
+                            <p>We begin by sourcing rain-fed, non-GMO CmiA-certified local cotton (Cotton made in Africa) directly from trusted, sustainable farms. This guarantees high-quality, traceable, and eco-friendly cotton. </p>
                         </div>
                         <p class="count">(01)</p>
                     </div>
@@ -124,7 +124,7 @@ get_header();
                 <div class="left">
                     <div class="inner_top">
                         <div class="copy">
-                            <p>The spun yarn is knitted into fabric at our facilities. We offer various fabric types (e.g., cotton knits, fabrics) depending on the garment style</p>
+                            <p>The spun yarn is knitted into fabric at our facilities. We offer various fabric types (single jersey, double-knit pique, french terry, brushed fleece, etc.) depending on the garment style</p>
                         </div>
                         <p class="count">(03)</p>
                     </div>
@@ -158,6 +158,7 @@ get_header();
                                 <div class="tags active" data-tab="dyeing" data-img="<?php echo get_template_directory_uri() . '/assets/images/Dyeing-and-Processing-BTC-6.jpg'; ?>">DYEING</div>
                                 <div class="tags unactive" data-tab="printing" data-img="<?php echo get_template_directory_uri() . '/assets/images/printing_machine.webp'; ?>">PRINTING</div>
                                 <div class="tags unactive" data-tab="embroidery" data-img="<?php echo get_template_directory_uri() . '/assets/images/embroidery_machine.webp'; ?>">EMBROIDERY</div>
+                                <div class="tags unactive" data-tab="quality" data-img="<?php echo get_template_directory_uri() . '/assets/images/quality.jpg'; ?>">QUALITY TESTING</div>
                             </div>
                         </div>
                         <p class="count">(04)</p>
@@ -195,6 +196,17 @@ get_header();
                             <p class="subCopy">Intricate detailing with excellent thread density and long-lasting durability, tailored to premium fashion.</p>
                         </div>
                     </div>
+                    <div class="inner_bottom" id="quality">
+                        <p>Equipped with advanced SDL ATLAS testing instruments and calibrated systems, our lab validates fabrics across physical, chemical, and color fastness parameters for international markets</p>
+                        <div class="first">
+                            <p class="title">Process</p>
+                            <p class="subCopy">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, dignissimos cumque aspernatur ab blanditiis assumenda?</p>
+                        </div>
+                        <div class="second">
+                            <p class="title">Key Feature</p>
+                            <p class="subCopy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis doloremque iusto dolorem.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="right">
                     <img id="textile_processing_img" src="<?php echo get_template_directory_uri() . '/assets/images/Dyeing-and-Processing-BTC-6.jpg'; ?>" alt="">
@@ -227,7 +239,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/SHOOTING-OUVRIERS-GTC.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/garmenting.jpg'; ?>" alt="">
                 </div>
             </div>
         </div>

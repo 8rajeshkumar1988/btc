@@ -123,7 +123,7 @@
             <div class="ans" style="display: none;">
                 <p>We reduce emissions and waste through sustainable sourcing and clean production.</p>
                 <ul>
-                    <li>CMiA-certified local portal cotton for eco-friendly sourcing</li>
+                    <li>CmiA-certified local cotton for eco-friendly sourcing</li>
                     <li>Zero Liquid Discharge (ZLD) for water recycling</li>
                     <li>Clean energy and low-impact manufacturing</li>
                 </ul>
@@ -187,6 +187,12 @@
                     <li>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/bsci.png" ?>" alt="bsci">    
                     Meeting global ethical sourcing standards</li>
+                    <li>
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/higgindex.png" ?>" alt="bsci">    
+                    Measuring environmental and social impact for sustainable manufacturing</li>
+                    <li>
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/smeta.png" ?>" alt="bsci">    
+                    Ensuring ethical trade, labor, and workplace standards</li>
                 </ul>
             </div>
         </div>
