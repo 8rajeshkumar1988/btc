@@ -106,6 +106,10 @@ body {
   transform: rotate(180deg);
 }
 
+#spotlight .event_description > p, #spotlight .event_description > h1, #spotlight .event_description > div, #spotlight .event_description > a {
+  opacity: 0;
+  transform: translateY(50px);
+}
 #spotlight .event_description h1 {
   margin-top: 0;
 }

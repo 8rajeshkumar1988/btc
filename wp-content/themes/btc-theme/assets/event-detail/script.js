@@ -110,3 +110,14 @@ function changeAttendees(delta) {
       swiper: galleryThumbs,
     },
   });
+
+
+window.addEventListener("load", () => {  
+    gsap.to('.eventDetailsHead h1', {
+      opacity: 1,
+      y: 0,
+      duration: 0.6,
+      stagger: 0.1,
+      ease: "power2.out",
+    });
+});

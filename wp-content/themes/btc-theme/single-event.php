@@ -24,7 +24,7 @@ get_header();
        <p class="breadcrub">
         <a href="<?php echo site_url(HOME_PAGE) ?>">Home</a> / <a href="<?php echo site_url('/all-event') ?>">Events & Engagements</a> / <?php the_title() ?>
         </p>
-        <div class="heroText">
+        <div class="heroText  eventDetailsHead">
             <!-- <p>Previous Events</p> -->
             <h1><?php the_title(); ?></h1>
         </div>

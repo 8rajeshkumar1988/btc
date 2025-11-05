@@ -112,6 +112,10 @@ body {
 
 #spotlight {
   .event_description {
+    & > p, & > h1, & > div,  & > a{
+      opacity: 0;
+      transform: translateY(50px);
+    }
     h1 {
       margin-top: 0;
     }
