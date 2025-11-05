@@ -280,7 +280,7 @@ get_header();
         carbon footprint and waste.
       </p>
       <ul>
-        <li>CmiA certified local cotton for eco-friendly sourcing.</li>
+        <li>CmiA-certified local cotton for eco-friendly sourcing.</li>
         <li>Zero Liquid Discharge (ZLD) technology for water recycling.</li>
         <li>Clean energy and eco-conscious manufacturing processes.</li>
       </ul>

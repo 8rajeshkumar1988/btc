@@ -40,7 +40,7 @@ body {
 #product_spotlight .swiper-slide {
   max-height: 768px;
   display: block;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/8;
   position: relative;
   overflow: hidden;
 }

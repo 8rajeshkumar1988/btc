@@ -128,7 +128,7 @@ the_post();
         <h2>Mission</h2>
         <p>
             At BTC, we shape the future of textiles by integrating <strong> sustainability,
-            innovation, and efficiency.</strong> From <strong>CmiA-certified cotton </strong> to premium
+            innovation, and efficiency.</strong> From <strong>CmiA-certified local cotton </strong> to premium
             garments, we deliver ethical, high-quality apparel that meets global
             demand while empowering communities and <strong> reducing carbon footprints.</strong>
         </p>

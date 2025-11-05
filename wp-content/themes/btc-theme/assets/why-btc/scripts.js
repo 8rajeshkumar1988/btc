@@ -5,7 +5,7 @@ $(document).ready(function () {
     speed: 600,
     loop: true,
     autoplay: {
-      delay: 3000,
+      delay: 18000,
       disableOnInteraction: true,
     },
     creativeEffect: {
