@@ -544,7 +544,7 @@ $(document).ready(function () {
           // delay: 0.1 * i,
           scrollTrigger: {
             trigger: card,
-            start: "top 90%",
+            start: "top 95%",
             toggleActions: "restart none none reverse",
           },
         });
