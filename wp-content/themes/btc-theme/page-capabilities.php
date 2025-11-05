@@ -207,7 +207,7 @@ get_header();
         </div>
         <div class="card_body">
           <h3>
-            <span>9 Needle <br> 18 Head </span> <br />
+            <span>9 Needle <br> 18 Head <br> 2 Unit </span> <br />
             Computerized <br> Machine
           </h3>
           <div class="card_desc double">

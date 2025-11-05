@@ -418,7 +418,7 @@ if ($leaderships->have_posts()) {
                 <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/cotton_made_in_africa.png" ?>" alt="">
             </div>
             <div class="certificate_description">
-                <h3 class="certificate_title">Cotton Made in Africa (CMiA)</h3>
+                <h3 class="certificate_title">Cotton Made in Africa (CmiA)</h3>
                 <p>For sustainable cotton from Africa</p>
             </div>
         </div>
