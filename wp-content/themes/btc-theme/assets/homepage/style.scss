@@ -306,7 +306,7 @@
     position: absolute;
     height: 100vh;
     pointer-events: none;
-    top: 0;
+    top: -100px;
   }
   .leftContent {
     display: flex;
@@ -452,7 +452,7 @@
     inset: 0;
     height: 125%;
     z-index: 0;
-    top: -150px;
+    top: -200px;
     pointer-events: none;
 
   }
