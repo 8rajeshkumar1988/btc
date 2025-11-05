@@ -30,9 +30,9 @@ $(document).ready(function () {
   });
 
 
-  gsap.from('.contacts', {
-    y: 100,
-    opacity: 0,
+  gsap.to('.contacts', {
+    y: 0,
+    opacity: 1,
     ease: "power4.out",
     delay: 0.7,
     duration: 1.2,

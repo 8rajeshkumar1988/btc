@@ -541,7 +541,7 @@ $(document).ready(function () {
           opacity: 0,
           // ease: "power4.out",
           duration: 1.2,
-          delay: 0.1 * i,
+          // delay: 0.1 * i,
           scrollTrigger: {
             trigger: card,
             start: "top 90%",

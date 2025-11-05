@@ -35,14 +35,14 @@ the_post();
                 <?php the_content(); ?>
                 <button onclick="scrollToSectionById('lead_form')" class="cta">Reach Out to Us now <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
             </div>
-            <div class="contacts" animateHeadingBanner>
+            <div class="contacts" >
                 <p>Benin Textile Corporation</p>
                 <a href="">Ilot C/SB, Tangbo-Djèvié, Plot F-1, <br> Maison Etat Béninois, Zè - Benin</a>
-                <div animateHeadingBanner>
+                <div>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/mailIcon.svg" ?>" alt="">
                     <a href="mailto:info.btc@arisenet.com">info.btc@arisenet.com</a>
                 </div>
-                <div animateHeadingBanner>
+                <div>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/callIcon.svg" ?>" alt="">
                     <a href="tel:+229 5145127009">+229 5145127009</a>
                 </div>
