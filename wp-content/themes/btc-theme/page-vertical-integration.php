@@ -124,7 +124,7 @@ get_header();
                 <div class="left">
                     <div class="inner_top">
                         <div class="copy">
-                            <p>The spun yarn is knitted into fabric at our facilities. We offer various fabric types (single jersey, double-knit pique, french terry, brushed fleece, etc.) depending on the garment style</p>
+                            <p>The spun yarn is knitted into fabric at our facilities. We offer various fabric types (Single Jersey - Elastane Jersey, Piqué - Double-knit Piqué, Rib - Elastane Rib, French Terry, Brushed Fleece, Jacquard Collars - Rib Collars) depending on the garment style</p>
                         </div>
                         <p class="count">(03)</p>
                     </div>

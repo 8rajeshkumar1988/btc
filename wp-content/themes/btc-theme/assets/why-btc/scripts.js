@@ -4,10 +4,10 @@ $(document).ready(function () {
     effect: "creative",
     speed: 600,
     loop: true,
-    autoplay: {
-      delay: 18000,
-      disableOnInteraction: true,
-    },
+    // autoplay: {
+    //   delay: 18000,
+    //   disableOnInteraction: true,
+    // },
     creativeEffect: {
       prev: {
         translate: [0, 0, -400],

@@ -25,7 +25,7 @@ centeredSlides: true,
   loop: true,
   speed: 800,
   autoplay: {
-    delay: 3000,
+    delay: 5000,
     disableOnInteraction: true,
   },
   breakpoints: {
@@ -45,7 +45,7 @@ var spotlight_slider = new Swiper(".spotlight_slider", {
   speed: 1500,
   loop: true,
   autoplay: {
-    delay: 3000,
+    delay: 5000,
     disableOnInteraction: true,
   },
   watchSlidesVisibility: true,

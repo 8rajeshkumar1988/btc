@@ -228,6 +228,7 @@
   position: absolute;
   height: 100vh;
   pointer-events: none;
+  top: 0;
 }
 #sustainabiltyStandard .leftContent {
   display: flex;
@@ -347,8 +348,9 @@
 #ourCapabilities .back {
   position: absolute;
   inset: 0;
-  height: 100%;
+  height: 125%;
   z-index: 0;
+  top: -150px;
   pointer-events: none;
 }
 #ourCapabilities .closeCapabilities {

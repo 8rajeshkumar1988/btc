@@ -7,10 +7,10 @@ $(document).ready(function () {
     speed: 800,
     effect: "creative",
   
-    autoplay: {
-        delay: 18000,
-        // disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 18000,
+    //     // disableOnInteraction: false,
+    // },
     creativeEffect: {
       prev: {
         translate: [0, 0, -400],
@@ -53,7 +53,7 @@ $(document).ready(function () {
     slidesPerView: slidesPerViewProduct,
     loop: true,
     autoplay: {
-        delay: 3000,
+        delay: 5000,
         disableOnInteraction: false,
     },
     speed: 800,

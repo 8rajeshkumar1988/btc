@@ -258,6 +258,9 @@ body {
   height: 100%;
 }
 
+#our_clients {
+  background-color: transparent;
+}
 #our_clients .heading {
   padding: 0 var(--paddingX);
 }

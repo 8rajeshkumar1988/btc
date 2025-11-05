@@ -188,10 +188,10 @@
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/bsci.png" ?>" alt="bsci">    
                     Meeting global ethical sourcing standards</li>
                     <li>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/higgindex.png" ?>" alt="bsci">    
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/newhigg.png" ?>" alt="bsci">    
                     Verified Sustainable Manufacturing Standards</li>
                     <li>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/smeta.png" ?>" alt="bsci">    
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/newsmeta.png" ?>" alt="bsci">    
                     Ethical & Responsible Workplace Practices</li>
                 </ul>
             </div>
