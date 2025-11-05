@@ -110,7 +110,7 @@ $(document).ready(function () {
       spaceBetween: window.innerWidth > 1024 ? 40 : 30,
       centeredSlides: true,
       slidesPerView: "auto",
-      loop: false,
+      loop: true,
 
       grabCursor: true,
       speed: 800,
