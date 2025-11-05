@@ -50,7 +50,7 @@ get_header();
                 position: relative;
                 display: block;"
             id="lottieCanvas"
-            src="<?php echo get_template_directory_uri() . '/assets/images/world_map_lottie.json'; ?>">
+            src="<?php echo get_template_directory_uri() . '/assets/images/map.json'; ?>">
         </lottie-player>
     </div>
     <div class="content_wrapper">

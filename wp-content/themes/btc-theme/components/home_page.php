@@ -189,10 +189,10 @@
                     Meeting global ethical sourcing standards</li>
                     <li>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/higgindex.png" ?>" alt="bsci">    
-                    Measuring environmental and social impact for sustainable manufacturing</li>
+                    Verified Sustainable Manufacturing Standards</li>
                     <li>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/smeta.png" ?>" alt="bsci">    
-                    Ensuring ethical trade, labor, and workplace standards</li>
+                    Ethical & Responsible Workplace Practices</li>
                 </ul>
             </div>
         </div>

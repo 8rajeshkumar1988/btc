@@ -156,9 +156,9 @@ get_header();
                         <div class="copy">
                             <div class="tag_div">
                                 <div class="tags active" data-tab="dyeing" data-img="<?php echo get_template_directory_uri() . '/assets/images/Dyeing-and-Processing-BTC-6.jpg'; ?>">DYEING</div>
-                                <div class="tags unactive" data-tab="printing" data-img="<?php echo get_template_directory_uri() . '/assets/images/printing_machine.webp'; ?>">PRINTING</div>
+                                <div class="tags unactive" data-tab="printing" data-img="<?php echo get_template_directory_uri() . '/assets/images/printing.jpg'; ?>">PRINTING</div>
                                 <div class="tags unactive" data-tab="embroidery" data-img="<?php echo get_template_directory_uri() . '/assets/images/embroidery_machine.webp'; ?>">EMBROIDERY</div>
-                                <div class="tags unactive" data-tab="quality" data-img="<?php echo get_template_directory_uri() . '/assets/images/quality.jpg'; ?>">QUALITY TESTING</div>
+                                <div class="tags unactive" data-tab="quality" data-img="<?php echo get_template_directory_uri() . '/assets/images/quality1.jpg'; ?>">QUALITY TESTING</div>
                             </div>
                         </div>
                         <p class="count">(04)</p>
@@ -178,33 +178,33 @@ get_header();
                         <p>We offer advanced printing techniques that bring designs to life - from bold graphics to subtle textures - with lasting clarity and vibrancy.</p>
                         <div class="first">
                             <p class="title">Process</p>
-                            <p class="subCopy">Depending on the fabric and design needs, we use sublimation, pigment, rotary screen, or heat transfer printing.</p>
+                            <p class="subCopy">Depending on the fabric and design needs, we use sublimation, pigment, rotary screen, or heat transfer printing</p>
                         </div>
                         <div class="second">
                             <p class="title">Key Feature</p>
-                            <p class="subCopy">High-resolution prints that stay sharp, wash after wash - with an emphasis on eco-inks and low-impact processes.</p>
+                            <p class="subCopy">High-resolution prints that stay sharp, wash after wash - with an emphasis on eco-inks and low-impact processes</p>
                         </div>
                     </div>
                     <div class="inner_bottom" id="embroidery">
                         <p>Embroidery adds texture, identity, and elegance to garments - whether it's for logos, monograms, or artistic patterns.</p>
                         <div class="first">
                             <p class="title">Process</p>
-                            <p class="subCopy">Using automated multi-head embroidery machines, threads are stitched directly into the fabric for durability and precision. </p>
+                            <p class="subCopy">Using automated multi-head embroidery machines, threads are stitched directly into the fabric for durability and precision</p>
                         </div>
                         <div class="second">
                             <p class="title">Key Feature</p>
-                            <p class="subCopy">Intricate detailing with excellent thread density and long-lasting durability, tailored to premium fashion.</p>
+                            <p class="subCopy">Intricate detailing with excellent thread density and long-lasting durability, tailored to premium fashion</p>
                         </div>
                     </div>
                     <div class="inner_bottom" id="quality">
                         <p>Equipped with advanced SDL ATLAS testing instruments and calibrated systems, our lab validates fabrics across physical, chemical, and color fastness parameters for international markets</p>
                         <div class="first">
                             <p class="title">Process</p>
-                            <p class="subCopy">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, dignissimos cumque aspernatur ab blanditiis assumenda?</p>
+                            <p class="subCopy">We systematically test each fabric batch for strength, durability, color performance, and overall material integrity</p>
                         </div>
                         <div class="second">
                             <p class="title">Key Feature</p>
-                            <p class="subCopy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis doloremque iusto dolorem.</p>
+                            <p class="subCopy">ISO-standard testing equipment ensures consistent global quality, reliable performance, and buyer confidence across markets</p>
                         </div>
                     </div>
                 </div>
@@ -230,7 +230,7 @@ get_header();
                     <div class="inner_bottom">
                         <div class="first">
                             <p class="title">Technology Used</p>
-                            <p class="subCopy">Automated spreading, automated cutting and highly automation stitching along with expert seam stresses ensures precise construction and high quality finishing.</p>
+                            <p class="subCopy">Automated spreading, automated cutting and highly automation stitching along with expert seam stresses ensures precise construction and high quality finishing</p>
                         </div>
                         <div class="second">
                             <p class="title">Key Feature</p>
@@ -264,7 +264,7 @@ get_header();
                         </div>
                         <div class="second">
                             <p class="title">Key Feature</p>
-                            <p class="subCopy">Every garment is checked for defects before being sent to packaging and distribution.</p>
+                            <p class="subCopy">Every garment is checked for defects before being sent to packaging and distribution</p>
                         </div>
                     </div>
                 </div>
@@ -290,11 +290,11 @@ get_header();
                     <div class="inner_bottom">
                         <div class="first">
                             <p class="title">Process</p>
-                            <p class="subCopy">Each garment is carefully folded and packed into eco-friendly bags or boxes for shipment.</p>
+                            <p class="subCopy">Each garment is carefully folded and packed into eco-friendly bags or boxes for shipment</p>
                         </div>
                         <div class="second">
                             <p class="title">Key Feature</p>
-                            <p class="subCopy">We use recyclable, biodegradable packaging materials to reduce plastic waste.</p>
+                            <p class="subCopy">We use recyclable, biodegradable packaging materials to reduce plastic waste</p>
                         </div>
                     </div>
                 </div>
@@ -320,11 +320,11 @@ get_header();
                     <div class="inner_bottom">
                         <div class="first">
                             <p class="title">Process</p>
-                            <p class="subCopy">Products are shipped via sea, air, and land transport, with priority given to reducing environmental impact.</p>
+                            <p class="subCopy">Products are shipped via sea, air, and land transport, with priority given to reducing environmental impact</p>
                         </div>
                         <div class="second">
                             <p class="title">Key Feature</p>
-                            <p class="subCopy">The use of nearby ports and airports enables shorter shipping routes, cutting down on carbon emissions.</p>
+                            <p class="subCopy">The use of nearby ports and airports enables shorter shipping routes, cutting down on carbon emissions</p>
                         </div>
                     </div>
                 </div>
@@ -350,11 +350,11 @@ get_header();
                     <div class="inner_bottom">
                         <div class="first">
                             <p class="title">Process</p>
-                            <p class="subCopy">Our SAP-integrated platform connects internal teams and customers in real time, enabling seamless order tracking, status updates, and complete visibility across every stage of production.</p>
+                            <p class="subCopy">Our SAP-integrated platform connects internal teams and customers in real time, enabling seamless order tracking, status updates, and complete visibility across every stage of production</p>
                         </div>
                         <div class="second">
                             <p class="title">Key Feature</p>
-                            <p class="subCopy">An interactive dashboard ensures transparency and confidence, allowing customers to monitor their order journey from start to finish.</p>
+                            <p class="subCopy">An interactive dashboard ensures transparency and confidence, allowing customers to monitor their order journey from start to finish</p>
                         </div>
                     </div>
                 </div>
