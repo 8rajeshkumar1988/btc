@@ -287,7 +287,7 @@
         <a href="/capabilities"  class="cta">Explore Capabilities<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
     </div>
     <video poster="<?php echo get_template_directory_uri() . '/assets/images/home/BTC_Gate.jpg'; ?>"  autoplay loop muted playsinline>
-        <source src="<?php echo get_template_directory_uri() . '/assets/images/homeVideoSec.mp4'; ?>" type="video/mp4">
+        
         <source src="<?php echo get_template_directory_uri(); ?>/assets/images/homeVideoSec.webm" type="video/webm">
     </video>
 </section>
