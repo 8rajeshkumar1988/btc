@@ -73,10 +73,10 @@
                 <p class="title">Email</p>
                 <a href="mailto:info.btc@arisenet.com" class="hover">info.btc@arisenet.com</a>
             </div>
-            <div>
+            <!-- <div>
                 <p class="title">Phone</p>
                 <a href="tel:+229 5145127009" class="hover">+229 5145127009</a>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="bottom">
