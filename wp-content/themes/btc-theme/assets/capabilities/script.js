@@ -214,7 +214,7 @@ $(document).ready(function () {
         loop: true,
         speed: 800,
         autoplay: {
-            delay: 5000,
+            delay: 3000,
             //   disableOnInteraction: true,
         },
         pagination: {

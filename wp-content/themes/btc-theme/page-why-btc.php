@@ -58,7 +58,7 @@ get_header();
             <h2>Strategic Location & <br>Global Reach</h2>
             <ul>
                 <li>Proximity to key markets in the US, EU, UK & UAE</li>
-                <li>Quick turnarounds through air and sea connectivity</li>
+                <li>Quick turnaround time through air and sea connectivity</li>
             </ul>
         </div>
     </div>

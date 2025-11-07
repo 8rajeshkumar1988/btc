@@ -174,8 +174,8 @@ the_post();
                             <!-- <p class="title">Process</p> -->
                             <p class="subCopy"><strong>Source with Intention:</strong> Our journey begins with responsibly grown cotton cultivated, harvested and ginned entirely within Africa, close to our manufacturing hubs.</p>
                             <p class="subCopy"><strong>Empowering Communities:</strong> We partner directly with local generies and cooperatives, supporting income stability and agricultural resilience in rural economies.</p>
-                            <p class="subCopy"><strong>Reducing Carbon Footprint:</strong> Proximity eliminates the need for global freight, dramatically reducing transport emissions at the raw material stage.</p>
-                            <p class="subCopy"><strong>Enabling True Traceability:</strong> Full visibility from seed to finished garment ensures greater accountability, ethical compliance, and environmental transparency.</p>
+                            <p class="subCopy"><strong>Reducing Carbon Footprint:</strong> Proximity eliminates the need for global freight, dramatically reducing transport emissions (CO<sub style="font-size: 14px;">2</sub>) at the raw material stage.</p>
+                            <p class="subCopy"><strong>Enabling True Traceability:</strong> Full visibility from seed to finished garment ensures greater accountability, ethical compliance, and environmental impact transparency.</p>
                         </div>
                         <!-- <div class="second">
                             <p class="title">Key Feature</p>

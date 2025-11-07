@@ -296,7 +296,7 @@ get_header();
     <div class="tai_container">
       <div class="static">
         <div>
-          <h3>2400 M.Cap</h3>
+          <h3>2400 Machine Capacity</h3>
           <p>Production with 1400 Stitching <br> machines x 2 shifts</p>
         </div>
         <div>
