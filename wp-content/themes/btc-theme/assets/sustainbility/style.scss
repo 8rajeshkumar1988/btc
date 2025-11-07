@@ -29,12 +29,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        270deg,
-        #000000 4.13%,
-        #6e6e6e 51.12%,
-        #000000 96.34%
-      );
+      background: linear-gradient(270deg, #000000 4.13%, #6e6e6e 51.12%, #000000 96.34%);
       mix-blend-mode: multiply;
       opacity: 0.64;
     }
@@ -248,7 +243,6 @@
             font-size: var(--font-24);
             color: var(--secondaryBlack);
             font-weight: 300;
-            
           }
           .copy strong {
             font-weight: 500;
@@ -266,7 +260,7 @@
           flex-direction: column;
           height: 100%;
           justify-content: start;
-          margin-top:  var(--spaceBelow_heading);
+          margin-top: var(--spaceBelow_heading);
           & > p {
             color: var(--secondaryBlack);
           }
@@ -274,15 +268,18 @@
             width: 100%;
             min-width: 500px;
           }
-          .subCopy{
+          .subCopy {
             margin-bottom: 20px;
+            sub {
+              font-size: 14px;
+            }
           }
           * {
             font-size: var(--font-18);
             color: #000;
             font-weight: 300;
           }
-          strong{
+          strong {
             font-weight: 600;
           }
           .title {
@@ -474,7 +471,7 @@
           .inner_bottom {
             margin-top: 15px;
             display: grid;
-            grid-template-columns:1fr;
+            grid-template-columns: 1fr;
             gap: 15px;
             * {
               font-size: var(--font-20);
@@ -599,8 +596,11 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 15px;
-            .subCopy{
+            .subCopy {
               margin-bottom: 10px;
+              sub {
+                font-size: 10px;
+              }
             }
             * {
               font-size: var(--font-14);

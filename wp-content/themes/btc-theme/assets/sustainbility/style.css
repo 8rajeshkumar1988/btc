@@ -258,6 +258,9 @@
 #traceability .containers .bottom .left .inner_bottom .subCopy {
   margin-bottom: 20px;
 }
+#traceability .containers .bottom .left .inner_bottom .subCopy sub {
+  font-size: 14px;
+}
 #traceability .containers .bottom .left .inner_bottom * {
   font-size: var(--font-18);
   color: #000;
@@ -538,6 +541,9 @@
   }
   #traceability .containers .bottom .left .inner_bottom .subCopy {
     margin-bottom: 10px;
+  }
+  #traceability .containers .bottom .left .inner_bottom .subCopy sub {
+    font-size: 10px;
   }
   #traceability .containers .bottom .left .inner_bottom * {
     font-size: var(--font-14);
