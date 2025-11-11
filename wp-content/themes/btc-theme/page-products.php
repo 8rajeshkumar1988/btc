@@ -68,7 +68,7 @@ the_post();
     </div>
     <div class="category_card">
       <h2>WOMEN</h2>
-      <video src="<?php echo get_template_directory_uri() . '/assets/images/women.webm'; ?>" poster="<?php echo get_template_directory_uri() . '/assets/images/women_banner.jpg'; ?>" autoplay loop muted playsinline></video>
+      <video src="<?php echo get_template_directory_uri() . '/assets/images/women_textile.webm'; ?>" poster="<?php echo get_template_directory_uri() . '/assets/images/women_textile.jpg'; ?>" autoplay loop muted playsinline></video>
     </div>
     <div class="category_card">
       <h2>KIDS</h2>
