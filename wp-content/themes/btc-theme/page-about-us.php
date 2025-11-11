@@ -69,7 +69,7 @@ the_post();
                 </div>
                 <div class="swiper-slide category_item" animateHeading>
                     <div class="category_image">
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/about-sec-2.jpg" ?>" alt="" />
+                        <img src="<?php echo get_template_directory_uri() . "/assets/images/cottonbails.jpg" ?>" alt="" />
                     </div>
                     <p class="category_description">
                         In addition to CmiA-certified local cotton, we also work with organic cotton,

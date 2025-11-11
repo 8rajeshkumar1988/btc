@@ -137,8 +137,8 @@ if (!empty($faqs)) { ?>
     <!-- <div class="virtual_container">
         <iframe src="https://www.google.com/maps/embed?pb=!4v1752237216067!6m8!1m7!1sCAoSHENJQUJJaEFuNjhNcjFncDBiSHN0enBrb29uUlc.!2m2!1d-4.683459!2d11.8169195!3f224.67!4f5.239999999999995!5f0.7820865974627469" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div> -->
-    <div class="virtual_container" id="virtualContainer">
-        <button class="close_btn" id="closeBtn">
+    <div class="virtual_container" id="virtualContainer" style="aspect-ratio: 16/9;">
+        <!-- <button class="close_btn" id="closeBtn">
             <img src="<?php echo get_template_directory_uri() . "/assets/images/close.svg"  ?>" alt="" />
         </button>
         <div class="map_overlay" id="mapOverlay">
@@ -150,7 +150,13 @@ if (!empty($faqs)) { ?>
             allowfullscreen=""
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+            referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            <video
+                controls
+                style="height: 100%; width: 100%;"
+                id="mapIframe"
+                src="<?php echo get_template_directory_uri() . '/assets/images/factoryshoot.webm'; ?>">
+                </video>
     </div>
 </section>
 <?php get_template_part('components/newsletter_subs_section'); ?>

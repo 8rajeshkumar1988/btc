@@ -191,7 +191,7 @@ body {
 }
 #virtual_factory_experience .virtual_container {
   position: relative;
-  margin-top: 40px;
+  margin-top: var(--spaceBelow_heading);
   width: 100%;
   aspect-ratio: 16/8;
   overflow: hidden;
