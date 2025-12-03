@@ -106,8 +106,8 @@ the_post();
 </section>
 <section id="vision_mission">
     <div class="vision_mission_container videoC">
-        <video autoplay loop muted playsinline poster="<?php echo get_template_directory_uri() . "/assets/images/vision_banner.webp"  ?>">
-            <source src="<?php echo get_template_directory_uri() . "/assets/images/vision.mp4"  ?>" >
+        <video autoplay loop muted playsinline poster="<?php echo get_template_directory_uri() . "/assets/images/home/bTC_Gate_.jpg"  ?>">
+            <source src="<?php echo get_template_directory_uri() . "/assets/images/vision_video.mp4"  ?>" >
         </video>
 
     </div>
@@ -120,9 +120,10 @@ the_post();
         </p>
     </div>
     <div class="vision_mission_container videoC">     
-        <video autoplay loop muted playsinline poster="<?php echo get_template_directory_uri() . "/assets/images/mission_banner.webp"  ?>">
+        <!-- <video autoplay loop muted playsinline poster="<?php echo get_template_directory_uri() . "/assets/images/mission_banner.webp"  ?>">
             <source src="<?php echo get_template_directory_uri() . "/assets/images/mission.mp4"  ?>" >
-        </video>   
+        </video>    -->
+        <img src="<?php echo get_template_directory_uri() . "/assets/images/mission_img.jpg"  ?>" alt="">
     </div>
     <div class="vision_mission_container text" animateHeading>
         <h2>Mission</h2>
