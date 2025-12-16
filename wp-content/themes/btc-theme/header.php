@@ -12,6 +12,8 @@
     $meta_description = get_post_meta(get_the_ID(), 'meta_description', true);
     $meta_image = get_post_meta(get_the_ID(), 'meta_image', true);
 
+    $schema_markup = get_post_meta(get_the_ID(), 'schema_markup', true);
+
     // Meta Title
     if ($meta_title) {
       echo '<title>' . esc_html($meta_title) . '</title>' . "\n";
@@ -48,6 +50,14 @@
 
   <?php wp_head(); ?>
   <?php my_breadcrumb_schema(); ?>
+  <?php 
+  if ($schema_markup){
+    echo $schema_markup;
+  } 
+    
+  ?>
+  
+
 </head>
 
 
