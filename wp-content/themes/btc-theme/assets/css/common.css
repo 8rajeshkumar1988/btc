@@ -625,7 +625,7 @@ textarea {
 
 footer {
   background: linear-gradient(180deg, #2f2874 0%, #120d3c 100%);
-  padding: 30% var(--paddingX) calc(var(--paddingY) / 2);
+  padding: 30% var(--paddingX) calc(var(--paddingY) / 1);
   display: flex;
   flex-direction: column;
   gap: calc(var(--paddingY) / 1.5);
@@ -1170,6 +1170,9 @@ header button.open .close {
   }
   #footerContact {
     aspect-ratio: 16/7;
+  }
+  footer .bottom {
+    padding-right: 40px;
   }
 }
 @media screen and (max-width: 1024px) {

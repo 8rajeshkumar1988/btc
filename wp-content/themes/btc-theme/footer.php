@@ -84,13 +84,13 @@
            <?php get_template_part('components/social_links'); ?>
             <div class="right">
                 <a href="<?php echo site_url('/privacy-policy') ?>" >Privacy Policy</a>
-                <a href="<?php echo site_url('/terms-and-conditions') ?>" >Terms & Conditions</a>
+                <!-- <a href="<?php echo site_url('/terms-and-conditions') ?>" >Terms & Conditions</a> -->
             </div>
             <p>Copyright© 2025, Benin Textile Corporation</p>
         </div>
         <div class="right">
             <a href="<?php echo site_url('/privacy-policy') ?>" class="hover">Privacy Policy</a>
-            <a href="<?php echo site_url('/terms-and-conditions') ?>" class="hover">Terms & Conditions</a>
+            <!-- <a href="<?php echo site_url('/terms-and-conditions') ?>" class="hover">Terms & Conditions</a> -->
         </div>
     </div>
 </footer>
