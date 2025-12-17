@@ -1421,6 +1421,7 @@ header button.open .close {
   }
   footer .bottom {
     justify-content: center;
+    padding-right: 0;
   }
   footer .bottom .left {
     align-items: center;
