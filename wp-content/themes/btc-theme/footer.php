@@ -86,7 +86,7 @@
                 <a href="<?php echo site_url('/privacy-policy') ?>" >Privacy Policy</a>
                 <!-- <a href="<?php echo site_url('/terms-and-conditions') ?>" >Terms & Conditions</a> -->
             </div>
-            <p>Copyright© 2025, Benin Textile Corporation</p>
+            <p>Copyright© <?php echo date('Y'); ?>, Benin Textile Corporation</p>
         </div>
         <div class="right">
             <a href="<?php echo site_url('/privacy-policy') ?>" class="hover">Privacy Policy</a>
