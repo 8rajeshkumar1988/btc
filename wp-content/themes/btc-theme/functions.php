@@ -1,5 +1,12 @@
 <?php
 
+function btc_theme_setup() {
+   
+    load_theme_textdomain('btc-theme', get_template_directory() . '/languages');
+}
+add_action('after_setup_theme', 'btc_theme_setup');
+
+
 function btc_files()
 {
     wp_enqueue_script('btc-jquery', '//code.jquery.com/jquery-3.7.1.min.js');

@@ -420,3 +420,5 @@
     wp_reset_postdata();
     ?>
 </section>
+
+<?php //pll_the_languages(); ?>
