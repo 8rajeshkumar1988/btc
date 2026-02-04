@@ -870,3 +870,121 @@ function page_schema()
     }
 }
 add_action('wp_head', 'page_schema');
+
+
+
+add_action( 'restrict_manage_posts', 'lead_csv_export_button' );
+function lead_csv_export_button() {
+
+    global $typenow;
+
+    // Show button only on Lead post type
+    if ( $typenow == 'lead' ) {
+        echo '<input type="submit" name="export_lead_csv" class="button button-primary" value="Export CSV">';
+    }
+}
+
+
+add_action( 'load-edit.php', 'process_lead_acf_csv_export' );
+function process_lead_acf_csv_export() {
+
+    if ( ! isset( $_GET['export_lead_csv'] ) ) {
+        return;
+    }
+
+    if ( ! current_user_can( 'manage_options' ) ) {
+        return;
+    }
+
+    $filename = 'leads-acf-export-' . date('Y-m-d') . '.csv';
+
+    header( 'Content-Type: text/csv; charset=utf-8' );
+    header( 'Content-Disposition: attachment; filename=' . $filename );
+    header( 'Pragma: no-cache' );
+    header( 'Expires: 0' );
+
+    $output = fopen( 'php://output', 'w' );
+
+
+    // ===== CSV HEADERS (EDIT THESE) =====
+    fputcsv( $output, [
+        'ID',
+        'Name',
+        'Email',
+        'Phone',
+        "Company",
+        "Requirements",
+        "Whatsapp Number",
+        "Organization Type",
+        'Enquiry Type',
+        "Receive E Communications",
+        "Page URL",
+        'Created Date'
+    ]);
+
+
+    // Query Leads
+    $args = [
+        'post_type'      => 'lead',
+        'posts_per_page' => -1,
+        'post_status'    => 'publish'
+    ];
+
+    $leads = new WP_Query( $args );
+
+    while ( $leads->have_posts() ) {
+        $leads->the_post();
+
+        $id = get_the_ID();
+
+
+        // ===== GET ACF FIELDS (CHANGE FIELD NAMES) =====
+        $name   = get_field( 'name', $id );
+        $email  = get_field( 'email', $id );
+        $enquiry_type  = get_field( 'enquiry_type', $id );
+        $phone_number = get_field( 'phone_number', $id );
+        $company_name = get_field( 'company_name', $id );
+        $requirements = get_field( 'requirements', $id );
+        $whatsapp_number = get_field( 'whatsapp_number', $id );
+        $organization_type = get_field( 'organization_type', $id );
+        $i_agree_to_receive_e_communications_from_btc = get_field( 'i_agree_to_receive_e-communications_from_btc', $id );
+        $source_url = get_field( 'source_url', $id );
+
+
+
+        // Clean empty values
+        $name   = $name   ? $name   : '';
+        $email  = $email  ? $email  : '';
+        $enquiry_type  = $enquiry_type  ? $enquiry_type  : '';
+        $phone_number = $phone_number ? $phone_number : '';
+        $company_name = $company_name ? $company_name : '';
+        $requirements = $requirements ? $requirements : '';
+        $whatsapp_number = $whatsapp_number ? $whatsapp_number : '';
+        $organization_type = $organization_type ? $organization_type : '';
+        $i_agree_to_receive_e_communications_from_btc = $i_agree_to_receive_e_communications_from_btc==1 ? "Yes" : 'No';
+        $source_url = $source_url ? $source_url : '';
+
+
+        // CSV Row
+        fputcsv( $output, [
+            $id,
+            $name,
+            $email,
+            $phone_number,
+            $company_name,
+            $requirements,
+            $whatsapp_number,
+            $organization_type,
+            $i_agree_to_receive_e_communications_from_btc,
+            $source_url,
+            $enquiry_type,
+           
+            get_the_date()
+        ]);
+    }
+
+    wp_reset_postdata();
+    fclose( $output );
+
+    exit;
+}
