@@ -14,9 +14,9 @@
 
 
     if ($banner_video) {
-        echo '<video playsinline autoplay muted loop poster="'.$image_url.'" src="' . esc_url($banner_video['url']) . '"></video>';
+        echo '<video playsinline autoplay muted loop poster="'.$image_url.'" src="' . esc_url($banner_video['url']) . '" fetchpriority="high"></video>';
     } else  if (has_post_thumbnail()) {
-        $image = '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+        $image = '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '" fetchpriority="high">';
         echo $image;
     }
 
@@ -97,8 +97,8 @@
                 ?>
             </div>
             <div class="btnss">
-                <button class="swiper-button-next productNext globalNavigation navBtnColor"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
-                <button class="swiper-button-prev productPrev globalNavigation navBtnColor"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+                <button class="swiper-button-next productNext globalNavigation navBtnColor" aria-label="Next products"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+                <button class="swiper-button-prev productPrev globalNavigation navBtnColor" aria-label="Previous products"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
             </div>
         </div>
     </div>
@@ -265,8 +265,8 @@
         </div>
         <div class="swiper-pagination"></div>
         <div class="btnssNew">
-            <button class="swiper-button-next capabilitiesNext globalNavigation navBtnColor"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
-            <button class="swiper-button-prev capabilitiesPrev swiper-button-disabled navBtnColor globalNavigation"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <button class="swiper-button-next capabilitiesNext globalNavigation navBtnColor" aria-label="Next capabilities"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <button class="swiper-button-prev capabilitiesPrev swiper-button-disabled navBtnColor globalNavigation" aria-label="Previous capabilities"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
         </div>
     </div>
 
