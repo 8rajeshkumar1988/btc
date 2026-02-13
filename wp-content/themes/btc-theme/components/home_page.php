@@ -200,7 +200,7 @@
 </section>
 
 <section id="ourCapabilities">
-    <img src="<?php echo get_template_directory_uri() . '/assets/images/capabilities_back.png'; ?>" alt="" class="back" btcPattern />
+    <img src="<?php echo get_template_directory_uri() . '/assets/images/capabilities_back.svg'; ?>" alt="" class="back" btcPattern />
     
     <div class="leftContent heading" animateHeading>
         <p>Our Capabilities</p>

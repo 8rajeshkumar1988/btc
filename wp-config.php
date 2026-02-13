@@ -71,7 +71,7 @@ define( 'NONCE_SALT',       'r$4WA_w]eSg.CHiH<I)W[Jx1SFg@$:MYC^eRP:7T/UCpQ|q(`bw
  *
  * @link https://developer.wordpress.org/advanced-administration/wordpress/wp-config/#table-prefix
  */
-$table_prefix = 'wp_';
+$table_prefix = 'g1wjkmx_';
 
 /**
  * For developers: WordPress debugging mode.
