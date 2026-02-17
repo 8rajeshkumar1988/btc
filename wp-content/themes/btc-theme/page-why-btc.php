@@ -67,7 +67,7 @@ get_header();
 <section id="sustainableManufacturer">
     <div>
         <div class="img">
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/SustainableManufacturing.jpg"  ?>" alt="SustainableManufacturing"  />
+            <img src="<?php echo get_template_directory_uri() . "/assets/images/SustainableManufacturing.webp"  ?>" alt="SustainableManufacturing"  />
             <p>Sustainable <br>Manufacturing</p>
         </div>
         <div class="text">
@@ -89,14 +89,14 @@ get_header();
             </ul>
         </div>
         <div class="img">
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/whybtc/full-traceability-benin-textile.jpg"  ?>" alt="SustainableManufacturing" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/whybtc/full-traceability-benin-textile.jpg"  ?>" alt="SustainableManufacturing" />
             <p>Full <br>Traceability</p>
         </div>
     </div>
     <div>
         <div class="img">
             <!-- <img src="<?php echo get_template_directory_uri() . "/assets/images/PeoplePrinciples.jpg"  ?>" alt="SustainableManufacturing" /> -->
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/vision.jpg"  ?>" alt="SustainableManufacturing" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/vision.webp"  ?>" alt="SustainableManufacturing" />
             <p>People & <br>Principles</p>
         </div>
         <div class="text">
@@ -118,13 +118,13 @@ get_header();
             </ul>
         </div>
         <div class="img">
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/VerticalIntegration.jpg"  ?>" alt="SustainableManufacturing" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/VerticalIntegration.webp"  ?>" alt="SustainableManufacturing" />
             <p>Vertical <br>Integration </p>
         </div>
     </div>
     <div>
         <div class="img">
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/Partners-Benin-Textile-Corporation-Apparel-Manufacturing-2.jpg"  ?>" alt="SustainableManufacturing" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/Partners-Benin-Textile-Corporation-Apparel-Manufacturing-2.jpg"  ?>" alt="SustainableManufacturing" />
             <p>Strategic <br>Partnerships</p>
         </div>
         <div class="text">
@@ -136,11 +136,11 @@ get_header();
             </ul>
         </div>
     </div>
-    <img class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/whyPattern.png"  ?>" alt="SustainableManufacturing" btcPattern />
+    <img loading="lazy" class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/whyPattern.png"  ?>" alt="SustainableManufacturing" btcPattern />
 </section>
 
 <section id="glance">
-    <img class="svg" src="<?php echo get_template_directory_uri() . "/assets/images/world-map-btc.svg"  ?>" alt="Benin At A Glance">
+    <img loading="lazy" class="svg" src="<?php echo get_template_directory_uri() . "/assets/images/world-map-btc.svg"  ?>" alt="Benin At A Glance">
 
     <div class="content">
         <div >
@@ -210,14 +210,14 @@ get_header();
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div>
-                            <img src="<?php echo get_template_directory_uri() . "/assets/images/readyToUse.svg"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/readyToUse.svg"  ?>" alt="">
                             <div>
                                 <p class="titles">Ready-To-Use Infra & Industrial Setup</p>
                                 <p class="copy">Purpose-built for textile, apparel, and agro-industrial businesses</p>
                             </div>
                         </div>
                         <div>
-                            <img src="<?php echo get_template_directory_uri() . "/assets/images/accessoryEcosystem.svg"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/accessoryEcosystem.svg"  ?>" alt="">
                             <div>
                                 <p class="titles">Accessory Ecosystem</p>
                                 <p class="copy">On-site availability of trims, accessories, and fabric finishing partners</p>
@@ -226,14 +226,14 @@ get_header();
                     </div>
                     <div class="swiper-slide">
                         <div>
-                            <img src="<?php echo get_template_directory_uri() . "/assets/images/utility-infrastructure.png"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/utility-infrastructure.png"  ?>" alt="">
                             <div>
                                 <p class="titles">Utility Infrastructure</p>
                                 <p class="copy">24/7 power supply, water, steam, and waste management systems</p>
                             </div>
                         </div>
                         <div>
-                            <img src="<?php echo get_template_directory_uri() . "/assets/images/clearance.png"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/clearance.png"  ?>" alt="">
                             <div>
                                 <p class="titles">Dry Port & Pre-Customs Clearance</p>
                                 <p class="copy">All goods can be customs-cleared within the zone, drastically reducing port congestion delays</p>
@@ -242,14 +242,14 @@ get_header();
                     </div>
                     <div class="swiper-slide">
                         <div>
-                            <img src="<?php echo get_template_directory_uri() . "/assets/images/logistics-hub.png"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/logistics-hub.png"  ?>" alt="">
                             <div>
                                 <p class="titles">Logistics Hub</p>
                                 <p class="copy">Integrated logistics services make export and import seamless and time-efficient</p>
                             </div>
                         </div>
                         <div>
-                            <img src="<?php echo get_template_directory_uri() . "/assets/images/eco-design-principles.png"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/eco-design-principles.png"  ?>" alt="">
                             <div>
                                 <p class="titles">Eco-Industrial Design</p>
                                 <p class="copy">Focused on sustainability, traceability, and digital manufacturing systems</p>
@@ -261,20 +261,20 @@ get_header();
             </div>
             <div class="why_btc_buttons">
                 <button class="why_btc-prev globalNavigation navBtnColor">
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+                    <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
                 </button>
                 <button class="why_btc-next globalNavigation navBtnColor">
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+                    <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
                 </button>
             </div>
         </div>
     </div>
-    <img class="layer desk" src="<?php echo get_template_directory_uri() . "/assets/images/gate1.webp"  ?>" alt="">
-    <img class="layer mobile" src="<?php echo get_template_directory_uri() . "/assets/images/gate2.webp"  ?>" alt="">
+    <img loading="lazy" class="layer desk" src="<?php echo get_template_directory_uri() . "/assets/images/gate1.webp"  ?>" alt="">
+    <img loading="lazy" class="layer mobile" src="<?php echo get_template_directory_uri() . "/assets/images/gate2.webp"  ?>" alt="">
 </section>
 
 <section id="roleOfbtc">
-    <img class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" btcPattern>
+    <img loading="lazy" class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" btcPattern>
     <div class="heading" animateHeading>
         <p>Driving Local Impact, Creating Global Change</p>
         <h3>BTC's Role in Benin's Next Chapter</h3>
@@ -286,12 +286,12 @@ get_header();
                 <p> It is ranked <strong>9th globally</strong> and GDIZ aims to leverage this opportunity complying with the Beninese government’s ambitious plans to <strong>accelerate cotton transformation</strong> and <strong>skyrocket the textile business.</strong></p>
             </div>
             <div class="img">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/roleOfBtc1.jpg"  ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/roleOfBtc1.jpg"  ?>" alt="">
             </div>
         </div>
         <div>
             <div class="img">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/Benin-training-local-talent-Benin-Textile.jpg"  ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/Benin-training-local-talent-Benin-Textile.jpg"  ?>" alt="">
             </div>
             <div class="text">
                 <p>By producing at the source, BTC creates value within Benin<strong>—training local talent, advancing tech adoption, and reducing reliance on imported textiles.</strong> </p> <br>

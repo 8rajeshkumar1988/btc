@@ -199,7 +199,7 @@ the_post();
     </div>
     <div class="certificate_card">
       <div class="certificate_logo">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/oekotex.png" ?>" alt="">
+        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/oekotex.webp" ?>" alt="">
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">OekoTex Certification</h3>

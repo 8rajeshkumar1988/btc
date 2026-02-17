@@ -1,7 +1,7 @@
 <?php wp_footer(); ?>
 <section id="footer_img_frame">
     <div id="footerContact">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/footerContact.jpg'; ?>" alt="">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/footerContact.webp'; ?>" alt="">
         <div class="layer"></div>
         <div class="content">
             <div class="heading">

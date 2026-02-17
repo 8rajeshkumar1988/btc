@@ -173,7 +173,7 @@
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/cotton_made_in_africa.png" ?>" alt="CMiA - Sustainable African cotton">    
                     Sustainable African cotton</li>
                     <li>
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/oekotex.png" ?>" alt="OekoTex - Tested for harmful substances">
+                        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/oekotex.webp" ?>" alt="OekoTex - Tested for harmful substances">
                         Tested for harmful substances</li>
                     <li>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/wrap.png" ?>" alt="WRAP - Ethical labor and legal compliance">    

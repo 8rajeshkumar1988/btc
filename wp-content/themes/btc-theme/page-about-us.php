@@ -57,7 +57,7 @@ the_post();
             <div class="swiper-wrapper">
                 <div class="swiper-slide category_item" animateHeading>
                     <div class="category_image">
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/home/BTC_Gate.jpg"  ?>" alt="" />
+                        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/home/BTC_Gate.webp"  ?>" alt="" />
                     </div>
                     <p class="category_description" >
                         BTC, located in Benin, is West Africa's first fully vertically
@@ -69,7 +69,7 @@ the_post();
                 </div>
                 <div class="swiper-slide category_item" animateHeading>
                     <div class="category_image">
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/cottonbails.jpg" ?>" alt="" />
+                        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/cottonbails.webp" ?>" alt="" />
                     </div>
                     <p class="category_description">
                         In addition to CmiA-certified local cotton, we also work with organic cotton,
@@ -80,7 +80,7 @@ the_post();
                 </div>
                 <div class="swiper-slide category_item" animateHeading>
                     <div class="category_image">
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/about-sec-3.jpg"  ?>" alt="" />
+                        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/about-sec-3.webp"  ?>" alt="" />
                     </div>
                     <p class="category_description">
                         We produce high-quality yarns, fabrics, and garments, including
@@ -96,10 +96,10 @@ the_post();
     <div class="about_btc_button_container">
         <div class="about_btc_buttons">
             <button class="about_btc-prev globalNavigation navBtnColor">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg"  ?>" alt="right arrow " />
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg"  ?>" alt="right arrow " />
             </button>
             <button class="about_btc-next globalNavigation navBtnColor">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg"  ?>" alt="right arrow " />
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg"  ?>" alt="right arrow " />
             </button>
         </div>
     </div>
@@ -123,7 +123,7 @@ the_post();
         <!-- <video autoplay loop muted playsinline poster="<?php echo get_template_directory_uri() . "/assets/images/mission_banner.webp"  ?>">
             <source src="<?php echo get_template_directory_uri() . "/assets/images/mission.mp4"  ?>" >
         </video>    -->
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/mission_img.jpg"  ?>" alt="">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/mission_img.webp"  ?>" alt="">
     </div>
     <div class="vision_mission_container text" animateHeading>
         <h2>Mission</h2>
@@ -228,23 +228,23 @@ if ($leaderships->have_posts()) {
     <div class="shareholder_logos">
         <div class="left">
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/arise_logo.png" ?>" alt="" />
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/arise_logo.png" ?>" alt="" />
             </div>
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/LCB.png" ?>" alt="" />
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/LCB.webp" ?>" alt="" />
             </div>
             <div class="logo">
-                <img
+                <img loading="lazy" 
                     src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/caisse_de_dpots_et_consignations_du_benin_cover.png" ?>"
                     alt="" />
             </div>
         </div>
         <div class="right">
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SBTCLOGONEW.png" ?>" alt="" />
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SBTCLOGONEW.png" ?>" alt="" />
             </div>
             <div class="logo">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SODECO.png" ?>" alt="" />
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SODECO.png" ?>" alt="" />
             </div>
             <!-- <div class="logo">
                 <img src="<?php echo get_template_directory_uri() . "/assets/images/Logo_Cotton-made-in-africa.png" ?>" alt="" />
@@ -407,7 +407,7 @@ if ($leaderships->have_posts()) {
     <div class="cc_container">
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ISO.png" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ISO.webp" ?>" alt="">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">IMS:ISO 9001&#8203;/45001&#8203;/14001</h3>
@@ -416,7 +416,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/cotton_made_in_africa.png" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/cotton_made_in_africa.webp" ?>" alt="">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">Cotton Made in Africa (CmiA)</h3>
@@ -425,7 +425,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/leed.png" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/leed.png" ?>" alt="">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">LEED (Leadership in Energy and Environmental Design)</h3>
@@ -434,7 +434,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/wrap.png" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/wrap.png" ?>" alt="">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">Worldwide Responsible Accredited Production (WRAP)</h3>
@@ -443,7 +443,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/oekotex.png" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/oekotex.webp" ?>" alt="">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">OekoTex Certification</h3>
@@ -452,7 +452,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ctpat.png" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ctpat.png" ?>" alt="">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">CTPAT (Customs Trade Partnership Against Terrorism)</h3>
@@ -461,7 +461,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/bsci.png" ?>" alt="bsci">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/bsci.png" ?>" alt="bsci">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">BSCI (Business Social Compliance Initiative)</h3>
@@ -470,7 +470,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
       <div class="certificate_logo">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/higgindex.png" ?>" alt="higgindex">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/higgindex.png" ?>" alt="higgindex">
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">Higg Index Certification</h3>
@@ -479,7 +479,7 @@ if ($leaderships->have_posts()) {
     </div>
     <div class="certificate_card">
       <div class="certificate_logo">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/smeta.png" ?>" alt="smeta">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/smeta.png" ?>" alt="smeta">
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">SMETA (Sedex Members Ethical Trade Audit)</h3>

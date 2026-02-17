@@ -57,7 +57,7 @@ $faqs = get_post_meta(get_the_ID(), 'category_faqs', true);
 
 if (!empty($faqs)) { ?>
   <section id="faqs">
-    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
+    <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
     <div class="heading" animateHeading>
       <p>Frequently Asked Questions</p>
       <h2>Your Questions, Answered</h2>
@@ -77,7 +77,7 @@ if (!empty($faqs)) { ?>
           ">
           <div class="head">
             <p><?php echo esc_html($faq['question']); ?></p>
-            <img
+            <img loading="lazy"
               class="menu open"
               src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>"
               alt="clase icon" />

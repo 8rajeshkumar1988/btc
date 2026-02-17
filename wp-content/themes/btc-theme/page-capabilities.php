@@ -69,7 +69,7 @@ get_header();
 </section>
 
 <section id="vertical_integration">
-  <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt=""  btcPattern/>
+  <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt=""  btcPattern/>
   <div class="heading" animateHeading>
     <h2>Vertical Integration</h2>
     <p>
@@ -80,11 +80,11 @@ get_header();
   </div>
   <div class="cards_wrapper">
     <div class="card">
-      <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/sec.jpg'; ?>" alt="" />
+      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/sec.jpg'; ?>" alt="" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/first_icon.png'; ?>" alt="" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/first_icon.png'; ?>" alt="" />
           </div>
           <h3 class="title">Spinning</h3>
         </div>
@@ -96,18 +96,18 @@ get_header();
           <div class="card_desc double">
             <p>Machinery Partner</p>
             <div>
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/reter.png'; ?>" alt="reter" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/reter.png'; ?>" alt="reter" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/first.jpg'; ?>" alt="first" />
+      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/first.jpg'; ?>" alt="first" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/knitting.png'; ?>" alt="knitting" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/knitting.png'; ?>" alt="knitting" />
           </div>
           <h3 class="title">Knitting</h3>
         </div>
@@ -119,8 +119,8 @@ get_header();
           <div class="card_desc double">
             <p>Machinery Partner</p>
             <div>
-              <img src="<?php echo get_template_directory_uri() . '/assets/images/shima-seiki-logo.png'; ?>" alt="shima-seiki-logo" />
-              <img src="<?php echo get_template_directory_uri() . '/assets/images/terrot.png'; ?>" alt="terrot" />
+              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/shima-seiki-logo.png'; ?>" alt="shima-seiki-logo" />
+              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/terrot.png'; ?>" alt="terrot" />
             </div>
           </div>
         </div>
@@ -131,7 +131,7 @@ get_header();
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/Dyeing.png'; ?>" alt="Dyeing" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/Dyeing.png'; ?>" alt="Dyeing" />
           </div>
           <h3 class="title">Dyeing</h3>
         </div>
@@ -143,18 +143,18 @@ get_header();
           <div class="card_desc double">
             <p>Machinery Partner</p>
             <div>
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/thiess.png'; ?>" alt="thiess" />
+            <img loading="lazy"  src="<?php echo get_template_directory_uri() . '/assets/images/verticle/thiess.png'; ?>" alt="thiess" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img src="<?php echo get_template_directory_uri() . '/assets/images/finishing_section.jpg'; ?>" alt="dyeing_machines" />
+      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/finishing_section.jpg'; ?>" alt="dyeing_machines" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/finishing.png'; ?>" alt="finishing" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/finishing.png'; ?>" alt="finishing" />
           </div>
           <h3 class="title">Finishing </h3>
         </div>
@@ -166,19 +166,19 @@ get_header();
           <div class="card_desc double">
             <p>Machinery Partner</p>
             <div>
-              <img src="<?php echo get_template_directory_uri() . '/assets/images/brucknerlogo.png'; ?>" alt="" />
-              <img src="<?php echo get_template_directory_uri() . '/assets/images/lafer.png'; ?>" alt="" />
+              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/brucknerlogo.png'; ?>" alt="" />
+              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/lafer.png'; ?>" alt="" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img src="<?php echo get_template_directory_uri() . '/assets/images/printing_section.jpg'; ?>" alt="" />
+      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/printing_section.jpg'; ?>" alt="" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/gear.png'; ?>" alt="" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/gear.png'; ?>" alt="" />
           </div>
           <h3 class="title">Printing</h3>
         </div>
@@ -189,19 +189,19 @@ get_header();
           <div class="card_desc double">
             <p>Machinery Partner</p>
             <div>
-              <img src="<?php echo get_template_directory_uri() . '/assets/images/roq-newn.png'; ?>" alt="" />
-              <img src="<?php echo get_template_directory_uri() . '/assets/images/impress.png'; ?>" alt="" />
+              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/roq-newn.png'; ?>" alt="" />
+              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/impress.png'; ?>" alt="" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img src="<?php echo get_template_directory_uri() . '/assets/images/embroidery.jpg'; ?>" alt="" />
+      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/embroidery.jpg'; ?>" alt="" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/embroidery_clock.png'; ?>" alt="" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/embroidery_clock.png'; ?>" alt="" />
           </div>
           <h3 class="title">Embroidery</h3>
         </div>
@@ -213,18 +213,18 @@ get_header();
           <div class="card_desc double">
             <p>Machinery Partner</p>
             <div>
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/barudan.png'; ?>" alt="" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/barudan.png'; ?>" alt="" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/stitching.jpg'; ?>" alt="" />
+      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/stitching.jpg'; ?>" alt="" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/stitching_machine.png'; ?>" alt="" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/stitching_machine.png'; ?>" alt="" />
           </div>
           <h3 class="title">Stitching</h3>
         </div>
@@ -236,19 +236,19 @@ get_header();
           <div class="card_desc double">
             <p>Machinery Partner</p>
             <div>
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/juki.png'; ?>" alt="" />
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/pegasus.png'; ?>" alt="" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/juki.png'; ?>" alt="" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/pegasus.png'; ?>" alt="" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img src="<?php echo get_template_directory_uri() . '/assets/images/laundry_machine.jpg'; ?>" alt="" />
+      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/laundry_machine.jpg'; ?>" alt="" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/laundry_icon.png'; ?>" alt="" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/laundry_icon.png'; ?>" alt="" />
           </div>
           <h3 class="title">Laundry</h3>
         </div>
@@ -260,7 +260,7 @@ get_header();
           <div class="card_desc double">
             <p>Machinery Partner</p>
             <div>
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/ramsons.png'; ?>" alt="" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/ramsons.png'; ?>" alt="" />
             </div>
           </div>
         </div>
@@ -286,7 +286,7 @@ get_header();
       </ul>
     </div>
     <div class="image_wrapper">
-      <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/cotton.jpg'; ?>" alt="" />
+      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/cotton.webp'; ?>" alt="" />
     </div>
   </div>
   <div class="technology_and_innovation">
@@ -328,7 +328,7 @@ get_header();
 </section>
 
 <section id="logistics_shipping_efficiency">
-  <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
+  <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
 
   <div class="logistics_shipping_efficiency_head">
     <div class="heading" animateHeading>
@@ -343,7 +343,7 @@ get_header();
     <div class="category_item first">
       <h2>Airport</h2>
       <div class="category_image">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/airport.jpg'; ?>" alt="" />
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/airport.webp'; ?>" alt="" />
       </div>
       <p class="category_description">
         We offer direct air connectivity to key destinations across
@@ -354,7 +354,7 @@ get_header();
     <div class="category_item second">
       <h2>Sea Port</h2>
       <div class="category_image">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/sea_port.jpg'; ?>" alt="" />
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/sea_port.jpg'; ?>" alt="" />
       </div>
       <p class="category_description">
        Located just <span> 40 km from the seaport</span>, our facility ensures goods reach the port<span> within 30 minutes for faster global dispatch</span>.
@@ -363,7 +363,7 @@ get_header();
     <div class="category_item third">
       <h2>Dry Port</h2>
       <div class="category_image">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/dry_port.jpg'; ?>" alt="" />
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/dry_port.jpg'; ?>" alt="" />
       </div>
       <p class="category_description">
        Dry Port inside the zone where <span> custom clearance  happens, without hassles</span>.

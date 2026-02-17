@@ -89,7 +89,7 @@ the_post();
     class="image-wrapper"
     >
     <img
-      src="<?php echo get_template_directory_uri() . '/assets/images/VerticalIntegration.jpg'; ?>"
+      src="<?php echo get_template_directory_uri() . '/assets/images/VerticalIntegration.webp'; ?>"
       alt="Image 1" />
     <div class="traceability_content">
       <div class="heading">
@@ -184,7 +184,7 @@ the_post();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/sustain_cotton.webp'; ?>" alt="">
+                    <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/sustain_cotton.webp'; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -216,7 +216,7 @@ the_post();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Spinning-25.jpg'; ?>" alt="">
+                    <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Spinning-25.jpg'; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -246,7 +246,7 @@ the_post();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Knitting-05.jpg'; ?>" alt="">
+                    <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Knitting-05.jpg'; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -279,7 +279,7 @@ the_post();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/dyeing.webp'; ?>" alt="">
+                    <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/dyeing.webp'; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -312,7 +312,7 @@ the_post();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Quality-control.jpg'; ?>" alt="">
+                    <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/Quality-control.jpg'; ?>" alt="">
                 </div>
             </div>
         </div>
@@ -331,7 +331,7 @@ the_post();
   <div class="cc_container">
     <div class="certificate_card">
       <div class="certificate_logo">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ISO.png" ?>" alt="ISO Certificate">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ISO.webp" ?>" alt="ISO Certificate">
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">IMS:ISO 9001&#8203;/45001&#8203;/14001</h3>
@@ -340,7 +340,7 @@ the_post();
     </div>
     <div class="certificate_card">
       <div class="certificate_logo">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/cotton_made_in_africa.png" ?>" alt="">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/cotton_made_in_africa.webp" ?>" alt="">
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">Cotton Made in Africa (CmiA)</h3>
@@ -349,7 +349,7 @@ the_post();
     </div>
     <div class="certificate_card">
       <div class="certificate_logo">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/leed.png" ?>" alt="">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/leed.png" ?>" alt="">
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">LEED (Leadership in Energy and Environmental Design)</h3>
@@ -358,7 +358,7 @@ the_post();
     </div>
     <div class="certificate_card">
       <div class="certificate_logo">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/wrap.png" ?>" alt="">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/wrap.png" ?>" alt="">
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">Worldwide Responsible Accredited Production (WRAP)</h3>
@@ -367,7 +367,7 @@ the_post();
     </div>
     <div class="certificate_card">
       <div class="certificate_logo">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/oekotex.png" ?>" alt="">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/oekotex.webp" ?>" alt="">
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">OekoTex Certification</h3>
@@ -385,7 +385,7 @@ the_post();
     </div>
     <div class="certificate_card">
       <div class="certificate_logo">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/bsci.png" ?>" alt="bsci">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/bsci.png" ?>" alt="bsci">
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">BSCI (Business Social Compliance Initiative)</h3>
@@ -394,7 +394,7 @@ the_post();
     </div>
     <div class="certificate_card">
       <div class="certificate_logo">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/higgindex.png" ?>" alt="higgindex">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/higgindex.png" ?>" alt="higgindex">
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">Higg Index Certification</h3>
@@ -403,7 +403,7 @@ the_post();
     </div>
     <div class="certificate_card">
       <div class="certificate_logo">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/smeta.png" ?>" alt="smeta">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/smeta.png" ?>" alt="smeta">
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">SMETA (Sedex Members Ethical Trade Audit)</h3>

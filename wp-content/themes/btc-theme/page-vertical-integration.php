@@ -155,7 +155,7 @@ get_header();
                     <div class="inner_top">
                         <div class="copy">
                             <div class="tag_div">
-                                <div class="tags active" data-tab="dyeing" data-img="<?php echo get_template_directory_uri() . '/assets/images/dyeing_pic.jpg'; ?>">DYEING</div>
+                                <div class="tags active" data-tab="dyeing" data-img="<?php echo get_template_directory_uri() . '/assets/images/dyeing_pic.webp'; ?>">DYEING</div>
                                 <div class="tags unactive" data-tab="printing" data-img="<?php echo get_template_directory_uri() . '/assets/images/printing.jpg'; ?>">PRINTING</div>
                                 <div class="tags unactive" data-tab="embroidery" data-img="<?php echo get_template_directory_uri() . '/assets/images/embroidery_pic.jpg'; ?>">EMBROIDERY</div>
                                 <div class="tags unactive" data-tab="quality" data-img="<?php echo get_template_directory_uri() . '/assets/images/quality1.jpg'; ?>">QUALITY TESTING</div>
@@ -209,7 +209,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img id="textile_processing_img" src="<?php echo get_template_directory_uri() . '/assets/images/dyeing_pic.jpg'; ?>" alt="">
+                    <img id="textile_processing_img" src="<?php echo get_template_directory_uri() . '/assets/images/dyeing_pic.webp'; ?>" alt="">
                 </div>
             </div>
         </div>

@@ -38,7 +38,7 @@ the_post();
   </div>
 </section>
 <section id="product_page_details">
-  <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
+  <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
   <h2>
     We pride ourselves on offering a wide variety of
     <span>high quality, sustainably made apparel.</span>
@@ -51,7 +51,7 @@ the_post();
       The flexibility we offer is built on deep textile expertise, vertical integration and a clear commitment to quality and customization at scale.
     </p>
     <button class="cta leadpopup" ctaButton >
-      Get in Touch <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" />
+      Get in Touch <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
     </button>
   </div>
 </section>
@@ -119,9 +119,9 @@ the_post();
             $title_text = get_the_title();
           }
 
-          $image = '<img class="category_list_img" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+          $image = '<img class="category_list_img" loading="lazy" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
         } else {
-          $image = '<img class="category_list_img" src="' . get_template_directory_uri() . '/assets/category_item.png" alt="Category Item">';
+          $image = '<img class="category_list_img" loading="lazy" src="' . get_template_directory_uri() . '/assets/category_item.png" alt="Category Item">';
         }
 
 
@@ -147,7 +147,7 @@ the_post();
         <div class="category_list_card">
           <a href="<?php the_permalink(); ?>" class="category_list_card_img">
             <?php echo $image; ?>
-            <p class="cta">Start your Line <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></p>
+            <p class="cta">Start your Line <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow"></p>
           </a>
 
           <div class="category_list_card_detail">
@@ -184,7 +184,7 @@ the_post();
 </section>
 <section id="custom_product">
   <video
-    src="<?php echo get_template_directory_uri() . '/assets/images/BTC_custom_products_video.mp4'; ?>"
+    src="<?php echo get_template_directory_uri() . '/assets/images/BTC_custom_products_video.webm'; ?>"
     autoplay
     muted
     playsinline
@@ -199,7 +199,7 @@ the_post();
     </div>
     <div class="custom_product_detail_list">
       <div animateHeading>
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/machine.png'; ?>" alt="" />
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/machine.png'; ?>" alt="machine icon for custom products" />
         <p>
           Custom printing, <br />
           embroidery & dyeing options <br />
@@ -207,7 +207,7 @@ the_post();
         </p>
       </div>
       <div animateHeading>
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/shirtIcon.png'; ?>" alt="" />
+        <img loading="lazy" alt="shirt icon for custom products" src="<?php echo get_template_directory_uri() . '/assets/images/shirtIcon.png'; ?>" />
         <p>
           Made-to-order <br />
           garments for truly <br />
@@ -216,7 +216,7 @@ the_post();
       </div>
     </div>
     <button class="cta leadpopup" ctaButton >
-      Start Customizing Today <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" />
+      Start Customizing Today <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
     </button>
   </div>
 </section>
