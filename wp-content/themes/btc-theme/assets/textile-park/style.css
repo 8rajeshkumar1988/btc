@@ -165,7 +165,7 @@
 }
 #parking .containers .bottom .left .inner_top .tag_div .tags.unactive {
   background-color: #dadada;
-  color: #6c6c6c;
+  color: #000;
 }
 #parking .containers .bottom .left .inner_top .copy * {
   font-size: var(--font-20);
