@@ -57,7 +57,7 @@ the_post();
             <div class="swiper-wrapper">
                 <div class="swiper-slide category_item" animateHeading>
                     <div class="category_image">
-                        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/home/BTC_Gate.webp"  ?>" alt="" />
+                        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/home/bTC_Gate_.webp"  ?>" alt="" />
                     </div>
                     <p class="category_description" >
                         BTC, located in Benin, is West Africa's first fully vertically
