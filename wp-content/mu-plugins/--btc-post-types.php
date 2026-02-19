@@ -47,7 +47,6 @@ function university_post_types()
         'supports' => array('title', 'editor', 'thumbnail'),
         'has_archive' => true,
         'public' => true,
-        'publicly_queryable' => false,
         'labels' => array(
             'name' => 'Products',
             'add_new_item' => 'Add New Product',
@@ -83,7 +82,6 @@ function university_post_types()
         'supports' => array('title', 'thumbnail'),
         'has_archive' => true,
         'public' => true,
-        'publicly_queryable' => false,
         'labels' => array(
             'name' => 'Clients',
             'add_new_item' => 'Add New Client',
@@ -100,7 +98,6 @@ function university_post_types()
         'supports' => array('title', 'editor'),
         'has_archive' => true,
         'public' => true,
-        'publicly_queryable' => false,
         'labels' => array(
             'name' => 'Customization Categories',
             'add_new_item' => 'Add New',
@@ -117,7 +114,6 @@ function university_post_types()
         'supports' => array('title', 'thumbnail'),
         'has_archive' => false,
         'public' => true,
-        'publicly_queryable' => false,
         'labels' => array(
             'name' => 'Customization Types',
             'add_new_item' => 'Add New',
@@ -133,7 +129,6 @@ function university_post_types()
         'supports' => array('title', 'editor', 'thumbnail'),
         'has_archive' => true,
         'public' => true,
-        'publicly_queryable' => false,
         'labels' => array(
             'name' => 'Leaderships',
             'add_new_item' => 'Add New',
@@ -166,7 +161,6 @@ function university_post_types()
         'supports' => array('title', 'thumbnail'),
         'has_archive' => true,
         'public' => true,
-        'publicly_queryable' => false,
         'labels' => array(
             'name' => 'Social Medias',
             'add_new_item' => 'Add New',
@@ -183,7 +177,6 @@ function university_post_types()
         'supports' => array('title'),
         'has_archive' => true,
         'public' => true,
-        'publicly_queryable' => false,
         'labels' => array(
             'name' => 'Infra Legacy Pointers',
             'add_new_item' => 'Add New',
@@ -206,7 +199,6 @@ function university_post_types()
             'search_items' => 'Search Leads',
         ),
         'public' => true,
-        'publicly_queryable' => false,
         'has_archive' => true,
         'show_in_rest' => true, // for Gutenberg and API
         'supports' => array('title'), // you can also add 'editor', 'thumbnail' if needed
@@ -225,7 +217,6 @@ function university_post_types()
             'search_items' => 'Search Subscribers',
         ),
         'public' => true,
-        'publicly_queryable' => false,
         'has_archive' => true,
         'show_in_rest' => true, // for Gutenberg and API
         'supports' => array('title'), // you can also add 'editor', 'thumbnail' if needed
