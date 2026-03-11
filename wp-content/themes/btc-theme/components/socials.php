@@ -18,13 +18,11 @@
 
             $clients = new WP_Query(array(
                 'posts_per_page' => -1,
-                'post_type' => 'socialmedia',
-                'orderby' => 'title',
+                'post_type'      => 'socialmedia',
                 'post_status'    => 'publish',
-                'meta_key'       => '_sort_order',
-                'orderby'        => 'meta_value_num',
-                'order'          => 'ASC',
-
+                // Order by publish date (newest first)
+                'orderby'        => 'date',
+                'order'          => 'DESC',
             ));
             if ($clients->have_posts()) {
                 while ($clients->have_posts()) {
@@ -35,7 +33,7 @@
                     if ($embed_code) {
                         echo $embed_code;
                     } else {  ?>
-                        <a target="_blank" href="<?php echo get_field('media_url'); ?>" class="swiper-slide social_media_card">
+                        <a target="_blank" published_at="<?php echo get_the_date('Y-m-d H:i:s'); ?>" href="<?php echo get_field('media_url'); ?>" class="swiper-slide social_media_card">
                             <?php
                             $thumbnail_id = get_post_thumbnail_id();
                             $image_url = wp_get_attachment_url($thumbnail_id);
@@ -92,6 +90,7 @@
         breakpoints: {
             480: {
                 slidesPerView: "auto",
+                // centeredSlides: false,
             },
         },
     });
