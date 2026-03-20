@@ -1,10 +1,10 @@
 <?php
 
-function btc_theme_setup() {
+// function btc_theme_setup() {
    
-    load_theme_textdomain('btc-theme', get_template_directory() . '/languages');
-}
-add_action('after_setup_theme', 'btc_theme_setup');
+//     load_theme_textdomain('btc-theme', get_template_directory() . '/languages');
+// }
+// add_action('after_setup_theme', 'btc_theme_setup');
 
 
 function btc_files()
@@ -189,6 +189,57 @@ function btc_files()
 
 add_action('wp_enqueue_scripts', 'btc_files');
 
+function t($key, ...$args) {
+    static $lang_data = null;
+
+    if ($lang_data === null) {
+        $lang_data = get_lang_data();
+    }
+
+    $text = $lang_data[$key] ?? $key;
+
+    if (!empty($args)) {
+        return sprintf($text, ...$args);
+    }
+
+    return $text;
+}
+function get_lang_data() {
+    $lang = 'en'; // default
+
+    // Detect language (Polylang OR URL)
+    if (function_exists('pll_current_language')) {
+        $lang = pll_current_language(); // en / fr
+    } elseif (isset($_GET['lang'])) {
+        $lang = $_GET['lang'];
+    }
+
+    $file = get_template_directory() . "/languages/{$lang}.php";
+
+    if (file_exists($file)) {
+        return include $file;
+    }
+
+    return include get_template_directory() . "/languages/en.php";
+}
+
+// function btc_custom_locale($locale) {
+//     if (!empty($_GET['lang'])) {
+//         if ($_GET['lang'] === 'fr') return 'fr_FR';
+//         if ($_GET['lang'] === 'en') return 'en_US';
+//     }
+//     return $locale;
+// }
+// add_filter('locale', 'btc_custom_locale', 999);
+
+
+// Load correct language AFTER locale is decided
+// function btc_load_textdomain() {
+//     unload_textdomain('btc-theme'); // important
+//     load_theme_textdomain('btc-theme', get_template_directory() . '/languages');
+// }
+// add_action('init', 'btc_load_textdomain', 20);
+
 function btc_features()
 {
     //   add_theme_support( 'title-tag' );
@@ -198,9 +249,15 @@ function btc_features()
     // add_image_size('btc_large', 1200, 800, true);
 
     add_image_size('metaimage', 1200, 630, true);
+    //echo get_locale();
+    
 }
 
 add_action('after_setup_theme', 'btc_features');
+
+
+
+
 
 // Add meta box for Pages & Posts
 
