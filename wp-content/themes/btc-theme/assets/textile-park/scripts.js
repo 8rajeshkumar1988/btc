@@ -110,18 +110,45 @@ checkParkingInViewAndActiveDot();
 let currentTween = null;
 
 $("#textile_processing .tags").click(function () {
-  const tab = $(this).data("tab");
-  const newImageSrc = $(this).data("img"); // Add data-img attribute on .tags
-  if ($(this).hasClass("active")) return;
+  const $this = $(this);
+  const tab = $this.data("tab");
+  const newImageSrc = $this.data("img"); // Add data-img attribute on .tags
+  if ($this.hasClass("active")) return;
 
   if (currentTween) currentTween.kill();
 
-  $("#textile_processing .tags").removeClass("active").addClass("unactive");
-  $(this).addClass("active").removeClass("unactive");
-
-  const $currentContent = $("#textile_processing .inner_bottom:visible");
+  const prevTab = $("#textile_processing .tags.active").first().data("tab");
+  const $allPanels = $("#textile_processing .inner_bottom");
+  const $currentContent = prevTab ? $("#" + prevTab) : $allPanels.first();
   const $nextContent = $("#" + tab);
   const $image = $("#textile_processing_img");
+
+  // Enforce single-panel visibility (prevents "all tabs at once" state).
+  $allPanels.css("display", "none");
+  if (window.innerWidth > 1024) {
+    $currentContent.css("display", "flex");
+  } else {
+    $currentContent.css("display", "grid");
+  }
+
+  // Update active classes (visual UI)
+  $("#textile_processing .tags").removeClass("active").addClass("unactive");
+  $this.addClass("active").removeClass("unactive");
+
+  // Update ARIA selected states (tabs)
+  $("#textile_processing .tags").each(function () {
+    const $tag = $(this);
+    const isActive = $tag.data("tab") === tab;
+    $tag.attr("aria-selected", isActive ? "true" : "false");
+    $tag.attr("tabindex", isActive ? "0" : "-1");
+  });
+
+  // Update ARIA hidden states (panels)
+  $allPanels.each(function () {
+    const $panel = $(this);
+    const isActivePanel = $panel.attr("id") === tab;
+    $panel.attr("aria-hidden", isActivePanel ? "false" : "true");
+  });
 
   // Animate current content out
   currentTween = gsap.to($currentContent.children(), {
@@ -138,10 +165,7 @@ $("#textile_processing .tags").click(function () {
         $nextContent.css("display", "grid");
       }
 
-      gsap.set($nextContent.children(), {
-        opacity: 0,
-        y: 40,
-      });
+      gsap.set($nextContent.children(), { opacity: 0, y: 40 });
 
       gsap.to($nextContent.children(), {
         opacity: 1,
@@ -166,6 +190,94 @@ $("#textile_processing .tags").click(function () {
       });
     }
   });
+});
+
+// Initialize ARIA tab semantics + keyboard navigation (no UI redesign).
+$(document).ready(function () {
+  const $tagContainer = $("#textile_processing .tag_div");
+  const $tags = $("#textile_processing .tags");
+  const $panels = $("#textile_processing .inner_bottom");
+  if (!$tags.length || !$panels.length) return;
+
+  if ($tagContainer.length) {
+    $tagContainer.attr("role", "tablist");
+  }
+
+  $tags.each(function () {
+    const $tag = $(this);
+    const tab = $tag.data("tab");
+    if (!tab) return;
+
+    const tagId = "textile-tab-" + tab;
+    $tag.attr("id", tagId);
+    $tag.attr("role", "tab");
+    $tag.attr("aria-controls", tab);
+  });
+
+  $panels.each(function () {
+    const $panel = $(this);
+    const panelId = $panel.attr("id");
+    if (!panelId) return;
+
+    $panel.attr("role", "tabpanel");
+    $panel.attr("aria-labelledby", "textile-tab-" + panelId);
+  });
+
+  const activeTab = $tags.filter(".active").first().data("tab") || $tags.first().data("tab");
+
+  $tags.each(function () {
+    const $tag = $(this);
+    const tab = $tag.data("tab");
+    const isActive = tab === activeTab;
+    $tag.attr("aria-selected", isActive ? "true" : "false");
+    $tag.attr("tabindex", isActive ? "0" : "-1");
+  });
+
+  $panels.each(function () {
+    const $panel = $(this);
+    const panelId = $panel.attr("id");
+    $panel.attr("aria-hidden", panelId === activeTab ? "false" : "true");
+  });
+
+  // Keyboard: Arrow keys navigate tabs, Enter/Space activates.
+  const tagArr = $tags.toArray();
+
+  $tags.on("keydown", function (e) {
+    const $current = $(this);
+    const currentTab = $current.data("tab");
+    const currentIndex = tagArr.findIndex((el) => $(el).data("tab") === currentTab);
+
+    if (currentIndex < 0) return;
+
+    let nextIndex = currentIndex;
+    if (e.key === "ArrowRight") nextIndex = (currentIndex + 1) % tagArr.length;
+    if (e.key === "ArrowLeft") nextIndex = (currentIndex - 1 + tagArr.length) % tagArr.length;
+    if (e.key === "Home") nextIndex = 0;
+    if (e.key === "End") nextIndex = tagArr.length - 1;
+
+    if (nextIndex !== currentIndex) {
+      e.preventDefault();
+      $(tagArr[nextIndex]).trigger("click");
+      $(tagArr[nextIndex]).focus();
+      return;
+    }
+
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      $current.trigger("click");
+      return;
+    }
+  });
+
+  // Ensure only the active panel is visible on load.
+  if (activeTab) {
+    $panels.css("display", "none");
+    if (window.innerWidth > 1024) {
+      $("#" + activeTab).css("display", "flex");
+    } else {
+      $("#" + activeTab).css("display", "grid");
+    }
+  }
 });
 
 
@@ -203,4 +315,42 @@ $("#textile_processing .tags").click(function () {
       },
     });
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const heroVideo = document.querySelector(".heroBanner .js-lazy-textile-hero-video");
+  if (!heroVideo) return;
+
+  const videoSrc = heroVideo.getAttribute("data-src");
+  if (!videoSrc || heroVideo.getAttribute("src")) return;
+
+  let hasLoaded = false;
+
+  function loadAndPlayHeroVideo() {
+    if (hasLoaded) return;
+    hasLoaded = true;
+
+    heroVideo.setAttribute("src", videoSrc);
+    heroVideo.removeAttribute("data-src");
+    heroVideo.load();
+    heroVideo.play().catch(function () {
+      return;
+    });
+  }
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      function (entries) {
+        if (entries[0] && entries[0].isIntersecting) {
+          loadAndPlayHeroVideo();
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px 0px" }
+    );
+
+    observer.observe(heroVideo);
+  } else {
+    loadAndPlayHeroVideo();
+  }
 });

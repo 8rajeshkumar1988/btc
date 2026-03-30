@@ -207,6 +207,28 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
+    const loadHeroSlideImages = (swiper) => {
+        if (!swiper || !swiper.slides || !swiper.slides.length) return;
+
+        const total = swiper.slides.length;
+        const indexesToLoad = [
+            swiper.activeIndex,
+            (swiper.activeIndex + 1) % total,
+            (swiper.activeIndex - 1 + total) % total,
+        ];
+
+        indexesToLoad.forEach((index) => {
+            const slide = swiper.slides[index];
+            if (!slide) return;
+
+            const deferredImg = slide.querySelector("img[data-src]");
+            if (!deferredImg) return;
+
+            deferredImg.setAttribute("src", deferredImg.getAttribute("data-src"));
+            deferredImg.removeAttribute("data-src");
+        });
+    };
+
     var capabilitySwiper = new Swiper(".capabilitySwiper", {
         slidesPerView: 1,
         spaceBetween: 20,
@@ -221,5 +243,64 @@ $(document).ready(function () {
             el: ".swiper-pagination_capabilities",
             clickable: true,
         },
+        on: {
+            init: function () {
+                loadHeroSlideImages(this);
+            },
+            slideChangeTransitionStart: function () {
+                loadHeroSlideImages(this);
+            },
+        },
     });
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll("#sustainability_details .js-countup");
+    if (!counters.length) return;
+
+    const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+    const animateCounter = (el) => {
+        const target = parseFloat(el.dataset.target || "0");
+        const decimals = parseInt(el.dataset.decimals || "0", 10);
+        const duration = parseInt(el.dataset.duration || "1400", 10);
+        const startTime = performance.now();
+
+        const tick = (now) => {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = easeOutCubic(progress);
+            const current = target * eased;
+
+            el.textContent = decimals > 0 ? current.toFixed(decimals) : Math.round(current).toString();
+
+            if (progress < 1) {
+                requestAnimationFrame(tick);
+            } else {
+                el.textContent = decimals > 0 ? target.toFixed(decimals) : Math.round(target).toString();
+            }
+        };
+
+        requestAnimationFrame(tick);
+    };
+
+    const runAll = () => counters.forEach((el) => animateCounter(el));
+
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0] && entries[0].isIntersecting) {
+                runAll();
+                observer.disconnect();
+            }
+        }, { threshold: 0.35 });
+
+        const trigger = document.querySelector("#sustainability_details .tai_container .static");
+        if (trigger) {
+            observer.observe(trigger);
+        } else {
+            runAll();
+        }
+    } else {
+        runAll();
+    }
+});

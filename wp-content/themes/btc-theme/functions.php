@@ -17,6 +17,9 @@ function btc_files()
     wp_enqueue_script('btc-ScrollToPlugin', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js');
     wp_enqueue_script('btc-splitType', '//cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js');
     wp_enqueue_script('main-btc-js', get_theme_file_uri('/assets/js/main.js'));
+    wp_localize_script('main-btc-js', 'btcMain', array(
+        'ajaxUrl' => admin_url('admin-ajax.php'),
+    ));
     wp_enqueue_style('btc_main_swiper', '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
     if (is_front_page() || is_page('home-testing')) {
         wp_enqueue_script('main-homepage-js', get_theme_file_uri('/assets/homepage/script.js'));
@@ -188,6 +191,27 @@ function btc_files()
 }
 
 add_action('wp_enqueue_scripts', 'btc_files');
+
+function btc_ajax_get_lead_popup_form()
+{
+    if (is_page('contact-us')) {
+        wp_send_json_error('Lead popup is disabled on contact page.');
+    }
+
+    ob_start();
+    get_template_part('components/lead_popup_form');
+    $html = ob_get_clean();
+
+    if (empty($html)) {
+        wp_send_json_error('Lead popup markup not available.');
+    }
+
+    wp_send_json_success(array(
+        'html' => $html,
+    ));
+}
+add_action('wp_ajax_get_lead_popup_form', 'btc_ajax_get_lead_popup_form');
+add_action('wp_ajax_nopriv_get_lead_popup_form', 'btc_ajax_get_lead_popup_form');
 
 function t($key, ...$args) {
     static $lang_data = null;

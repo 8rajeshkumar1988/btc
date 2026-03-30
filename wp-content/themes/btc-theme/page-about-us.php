@@ -18,8 +18,9 @@ the_post();
         }
 
 
-    if ($banner_video) {
-        echo '<video playsinline autoplay muted loop poster="'.$image_url.'" src="' . esc_url($banner_video['url']) . '"></video>';
+    if ($banner_video && !empty($banner_video['url'])) {
+        $video_src = esc_url($banner_video['url']);
+        echo '<video class="aboutHeroVideo js-lazy-about-hero-video" playsinline muted loop autoplay preload="none" poster="' . esc_url($image_url) . '" data-src="' . $video_src . '"></video>';
     } else  if (has_post_thumbnail()) {
         $image = '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
         echo $image;
@@ -106,8 +107,16 @@ the_post();
 </section>
 <section id="vision_mission">
     <div class="vision_mission_container videoC">
-        <video autoplay loop muted playsinline poster="<?php echo get_template_directory_uri() . "/assets/images/home/bTC_Gate_.jpg"  ?>">
-            <source src="<?php echo get_template_directory_uri() . "/assets/images/vision_video.mp4"  ?>" >
+        <video
+            class="js-lazy-vision-mission-video"
+            loop
+            muted
+            playsinline
+            preload="none"
+            poster="<?php echo get_template_directory_uri() . "/assets/images/home/bTC_Gate_.jpg"; ?>">
+            <source
+                type="video/mp4"
+                data-src="<?php echo esc_url(get_template_directory_uri() . "/assets/images/vision_video.webm"); ?>">
         </video>
 
     </div>
@@ -425,7 +434,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/leed.png" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/leed.webp" ?>" alt="">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">LEED (Leadership in Energy and Environmental Design)</h3>
@@ -434,7 +443,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/wrap.png" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/wrap.webp" ?>" alt="">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">Worldwide Responsible Accredited Production (WRAP)</h3>
@@ -452,7 +461,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ctpat.png" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ctpat.webp" ?>" alt="">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">CTPAT (Customs Trade Partnership Against Terrorism)</h3>
@@ -461,7 +470,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/bsci.png" ?>" alt="bsci">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/bsci.webp" ?>" alt="bsci">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">BSCI (Business Social Compliance Initiative)</h3>
@@ -470,7 +479,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
       <div class="certificate_logo">
-        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/higgindex.png" ?>" alt="higgindex">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/higgindex.webp" ?>" alt="higgindex">
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">Higg Index Certification</h3>
@@ -479,7 +488,7 @@ if ($leaderships->have_posts()) {
     </div>
     <div class="certificate_card">
       <div class="certificate_logo">
-        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/smeta.png" ?>" alt="smeta">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/smeta.webp" ?>" alt="smeta">
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">SMETA (Sedex Members Ethical Trade Audit)</h3>

@@ -327,3 +327,40 @@ $(document).ready(function () {
       });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const heroVideo = document.querySelector(".js-lazy-sustainability-hero-video");
+  if (!heroVideo) return;
+
+  const videoSrc = heroVideo.getAttribute("data-src");
+  if (!videoSrc || heroVideo.getAttribute("src")) return;
+
+  let isLoaded = false;
+
+  function loadAndPlayHeroVideo() {
+    if (isLoaded) return;
+    isLoaded = true;
+
+    heroVideo.setAttribute("src", videoSrc);
+    heroVideo.removeAttribute("data-src");
+    heroVideo.load();
+    heroVideo.play().catch(function () {
+      return;
+    });
+  }
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      function (entries) {
+        if (entries[0] && entries[0].isIntersecting) {
+          loadAndPlayHeroVideo();
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px 0px" }
+    );
+    observer.observe(heroVideo);
+  } else {
+    loadAndPlayHeroVideo();
+  }
+});

@@ -1,7 +1,7 @@
 jQuery(function ($) {
 
 
-$("#whatsapp_checkbox").on("change", function () {
+$(document).on("change", "#whatsapp_checkbox", function () {
   const $phoneInput = $("#phone");
   const $whatsappInput = $("#whatsapp_number");
 
@@ -43,7 +43,7 @@ $("#whatsapp_checkbox").on("change", function () {
 
 
 
-  $("#aa-lead-form").on("submit", function (e) {
+  $(document).on("submit", "#aa-lead-form", function (e) {
     e.preventDefault();
     const loader = '<span class="loader"></span>';
     const initial_text = `Submit <img src="../wp-content/themes/btc-theme/assets/images/right_arrow.svg" alt="">`;

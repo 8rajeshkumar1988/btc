@@ -65,9 +65,6 @@
   
 <?php get_template_part('components/headerMenu'); ?>
 <?php
-// Load lead popup form on all pages except "Contact"
-if (!is_page('contact-us')) {
-    get_template_part('components/lead_popup_form');
-}
+// Lead popup form is lazy-loaded via AJAX on first trigger click.
 ?>
 

@@ -17,8 +17,8 @@ get_header();
     }
 
 
-    if ($banner_video) {
-        echo '<video playsinline autoplay muted loop poster="' . $image_url . '" src="' . esc_url($banner_video['url']) . '"></video>';
+    if ($banner_video && !empty($banner_video['url'])) {
+        echo '<video class="js-lazy-why-hero-video" playsinline muted loop preload="none" poster="' . esc_url($image_url) . '" data-src="' . esc_url($banner_video['url']) . '"></video>';
     } else  if (has_post_thumbnail()) {
         $image = '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
         echo $image;
@@ -41,6 +41,12 @@ get_header();
 <section id="globalSearch">
     <!-- class="lottie" id="myLottie" -->
     <div class="worldMap lottie" id="lottie-animation">
+        <img
+            loading="lazy"
+            style="height: 1px; width: 1px; visibility: hidden;"
+            class="globalSearch_fallback"
+            src="<?php echo get_template_directory_uri() . '/assets/images/world-map-btc.svg'; ?>"
+            alt="Global market reach map connecting Benin with US, EU, UK and UAE">
 
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
@@ -67,7 +73,7 @@ get_header();
 <section id="sustainableManufacturer">
     <div>
         <div class="img">
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/SustainableManufacturing.webp"  ?>" alt="SustainableManufacturing"  />
+            <img src="<?php echo get_template_directory_uri() . "/assets/images/SustainableManufacturing.webp"  ?>" alt="Sustainable Manufacturing"  />
             <p>Sustainable <br>Manufacturing</p>
         </div>
         <div class="text">
@@ -89,14 +95,14 @@ get_header();
             </ul>
         </div>
         <div class="img">
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/whybtc/full-traceability-benin-textile.jpg"  ?>" alt="SustainableManufacturing" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/whybtc/full-traceability-benin-textile.jpg"  ?>" alt="Full Traceability" />
             <p>Full <br>Traceability</p>
         </div>
     </div>
     <div>
         <div class="img">
             <!-- <img src="<?php echo get_template_directory_uri() . "/assets/images/PeoplePrinciples.jpg"  ?>" alt="SustainableManufacturing" /> -->
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/vision.webp"  ?>" alt="SustainableManufacturing" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/vision.webp"  ?>" alt="People & Principles" />
             <p>People & <br>Principles</p>
         </div>
         <div class="text">
@@ -118,13 +124,13 @@ get_header();
             </ul>
         </div>
         <div class="img">
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/VerticalIntegration.webp"  ?>" alt="SustainableManufacturing" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/VerticalIntegration.webp"  ?>" alt="Vertical Integration" />
             <p>Vertical <br>Integration </p>
         </div>
     </div>
     <div>
         <div class="img">
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/Partners-Benin-Textile-Corporation-Apparel-Manufacturing-2.jpg"  ?>" alt="SustainableManufacturing" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/Partners-Benin-Textile-Corporation-Apparel-Manufacturing-2.jpg"  ?>" alt="Strategic  Partnerships" />
             <p>Strategic <br>Partnerships</p>
         </div>
         <div class="text">
@@ -136,7 +142,7 @@ get_header();
             </ul>
         </div>
     </div>
-    <img loading="lazy" class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/whyPattern.png"  ?>" alt="SustainableManufacturing" btcPattern />
+    <img loading="lazy" class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/whyPattern.png"  ?>" alt="Strategic Partnerships" btcPattern />
 </section>
 
 <section id="glance">

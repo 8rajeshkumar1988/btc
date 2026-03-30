@@ -14,13 +14,72 @@
 
 
     if ($banner_video) {
-        echo '<video playsinline autoplay muted loop poster="'.$image_url.'" src="' . esc_url($banner_video['url']) . '" fetchpriority="high"></video>';
+        echo '<video class="hero-banner-video js-lazy-hero-video" playsinline autoplay muted loop preload="none" poster="' . esc_url($image_url) . '" data-src="' . esc_url($banner_video['url']) . '" fetchpriority="high"></video>';
     } else  if (has_post_thumbnail()) {
         $image = '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '" fetchpriority="high">';
         echo $image;
     }
 
     ?>
+    <script>
+        (function () {
+            var video = document.querySelector('.js-lazy-hero-video');
+            if (!video || video.getAttribute('src')) {
+                return;
+            }
+
+            var videoSrc = video.getAttribute('data-src');
+            if (!videoSrc) {
+                return;
+            }
+
+            var hasLoaded = false;
+            var interactionEvents = ['pointerdown', 'touchstart', 'keydown', 'scroll'];
+
+            function loadHeroVideo() {
+                if (hasLoaded) {
+                    return;
+                }
+
+                hasLoaded = true;
+                video.setAttribute('src', videoSrc);
+                video.removeAttribute('data-src');
+                video.load();
+                video.play().catch(function () {
+                    return;
+                });
+
+                cleanup();
+            }
+
+            function cleanup() {
+                interactionEvents.forEach(function (eventName) {
+                    window.removeEventListener(eventName, loadHeroVideo, true);
+                });
+            }
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    if (entries[0] && entries[0].isIntersecting) {
+                        loadHeroVideo();
+                        observer.disconnect();
+                    }
+                }, { rootMargin: '200px 0px' });
+
+                observer.observe(video);
+            }
+
+            interactionEvents.forEach(function (eventName) {
+                window.addEventListener(eventName, loadHeroVideo, { passive: true, once: true, capture: true });
+            });
+
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadHeroVideo, { timeout: 2500 });
+            } else {
+                window.setTimeout(loadHeroVideo, 2500);
+            }
+        })();
+    </script>
 
 
 
@@ -286,9 +345,15 @@
         <h3>Fully Integrated Textile Park</h3>
         <a href="/capabilities"  class="cta">Explore Capabilities<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
     </div>
-    <video poster="<?php echo get_template_directory_uri() . '/assets/images/home/BTC_Gate.jpg'; ?>"  autoplay loop muted playsinline>
-        
-        <source src="<?php echo get_template_directory_uri(); ?>/assets/images/homeVideoSec.webm" type="video/webm">
+    <video
+        id="linkedInVideo"
+        class="js-lazy-play-video"
+        poster="<?php echo get_template_directory_uri() . '/assets/images/home/BTC_Gate.jpg'; ?>"
+        preload="none"
+        loop
+        muted
+        playsinline
+        data-src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/homeVideoSec.webm'); ?>">
     </video>
 </section>
 <div class="blankSpace"></div>

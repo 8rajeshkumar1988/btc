@@ -542,5 +542,45 @@ $(document).ready(function () {
   }
 });
 
+$(document).ready(function () {
+  const lazyVideo = document.querySelector("#linkedIn_video .js-lazy-play-video");
+  const videoSection = document.getElementById("linkedIn_video");
+  if (!lazyVideo || !videoSection) {
+    return;
+  }
+
+  const loadAndPlayVideo = function () {
+    const src = lazyVideo.getAttribute("data-src");
+    if (!src) {
+      return;
+    }
+
+    if (!lazyVideo.getAttribute("src")) {
+      lazyVideo.setAttribute("src", src);
+      lazyVideo.load();
+    }
+
+    lazyVideo.play().catch(function () {
+      return;
+    });
+
+    lazyVideo.classList.add("is-loaded");
+  };
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(function (entries) {
+      if (entries[0] && entries[0].isIntersecting) {
+        loadAndPlayVideo();
+        observer.disconnect();
+      }
+    }, { rootMargin: "150px 0px" });
+
+    observer.observe(videoSection);
+  } else {
+    loadAndPlayVideo();
+  }
+});
+
+
 
 

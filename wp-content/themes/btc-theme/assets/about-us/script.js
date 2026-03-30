@@ -149,6 +149,109 @@ $(document).ready(function () {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyVideo = document.querySelector(".js-lazy-about-hero-video");
+  if (!lazyVideo) return;
+
+  const videoSrc = lazyVideo.getAttribute("data-src");
+  if (!videoSrc) return;
+
+  // Already initialized
+  if (lazyVideo.getAttribute("src")) return;
+
+  let hasLoaded = false;
+
+  function loadAndPlay() {
+    if (hasLoaded) return;
+    hasLoaded = true;
+
+    // Small delay reduces main-thread contention right at the intersection moment.
+    setTimeout(function () {
+      lazyVideo.setAttribute("src", videoSrc);
+      lazyVideo.removeAttribute("data-src");
+
+      // Ensure the browser picks up the newly-set src
+      lazyVideo.load();
+      lazyVideo.play().catch(function () {
+        // Autoplay may be blocked; poster remains visible until user action.
+      });
+    }, 500);
+  }
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      function (entries) {
+        if (entries[0] && entries[0].isIntersecting) {
+          loadAndPlay();
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px 0px" }
+    );
+
+    observer.observe(lazyVideo);
+  }
+
+  // Fallback: if not intersected yet, load on first user interaction
+  ["pointerdown", "touchstart", "keydown", "scroll"].forEach(function (eventName) {
+    window.addEventListener(
+      eventName,
+      function () {
+        loadAndPlay();
+      },
+      { passive: true, once: true, capture: true }
+    );
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyVideo = document.querySelector(".js-lazy-vision-mission-video");
+  if (!lazyVideo) return;
+
+  const source = lazyVideo.querySelector('source[data-src]');
+  const videoSrc = source ? source.getAttribute("data-src") : null;
+  if (!videoSrc) return;
+
+  let hasLoaded = false;
+
+  function loadAndPlay() {
+    if (hasLoaded) return;
+    hasLoaded = true;
+
+    // Instant load on first viewport entry.
+    source.setAttribute("src", videoSrc);
+    source.removeAttribute("data-src");
+    lazyVideo.load();
+    lazyVideo.play().catch(function () {
+      // Ignore autoplay failures (poster will remain visible).
+    });
+  }
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      function (entries) {
+        if (entries[0] && entries[0].isIntersecting) {
+          loadAndPlay();
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px 0px" }
+    );
+    observer.observe(lazyVideo);
+  }
+
+  // Fallback: if user interacts before intersecting, load immediately.
+  ["pointerdown", "touchstart", "keydown", "scroll"].forEach(function (eventName) {
+    window.addEventListener(
+      eventName,
+      function () {
+        loadAndPlay();
+      },
+      { passive: true, once: true, capture: true }
+    );
+  });
+});
+
 // document.addEventListener("DOMContentLoaded", function () {
 //   const cards = document.querySelectorAll(".leader_card");
 //   const popup = document.getElementById("popup");

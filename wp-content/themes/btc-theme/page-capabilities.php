@@ -26,28 +26,28 @@ get_header();
         if ($banner_video) {
           echo '<video playsinline autoplay muted loop poster="' . esc_url($image_url) . '" src="' . esc_url($banner_video['url']) . '"></video>';
         } elseif (has_post_thumbnail()) {
-          echo '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+          echo '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '" fetchpriority="high" loading="eager" decoding="async">';
         }
         ?>
       </div>
       <?php if (get_field('slider_2')): ?> 
         <div class='swiper-slide'>
           <?php          
-            echo '<img src="' . esc_url(get_field('slider_2')) . '" alt="' . esc_attr($alt_text) . '">';
+            echo '<img data-src="' . esc_url(get_field('slider_2')) . '" alt="' . esc_attr($alt_text) . '" loading="lazy" decoding="async">';
           ?>
         </div>
       <?php endif; ?>
       <?php if (get_field('slider_3')): ?> 
         <div class='swiper-slide'>
           <?php          
-            echo '<img src="' . esc_url(get_field('slider_3')) . '" alt="' . esc_attr($alt_text) . '">';
+            echo '<img data-src="' . esc_url(get_field('slider_3')) . '" alt="' . esc_attr($alt_text) . '" loading="lazy" decoding="async">';
           ?>
         </div>
       <?php endif; ?>
       <?php if (get_field('slider_4')): ?> 
         <div class='swiper-slide'>
           <?php          
-            echo '<img src="' . esc_url(get_field('slider_4')) . '" alt="' . esc_attr($alt_text) . '">';
+            echo '<img data-src="' . esc_url(get_field('slider_4')) . '" alt="' . esc_attr($alt_text) . '" loading="lazy" decoding="async">';
           ?>
         </div>
       <?php endif; ?>
@@ -296,19 +296,19 @@ get_header();
     <div class="tai_container">
       <div class="static">
         <div>
-          <h3>2400 Machine Capacity</h3>
+          <h3><span class="js-countup" data-target="2400" data-duration="1600">2400</span> Machine Capacity</h3>
           <p>Production with 1400 Stitching <br> machines x 2 shifts</p>
         </div>
         <div>
-          <h3>11.4 Ha</h3>
+          <h3><span class="js-countup" data-target="11.4" data-decimals="1" data-duration="1600">11.4</span> Ha</h3>
           <p>Vertically Integrated <br>Knitting unit area</p>
         </div>
         <div>
-          <h3>9000 Tons</h3>
+          <h3><span class="js-countup" data-target="9000" data-duration="1600">9000</span> Tons</h3>
           <p>Knit fabric production <br>annually</p>
         </div>
         <div>
-          <h3>24 Mn</h3>
+          <h3><span class="js-countup" data-target="24" data-duration="1600">24</span> Mn</h3>
           <p>Pieces of apparel <br> per annum</p>
         </div>
       </div>

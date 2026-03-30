@@ -230,48 +230,32 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  const text_inputs = document.querySelectorAll(".text-control__input");
-  if (text_inputs.length > 0) {
-    text_inputs.forEach((input) => {
-      input.addEventListener("input", function () {
-        this.value = this.value.replace(/[^A-Za-z\s]/g, "");
-      });
-    });
-  }
-  const phoneInputs = document.querySelectorAll(".phone-input");
-  if (phoneInputs.length > 0) {
-    phoneInputs.forEach((input) => {
-      input.addEventListener("input", function () {
-        this.value = this.value.replace(/[^0-9]/g, "");
-      });
-    });
-  }
+  function initializeIntlTelInputs(scope) {
+    if (typeof window.intlTelInput !== "function") {
+      return;
+    }
 
-  const emailInputs = document.querySelectorAll(".email-input");
-  if (emailInputs.length > 0) {
-    emailInputs.forEach((input) => {
-      input.addEventListener("blur", function () {
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (this.value && !emailPattern.test(this.value)) {
-          this.classList.add("error_input");
-          // this.focus();
-        } else {
-          this.classList.remove("error_input");
-        }
+    const telInputs = (scope || document).querySelectorAll('input[type="tel"]');
+    telInputs.forEach(function (input) {
+      if (input._intlTelInstance) {
+        return;
+      }
+
+      const iti = window.intlTelInput(input, {
+        initialCountry: "us",
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
       });
+
+      input._intlTelInstance = iti;
     });
   }
 
-
-  $(".leadpopup").on("click", function () {
+  function openLeadPopup() {
     const $popupForm = $("#lead_popup_form");
-    $('.backtoTop').hide()
+    $(".backtoTop").hide();
 
     if ($popupForm.length) {
-      $popupForm.fadeIn(300, function () {
-        // $popupForm.scrollTop(50); // reset after animation
-      });
-
+      $popupForm.fadeIn(300);
       $("body").css({ overflow: "hidden" });
 
       if (typeof lenis !== "undefined" && typeof lenis.stop === "function") {
@@ -280,11 +264,73 @@ $(document).ready(function () {
         }
       }
     }
+  }
+
+  function ensureLeadPopupLoaded() {
+    const existingPopup = document.getElementById("lead_popup_form");
+    if (existingPopup) {
+      initializeIntlTelInputs(existingPopup);
+      return Promise.resolve(existingPopup);
+    }
+
+    if (!window.btcMain || !window.btcMain.ajaxUrl) {
+      return Promise.reject(new Error("Missing popup loader configuration."));
+    }
+
+    if (window.__leadPopupLoadPromise) {
+      return window.__leadPopupLoadPromise;
+    }
+
+    window.__leadPopupLoadPromise = $.post(window.btcMain.ajaxUrl, {
+      action: "get_lead_popup_form"
+    }).then(function (response) {
+      if (!response || !response.success || !response.data || !response.data.html) {
+        throw new Error("Unable to load popup form.");
+      }
+
+      document.body.insertAdjacentHTML("beforeend", response.data.html);
+      const insertedPopup = document.getElementById("lead_popup_form");
+      initializeIntlTelInputs(insertedPopup || document);
+      return insertedPopup;
+    }).catch(function (error) {
+      console.error(error);
+      window.__leadPopupLoadPromise = null;
+      throw error;
+    });
+
+    return window.__leadPopupLoadPromise;
+  }
+
+  $(document).on("input", ".text-control__input", function () {
+    this.value = this.value.replace(/[^A-Za-z\s]/g, "");
+  });
+
+  $(document).on("input", ".phone-input", function () {
+    this.value = this.value.replace(/[^0-9]/g, "");
+  });
+
+  $(document).on("blur", ".email-input", function () {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (this.value && !emailPattern.test(this.value)) {
+      this.classList.add("error_input");
+    } else {
+      this.classList.remove("error_input");
+    }
+  });
+
+  $(".leadpopup").on("click", function () {
+    ensureLeadPopupLoaded()
+      .then(function () {
+        openLeadPopup();
+      })
+      .catch(function () {
+        console.error("Lead popup failed to load.");
+      });
   });
 
 
   // Close popup with fadeOut
-  $("#closeleadpopup").on("click", function () {
+  $(document).on("click", "#closeleadpopup", function () {
     if (window.innerWidth > 1024) {
       lenis.start();
     }

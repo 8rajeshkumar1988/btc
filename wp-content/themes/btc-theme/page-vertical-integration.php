@@ -16,8 +16,8 @@ get_header();
     }
 
 
-    if ($banner_video) {
-        echo '<video playsinline autoplay muted loop poster="' . $image_url . '" src="' . esc_url($banner_video['url']) . '"></video>';
+    if ($banner_video && !empty($banner_video['url'])) {
+        echo '<video class="js-lazy-textile-hero-video" playsinline autoplay muted loop preload="none" poster="' . esc_url($image_url) . '" data-src="' . esc_url($banner_video['url']) . '"></video>';
     } else  if (has_post_thumbnail()) {
         $image = '<img  src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
         echo $image;
@@ -58,7 +58,7 @@ get_header();
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
-                <h3><span>(01)</span>Access To Local Cotton</h3>
+                <h3>Access To Local Cotton</h3>
             </div>
             <div class="bottom">
                 <div class="left">
@@ -88,7 +88,7 @@ get_header();
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
-                <h3><span>(02)</span>High-Performance Spinning</h3>
+                <h3>High-Performance Spinning</h3>
             </div>
             <div class="bottom">
                 <div class="left">
@@ -118,7 +118,7 @@ get_header();
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
-                <h3><span>(03)</span>Knitting with Precision</h3>
+                <h3>Knitting with Precision</h3>
             </div>
             <div class="bottom">
                 <div class="left">
@@ -148,7 +148,7 @@ get_header();
     <div class="parent_pers" id="textile_processing">
         <div class="containers">
             <div class="top">
-                <h3><span>(04)</span>Excellence in Textile Processing</h3>
+                <h3>Excellence in Textile Processing</h3>
             </div>
             <div class="bottom">
                 <div class="left">
@@ -217,7 +217,7 @@ get_header();
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
-                <h3><span>(05)</span> Garment Manufacturing</h3>
+                <h3> Garment Manufacturing</h3>
             </div>
             <div class="bottom">
                 <div class="left">
@@ -247,7 +247,7 @@ get_header();
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
-                <h3><span>(06)</span>Quality Control</h3>
+                <h3>Quality Control</h3>
             </div>
             <div class="bottom">
                 <div class="left">
@@ -277,7 +277,7 @@ get_header();
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
-                <h3><span>(07)</span>Packaging</h3>
+                <h3>Packaging</h3>
             </div>
             <div class="bottom">
                 <div class="left">

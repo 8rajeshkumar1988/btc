@@ -18,8 +18,8 @@ the_post();
   }
 
 
-  if ($banner_video) {
-    echo '<video playsinline autoplay muted loop poster="' . $image_url . '" src="' . esc_url($banner_video['url']) . '"></video>';
+  if ($banner_video && !empty($banner_video['url'])) {
+    echo '<video class="js-lazy-sustainability-hero-video" playsinline autoplay muted loop preload="none" poster="' . esc_url($image_url) . '" data-src="' . esc_url($banner_video['url']) . '"></video>';
   } else  if (has_post_thumbnail()) {
     $image = '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
     echo $image;
@@ -159,7 +159,7 @@ the_post();
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
-                <h3><span>(01)</span>Rooted in Africa</h3>
+                <h3>Rooted in Africa</h3>
             </div>
             <div class="bottom">
                 <div class="left">
@@ -192,7 +192,7 @@ the_post();
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
-                <h3><span>(02)</span>Smarter Spinning</h3>
+                <h3>Smarter Spinning</h3>
             </div>
             <div class="bottom">
                 <div class="left">
@@ -224,7 +224,7 @@ the_post();
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
-                <h3><span>(03)</span>Precision Knitting, Reduced Waste</h3>
+                <h3>Precision Knitting, Reduced Waste</h3>
             </div>
             <div class="bottom">
                 <div class="left">
@@ -254,7 +254,7 @@ the_post();
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
-                <h3><span>(04)</span>Low-Impact Dyeing</h3>
+                <h3>Low-Impact Dyeing</h3>
             </div>
             <div class="bottom">
                 <div class="left">
@@ -287,7 +287,7 @@ the_post();
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
-                <h3><span>(05)</span> Sustainable by Structure</h3>
+                <h3>Sustainable by Structure</h3>
             </div>
             <div class="bottom">
                 <div class="left">

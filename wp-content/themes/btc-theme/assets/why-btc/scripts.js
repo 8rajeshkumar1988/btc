@@ -372,3 +372,43 @@ $(document).ready(function () {
   //     });
   // });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const heroVideo = document.querySelector(".heroBanner .js-lazy-why-hero-video");
+  if (!heroVideo) return;
+
+  const videoSrc = heroVideo.getAttribute("data-src");
+  if (!videoSrc) return;
+
+  if (heroVideo.getAttribute("src")) return; // already loaded
+
+  let hasLoaded = false;
+
+  function loadVideo() {
+    if (hasLoaded) return;
+    hasLoaded = true;
+
+    heroVideo.setAttribute("src", videoSrc);
+    heroVideo.removeAttribute("data-src");
+    heroVideo.load();
+
+    // Attempt autoplay (muted + playsinline). If blocked, poster remains visible.
+    heroVideo.play().catch(function () {});
+  }
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      function (entries) {
+        if (entries[0] && entries[0].isIntersecting) {
+          loadVideo();
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px 0px" }
+    );
+    observer.observe(heroVideo);
+  } else {
+    // Fallback
+    loadVideo();
+  }
+});
