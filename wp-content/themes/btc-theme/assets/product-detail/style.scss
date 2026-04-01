@@ -10,9 +10,11 @@ body {
   }
   .swiper{
     width: 100vw;
+    max-width: 2560px;
   }
   .swiper-slide {
       width: 80vw;
+      max-width: calc(2560px - (2560px / 5));
   }
   .product_spot_mobile {
     display: none;
@@ -23,7 +25,7 @@ body {
   }
   & > img {
     position: absolute;
-    inset: 0;
+    inset: 0; 
     width: 100%;
     z-index: -1;
     // transform: translate(0%, -25%);
