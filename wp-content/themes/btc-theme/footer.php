@@ -57,10 +57,10 @@
             <a href="<?php echo site_url('/sustainability') ?>" class="hover">Sustainability</a>
             <a href="<?php echo site_url('/why-btc') ?>" class="hover">Why BTC</a>
             <a href="<?php echo site_url('/vertical-integration') ?>" class="hover">Vertical Integration</a>
-            <a href="<?php echo site_url('/contact-us') ?>" class="hover">
+            <a href="<?php echo site_url('/contact-us') ?>" class="hover">Contact Us
                 <?php //echo __('Contact Us', 'btc-theme'); 
             //    echo  get_locale();
-            echo t('ContactUs');
+            //echo t('ContactUs');
                 ?> 
           
            </a>
