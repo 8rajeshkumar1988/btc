@@ -143,9 +143,10 @@ $(document).ready(function () {
 
   const centerIndex = Math.floor(images.length / 2);
   let swirlTimeline;
-
+ let fixedPaths = [];
   // Fixed directions for scattered images (for rest)
-  const fixedPaths = [
+  if(window.innerWidth < 1921){
+    fixedPaths = [
     { x: -1300, y: -1200 },
     { x: -800, y: -1400 },
     { x: -1400, y: 0 },
@@ -159,6 +160,24 @@ $(document).ready(function () {
     { x: -900, y: 1600 },
     { x: 900, y: 1600 },
   ];
+  }else{
+    fixedPaths = [
+    { x: -3300, y: -3300 },
+    { x: -3333, y: -3300 },
+    { x: -3333, y: 0 },
+    { x: -3333, y: 3333 },
+    { x: 3333, y: -3333 },
+    { x: 3333, y: -3333 },
+    { x: 3333, y: 0 },
+    { x: 3300, y: 3333 },
+    { x: 0, y: -4600 },
+    { x: 0, y: 4600 },
+    { x: -2900, y: 4600 },
+    { x: 2900, y: 4600 },
+  ];
+  }
+ 
+
 
   // Initial stacked setup
   function setInitialLayout() {
@@ -166,7 +185,10 @@ $(document).ready(function () {
       let offset;
       let spaceEx;
       const windowWidth = window.innerWidth;
-      if (windowWidth > 1024) {
+      if(windowWidth > 1920){
+        spaceEx = $(".cap_container").width() / 2 - img.offsetWidth / 2;
+      }
+      else if (windowWidth > 1024) {
         spaceEx = windowWidth / 2 - windowWidth / 10 - img.offsetWidth / 2;
       } else if (windowWidth > 768) {
         spaceEx = windowWidth / 20;
@@ -180,11 +202,12 @@ $(document).ready(function () {
         const position = Math.ceil(index / 2);
         offset = index % 2 === 1 ? position : -position;
       }
+      const isExtented = window.innerWidth > 1920;
       const isDesk = window.innerWidth > 1700;
       const isTab = window.innerWidth > 1170;
       const isMobile = window.innerWidth < 1024;
       const scale = 1 - Math.abs(offset) * 0.1;
-      const xOffset = offset * (isDesk ? 60 : isTab ? 40 : isMobile ? 25 : 35);
+      const xOffset = offset * (isExtented ? 60: isDesk ? 60 : isTab ? 40 : isMobile ? 25 : 35);
 
       gsap.set(img, {
         x: xOffset,
@@ -239,8 +262,22 @@ $(document).ready(function () {
           containerWidth - img.offsetWidth / 1 + (isDesk ? 60 : 200) + 30;
         // console.log(" < 1025");
       }
+   
       if (isCenter) {
-        if (window.innerWidth > 768) {
+        if(window.innerWidth > 1920){
+          swirlTimeline.to(
+            img,
+            {
+              x: $(".cap_container").width() / -2 + img.offsetWidth / 2,
+              y: 0,
+              scale: 1,
+              duration: 1.2,
+              ease: "ease",
+            },
+            0
+          );
+        }
+        else if (window.innerWidth > 768) {
           swirlTimeline.to(
             img,
             {
@@ -270,6 +307,20 @@ $(document).ready(function () {
           );
         }
       } else if (isRightNext) {
+        if(window.innerWidth > 1920){
+          swirlTimeline.to(
+            img,
+            {
+              x: $(".cap_container").width() / 2 + img.offsetWidth / 2 + 40,
+              y: 0,
+              scale: 1,
+              duration: 1.2,
+              ease: "ease",
+            },
+            0
+          );
+        }
+        else{
         swirlTimeline.to(
           img,
           {
@@ -281,6 +332,7 @@ $(document).ready(function () {
           },
           0
         );
+      }
       } else {
         const pathIndex = index < centerIndex ? index : index - 2;
         const path = fixedPaths[pathIndex % fixedPaths.length];

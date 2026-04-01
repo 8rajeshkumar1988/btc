@@ -135,4 +135,10 @@
         margin: 0 auto;
     }
 
+    #ourCapabilities {
+        .btnssNew{
+            bottom: calc(var(--paddingY) - 25px);
+        }
+    }
+
 }
