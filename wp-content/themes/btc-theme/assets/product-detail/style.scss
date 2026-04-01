@@ -4,6 +4,7 @@ body {
 #product_spotlight {
   padding: 30px 0 var(--spaceBelow_heading);
   position: relative;
+  overflow: hidden;
   .product_spot {
     display: block;
   }

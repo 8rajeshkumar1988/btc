@@ -64,15 +64,15 @@ the_post();
   <div class="category_container">
     <div class="category_card">
       <h2>MEN</h2>
-      <video src="<?php echo get_template_directory_uri() . '/assets/images/product1_safari.mp4'; ?>" poster="<?php echo get_template_directory_uri() . '/assets/images/mens_banner.jpg'; ?>" autoplay loop muted playsinline></video>
+      <video class="js-lazy-product-video" data-src="<?php echo get_template_directory_uri() . '/assets/images/product1_safari.mp4'; ?>" poster="<?php echo get_template_directory_uri() . '/assets/images/mens_banner.jpg'; ?>" preload="none" autoplay loop muted playsinline></video>
     </div>
     <div class="category_card">
       <h2>WOMEN</h2>
-      <video src="<?php echo get_template_directory_uri() . '/assets/images/women_textile.webm'; ?>" poster="<?php echo get_template_directory_uri() . '/assets/images/women_textile.jpg'; ?>" autoplay loop muted playsinline></video>
+      <video class="js-lazy-product-video" data-src="<?php echo get_template_directory_uri() . '/assets/images/women_textile.webm'; ?>" poster="<?php echo get_template_directory_uri() . '/assets/images/women_textile.jpg'; ?>" preload="none" autoplay loop muted playsinline></video>
     </div>
     <div class="category_card">
       <h2>KIDS</h2>
-      <video src="<?php echo get_template_directory_uri() . '/assets/images/kid.webm'; ?>" poster="<?php echo get_template_directory_uri() . '/assets/images/kid_banner.jpg'; ?>" autoplay loop muted playsinline></video>
+      <video class="js-lazy-product-video" data-src="<?php echo get_template_directory_uri() . '/assets/images/kid.webm'; ?>" poster="<?php echo get_template_directory_uri() . '/assets/images/kid_banner.jpg'; ?>" preload="none" autoplay loop muted playsinline></video>
     </div>
   </div>
 </section>
@@ -184,7 +184,10 @@ the_post();
 </section>
 <section id="custom_product">
   <video
-    src="<?php echo get_template_directory_uri() . '/assets/images/BTC_custom_products_video.webm'; ?>"
+    id="customProductVideo"
+    class="js-lazy-product-video"
+    data-src="<?php echo get_template_directory_uri() . '/assets/images/BTC_custom_products_video.webm'; ?>"
+    preload="none"
     autoplay
     muted
     playsinline

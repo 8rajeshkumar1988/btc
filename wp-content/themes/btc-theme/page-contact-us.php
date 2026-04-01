@@ -153,9 +153,14 @@ if (!empty($faqs)) { ?>
             referrerpolicy="no-referrer-when-downgrade"></iframe> -->
             <video
                 controls
+                autoplay
+                muted
+                playsinline
+                loop
                 style="height: 100%; width: 100%;"
                 id="mapIframe"
-                src="<?php echo get_template_directory_uri() . '/assets/images/factoryshoot.webm'; ?>">
+                preload="none"
+                data-src="<?php echo get_template_directory_uri() . '/assets/images/factoryshoot.webm'; ?>">
                 </video>
     </div>
 </section>
@@ -208,4 +213,34 @@ get_footer();
     //     overlay.style.display = "flex";
     //     closeBtn.style.display = "none";
     // });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const frameVideo = document.getElementById("mapIframe");
+        if (!frameVideo) return;
+
+        const videoSrc = frameVideo.getAttribute("data-src");
+        if (!videoSrc || frameVideo.getAttribute("src")) return;
+
+        const loadVideo = function () {
+            frameVideo.setAttribute("src", videoSrc);
+            frameVideo.removeAttribute("data-src");
+            frameVideo.load();
+        };
+
+        if ("IntersectionObserver" in window) {
+            const observer = new IntersectionObserver(
+                function (entries) {
+                    if (entries[0] && entries[0].isIntersecting) {
+                        loadVideo();
+                        observer.disconnect();
+                    }
+                },
+                { rootMargin: "100px 0px" }
+            );
+
+            observer.observe(frameVideo);
+        } else {
+            loadVideo();
+        }
+    });
 </script>
