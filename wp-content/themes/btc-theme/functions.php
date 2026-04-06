@@ -55,6 +55,20 @@ function btc_files()
         );
     }
 
+    if (is_page('a-propos-de-nous')) {
+        wp_enqueue_style('btc_about_styles', get_theme_file_uri('/assets/about-us/style.css'));
+        wp_enqueue_script(
+            'btc_about_script', // Handle
+            get_theme_file_uri('/assets/about-us/script.js'), // JS file path
+            array(), // Dependencies (e.g., array('jquery'))
+            null, // Version (or use '1.0')
+            true // Load in footer (true = footer, false = header)
+        );
+    }
+
+   
+
+
     if (is_page('contact-us')) {
         wp_enqueue_style('btc_contact_styles', get_theme_file_uri('/assets/contact-us/style.css'));
         wp_enqueue_script(
