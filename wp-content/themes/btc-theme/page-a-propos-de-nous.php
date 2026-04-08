@@ -46,10 +46,10 @@ the_post();
 
     <div class="about_btc_head">
         <div class="heading" animateHeading>
-            <p>About BTC</p>
+            <p>À propos de BTC</p>
             <h2>
-                Providing Agility, Quality <br />
-                and Sustainability.
+            Offrir Agilité,  <br />
+            Qualité et Durabilité.
             </h2>
         </div>
     </div>
@@ -61,11 +61,7 @@ the_post();
                         <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/home/bTC_Gate_.webp"  ?>" alt="" />
                     </div>
                     <p class="category_description" >
-                        BTC, located in Benin, is West Africa's first fully vertically
-                        integrated factory, transforming rain-fed, <strong>
-                        non-GMO CmiA-certified local cotton
-                        </strong>—widely recognized and <strong>trusted by ginning
-                        associations</strong> and industry stakeholders—into premium apparel.
+                    BTC, située au Bénin, est la première usine d'Afrique de l'Ouest entièrement intégrée verticalement, transformant du coton local nourripar la pluie, sans OGM certifié CmiA en vêtements haut de gamme largement reconnu et approuvé par les associations d'égrenage et les acteurs de l'industrie.
                     </p>
                 </div>
                 <div class="swiper-slide category_item" animateHeading>
@@ -73,10 +69,7 @@ the_post();
                         <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/cottonbails.webp" ?>" alt="" />
                     </div>
                     <p class="category_description">
-                        In addition to CmiA-certified local cotton, we also work with organic cotton,
-                        regenerative cotton, and other sustainable cotton types. From
-                        spinning to garmenting, we ensure quality, efficiency, and
-                        sustainability at every stage.
+                    En plus du coton local certifié CmiA, nous travaillons également avec du coton biologique, du coton régénératif et d'autres types de coton durables. De la filature au vêtement, nous garantissons la qualité, l'efficacité et la durabilité à chaque étape.
                     </p>
                 </div>
                 <div class="swiper-slide category_item" animateHeading>
@@ -84,10 +77,7 @@ the_post();
                         <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/about-sec-3.webp"  ?>" alt="" />
                     </div>
                     <p class="category_description">
-                        We produce high-quality yarns, fabrics, and garments, including
-                        T-shirts, polos, hoodies, and more. Our eco-conscious
-                        processes—such as yarn dyeing, printing, and embroidery combine
-                        cutting-edge technology.
+                    Nous produisons des fils, des tissus et des vêtements de haute qualité, y compris des T-shirts, des polos, des sweats à capuche, etc. Nos procédés respectueux de l'environnement, tels que la teinture des fils, l'impression et la broderie, combinent une technologie de pointe.
                     </p>
                 </div>
             </div>
@@ -123,9 +113,7 @@ the_post();
     <div class="vision_mission_container text" animateHeading>
         <h2>Vision</h2>
         <p>
-            To lead Africa's textile transformation by pioneering sustainable,
-            traceable and <strong> high-performance apparel manufacturing,</strong> setting new
-            global standards for quality and environmental responsibility.
+        Diriger la transformation textile de l'Afrique en faisant œuvre de pionnier dans la confection de vêtements durables, traçables et performants, en établissant de nouvelles normes mondiales en matière de qualité et de responsabilité environnementale.
         </p>
     </div>
     <div class="vision_mission_container videoC">     
@@ -137,10 +125,7 @@ the_post();
     <div class="vision_mission_container text" animateHeading>
         <h2>Mission</h2>
         <p>
-            At BTC, we shape the future of textiles by integrating <strong> sustainability,
-            innovation, and efficiency.</strong> From <strong>CmiA-certified local cotton </strong> to premium
-            garments, we deliver ethical, high-quality apparel that meets global
-            demand while empowering communities and <strong> reducing carbon footprints.</strong>
+        Chez BTC, nous façonnons l'avenir des textiles en intégrant durabilité, innovation et efficacité. Du coton local certifié CmiA aux vêtements haut de gamme, nous proposons des vêtements éthiques de haute qualité qui répondent à la demande mondiale tout en responsabilisant les communautés et en réduisant l'empreinte carbone.
         </p>
     </div>
 </section>
@@ -227,11 +212,9 @@ if ($leaderships->have_posts()) {
 <section id="product_page_details">
     <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt=""  btcPattern />
     <div class="heading" animateHeading>
-        <p>Our Shareholders</p>
+        <p>Nos Actionnaires</p>
         <h2>
-            Empowering <br />
-            Progress Through <br />
-            Trusted Partnerships
+        Favoriser Le <br> Progrès Grâce À Des <br> Partenariats Digne De Confiance
         </h2>
     </div>
     <div class="shareholder_logos">
@@ -290,10 +273,10 @@ if ($leaderships->have_posts()) {
 </section> -->
 <section id="our_impact">
     <div class="heading" animateHeading>
-        <p>Our Impact</p>
+        <p>Notre Impact</p>
         <h2>
-            Making a Difference, <br />
-            Stitch by Stitch
+        Faire la Différence, <br />
+        Nœud par Noeud
         </h2>
     </div>
 
@@ -302,7 +285,7 @@ if ($leaderships->have_posts()) {
         <div data-section="partners" class="impact_wrapper bg-partners ">
             <div class="overlay"></div>
             <div class="impact_wrapper_head">
-                <h2>PARTNERS</h2>
+                <h2>PARTENAIRES</h2>
                 <button class="open-btn globalNavigation">
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
                 </button>
@@ -311,23 +294,23 @@ if ($leaderships->have_posts()) {
                 <div class="content-details">
                     <div class="content-detail">
                         <div>
-                            <h2>200+</h2>
-                            <p>Local and regional partners engaged across cotton sourcing, logistics, and services</p>
+                            <h2>Plus de 200</h2>
+                            <p>Partenaires locaux et régionaux engagés dans l'approvisionnement en coton, la logistique et les services</p>
                         </div>
                         <div>
-                            <h2>10+</h2>
-                            <p>Strategic partnerships with global apparel brands for sustainable sourcing</p>
+                            <h2>Plus de 10</h2>
+                            <p>Partenariats stratégiques avec des marques mondiales de vêtements pour un approvisionnement durable</p>
                         </div>
                     </div>
                     <ul>
-                        <li>Knowledge transfer programs with international technical partners</li>
-                        <li>Inclusive growth through long-term contracts with farmer cooperatives</li>
+                        <li>Programmes de transfert de connaissances avec des partenaires techniques internationaux</li>
+                        <li>Une croissance inclusive grâce à des contrats à long terme avec des coopératives agricoles</li>
                         <li>Partnership with government and NGOs to boost textile ecosystem development</li>
                     </ul>
                 </div>
                 <div class="content-btn">
                     <button class="cta leadpopup">
-                        GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+                    Contactez-nous <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
                     </button>
                 </div>
             </div>
@@ -336,7 +319,7 @@ if ($leaderships->have_posts()) {
         <div data-section="people" class="impact_wrapper bg-people open ">
             <div class="overlay"></div>
             <div class="impact_wrapper_head">
-                <h2>PEOPLE</h2>
+                <h2>PERSONNES</h2>
                 <button class="open-btn globalNavigation">
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
                 </button>
@@ -345,29 +328,26 @@ if ($leaderships->have_posts()) {
                 <div class="content-details">
                     <div class="content-detail">
                         <div>
-                            <h2>3,306</h2>
-                            <p>
-                                Beninese nationals will be directly employed across both
-                                shifts
+                            <h2>3 306</h2>
+                            <p>Les ressortissants béninois seront directement employés pendant les deux quarts de travail
                             </p>
                         </div>
                         <div>
-                            <h2>3,306 - 5,000</h2>
-                            <p>Driving indirect jobs across supply and services</p>
+                            <h2>3 306 – 5 000</h2>
+                            <p>Création d'emplois indirects dans l'approvisionnement et les services</p>
                         </div>
                     </div>
                     <ul>
-                        <li>Skilling of Local man power for life time through GTC</li>
-                        <li>Local Entrepreneurial development through EDS scheme</li>
+                        <li>Compétence de la main-d'œuvre locale à vie grâce au GTC</li>
+                        <li>Développement Entrepreneurial local grâce au programme EDS</li>
                         <li>
-                            The vertical supply chain Eco system shall cater to other
-                            garment manufacturers in the region
+                        L'éco - système de la chaîne d'approvisionnement verticale doit s'adresser aux autres fabricants de vêtements de la région
                         </li>
                     </ul>
                 </div>
                 <div class="content-btn">
                     <button class="cta leadpopup">
-                        GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+                    Contactez-nous <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
                     </button>
                 </div>
             </div>
@@ -376,7 +356,7 @@ if ($leaderships->have_posts()) {
         <div data-section="planet" class="impact_wrapper bg-planet">
             <div class="overlay"></div>
             <div class="impact_wrapper_head">
-                <h2>PLANET</h2>
+                <h2>PLANÈTE</h2>
                 <button class="open-btn globalNavigation">
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
                 </button>
@@ -386,7 +366,7 @@ if ($leaderships->have_posts()) {
                     <div class="content-detail">
                         <div>
                             <!-- <h2>7000</h2> -->
-                            <p>We reduce emissions and waste through sustainable sourcing and clean production.</p>
+                            <p>Nous réduisons les émissions et les déchets grâce à un approvisionnement durable et à une production propre.</p>
                         </div>
                         <!-- <div>
                             <h2>7000-8000</h2>
@@ -395,13 +375,13 @@ if ($leaderships->have_posts()) {
                     </div>
                     <ul>
                         <li>CmiA-certified local cotton for eco-friendly sourcing</li>
-                        <li>Zero Liquid Discharge (ZLD) for water recycling</li>
-                        <li>Clean energy and low-impact manufacturing</li>
+                        <li>Zero Liquid Discharge (ZLD) pour le recyclage de l'eau</li>
+                        <li>Énergie propre et Confection à faible impact</li>
                     </ul>
                 </div>
                 <div class="content-btn">
                     <button class="cta leadpopup">
-                        GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+                    Contactez-nous <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
                     </button>
                 </div>
             </div>
@@ -410,8 +390,8 @@ if ($leaderships->have_posts()) {
 </section>
 <section id="certificates_compliances">
     <div class="heading" animateHeading>
-        <p>CERTIFICATIONS & COMPLIANCE</p>
-        <h2>Compliance You Can Trust</h2>
+        <p>CERTIFICATIONS ET CONFORMITÉ</p>
+        <h2>Une Conformité En Laquelle Vous Pouvez Avoir Confiance</h2>
     </div>
     <div class="cc_container">
         <div class="certificate_card">
@@ -419,8 +399,8 @@ if ($leaderships->have_posts()) {
                 <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ISO.webp" ?>" alt="">
             </div>
             <div class="certificate_description">
-                <h3 class="certificate_title">IMS:ISO 9001&#8203;/45001&#8203;/14001</h3>
-                <p>For effective environmental management system</p>
+                <h3 class="certificate_title">IMS : ISO 9001/45001/14001</h3>
+                <p>Pour un système de gestion environnementale efficace</p>
             </div>
         </div>
         <div class="certificate_card">
@@ -428,8 +408,8 @@ if ($leaderships->have_posts()) {
                 <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/cotton_made_in_africa.webp" ?>" alt="">
             </div>
             <div class="certificate_description">
-                <h3 class="certificate_title">Cotton Made in Africa (CmiA)</h3>
-                <p>For sustainable cotton from Africa</p>
+                <h3 class="certificate_title">Coton fabriqué en Afrique (CmiA)</h3>
+                <p>Pour un coton durable d'Afrique</p>
             </div>
         </div>
         <div class="certificate_card">
@@ -437,8 +417,8 @@ if ($leaderships->have_posts()) {
                 <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/leed.webp" ?>" alt="">
             </div>
             <div class="certificate_description">
-                <h3 class="certificate_title">LEED (Leadership in Energy and Environmental Design)</h3>
-                <p>For healthy, efficient, and cost-saving green buildings</p>
+                <h3 class="certificate_title">LEED (Leadership en Conception Énergétique et Environnementale)</h3>
+                <p>Pour des bâtiments écologiques sains, efficaces et économiques</p>
             </div>
         </div>
         <div class="certificate_card">
@@ -446,8 +426,8 @@ if ($leaderships->have_posts()) {
                 <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/wrap.webp" ?>" alt="">
             </div>
             <div class="certificate_description">
-                <h3 class="certificate_title">Worldwide Responsible Accredited Production (WRAP)</h3>
-                <p>For Compliance with Laws and Workplace Regulations</p>
+                <h3 class="certificate_title">Production Mondiale Accréditée Responsable (WRAP)</h3>
+                <p>Pour la conformité aux Lois et Réglementations sur le Lieu de Travail</p>
             </div>
         </div>
         <div class="certificate_card">
@@ -455,8 +435,8 @@ if ($leaderships->have_posts()) {
                 <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/oekotex.webp" ?>" alt="">
             </div>
             <div class="certificate_description">
-                <h3 class="certificate_title">OekoTex Certification</h3>
-                <p>For testing harmful chemicals / substances in the product</p>
+                <h3 class="certificate_title">Certification OeKoTex</h3>
+                <p>Pour tester les produits chimiques / substances nocifs dans le produit</p>
             </div>
         </div>
         <div class="certificate_card">
@@ -464,8 +444,8 @@ if ($leaderships->have_posts()) {
                 <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ctpat.webp" ?>" alt="">
             </div>
             <div class="certificate_description">
-                <h3 class="certificate_title">CTPAT (Customs Trade Partnership Against Terrorism)</h3>
-                <p>For highest level of cargo security for shipping to USA</p>
+                <h3 class="certificate_title">CTPAT (Partenariat Commercial Douanier Contre le Terrorisme)</h3>
+                <p>Pour le plus haut niveau de sécurité du fret pour l'expédition aux États-Unis</p>
             </div>
         </div>
         <div class="certificate_card">
@@ -473,8 +453,8 @@ if ($leaderships->have_posts()) {
                 <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/bsci.webp" ?>" alt="bsci">
             </div>
             <div class="certificate_description">
-                <h3 class="certificate_title">BSCI (Business Social Compliance Initiative)</h3>
-                <p>For meeting global ethical sourcing standards</p>
+                <h3 class="certificate_title">BSCI (Initiative de Conformité Sociale des Entreprises)</h3>
+                <p>Pour répondre aux normes mondiales en matière d'approvisionnement éthique</p>
             </div>
         </div>
         <div class="certificate_card">
@@ -482,8 +462,8 @@ if ($leaderships->have_posts()) {
         <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/higgindex.webp" ?>" alt="higgindex">
       </div>
       <div class="certificate_description">
-        <h3 class="certificate_title">Higg Index Certification</h3>
-        <p>Sustainable performance benchmarking</p>
+        <h3 class="certificate_title">Certification de l'Indice de Higg</h3>
+        <p>Analyse comparative des performances durables</p>
       </div>
     </div>
     <div class="certificate_card">
@@ -491,8 +471,8 @@ if ($leaderships->have_posts()) {
         <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/smeta.webp" ?>" alt="smeta">
       </div>
       <div class="certificate_description">
-        <h3 class="certificate_title">SMETA (Sedex Members Ethical Trade Audit)</h3>
-        <p>Ethical labor & trade compliance</p>
+        <h3 class="certificate_title">SMETA (Audit du Commerce Éthique des Membres Sedex)</h3>
+        <p>Conformité éthique du travail et du commerce</p>
       </div>
     </div>
     </div>
@@ -515,9 +495,9 @@ if ($leaderships->have_posts()) {
 </div>
 
 
-<?php get_template_part('components/clients'); ?>
+<?php get_template_part('components/clients-fr'); ?>
 
 <?php
-get_footer();
+get_footer( 'fr' );
 
 ?>

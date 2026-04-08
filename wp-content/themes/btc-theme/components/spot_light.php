@@ -65,7 +65,16 @@ if ($products->have_posts()) {
                                 <h2><?php echo esc_html($slide['title']); ?></h2>
                             </div>
                             <button class="cta leadpopup" style="height: fit-content;">
-                                Start Your Line
+                            <?php
+                                $lang = get_locale();
+                                if($lang == 'fr_FR') {
+                                    $button_text = 'Lancez Votre Gamme De Produits';
+                                } else {
+                                    $button_text = 'Start Your Line';
+                                }
+                                ?>
+
+                                <?php echo $button_text; ?>
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/right_arrow.svg" alt="">
                             </button>
                         </div>
