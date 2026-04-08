@@ -632,3 +632,20 @@ $(document).ready(function () {
 
 
 })
+
+$(document).ready(function () {
+  const langSwitcher = document.getElementById("langSwitcher");
+  const langSwitchBtn = document.getElementById("langSwitcher");
+
+  if (!langSwitcher || !langSwitchBtn) {
+    return;
+  }
+
+  const targetUrl = langSwitcher.dataset.targetUrl;
+
+  langSwitchBtn.addEventListener("click", function () {
+    if (targetUrl) {
+      window.location.href = targetUrl;
+    }
+  });
+});

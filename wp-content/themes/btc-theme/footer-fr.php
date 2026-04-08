@@ -106,6 +106,31 @@
     <div id="bar"></div>
 </div>
 
+
+
+                    
+<?php
+$lang = get_locale();
+if($lang == 'fr_FR') {
+    $is_fr = true;
+} else {
+    $is_fr = false;
+}
+$switch_url = $is_fr ? site_url('/') : site_url('/fr/');
+$switch_label = $is_fr ? 'EN' : 'FR';
+$switch_flag = $is_fr ? '🇬🇧' : '🇫🇷';
+?>
+    <div class="lang-switcher langSwitchBtn" id="langSwitcher"  data-target-url="<?php echo esc_url($switch_url); ?>">
+        <div class="lang-switcher__row">
+            <span class="lang-switcher__flag" aria-hidden="true"><?php echo $switch_flag; ?></span>
+            <button type="button"  class="lang-switcher__btn" aria-label="Switch language to <?php echo esc_attr($switch_label); ?>">
+                <?php echo esc_html($switch_label); ?>
+            </button>
+        </div>
+    </div>
+
+
+
 </body>
 
 </html>

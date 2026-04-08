@@ -10,6 +10,9 @@ if ($live == 1) {
     } else {
         get_footer();
     }
+    
+ 
+
 } else {
     get_template_part('page-coming-soon');
 }
