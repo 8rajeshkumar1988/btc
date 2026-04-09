@@ -230,9 +230,9 @@ $(document).on("change", "#whatsapp_checkbox", function () {
       isValid = false;
       $email.addClass("error_input");
     }
-
+    
     if (!isValid) {
-      error_text.innerText = "Please fill all the fields*";
+      error_text.innerText = aaLead?.pleaseFillAllFields || "Please fill all the fields*";
       return false;
     }
 

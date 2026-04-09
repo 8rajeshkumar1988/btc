@@ -54,7 +54,7 @@ $key_pointers = new WP_Query(array(
           </div>
             </div>
         <div class="ctaContainer_about">
-            <a class="cta" href="<?php echo home_url('/about-us'); ?>" >En Savoir Plus Sur BTC <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Know More About BTC"></a>
+            <a class="cta" href="<?php echo home_url('/a-propos-de-nous'); ?>" >En Savoir Plus Sur BTC <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Know More About BTC"></a>
         </div>
     </div>
 </section>

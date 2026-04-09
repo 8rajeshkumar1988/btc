@@ -12,9 +12,13 @@ $lang = get_locale();
                 <p><?php
                 echo t('ContactUs');
                 ?></p>
-                <h3>Looking for Seamless, <br>Scalable Textile Manufacturing?</h3>
+                <h3><?php
+                 echo t('contactFooterHeader');                
+                ?></h3>
             </div>
-            <p class='footerCopy'>We offer end-to-end apparel manufacturing under one roof, built for brands, retailers and buying houses ready to scale.</p>
+            <p class='footerCopy'><?php
+                echo t('contactFooterCopy');
+                ?></p>
             <button onclick="scrollToSectionById('lead_form')" class="cta leadpopup"><?php
                 echo t('ContactUs');
                 ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
@@ -34,10 +38,41 @@ $lang = get_locale();
         <a href="<?php echo site_url(HOME_PAGE) ?>"><img src="<?php echo get_template_directory_uri() . '/assets/images/footerlogo.svg'; ?>" alt="btc logo"></a>
         <div>
             <!-- <p class="title">Leading Textile Manufacturer & Exporter</p> -->
-            <p class="title">Leading Textile Manufacturer & Garment Exporter</p>
-            <p class="copy">BTC, located in Benin, is West Africa’s first fully vertically integrated textile factory, transforming rain-fed, non-GMO CmiA-certified local cotton into premium knit apparels.</p>
+            <p class="title"><?php
+                echo t('footerHeading');
+                ?></p>
+            <p class="copy"><?php
+                echo t('footerCopy');
+                ?></p>
         </div>
     </div>
+    
+    <?php 
+        if($lang=='fr_FR'){
+            $contact_url=site_url('/fr/contactez-nous');
+            $about_url=site_url('/fr/a-propos-de-nous');
+            $capabilities_url=site_url('/fr/capacites');
+            $sustainability_url=site_url('/fr/durabilite');
+            $whyBTC_url=site_url('/fr/pourquoi-btc');
+            $products_url=site_url('/fr/nos-produits');
+            $verticalIntegration_url=site_url('/fr/integration-verticale');
+            $events =site_url('/fr/evenements-et-engagements');
+            $news =site_url('/fr/tous-les-blogs');
+            $privacy_policy_url=site_url('/fr/politique-de-confidentialite');
+        }else{
+            $contact_url=site_url('/contact-us');
+            $about_url=site_url('/about-us');
+            $capabilities_url=site_url('/capabilities');
+            $sustainability_url=site_url('/sustainability');
+            $whyBTC_url=site_url('/why-btc');
+            $products_url=site_url('/products');
+            $verticalIntegration_url=site_url('/vertical-integration');
+            $events =site_url('/all-event');
+            $news =site_url('/blogs');
+            $privacy_policy_url=site_url('/privacy-policy');
+        }
+        
+        ?>
     <div class="middle">
         <?php
         $cats = new WP_Query([
@@ -49,10 +84,12 @@ $lang = get_locale();
             'order'          => 'ASC',
         ]);
 
+
+
         if ($cats->have_posts()) {
         ?>
             <div>
-                <a href="<?php echo site_url('/products') ?>" class="title hover">Products</a>
+                <a href="<?php echo $products_url; ?>" class="title hover"><?php echo t('products'); ?></a>
                 <?php while ($cats->have_posts()) {
                     $cats->the_post(); ?>
                     <a href="<?php the_permalink(); ?>" class="hover"><?php the_title(); ?></a>
@@ -60,20 +97,12 @@ $lang = get_locale();
             </div>
         <?php } ?>
 
-        <?php 
-        if($lang=='fr_FR'){
-            $contact_url=site_url('/fr/contactez-nous');
-        }else{
-            $contact_url=site_url('/contact-us');
-        }
-        
-        ?>
         <div>
-            <a href="<?php echo site_url('/about-us') ?>" class="title hover">About Us</a>
-            <a href="<?php echo site_url('/capabilities') ?>" class="hover">Capabilities</a>
-            <a href="<?php echo site_url('/sustainability') ?>" class="hover">Sustainability</a>
-            <a href="<?php echo site_url('/why-btc') ?>" class="hover">Why BTC</a>
-            <a href="<?php echo site_url('/vertical-integration') ?>" class="hover">Vertical Integration</a>
+            <a href="<?php echo $about_url; ?>" class="title hover"><?php echo t('aboutUs'); ?></a>
+            <a href="<?php echo $capabilities_url; ?>" class="hover"><?php echo t('capabilities'); ?></a>
+            <a href="<?php echo $sustainability_url; ?>" class="hover"><?php echo t('sustainability'); ?></a>
+            <a href="<?php echo $whyBTC_url; ?>" class="hover"><?php echo t('whyBTC'); ?></a>
+            <a href="<?php echo $verticalIntegration_url; ?>" class="hover"><?php echo t('verticalIntegration'); ?></a>
             <a href="<?php echo $contact_url; ?>" class="hover">
                 <?php
                 echo t('ContactUs');
@@ -82,21 +111,21 @@ $lang = get_locale();
             </a>
         </div>
         <div>
-            <p class="title">Media</p>
-            <a href="<?php echo site_url('/blogs') ?>" class="hover">News & Blogs</a>
-            <a href="<?php echo site_url('/all-event') ?>" class="hover">Events & Engagements</a>
+            <p class="title"><?php echo t('media'); ?></p>
+            <a href="<?php echo $news; ?>" class="hover"><?php echo t('newsBlogs'); ?></a>
+            <a href="<?php echo $events; ?>" class="hover"><?php echo t('eventsEngagements'); ?></a>
         </div>
         <div>
             <div>
-                <p class="title">Address</p>
-                <p>Ilot C/SB, Tangbo-Djèvié, Plot F-1, Maison Etat Béninois, Zè - Benin</p>
+                <p class="title"><?php echo t('address'); ?></p>
+                <p><?php echo t('addressText'); ?></p>
             </div>
             <div>
-                <p class="title">Email</p>
+                <p class="title"><?php echo t('email'); ?></p>
                 <a href="mailto:info.btc@arisenet.com" class="hover">info.btc@arisenet.com</a>
             </div>
             <!-- <div>
-                <p class="title">Phone</p>
+                <p class="title"><?php echo t('phone'); ?></p>
                 <a href="tel:+229 5145127009" class="hover">+229 5145127009</a>
             </div> -->
         </div>
@@ -105,13 +134,13 @@ $lang = get_locale();
         <div class="left">
             <?php get_template_part('components/social_links'); ?>
             <div class="right">
-                <a href="<?php echo site_url('/privacy-policy') ?>">Privacy Policy</a>
+                <a href="<?php echo $privacy_policy_url ?>"><?php echo t('privacyPolicy'); ?></a>
                 <!-- <a href="<?php echo site_url('/terms-and-conditions') ?>" >Terms & Conditions</a> -->
             </div>
-            <p>Copyright© <?php echo date('Y'); ?>, Benin Textile Corporation</p>
+            <p><?php echo t('copyright'); ?></p>
         </div>
         <div class="right">
-            <a href="<?php echo site_url('/privacy-policy') ?>" class="hover">Privacy Policy</a>
+            <a href="<?php echo $privacy_policy_url ?>" class="hover"><?php echo t('privacyPolicy'); ?></a>
             <!-- <a href="<?php echo site_url('/terms-and-conditions') ?>" class="hover">Terms & Conditions</a> -->
         </div>
     </div>

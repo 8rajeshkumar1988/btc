@@ -16,6 +16,8 @@
 }
 .default_content {
   padding: clamp(2.5rem, 2rem + 2.5vw, 5rem) var(--paddingX);
+  max-width: 1300px;
+  margin: 0 auto;
   * {
     font-weight: 300;
   }

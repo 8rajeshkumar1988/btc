@@ -57,7 +57,7 @@ get_header();
 
 
   <div class="content">
-    <p class="breadcrub"><a href="<?php echo site_url(HOME_PAGE) ?>">Accueil </a> / Capacités</p>
+    <p class="breadcrub"><a href="/btc/fr/">Accueil </a> / Capacités</p>
     <div class="heading" animateHeadingBanner>
       <p><?php the_title(); ?></p>
       <?php the_content(); ?>
@@ -367,6 +367,6 @@ get_header();
 </section>
 
 <?php
-get_footer('fr');
+get_footer();
 
 ?>

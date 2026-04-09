@@ -1,7 +1,7 @@
 <section id="explore_products">
   <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" />
   <div class="heading">
-    <h2>Explore Products</h2>
+    <h2><?php echo t('exploreProducts'); ?></h2>
   </div>
   <div class="explore_products_container">
     <?php
@@ -56,7 +56,7 @@
             <p class="product_description">
               <?php echo esc_html(mb_strimwidth(strip_tags($description), 0, 160, '...')); ?>
             </p>
-            <button class="leadpopup cta">Start Your Line <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <button class="leadpopup cta"><?php echo t('startYourLine'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
           </div>
         </div>
     <?php
@@ -64,7 +64,7 @@
       endwhile;
       wp_reset_postdata();
     else :
-      echo '<p>No products found.</p>';
+      echo '<p>' . t('noProductFound') . '</p>';
     endif;
     ?>
   </div>

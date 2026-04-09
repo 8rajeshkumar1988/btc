@@ -3,6 +3,16 @@
 get_header();
 
 ?>
+<?php
+$lang = get_locale();
+if ($lang == 'fr_FR') {
+  $home_url = site_url('/fr/');
+  $blog_url = site_url('/fr/tous-les-blogs');
+} else {
+  $home_url = site_url('/');
+  $blog_url = site_url('/blogs');
+}
+?>
 <section class="blog_hero">
   <div class="breadcrub_container">
     <p class="breadcrub">
@@ -14,7 +24,7 @@ get_header();
             } else {
               $cat_name = "Blogs";
             } ?>
-      <a href="<?php echo site_url(HOME_PAGE) ?>">Home</a> / <a href="<?php echo site_url('/blogs') ?>"><?php echo  $cat_name; ?></a> / <?php the_title(); ?>
+      <a href="<?php echo $home_url ?>">Home</a> / <a href="<?php echo $blog_url ?>"><?php echo  $cat_name; ?></a> / <?php the_title(); ?>
     </p>
   </div>
   <div>

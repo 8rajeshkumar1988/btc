@@ -84,11 +84,11 @@ if (!$liveEvents->have_posts()) {
             
             <div class="content">
               <p class="breadcrub">
-                <a href="$home_url">Home</a> /  Events & Engagements
+                <a href="$home_url">Accueil </a> /  Événements et Engagements
               </p>
               <div class="heading">
                 <div class="event_description">
-                  <p style="font-weight: 400;margin-bottom: 20px;">SPOTLIGHT</p>
+                  <p style="font-weight: 400;margin-bottom: 20px;">Mettre en lumière</p>
                   <h1><?php the_title() ?></h1>
                   <div class="event_date">
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender-white.png" ?>" alt="" />
@@ -102,7 +102,7 @@ if (!$liveEvents->have_posts()) {
                     <p><?php echo get_field('event_location'); ?></p>
                   </div>
                   <a class="cta" href="<?php the_permalink(); ?>">
-                    View Event
+                  À Propos de l'Événement
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
                   </a>
                 </div>
@@ -154,8 +154,8 @@ if ($upcomingEvents->have_posts()) {
 
   <section id="upcoming_events">
     <div class="heading" animateHeading>
-      <p>Don't Miss</p>
-      <h2>Upcoming Events</h2>
+      <p>Ne manquez pas</p>
+      <h2>Événements à venir</h2>
     </div>
     <div class="our_impact_container">
       <?php
@@ -201,7 +201,8 @@ if ($upcomingEvents->have_posts()) {
                   <p><?php echo get_field('event_location'); ?></p>
                 </div>
                 <a class="cta" href="<?php the_permalink(); ?>">
-                  Register Now <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>"
+                Inscrivez-vous maintenant
+                <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>"
                     alt="" />
                 </a>
               </div>
@@ -239,8 +240,8 @@ if ($pastEvents->have_posts()) {
 ?>
   <section id="event_archive">
     <div class="heading" animateHeading>
-      <p>Event Archive</p>
-      <h2>Previous Events</h2>
+      <p>Archives d'événements</p>
+      <h2>Événements précédents</h2>
     </div>
     <div class="event_btc_container">
       <div class="swiper event_btc">
@@ -284,7 +285,7 @@ if ($pastEvents->have_posts()) {
                   <p><?php echo get_field('event_location'); ?></p>
                 </div>
                 <a href="<?php the_permalink(); ?>" class="cta">
-                  View Event
+                Voir l'événement
                   <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
                 </a>
               </div>
@@ -309,8 +310,8 @@ if ($pastEvents->have_posts()) {
   </section>
 <?php } ?>
 
-<?php get_template_part('components/socials'); ?>
-<?php get_template_part('components/newsletter_subs_section'); ?>
+<?php get_template_part('components/socials-fr'); ?>
+<?php get_template_part('components/newsletter_subs_section-fr'); ?>
 
 
 <?php

@@ -28,7 +28,7 @@ the_post();
   ?>
 
   <div class="content">
-    <p class="breadcrub"><a href="<?php echo site_url(HOME_PAGE) ?>">Accueil</a> / Durabilité</p>
+    <p class="breadcrub"><a href="/btc/fr/">Accueil</a> / Durabilité</p>
     <div class="heading" animateHeadingBanner>
        <p><?php the_title(); ?></p>
       <?php the_content(); ?>
@@ -415,6 +415,6 @@ the_post();
 <?php get_template_part('components/clients-fr'); ?>
 
 <?php
-get_footer('fr');
+get_footer();
 
 ?>

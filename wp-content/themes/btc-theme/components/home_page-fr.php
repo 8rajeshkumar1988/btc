@@ -146,7 +146,7 @@
 
                                 ?>
                                 <p class="title"><?php the_title(); ?></p>
-                                <a href="<?php the_permalink(); ?>" class="cta">View range<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
+                                <a href="<?php the_permalink(); ?>" class="cta">Voir la gamme<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
                             </div>
                             <p><?php the_title(); ?></p>
                         </div>
@@ -343,7 +343,7 @@
     <div class="heading" animateHeading>
         <p>Solutions De Confection De Vêtements De Bout En Bout</p>
         <h3>Parc Textile Entièrement Intégré</h3>
-        <a href="/capabilities"  class="cta">Explorer les Capacités<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
+        <a href="/btc/fr/capacites"  class="cta">Explorer les Capacités<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
     </div>
     <video
         id="linkedInVideo"

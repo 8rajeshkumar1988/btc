@@ -22,9 +22,20 @@ the_post();
 
   ?>
 
-
+<?php
+$lang=get_locale();
+if($lang=='fr_FR'){
+  $home_url='/btc/fr/';
+  $products_url='/btc/fr/nos-produits';
+  $home_title='Accueil';
+}else{
+  $home_url='/btc';
+  $products_url='/btc/en/products';
+  $home_title='Home';
+}
+?>
   <div class="content">
-    <p class="breadcrub"><a href="<?php echo site_url(HOME_PAGE) ?>">Home</a> / <a href="<?php echo site_url('/products') ?>">Our Products</a> / <?php the_title() ?></p>
+    <p class="breadcrub"><a href="<?php echo $home_url; ?>"><?php echo $home_title; ?></a> / <a href="<?php echo $products_url; ?>"><?php echo t('products'); ?></a> / <?php the_title() ?></p>
     <div class="heading" animateHeadingBanner>
       <p><?php the_title(); ?></p>
       <h1>
@@ -58,9 +69,9 @@ $faqs = get_post_meta(get_the_ID(), 'category_faqs', true);
 if (!empty($faqs)) { ?>
   <section id="faqs">
     <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
-    <div class="heading" animateHeading>
-      <p>Frequently Asked Questions</p>
-      <h2>Your Questions, Answered</h2>
+    <div class="heading" animateHeading>  
+      <p><?php echo t('faqs'); ?></p>
+      <h2><?php echo t('fqas'); ?></h2>
     </div>
     <div class="accordian">
       <?php
@@ -100,7 +111,14 @@ if (!empty($faqs)) { ?>
 <?php
 }
 ?>
-<?php get_template_part('components/clients'); ?>
+<?php
+$lang=get_locale();
+if($lang=='fr_FR'){
+  get_template_part('components/clients-fr');
+}else{
+  get_template_part('components/clients');  
+}
+?>
 <?php
 get_footer();
 

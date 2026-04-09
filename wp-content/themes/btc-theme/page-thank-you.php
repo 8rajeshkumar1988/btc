@@ -9,8 +9,8 @@ the_post();
     <div class="content_wrapper">
         <dotlottie-wc class="lottie" id="thankYouLottie" src=<?php echo get_template_directory_uri() . '/assets/images/complete.lottie'; ?>    autoplay></dotlottie-wc>
         <div class="content" animateHeading style="margin-top: 80px;">
-            <h1>Thank You</h1>
-            <p>We have received your query. <br> Our team will get back to you shortly.</p>
+            <h1><?php echo t('thankyou'); ?></h1>
+            <p><?php echo t('thankyouMsg'); ?></p>
         </div>
     </div>
 </section>
@@ -34,8 +34,8 @@ if ($news->have_posts()) {
 
     <section id="more_news">
         <div class="heading" animateHeading>
-            <p>Don't Miss</p>
-            <h2>More News</h2>
+            <p><?php echo t('dontMiss'); ?></p>
+            <h2><?php echo t('moreNews'); ?></h2>
         </div>
         <div class="more_news_container">
             <div class="swiper about_more_news">
@@ -75,7 +75,7 @@ if ($news->have_posts()) {
                                 <h3>
                                     <?php the_title(); ?>
                                 </h3>
-                                <a href="<?php the_permalink(); ?>" class="cta">View Article <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""></a>
+                                <a href="<?php the_permalink(); ?>" class="cta"><?php echo t('viewArticle'); ?> <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""></a>
                             </div>
                         </div>
                     <?php } ?>
@@ -102,8 +102,16 @@ if ($news->have_posts()) {
 
 
 
-<?php get_template_part('components/socials'); ?>
-<?php get_template_part('components/newsletter_subs_section'); ?>
+<?php
+$lang = get_locale();
+if ($lang == 'fr_FR') {
+    get_template_part('components/socials-fr');
+    get_template_part('components/newsletter_subs_section-fr');
+} else {
+    get_template_part('components/socials');
+    get_template_part('components/newsletter_subs_section');
+}
+?>
 <?php
 get_footer();
 

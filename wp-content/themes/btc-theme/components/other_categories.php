@@ -16,7 +16,7 @@
    <section id="explore_other_categories">
      <div class="explore_other_head">
        <div class="heading" animateHeading> 
-         <h2>Explore Other Categories</h2>
+         <h2><?php echo t('exploreOtherCategories'); ?></h2>
        </div>
        <div class="explore_other_buttons">
          <button class="explore_other-prev globalNavigation navBtnColor">
@@ -62,7 +62,7 @@
 
                   ?>
                  <p class="cta">
-                   explore More <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" />
+                   <?php echo t('exploreMore'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" />
                  </p>
                </a>
                <a href="<?php the_permalink(); ?>" class="category_title"><?php the_title(); ?></a>

@@ -1,5 +1,13 @@
+<?php
+$lang = get_locale();
+if ($lang == 'fr_FR') {
+    $home_url = site_url('/fr/');
+} else {
+    $home_url = site_url('/');
+}
+?>
 <header>
-    <a href="<?php echo site_url(HOME_PAGE) ?>">
+    <a href="<?php echo $home_url ?>">
         <?php if (is_home() || is_tag() || (is_single() && get_post_type() === 'post') || is_page('thank-you') || is_404()) : ?>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/headerLogo.svg" alt="Logo" class="logo">
         <?php else : ?>
@@ -334,7 +342,7 @@
                 <!-- <a href=""><img src="<?php echo get_template_directory_uri() . '/assets/images/youtube.png'; ?>"
                         alt="youtube"></a> -->
             </div>
-            <p>Copyright© 2025, Benin Textile Corporation</p>
+            <p>Copyright© 2026, Benin Textile Corporation</p>
         </div>
     </div>
     <?php

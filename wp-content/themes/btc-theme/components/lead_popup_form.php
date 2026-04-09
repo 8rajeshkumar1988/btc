@@ -10,11 +10,17 @@
     </div>
     <div class="heading">
         <h2>
-            Are you a Brand/Retailer/Buying House 
-            looking for a one stop textile solution?
+            <?php echo t('leadPopupHeading'); ?>
         </h2>
     </div>
-    <?php get_template_part('components/lead_form'); ?>
+    <?php
+    $lang = get_locale();
+    if ($lang == 'fr_FR') {
+        get_template_part('components/lead_form-fr');
+    } else {
+        get_template_part('components/lead_form');
+    }
+    ?>
     </div>
 </section>
 

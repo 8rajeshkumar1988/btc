@@ -31,7 +31,7 @@ the_post();
 
 
     <div class="content">
-        <p class="breadcrub"><a href="<?php echo site_url(HOME_PAGE) ?>">Home</a> / About Us</p>
+        <p class="breadcrub"><a href="/btc/fr/">Accueil</a> / À propos de BTC</p>
         <div class="heading" animateHeadingBanner>
             <p><?php the_title(); ?></p>
             <?php the_content(); ?>
@@ -498,6 +498,6 @@ if ($leaderships->have_posts()) {
 <?php get_template_part('components/clients-fr'); ?>
 
 <?php
-get_footer( 'fr' );
+get_footer();
 
 ?>

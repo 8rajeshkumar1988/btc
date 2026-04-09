@@ -28,7 +28,7 @@ the_post();
   ?>
   <!-- <img src="../assets/product_page_banner.jpg" alt="" /> -->
   <div class="content">
-    <p class="breadcrub"><a href="<?php echo site_url(HOME_PAGE) ?>">Accueil</a> / Nos Produits</p>
+    <p class="breadcrub"><a href="/btc/fr/">Accueil</a> / Nos Produits</p>
     <div class="heading" animateHeadingBanner>
       <p><?php the_title(); ?></p>
       <?php the_content(); ?>
@@ -146,7 +146,7 @@ the_post();
         <div class="category_list_card">
           <a href="<?php the_permalink(); ?>" class="category_list_card_img">
             <?php echo $image; ?>
-            <p class="cta">Start your Line <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow"></p>
+            <p class="cta">Lancez Votre Gamme De Produits<img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow"></p>
           </a>
 
           <div class="category_list_card_detail">
@@ -227,6 +227,6 @@ the_post();
 <?php get_template_part('components/clients-fr');
 ?>
 <?php
-get_footer('fr');
+get_footer();
 
 ?>

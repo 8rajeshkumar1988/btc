@@ -28,7 +28,7 @@ the_post();
 
     ?>
     <div class="content">
-        <p class="breadcrub"><a href="<?php echo site_url(HOME_PAGE) ?>">Accueil</a> / contactez-nous</p>
+        <p class="breadcrub"><a href="/btc/fr/">Accueil</a> / contactez-nous</p>
         <div>
             <div class="heading" animateHeadingBanner>
                 <p><?php the_title(); ?></p>
@@ -184,7 +184,7 @@ if (!empty($faqs)) { ?>
 
 
 <?php
-get_footer('fr');
+get_footer();
 
 ?>
 <script>
