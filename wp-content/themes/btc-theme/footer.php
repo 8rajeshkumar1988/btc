@@ -1,22 +1,30 @@
 <?php wp_footer(); ?>
+<?php
+
+$lang = get_locale();
+?>
 <section id="footer_img_frame">
     <div id="footerContact">
         <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/footerContact.webp'; ?>" alt="">
         <div class="layer"></div>
         <div class="content">
             <div class="heading">
-                <p>Contact Us</p>
+                <p><?php
+                echo t('ContactUs');
+                ?></p>
                 <h3>Looking for Seamless, <br>Scalable Textile Manufacturing?</h3>
             </div>
             <p class='footerCopy'>We offer end-to-end apparel manufacturing under one roof, built for brands, retailers and buying houses ready to scale.</p>
-            <button  onclick="scrollToSectionById('lead_form')" class="cta leadpopup">Contact Us <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <button onclick="scrollToSectionById('lead_form')" class="cta leadpopup"><?php
+                echo t('ContactUs');
+                ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
         </div>
     </div>
 </section>
 
 <button onclick="scrollToTop()" id="backToTop" class="backtoTop" aria-label="Back to top">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke-width='1'>
-        <path d="m26.71 10.29-10-10a1 1 0 0 0-1.41 0l-10 10 1.41 1.41L15 3.41V32h2V3.41l8.29 8.29z" class="arrow-path" stroke='1' stroke-width='1'/>
+        <path d="m26.71 10.29-10-10a1 1 0 0 0-1.41 0l-10 10 1.41 1.41L15 3.41V32h2V3.41l8.29 8.29z" class="arrow-path" stroke='1' stroke-width='1' />
     </svg>
 </button>
 
@@ -51,19 +59,27 @@
                 <?php } ?>
             </div>
         <?php } ?>
+
+        <?php 
+        if($lang=='fr_FR'){
+            $contact_url=site_url('/fr/contactez-nous');
+        }else{
+            $contact_url=site_url('/contact-us');
+        }
+        
+        ?>
         <div>
             <a href="<?php echo site_url('/about-us') ?>" class="title hover">About Us</a>
             <a href="<?php echo site_url('/capabilities') ?>" class="hover">Capabilities</a>
             <a href="<?php echo site_url('/sustainability') ?>" class="hover">Sustainability</a>
             <a href="<?php echo site_url('/why-btc') ?>" class="hover">Why BTC</a>
             <a href="<?php echo site_url('/vertical-integration') ?>" class="hover">Vertical Integration</a>
-            <a href="<?php echo site_url('/contact-us') ?>" class="hover">
-                <?php //echo __('Contact Us', 'btc-theme'); 
-               //echo  get_locale();
+            <a href="<?php echo $contact_url; ?>" class="hover">
+                <?php
                 echo t('ContactUs');
-                ?> 
-          
-           </a>
+                ?>
+
+            </a>
         </div>
         <div>
             <p class="title">Media</p>
@@ -87,9 +103,9 @@
     </div>
     <div class="bottom">
         <div class="left">
-           <?php get_template_part('components/social_links'); ?>
+            <?php get_template_part('components/social_links'); ?>
             <div class="right">
-                <a href="<?php echo site_url('/privacy-policy') ?>" >Privacy Policy</a>
+                <a href="<?php echo site_url('/privacy-policy') ?>">Privacy Policy</a>
                 <!-- <a href="<?php echo site_url('/terms-and-conditions') ?>" >Terms & Conditions</a> -->
             </div>
             <p>Copyright© <?php echo date('Y'); ?>, Benin Textile Corporation</p>
@@ -107,10 +123,10 @@
 </div>
 
 
-                    
+
 <?php
 $lang = get_locale();
-if($lang == 'fr_FR') {
+if ($lang == 'fr_FR') {
     $is_fr = true;
 } else {
     $is_fr = false;
@@ -119,15 +135,14 @@ $switch_url = $is_fr ? site_url('/') : site_url('/fr/');
 $switch_label = $is_fr ? 'EN' : 'FR';
 $switch_flag = $is_fr ? '🇬🇧' : '🇫🇷';
 ?>
-    <div class="lang-switcher langSwitchBtn" id="langSwitcher" data-target-url="<?php echo esc_url($switch_url); ?>"
-    >
-        <div class="lang-switcher__row">
-            <span class="lang-switcher__flag" aria-hidden="true"><?php echo $switch_flag; ?></span>
-            <button type="button"  class="lang-switcher__btn" aria-label="Switch language to <?php echo esc_attr($switch_label); ?>">
-                <?php echo esc_html($switch_label); ?>
-            </button>
-        </div>
+<div class="lang-switcher langSwitchBtn" id="langSwitcher" data-target-url="<?php echo esc_url($switch_url); ?>">
+    <div class="lang-switcher__row">
+        <span class="lang-switcher__flag" aria-hidden="true"><?php echo $switch_flag; ?></span>
+        <button type="button" class="lang-switcher__btn" aria-label="Switch language to <?php echo esc_attr($switch_label); ?>">
+            <?php echo esc_html($switch_label); ?>
+        </button>
     </div>
+</div>
 
 
 
