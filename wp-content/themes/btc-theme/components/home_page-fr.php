@@ -1,4 +1,3 @@
-
 <section class="heroBanner homePage_banner">
     <?php
     $banner_video = get_field('banner_video');

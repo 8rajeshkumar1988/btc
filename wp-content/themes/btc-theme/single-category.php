@@ -26,11 +26,11 @@ the_post();
 $lang=get_locale();
 if($lang=='fr_FR'){
   $home_url=t('homeUrl');
-  $products_url=t('homeUrl').'/nos-produits';
+  $products_url=t('homeUrl').'nos-produits';
   $home_title='Accueil';
 }else{
   $home_url=t('homeUrl');
-  $products_url=t('homeUrl').'/products';
+  $products_url=t('homeUrl').'products';
   $home_title='Home';
 }
 ?>
