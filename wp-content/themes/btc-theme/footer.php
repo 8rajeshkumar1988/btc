@@ -137,7 +137,7 @@ $lang = get_locale();
                 <a href="<?php echo $privacy_policy_url ?>"><?php echo t('privacyPolicy'); ?></a>
                 <!-- <a href="<?php echo site_url('/terms-and-conditions') ?>" >Terms & Conditions</a> -->
             </div>
-            <p><?php echo t('copyright'); ?></p>
+            <p><?php echo sprintf(t('copyright'), date('Y')); ?></p>
         </div>
         <div class="right">
             <a href="<?php echo $privacy_policy_url ?>" class="hover"><?php echo t('privacyPolicy'); ?></a>
@@ -152,12 +152,6 @@ $lang = get_locale();
 </div>
 
 
-
-<?php pll_the_languages(array(
-    'show_flags' => 1,
-    'show_names' => 1,
-    'dropdown' => 0
-)); ?>
 
 
 

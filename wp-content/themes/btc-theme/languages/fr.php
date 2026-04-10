@@ -20,7 +20,7 @@ return [
     'address' => 'Adresse',
     'addressText' => 'Ilot C/SB, Tangbo-Djèvié, Plot F-1, Maison Etat Béninois, Zè - Benin',
     'email' => 'Email',
-    'copyright' => 'Copyright© 2026, Benin Textile Corporation',
+    'copyright' => 'Copyright© %s, Benin Textile Corporation',
     'privacyPolicy' => 'Politique de Confidentialité',
     'startYourLine' => 'Lancez Votre Gamme De Produits',
 
