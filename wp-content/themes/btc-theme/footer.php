@@ -174,7 +174,6 @@ $switch_flag = $is_fr ? '🇬🇧' : '🇫🇷';
 </div>
 
 
-
 </body>
 
 </html>
