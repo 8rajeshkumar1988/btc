@@ -2,7 +2,20 @@
 get_header();
 ?>
 
-
+<?php
+$lang=get_locale();
+if($lang=='fr_FR'){
+  $home_url=t('homeUrl');
+  $events_url=t('homeUrl').'/evenements-et-engagements';
+  $home_title='Accueil';
+  $events_title='Événements et Engagements';
+}else{
+  $home_url=t('homeUrl');
+  $events_url=t('homeUrl').'/all-event';
+  $home_title='Home';
+  $events_title='Events & Engagements';
+}
+?>
 
 <section class="heroBanner">
 
@@ -22,7 +35,7 @@ get_header();
     ?>
     <div class="content">
        <p class="breadcrub">
-        <a href="<?php echo site_url(HOME_PAGE) ?>">Home</a> / <a href="<?php echo site_url('/all-event') ?>">Events & Engagements</a> / <?php the_title() ?>
+        <a href="<?php echo $home_url ?>"><?php echo $home_title ?></a> / <a href="<?php echo $events_url ?>"><?php echo $events_title ?></a> / <?php the_title() ?>
         </p>
         <div class="heroText  eventDetailsHead">
             <!-- <p>Previous Events</p> -->

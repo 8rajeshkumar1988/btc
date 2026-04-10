@@ -1,13 +1,6 @@
-<?php
-$lang = get_locale();
-if ($lang == 'fr_FR') {
-    $home_url = site_url('/fr/');
-} else {
-    $home_url = site_url('/');
-}
-?>
+
 <header>
-    <a href="<?php echo $home_url ?>">
+    <a href="<?php echo t('homeUrl') ?>">
         <?php if (is_home() || is_tag() || (is_single() && get_post_type() === 'post') || is_page('thank-you') || is_404()) : ?>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/headerLogo.svg" alt="Logo" class="logo">
         <?php else : ?>

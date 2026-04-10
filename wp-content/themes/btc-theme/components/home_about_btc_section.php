@@ -20,8 +20,8 @@ $key_pointers = new WP_Query(array(
     </div>
     <div class="content">
         <div class="headNum heading" animateHeading>
-            <p>ABOUT BTC</p>
-            <h2>Driven by Craft. <br>Powered by Scale.</h2>
+            <p><?php echo t('aboutBTC'); ?></p>
+            <h2><?php echo t('drivenByCraft'); ?> <br><?php echo t('poweredByScale'); ?></h2>
         </div>
         <div class="sliderAbout ">
             <div class="slides_about_container">
@@ -54,7 +54,7 @@ $key_pointers = new WP_Query(array(
           </div>
             </div>
         <div class="ctaContainer_about">
-            <a class="cta" href="<?php echo home_url('/about-us'); ?>" >Know More About BTC <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Know More About BTC"></a>
+            <a class="cta" href="<?php echo home_url('/about-us'); ?>" ><?php echo t('knowMoreAboutBTC'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Know More About BTC"></a>
         </div>
     </div>
 </section>

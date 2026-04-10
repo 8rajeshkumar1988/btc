@@ -13,14 +13,9 @@
             <?php echo t('leadPopupHeading'); ?>
         </h2>
     </div>
-    <?php
-    $lang = get_locale();
-    if ($lang == 'fr_FR') {
-        get_template_part('components/lead_form-fr');
-    } else {
-        get_template_part('components/lead_form');
-    }
-    ?>
+    
+        <?php get_template_part('components/lead_form'); ?>
+    
     </div>
 </section>
 

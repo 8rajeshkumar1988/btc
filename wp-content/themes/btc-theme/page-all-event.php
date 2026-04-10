@@ -73,18 +73,11 @@ if (!$liveEvents->have_posts()) {
             }
 
             ?>
-            <?php
-          $lang=get_locale();
-          if($lang=='fr_FR'){
-            $home_url='/btc/fr/';
-          }else{
-            $home_url='/btc';
-          }
-          ?>
+            
             
             <div class="content">
               <p class="breadcrub">
-                <a href="$home_url">Home</a> /  Events & Engagements
+                <a href="<?php echo t('homeUrl') ?>">Home</a> /  Events & Engagements
               </p>
               <div class="heading">
                 <div class="event_description">

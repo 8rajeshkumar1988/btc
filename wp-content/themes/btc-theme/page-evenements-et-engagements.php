@@ -73,18 +73,11 @@ if (!$liveEvents->have_posts()) {
             }
 
             ?>
-            <?php
-          $lang=get_locale();
-          if($lang=='fr_FR'){
-            $home_url='/btc/fr/';
-          }else{
-            $home_url='/btc';
-          }
-          ?>
+         
             
             <div class="content">
               <p class="breadcrub">
-                <a href="$home_url">Accueil </a> /  Événements et Engagements
+                <a href="<?php echo t('homeUrl') ?>">Accueil </a> /  Événements et Engagements
               </p>
               <div class="heading">
                 <div class="event_description">
@@ -310,8 +303,8 @@ if ($pastEvents->have_posts()) {
   </section>
 <?php } ?>
 
-<?php get_template_part('components/socials-fr'); ?>
-<?php get_template_part('components/newsletter_subs_section-fr'); ?>
+<?php get_template_part('components/socials'); ?>
+<?php get_template_part('components/newsletter_subs_section'); ?>
 
 
 <?php

@@ -1,5 +1,6 @@
 <?php
 return [
+    'homeUrl' => '/btc/',
     'ContactUs' => 'Contact Us',
     'welcome_user' => 'Welcome %s',
     'event_count' => 'You have %d events',
@@ -65,4 +66,55 @@ return [
     // thankyou page
     'thankyou' => 'Thank You',
     'thankyouMsg' => 'We have received your query. <br> Our team will get back to you shortly.',
+
+    // client conponents
+    'ourClients' => 'Our Clients',
+    'poweringTheWorldsLeadingLabels' => "Powering the World's <br />Leading Labels",
+
+    // customizations conponents
+    'customizations' => 'Customizations',
+    'flexibilityKnittedIn' => 'Flexibility Knitted In',
+    'startCustomizingToday' => 'Start Customizing Today',
+
+
+    // about btc section
+    'aboutBTC' => 'About BTC',
+    'drivenByCraft' => 'Driven by Craft.',
+    'poweredByScale' => 'Powered by Scale.',
+    'knowMoreAboutBTC' => 'Know More About BTC',
+
+
+    //lead form
+    'name' => 'Name',
+    'email' => 'Email',
+    'enquiry_type' => 'Enquiry Type',
+    'phone' => 'Phone Number',
+    'company' => 'Company Name',
+    'whatsapp_number' => 'Whatsapp Number',
+    'organization_type' => 'Organization Type',
+    'requirements' => 'Tell Us About Your Requirements',
+    'privacy_policy' => 'I agree to the BTC <a href="/privacy-policy" target="_blank" style="color: #000">privacy policy</a>.*',
+    'e_communications' => 'I agree to receive e-communications from BTC.',
+    'submit' => 'Submit',
+    'general' => 'General',
+    'business' => 'Business',
+    'entrepreneur' => 'Entrepreneur',
+    'careers' => 'Careers', 
+    'same_as_phone_number' => 'Same as phone number',
+
+
+    //social conponents
+    'ourSocials' => 'Our Socials',
+    'behindTheSeams' => 'Behind the Seams',
+    'followOurThreads' => 'Follow Our Threads',
+
+
+    // newsletter conponents
+    'newsletterHeading' => 'Never Miss an Update',
+    'newsletterSubHeading' => 'Sign Up for Our Newsletter',
+    'newsletterName' => 'Name',
+    'newsletterEmail' => 'Email',
+    'newsletterSubscribe' => 'Subscribe',
+    'newsletterNamePlaceholder' => 'Enter your name',
+    'newsletterEmailPlaceholder' => 'Enter your email',
 ];

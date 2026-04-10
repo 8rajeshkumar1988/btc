@@ -295,19 +295,8 @@ if ($sarticles->have_posts()) {
     </section>
 <?php } ?>
 
-<?php
-$lang=get_locale();
-if($lang=='fr_FR'){
-    get_template_part('components/socials-fr');
-    get_template_part('components/newsletter_subs_section-fr');
-}else{
-    get_template_part('components/socials');
-    get_template_part('components/newsletter_subs_section');
-}
-?>
 
-
-<?php
-    get_footer();
-?>
+<?php get_template_part('components/socials'); ?>
+<?php get_template_part('components/newsletter_subs_section'); ?>
+<?php get_footer(); ?>
 

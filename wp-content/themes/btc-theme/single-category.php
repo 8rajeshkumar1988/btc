@@ -25,12 +25,12 @@ the_post();
 <?php
 $lang=get_locale();
 if($lang=='fr_FR'){
-  $home_url='/btc/fr/';
-  $products_url='/btc/fr/nos-produits';
+  $home_url=t('homeUrl');
+  $products_url=t('homeUrl').'/nos-produits';
   $home_title='Accueil';
 }else{
-  $home_url='/btc';
-  $products_url='/btc/en/products';
+  $home_url=t('homeUrl');
+  $products_url=t('homeUrl').'/products';
   $home_title='Home';
 }
 ?>
@@ -111,14 +111,9 @@ if (!empty($faqs)) { ?>
 <?php
 }
 ?>
-<?php
-$lang=get_locale();
-if($lang=='fr_FR'){
-  get_template_part('components/clients-fr');
-}else{
-  get_template_part('components/clients');  
-}
-?>
+
+<?php get_template_part('components/clients'); ?>
+
 <?php
 get_footer();
 

@@ -1,9 +1,8 @@
     <section id="our_clients">
         <div class="heading" animateHeading>
-            <p>Our Clients</p>
+            <p><?php echo t('ourClients'); ?></p>
             <h2>
-                Powering the World's <br />
-                Leading Labels
+                <?php echo t('poweringTheWorldsLeadingLabels'); ?>
             </h2>
         </div>
         <div class="marquee-container">

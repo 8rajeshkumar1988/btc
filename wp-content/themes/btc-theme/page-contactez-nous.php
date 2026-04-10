@@ -28,7 +28,7 @@ the_post();
 
     ?>
     <div class="content">
-        <p class="breadcrub"><a href="/btc/fr/">Accueil</a> / contactez-nous</p>
+        <p class="breadcrub"><a href="<?php echo t('homeUrl') ?>">Accueil</a> / contactez-nous</p>
         <div>
             <div class="heading" animateHeadingBanner>
                 <p><?php the_title(); ?></p>
@@ -75,7 +75,7 @@ Maison Etat Béninois, Zè-Bénin
         Êtes-vous une Marque / un Détaillant / une Maison d'Achat à la recherche d'une solution textile unique?
         </h2>
     </div>
-    <?php get_template_part('components/lead_form-fr'); ?>
+    <?php get_template_part('components/lead_form'); ?>
 </section>
 
 
@@ -165,7 +165,7 @@ if (!empty($faqs)) { ?>
                 </video>
     </div>
 </section>
-<?php get_template_part('components/newsletter_subs_section-fr'); ?>
+<?php get_template_part('components/newsletter_subs_section'); ?>
 
 
 

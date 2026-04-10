@@ -1,36 +1,36 @@
 <form id="aa-lead-form">
     <div>
-        <label for="name">Name*</label>
+        <label for="name"><?php echo t('name'); ?>*</label>
         <br />
         <input id="name" name="name" type="text" class="text-control__input"  />
     </div>
     <div>
-        <label for="email">Email*</label>
+        <label for="email"><?php echo t('email'); ?>*</label>
         <br />
         <input id="email" name="email" class="email-input" type="email"  />
     </div>
     <div>
-        <label for="enquiry_type">Enquiry Type*</label>
+        <label for="enquiry_type"><?php echo t('enquiry_type'); ?>*</label>
         <br />
         <span class="enquiry_type_box">
             <select id="enquiry_type" name="enquiry_type">
-                <option value="General">General</option>
-                <option value="Business">Business</option>
-                <option value="Entrepreneur">Entrepreneur</option>
-                <option value="Careers">Careers</option>
+                <option value="General"><?php echo t('general'); ?></option>
+                <option value="Business"><?php echo t('business'); ?></option>
+                <option value="Entrepreneur"><?php echo t('entrepreneur'); ?></option>
+                <option value="Careers"><?php echo t('careers'); ?></option>
             </select>
         </span>
     </div>
     
     <div style="position: relative;z-index: 2;" >
-        <label for="phone">Phone Number*</label>
+        <label for="phone"><?php echo t('phone'); ?>*</label>
         <br />
         <span data-lenis-prevent>
             <input id="phone" name="phone" autocomplete="new-phone" class="phone-input" type="tel"  />
         </span>
     </div>
     <div>
-        <label for="company">Company Name*</label>
+        <label for="company"><?php echo t('company'); ?>*</label>
         <br />
         <input
             id="company"
@@ -41,10 +41,10 @@
 
     <div class="whatsapp_input" style="position: relative;z-index: 1;" >
         <div class="whatsapp_container">
-            <label for="whatsapp_number">Whatsapp Number</label>
+            <label for="whatsapp_number"><?php echo t('whatsapp_number'); ?></label>
             <div class="checkbox_container">
                 <input type="checkbox" id="whatsapp_checkbox" />
-                <label for="whatsapp_checkbox">Same as phone number</label>
+                <label for="whatsapp_checkbox"><?php echo t('same_as_phone_number'); ?></label>
             </div>
         </div>
         <span data-lenis-prevent>
@@ -57,7 +57,7 @@
         </span>
     </div>
     <div>
-        <label for="Organization">Organization Type*</label>
+        <label for="Organization"><?php echo t('organization_type'); ?>*</label>
         <br />
         <input
             id="Organization"
@@ -66,7 +66,7 @@
              />
     </div>
     <div class="textareaDiv">
-        <label for="requirements">Tell Us About Your Requirements*</label>
+        <label for="requirements"><?php echo t('requirements'); ?>*</label>
         <br />
         <textarea
             id="requirements"
@@ -78,7 +78,7 @@
         <div class="policy_container">
             <input type="checkbox" checked id="policy_checkbox" name="tandc" />
             <label for="policy_checkbox" class="policy_label">
-                I agree to the BTC <a href="/privacy-policy" target="_blank" style="color: #000">privacy policy</a>.*
+                <?php echo t('privacy_policy'); ?>
             </label>
         </div>
     </div>
@@ -86,7 +86,7 @@
         <div class="e_com_btc">
             <input type="checkbox" checked id="e_com_btc" name="e_com_btc" />
             <label for="e_com_btc" class="e_com_btc_label">
-                I agree to receive e-communications from BTC.
+                <?php echo t('e_communications'); ?>
             </label>
         </div>
     </div>

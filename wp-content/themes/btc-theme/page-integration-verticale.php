@@ -27,7 +27,7 @@ get_header();
 
 
     <div class="content">
-        <p class="breadcrub"><a href="/btc/fr/">Accueil</a> / <?php the_title() ?></p>
+        <p class="breadcrub"><a href="<?php echo t('homeUrl') ?>">Accueil</a> / <?php the_title() ?></p>
         <div class="heading" animateHeadingBanner>
             <p><?php the_title(); ?></p>
             <?php the_content(); ?>
@@ -365,7 +365,7 @@ get_header();
     </div>
 </section>
 
-<?php get_template_part('components/clients-fr'); ?>
+<?php get_template_part('components/clients'); ?>
 
 
 

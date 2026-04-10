@@ -98,7 +98,7 @@
     </div>
 </section>
 
-<?php get_template_part('components/home_about_btc_section-fr'); ?>
+<?php get_template_part('components/home_about_btc_section'); ?>
 
 <section id="ourProducts">
     <div class="heading" animateHeading >
@@ -335,9 +335,9 @@
 
 
 
-<?php get_template_part('components/socials-fr'); ?>
+<?php get_template_part('components/socials'); ?>
 
-<?php get_template_part('components/clients-fr'); ?>
+<?php get_template_part('components/clients'); ?>
 
 <section id="linkedIn_video">
     <div class="heading" animateHeading>

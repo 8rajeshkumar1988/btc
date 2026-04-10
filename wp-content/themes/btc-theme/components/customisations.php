@@ -1,8 +1,8 @@
  <section id="customization">
      <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern_product.png'; ?>" alt=""  btcPattern/>
-     <div class="heading" animateHeading>
-         <p>Customizations</p>
-         <h2>Flexibility Knitted In</h2>
+     <div class="heading" animateHeading>   
+         <p><?php echo t('customizations'); ?></p>
+         <h2><?php echo t('flexibilityKnittedIn'); ?></h2>
      </div>
      <div class="customization_container">
          <div class="customization_buttons">
@@ -235,6 +235,6 @@
         </button>
         </div>
     </div> -->
-                <button class="cta leadpopup" ctaButton>Start Customizing Today <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" /></button>
+                <button class="cta leadpopup" ctaButton><?php echo t('startCustomizingToday'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" /></button>
              </div>
  </section>

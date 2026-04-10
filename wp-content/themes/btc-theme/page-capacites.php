@@ -57,7 +57,7 @@ get_header();
 
 
   <div class="content">
-    <p class="breadcrub"><a href="/btc/fr/">Accueil </a> / Capacités</p>
+    <p class="breadcrub"><a href="<?php echo t('homeUrl') ?>">Accueil </a> / Capacités</p>
     <div class="heading" animateHeadingBanner>
       <p><?php the_title(); ?></p>
       <?php the_content(); ?>

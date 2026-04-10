@@ -28,7 +28,7 @@ the_post();
   ?>
   <!-- <img src="../assets/product_page_banner.jpg" alt="" /> -->
   <div class="content">
-    <p class="breadcrub"><a href="/btc/fr/">Accueil</a> / Nos Produits</p>
+    <p class="breadcrub"><a href="<?php echo t('homeUrl') ?>">Accueil</a> / Nos Produits</p>
     <div class="heading" animateHeadingBanner>
       <p><?php the_title(); ?></p>
       <?php the_content(); ?>
@@ -222,9 +222,9 @@ the_post();
 
 
 
-<?php get_template_part('components/customisations-fr');
+<?php get_template_part('components/customisations');
 ?>
-<?php get_template_part('components/clients-fr');
+<?php get_template_part('components/clients');
 ?>
 <?php
 get_footer();

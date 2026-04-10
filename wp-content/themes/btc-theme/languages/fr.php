@@ -1,5 +1,6 @@
 <?php
 return [
+    'homeUrl' => '/btc/fr/',
     'ContactUs' => 'Nous Contacter',
     'welcome_user' => 'Bienvenue %s',
     'event_count' => 'Vous avez %d événements',
@@ -65,4 +66,56 @@ return [
     // thankyou page
     'thankyou' => 'Merci',
     'thankyouMsg' => 'Nous avons bien reçu votre demande. <br> Notre équipe vous recontactera prochainement.',
+
+
+    // client conponents
+    'ourClients' => 'Nos Clients',
+    'poweringTheWorldsLeadingLabels' => "Approvisionner les Principaux <br> Labels Mondiaux",
+
+
+     // customizations conponents
+     'customizations' => 'Personnalisations',
+     'flexibilityKnittedIn' => 'Flexibilité tricotée',
+     'startCustomizingToday' => "Commencez Votre Personnalisation Dès Aujourd'hui",
+
+
+     // about btc section
+     'aboutBTC' => 'À PROPOS DE BTC',
+     'drivenByCraft' => "Motivé par l'Artisanat.",
+     'poweredByScale' => 'Soutenu par la Croissance.',
+     'knowMoreAboutBTC' => 'En Savoir Plus Sur BTC',
+
+
+     //lead form
+     'name' => 'Nom',
+     'email' => 'Email',
+     'enquiry_type' => 'Type de Renseignement',
+     'phone' => 'Numéro de Téléphone',
+     'company' => 'Nom de l\'Entreprise',
+     'whatsapp_number' => 'Numéro Whatsapp',
+     'organization_type' => 'Type d\'Organisation',
+     'requirements' => 'Parlez-Nous De Vos Besoins',
+     'privacy_policy' => 'J\'accepte la <a href="/fr/politique-de-confidentialite" target="_blank" style="color: #000">politique de confidentialité</a> de.*',
+     'e_communications' => 'J\'accepte de recevoir des communications en ligne de BTC',
+     'general' => 'Général',
+     'business' => 'Entreprise',
+     'entrepreneur' => 'Entrepreneur',
+     'careers' => 'Carrières',
+     'same_as_phone_number' => 'Identique au numéro de téléphone',
+
+
+     //social conponents
+     'ourSocials' => 'Nos Réseaux Sociaux',
+     'behindTheSeams' => 'Derrière les Coutures',
+     'followOurThreads' => 'Suivez Nos Publications',
+
+
+     // newsletter conponents
+     'newsletterHeading' => 'Ne Manquez Pas Notre Actualité',
+     'newsletterSubHeading' => 'Inscrivez-vous à Notre Bulletin d’Information',
+     'newsletterName' => 'Nom',
+     'newsletterEmail' => 'Email',
+     'newsletterSubscribe' => 'S\'abonner',
+     'newsletterNamePlaceholder' => 'Entrez votre nom',
+     'newsletterEmailPlaceholder' => 'Entrez votre email',
 ];

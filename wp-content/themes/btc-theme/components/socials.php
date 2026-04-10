@@ -3,11 +3,11 @@
 
     <div class="our_social_head">
         <div class="heading" animateHeading>
-            <p>Our Socials</p>
-            <h2>Behind the Seams</h2>
+            <p><?php echo t('ourSocials'); ?></p>
+            <h2><?php echo t('behindTheSeams'); ?></h2>
         </div>
         <a href="https://www.linkedin.com/company/benin-textile-corporation/" target="_blank" class="cta" ctaButton>
-            follow our threads
+            <?php echo t('followOurThreads'); ?>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
         </a>
     </div>
@@ -69,7 +69,7 @@
     </div>
 
     <a href="https://www.linkedin.com/company/benin-textile-corporation/" target="_blank" class="cta" ctaButton >
-        follow our threads
+        <?php echo t('followOurThreads'); ?>
         <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
     </a>
 </section>
