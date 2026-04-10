@@ -117,4 +117,36 @@ return [
     'newsletterSubscribe' => 'Subscribe',
     'newsletterNamePlaceholder' => 'Enter your name',
     'newsletterEmailPlaceholder' => 'Enter your email',
+
+
+    // single page
+    'curatedForYou' => 'Curated for You',
+    'browseRecommendations' => 'Browse Recommendations',
+
+    'aboutEvent' => 'About Event',
+
+    'getDirections' => 'Get Directions',
+    'eventLocation' => 'Event Location',
+    'copyAddress' => 'Copy Address',
+    'openInMaps' => 'Open in Maps',
+
+    'seeTheAction' => 'See the Action',
+    'eventGallery' => 'Event Gallery',
+    'exploreOtherEvents' => 'Explore Other Events',
+    'neverMissAnOpportunity' => 'Never Miss an opportunity',
+    'registerNow' => 'Register Now',
+    'yourname' => 'Name',
+    'youremail' => 'Email',
+    'yourphone' => 'Phone Number',
+    'reasonToAttend' => 'Reason to Attend',
+    'enterYourName' => 'Enter your name',
+    'enterYourEmail' => 'Enter your email',
+    'enterYourPhoneNumber' => 'Enter your phone number',
+    'enterYourReasonToAttend' => 'Enter your reason to attend',
+    'noOfAttendees' => 'No. of Attendees',
+    'submitBtn' => 'Submit',
+
+    // explore other events
+    'eventLineup' => 'Event Lineup',
+    'exploreOtherEvents' => 'Explore Other Events',
 ];

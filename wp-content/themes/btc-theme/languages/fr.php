@@ -97,6 +97,7 @@ return [
      'requirements' => 'Parlez-Nous De Vos Besoins',
      'privacy_policy' => 'J\'accepte la <a href="/fr/politique-de-confidentialite" target="_blank" style="color: #000">politique de confidentialité</a> de.*',
      'e_communications' => 'J\'accepte de recevoir des communications en ligne de BTC',
+     'submit' => 'Renseigner',
      'general' => 'Général',
      'business' => 'Entreprise',
      'entrepreneur' => 'Entrepreneur',
@@ -118,4 +119,38 @@ return [
      'newsletterSubscribe' => 'S\'abonner',
      'newsletterNamePlaceholder' => 'Entrez votre nom',
      'newsletterEmailPlaceholder' => 'Entrez votre email',
+
+
+
+    // single page
+    'curatedForYou' => 'Choisi pour Vous',
+    'browseRecommendations' => 'Parcourir les Recommandations',
+
+    'aboutEvent' => "À Propos de l'Événement",
+
+    'getDirections' => 'Obtenir Les Orientations',
+    'eventLocation' => "Lieu de l'Événement",
+    'copyAddress' => "Copier l'Adresse",
+    'openInMaps' => 'Ouvrir Dans Google maps',
+
+
+    'seeTheAction' => 'Voir l\'Action',
+    'eventGallery' => "Galerie d'événements",
+    'exploreOtherEvents' => "Explorez d'autres événements",
+    'neverMissAnOpportunity' => 'Ne manquez jamais une opportunité',
+    'registerNow' => 'Inscrivez-vous maintenant',
+    'yourname' => 'Nom',
+    'youremail' => 'Email',
+    'yourphone' => 'Numéro de Téléphone',
+    'reasonToAttend' => 'Raison de participer',
+    'enterYourName' => 'Entrez votre nom',
+    'enterYourEmail' => 'Entrez votre email',
+    'enterYourPhoneNumber' => 'Entrez votre numéro de téléphone',
+    'enterYourReasonToAttend' => 'Indiquez la raison de votre présence',
+    'noOfAttendees' => 'Nombre de participants',
+    'submitBtn' => 'Renseigner',
+
+    // explore other events
+    'eventLineup' => "Liste d'Événements",
+    'exploreOtherEvents' => "Explorez D'Autres Événements",
 ];

@@ -73,7 +73,7 @@ if($lang=='fr_FR'){
 <div class="event-content">
     <img class="pattern" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="BTC pattern" />
 
-    <h4 style="margin-bottom: 20px;">About Event</h4>
+    <h4 style="margin-bottom: 20px;"><?php echo t('aboutEvent'); ?></h4>
    
 
     <?php the_content(); ?>
@@ -89,8 +89,8 @@ if ($latitude && $longitude) {
 
     <section id="event_location">
         <div class="heading">
-            <p>Get Directions</p>
-            <h2>Event Location</h2>
+            <p><?php echo t('getDirections'); ?></p>
+            <h2><?php echo t('eventLocation'); ?></h2>
         </div>
 
         <div class="iframe">
@@ -114,11 +114,11 @@ if ($latitude && $longitude) {
                             src="<?php echo get_template_directory_uri() . '/assets/images/check.png'; ?>"
                             alt="Copied" />
                     </span>
-                    Copy Address
+                    <?php echo t('copyAddress'); ?>
                 </button>
 
             </div>
-            <a target="_blank" href="https://www.google.com/maps?q=<?php echo $latitude ?>,<?php echo $longitude ?>" class="cta">Open in Maps <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" /></a>
+            <a target="_blank" href="https://www.google.com/maps?q=<?php echo $latitude ?>,<?php echo $longitude ?>" class="cta"><?php echo t('openInMaps'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" /></a>
         </div>
     </section>
 <?php } ?>
@@ -129,8 +129,8 @@ if ($gallery && is_array($gallery)) {
 ?>
     <section id="event_gallery">
         <div class="heading">
-            <p>See the Action</p>
-            <h2>Event Gallery</h2>
+            <p><?php echo t('seeTheAction'); ?></p>
+            <h2><?php echo t('eventGallery'); ?></h2>
         </div>
         <div class="swiper-container gallery-top">
             <div class="swiper-wrapper">
@@ -211,36 +211,36 @@ if ($event_Start_Date) {
 ?>
         <section id="event_registration">
             <div class="heading">
-                <p>Never Miss an opportunity </p>
-                <h2>Register Now</h2>
+                <p><?php echo t('neverMissAnOpportunity'); ?></p>
+                <h2><?php echo t('registerNow'); ?></h2>
             </div>
             <form class="event_reg_form" id="btc-event-form">
                 <input type="hidden" name="event_id" value="<?php echo $event_id; ?>">
                 <div class="f_name">
-                    <label for="first_name"> Name</label>
+                    <label for="first_name"><?php echo t('yourname'); ?></label>
                     <br />
-                    <input id="first_name" class="text-control__input" type="text" name="name" placeholder="Enter your name" />
+                    <input id="first_name" class="text-control__input" type="text" name="name" placeholder="<?php echo t('enterYourName'); ?>" />
                 </div>
 
                 <div class="email_g">
-                    <label for="email">Your e-mail</label>
+                    <label for="email"><?php echo t('youremail'); ?></label>
                     <br />
-                    <input id="email" type="email" class="email-input" name="email" placeholder="Enter your email" />
+                    <input id="email" type="email" class="email-input" name="email" placeholder="<?php echo t('enterYourEmail'); ?>" />
                 </div>
                 <div class="phone_number" style="position: relative;z-index: 2;" >
-                    <label for="phoneno">Phone number</label>
+                    <label for="phoneno"><?php echo t('yourphone'); ?></label>
                     <br />
                     <span data-lenis-prevent>
-                        <input id="phoneno" type="tel" class="phone-input" autocomplete="new-number" name="phone" placeholder="Enter your phone number" />
+                        <input id="phoneno" type="tel" class="phone-input" autocomplete="new-number" name="phone" placeholder="<?php echo t('enterYourPhoneNumber'); ?>" />
                     </span>
                 </div>
                 <div class="reason_to_attend">
-                    <label for="reason">Reason to Attend</label>
+                    <label for="reason"><?php echo t('reasonToAttend'); ?></label>
                     <br />
-                    <textarea name="reason_to_attend" id="reason"></textarea>
+                    <textarea name="reason_to_attend" id="reason" placeholder="<?php echo t('enterYourReasonToAttend'); ?>"></textarea>
                 </div>
                 <div class="no_of_attendees">
-                    <label for="attendees_number">No. of Attendees</label>
+                    <label for="attendees_number"><?php echo t('noOfAttendees'); ?></label>
                     <br />
                     <div class="combine_box">
                         <div class="input-group">
@@ -267,7 +267,7 @@ if ($event_Start_Date) {
                             </div>
                         </div>
                         <button class="cta">
-                            Submit
+                            <?php echo t('submitBtn'); ?>
                             <img
                                 src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>"
                                 alt="right arrow" />
@@ -301,8 +301,8 @@ if ($otherEvents->have_posts()) {
 
     <section id="explore_other_event">
         <div class="heading">
-            <p>Event Lineup</p>
-            <h2>Explore Other Events</h2>
+            <p><?php echo t('eventLineup'); ?></p>
+            <h2><?php echo t('exploreOtherEvents'); ?></h2>
         </div>
         <div class="event_btc_container">
             <div class="swiper event_btc">
@@ -325,7 +325,7 @@ if ($otherEvents->have_posts()) {
 
                                 ?>
                                 <p class="cta">
-                                    View Event
+                                    <?php echo t('viewEvent'); ?>
                                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
                                 </p>
                             </div>

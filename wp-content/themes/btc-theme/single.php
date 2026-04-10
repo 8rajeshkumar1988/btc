@@ -126,8 +126,8 @@ if ($posts->have_posts()) {
   <section id="recommendations_categories">
     <div class="recommendations_head">
       <div class="heading">
-        <p>Curated for You</p>
-        <h2>Browse Recommendations</h2>
+        <p><?php echo t('curatedForYou'); ?></p>
+        <h2><?php echo t('browseRecommendations'); ?></h2>
       </div>
     </div>
     <div class="recommendations_categories_container">
@@ -159,7 +159,7 @@ if ($posts->have_posts()) {
 
                 ?>
                 <p class="cta">
-                  View Article <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+                <?php echo t('viewArticle'); ?> <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
                 </p>
               </a>
               <a href="<?php the_permalink(); ?>" class="category_title"><?php the_title(); ?></a>

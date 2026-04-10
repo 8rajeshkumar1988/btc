@@ -153,23 +153,46 @@ $lang = get_locale();
 
 
 
+<?php pll_the_languages(array(
+    'show_flags' => 1,
+    'show_names' => 1,
+    'dropdown' => 0
+)); ?>
+
+
+
+
 <?php
-$lang = get_locale();
-if ($lang == 'fr_FR') {
-    $is_fr = true;
-} else {
-    $is_fr = false;
+$languages = function_exists('pll_the_languages') ? pll_the_languages(array('raw' => 1)) : array();
+$current_lang = function_exists('pll_current_language') ? pll_current_language('slug') : '';
+$target_lang = null;
+
+if (!empty($languages) && is_array($languages)) {
+    foreach ($languages as $language) {
+        if (!empty($language['slug']) && $language['slug'] !== $current_lang) {
+            $target_lang = $language;
+            break;
+        }
+    }
 }
-$switch_url = $is_fr ? site_url('/') : site_url('/fr/');
-$switch_label = $is_fr ? 'EN' : 'FR';
-$switch_flag = $is_fr ? '🇬🇧' : '🇫🇷';
+
+$target_url = !empty($target_lang['url']) ? $target_lang['url'] : '#';
+$target_name = !empty($target_lang['name']) ? trim($target_lang['name']) : '';
+$target_initial = $target_name !== ''
+    ? (function_exists('mb_substr') ? mb_substr($target_name, 0, 2) : substr($target_name, 0, 1))
+    : '';
+$target_flag = !empty($target_lang['flag']) ? $target_lang['flag'] : '';
 ?>
-<div class="lang-switcher langSwitchBtn" id="langSwitcher" data-target-url="<?php echo esc_url($switch_url); ?>">
+<div class="lang-switcher langSwitchBtn" id="langSwitcher" data-target-url="<?php echo esc_url($target_url); ?>">
     <div class="lang-switcher__row">
-        <span class="lang-switcher__flag" aria-hidden="true"><?php echo $switch_flag; ?></span>
-        <button type="button" class="lang-switcher__btn" aria-label="Switch language to <?php echo esc_attr($switch_label); ?>">
-            <?php echo esc_html($switch_label); ?>
-        </button>
+        <?php if ($target_initial !== '') : ?>
+            <a class="lang-switcher__btn" href="<?php echo esc_url($target_url); ?>" aria-label="Switch language to <?php echo esc_attr($target_name); ?>">
+                <?php if ($target_flag !== '') : ?>
+                    <img class="lang-switcher__flag" src="<?php echo esc_url($target_flag); ?>" alt="<?php echo esc_attr($target_name); ?>" width="16" height="11">
+                <?php endif; ?>
+                <?php echo esc_html($target_initial); ?>
+            </a>
+        <?php endif; ?>
     </div>
 </div>
 

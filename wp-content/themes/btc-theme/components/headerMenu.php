@@ -423,10 +423,3 @@
 </section>
 
 
-<?php pll_the_languages(array(
-    'show_flags' => 1,
-    'show_names' => 1,
-    'dropdown' => 0
-)); ?>
-
-<?php //pll_the_languages(); ?>
