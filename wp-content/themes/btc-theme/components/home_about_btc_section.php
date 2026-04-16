@@ -12,6 +12,14 @@ $key_pointers = new WP_Query(array(
 ));
 ?>
 
+<?php
+$lang = get_locale();
+if($lang == 'fr_FR') {    
+    $aboutBTCUrl = t('homeUrl').'a-propos-de-nous';
+} else {
+    $aboutBTCUrl = t('homeUrl').'about-us';
+}
+?>
 <section id="aboutBtc">
     <div class="worldMap" id="lottie-animation">
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -34,7 +42,14 @@ $key_pointers = new WP_Query(array(
 
                         <div class="tiles swiper-slide">
                             <div>
-                                <p class="number"><?php echo get_field('pointer_value'); ?></p>
+                            <?php
+$lang = get_locale();
+if($lang == 'fr_FR') {    
+    echo '<p class="number small">' . get_field('pointer_value') . '</p>';
+} else {
+    echo '<p class="number ">' . get_field('pointer_value') . '</p>';
+}
+?>
                                 <p class="tag"><?php the_title(); ?></p>
                             </div>
                             <div class="copy">
@@ -54,7 +69,7 @@ $key_pointers = new WP_Query(array(
           </div>
             </div>
         <div class="ctaContainer_about">
-            <a class="cta" href="<?php echo home_url('/about-us'); ?>" ><?php echo t('knowMoreAboutBTC'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Know More About BTC"></a>
+            <a class="cta" href="<?php echo $aboutBTCUrl; ?>" ><?php echo t('knowMoreAboutBTC'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Know More About BTC"></a>
         </div>
     </div>
 </section>

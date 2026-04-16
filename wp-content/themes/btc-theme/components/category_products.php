@@ -56,7 +56,15 @@
             <p class="product_description">
               <?php echo esc_html(mb_strimwidth(strip_tags($description), 0, 160, '...')); ?>
             </p>
-            <button class="leadpopup cta"><?php echo t('startYourLine'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <?php
+            $lang = get_locale();
+            if($lang == 'fr_FR') {
+                $class = 'small';
+            } else {
+                $class = '';
+            }
+            ?>
+            <button class="leadpopup cta <?php echo $class; ?>"><?php echo t('startYourLine'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
           </div>
         </div>
     <?php

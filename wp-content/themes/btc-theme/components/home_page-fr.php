@@ -267,7 +267,7 @@
     </div>
     <div class="rightContent">
         <p ourCapabilitiesRightContent>BTC combine une technologie de pointe avec des pratiques durables, garantissant que chaque produit est fabriqué avec soin, précision et responsabilité environnementale.</p>
-        <button id="exploreWhatWeDo"   class="cta">Découvrez ce que nous faisons<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+        <button id="exploreWhatWeDo"   class="cta small">Découvrez ce que nous faisons<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
     </div>
     <div class="cap_container swiper ourCapabilities">
         <div class="swiper-wrapper">
