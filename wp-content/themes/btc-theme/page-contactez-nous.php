@@ -30,10 +30,10 @@ the_post();
     <div class="content">
         <p class="breadcrub"><a href="<?php echo t('homeUrl') ?>">Accueil</a> / contactez-nous</p>
         <div>
-            <div class="heading" animateHeadingBanner>
+            <div class="heading fr" animateHeadingBanner>
                 <p><?php the_title(); ?></p>
                 <?php the_content(); ?>
-                <button onclick="scrollToSectionById('lead_form')" class="cta">Contactez - nous maintenant <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
+                <button onclick="scrollToSectionById('lead_form')" class="cta fr">Contactez - nous maintenant <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
             </div>
             <div class="contacts" >
                 <p>Bénin Textile Corporation</p>
@@ -70,7 +70,7 @@ Maison Etat Béninois, Zè-Bénin
 
 
 <section id="lead_form">
-    <div class="heading" animateHeading>
+    <div class="heading fr" animateHeading>
         <h2>
         Êtes-vous une Marque / un Détaillant / une Maison d'Achat à la recherche d'une solution textile unique?
         </h2>
@@ -85,7 +85,7 @@ $faqs = get_post_meta(get_the_ID(), 'category_faqs', true);
 if (!empty($faqs)) { ?>
     <section id="faqs">
         <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
-        <div class="heading" animateHeading>
+        <div class="heading fr" animateHeading>
             <p>Questions Fréquemment Posées</p>
             <h2>Réponses à Vos Questions</h2>
         </div>
@@ -131,7 +131,7 @@ if (!empty($faqs)) { ?>
 
 
 <section id="virtual_factory_experience">
-    <div class="heading" animateHeading>
+    <div class="heading fr" animateHeading>
         <p>À l'intérieur de BTC</p>
         <h2>Expérience D'Usine Virtuelle</h2>
     </div>

@@ -1,3 +1,11 @@
+<?php
+$lang = get_locale();
+if($lang=='fr_FR'){
+  $fr_class = 'fr';
+}else{
+  $fr_class = '';
+}
+?>
 <section id="lead_popup_form" data-lenis-prevent>
     <div class="popup_container">
         <div class="head">
@@ -8,7 +16,7 @@
             <img src="<?php echo get_template_directory_uri() . '/assets/images/closeSvg.svg'; ?>" alt="" />
         </div>
     </div>
-    <div class="heading">
+    <div class="heading <?php echo $fr_class; ?>">
         <h2>
             <?php echo t('leadPopupHeading'); ?>
         </h2>

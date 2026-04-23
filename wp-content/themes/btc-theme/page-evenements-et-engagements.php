@@ -53,7 +53,14 @@ if (!$liveEvents->have_posts()) {
   $event_count = $liveEvents->post_count;
 
 ?>
-
+<?php
+$lang = get_locale();
+if($lang=='fr_FR'){
+  $fr_class = 'fr';
+}else{
+  $fr_class = '';
+}
+?>
   <section id="spotlight">
     <!-- <video playsinline autoplay muted loop src="../assets/homeVideo.mp4"></video> -->
     <div class="hero-slider swiper">
@@ -79,7 +86,7 @@ if (!$liveEvents->have_posts()) {
               <p class="breadcrub">
                 <a href="<?php echo t('homeUrl') ?>">Accueil </a> /  Événements et Engagements
               </p>
-              <div class="heading">
+              <div class="heading <?php echo $fr_class; ?>">
                 <div class="event_description">
                   <p style="font-weight: 400;margin-bottom: 20px;">Mettre en lumière</p>
                   <h1><?php the_title() ?></h1>
@@ -94,7 +101,7 @@ if (!$liveEvents->have_posts()) {
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/event/location-white.png" ?>" alt="" />
                     <p><?php echo get_field('event_location'); ?></p>
                   </div>
-                  <a class="cta" href="<?php the_permalink(); ?>">
+                  <a class="cta <?php echo $fr_class; ?>" href="<?php the_permalink(); ?>">
                   À Propos de l'Événement
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
                   </a>
@@ -146,7 +153,7 @@ if ($upcomingEvents->have_posts()) {
 
 
   <section id="upcoming_events">
-    <div class="heading" animateHeading>
+    <div class="heading <?php echo $fr_class; ?>" animateHeading>
       <p>Ne manquez pas</p>
       <h2>Événements à venir</h2>
     </div>
@@ -169,7 +176,7 @@ if ($upcomingEvents->have_posts()) {
           <div class="overlay"></div>
           <div class="impact_wrapper_head">
             <h2><?php the_title() ?></h2>
-            <button class="open-btn globalNavigation">
+            <button class="open-btn globalNavigation <?php echo $fr_class; ?>">
               <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>"
                 alt="right arrow" />
             </button>
@@ -193,7 +200,7 @@ if ($upcomingEvents->have_posts()) {
                   <img src="<?php echo get_template_directory_uri() . "/assets/images/event/location-white.png" ?>" alt="" />
                   <p><?php echo get_field('event_location'); ?></p>
                 </div>
-                <a class="cta" href="<?php the_permalink(); ?>">
+                <a class="cta fr" href="<?php the_permalink(); ?>">
                 Inscrivez-vous maintenant
                 <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>"
                     alt="" />
@@ -232,7 +239,7 @@ if ($pastEvents->have_posts()) {
 
 ?>
   <section id="event_archive">
-    <div class="heading" animateHeading>
+    <div class="heading fr" animateHeading>
       <p>Archives d'événements</p>
       <h2>Événements précédents</h2>
     </div>
@@ -277,7 +284,7 @@ if ($pastEvents->have_posts()) {
                   <img src="<?php echo get_template_directory_uri() . "/assets/images/event/location.png" ?>" alt="" />
                   <p><?php echo get_field('event_location'); ?></p>
                 </div>
-                <a href="<?php the_permalink(); ?>" class="cta">
+                <a href="<?php the_permalink(); ?>" class="cta fr">
                 Voir l'événement
                   <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
                 </a>
@@ -292,10 +299,10 @@ if ($pastEvents->have_posts()) {
     </div>
     <div class="event_btc_button_container">
       <div class="event_btc_buttons">
-        <button class="event_btc-prev globalNavigation navBtnColor">
+        <button class="event_btc-prev globalNavigation <?php echo $fr_class; ?> navBtnColor">
           <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
         </button>
-        <button class="event_btc-next globalNavigation navBtnColor">
+        <button class="event_btc-next globalNavigation <?php echo $fr_class; ?> navBtnColor">
           <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
         </button>
       </div>

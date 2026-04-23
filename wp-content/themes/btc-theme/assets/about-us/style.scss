@@ -145,7 +145,10 @@ body {
   color: var(--secondaryBlack);
   margin-bottom: 20px;
 }
-
+.vision_mission_container h2.fr{
+  font-size: calc(var(--font-46) - var(--font-size-reduction));
+  font-weight: 400;
+}
 .vision_mission_container p {
   font-size: var(--font-20);
   color: var(--tertiaryBlack);
@@ -390,6 +393,9 @@ body {
           font-size: var(--font-46);
           font-weight: 700;
         }
+        h2.fr{
+          font-size: calc(var(--font-46) - var(--font-size-reduction));
+        }
         .open-btn {
           // padding: 10px;
           // height: var(--navBtn);
@@ -593,6 +599,10 @@ body {
       #popupHeading {
         font-size: var(--font-46);
         color: var(--blue);
+      }
+      #popupHeading.fr{
+        font-size: calc(var(--font-46) - var(--font-size-reduction));
+        // font-weight: 400;
       }
       #popupPara {
         font-size: var(--font-24);

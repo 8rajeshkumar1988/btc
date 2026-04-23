@@ -17,9 +17,11 @@ $lang=get_locale();
 if($lang=='fr_FR'){
   $home_url='/btc/fr/';
   $home_title='Accueil';
+  $fr_class='fr';
 }else{
     $home_url='/btc';
     $home_title='Home';
+    $fr_class='';
 }
 ?>
 
@@ -27,7 +29,7 @@ if($lang=='fr_FR'){
 <section id="news_media">
     <p class="breadcrub"><a href="<?php echo $home_url ?>"><?php echo $home_title ?></a> / Blogs</p>
     <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="" />
-    <div class="heading">
+    <div class="heading <?php echo $fr_class; ?>">
         <h2>
             <?php echo t('blogPageTitle'); ?> <br />
             <?php echo t('blogPageHeading'); ?>
@@ -104,13 +106,13 @@ if($lang=='fr_FR'){
                                             ?></p>
                                     </div>
                                     <div>
-                                        <h2><?php the_title(); ?></h2>
+                                        <h2 class="<?php echo $fr_class; ?>"><?php the_title(); ?></h2>
                                         <p class="news_description"><?php the_excerpt(); ?>
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <a href="<?php the_permalink(); ?>" class="cta"><?php echo t('viewArticle'); ?> <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""></a>
+                            <a href="<?php the_permalink(); ?>" class="cta <?php echo $fr_class; ?>"><?php echo t('viewArticle'); ?> <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""></a>
                         </div>
                     <?php } ?>
                 </div>
@@ -143,7 +145,7 @@ if ($news->have_posts()) {
 ?>
 
     <section id="more_news">
-        <div class="heading" animateHeading>
+        <div class="heading <?php echo $fr_class; ?>" animateHeading>
             <p><?php echo t('dontMiss'); ?></p>
             <h2><?php echo t('moreNews'); ?></h2>
         </div>
@@ -185,7 +187,7 @@ if ($news->have_posts()) {
                                 <h3>
                                     <?php the_title(); ?>
                                 </h3>
-                                <a href="<?php the_permalink(); ?>" class="cta"><?php echo t('viewArticle'); ?> <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""></a>
+                                <a href="<?php the_permalink(); ?>" class="cta <?php echo $fr_class; ?>"><?php echo t('viewArticle'); ?> <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""></a>
                             </div>
                         </div>
                     <?php } ?>
@@ -236,7 +238,7 @@ if ($sarticles->have_posts()) {
 
 
     <section id="explore_media">
-        <div class="heading" animateHeading>
+        <div class="heading <?php echo $fr_class; ?>" animateHeading>
             <p><?php echo t('stories'); ?></p>
             <h2><?php echo t('exploreMedia'); ?></h2>
         </div>

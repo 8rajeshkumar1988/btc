@@ -1,6 +1,15 @@
- <section id="customization">
+<?php
+$lang = get_locale();
+if($lang == 'fr_FR') {
+    $fr_class = 'fr';
+} else {
+    $fr_class = '';
+}
+?>
+
+<section id="customization">
      <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern_product.png'; ?>" alt=""  btcPattern/>
-     <div class="heading" animateHeading>   
+     <div class="heading <?php echo $fr_class; ?>" animateHeading>   
          <p><?php echo t('customizations'); ?></p>
          <h2><?php echo t('flexibilityKnittedIn'); ?></h2>
      </div>
@@ -31,7 +40,7 @@
 
 
                 ?>
-                     <button class="cta <?php echo $counter == 1 ? "active" : "unactive" ?>" data-tab="<?php echo $title_name; ?>"> <?php the_title(); ?></button>
+                     <button class="cta <?php echo $fr_class; ?> <?php echo $counter == 1 ? "active" : "unactive" ?>" data-tab="<?php echo $title_name; ?>"> <?php the_title(); ?></button>
 
                  <?php $counter++;
                     } ?>
@@ -235,6 +244,6 @@
         </button>
         </div>
     </div> -->
-                <button class="cta leadpopup" ctaButton><?php echo t('startCustomizingToday'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" /></button>
+                <button class="cta leadpopup <?php echo $fr_class; ?>" ctaButton><?php echo t('startCustomizingToday'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" /></button>
              </div>
  </section>

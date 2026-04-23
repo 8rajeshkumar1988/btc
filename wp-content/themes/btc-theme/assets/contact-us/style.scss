@@ -18,6 +18,12 @@ body {
           margin-bottom: var(--spaceBelow_heading);
           line-height: 1;
         }
+        
+      }
+      .heading.fr{
+        h1{
+          font-size: calc(var(--font-66) - var(--font-size-reduction)) !important;
+        }
       }
       .contacts {
         position: relative;

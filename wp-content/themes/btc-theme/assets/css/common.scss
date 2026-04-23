@@ -7,31 +7,28 @@
   line-height: 1.6;
 }
 
-
-
-  //1920 - 1200
-  :root {
-    --font-46: clamp(2.5rem, -0.4167rem + 3.8889vw, 4.25rem); //40 - 68
-    --font-20: clamp(1.1875rem, 0.4583rem + 0.9722vw, 1.625rem); // 19 - 26
-    --font-24: clamp(1.5rem, 0.875rem + 0.8333vw, 1.875rem);
-    --font-14: clamp(0.875rem, 0.4819rem + 0.4839vw, 1.0625rem);
-    --font-16: clamp(1rem, 0.4758rem + 0.6452vw, 1.25rem);
-    --font-66: clamp(3.75rem, -0.4167rem + 5.5556vw, 6.25rem);
-    --font-18: clamp(1.125rem, 0.5086rem + 0.722vw, 1.375rem);
-    --primaryBlack: #000;
-    --secondaryBlack: #3b3b3b;
-    --tertiaryBlack: #3b3b3bda;
-    --green: #d4ff32;
-    --blue: #342c7e;
-    --paddingX: 10%;
-    --headingTop: 5px;
-    --paddingY: clamp(2.5rem, -1.7857rem + 6.6964vw, 6.25rem); // 40 - 100   1920
-    --navBtn: clamp(2.5rem, 0.6507rem + 2.1661vw, 3.25rem); //40 - 52  1366 - 1920
-    --navbtcpadding: clamp(0.5rem, -0.5787rem + 1.2635vw, 0.9375rem); //8 - 15 1366 - 1920
-    --spaceBelow_heading: clamp(1.875rem, 1.4583rem + 0.8681vw, 2.5rem); //30 - 40
-  }
-
-
+//1920 - 1200
+:root {
+  --font-46: clamp(2.5rem, -0.4167rem + 3.8889vw, 4.25rem); //40 - 68
+  --font-20: clamp(1.1875rem, 0.4583rem + 0.9722vw, 1.625rem); // 19 - 26
+  --font-24: clamp(1.5rem, 0.875rem + 0.8333vw, 1.875rem);
+  --font-14: clamp(0.875rem, 0.4819rem + 0.4839vw, 1.0625rem);
+  --font-16: clamp(1rem, 0.4758rem + 0.6452vw, 1.25rem);
+  --font-66: clamp(3.75rem, -0.4167rem + 5.5556vw, 6.25rem);
+  --font-18: clamp(1.125rem, 0.5086rem + 0.722vw, 1.375rem);
+  --primaryBlack: #000;
+  --secondaryBlack: #3b3b3b;
+  --tertiaryBlack: #3b3b3bda;
+  --green: #d4ff32;
+  --blue: #342c7e;
+  --paddingX: 10%;
+  --headingTop: 5px;
+  --paddingY: clamp(2.5rem, -1.7857rem + 6.6964vw, 6.25rem); // 40 - 100   1920
+  --navBtn: clamp(2.5rem, 0.6507rem + 2.1661vw, 3.25rem); //40 - 52  1366 - 1920
+  --navbtcpadding: clamp(0.5rem, -0.5787rem + 1.2635vw, 0.9375rem); //8 - 15 1366 - 1920
+  --spaceBelow_heading: clamp(1.875rem, 1.4583rem + 0.8681vw, 2.5rem); //30 - 40
+  --font-size-reduction: 0.9vw;
+}
 
 body {
   background-color: #fffff4;
@@ -127,6 +124,7 @@ header.sticky {
         line-height: 1.2;
         z-index: 1;
       }
+
       p {
         position: relative;
         z-index: 1;
@@ -134,6 +132,11 @@ header.sticky {
         font-weight: 700;
         color: #ffffff99;
         text-transform: uppercase;
+      }
+    }
+    & > div.fr {
+      h1 {
+        font-size: calc(var(--font-46) - var(--font-size-reduction));
       }
     }
     .breadcrub {
@@ -270,6 +273,17 @@ header.sticky {
   }
 }
 
+.cta.fr {
+  font-size: 16px;
+  padding: 8px 15px;
+  &:hover {
+    // padding-right: calc(clamp(1.875rem, 0.3339rem + 1.8051vw, 2.5rem) + 10px);
+    // transform: scale(1) !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;    
+  }
+}
+
 .globalNavigation {
   cursor: pointer;
   position: relative;
@@ -293,6 +307,11 @@ header.sticky {
   &::before {
     content: "";
   }
+}
+.globalNavigation.fr {
+  height: calc(var(--navBtn) - 4px);
+  width: calc(var(--navBtn) - 4px);
+  padding: calc(var(--navbtcpadding) - 4px);
 }
 .navBtnInvert {
   img {
@@ -324,6 +343,14 @@ header.sticky {
   }
 }
 
+.heading.fr{
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-size: calc(var(--font-46) - var(--font-size-reduction)) ;
+  }
+}
 #progress_indication {
   position: fixed;
   top: 50%;

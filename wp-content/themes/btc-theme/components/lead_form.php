@@ -1,3 +1,11 @@
+<?php
+$lang = get_locale();
+if($lang=='fr_FR'){
+  $fr_class = 'fr';
+}else{
+  $fr_class = '';
+}
+?>
 <form id="aa-lead-form">
     <div>
         <label for="name"><?php echo t('name'); ?>*</label>
@@ -91,7 +99,7 @@
         </div>
     </div>
     <div class="btn_container">
-        <button class="cta lead_form_submit">Submit <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
+        <button class="cta lead_form_submit <?php echo $fr_class; ?>">Submit <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
         <p class="lead_form_error"></p>
     </div>
 </form>

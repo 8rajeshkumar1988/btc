@@ -28,7 +28,7 @@ get_header();
 
     <div class="content">
         <p class="breadcrub"><a href="<?php echo t('homeUrl') ?>">Accueil</a> / <?php the_title() ?></p>
-        <div class="heading" animateHeadingBanner>
+        <div class="heading fr" animateHeadingBanner>
             <p><?php the_title(); ?></p>
             <?php the_content(); ?>
         </div>
@@ -41,7 +41,7 @@ get_header();
     <img src="<?php echo get_template_directory_uri() . '/assets/images/textilePattern.png'; ?>" alt="" btcPattern />
     <div animateHeading>
         <p>Parc Textile</p>
-        <h2>
+        <h2 class="fr">
         Chez BTC, nous sommes fiers de notre système de <strong> Confection Intégré entièrement vertical</strong>
         </h2>
     </div>
@@ -53,7 +53,7 @@ get_header();
 </section>
 
 <div id="progress_indication" class="progress-dots"></div>
-<section id="parking">
+<section id="parking" class="fr">
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
@@ -154,10 +154,10 @@ get_header();
                     <div class="inner_top">
                         <div class="copy">
                             <div class="tag_div">
-                                <div class="tags active" data-tab="dyeing" data-img="<?php echo get_template_directory_uri() . '/assets/images/dyeing_pic.webp'; ?>">TEINTURE</div>
-                                <div class="tags unactive" data-tab="printing" data-img="<?php echo get_template_directory_uri() . '/assets/images/printing.jpg'; ?>">IMPRESSION</div>
-                                <div class="tags unactive" data-tab="embroidery" data-img="<?php echo get_template_directory_uri() . '/assets/images/embroidery_pic.jpg'; ?>">BRODERIE</div>
-                                <div class="tags unactive" data-tab="quality" data-img="<?php echo get_template_directory_uri() . '/assets/images/quality1.jpg'; ?>">TESTS DE QUALITÉ</div>
+                                <div class="tags active fr" data-tab="dyeing" data-img="<?php echo get_template_directory_uri() . '/assets/images/dyeing_pic.webp'; ?>">TEINTURE</div>
+                                <div class="tags unactive fr" data-tab="printing" data-img="<?php echo get_template_directory_uri() . '/assets/images/printing.jpg'; ?>">IMPRESSION</div>
+                                <div class="tags unactive fr" data-tab="embroidery" data-img="<?php echo get_template_directory_uri() . '/assets/images/embroidery_pic.jpg'; ?>">BRODERIE</div>
+                                <div class="tags unactive fr" data-tab="quality" data-img="<?php echo get_template_directory_uri() . '/assets/images/quality1.jpg'; ?>">TESTS DE QUALITÉ</div>
                             </div>
                         </div>
                         <p class="count">(04)</p>

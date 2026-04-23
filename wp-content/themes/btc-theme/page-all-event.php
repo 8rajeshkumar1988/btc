@@ -169,7 +169,7 @@ if ($upcomingEvents->have_posts()) {
           <div class="overlay"></div>
           <div class="impact_wrapper_head">
             <h2><?php the_title() ?></h2>
-            <button class="open-btn globalNavigation">
+            <button class="open-btn globalNavigationzzzz">
               <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>"
                 alt="right arrow" />
             </button>

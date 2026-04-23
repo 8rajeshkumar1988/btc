@@ -1,5 +1,13 @@
+<?php
+$lang=get_locale();
+if($lang=='fr_FR'){
+  $fr_class = 'fr';
+}else{
+  $fr_class = '';
+}
+?>
     <section id="our_clients">
-        <div class="heading" animateHeading>
+        <div class="heading <?php echo $fr_class; ?>" animateHeading>
             <p><?php echo t('ourClients'); ?></p>
             <h2>
                 <?php echo t('poweringTheWorldsLeadingLabels'); ?>

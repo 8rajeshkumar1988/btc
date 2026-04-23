@@ -29,7 +29,7 @@ the_post();
   <!-- <img src="../assets/product_page_banner.jpg" alt="" /> -->
   <div class="content">
     <p class="breadcrub"><a href="<?php echo t('homeUrl') ?>">Accueil</a> / Nos Produits</p>
-    <div class="heading" animateHeadingBanner>
+    <div class="heading fr" animateHeadingBanner>
       <p><?php the_title(); ?></p>
       <?php the_content(); ?>
     </div>
@@ -39,7 +39,7 @@ the_post();
 </section>
 <section id="product_page_details">
   <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
-  <h2>
+  <h2 class="fr">
   Nous sommes fiers d'offrir une grande variété de vêtements de haute qualité et <span> fabriqués de manière durable.</span>
   </h2>
   <div class="description">
@@ -49,7 +49,7 @@ the_post();
     <p>
     La flexibilité que nous offrons repose sur une expertise textile approfondie, une intégration verticale et un engagement clair en faveur de la qualité et de la personnalisation à grande échelle.
     </p>
-    <button class="cta leadpopup" ctaButton >
+    <button class="cta leadpopup fr" ctaButton >
     Contactez-nous <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
     </button>
   </div>
@@ -77,7 +77,7 @@ the_post();
 </section>
 
 <section id="category_listing">
-  <div class="heading" animateHeading>
+  <div class="heading fr" animateHeading>
     <p>Nos Produits</p>
     <h2>Conçu pour Tous les Besoins</h2>
   </div>
@@ -146,11 +146,11 @@ the_post();
         <div class="category_list_card">
           <a href="<?php the_permalink(); ?>" class="category_list_card_img">
             <?php echo $image; ?>
-            <p class="cta">Lancez Votre Gamme De Produits<img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow"></p>
+            <p class="cta fr">Lancez Votre Gamme De Produits<img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow"></p>
           </a>
 
           <div class="category_list_card_detail">
-            <a href="<?php the_permalink(); ?>" class="category_list_card_title" style="color: #000000">
+            <a href="<?php the_permalink(); ?>" class="category_list_card_title fr" style="color: #000000">
               <?php the_title(); ?>
             </a>
             <!-- <a href="<?php the_permalink(); ?>" class="category_list_card_title" style="color: <?php echo esc_attr($title_color); ?>">
@@ -193,7 +193,7 @@ the_post();
     loop></video>
   <div class="custom_product_detail">
     <div class="custom_product_detail_head" animateHeading>
-      <h2>Produits Personnalisés</h2>
+      <h2 class="fr">Produits Personnalisés</h2>
       <p>
       Nous offrons un large éventail d'options de personnalisation pour donner vie à vos créations uniques, du concept initial au produit final.
       </p>
@@ -212,7 +212,7 @@ the_post();
         </p>
       </div>
     </div>
-    <button class="cta leadpopup" ctaButton >
+    <button class="cta leadpopup fr" ctaButton >
     Commencez Votre Personnalisation Dès Aujourd'hui <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
     </button>
   </div>

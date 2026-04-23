@@ -16,8 +16,10 @@ $key_pointers = new WP_Query(array(
 $lang = get_locale();
 if($lang == 'fr_FR') {    
     $aboutBTCUrl = t('homeUrl').'a-propos-de-nous';
+    $fr_class = 'fr';
 } else {
     $aboutBTCUrl = t('homeUrl').'about-us';
+    $fr_class = '';
 }
 ?>
 <section id="aboutBtc">
@@ -27,7 +29,7 @@ if($lang == 'fr_FR') {
          <lottie-player style="height: 100%;width: 100%;position: relative;display: block;" id="firstLottie" src="<?php echo get_template_directory_uri() . '/assets/images/map.json'; ?>"></lottie-player>  
     </div>
     <div class="content">
-        <div class="headNum heading" animateHeading>
+        <div class="headNum heading <?php echo $fr_class; ?>" animateHeading>
             <p><?php echo t('aboutBTC'); ?></p>
             <h2><?php echo t('drivenByCraft'); ?> <br><?php echo t('poweredByScale'); ?></h2>
         </div>
@@ -64,12 +66,12 @@ if($lang == 'fr_FR') {
             </div>
           </div>
           <div class="navigation_about">
-              <button class="swiper-button-prev prev aboutPrev globalNavigation navBtnInvert"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
-              <button class="swiper-button-next next aboutNext globalNavigation navBtnInvert"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
+              <button class="swiper-button-prev prev aboutPrev globalNavigation <?php echo $fr_class; ?> navBtnInvert"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
+              <button class="swiper-button-next next aboutNext globalNavigation <?php echo $fr_class; ?> navBtnInvert"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
           </div>
             </div>
         <div class="ctaContainer_about">
-            <a class="cta" href="<?php echo $aboutBTCUrl; ?>" ><?php echo t('knowMoreAboutBTC'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Know More About BTC"></a>
+            <a class="cta <?php echo $fr_class; ?>" href="<?php echo $aboutBTCUrl; ?>" ><?php echo t('knowMoreAboutBTC'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Know More About BTC"></a>
         </div>
     </div>
 </section>

@@ -29,7 +29,7 @@ the_post();
 
   <div class="content">
     <p class="breadcrub"><a href="<?php echo t('homeUrl') ?>">Accueil</a> / Durabilité</p>
-    <div class="heading" animateHeadingBanner>
+    <div class="heading fr" animateHeadingBanner>
        <p><?php the_title(); ?></p>
       <?php the_content(); ?>
     </div>
@@ -39,8 +39,8 @@ the_post();
 </section>
 <section id="sustainability_details">
   <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt=""  btcPattern />
-  <h2>   
-    <span>BTC</span> s'engage à être une marque de <br> <span>développement durable</span>
+  <h2 class="fr">   
+    <span>BTC</span> s'engage à être <br>  une marque de  <br>  <span>développement durable</span>
   </h2>
   <div class="description">
     <p>Intégrant des pratiques respectueuses de l'environnement à chaque étape de la chaîne de valeur textile. De l'approvisionnement en coton cultivé localement à l'utilisation de colorants sans AZO, d'encres à base d'eau et de machines écoénergétiques, nous privilégions les procédés qui réduisent l'impact environnemental.</p>
@@ -155,7 +155,7 @@ the_post();
   </div>
 </section> -->
 <div id="progress_indication" class="progress-dots"></div>
-<section id="traceability">
+<section id="traceability" class="fr">
     <div class="parent_pers">
         <div class="containers">
             <div class="top">
@@ -324,7 +324,7 @@ the_post();
 <div class="scroll-trigger"></div>
 <div class="scroll-trigger"></div> -->
 <section id="certificates_compliances">
-  <div class="heading" animateHeading>
+  <div class="heading fr" animateHeading>
     <p>CERTIFICATIONS ET CONFORMITÉ</p>
     <h2>Une Conformité En Laquelle Vous Pouvez Avoir Confiance</h2>
   </div>

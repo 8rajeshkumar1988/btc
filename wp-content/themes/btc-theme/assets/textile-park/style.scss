@@ -33,6 +33,9 @@
       line-height: 1.2;
     }
   }
+  h2.fr{
+    font-size: calc(var(--font-46) - var(--font-size-reduction));
+  }
   .description {
     display: flex;
     flex-direction: column;
@@ -175,6 +178,9 @@
               color: #6c6c6c;
               cursor: pointer;
             }
+            .tags.fr{
+              font-size: var(--font-16) ;
+            }
             .tags.active {
               background-color: var(--green);
               font-weight: 600;
@@ -247,6 +253,15 @@
   }
 }
 
+#parking.fr {
+  .containers {
+    .top {
+      * {
+        font-size: calc(var(--font-46) - var(--font-size-reduction)) !important;
+      }
+    }
+  }
+}
 @media screen and (max-width: 1530px) {
   #parking {
     .containers {

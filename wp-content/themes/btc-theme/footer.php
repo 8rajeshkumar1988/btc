@@ -2,13 +2,18 @@
 <?php
 
 $lang = get_locale();
+if($lang=='fr_FR'){
+  $fr_class = 'fr';
+}else{
+  $fr_class = '';
+}
 ?>
 <section id="footer_img_frame">
     <div id="footerContact">
         <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/footerContact.webp'; ?>" alt="">
         <div class="layer"></div>
         <div class="content">
-            <div class="heading">
+            <div class="heading <?php echo $fr_class; ?>">
                 <p><?php
                 echo t('ContactUs');
                 ?></p>
@@ -19,7 +24,7 @@ $lang = get_locale();
             <p class='footerCopy'><?php
                 echo t('contactFooterCopy');
                 ?></p>
-            <button onclick="scrollToSectionById('lead_form')" class="cta leadpopup"><?php
+            <button onclick="scrollToSectionById('lead_form')" class="cta leadpopup <?php echo $fr_class; ?>"><?php
                 echo t('ContactUs');
                 ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
         </div>

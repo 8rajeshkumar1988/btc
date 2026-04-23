@@ -29,7 +29,7 @@ get_header();
 
     <div class="content">
         <p class="breadcrub"><a href="<?php echo t('homeUrl') ?>">Accueil </a> / <?php the_title() ?></p>
-        <div class="heading" animateHeadingBanner>
+        <div class="heading fr" animateHeadingBanner>
             <p><?php the_title(); ?></p>
             <?php the_content(); ?>
         </div>
@@ -61,7 +61,7 @@ get_header();
     </div>
     <div class="content_wrapper" style="max-width: 650px;">
         <div class="content" animateHeading>
-            <h2>Emplacement Stratégique  <br> & Portée Mondiale</h2>
+            <h2 class="fr">Emplacement Stratégique  <br> & Portée Mondiale</h2>
             <ul>
                 <li>Proximité des principaux marchés des États-Unis, de l'UE, du Royaume-Uni et des Émirats Arabes Unis</li>
                 <li>Délai d'exécution rapide grâce à la connectivité aérienne et maritime</li>
@@ -70,7 +70,7 @@ get_header();
     </div>
 </section>
 
-<section id="sustainableManufacturer">
+<section id="sustainableManufacturer" class="fr">
     <div>
         <div class="img">
             <img src="<?php echo get_template_directory_uri() . "/assets/images/SustainableManufacturing.webp"  ?>" alt="Sustainable Manufacturing"  />
@@ -151,24 +151,24 @@ get_header();
     <div class="content">
         <div >
             <p class="first">Pôle économique en croissance de l’Afrique de l’Ouest</p>
-            <p class="second">Aperçu du Bénin </p>
+            <p class="second fr">Aperçu du Bénin </p>
         </div>
         <div class='subContent'>
             <div>
                 <p class="title">PIB</p>
-                <p class="copy">21,48 milliards USD</p>
+                <p class="copy fr">21,48 milliards USD</p>
             </div>
             <div>
                 <p class="title">Croissance du PIB</p>
-                <p class="copy">7,5 %</p>
+                <p class="copy fr">7,5 %</p>
             </div>
             <div>
                 <p class="title">Monnaie</p>
-                <p class="copy">Franc CFA </p>
+                <p class="copy fr">Franc CFA </p>
             </div>
             <div>
                 <p class="title">Population</p>
-                <p class="copy">14,4 millions </p>
+                <p class="copy fr">14,4 millions </p>
             </div>
             <div>
                 <p class="title">Région</p>
@@ -202,7 +202,7 @@ get_header();
 <section id="homeOfBtc">
     <!-- <img class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/homeOfBtc.png"  ?>" alt=""> -->
     
-    <div class="heading" animateHeading>
+    <div class="heading fr" animateHeading>
         <p>Siège de BTC</p>
         <h3>Zone industrielle de GDIZ-Glo-Djigbé</h3>
     </div>
@@ -266,10 +266,10 @@ get_header();
                 </div>
             </div>
             <div class="why_btc_buttons">
-                <button class="why_btc-prev globalNavigation navBtnColor">
+                <button class="why_btc-prev globalNavigation fr navBtnColor">
                     <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
                 </button>
-                <button class="why_btc-next globalNavigation navBtnColor">
+                <button class="why_btc-next globalNavigation fr navBtnColor">
                     <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
                 </button>
             </div>
@@ -281,7 +281,7 @@ get_header();
 
 <section id="roleOfbtc">
     <img loading="lazy" class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" btcPattern>
-    <div class="heading" animateHeading>
+    <div class="heading fr" animateHeading>
         <p>Générer Un Impact Local, Créer Un Changement Mondial</p>
         <h3>Contribution de BTC au Prochain Chapitre du Bénin</h3>
     </div>

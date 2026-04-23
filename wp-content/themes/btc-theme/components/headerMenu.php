@@ -259,7 +259,7 @@
                         </div>
 
                         <?php
-                        if ($post_id  == 97) {
+                        if ($post_id  == 97 || $post_id == 1555) {
                             $cats = new WP_Query([
                                 'posts_per_page' => -1,
                                 'post_type'      => 'category',
@@ -353,18 +353,18 @@
 
             ?>
                 <div>
-                    <a path='<?php echo $slug ?>' class="<?php echo $post_id  == 97 ? "active extend" : ""; ?>" href="<?php the_permalink(); ?>">
+                    <a path='<?php echo $slug ?>' class="<?php echo $post_id  == 97 || $post_id == 1555     ? "active extend" : ""; ?>" href="<?php the_permalink(); ?>">
                         <span>
                             <?php the_title(); ?>
                         </span>
-                        <svg class="<?php echo $post_id  == 97 ? "extendClick active" : ""; ?>" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="<?php echo $post_id  == 97 || $post_id == 1555 ? "extendClick active" : ""; ?>" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4.33366 13L21.667 13M21.667 13L14.0837 5.41663M21.667 13L14.0837 20.5833" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </a>
-                    <?php if ($post_id == 97): ?>
+                    <?php if ($post_id == 97 || $post_id == 1555): ?>
                         <div class="extended" extended='<?php echo $slug ?>'>
                             <?php
-                            if ($post_id  == 97) {
+                            if ($post_id  == 97 || $post_id == 1555) {
                                 $cats = new WP_Query([
                                     'posts_per_page' => -1,
                                     'post_type'      => 'category',

@@ -13,16 +13,24 @@
   if ($cats->have_posts()) {
   ?>
 
+<?php
+$lang=get_locale();
+if($lang=='fr_FR'){
+  $fr_class = 'fr';
+}else{
+  $fr_class = '';
+}
+?>
    <section id="explore_other_categories">
      <div class="explore_other_head">
-       <div class="heading" animateHeading> 
+       <div class="heading <?php echo $fr_class; ?>" animateHeading> 
          <h2><?php echo t('exploreOtherCategories'); ?></h2>
        </div>
        <div class="explore_other_buttons">
-         <button class="explore_other-prev globalNavigation navBtnColor">
+         <button class="explore_other-prev globalNavigation <?php echo $fr_class; ?> navBtnColor">
            <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
          </button>
-         <button class="explore_other-next globalNavigation navBtnColor">
+         <button class="explore_other-next globalNavigation <?php echo $fr_class; ?> navBtnColor">
            <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
          </button>
        </div>
@@ -61,11 +69,11 @@
                   echo  $image;
 
                   ?>
-                 <p class="cta">
+                 <p class="cta <?php echo $fr_class; ?>">
                    <?php echo t('exploreMore'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" />
                  </p>
                </a>
-               <a href="<?php the_permalink(); ?>" class="category_title"><?php the_title(); ?></a>
+               <a href="<?php the_permalink(); ?>" class="category_title <?php echo $fr_class; ?>"><?php the_title(); ?></a>
              </div>
 
 
@@ -80,10 +88,10 @@
        </div>
      </div>
       <div class="explore_other_buttons in_mobile_explore">
-         <button class="explore_other-prev globalNavigation navBtnColor">
+         <button class="explore_other-prev globalNavigation <?php echo $fr_class; ?> navBtnColor">
            <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
          </button>
-         <button class="explore_other-next globalNavigation navBtnColor">
+         <button class="explore_other-next globalNavigation <?php echo $fr_class; ?> navBtnColor">
            <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
          </button>
        </div>

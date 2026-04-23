@@ -9,11 +9,13 @@ if($lang=='fr_FR'){
   $events_url=t('homeUrl').'/evenements-et-engagements';
   $home_title='Accueil';
   $events_title='Événements et Engagements';
+  $fr_class = 'fr';
 }else{
   $home_url=t('homeUrl');
   $events_url=t('homeUrl').'/all-event';
   $home_title='Home';
   $events_title='Events & Engagements';
+  $fr_class = '';
 }
 ?>
 
@@ -37,7 +39,7 @@ if($lang=='fr_FR'){
        <p class="breadcrub">
         <a href="<?php echo $home_url ?>"><?php echo $home_title ?></a> / <a href="<?php echo $events_url ?>"><?php echo $events_title ?></a> / <?php the_title() ?>
         </p>
-        <div class="heroText  eventDetailsHead">
+        <div class="heroText  eventDetailsHead <?php echo $fr_class; ?>">
             <!-- <p>Previous Events</p> -->
             <h1><?php the_title(); ?></h1>
         </div>
@@ -47,7 +49,7 @@ if($lang=='fr_FR'){
 </section>
 
 <div class="breadcrub_container">
-     <div class="cta" style="pointer-events: none;font-size: var(--font-16);">
+     <div class="cta <?php echo $fr_class; ?>" style="pointer-events: none;">
     <?php echo date('j M Y', strtotime(get_field('event_from_date'))); ?>
     <?php if (get_field('event_to_date') != get_field('event_from_date')) { ?>
         - <?php echo date('j M Y', strtotime(get_field('event_to_date'))); ?>
@@ -88,7 +90,7 @@ if ($latitude && $longitude) {
 ?>
 
     <section id="event_location">
-        <div class="heading">
+        <div class="heading <?php echo $fr_class; ?>">
             <p><?php echo t('getDirections'); ?></p>
             <h2><?php echo t('eventLocation'); ?></h2>
         </div>
@@ -102,8 +104,8 @@ if ($latitude && $longitude) {
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="button_container">
-            <div class="copy_address">
-                <button id="copyBtn" onclick="copyAddress(this)" data-lat="<?php echo esc_attr($latitude); ?>" data-lng="<?php echo esc_attr($longitude); ?>">
+            <div class="copy_address <?php echo $fr_class; ?>">
+                <button id="copyBtn" class="<?php echo $fr_class; ?>" onclick="copyAddress(this)" data-lat="<?php echo esc_attr($latitude); ?>" data-lng="<?php echo esc_attr($longitude); ?>">
                     <span class="icon-wrapper">
                         <img
                             class="copy-icon active"
@@ -118,7 +120,7 @@ if ($latitude && $longitude) {
                 </button>
 
             </div>
-            <a target="_blank" href="https://www.google.com/maps?q=<?php echo $latitude ?>,<?php echo $longitude ?>" class="cta"><?php echo t('openInMaps'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" /></a>
+            <a target="_blank" href="https://www.google.com/maps?q=<?php echo $latitude ?>,<?php echo $longitude ?>" class="cta <?php echo $fr_class; ?>"><?php echo t('openInMaps'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" /></a>
         </div>
     </section>
 <?php } ?>
@@ -128,7 +130,7 @@ $gallery = get_post_meta(get_the_ID(), '_event_gallery', true);
 if ($gallery && is_array($gallery)) {
 ?>
     <section id="event_gallery">
-        <div class="heading">
+        <div class="heading <?php echo $fr_class; ?>">
             <p><?php echo t('seeTheAction'); ?></p>
             <h2><?php echo t('eventGallery'); ?></h2>
         </div>
@@ -210,7 +212,7 @@ if ($event_Start_Date) {
     if ($today < $event_Start_Date) {
 ?>
         <section id="event_registration">
-            <div class="heading">
+            <div class="heading <?php echo $fr_class; ?>">
                 <p><?php echo t('neverMissAnOpportunity'); ?></p>
                 <h2><?php echo t('registerNow'); ?></h2>
             </div>
@@ -266,7 +268,7 @@ if ($event_Start_Date) {
                                 <img src="<?php echo get_template_directory_uri() . '/assets/images/plus.svg'; ?>" alt="" />
                             </div>
                         </div>
-                        <button class="cta">
+                        <button class="cta <?php echo $fr_class; ?>">
                             <?php echo t('submitBtn'); ?>
                             <img
                                 src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>"
@@ -300,7 +302,7 @@ if ($otherEvents->have_posts()) {
 ?>
 
     <section id="explore_other_event">
-        <div class="heading">
+        <div class="heading <?php echo $fr_class; ?>">
             <p><?php echo t('eventLineup'); ?></p>
             <h2><?php echo t('exploreOtherEvents'); ?></h2>
         </div>
@@ -324,7 +326,7 @@ if ($otherEvents->have_posts()) {
                                 }
 
                                 ?>
-                                <p class="cta">
+                                <p class="cta <?php echo $fr_class; ?>">
                                     <?php echo t('viewEvent'); ?>
                                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
                                 </p>
@@ -354,10 +356,10 @@ if ($otherEvents->have_posts()) {
         </div>
         <div class="event_btc_button_container">
             <div class="event_btc_buttons">
-                <button class="event_btc-prev globalNavigation navBtnColor">
+                <button class="event_btc-prev globalNavigation navBtnColor <?php echo $fr_class; ?>">
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
                 </button>
-                <button class="event_btc-next globalNavigation navBtnColor">
+                <button class="event_btc-next globalNavigation navBtnColor <?php echo $fr_class; ?>">
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
                 </button>
             </div>

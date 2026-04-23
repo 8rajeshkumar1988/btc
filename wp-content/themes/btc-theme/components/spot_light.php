@@ -1,3 +1,4 @@
+
 <?php
 $category_id = get_the_ID();
 
@@ -22,6 +23,20 @@ $products = new WP_Query([
     ],
 ]);
 if ($products->have_posts()) {
+?>
+
+<?php
+$lang=get_locale();
+if($lang=='fr_FR'){
+  
+  $spotlight_title = 'Projection sur les Produits';
+  $start_your_line = 'Lancez Votre Gamme De Produits';
+  $fr_class = 'fr';
+}else{
+  $spotlight_title = 'Product Spotlight';
+  $start_your_line = 'Start Your Line';
+  $fr_class = '';
+}
 ?>
 
     <section id="product_spotlight">
@@ -61,20 +76,13 @@ if ($products->have_posts()) {
                     <div class="swiper-slide">
                         <div class="product_detail">
                             <div>
-                                <p class="product_description">Product Spotlight</p>
-                                <h2><?php echo esc_html($slide['title']); ?></h2>
+                                <p class="product_description <?php echo $fr_class; ?>">
+                                    <?php echo $spotlight_title; ?>
+                                </p>
+                                <h2 class="<?php echo $fr_class; ?>"><?php echo esc_html($slide['title']); ?></h2>
                             </div>
-                            <button class="cta leadpopup" style="height: fit-content;">
-                            <?php
-                                $lang = get_locale();
-                                if($lang == 'fr_FR') {
-                                    $button_text = 'Lancez Votre Gamme De Produits';
-                                } else {
-                                    $button_text = 'Start Your Line';
-                                }
-                                ?>
-
-                                <?php echo $button_text; ?>
+                            <button class="cta leadpopup <?php echo $fr_class; ?>" style="height: fit-content;">
+                                <?php echo $start_your_line; ?>
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/right_arrow.svg" alt="">
                             </button>
                         </div>
@@ -116,10 +124,10 @@ if ($products->have_posts()) {
         </div>
         <div class="product_spotlight_bottom">
             <div class="product_spotlight_buttons">
-                <button class="product_spotlight-prev navBtnColor globalNavigation  ">
+                <button class="product_spotlight-prev navBtnColor globalNavigation <?php echo $fr_class; ?> ">
                     <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
                 </button>
-                <button class="product_spotlight-next navBtnColor globalNavigation">
+                <button class="product_spotlight-next navBtnColor globalNavigation <?php echo $fr_class; ?>">
                     <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
                 </button>
             </div>

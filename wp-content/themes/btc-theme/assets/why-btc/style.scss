@@ -30,6 +30,9 @@
             color: var(--secondaryBlack);
             margin-bottom: calc(var(--spaceBelow_heading) / 2);
         }
+        h2.fr{
+            font-size: calc(var(--font-46) - var(--font-size-reduction));
+        }
         ul,
         ol {
             padding-left: 1.5rem;
@@ -112,6 +115,15 @@
     }
 }
 
+#sustainableManufacturer.fr {
+    & > div{
+        .img{
+            p{
+                font-size: calc(var(--font-46) - var(--font-size-reduction)) !important;
+            }
+        }
+    }
+}
 #glance {
     width: 100%;
     aspect-ratio: 16/8;
@@ -147,6 +159,9 @@
             font-weight: 400;
             color: #fff;
         }
+        .second.fr{
+            font-size: calc(var(--font-46) - var(--font-size-reduction)) !important;
+        }
         .subContent {
             margin-top: var(--spaceBelow_heading);
             display: grid;
@@ -164,6 +179,9 @@
                 font-size: calc(var(--font-46) - 5px);
                 color: var(--green);
                 font-weight: 700;
+            }
+            .copy.fr{
+                font-size: calc(var(--font-46) - 5px - var(--font-size-reduction)) !important;
             }
             .copy2 {
                 font-size: calc(var(--font-46) / 2);

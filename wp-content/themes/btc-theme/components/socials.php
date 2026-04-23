@@ -1,12 +1,20 @@
+<?php
+$lang = get_locale();
+if($lang=='fr_FR'){
+  $fr_class = 'fr';
+}else{
+  $fr_class = '';
+}
+?>
 <section id="our_social">
     <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC pattern.svg'; ?>" alt="btcPattern"  btcpattern />
 
     <div class="our_social_head">
-        <div class="heading" animateHeading>
+        <div class="heading <?php echo $fr_class; ?>" animateHeading>
             <p><?php echo t('ourSocials'); ?></p>
             <h2><?php echo t('behindTheSeams'); ?></h2>
         </div>
-        <a href="https://www.linkedin.com/company/benin-textile-corporation/" target="_blank" class="cta" ctaButton>
+        <a href="https://www.linkedin.com/company/benin-textile-corporation/" target="_blank" class="cta <?php echo $fr_class; ?>" ctaButton>
             <?php echo t('followOurThreads'); ?>
             <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
         </a>
@@ -68,7 +76,7 @@
         </div>
     </div>
 
-    <a href="https://www.linkedin.com/company/benin-textile-corporation/" target="_blank" class="cta" ctaButton >
+    <a href="https://www.linkedin.com/company/benin-textile-corporation/" target="_blank" class="cta <?php echo $fr_class; ?>" ctaButton >
         <?php echo t('followOurThreads'); ?>
         <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
     </a>

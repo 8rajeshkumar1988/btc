@@ -60,6 +60,11 @@
         margin-top: var(--headingTop);
       }
     }
+    .headNum.fr{
+      h2{
+        font-size: calc(var(--font-46) - var(--font-size-reduction)) !important;
+      }
+    }
     .sliderAbout {
       display: flex;
       flex-direction: column;
@@ -563,6 +568,9 @@
         line-he span {
           color: var(--green);
         }
+      }
+      h3.fr{
+        font-size: calc(var(--font-46) - var(--font-size-reduction)) !important;
       }
       .line {
         width: calc(100% - 20px);

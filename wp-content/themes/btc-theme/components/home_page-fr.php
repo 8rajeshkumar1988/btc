@@ -85,12 +85,12 @@
 
     <div class="content">
         <p class="breadcrub">&nbsp;</p>
-        <div class="heading" >
+        <div class="heading fr" >
             <div>
                 <p><?php the_title(); ?></p>
                 <?php the_content(); ?>
             </div>
-            <button class="cta leadpopup">Lancez Votre Gamme De Produits<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <button class="cta leadpopup fr">Lancez Votre Gamme De Produits<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
         </div>
         <div class="layer"></div>
         <div class="layer2"></div>
@@ -100,7 +100,7 @@
 <?php get_template_part('components/home_about_btc_section'); ?>
 
 <section id="ourProducts">
-    <div class="heading" animateHeading >
+    <div class="heading fr" animateHeading >
         <p>Nos Produits</p>
         <h2>Du Fil au Vêtement - <br>Solutions Complètes de Vêtements</h2>
     </div>
@@ -145,7 +145,7 @@
 
                                 ?>
                                 <p class="title"><?php the_title(); ?></p>
-                                <a href="<?php the_permalink(); ?>" class="cta">Voir la gamme<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
+                                <a href="<?php the_permalink(); ?>" class="cta fr">Voir la gamme<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
                             </div>
                             <p><?php the_title(); ?></p>
                         </div>
@@ -156,8 +156,8 @@
                 ?>
             </div>
             <div class="btnss">
-                <button class="swiper-button-next productNext globalNavigation navBtnColor" aria-label="Next products"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
-                <button class="swiper-button-prev productPrev globalNavigation navBtnColor" aria-label="Previous products"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+                <button class="swiper-button-next productNext globalNavigation navBtnColor fr" aria-label="Next products"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+                <button class="swiper-button-prev productPrev globalNavigation navBtnColor fr" aria-label="Previous products"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
             </div>
         </div>
     </div>
@@ -167,11 +167,11 @@
 <section id="sustainabiltyStandard">
     <img src="<?php echo get_template_directory_uri() . '/assets/images/sustain_back_svg.png'; ?>" alt="" class="back_svg" btcPattern>
     <div class="leftContent">
-        <div class="heading" animateHeading>
+        <div class="heading fr" animateHeading>
             <p>Normes de Durabilité</p>
             <h3>Conforme Aux Normes Mondiales De Durabilité</h3>
         </div>
-        <button class="cta leadpopup" ctaButton>En Savoir Plus <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+        <button class="cta leadpopup fr" ctaButton>En Savoir Plus <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
     </div>
     <div class="accordian">
         <div class="faq default-open" >
@@ -261,13 +261,13 @@
 <section id="ourCapabilities">
     <img src="<?php echo get_template_directory_uri() . '/assets/images/capabilities_back.svg'; ?>" alt="" class="back" btcPattern />
     
-    <div class="leftContent heading" animateHeading>
+    <div class="leftContent heading fr" animateHeading>
         <p>Nos Capacités</p>
         <h3>De La Ferme À La Mode</h3>
     </div>
     <div class="rightContent">
         <p ourCapabilitiesRightContent>BTC combine une technologie de pointe avec des pratiques durables, garantissant que chaque produit est fabriqué avec soin, précision et responsabilité environnementale.</p>
-        <button id="exploreWhatWeDo"   class="cta small">Découvrez ce que nous faisons<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+        <button id="exploreWhatWeDo"   class="cta small fr">Découvrez ce que nous faisons<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
     </div>
     <div class="cap_container swiper ourCapabilities">
         <div class="swiper-wrapper">
@@ -309,7 +309,7 @@
                         ?>
                         <div class="empty"></div>
                         <div class="text">
-                            <h3><?php the_title(); ?></h3>
+                            <h3 class="fr"><?php the_title(); ?></h3>
                             <!-- <img class="line" src="<?php echo get_template_directory_uri() . '/assets/images/line.svg'; ?>" alt=""> -->
                             <div class="line"><div></div></div>
                             <p><?php echo nl2br(get_field('content')); ?></p>
@@ -323,8 +323,8 @@
         </div>
         <div class="swiper-pagination"></div>
         <div class="btnssNew">
-            <button class="swiper-button-next capabilitiesNext globalNavigation navBtnColor" aria-label="Next capabilities"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
-            <button class="swiper-button-prev capabilitiesPrev swiper-button-disabled navBtnColor globalNavigation" aria-label="Previous capabilities"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <button class="swiper-button-next capabilitiesNext globalNavigation navBtnColor fr" aria-label="Next capabilities"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <button class="swiper-button-prev capabilitiesPrev swiper-button-disabled navBtnColor globalNavigation fr" aria-label="Previous capabilities"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
         </div>
     </div>
 
@@ -339,10 +339,10 @@
 <?php get_template_part('components/clients'); ?>
 
 <section id="linkedIn_video">
-    <div class="heading" animateHeading>
+    <div class="heading fr" animateHeading>
         <p>Solutions De Confection De Vêtements De Bout En Bout</p>
         <h3>Parc Textile Entièrement Intégré</h3>
-        <a href="/btc/fr/capacites"  class="cta">Explorer les Capacités<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
+        <a href="/btc/fr/capacites"  class="cta fr">Explorer les Capacités<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
     </div>
     <video
         id="linkedInVideo"

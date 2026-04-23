@@ -288,6 +288,11 @@ body {
       color: #000;
     }
   }
+  .heading.fr{
+    h2{
+      font-size: calc(var(--font-46) - var(--font-size-reduction)) !important;
+    }
+  }
   .event_btc_button_container {
     padding: 0px var(--paddingX) var(--paddingY) var(--paddingX);
     display: flex;

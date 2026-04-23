@@ -58,7 +58,7 @@ get_header();
 
   <div class="content">
     <p class="breadcrub"><a href="<?php echo t('homeUrl') ?>">Accueil </a> / Capacités</p>
-    <div class="heading" animateHeadingBanner>
+    <div class="heading fr" animateHeadingBanner>
       <p><?php the_title(); ?></p>
       <?php the_content(); ?>
     </div>
@@ -70,7 +70,7 @@ get_header();
 
 <section id="vertical_integration">
   <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt=""  btcPattern/>
-  <div class="heading" animateHeading>
+  <div class="heading fr" animateHeading>
     <h2>Intégration Verticale</h2>
     <p>
     BTC combine une technologie de pointe avec des pratiques durables, garantissant que chaque produit est fabriqué avec soin, précision et responsabilité environnementale.
@@ -270,7 +270,7 @@ get_header();
 <section id="sustainability_details">
   <div class="sustainability_info">
     <div class="leftt">
-      <div class="heading">
+      <div class="heading fr">
         <h2>Durabilité</h2>
       </div>
       <p>
@@ -287,7 +287,7 @@ get_header();
     </div>
   </div>
   <div class="technology_and_innovation">
-    <div class="heading" animateHeading>
+    <div class="heading fr" animateHeading>
       <h2>Technologie et Innovation</h2>
     </div>
     <div class="tai_container">
@@ -327,7 +327,7 @@ get_header();
   <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
 
   <div class="logistics_shipping_efficiency_head">
-    <div class="heading" animateHeading>
+    <div class="heading fr" animateHeading>
       <h2>Efficacité de la Logistique & de l'Expédition</h2>
       <p style="font-weight: 300; text-transform: none">
       Stratégiquement situé en Afrique de l'Ouest, notre proximité avec les principaux marchés garantit une livraison rapide.

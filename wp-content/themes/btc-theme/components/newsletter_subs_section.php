@@ -1,3 +1,11 @@
+<?php
+$lang = get_locale();
+if($lang=='fr_FR'){
+  $fr_class = 'fr';
+}else{
+  $fr_class = '';
+}
+?>
 <style>
     .newsletter_error{
         color:#ff0000;
@@ -5,7 +13,7 @@
     }
 </style>
 <section id="newsletter">
-    <div class="heading" animateHeading>
+    <div class="heading <?php echo $fr_class; ?>" animateHeading>
         <p><?php echo t('newsletterHeading'); ?></p>
         <h2><?php echo t('newsletterSubHeading'); ?></h2>
     </div>
@@ -27,7 +35,7 @@
             <input id="email"  type="email" name="email" placeholder="<?php echo t('newsletterEmailPlaceholder'); ?>" />
         </div>
         <div class="subscribe_btn">
-            <button class="cta subscribeCta">
+            <button class="cta subscribeCta <?php echo $fr_class; ?>">
             <?php echo t('newsletterSubscribe'); ?>
             <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg"  ?>" alt="right arrow" />
             </button>

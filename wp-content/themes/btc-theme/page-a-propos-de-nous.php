@@ -32,7 +32,7 @@ the_post();
 
     <div class="content">
         <p class="breadcrub"><a href="<?php echo t('homeUrl') ?>">Accueil</a> / À propos de BTC</p>
-        <div class="heading" animateHeadingBanner>
+        <div class="heading fr" animateHeadingBanner>
             <p><?php the_title(); ?></p>
             <?php the_content(); ?>
         </div>
@@ -45,7 +45,7 @@ the_post();
     <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" btcPattern />
 
     <div class="about_btc_head">
-        <div class="heading" animateHeading>
+        <div class="heading fr" animateHeading>
             <p>À propos de BTC</p>
             <h2>
             Offrir Agilité,  <br />
@@ -86,10 +86,10 @@ the_post();
     </div>
     <div class="about_btc_button_container">
         <div class="about_btc_buttons">
-            <button class="about_btc-prev globalNavigation navBtnColor">
+            <button class="about_btc-prev globalNavigation fr navBtnColor">
                 <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg"  ?>" alt="right arrow " />
             </button>
-            <button class="about_btc-next globalNavigation navBtnColor">
+            <button class="about_btc-next globalNavigation fr navBtnColor">
                 <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg"  ?>" alt="right arrow " />
             </button>
         </div>
@@ -111,7 +111,7 @@ the_post();
 
     </div>
     <div class="vision_mission_container text" animateHeading>
-        <h2>Vision</h2>
+        <h2 class="fr">Vision</h2>
         <p>
         Diriger la transformation textile de l'Afrique en faisant œuvre de pionnier dans la confection de vêtements durables, traçables et performants, en établissant de nouvelles normes mondiales en matière de qualité et de responsabilité environnementale.
         </p>
@@ -123,7 +123,7 @@ the_post();
         <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/mission_img.webp"  ?>" alt="">
     </div>
     <div class="vision_mission_container text" animateHeading>
-        <h2>Mission</h2>
+        <h2 class="fr">Mission</h2>
         <p>
         Chez BTC, nous façonnons l'avenir des textiles en intégrant durabilité, innovation et efficacité. Du coton local certifié CmiA aux vêtements haut de gamme, nous proposons des vêtements éthiques de haute qualité qui répondent à la demande mondiale tout en responsabilisant les communautés et en réduisant l'empreinte carbone.
         </p>
@@ -147,9 +147,9 @@ if ($leaderships->have_posts()) {
 ?>
     <section id="our_leadership">
         <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt=""  btcPattern />
-        <div class="heading" animateHeading>
-            <p>Our Leadership</p>
-            <h2>Visionaries Shaping the Future</h2>
+        <div class="heading fr" animateHeading>
+            <p>Notre Direction</p>
+            <h2>Des Visionnaires Qui Façonnent l'Avenir</h2>
         </div>
         <div class="our_leadership_container">
 
@@ -211,7 +211,7 @@ if ($leaderships->have_posts()) {
 ?>
 <section id="product_page_details">
     <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt=""  btcPattern />
-    <div class="heading" animateHeading>
+    <div class="heading fr" animateHeading>
         <p>Nos Actionnaires</p>
         <h2>
         Favoriser Le <br> Progrès Grâce À Des <br> Partenariats Digne De Confiance
@@ -272,7 +272,7 @@ if ($leaderships->have_posts()) {
     </div>
 </section> -->
 <section id="our_impact">
-    <div class="heading" animateHeading>
+    <div class="heading fr" animateHeading>
         <p>Notre Impact</p>
         <h2>
         Faire la Différence, <br />
@@ -285,8 +285,8 @@ if ($leaderships->have_posts()) {
         <div data-section="partners" class="impact_wrapper bg-partners ">
             <div class="overlay"></div>
             <div class="impact_wrapper_head">
-                <h2>PARTENAIRES</h2>
-                <button class="open-btn globalNavigation">
+                <h2 class="fr">PARTENAIRES</h2>
+                <button class="open-btn globalNavigation fr">
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
                 </button>
             </div>
@@ -309,7 +309,7 @@ if ($leaderships->have_posts()) {
                     </ul>
                 </div>
                 <div class="content-btn">
-                    <button class="cta leadpopup">
+                    <button class="cta leadpopup fr">
                     Contactez-nous <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
                     </button>
                 </div>
@@ -319,8 +319,8 @@ if ($leaderships->have_posts()) {
         <div data-section="people" class="impact_wrapper bg-people open ">
             <div class="overlay"></div>
             <div class="impact_wrapper_head">
-                <h2>PERSONNES</h2>
-                <button class="open-btn globalNavigation">
+                <h2 class="fr">PERSONNES</h2>
+                <button class="open-btn globalNavigation fr">
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
                 </button>
             </div>
@@ -346,7 +346,7 @@ if ($leaderships->have_posts()) {
                     </ul>
                 </div>
                 <div class="content-btn">
-                    <button class="cta leadpopup">
+                    <button class="cta leadpopup fr">
                     Contactez-nous <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
                     </button>
                 </div>
@@ -356,8 +356,8 @@ if ($leaderships->have_posts()) {
         <div data-section="planet" class="impact_wrapper bg-planet">
             <div class="overlay"></div>
             <div class="impact_wrapper_head">
-                <h2>PLANÈTE</h2>
-                <button class="open-btn globalNavigation">
+                <h2 class="fr">PLANÈTE</h2>
+                <button class="open-btn globalNavigation fr">
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
                 </button>
             </div>
@@ -380,7 +380,7 @@ if ($leaderships->have_posts()) {
                     </ul>
                 </div>
                 <div class="content-btn">
-                    <button class="cta leadpopup">
+                    <button class="cta leadpopup fr">
                     Contactez-nous <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
                     </button>
                 </div>
@@ -389,7 +389,7 @@ if ($leaderships->have_posts()) {
     </div>
 </section>
 <section id="certificates_compliances">
-    <div class="heading" animateHeading>
+    <div class="heading fr" animateHeading>
         <p>CERTIFICATIONS ET CONFORMITÉ</p>
         <h2>Une Conformité En Laquelle Vous Pouvez Avoir Confiance</h2>
     </div>
@@ -484,7 +484,7 @@ if ($leaderships->have_posts()) {
         <button id="closeBtn">✕</button>
     <img id="popupImg" src="" />
     <div class="pop_content" data-lenis-prevent>
-        <h2 id="popupHeading"></h2>
+        <h2 id="popupHeading" class="fr"></h2>
         <div style="display: flex;gap: 10px;align-items: center;">
             <p id="popupPara"></p>
             <!-- <a class="linkedin_icon" target="_blank" id="linkedin_profile" href="">  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.png" alt="linkedin" /></a> -->

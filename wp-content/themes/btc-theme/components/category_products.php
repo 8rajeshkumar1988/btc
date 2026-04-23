@@ -1,6 +1,15 @@
+<?php
+$lang=get_locale();
+if($lang=='fr_FR'){
+  $fr_class = 'fr';
+}else{
+  $fr_class = '';
+}
+?>
+
 <section id="explore_products">
   <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" />
-  <div class="heading">
+  <div class="heading <?php echo $fr_class; ?>">
     <h2><?php echo t('exploreProducts'); ?></h2>
   </div>
   <div class="explore_products_container">
@@ -64,7 +73,7 @@
                 $class = '';
             }
             ?>
-            <button class="leadpopup cta <?php echo $class; ?>"><?php echo t('startYourLine'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <button class="leadpopup cta <?php echo $class; ?> <?php echo $fr_class; ?>"><?php echo t('startYourLine'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
           </div>
         </div>
     <?php

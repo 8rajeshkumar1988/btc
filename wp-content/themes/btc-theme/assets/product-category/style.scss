@@ -35,6 +35,9 @@ video{
       color: var(--blue);
     }
   }
+  h2.fr{
+    font-size: calc(var(--font-46) - var(--font-size-reduction));
+  }
   .description {
     display: flex;
     flex-direction: column;
@@ -129,6 +132,13 @@ video{
           text-transform: capitalize;
           font-weight: 400;
           color: #594ec2;
+        }
+        .category_list_card_title.fr{
+          font-size: calc(var(--font-46) - var(--font-size-reduction));
+          line-height: 1.2;
+          display: inline-block;
+          margin-bottom: 10px;
+          margin-top: 10px;
         }
         .category_tags {
           display: flex;
@@ -240,6 +250,10 @@ video{
       font-weight: 400;
       line-height: 0.8;
       margin-bottom: 10px;
+    }
+    h2.fr{
+      font-size: calc(var(--font-46) - var(--font-size-reduction));
+      margin-bottom: 20px;
     }
     p {
       font-size: var(--font-24);

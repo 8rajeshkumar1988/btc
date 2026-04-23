@@ -104,6 +104,11 @@
 
 #traceability {
   position: relative;
+  &.fr{
+    h3{
+      font-size: calc(var(--font-46) - var(--font-size-reduction)) !important;
+    }
+  }
   .parent_pers {
     perspective: 1000px;
     position: sticky;
@@ -341,6 +346,9 @@
       line-height: 1.2;
       color: var(--blue);
     }
+  }
+  h2.fr{
+    font-size: calc(var(--font-46) - var(--font-size-reduction));
   }
   .description {
     display: flex;

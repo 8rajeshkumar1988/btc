@@ -28,15 +28,17 @@ if($lang=='fr_FR'){
   $home_url=t('homeUrl');
   $products_url=t('homeUrl').'nos-produits';
   $home_title='Accueil';
+  $fr_class = 'fr';
 }else{
   $home_url=t('homeUrl');
   $products_url=t('homeUrl').'products';
   $home_title='Home';
+  $fr_class = '';
 }
 ?>
   <div class="content">
     <p class="breadcrub"><a href="<?php echo $home_url; ?>"><?php echo $home_title; ?></a> / <a href="<?php echo $products_url; ?>"><?php echo t('products'); ?></a> / <?php the_title() ?></p>
-    <div class="heading" animateHeadingBanner>
+    <div class="heading <?php echo $fr_class; ?>" animateHeadingBanner>
       <p><?php the_title(); ?></p>
       <h1>
         <?php the_field('sub_title'); ?>
@@ -69,7 +71,7 @@ $faqs = get_post_meta(get_the_ID(), 'category_faqs', true);
 if (!empty($faqs)) { ?>
   <section id="faqs">
     <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
-    <div class="heading" animateHeading>  
+    <div class="heading <?php echo $fr_class; ?>" animateHeading>  
       <p><?php echo t('faqs'); ?></p>
       <h2><?php echo t('fqas'); ?></h2>
     </div>

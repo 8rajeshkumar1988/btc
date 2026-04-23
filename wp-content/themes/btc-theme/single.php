@@ -8,9 +8,11 @@ $lang = get_locale();
 if ($lang == 'fr_FR') {
   $home_url = site_url('/fr/');
   $blog_url = site_url('/fr/tous-les-blogs');
+  $fr_class = 'fr';
 } else {
   $home_url = site_url('/');
   $blog_url = site_url('/blogs');
+  $fr_class = '';
 }
 ?>
 <section class="blog_hero">
@@ -41,7 +43,7 @@ if ($lang == 'fr_FR') {
 
     ?>
     <div class="content">
-      <div class="heading">
+      <div class="heading <?php echo $fr_class; ?>">
         <p><?php echo  $cat_name; ?></p>
         <h1>
           <?php the_title(); ?>
@@ -125,7 +127,7 @@ if ($posts->have_posts()) {
 
   <section id="recommendations_categories">
     <div class="recommendations_head">
-      <div class="heading">
+      <div class="heading <?php echo $fr_class; ?>">
         <p><?php echo t('curatedForYou'); ?></p>
         <h2><?php echo t('browseRecommendations'); ?></h2>
       </div>
@@ -158,7 +160,7 @@ if ($posts->have_posts()) {
                 echo  $image;
 
                 ?>
-                <p class="cta">
+                <p class="cta <?php echo $fr_class; ?>">
                 <?php echo t('viewArticle'); ?> <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
                 </p>
               </a>

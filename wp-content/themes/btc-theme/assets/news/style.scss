@@ -34,6 +34,11 @@
     }
     margin-top: var(--spaceBelow_heading);
   }
+  .heading.fr{
+    h2{
+      font-size: calc(var(--font-46) - var(--font-size-reduction)) !important;
+    }
+  }
   #news_spotlight {
     // padding: 0 var(--paddingX);
     // padding-left: var(--paddingX);
@@ -121,6 +126,9 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
+          }
+          h2.fr{
+            font-size: calc(var(--font-46) - var(--font-size-reduction)) !important;
           }
         }
         .cta {
