@@ -1,6 +1,6 @@
 <?php
 return [
-    'homeUrl' => '/btc/fr/',
+    'homeUrl' => '/fr/',
     'ContactUs' => 'Nous Contacter',
     'welcome_user' => 'Bienvenue %s',
     'event_count' => 'Vous avez %d événements',
