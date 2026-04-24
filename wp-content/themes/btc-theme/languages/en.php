@@ -149,4 +149,18 @@ return [
     // explore other events
     'eventLineup' => 'Event Lineup',
     'exploreOtherEvents' => 'Explore Other Events',
+
+
+
+
+
+
+  
+  
+    // URLs
+    'aboutUsUrl' => '/about-us',
+    'productsUrl' => '/products',
+    'blogsUrl' => '/blogs',
+    'eventsUrl' => '/all-event',
+    'siteDesc' => "BTC, located in Benin, is West Africa’s first fully vertically integrated textile factory, transforming rain-fed, non-GMO CmiA-certified cotton into premium apparels."
 ];

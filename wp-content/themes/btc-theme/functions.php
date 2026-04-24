@@ -744,7 +744,7 @@ function my_breadcrumb_schema()
 
 
 
-    if (is_page('products')) {
+    if (is_page('products') || is_page('nos-produits')) {
         $breadcrumbs[] = array(
             '@type' => 'ListItem',
             'position' => $position++,
@@ -756,8 +756,8 @@ function my_breadcrumb_schema()
         $breadcrumbs[] = array(
             '@type' => 'ListItem',
             'position' => $position++,
-            'name' => "Our Products",
-            'item' => home_url("/products")
+            'name' => t('products'),
+            'item' => home_url(t('productsUrl'))
         );
 
         $breadcrumbs[] = array(
@@ -772,7 +772,7 @@ function my_breadcrumb_schema()
             '@type' => 'ListItem',
             'position' => $position++,
             'name' => "Blogs",
-            'item' => home_url("/blogs")
+            'item' => home_url(t('blogsUrl'))
         );
 
         $breadcrumbs[] = array(
@@ -785,8 +785,8 @@ function my_breadcrumb_schema()
         $breadcrumbs[] = array(
             '@type' => 'ListItem',
             'position' => $position++,
-            'name' => "Events & Engagements",
-            'item' => home_url("/all-event")
+            'name' => t('eventsEngagements'),
+            'item' => home_url(t('eventsUrl'))
         );
 
         $breadcrumbs[] = array(
@@ -801,7 +801,7 @@ function my_breadcrumb_schema()
             '@type' => 'ListItem',
             'position' => $position++,
             'name' => "Blogs",
-            'item' => home_url("/blogs")
+            'item' => home_url(t('blogsUrl'))
         );
     } else {
 
@@ -979,7 +979,7 @@ function page_schema()
 
         $site_url   = home_url('/');
         $site_name  = get_bloginfo('name');
-        $site_desc  = "BTC, located in Benin, is West Africa’s first fully vertically integrated textile factory, transforming rain-fed, non-GMO CmiA-certified cotton into premium apparels.";
+        $site_desc  = t('siteDesc');
         $modified   = get_the_modified_date('c'); // ISO 8601 format
         $published  = get_the_date('c', get_option('page_on_front')); // homepage publish date
 
@@ -995,7 +995,7 @@ function page_schema()
             ],
             "about" => [
                 "@type" => "Organization",
-                "@id" => "https://btcorpnet.com/about-us/",
+                "@id" => "https://btcorpnet.com" . t('aboutUsUrl'),
             ],
             "description" => $site_desc,
             "inLanguage" => get_bloginfo('language'),

@@ -153,4 +153,18 @@ return [
     // explore other events
     'eventLineup' => "Liste d'Événements",
     'exploreOtherEvents' => "Explorez D'Autres Événements",
+
+
+
+
+
+
+
+
+    // URLs
+    'aboutUsUrl' => '/fr/a-propos-de-nous',
+    'productsUrl' => '/fr/nos-produits',
+    'blogsUrl' => '/fr/tous-les-blogs',
+    'eventsUrl' => '/fr/evenements-et-engagements/',
+    'siteDesc' => "Nous sommes le premier fabricant et exportateur de textiles d'Afrique, proposant des solutions complètes en matière d'habillement, conformes aux normes de durabilité reconnues mondialement."
 ];
