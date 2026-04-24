@@ -342,7 +342,7 @@
     <div class="heading fr" animateHeading>
         <p>Solutions De Confection De Vêtements De Bout En Bout</p>
         <h3>Parc Textile Entièrement Intégré</h3>
-        <a href="/btc/fr/capacites"  class="cta fr">Explorer les Capacités<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
+        <a href="/fr/capacites"  class="cta fr">Explorer les Capacités<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
     </div>
     <video
         id="linkedInVideo"

@@ -734,12 +734,13 @@ function my_breadcrumb_schema()
     $breadcrumbs = array();
     $position = 1;
 
+    $home_label = (get_locale() === 'fr_FR') ? 'Accueil' : 'Home';
     // Home link
     $breadcrumbs[] = array(
         '@type' => 'ListItem',
         'position' => $position++,
-        'name' => 'Home',
-        'item' => home_url('/')
+        'name' => $home_label,
+        'item' => home_url(t('homeUrl'))
     );
 
 
@@ -1009,7 +1010,155 @@ function page_schema()
         echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
     }
 
-    if (is_page('products')) {
+    if (is_singular('category')) {
+        global $post;
+
+        $description = get_post_meta($post->ID, 'meta_description', true);
+        if (empty($description)) {
+            $description = wp_strip_all_tags(get_the_excerpt(), true);
+        }
+        if (empty($description)) {
+            $description = wp_strip_all_tags(get_the_content(null, false, $post), true);
+        }
+
+        $image_url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+        $site_url = home_url(t('homeUrl'));
+        $site_name = get_bloginfo('name');
+        $category_id = (int) $post->ID;
+        $category_ids = array_map('intval', array_filter([$category_id]));
+
+        // Match products linked with current-language category id and default-language id.
+        if (function_exists('pll_default_language') && function_exists('pll_get_post')) {
+            $default_lang = pll_default_language('slug');
+            if (!empty($default_lang)) {
+                $default_category_id = pll_get_post($category_id, $default_lang);
+                if (!empty($default_category_id)) {
+                    $category_ids[] = (int) $default_category_id;
+                }
+            }
+        }
+        $category_ids = array_values(array_unique(array_filter($category_ids)));
+
+        $product_args = [
+            'post_type'      => 'product',
+            'post_status'    => 'publish',
+            'posts_per_page' => -1,
+            'meta_key'       => '_sort_order',
+            'orderby'        => 'meta_value_num',
+            'order'          => 'ASC',
+            'meta_query'     => [
+                [
+                    'key'     => '_category_id',
+                    'value'   => $category_ids,
+                    'compare' => 'IN',
+                ],
+            ],
+        ];
+        if (function_exists('pll_current_language')) {
+            $product_args['lang'] = pll_current_language('slug');
+        }
+
+        $product_query = new WP_Query($product_args);
+        $item_list = [];
+        $position = 1;
+        if ($product_query->have_posts()) {
+            while ($product_query->have_posts()) {
+                $product_query->the_post();
+                $item_list[] = [
+                    "@type" => "ListItem",
+                    "position" => $position++,
+                    "url" => get_permalink(),
+                    "name" => get_the_title(),
+                ];
+            }
+            wp_reset_postdata();
+        }
+
+        $schema = [
+            "@context" => "https://schema.org",
+            "@type" => "CollectionPage",
+            "@id" => get_permalink() . "#collection",
+            "url" => get_permalink(),
+            "name" => get_the_title(),
+            "description" => $description,
+            "inLanguage" => get_bloginfo('language'),
+            "isPartOf" => [
+                "@type" => "WebSite",
+                "@id" => trailingslashit($site_url) . "#website",
+                "name" => $site_name,
+                "url" => $site_url,
+            ],
+            "mainEntity" => [
+                "@type" => "ItemList",
+                "name" => get_the_title(),
+                "itemListElement" => $item_list,
+            ],
+        ];
+
+        if (!empty($image_url)) {
+            $schema["image"] = [$image_url];
+        }
+
+        echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
+
+        $webpage_schema = [
+            "@context" => "https://schema.org",
+            "@type" => "WebPage",
+            "@id" => get_permalink() . "#webpage",
+            "url" => get_permalink(),
+            "name" => get_the_title(),
+            "description" => $description,
+            "inLanguage" => get_bloginfo('language'),
+            "isPartOf" => [
+                "@type" => "WebSite",
+                "@id" => trailingslashit($site_url) . "#website",
+                "name" => $site_name,
+                "url" => $site_url,
+            ],
+            "about" => [
+                "@type" => "Organization",
+                "name" => $site_name,
+                "url" => $site_url,
+            ],
+        ];
+        echo '<script type="application/ld+json">' . json_encode($webpage_schema) . '</script>';
+
+        $product_schema = [
+            "@context" => "https://schema.org",
+            "@type" => "Product",
+            "@id" => get_permalink() . "#product",
+            "name" => get_the_title(),
+            "description" => $description,
+            "brand" => [
+                "@type" => "Brand",
+                "name" => $site_name,
+            ],
+            "manufacturer" => [
+                "@type" => "Organization",
+                "name" => $site_name,
+                "url" => $site_url,
+            ],
+            "url" => get_permalink(),
+        ];
+        echo '<script type="application/ld+json">' . json_encode($product_schema) . '</script>';
+    }
+
+    if (is_page(array('products', 'nos-produits'))) {
+        $products_page_schema = [
+            "@context" => "https://schema.org",
+            "@type" => "WebPage",
+            "@id" => get_permalink() . "#webpage",
+            "url" => get_permalink(),
+            "name" => get_the_title(),
+            "description" => wp_strip_all_tags(get_the_excerpt(), true),
+            "inLanguage" => get_bloginfo('language'),
+            "isPartOf" => [
+                "@type" => "WebSite",
+                "url" => home_url('/'),
+            ],
+        ];
+        echo '<script type="application/ld+json">' . json_encode($products_page_schema) . '</script>';
+
         // Example: fetch 10 latest posts (or products if WooCommerce)
         $args = [
             'posts_per_page' => -1,
@@ -1019,6 +1168,9 @@ function page_schema()
             'orderby'        => 'meta_value_num',
             'order'          => 'ASC',
         ];
+        if (function_exists('pll_current_language')) {
+            $args['lang'] = pll_current_language('slug');
+        }
         $query = new WP_Query($args);
 
         if ($query->have_posts()) {
