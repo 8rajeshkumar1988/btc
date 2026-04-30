@@ -414,6 +414,20 @@ video{
   }
 }
 @media screen and (max-width: 768px) {
+  #category_listing{
+    .category_list{
+      .category_list_card{
+        .category_list_card_detail {
+          .category_tags{
+            p{
+              padding: 5px 10px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
   #product_category {
     .category_container {
       grid-template-columns: 1fr;

@@ -223,7 +223,7 @@
             </div>
             <div class="ans" style="display: none;">
                 <p>Nous respectons les principales normes mondiales en matière de qualité, de sécurité et de durabilité.</p>
-                <ul class="certificates">
+                <ul class="certificates fr">
                     <li>
                         <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ISO.png" ?>" alt=" ISO 9001/45001/14001 - Environmental & safety management">
                         Gestion de l'environnement et de la sécurité
