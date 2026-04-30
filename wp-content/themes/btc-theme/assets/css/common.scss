@@ -1269,6 +1269,10 @@ header {
   :root {
     --font-18: clamp(0.9375rem, 0.8071rem + 0.4967vw, 1.125rem);
   }
+  .cta.fr {
+    font-size: 14px;
+    padding: 6px 12px;    
+  }
   #lead_popup_form {
     form {
       grid-template-columns: repeat(2, 1fr);

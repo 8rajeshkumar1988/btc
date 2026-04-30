@@ -23,6 +23,8 @@ return [
     'copyright' => 'Copyright© %s, Benin Textile Corporation',
     'privacyPolicy' => 'Politique de Confidentialité',
     'startYourLine' => 'Lancez Votre Gamme De Produits',
+    'viewEvent' => "Voir l'événement",
+
 
     //   category details page static text
     'exploreProducts' => 'Explorez les Produits',

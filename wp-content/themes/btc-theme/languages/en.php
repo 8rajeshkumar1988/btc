@@ -23,7 +23,7 @@ return [
     'copyright' => 'Copyright© %s, Benin Textile Corporation',
     'privacyPolicy' => 'Privacy Policy',
     'startYourLine' => 'Start Your Line',
-
+    'viewEvent' => "View Event",
 
     //   category details page static text
     'exploreProducts' => 'Explore Products',
