@@ -90,7 +90,7 @@
                 <p><?php the_title(); ?></p>
                 <?php the_content(); ?>
             </div>
-            <button class="cta leadpopup fr">Lancez Votre Gamme De Produits<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <button class="cta leadpopup fr">Commencez votre ligne<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
         </div>
         <div class="layer"></div>
         <div class="layer2"></div>
@@ -162,6 +162,7 @@
         </div>
     </div>
 </section>
+
 
 
 <section id="sustainabiltyStandard">

@@ -219,7 +219,7 @@ the_post();
       </div>
     </div>
     <button class="cta leadpopup" ctaButton >
-      Start Customizing Today <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
+    Customize Now<img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
     </button>
   </div>
 </section>

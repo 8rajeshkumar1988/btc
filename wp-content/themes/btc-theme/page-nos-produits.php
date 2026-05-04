@@ -146,7 +146,7 @@ the_post();
         <div class="category_list_card">
           <a href="<?php the_permalink(); ?>" class="category_list_card_img">
             <?php echo $image; ?>
-            <p class="cta fr">Lancez Votre Gamme De Produits<img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow"></p>
+            <p class="cta fr">Commencez votre ligne<img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow"></p>
           </a>
 
           <div class="category_list_card_detail">
@@ -213,7 +213,7 @@ the_post();
       </div>
     </div>
     <button class="cta leadpopup fr" ctaButton >
-    Commencez Votre Personnalisation Dès Aujourd'hui <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
+    <?php echo t('startCustomizingToday'); ?> <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
     </button>
   </div>
 </section>

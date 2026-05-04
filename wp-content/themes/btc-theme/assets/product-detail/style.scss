@@ -502,6 +502,15 @@ body {
       }
     }
   }
+  #explore_products{
+    .explore_products_container {
+      .products_item {
+        .product_detail{
+          padding-right: 0px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {

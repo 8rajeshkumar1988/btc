@@ -74,7 +74,7 @@ return [
     // customizations conponents
     'customizations' => 'Customizations',
     'flexibilityKnittedIn' => 'Flexibility Knitted In',
-    'startCustomizingToday' => 'Start Customizing Today',
+    'startCustomizingToday' => 'Customize Now',
 
 
     // about btc section

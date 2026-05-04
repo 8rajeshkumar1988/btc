@@ -22,7 +22,7 @@ return [
     'email' => 'Email',
     'copyright' => 'Copyright© %s, Benin Textile Corporation',
     'privacyPolicy' => 'Politique de Confidentialité',
-    'startYourLine' => 'Lancez Votre Gamme De Produits',
+    'startYourLine' => 'Commencez votre ligne',
     'viewEvent' => "Voir l'événement",
 
 
@@ -78,7 +78,7 @@ return [
      // customizations conponents
      'customizations' => 'Personnalisations',
      'flexibilityKnittedIn' => 'Flexibilité tricotée',
-     'startCustomizingToday' => "Commencez Votre Personnalisation Dès Aujourd'hui",
+     'startCustomizingToday' => "Personnaliser maintenant",
 
 
      // about btc section

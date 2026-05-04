@@ -1065,23 +1065,23 @@
     }
   } 
 
-  // #sustainabiltyStandard {
-  //   .accordian{
-  //     .faq{
-  //       .ans{
-  //         .certificates.fr{
-  //           grid-template-columns: repeat(2, 1fr);
-  //           row-gap: 10px;
-  //           column-gap: 20px;
-  //           li{
-  //             img{
-  //               height: 50px;
-  //               width: 50px;
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   } 
-  // }
+  #sustainabiltyStandard {
+    .accordian{
+      .faq{
+        .ans{
+          .certificates.fr{
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 10px;
+            column-gap: 20px;
+            li{
+              img{
+                height: 50px;
+                width: 50px;
+              }
+            }
+          }
+        }
+      }
+    } 
+  }
 }

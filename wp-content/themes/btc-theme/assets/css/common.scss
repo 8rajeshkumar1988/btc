@@ -1270,8 +1270,8 @@ header {
     --font-18: clamp(0.9375rem, 0.8071rem + 0.4967vw, 1.125rem);
   }
   .cta.fr {
-    font-size: calc(var(--font-16) - 0px);
-    padding: clamp(.4375rem,-0.0248rem + .5415vw,.625rem) calc(clamp(.4375rem,-0.0248rem + .5415vw,.625rem)*2);    
+    font-size: 14px;
+    padding: 5px 10px;    
   }
   #lead_popup_form {
     form {

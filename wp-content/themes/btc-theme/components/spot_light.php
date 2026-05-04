@@ -30,7 +30,7 @@ $lang=get_locale();
 if($lang=='fr_FR'){
   
   $spotlight_title = 'Projection sur les Produits';
-  $start_your_line = 'Lancez Votre Gamme De Produits';
+  $start_your_line = 'Commencez votre ligne';
   $fr_class = 'fr';
 }else{
   $spotlight_title = 'Product Spotlight';
