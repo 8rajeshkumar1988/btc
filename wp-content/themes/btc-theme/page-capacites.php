@@ -293,7 +293,7 @@ get_header();
     <div class="tai_container">
       <div class="static">
         <div>
-          <h3> Capacité de Production de <span class="js-countup" data-target="2400" data-duration="1600">2400</span> Machines</h3>
+          <h3> Capacité de Production de <br> <span class="js-countup" data-target="2400" data-duration="1600">2400</span> Machines</h3>
           <p>avec 1400 Machines <br> à coudre x 2 équipe</p>
         </div>
         <div>
