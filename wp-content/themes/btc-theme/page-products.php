@@ -50,10 +50,15 @@ the_post();
     <p>
       The flexibility we offer is built on deep textile expertise, vertical integration and a clear commitment to quality and customization at scale.
     </p>
-    <button class="cta leadpopup" ctaButton >
-      Get in Touch <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
-    </button>
-  </div>
+    <div class="product_page_details_buttons">
+    <a href="<?php echo get_template_directory_uri() . '/assets/images/catalogue/BTEX Catalogue premium.pdf'; ?>" target="_blank" rel="noopener" class="cta" ctaButton onclick="event.preventDefault(); window.open(this.href, '_blank'); const dl = document.createElement('a'); dl.href = this.href; dl.download = 'BTEX Catalogue premium.pdf'; document.body.appendChild(dl); dl.click(); dl.remove();">
+      Our Product Catalogue <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="<?php echo t('rightArrow'); ?>" />
+      </a>
+      <button class="cta leadpopup" ctaButton >
+        Get in Touch <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
+      </button>
+    </div>
+    </div>
 </section>
 
 <section id="product_category">

@@ -4,7 +4,7 @@ body {
 .heroBanner img {
   object-position: center top;
 }
-video{
+video {
   user-select: none;
   pointer-events: none;
 }
@@ -35,7 +35,7 @@ video{
       color: var(--blue);
     }
   }
-  h2.fr{
+  h2.fr {
     font-size: calc(var(--font-46) - var(--font-size-reduction));
   }
   .description {
@@ -49,8 +49,16 @@ video{
       line-height: 1.5;
     }
     button {
-      margin-top: var(--font-14);
     }
+  }
+  .product_page_details_buttons {
+    margin-top: var(--font-14);
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
   }
 }
 #product_category {
@@ -108,8 +116,8 @@ video{
         aspect-ratio: 526/450;
         overflow: hidden;
         position: relative;
-        &> video,
-         &> img {
+        & > video,
+        & > img {
           width: 100%;
           height: calc(100% + 100px);
           transform: translateY(-100px);
@@ -133,7 +141,7 @@ video{
           font-weight: 400;
           color: #594ec2;
         }
-        .category_list_card_title.fr{
+        .category_list_card_title.fr {
           font-size: calc(var(--font-46) - var(--font-size-reduction));
           line-height: 1.2;
           display: inline-block;
@@ -150,7 +158,8 @@ video{
             font-size: var(--font-16);
             background-color: #b5c0ee;
             color: var(--secondaryBlack);
-            padding: clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) calc(clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) * 2);
+            padding: clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem)
+              calc(clamp(0.4375rem, -0.0248rem + 0.5415vw, 0.625rem) * 2);
             font-weight: 300;
           }
         }
@@ -177,7 +186,6 @@ video{
       }
     }
     .category_list_card:nth-child(4) {
-
       .category_list_card_title {
         color: #553f2f;
       }
@@ -251,7 +259,7 @@ video{
       line-height: 0.8;
       margin-bottom: 10px;
     }
-    h2.fr{
+    h2.fr {
       font-size: calc(var(--font-46) - var(--font-size-reduction));
       margin-bottom: 20px;
     }
@@ -337,10 +345,10 @@ video{
         display: block;
       }
     }
-    #value{
-      img{
+    #value {
+      img {
         transform: unset;
-       padding-left: 0; 
+        padding-left: 0;
       }
     }
     .customization_cards {
@@ -391,6 +399,9 @@ video{
     .description {
       align-items: flex-start;
     }
+    .product_page_details_buttons {
+      justify-content: flex-start;
+    }
   }
   #customization {
     .customization_container {
@@ -414,12 +425,12 @@ video{
   }
 }
 @media screen and (max-width: 768px) {
-  #category_listing{
-    .category_list{
-      .category_list_card{
+  #category_listing {
+    .category_list {
+      .category_list_card {
         .category_list_card_detail {
-          .category_tags{
-            p{
+          .category_tags {
+            p {
               padding: 5px 10px;
               font-size: 14px;
             }
@@ -432,7 +443,8 @@ video{
     .category_container {
       grid-template-columns: 1fr;
       .category_card {
-        video, img{
+        video,
+        img {
           height: calc(100% + 50px);
           transform: translateY(-50px);
         }
@@ -447,21 +459,21 @@ video{
   #category_listing {
     .category_list {
       grid-template-columns: 1fr;
-       .category_list_card{
-        .category_list_card_img{
-          &> img{
+      .category_list_card {
+        .category_list_card_img {
+          & > img {
             height: calc(100% + 50px);
             transform: translateY(-50px);
           }
-          p{
+          p {
             bottom: 20px;
             right: 20px;
           }
         }
-         .category_list_card_detail{
+        .category_list_card_detail {
           margin-top: 10px;
-         }
-       }
+        }
+      }
     }
   }
   #custom_product {
@@ -486,14 +498,14 @@ video{
 }
 
 @media screen and (max-width: 600px) {
-    #customization {
+  #customization {
     .customization_container {
       .customization_cards {
         margin: 0;
         .customization_card {
           justify-content: center;
           align-items: flex-start;
-          & > img{
+          & > img {
             width: 150px;
             padding: 20px;
             transform: translateX(-15px) rotate(-15deg);
@@ -507,6 +519,13 @@ video{
   }
 }
 @media screen and (max-width: 480px) {
+  #product_page_details {
+    .product_page_details_buttons {
+      gap: 15px;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
   #category_listing {
     .category_list {
       .category_list_card {
