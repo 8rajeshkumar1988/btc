@@ -61,7 +61,7 @@ if($lang=='fr_FR'){
 
                             <?php if ($social_icon) { ?>
                                 <div class="social_icon">
-                                    <?php echo '<img src="' . esc_url($social_icon['url']) . '" alt="' . esc_attr($social_icon['alt']) . '">'; ?>
+                                    <?php echo '<img src="' . esc_url($social_icon['url']) . '" alt="' . esc_attr($alt_text) . ' linkedin icon  handle" />'; ?>
                                 </div>
                             <?php } ?>
                             <div class="layer"></div>
