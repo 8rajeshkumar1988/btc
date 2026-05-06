@@ -42,10 +42,10 @@ the_post();
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/mailIcon.svg" ?>" alt="mail icon">
                     <a href="mailto:info.btc@arisenet.com">info.btc@arisenet.com</a>
                 </div>
-                <div>
+                <!-- <div>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/callIcon.svg" ?>" alt="call icon">
                     <a href="tel:+229 5145127009">+229 5145127009</a>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="layer"></div>
@@ -60,10 +60,10 @@ the_post();
         <img src="<?php echo get_template_directory_uri() . "/assets/images/mailIcon.svg" ?>" alt="mail icon">
         <a href="mailto:info.btc@arisenet.com">info.btc@arisenet.com</a>
     </div>
-    <div animateHeadingBanner>
+    <!-- <div animateHeadingBanner>
         <img src="<?php echo get_template_directory_uri() . "/assets/images/callIcon.svg" ?>" alt="call icon">
         <a href="tel:+229 5145127009">+229 5145127009</a>
-    </div>
+    </div> -->
 </div>
 
 

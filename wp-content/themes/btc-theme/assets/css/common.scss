@@ -882,6 +882,9 @@ header {
         filter: invert(1);
       }
     }
+    a.fr{
+      font-size: calc(var(--font-20) * 1.6);
+    }
     .extended {
       display: none;
     }

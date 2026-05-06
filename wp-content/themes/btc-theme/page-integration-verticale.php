@@ -222,7 +222,7 @@ get_header();
                 <div class="left">
                     <div class="inner_top">
                         <div class="copy">
-                            <p>Après la teinture, le tissu est coupé avec précision et cousu de manière experte, avec tous les éléments-coutures, fermetures à glissière et boutons sont assemblés pour créer le vêtement final.</p>
+                            <p>Après la teinture, le tissu est coupé avec précision et cousu de manière experte. <strong style="font-weight: 400;">Tous les éléments-coutures (fermetures à glissière, boutons, etc.) sont assemblés pour créer le vêtement final.</strong></p>
                         </div>
                         <p class="count">(05)</p>
                     </div>
@@ -233,7 +233,7 @@ get_header();
                         </div>
                         <div class="second">
                             <p class="title">Caractéristique Clé</p>
-                            <p class="subCopy">Customizations like embroidery, screen printing, and other design details are added in this stage</p>
+                            <p class="subCopy">Des personnalisations telles que la broderie, la sérigraphie et d'autres détails de conception sont ajoutées à cette étape</p>
                         </div>
                     </div>
                 </div>
@@ -293,7 +293,7 @@ get_header();
                         </div>
                         <div class="second">
                             <p class="title">Caractéristique Clé</p>
-                            <p class="subCopy">We use recyclable, biodegradable packaging materials to reduce plastic waste</p>
+                            <p class="subCopy">Nous utilisons des matériaux d'emballage recyclables et biodégradables pour réduire les déchets plastiques.</p>
                         </div>
                     </div>
                 </div>

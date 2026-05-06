@@ -61,7 +61,7 @@ the_post();
                         <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/home/bTC_Gate_.webp"  ?>" alt="image de la porte d'entrée du BTC" />
                     </div>
                     <p class="category_description" >
-                    BTC, située au Bénin, est la première usine d'Afrique de l'Ouest entièrement intégrée verticalement, transformant du coton local nourripar la pluie, sans OGM certifié CmiA en vêtements haut de gamme largement reconnu et approuvé par les associations d'égrenage et les acteurs de l'industrie.
+                    BTC, située au Bénin, est la première usine d'Afrique de l'Ouest entièrement intégrée verticalement, transformant du coton local <strong style="font-weight: 600;">nourri par</strong> la pluie, sans OGM certifié CmiA en vêtements haut de gamme largement reconnu et approuvé par les associations d'égrenage et les acteurs de l'industrie.
                     </p>
                 </div>
                 <div class="swiper-slide category_item" animateHeading>
@@ -113,7 +113,7 @@ the_post();
     <div class="vision_mission_container text" animateHeading>
         <h2 class="fr">Vision</h2>
         <p>
-        Diriger la transformation textile de l'Afrique en faisant œuvre de pionnier dans la confection de vêtements durables, traçables et performants, en établissant de nouvelles normes mondiales en matière de qualité et de responsabilité environnementale.
+        Devenir un leader de la transformation textile en Afrique en étant pionnier d’une industrie de l’habillement durable, traçable et performante, tout en établissant de nouveaux standards mondiaux en matière de qualité et de responsabilité environnementale.
         </p>
     </div>
     <div class="vision_mission_container videoC">     
@@ -305,7 +305,7 @@ if ($leaderships->have_posts()) {
                     <ul>
                         <li>Programmes de transfert de connaissances avec des partenaires techniques internationaux</li>
                         <li>Une croissance inclusive grâce à des contrats à long terme avec des coopératives agricoles</li>
-                        <li>Partnership with government and NGOs to boost textile ecosystem development</li>
+                        <li>Partenariat avec le gouvernement et les ONG pour stimuler le développement de l'écosystème textile</li>
                     </ul>
                 </div>
                 <div class="content-btn">
@@ -374,7 +374,7 @@ if ($leaderships->have_posts()) {
                         </div> -->
                     </div>
                     <ul>
-                        <li>CmiA-certified local cotton for eco-friendly sourcing</li>
+                        <li>Coton local certifié CmiA pour un approvisionnement respectueux de l'environnement</li>
                         <li>Zero Liquid Discharge (ZLD) pour le recyclage de l'eau</li>
                         <li>Énergie propre et Confection à faible impact</li>
                     </ul>

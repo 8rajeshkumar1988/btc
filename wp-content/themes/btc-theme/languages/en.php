@@ -170,4 +170,5 @@ return [
     "btcPattern" => "btc pattern",
     "closeIcon" => "close icon",
     'footerContactImage' => 'footer contact image',
+    'isFrench' => '',
 ];

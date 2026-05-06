@@ -353,7 +353,7 @@
 
             ?>
                 <div>
-                    <a path='<?php echo $slug ?>' class="<?php echo $post_id  == 97 || $post_id == 1555     ? "active extend" : ""; ?>" href="<?php the_permalink(); ?>">
+                    <a path='<?php echo $slug ?>' class="<?php echo $post_id  == 97 || $post_id == 1555     ? "active extend" : ""; ?> <?php echo t('isFrench'); ?>" href="<?php the_permalink(); ?>">
                         <span>
                             <?php the_title(); ?>
                         </span>
@@ -400,7 +400,7 @@
                                         $count = $products->found_posts;
                                     ?>
 
-                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?> <span>&nbsp; (<?php echo str_pad($count, 2, '0', STR_PAD_LEFT); ?>)</span></a>
+                                        <a  href="<?php the_permalink(); ?>"><?php the_title(); ?> <span>&nbsp; (<?php echo str_pad($count, 2, '0', STR_PAD_LEFT); ?>)</span></a>
                                     <?php } ?>
 
                             <?php wp_reset_postdata();

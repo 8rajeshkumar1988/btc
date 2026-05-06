@@ -7,7 +7,7 @@ return [
     'contactFooterHeader' => 'Vous recherchez une Confection <br>Textile Transparente et Évolutive?',
     'contactFooterCopy' => "Nous proposons une confection de vêtements de bout en bout sous un même toit, conçue pour les marques, les détaillants et les maisons d'achat prêtes à monter en échelle.",
     'footerHeading' => 'Principal Fabricant de Textiles et Exportateur de Vêtements',
-    'footerCopy' => "BTC, située au Bénin, est la première usine textile entièrement intégrée verticalement d'Afrique de l'Ouest, transformant du coton local nourripar la pluie et certifié CmiA sans OGM en vêtements tricotés de qualité supérieure.",
+    'footerCopy' => "BTC, située au Bénin, est la première usine textile entièrement intégrée verticalement d'Afrique de l'Ouest, transformant du coton local nourri par la pluie et certifié CmiA sans OGM en vêtements tricotés de qualité supérieure.",
     'aboutUs' => 'À Propos De Nous',
     'capabilities'  => 'Capacités',
     'sustainability' => 'Développement Durable',
@@ -177,4 +177,6 @@ return [
     "btcPattern" => "modèle BTC",
     "closeIcon" => "icône fermer",
     'footerContactImage' => 'image de contact de pied de page',
+
+    'isFrench' => 'fr',
 ];
