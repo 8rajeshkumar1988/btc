@@ -8,7 +8,7 @@ if($lang == 'fr_FR') {
 ?>
 
 <section id="customization">
-     <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern_product.png'; ?>" alt=""  btcPattern/>
+     <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern_product.png'; ?>" alt="<?php echo t('btcPattern'); ?>"  btcPattern/>
      <div class="heading <?php echo $fr_class; ?>" animateHeading>   
          <p><?php echo t('customizations'); ?></p>
          <h2><?php echo t('flexibilityKnittedIn'); ?></h2>
@@ -244,6 +244,6 @@ if($lang == 'fr_FR') {
         </button>
         </div>
     </div> -->
-                <button class="cta leadpopup <?php echo $fr_class; ?>" ctaButton><?php echo t('startCustomizingToday'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" /></button>
+                <button class="cta leadpopup <?php echo $fr_class; ?>" ctaButton><?php echo t('startCustomizingToday'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="<?php echo t('rightArrow'); ?>" /></button>
              </div>
  </section>

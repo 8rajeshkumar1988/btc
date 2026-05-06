@@ -216,14 +216,14 @@ get_header();
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div>
-                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/readyToUse.svg"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/readyToUse.svg"  ?>" alt="ready to use infrastructure icon">
                             <div>
                                 <p class="titles">Ready-To-Use Infra & Industrial Setup</p>
                                 <p class="copy">Purpose-built for textile, apparel, and agro-industrial businesses</p>
                             </div>
                         </div>
                         <div>
-                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/accessoryEcosystem.svg"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/accessoryEcosystem.svg"  ?>" alt="accessory ecosystem icon">
                             <div>
                                 <p class="titles">Accessory Ecosystem</p>
                                 <p class="copy">On-site availability of trims, accessories, and fabric finishing partners</p>
@@ -232,14 +232,14 @@ get_header();
                     </div>
                     <div class="swiper-slide">
                         <div>
-                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/utility-infrastructure.png"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/utility-infrastructure.png"  ?>" alt="utility infrastructure icon">
                             <div>
                                 <p class="titles">Utility Infrastructure</p>
                                 <p class="copy">24/7 power supply, water, steam, and waste management systems</p>
                             </div>
                         </div>
                         <div>
-                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/clearance.png"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/clearance.png"  ?>" alt="dry port & pre-customs clearance icon">
                             <div>
                                 <p class="titles">Dry Port & Pre-Customs Clearance</p>
                                 <p class="copy">All goods can be customs-cleared within the zone, drastically reducing port congestion delays</p>
@@ -248,14 +248,14 @@ get_header();
                     </div>
                     <div class="swiper-slide">
                         <div>
-                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/logistics-hub.png"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/logistics-hub.png"  ?>" alt="logistics hub icon">
                             <div>
                                 <p class="titles">Logistics Hub</p>
                                 <p class="copy">Integrated logistics services make export and import seamless and time-efficient</p>
                             </div>
                         </div>
                         <div>
-                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/eco-design-principles.png"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/eco-design-principles.png"  ?>" alt="eco-industrial design icon">
                             <div>
                                 <p class="titles">Eco-Industrial Design</p>
                                 <p class="copy">Focused on sustainability, traceability, and digital manufacturing systems</p>
@@ -267,7 +267,7 @@ get_header();
             </div>
             <div class="why_btc_buttons">
                 <button class="why_btc-prev globalNavigation navBtnColor">
-                    <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+                    <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="left arrow " />
                 </button>
                 <button class="why_btc-next globalNavigation navBtnColor">
                     <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
@@ -275,12 +275,12 @@ get_header();
             </div>
         </div>
     </div>
-    <img loading="lazy" class="layer desk" src="<?php echo get_template_directory_uri() . "/assets/images/gate1.webp"  ?>" alt="">
-    <img loading="lazy" class="layer mobile" src="<?php echo get_template_directory_uri() . "/assets/images/gate2.webp"  ?>" alt="">
+    <img loading="lazy" class="layer desk" src="<?php echo get_template_directory_uri() . "/assets/images/gate1.webp"  ?>" alt="gate 1">
+    <img loading="lazy" class="layer mobile" src="<?php echo get_template_directory_uri() . "/assets/images/gate2.webp"  ?>" alt="gate 2">
 </section>
 
 <section id="roleOfbtc">
-    <img loading="lazy" class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" btcPattern>
+    <img loading="lazy" class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="btc pattern" btcPattern>
     <div class="heading" animateHeading>
         <p>Driving Local Impact, Creating Global Change</p>
         <h3>BTC's Role in Benin's Next Chapter</h3>
@@ -292,12 +292,12 @@ get_header();
                 <p> It is ranked <strong>9th globally</strong> and GDIZ aims to leverage this opportunity complying with the Beninese government’s ambitious plans to <strong>accelerate cotton transformation</strong> and <strong>skyrocket the textile business.</strong></p>
             </div>
             <div class="img">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/roleOfBtc1.jpg"  ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/roleOfBtc1.jpg"  ?>" alt="Driving Local Impact, Creating Global Change">
             </div>
         </div>
         <div>
             <div class="img">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/Benin-training-local-talent-Benin-Textile.jpg"  ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/Benin-training-local-talent-Benin-Textile.jpg"  ?>" alt="benin training local talent benin textile">
             </div>
             <div class="text">
                 <p>By producing at the source, BTC creates value within Benin<strong>—training local talent, advancing tech adoption, and reducing reliance on imported textiles.</strong> </p> <br>

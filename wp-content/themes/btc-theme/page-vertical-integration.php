@@ -38,7 +38,7 @@ get_header();
 </section>
 <section id="textile_details">
     
-    <img src="<?php echo get_template_directory_uri() . '/assets/images/textilePattern.png'; ?>" alt="" btcPattern />
+    <img src="<?php echo get_template_directory_uri() . '/assets/images/textilePattern.png'; ?>" alt="btc pattern image" btcPattern />
     <div animateHeading>
         <p>Textile Park</p>
         <h2>
@@ -110,7 +110,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Spinning-25.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Spinning-25.jpg'; ?>" alt="high performance spinning machine ">
                 </div>
             </div>
         </div>
@@ -140,7 +140,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Knitting-05.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Knitting-05.jpg'; ?>" alt="knitting machine installed in factory">
                 </div>
             </div>
         </div>
@@ -209,7 +209,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img id="textile_processing_img" src="<?php echo get_template_directory_uri() . '/assets/images/dyeing_pic.webp'; ?>" alt="">
+                    <img id="textile_processing_img" src="<?php echo get_template_directory_uri() . '/assets/images/dyeing_pic.webp'; ?>" alt="showcasing the textile processing">
                 </div>
             </div>
         </div>
@@ -239,7 +239,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/garmenting.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/garmenting.jpg'; ?>" alt="garment manufacturing">
                 </div>
             </div>
         </div>
@@ -269,7 +269,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Quality-control-BTC.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Quality-control-BTC.jpg'; ?>" alt="quality check control process">
                 </div>
             </div>
         </div>
@@ -299,7 +299,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/whybtc/packaging.webp'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/whybtc/packaging.webp'; ?>" alt="packaging process">
                 </div>
             </div>
         </div>
@@ -329,7 +329,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Logistics-img.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Logistics-img.jpg'; ?>" alt="logistics process- displays the sea port">
                 </div>
             </div>
         </div>
@@ -359,7 +359,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Quality-control.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Quality-control.jpg'; ?>" alt="image showcasing the end product">
                 </div>
             </div>
         </div>

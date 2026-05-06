@@ -73,7 +73,7 @@ if($lang=='fr_FR'){
     background-size: 20px 2px, 100% 2px;
     position: relative;"></div>
 <div class="event-content">
-    <img class="pattern" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="BTC pattern" />
+    <img class="pattern" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="<?php echo t('btcPattern'); ?>" />
 
     <h4 style="margin-bottom: 20px;"><?php echo t('aboutEvent'); ?></h4>
    
@@ -159,7 +159,7 @@ if ($gallery && is_array($gallery)) {
             <button class="gallery-button-prev">
                 <img
                     src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>"
-                    alt="right arrow" />
+                    alt="<?php echo t('rightArrow'); ?>" />
             </button>
             <div class="swiper-wrapper" style="padding: 0px 10px;">
 
@@ -194,7 +194,7 @@ if ($gallery && is_array($gallery)) {
             <button class="gallery-button-next">
                 <img
                     src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>"
-                    alt="right arrow" />
+                    alt="<?php echo t('rightArrow'); ?>" />
             </button>
         </div>
     </section>
@@ -272,7 +272,7 @@ if ($event_Start_Date) {
                             <?php echo t('submitBtn'); ?>
                             <img
                                 src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>"
-                                alt="right arrow" />
+                                alt="<?php echo t('rightArrow'); ?>" />
                         </button>
                     </div>
                 </div>
@@ -328,20 +328,20 @@ if ($otherEvents->have_posts()) {
                                 ?>
                                 <p class="cta <?php echo $fr_class; ?>">
                                     <?php echo t('viewEvent'); ?>
-                                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+                                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>" />
                                 </p>
                             </div>
                             <div class="event_description">
                                 <h2><?php the_title(); ?></h2>
                                 <div class="event_date">
-                                    <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender.png" ?>" alt="" />
+                                    <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender.png" ?>" alt="calender png" />
                                     <p><?php echo date('j M Y', strtotime(get_field('event_from_date'))); ?>
                                         <?php if (get_field('event_to_date') != get_field('event_from_date')) { ?>
                                             - <?php echo date('j M Y', strtotime(get_field('event_to_date')));
                                             } ?></p>
                                 </div>
                                 <div class="event_location">
-                                    <img src="<?php echo get_template_directory_uri() . "/assets/images/event/location.png" ?>" alt="location" />
+                                    <img src="<?php echo get_template_directory_uri() . "/assets/images/event/location.png" ?>" alt="location png" />
                                     <p><?php echo get_field('event_location'); ?></p>
                                 </div>
                             </div>
@@ -357,10 +357,10 @@ if ($otherEvents->have_posts()) {
         <div class="event_btc_button_container">
             <div class="event_btc_buttons">
                 <button class="event_btc-prev globalNavigation navBtnColor <?php echo $fr_class; ?>">
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>" />
                 </button>
                 <button class="event_btc-next globalNavigation navBtnColor <?php echo $fr_class; ?>">
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>" />
                 </button>
             </div>
         </div>

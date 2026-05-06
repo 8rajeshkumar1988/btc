@@ -28,7 +28,7 @@ if($lang=='fr_FR'){
 
 <section id="news_media">
     <p class="breadcrub"><a href="<?php echo $home_url ?>"><?php echo $home_title ?></a> / Blogs</p>
-    <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="" />
+    <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="<?php echo t('btcPattern'); ?>" />
     <div class="heading <?php echo $fr_class; ?>">
         <h2>
             <?php echo t('blogPageTitle'); ?> <br />
@@ -112,7 +112,7 @@ if($lang=='fr_FR'){
                                     </div>
                                 </div>
                             </div>
-                            <a href="<?php the_permalink(); ?>" class="cta <?php echo $fr_class; ?>"><?php echo t('viewArticle'); ?> <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""></a>
+                            <a href="<?php the_permalink(); ?>" class="cta <?php echo $fr_class; ?>"><?php echo t('viewArticle'); ?> <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>"></a>
                         </div>
                     <?php } ?>
                 </div>
@@ -187,7 +187,7 @@ if ($news->have_posts()) {
                                 <h3>
                                     <?php the_title(); ?>
                                 </h3>
-                                <a href="<?php the_permalink(); ?>" class="cta <?php echo $fr_class; ?>"><?php echo t('viewArticle'); ?> <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""></a>
+                                <a href="<?php the_permalink(); ?>" class="cta <?php echo $fr_class; ?>"><?php echo t('viewArticle'); ?> <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>"></a>
                             </div>
                         </div>
                     <?php } ?>
@@ -199,10 +199,10 @@ if ($news->have_posts()) {
         <div class="more_news_button_container">
             <div class="more_news_buttons">
                 <button class="about_more_news-prev">
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>" />
                 </button>
                 <button class="about_more_news-next">
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>" />
                 </button>
             </div>
         </div>
@@ -285,7 +285,7 @@ if ($sarticles->have_posts()) {
                             </div>
                         </div>
                     </a>
-                    <a href="<?php the_permalink(); ?>" class="cta explore_media_cta">View Article <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""></a>
+                    <a href="<?php the_permalink(); ?>" class="cta explore_media_cta">View Article <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>"></a>
                 </div>
             <?php } ?>
 

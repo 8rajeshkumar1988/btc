@@ -84,19 +84,19 @@ if (!$liveEvents->have_posts()) {
                   <p style="font-weight: 400;margin-bottom: 20px;">SPOTLIGHT</p>
                   <h1><?php the_title() ?></h1>
                   <div class="event_date">
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender-white.png" ?>" alt="" />
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender-white.png" ?>" alt="calender white png" />
                     <p><?php echo date('j M Y', strtotime(get_field('event_from_date'))); ?>
                       <?php if (get_field('event_to_date') != get_field('event_from_date')) { ?>
                         - <?php echo date('j M Y', strtotime(get_field('event_to_date')));
                         } ?></p>
                   </div>
                   <div class="event_location">
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/event/location-white.png" ?>" alt="" />
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/event/location-white.png" ?>" alt="location white png" />
                     <p><?php echo get_field('event_location'); ?></p>
                   </div>
                   <a class="cta" href="<?php the_permalink(); ?>">
                     View Event
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>" />
                   </a>
                 </div>
               </div>
@@ -182,7 +182,7 @@ if ($upcomingEvents->have_posts()) {
 
               <div class="content-bottom">
                 <div class="event_date">
-                  <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender-white.png" ?>" alt="" />
+                  <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender-white.png" ?>" alt="calender white png" />
                   <p><?php echo date('j M Y', strtotime(get_field('event_from_date'))); ?>
                     <?php if (get_field('event_to_date') != get_field('event_from_date')) { ?>
                       - <?php echo date('j M Y', strtotime(get_field('event_to_date')));
@@ -190,12 +190,12 @@ if ($upcomingEvents->have_posts()) {
                 </div>
                 <!-- j F Y -->
                 <div class="event_location">
-                  <img src="<?php echo get_template_directory_uri() . "/assets/images/event/location-white.png" ?>" alt="" />
+                  <img src="<?php echo get_template_directory_uri() . "/assets/images/event/location-white.png" ?>" alt="location white png" />
                   <p><?php echo get_field('event_location'); ?></p>
                 </div>
                 <a class="cta" href="<?php the_permalink(); ?>">
                   Register Now <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>"
-                    alt="" />
+                    alt="<?php echo t('rightArrow'); ?>" />
                 </a>
               </div>
             </div>
@@ -266,14 +266,14 @@ if ($pastEvents->have_posts()) {
               <div class="event_description">
                 <h2><?php the_title(); ?></h2>
                 <div class="event_date">
-                  <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender.png" ?>" alt="" />
+                  <img src="<?php echo get_template_directory_uri() . "/assets/images/event/calender.png" ?>" alt="calender png" />
                   <p><?php echo date('j M Y', strtotime(get_field('event_from_date'))); ?>
                     <?php if (get_field('event_to_date') != get_field('event_from_date')) { ?>
                       - <?php echo date('j M Y', strtotime(get_field('event_to_date')));
                       } ?></p>
                 </div>
                 <div class="event_location">
-                  <img src="<?php echo get_template_directory_uri() . "/assets/images/event/location.png" ?>" alt="" />
+                  <img src="<?php echo get_template_directory_uri() . "/assets/images/event/location.png" ?>" alt="location png" />
                   <p><?php echo get_field('event_location'); ?></p>
                 </div>
                 <a href="<?php the_permalink(); ?>" class="cta">

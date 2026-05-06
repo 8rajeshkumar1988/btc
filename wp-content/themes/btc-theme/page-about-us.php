@@ -41,8 +41,8 @@ the_post();
     </div>
 </section>
 <section id="about_btc">
-    <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" btcPattern />
-    <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" btcPattern />
+    <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="<?php echo t('btcPattern'); ?>" btcPattern />
+    <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="<?php echo t('btcPattern'); ?>" btcPattern />
 
     <div class="about_btc_head">
         <div class="heading" animateHeading>
@@ -58,7 +58,7 @@ the_post();
             <div class="swiper-wrapper">
                 <div class="swiper-slide category_item" animateHeading>
                     <div class="category_image">
-                        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/home/bTC_Gate_.webp"  ?>" alt="" />
+                        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/home/bTC_Gate_.webp"  ?>" alt="btc entry gate image" />
                     </div>
                     <p class="category_description" >
                         BTC, located in Benin, is West Africa's first fully vertically
@@ -70,7 +70,7 @@ the_post();
                 </div>
                 <div class="swiper-slide category_item" animateHeading>
                     <div class="category_image">
-                        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/cottonbails.webp" ?>" alt="" />
+                        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/cottonbails.webp" ?>" alt="cottonbails" />
                     </div>
                     <p class="category_description">
                         In addition to CmiA-certified local cotton, we also work with organic cotton,
@@ -81,7 +81,7 @@ the_post();
                 </div>
                 <div class="swiper-slide category_item" animateHeading>
                     <div class="category_image">
-                        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/about-sec-3.webp"  ?>" alt="" />
+                        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/about-sec-3.webp"  ?>" alt="cotton bails factory picture" />
                     </div>
                     <p class="category_description">
                         We produce high-quality yarns, fabrics, and garments, including
@@ -132,7 +132,7 @@ the_post();
         <!-- <video autoplay loop muted playsinline poster="<?php echo get_template_directory_uri() . "/assets/images/mission_banner.webp"  ?>">
             <source src="<?php echo get_template_directory_uri() . "/assets/images/mission.mp4"  ?>" >
         </video>    -->
-        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/mission_img.webp"  ?>" alt="">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/mission_img.webp"  ?>" alt="employees image working in the factory">
     </div>
     <div class="vision_mission_container text" animateHeading>
         <h2>Mission</h2>
@@ -161,7 +161,7 @@ $leaderships = new WP_Query(array(
 if ($leaderships->have_posts()) {
 ?>
     <section id="our_leadership">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt=""  btcPattern />
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="<?php echo t('btcPattern'); ?>"  btcPattern />
         <div class="heading" animateHeading>
             <p>Our Leadership</p>
             <h2>Visionaries Shaping the Future</h2>
@@ -195,7 +195,7 @@ if ($leaderships->have_posts()) {
                             <h2 class="leader_title"><?php the_title(); ?> </h2><span style="transform: rotate(45deg);font-size: var(--font-24);color: var(--green); margin-right:auto;">↑</span> 
                              <?php if (get_field('linkedin_profile')): ?>
                                 <a href="<?php the_field('linkedin_profile'); ?>" target="_blank" rel="noopener">
-                                    <img class='linkedin_icon' src="<?php echo get_template_directory_uri(); ?>/assets/images/linked.png" alt="linkedin" />
+                                    <img class='linkedin_icon' src="<?php echo get_template_directory_uri(); ?>/assets/images/linked.png" alt="linkedin Icon" />
                                 </a>
                             <?php endif; ?>
                         </div>
@@ -205,7 +205,7 @@ if ($leaderships->have_posts()) {
                             
                             <?php if (get_field('linkedin_profile')): ?>
                                 <a class="linkedin_icon_name" href="<?php the_field('linkedin_profile'); ?>" target="_blank" rel="noopener">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin_blue.png" alt="linkedin" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin_blue.png" alt="linkedin Icon" />
                                 </a>
                             <?php endif; ?>
                         </p>
@@ -225,7 +225,7 @@ if ($leaderships->have_posts()) {
 <?php }
 ?>
 <section id="product_page_details">
-    <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt=""  btcPattern />
+    <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="<?php echo t('btcPattern'); ?>"  btcPattern />
     <div class="heading" animateHeading>
         <p>Our Shareholders</p>
         <h2>
@@ -237,26 +237,26 @@ if ($leaderships->have_posts()) {
     <div class="shareholder_logos">
         <div class="left">
             <div class="logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/arise_logo.png" ?>" alt="" />
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/arise_logo.png" ?>" alt="Arise logo" />
             </div>
             <div class="logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/LCB.webp" ?>" alt="" />
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/LCB.webp" ?>" alt="LCB logo" />
             </div>
             <div class="logo">
                 <img loading="lazy" 
                     src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/caisse_de_dpots_et_consignations_du_benin_cover.png" ?>"
-                    alt="" />
+                    alt="Caisse de dépôts et consignations du Benin logo" />
             </div>
         </div>
         <div class="right">
             <div class="logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SBTCLOGONEW.png" ?>" alt="" />
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SBTCLOGONEW.png" ?>" alt="SBTC logo" />
             </div>
             <div class="logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SODECO.png" ?>" alt="" />
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SODECO.png" ?>" alt="SODECO logo" />
             </div>
             <!-- <div class="logo">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/Logo_Cotton-made-in-africa.png" ?>" alt="" />
+                <img src="<?php echo get_template_directory_uri() . "/assets/images/Logo_Cotton-made-in-africa.png" ?>" alt="Cotton Made in Africa logo" />
             </div> -->
         </div>
     </div>
@@ -327,7 +327,7 @@ if ($leaderships->have_posts()) {
                 </div>
                 <div class="content-btn">
                     <button class="cta leadpopup">
-                        GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+                        GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow svg" />
                     </button>
                 </div>
             </div>
@@ -367,7 +367,7 @@ if ($leaderships->have_posts()) {
                 </div>
                 <div class="content-btn">
                     <button class="cta leadpopup">
-                        GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+                        GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow svg" />
                     </button>
                 </div>
             </div>
@@ -401,7 +401,7 @@ if ($leaderships->have_posts()) {
                 </div>
                 <div class="content-btn">
                     <button class="cta leadpopup">
-                        GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+                        GET IN TOUCH <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow svg" />
                     </button>
                 </div>
             </div>
@@ -416,7 +416,7 @@ if ($leaderships->have_posts()) {
     <div class="cc_container">
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ISO.webp" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ISO.webp" ?>" alt="ISO logo">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">IMS:ISO 9001&#8203;/45001&#8203;/14001</h3>
@@ -425,7 +425,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/cotton_made_in_africa.webp" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/cotton_made_in_africa.webp" ?>" alt="Cotton Made in Africa logo">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">Cotton Made in Africa (CmiA)</h3>
@@ -434,7 +434,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/leed.webp" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/leed.webp" ?>" alt="LEED logo">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">LEED (Leadership in Energy and Environmental Design)</h3>
@@ -443,7 +443,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/wrap.webp" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/wrap.webp" ?>" alt="WRAP logo">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">Worldwide Responsible Accredited Production (WRAP)</h3>
@@ -452,7 +452,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/oekotex.webp" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/oekotex.webp" ?>" alt="Oekotex logo">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">OekoTex Certification</h3>
@@ -461,7 +461,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ctpat.webp" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ctpat.webp" ?>" alt="CTPAT logo">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">CTPAT (Customs Trade Partnership Against Terrorism)</h3>
@@ -502,7 +502,7 @@ if ($leaderships->have_posts()) {
     
     <div class="pop_container">
         <button id="closeBtn">✕</button>
-    <img id="popupImg" src="" />
+    <img id="popupImg" loading="lazy" src="" alt="popup image" />
     <div class="pop_content" data-lenis-prevent>
         <h2 id="popupHeading"></h2>
         <div style="display: flex;gap: 10px;align-items: center;">

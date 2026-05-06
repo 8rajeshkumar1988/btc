@@ -73,7 +73,7 @@ get_header();
 <section id="sustainableManufacturer" class="fr">
     <div>
         <div class="img">
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/SustainableManufacturing.webp"  ?>" alt="Sustainable Manufacturing"  />
+            <img src="<?php echo get_template_directory_uri() . "/assets/images/SustainableManufacturing.webp"  ?>" alt="Confection Durable"  />
             <p>Confection <br>Durable</p>
         </div>
         <div class="text">
@@ -95,14 +95,14 @@ get_header();
             </ul>
         </div>
         <div class="img">
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/whybtc/full-traceability-benin-textile.jpg"  ?>" alt="Full Traceability" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/whybtc/full-traceability-benin-textile.jpg"  ?>" alt="Traçabilité Totale" />
             <p>Traçabilité <br>Totale</p>
         </div>
     </div>
     <div>
         <div class="img">
             <!-- <img src="<?php echo get_template_directory_uri() . "/assets/images/PeoplePrinciples.jpg"  ?>" alt="SustainableManufacturing" /> -->
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/vision.webp"  ?>" alt="People & Principles" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/vision.webp"  ?>" alt="Personnes et Principes" />
             <p>Personnes et <br>Principes</p>
         </div>
         <div class="text">
@@ -124,13 +124,13 @@ get_header();
             </ul>
         </div>
         <div class="img">
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/VerticalIntegration.webp"  ?>" alt="Vertical Integration" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/VerticalIntegration.webp"  ?>" alt="Intégration Verticale" />
             <p>Intégration <br>Verticale</p>
         </div>
     </div>
     <div>
         <div class="img">
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/Partners-Benin-Textile-Corporation-Apparel-Manufacturing-2.jpg"  ?>" alt="Strategic  Partnerships" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/Partners-Benin-Textile-Corporation-Apparel-Manufacturing-2.jpg"  ?>" alt="Partenariats Stratégiques" />
             <p>Partenariats <br>Stratégiques</p>
         </div>
         <div class="text">
@@ -142,11 +142,11 @@ get_header();
             </ul>
         </div>
     </div>
-    <img loading="lazy" class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/whyPattern.png"  ?>" alt="Strategic Partnerships" btcPattern />
+    <img loading="lazy" class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/whyPattern.png"  ?>" alt="Confection Durable" btcPattern />
 </section>
 
 <section id="glance">
-    <img loading="lazy" class="svg" src="<?php echo get_template_directory_uri() . "/assets/images/world-map-btc.svg"  ?>" alt="Benin At A Glance">
+    <img loading="lazy" class="svg" src="<?php echo get_template_directory_uri() . "/assets/images/world-map-btc.svg"  ?>" alt="Aperçu du Bénin">
 
     <div class="content">
         <div >
@@ -200,7 +200,7 @@ get_header();
 </style>
 
 <section id="homeOfBtc">
-    <!-- <img class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/homeOfBtc.png"  ?>" alt=""> -->
+    <!-- <img class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/homeOfBtc.png"  ?>" alt="Porte d'entrée BTC"> -->
     
     <div class="heading fr" animateHeading>
         <p>Siège de BTC</p>
@@ -216,14 +216,14 @@ get_header();
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div>
-                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/readyToUse.svg"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/readyToUse.svg"  ?>" alt="prêt à l'emploi">
                             <div>
                                 <p class="titles">Configuration Industrielle & Infrastructure Prête À L'Emploi</p>
                                 <p class="copy">Spécialement conçu pour les entreprises du textile, de vêtements et de l'agro-industrie</p>
                             </div>
                         </div>
                         <div>
-                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/accessoryEcosystem.svg"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/accessoryEcosystem.svg"  ?>" alt="écosystème d'accessoires">
                             <div>
                                 <p class="titles">Écosystème d'Accessoires</p>
                                 <p class="copy">Disponibilité sur site des garnitures, des accessoires et des partenaires de finition des tissus</p>
@@ -232,14 +232,14 @@ get_header();
                     </div>
                     <div class="swiper-slide">
                         <div>
-                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/utility-infrastructure.png"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/utility-infrastructure.png"  ?>" alt="infrastructure de services publics">
                             <div>
                                 <p class="titles">Infrastructure des Services Publics</p>
                                 <p class="copy">Systèmes d'alimentation électrique, d'eau, de vapeur et de gestion des déchets fonctionnelles 24h/24 et 7j/7</p>
                             </div>
                         </div>
                         <div>
-                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/clearance.png"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/clearance.png"  ?>" alt="autorisation">
                             <div>
                                 <p class="titles">Port Sec et Dédouanement Préalable</p>
                                 <p class="copy">Toutes les marchandises peuvent être dédouanées dans la zone, réduisant considérablement les retards de congestion portuaire</p>
@@ -248,14 +248,14 @@ get_header();
                     </div>
                     <div class="swiper-slide">
                         <div>
-                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/logistics-hub.png"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/logistics-hub.png"  ?>" alt="pôle logistique">
                             <div>
                                 <p class="titles">Pôle Logistique</p>
                                 <p class="copy">Des services logistiques intégrés rendent l'exportation et l'importation fluides et rapides</p>
                             </div>
                         </div>
                         <div>
-                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/eco-design-principles.png"  ?>" alt="">
+                            <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/eco-design-principles.png"  ?>" alt="principes d'écoconception">
                             <div>
                                 <p class="titles">Conception Industriel Écologique</p>
                                 <p class="copy">Axé sur la durabilité, la traçabilité et les systèmes de Confection numériques</p>
@@ -267,20 +267,20 @@ get_header();
             </div>
             <div class="why_btc_buttons">
                 <button class="why_btc-prev globalNavigation fr navBtnColor">
-                    <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+                    <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="flèche droite " />
                 </button>
                 <button class="why_btc-next globalNavigation fr navBtnColor">
-                    <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+                    <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="flèche droite " />
                 </button>
             </div>
         </div>
     </div>
-    <img loading="lazy" class="layer desk" src="<?php echo get_template_directory_uri() . "/assets/images/gate1.webp"  ?>" alt="">
-    <img loading="lazy" class="layer mobile" src="<?php echo get_template_directory_uri() . "/assets/images/gate2.webp"  ?>" alt="">
+    <img loading="lazy" class="layer desk" src="<?php echo get_template_directory_uri() . "/assets/images/gate1.webp"  ?>" alt="porte d'entrée du BTC">
+    <img loading="lazy" class="layer mobile" src="<?php echo get_template_directory_uri() . "/assets/images/gate2.webp"  ?>" alt="porte d'entrée du BTC">
 </section>
 
 <section id="roleOfbtc">
-    <img loading="lazy" class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" btcPattern>
+    <img loading="lazy" class="layer" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="modèle BTC" btcPattern>
     <div class="heading fr" animateHeading>
         <p>Générer Un Impact Local, Créer Un Changement Mondial</p>
         <h3>Contribution de BTC au Prochain Chapitre du Bénin</h3>
@@ -292,12 +292,12 @@ get_header();
                 <p>Il est classé 9ème au niveau mondial et GDIZ vise à tirer parti de cette opportunité en se conformant aux plans ambitieux du gouvernement béninois pour accélérer la transformation du coton et faire exploser l'activité textile.</p>
             </div>
             <div class="img">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/roleOfBtc1.jpg"  ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/roleOfBtc1.jpg"  ?>" alt="Formation des talents locaux au Bénin - Textile du Bénin">
             </div>
         </div>
         <div>
             <div class="img">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/Benin-training-local-talent-Benin-Textile.jpg"  ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/Benin-training-local-talent-Benin-Textile.jpg"  ?>" alt="Formation des talents locaux au Bénin - Textile du Bénin - 2">
             </div>
             <div class="text">
                 <p>En produisant à la source, BTC crée une plus-value au Bénin—en formant des talents locaux, en faisant progresser l'adoption de la technologie et en réduisant la dépendance à l'égard des produits textiles importés.</p> <br>

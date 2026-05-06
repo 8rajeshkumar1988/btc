@@ -40,7 +40,7 @@ if($lang=='fr_FR'){
 ?>
 
     <section id="product_spotlight">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="<?php echo t('btcPattern'); ?>" btcPattern />
         <div class="swiper spotlight_slider">
             <div class="swiper-wrapper">
                 <?php
@@ -83,7 +83,7 @@ if($lang=='fr_FR'){
                             </div>
                             <button class="cta leadpopup <?php echo $fr_class; ?>" style="height: fit-content;">
                                 <?php echo $start_your_line; ?>
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/right_arrow.svg" alt="">
+                                <img loading="lazy" src="<?php echo get_template_directory_uri(); ?>/assets/images/right_arrow.svg" alt="<?php echo t('rightArrow'); ?>">
                             </button>
                         </div>
                         <?php
@@ -109,8 +109,8 @@ if($lang=='fr_FR'){
                             }
 
                             // Output both versions
-                            echo '<img class="product_spot_mobile" src="' . esc_url($full_image_url_mobile) . '" alt="' . esc_attr($alt_text) . '">';
-                            echo '<img class="product_spot" src="' . esc_url($full_image_url) . '" alt="' . esc_attr($alt_text) . '">';
+                            echo '<img loading="lazy" class="product_spot_mobile" src="' . esc_url($full_image_url_mobile) . '" alt="' . esc_attr($alt_text) . '">';
+                            echo '<img loading="lazy" class="product_spot" src="' . esc_url($full_image_url) . '" alt="' . esc_attr($alt_text) . '">';
                         }
                         ?>
                     </div>
@@ -125,10 +125,10 @@ if($lang=='fr_FR'){
         <div class="product_spotlight_bottom">
             <div class="product_spotlight_buttons">
                 <button class="product_spotlight-prev navBtnColor globalNavigation <?php echo $fr_class; ?> ">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
+                    <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="<?php echo t('rightArrow'); ?>" />
                 </button>
                 <button class="product_spotlight-next navBtnColor globalNavigation <?php echo $fr_class; ?>">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
+                    <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="<?php echo t('rightArrow'); ?>" />
                 </button>
             </div>
         </div>

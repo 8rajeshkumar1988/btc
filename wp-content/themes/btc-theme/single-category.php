@@ -70,7 +70,7 @@ $faqs = get_post_meta(get_the_ID(), 'category_faqs', true);
 
 if (!empty($faqs)) { ?>
   <section id="faqs">
-    <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
+    <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="<?php echo t('btcPattern'); ?>" btcPattern />
     <div class="heading <?php echo $fr_class; ?>" animateHeading>  
       <p><?php echo t('faqs'); ?></p>
       <h2><?php echo t('fqas'); ?></h2>
@@ -93,7 +93,7 @@ if (!empty($faqs)) { ?>
             <img loading="lazy"
               class="menu open"
               src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>"
-              alt="clase icon" />
+              alt="<?php echo t('closeIcon'); ?>" />
           </div>
           <div class="ans" style="display: none">
             <p>

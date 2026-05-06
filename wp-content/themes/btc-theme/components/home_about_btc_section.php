@@ -66,12 +66,12 @@ if($lang == 'fr_FR') {
             </div>
           </div>
           <div class="navigation_about">
-              <button class="swiper-button-prev prev aboutPrev globalNavigation <?php echo $fr_class; ?> navBtnInvert"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
-              <button class="swiper-button-next next aboutNext globalNavigation <?php echo $fr_class; ?> navBtnInvert"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow "></button>
+              <button class="swiper-button-prev prev aboutPrev globalNavigation <?php echo $fr_class; ?> navBtnInvert"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="<?php echo t('rightArrow'); ?>"></button>
+              <button class="swiper-button-next next aboutNext globalNavigation <?php echo $fr_class; ?> navBtnInvert"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="<?php echo t('rightArrow'); ?>"></button>
           </div>
             </div>
         <div class="ctaContainer_about">
-            <a class="cta <?php echo $fr_class; ?>" href="<?php echo $aboutBTCUrl; ?>" ><?php echo t('knowMoreAboutBTC'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Know More About BTC"></a>
+            <a class="cta <?php echo $fr_class; ?>" href="<?php echo $aboutBTCUrl; ?>" ><?php echo t('knowMoreAboutBTC'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="<?php echo t('rightArrow'); ?>"></a>
         </div>
     </div>
 </section>

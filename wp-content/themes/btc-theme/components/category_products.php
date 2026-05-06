@@ -8,7 +8,7 @@ if($lang=='fr_FR'){
 ?>
 
 <section id="explore_products">
-  <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" />
+  <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="<?php echo t('btcPattern'); ?>" />
   <div class="heading <?php echo $fr_class; ?>">
     <h2><?php echo t('exploreProducts'); ?></h2>
   </div>
@@ -53,10 +53,10 @@ if($lang=='fr_FR'){
                 $title_text = get_the_title();
               }
 
-              $image = '<img class="productsImages" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+              $image = '<img loading="lazy" class="productsImages" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
               echo $image;
             } else {
-              echo '<img class="productsImages" src="' . get_template_directory_uri() . '/assets/images/placeholder.png' . '" alt="Placeholder">';
+              echo '<img loading="lazy" class="productsImages" src="' . get_template_directory_uri() . '/assets/images/placeholder.png' . '" alt="Placeholder">';
             }
             ?>
           </div>
@@ -73,7 +73,7 @@ if($lang=='fr_FR'){
                 $class = '';
             }
             ?>
-            <button class="leadpopup cta <?php echo $class; ?> <?php echo $fr_class; ?>"><?php echo t('startYourLine'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <button class="leadpopup cta <?php echo $class; ?> <?php echo $fr_class; ?>"><?php echo t('startYourLine'); ?> <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="<?php echo t('rightArrow'); ?>"></button>
           </div>
         </div>
     <?php

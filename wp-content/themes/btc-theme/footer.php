@@ -10,7 +10,7 @@ if($lang=='fr_FR'){
 ?>
 <section id="footer_img_frame">
     <div id="footerContact">
-        <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/footerContact.webp'; ?>" alt="">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/footerContact.webp'; ?>" alt="<?php echo t('footerContactImage'); ?>">
         <div class="layer"></div>
         <div class="content">
             <div class="heading <?php echo $fr_class; ?>">
@@ -26,7 +26,7 @@ if($lang=='fr_FR'){
                 ?></p>
             <button onclick="scrollToSectionById('lead_form')" class="cta leadpopup <?php echo $fr_class; ?>"><?php
                 echo t('ContactUs');
-                ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+                ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="<?php echo t('rightArrow'); ?>"></button>
         </div>
     </div>
 </section>
@@ -40,7 +40,7 @@ if($lang=='fr_FR'){
 
 <footer>
     <div class="top">
-        <a href="<?php echo t('homeUrl') ?>"><img src="<?php echo get_template_directory_uri() . '/assets/images/footerlogo.svg'; ?>" alt="btc logo"></a>
+        <a href="<?php echo t('homeUrl') ?>"><img src="<?php echo get_template_directory_uri() . '/assets/images/footerlogo.svg'; ?>" alt="BTC logo"></a>
         <div>
             <!-- <p class="title">Leading Textile Manufacturer & Exporter</p> -->
             <p class="title"><?php

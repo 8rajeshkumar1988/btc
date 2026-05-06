@@ -41,8 +41,8 @@ the_post();
     </div>
 </section>
 <section id="about_btc">
-    <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" btcPattern />
-    <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="" btcPattern />
+    <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="<?php echo t('btcPattern'); ?>" btcPattern />
+    <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="<?php echo t('btcPattern'); ?>" btcPattern />
 
     <div class="about_btc_head">
         <div class="heading fr" animateHeading>
@@ -58,7 +58,7 @@ the_post();
             <div class="swiper-wrapper">
                 <div class="swiper-slide category_item" animateHeading>
                     <div class="category_image">
-                        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/home/bTC_Gate_.webp"  ?>" alt="" />
+                        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/home/bTC_Gate_.webp"  ?>" alt="image de la porte d'entrée du BTC" />
                     </div>
                     <p class="category_description" >
                     BTC, située au Bénin, est la première usine d'Afrique de l'Ouest entièrement intégrée verticalement, transformant du coton local nourripar la pluie, sans OGM certifié CmiA en vêtements haut de gamme largement reconnu et approuvé par les associations d'égrenage et les acteurs de l'industrie.
@@ -66,7 +66,7 @@ the_post();
                 </div>
                 <div class="swiper-slide category_item" animateHeading>
                     <div class="category_image">
-                        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/cottonbails.webp" ?>" alt="" />
+                        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/cottonbails.webp" ?>" alt="boules de coton" />
                     </div>
                     <p class="category_description">
                     En plus du coton local certifié CmiA, nous travaillons également avec du coton biologique, du coton régénératif et d'autres types de coton durables. De la filature au vêtement, nous garantissons la qualité, l'efficacité et la durabilité à chaque étape.
@@ -74,7 +74,7 @@ the_post();
                 </div>
                 <div class="swiper-slide category_item" animateHeading>
                     <div class="category_image">
-                        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/about-sec-3.webp"  ?>" alt="" />
+                        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/about-sec-3.webp"  ?>" alt="photo d'une usine de balles de coton" />
                     </div>
                     <p class="category_description">
                     Nous produisons des fils, des tissus et des vêtements de haute qualité, y compris des T-shirts, des polos, des sweats à capuche, etc. Nos procédés respectueux de l'environnement, tels que la teinture des fils, l'impression et la broderie, combinent une technologie de pointe.
@@ -87,10 +87,10 @@ the_post();
     <div class="about_btc_button_container">
         <div class="about_btc_buttons">
             <button class="about_btc-prev globalNavigation fr navBtnColor">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg"  ?>" alt="right arrow " />
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg"  ?>" alt="<?php echo t('rightArrow'); ?>" />
             </button>
             <button class="about_btc-next globalNavigation fr navBtnColor">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg"  ?>" alt="right arrow " />
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg"  ?>" alt="<?php echo t('rightArrow'); ?>" />
             </button>
         </div>
     </div>
@@ -120,7 +120,7 @@ the_post();
         <!-- <video autoplay loop muted playsinline poster="<?php echo get_template_directory_uri() . "/assets/images/mission_banner.webp"  ?>">
             <source src="<?php echo get_template_directory_uri() . "/assets/images/mission.mp4"  ?>" >
         </video>    -->
-        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/mission_img.webp"  ?>" alt="">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/mission_img.webp"  ?>" alt="image des employés travaillant dans l'usine">
     </div>
     <div class="vision_mission_container text" animateHeading>
         <h2 class="fr">Mission</h2>
@@ -146,7 +146,7 @@ $leaderships = new WP_Query(array(
 if ($leaderships->have_posts()) {
 ?>
     <section id="our_leadership">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt=""  btcPattern />
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png"  ?>" alt="<?php echo t('btcPattern'); ?>"  btcPattern />
         <div class="heading fr" animateHeading>
             <p>Notre Direction</p>
             <h2>Des Visionnaires Qui Façonnent l'Avenir</h2>
@@ -180,7 +180,7 @@ if ($leaderships->have_posts()) {
                             <h2 class="leader_title"><?php the_title(); ?> </h2><span style="transform: rotate(45deg);font-size: var(--font-24);color: var(--green); margin-right:auto;">↑</span> 
                              <?php if (get_field('linkedin_profile')): ?>
                                 <a href="<?php the_field('linkedin_profile'); ?>" target="_blank" rel="noopener">
-                                    <img class='linkedin_icon' src="<?php echo get_template_directory_uri(); ?>/assets/images/linked.png" alt="linkedin" />
+                                    <img class='linkedin_icon' src="<?php echo get_template_directory_uri(); ?>/assets/images/linked.png" alt="Icône LinkedIn" />
                                 </a>
                             <?php endif; ?>
                         </div>
@@ -190,7 +190,7 @@ if ($leaderships->have_posts()) {
                             
                             <?php if (get_field('linkedin_profile')): ?>
                                 <a class="linkedin_icon_name" href="<?php the_field('linkedin_profile'); ?>" target="_blank" rel="noopener">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin_blue.png" alt="linkedin" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin_blue.png" alt="Icône LinkedIn" />
                                 </a>
                             <?php endif; ?>
                         </p>
@@ -210,7 +210,7 @@ if ($leaderships->have_posts()) {
 <?php }
 ?>
 <section id="product_page_details">
-    <img src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt=""  btcPattern />
+    <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="<?php echo t('btcPattern'); ?>" btcPattern />
     <div class="heading fr" animateHeading>
         <p>Nos Actionnaires</p>
         <h2>
@@ -220,26 +220,26 @@ if ($leaderships->have_posts()) {
     <div class="shareholder_logos">
         <div class="left">
             <div class="logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/arise_logo.png" ?>" alt="" />
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/arise_logo.png" ?>" alt="Arise logo" />
             </div>
             <div class="logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/LCB.webp" ?>" alt="" />
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/LCB.webp" ?>" alt="LCB logo" />
             </div>
             <div class="logo">
                 <img loading="lazy" 
                     src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/caisse_de_dpots_et_consignations_du_benin_cover.png" ?>"
-                    alt="" />
+                    alt="Caisse de dépôts et consignations du Benin logo" />
             </div>
         </div>
         <div class="right">
             <div class="logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SBTCLOGONEW.png" ?>" alt="" />
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SBTCLOGONEW.png" ?>" alt="SBTC logo" />
             </div>
             <div class="logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SODECO.png" ?>" alt="" />
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/shareholders/SODECO.png" ?>" alt="SODECO logo" />
             </div>
             <!-- <div class="logo">
-                <img src="<?php echo get_template_directory_uri() . "/assets/images/Logo_Cotton-made-in-africa.png" ?>" alt="" />
+                <img src="<?php echo get_template_directory_uri() . "/assets/images/Logo_Cotton-made-in-africa.png" ?>" alt="Cotton Made in Africa logo" />
             </div> -->
         </div>
     </div>
@@ -287,7 +287,7 @@ if ($leaderships->have_posts()) {
             <div class="impact_wrapper_head">
                 <h2 class="fr">PARTENAIRES</h2>
                 <button class="open-btn globalNavigation fr">
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow" />
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>" />
                 </button>
             </div>
             <div class="content">
@@ -310,7 +310,7 @@ if ($leaderships->have_posts()) {
                 </div>
                 <div class="content-btn">
                     <button class="cta leadpopup fr">
-                    Contactez-nous <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+                    Contactez-nous <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>"                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>" />                    />
                     </button>
                 </div>
             </div>
@@ -347,7 +347,7 @@ if ($leaderships->have_posts()) {
                 </div>
                 <div class="content-btn">
                     <button class="cta leadpopup fr">
-                    Contactez-nous <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+                    Contactez-nous <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>" />
                     </button>
                 </div>
             </div>
@@ -381,7 +381,7 @@ if ($leaderships->have_posts()) {
                 </div>
                 <div class="content-btn">
                     <button class="cta leadpopup fr">
-                    Contactez-nous <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+                    Contactez-nous <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>" />
                     </button>
                 </div>
             </div>
@@ -396,7 +396,7 @@ if ($leaderships->have_posts()) {
     <div class="cc_container">
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ISO.webp" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ISO.webp" ?>" alt="ISO logo">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">IMS : ISO 9001/45001/14001</h3>
@@ -405,7 +405,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/cotton_made_in_africa.webp" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/cotton_made_in_africa.webp" ?>" alt="Logo Cotton Made in Africa">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">Coton fabriqué en Afrique (CmiA)</h3>
@@ -414,7 +414,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/leed.webp" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/leed.webp" ?>" alt="LEED logo">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">LEED (Leadership en Conception Énergétique et Environnementale)</h3>
@@ -423,7 +423,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/wrap.webp" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/wrap.webp" ?>" alt="WRAP logo">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">Production Mondiale Accréditée Responsable (WRAP)</h3>
@@ -432,7 +432,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/oekotex.webp" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/oekotex.webp" ?>" alt="Oekotex logo">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">Certification OeKoTex</h3>
@@ -441,7 +441,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ctpat.webp" ?>" alt="">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ctpat.webp" ?>" alt="CTPAT logo">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">CTPAT (Partenariat Commercial Douanier Contre le Terrorisme)</h3>
@@ -450,7 +450,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
             <div class="certificate_logo">
-                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/bsci.webp" ?>" alt="bsci">
+                <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/bsci.webp" ?>" alt="BSCI logo">
             </div>
             <div class="certificate_description">
                 <h3 class="certificate_title">BSCI (Initiative de Conformité Sociale des Entreprises)</h3>
@@ -459,7 +459,7 @@ if ($leaderships->have_posts()) {
         </div>
         <div class="certificate_card">
       <div class="certificate_logo">
-        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/higgindex.webp" ?>" alt="higgindex">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/higgindex.webp" ?>" alt="Higg index logo">
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">Certification de l'Indice de Higg</h3>
@@ -468,7 +468,7 @@ if ($leaderships->have_posts()) {
     </div>
     <div class="certificate_card">
       <div class="certificate_logo">
-        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/smeta.webp" ?>" alt="smeta">
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/smeta.webp" ?>" alt="SMETA logo">
       </div>
       <div class="certificate_description">
         <h3 class="certificate_title">SMETA (Audit du Commerce Éthique des Membres Sedex)</h3>
@@ -482,7 +482,7 @@ if ($leaderships->have_posts()) {
     
     <div class="pop_container">
         <button id="closeBtn">✕</button>
-    <img id="popupImg" src="" />
+    <img id="popupImg" loading="lazy" src="" alt="popup image" />
     <div class="pop_content" data-lenis-prevent>
         <h2 id="popupHeading" class="fr"></h2>
         <div style="display: flex;gap: 10px;align-items: center;">

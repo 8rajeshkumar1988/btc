@@ -69,7 +69,7 @@ get_header();
 </section>
 
 <section id="vertical_integration">
-  <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt=""  btcPattern/>
+  <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="modèle BTC"  btcPattern/>
   <div class="heading fr" animateHeading>
     <h2>Intégration Verticale</h2>
     <p>
@@ -78,11 +78,11 @@ get_header();
   </div>
   <div class="cards_wrapper">
     <div class="card">
-      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/sec.jpg'; ?>" alt="" />
+      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/sec.jpg'; ?>" alt="machine à filer" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/first_icon.png'; ?>" alt="" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/first_icon.png'; ?>" alt="icône de la machine à filer" />
           </div>
           <h3 class="title">Filature</h3>
         </div>
@@ -94,18 +94,18 @@ get_header();
           <div class="card_desc double">
             <p>Partenaire pour les Machines</p>
             <div>
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/reter.png'; ?>" alt="reter" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/reter.png'; ?>" alt="Reter logo" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/first.jpg'; ?>" alt="first" />
+      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/first.jpg'; ?>" alt="machine à tricoter" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/knitting.png'; ?>" alt="knitting" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/knitting.png'; ?>" alt="machine à tricoter icon" />
           </div>
           <h3 class="title">Tricot</h3>
         </div>
@@ -117,19 +117,19 @@ get_header();
           <div class="card_desc double">
             <p>Partenaire pour les Machines</p>
             <div>
-              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/shima-seiki-logo.png'; ?>" alt="shima-seiki-logo" />
-              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/terrot.png'; ?>" alt="terrot" />
+              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/shima-seiki-logo.png'; ?>" alt="Shima Seiki logo" />
+              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/terrot.png'; ?>" alt="Terrot logo" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/dyeing_machines.jpg'; ?>" alt="dyeing_machines" />
+      <img src="<?php echo get_template_directory_uri() . '/assets/images/verticle/dyeing_machines.jpg'; ?>" alt="machines de teinture" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/Dyeing.png'; ?>" alt="Dyeing" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/Dyeing.png'; ?>" alt="machine de teinture icon" />
           </div>
           <h3 class="title">Teinture</h3>
         </div>
@@ -141,18 +141,18 @@ get_header();
           <div class="card_desc double">
             <p>Partenaire pour les Machines</p>
             <div>
-            <img loading="lazy"  src="<?php echo get_template_directory_uri() . '/assets/images/verticle/thiess.png'; ?>" alt="thiess" />
+            <img loading="lazy"  src="<?php echo get_template_directory_uri() . '/assets/images/verticle/thiess.png'; ?>" alt="Thiess logo" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/finishing_section.jpg'; ?>" alt="dyeing_machines" />
+      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/finishing_section.jpg'; ?>" alt="machines de finition" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/finishing.png'; ?>" alt="finishing" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/finishing.png'; ?>" alt="machine de finition icon" />
           </div>
           <h3 class="title">Finition </h3>
         </div>
@@ -164,19 +164,19 @@ get_header();
           <div class="card_desc double">
             <p>Partenaire pour les Machines</p>
             <div>
-              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/brucknerlogo.png'; ?>" alt="" />
-              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/lafer.png'; ?>" alt="" />
+              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/brucknerlogo.png'; ?>" alt="Bruckner logo" />
+              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/lafer.png'; ?>" alt="Lafer logo" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/printing_section.jpg'; ?>" alt="" />
+      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/printing_section.jpg'; ?>" alt="machines d'impression" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/gear.png'; ?>" alt="" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/gear.png'; ?>" alt="machine d'impression icon" />
           </div>
           <h3 class="title">Impression</h3>
         </div>
@@ -187,19 +187,19 @@ get_header();
           <div class="card_desc double">
             <p>Partenaire pour les Machines</p>
             <div>
-              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/roq-newn.png'; ?>" alt="" />
-              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/impress.png'; ?>" alt="" />
+              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/roq-newn.png'; ?>" alt="Roq New logo" />
+              <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/impress.png'; ?>" alt="Impress logo" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/embroidery.jpg'; ?>" alt="" />
+      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/embroidery.jpg'; ?>" alt="machine à broder" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/embroidery_clock.png'; ?>" alt="" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/embroidery_clock.png'; ?>" alt="machine à broder icon" />
           </div>
           <h3 class="title">Broderie</h3>
         </div>
@@ -211,18 +211,18 @@ get_header();
           <div class="card_desc double">
             <p>Partenaire pour les Machines</p>
             <div>
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/barudan.png'; ?>" alt="" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/barudan.png'; ?>" alt="Barudan logo" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/stitching.jpg'; ?>" alt="" />
+      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/stitching.jpg'; ?>" alt="machine à coudre" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/stitching_machine.png'; ?>" alt="" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/stitching_machine.png'; ?>" alt="machine à coudre icon" />
           </div>
           <h3 class="title">Couture</h3>
         </div>
@@ -234,19 +234,19 @@ get_header();
           <div class="card_desc double">
             <p>Partenaire pour les Machines</p>
             <div>
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/juki.png'; ?>" alt="" />
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/pegasus.png'; ?>" alt="" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/juki.png'; ?>" alt="Juki logo" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/pegasus.png'; ?>" alt="Pegasus logo" />
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="card">
-      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/laundry_machine.jpg'; ?>" alt="" />
+      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/laundry_machine.jpg'; ?>" alt="machine à laver" />
       <div class="card_info">
         <div class="card_head">
           <div class="icon">
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/laundry_icon.png'; ?>" alt="" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/laundry_icon.png'; ?>" alt="machine à laver icon" />
           </div>
           <h3 class="title">Blanchisserie</h3>
         </div>
@@ -258,7 +258,7 @@ get_header();
           <div class="card_desc double">
             <p>Partenaire pour les Machines</p>
             <div>
-            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/ramsons.png'; ?>" alt="" />
+            <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/ramsons.png'; ?>" alt="Ramsons logo" />
             </div>
           </div>
         </div>
@@ -283,7 +283,7 @@ get_header();
       </ul>
     </div>
     <div class="image_wrapper">
-      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/cotton.webp'; ?>" alt="" />
+      <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/cotton.webp'; ?>" alt="champs de coton" />
     </div>
   </div>
   <div class="technology_and_innovation">
@@ -324,7 +324,7 @@ get_header();
 </section>
 
 <section id="logistics_shipping_efficiency">
-  <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
+  <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="modèle BTC" btcPattern />
 
   <div class="logistics_shipping_efficiency_head">
     <div class="heading fr" animateHeading>
@@ -338,7 +338,7 @@ get_header();
     <div class="category_item first">
       <h2>Aéroport</h2>
       <div class="category_image">
-        <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/airport.webp'; ?>" alt="" />
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/airport.webp'; ?>" alt="Aéroport" />
       </div>
       <p class="category_description">
       Nous offrons une connectivité aérienne directe vers des destinations clés aux États-Unis et dans l'Union Européenne, garantissant une logistique transparente et des délais de transit réduits.
@@ -347,7 +347,7 @@ get_header();
     <div class="category_item second">
       <h2>Port Maritime</h2>
       <div class="category_image">
-        <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/sea_port.jpg'; ?>" alt="" />
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/sea_port.jpg'; ?>" alt="Port Maritime" />
       </div>
       <p class="category_description">
       Située à seulement 40 km du port maritime, notre installation garantit que les marchandises atteignent le port en 30 minutes pour une expédition mondiale plus rapide.
@@ -356,7 +356,7 @@ get_header();
     <div class="category_item third">
       <h2>Port Sec</h2>
       <div class="category_image">
-        <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/dry_port.jpg'; ?>" alt="" />
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/verticle/dry_port.jpg'; ?>" alt="Port Sec" />
       </div>
       <p class="category_description">
       Port sec à l'intérieur de la zone où le dédouanement a lieu, sans tracas.

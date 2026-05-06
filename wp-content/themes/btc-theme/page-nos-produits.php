@@ -38,7 +38,7 @@ the_post();
   </div>
 </section>
 <section id="product_page_details">
-  <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
+  <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="modèle BTC" btcPattern />
   <h2 class="fr">
   Nous sommes fiers d'offrir une grande variété de vêtements de haute qualité et <span> fabriqués de manière durable.</span>
   </h2>
@@ -50,7 +50,7 @@ the_post();
     La flexibilité que nous offrons repose sur une expertise textile approfondie, une intégration verticale et un engagement clair en faveur de la qualité et de la personnalisation à grande échelle.
     </p>
     <button class="cta leadpopup fr" ctaButton >
-    Contactez-nous <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
+    Contactez-nous <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="flèche droite" />
     </button>
   </div>
 </section>
@@ -120,7 +120,7 @@ the_post();
 
           $image = '<img class="category_list_img" loading="lazy" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
         } else {
-          $image = '<img class="category_list_img" loading="lazy" src="' . get_template_directory_uri() . '/assets/category_item.png" alt="Category Item">';
+          $image = '<img class="category_list_img" loading="lazy" src="' . get_template_directory_uri() . '/assets/category_item.png" alt="Article de catégorie">';
         }
 
 
@@ -146,7 +146,7 @@ the_post();
         <div class="category_list_card">
           <a href="<?php the_permalink(); ?>" class="category_list_card_img">
             <?php echo $image; ?>
-            <p class="cta fr">Commencez votre ligne<img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow"></p>
+            <p class="cta fr">Commencez votre ligne<img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="flèche droite"></p>
           </a>
 
           <div class="category_list_card_detail">
@@ -200,20 +200,20 @@ the_post();
     </div>
     <div class="custom_product_detail_list">
       <div animateHeading>
-        <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/machine.png'; ?>" alt="machine icon for custom products" />
+        <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/machine.png'; ?>" alt="icône de machine pour produits personnalisés" />
         <p>
         Options d'impression, de broderie et de teinture personnalisées adaptées aux besoins de votre marque.
         </p>
       </div>
       <div animateHeading>
-        <img loading="lazy" alt="shirt icon for custom products" src="<?php echo get_template_directory_uri() . '/assets/images/shirtIcon.png'; ?>" />
+        <img loading="lazy" alt="icône de chemise pour produits personnalisés" src="<?php echo get_template_directory_uri() . '/assets/images/shirtIcon.png'; ?>" />
         <p>
         Des vêtements confectionnés à la commande pour des produits vraiment personnalisés.
         </p>
       </div>
     </div>
     <button class="cta leadpopup fr" ctaButton >
-    <?php echo t('startCustomizingToday'); ?> <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
+    <?php echo t('startCustomizingToday'); ?> <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="flèche droite" />
     </button>
   </div>
 </section>

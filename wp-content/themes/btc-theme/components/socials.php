@@ -7,7 +7,7 @@ if($lang=='fr_FR'){
 }
 ?>
 <section id="our_social">
-    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC pattern.svg'; ?>" alt="btcPattern"  btcpattern />
+    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC pattern.svg'; ?>" alt="<?php echo t('btcPattern'); ?>"  btcpattern />
 
     <div class="our_social_head">
         <div class="heading <?php echo $fr_class; ?>" animateHeading>
@@ -16,7 +16,7 @@ if($lang=='fr_FR'){
         </div>
         <a href="https://www.linkedin.com/company/benin-textile-corporation/" target="_blank" class="cta <?php echo $fr_class; ?>" ctaButton>
             <?php echo t('followOurThreads'); ?>
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="<?php echo t('rightArrow'); ?>" />
         </a>
     </div>
     <div class="swiper social_media">
@@ -78,7 +78,7 @@ if($lang=='fr_FR'){
 
     <a href="https://www.linkedin.com/company/benin-textile-corporation/" target="_blank" class="cta <?php echo $fr_class; ?>" ctaButton >
         <?php echo t('followOurThreads'); ?>
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow" />
+            <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="<?php echo t('rightArrow'); ?>" />
     </a>
 </section>
 

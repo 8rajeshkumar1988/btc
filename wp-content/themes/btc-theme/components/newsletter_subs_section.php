@@ -37,7 +37,7 @@ if($lang=='fr_FR'){
         <div class="subscribe_btn">
             <button class="cta subscribeCta <?php echo $fr_class; ?>">
             <?php echo t('newsletterSubscribe'); ?>
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg"  ?>" alt="right arrow" />
+            <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg"  ?>" alt="<?php echo t('rightArrow'); ?>" />
             </button>
             <p class="newsletter_error"></p>
             <p class="subscribe_success"></p>

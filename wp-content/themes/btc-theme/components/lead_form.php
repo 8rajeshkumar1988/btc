@@ -99,7 +99,7 @@ if($lang=='fr_FR'){
         </div>
     </div>
     <div class="btn_container">
-        <button class="cta lead_form_submit <?php echo $fr_class; ?>"> <?php echo t('submit'); ?><img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
+        <button class="cta lead_form_submit <?php echo $fr_class; ?>"> <?php echo t('submit'); ?><img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>"> </button>
         <p class="lead_form_error"></p>
     </div>
 </form>

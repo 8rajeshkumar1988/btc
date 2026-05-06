@@ -38,7 +38,7 @@ if ($lang == 'fr_FR') {
       $image_url = isset($banner_image['sizes']['full']) ? $banner_image['sizes']['full'] : $banner_image['url'];
       $alt_text = isset($banner_image['alt']) ? $banner_image['alt'] : '';
 
-      echo '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+      echo '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '" />';
     }
 
     ?>
@@ -101,7 +101,7 @@ if ($lang == 'fr_FR') {
 </section>
 
 <div class="blog_content">
-    <img class="pattern" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="BTC pattern" />
+    <img class="pattern" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="<?php echo t('btcPattern'); ?>" />
 
   <?php the_content(); ?>
 </div>
@@ -161,7 +161,7 @@ if ($posts->have_posts()) {
 
                 ?>
                 <p class="cta <?php echo $fr_class; ?>">
-                <?php echo t('viewArticle'); ?> <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="" />
+                <?php echo t('viewArticle'); ?> <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>" />
                 </p>
               </a>
               <a href="<?php the_permalink(); ?>" class="category_title"><?php the_title(); ?></a>
@@ -176,10 +176,10 @@ if ($posts->have_posts()) {
     </div>
     <div class="recommendations_buttons">
       <button class="recommendations-prev">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+        <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>" />
       </button>
       <button class="recommendations-next">
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow " />
+        <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>" />
       </button>
     </div>
   </section>

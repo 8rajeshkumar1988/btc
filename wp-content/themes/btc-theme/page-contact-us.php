@@ -33,17 +33,17 @@ the_post();
             <div class="heading" animateHeadingBanner>
                 <p><?php the_title(); ?></p>
                 <?php the_content(); ?>
-                <button onclick="scrollToSectionById('lead_form')" class="cta">Reach Out to Us now <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
+                <button onclick="scrollToSectionById('lead_form')" class="cta">Reach Out to Us now <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="right arrow"> </button>
             </div>
             <div class="contacts" >
                 <p>Benin Textile Corporation</p>
                 <a href="">Ilot C/SB, Tangbo-Djèvié, Plot F-1, <br> Maison Etat Béninois, Zè - Benin</a>
                 <div>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/mailIcon.svg" ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/mailIcon.svg" ?>" alt="mail icon">
                     <a href="mailto:info.btc@arisenet.com">info.btc@arisenet.com</a>
                 </div>
                 <div>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/callIcon.svg" ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/callIcon.svg" ?>" alt="call icon">
                     <a href="tel:+229 5145127009">+229 5145127009</a>
                 </div>
             </div>
@@ -57,11 +57,11 @@ the_post();
     <p>Benin Textile Corporation</p>
     <a href="">Ilot C/SB, Tangbo-Djèvié, Plot F-1,  Maison Etat Béninois, Zè - Benin</a>
     <div animateHeadingBanner>
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/mailIcon.svg" ?>" alt="">
+        <img src="<?php echo get_template_directory_uri() . "/assets/images/mailIcon.svg" ?>" alt="mail icon">
         <a href="mailto:info.btc@arisenet.com">info.btc@arisenet.com</a>
     </div>
     <div animateHeadingBanner>
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/callIcon.svg" ?>" alt="">
+        <img src="<?php echo get_template_directory_uri() . "/assets/images/callIcon.svg" ?>" alt="call icon">
         <a href="tel:+229 5145127009">+229 5145127009</a>
     </div>
 </div>
@@ -83,7 +83,7 @@ $faqs = get_post_meta(get_the_ID(), 'category_faqs', true);
 
 if (!empty($faqs)) { ?>
     <section id="faqs">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
+        <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="btc pattern image" btcPattern />
         <div class="heading" animateHeading>
             <p>Frequently Asked Questions</p>
             <h2>Your Questions, Answered</h2>
@@ -106,7 +106,7 @@ if (!empty($faqs)) { ?>
                         <img
                             class="menu open"
                             src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>"
-                            alt="clase icon" />
+                            alt="arrow icon" />
                     </div>
                     <div class="ans" style="display: none">
                         <p>
@@ -139,7 +139,7 @@ if (!empty($faqs)) { ?>
       </div> -->
     <div class="virtual_container" id="virtualContainer" style="aspect-ratio: 16/9;">
         <!-- <button class="close_btn" id="closeBtn">
-            <img src="<?php echo get_template_directory_uri() . "/assets/images/close.svg"  ?>" alt="" />
+            <img src="<?php echo get_template_directory_uri() . "/assets/images/close.svg"  ?>" alt="close icon" />
         </button>
         <div class="map_overlay" id="mapOverlay">
             Double-click to enter view

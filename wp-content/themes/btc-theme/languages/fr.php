@@ -168,5 +168,13 @@ return [
     'productsUrl' => '/fr/nos-produits',
     'blogsUrl' => '/fr/tous-les-blogs',
     'eventsUrl' => '/fr/evenements-et-engagements/',
-    'siteDesc' => "Nous sommes le premier fabricant et exportateur de textiles d'Afrique, proposant des solutions complètes en matière d'habillement, conformes aux normes de durabilité reconnues mondialement."
+    'siteDesc' => "Nous sommes le premier fabricant et exportateur de textiles d'Afrique, proposant des solutions complètes en matière d'habillement, conformes aux normes de durabilité reconnues mondialement.",
+
+
+
+    // alternate text
+    "rightArrow" => "flèche droite",
+    "btcPattern" => "modèle BTC",
+    "closeIcon" => "icône fermer",
+    'footerContactImage' => 'image de contact de pied de page',
 ];

@@ -38,7 +38,7 @@ the_post();
   </div>
 </section>
 <section id="product_page_details">
-  <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
+  <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="btc pattern" btcPattern />
   <h2>
     We pride ourselves on offering a wide variety of
     <span>high quality, sustainably made apparel.</span>

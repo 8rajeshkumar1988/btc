@@ -92,7 +92,7 @@
                 <p><?php the_title(); ?></p>
                 <?php the_content(); ?>
             </div>
-            <button class="cta leadpopup">Start your line<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <button class="cta leadpopup">Start your line<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="button arrow"></button>
         </div>
         <div class="layer"></div>
         <div class="layer2"></div>
@@ -147,7 +147,7 @@
 
                                 ?>
                                 <p class="title"><?php the_title(); ?></p>
-                                <a href="<?php the_permalink(); ?>" class="cta">View range<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
+                                <a href="<?php the_permalink(); ?>" class="cta">View range<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="button arrow"></a>
                             </div>
                             <p><?php the_title(); ?></p>
                         </div>
@@ -158,8 +158,8 @@
                 ?>
             </div>
             <div class="btnss">
-                <button class="swiper-button-next productNext globalNavigation navBtnColor" aria-label="Next products"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
-                <button class="swiper-button-prev productPrev globalNavigation navBtnColor" aria-label="Previous products"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+                <button class="swiper-button-next productNext globalNavigation navBtnColor" aria-label="Next products"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="button arrow"></button>
+                <button class="swiper-button-prev productPrev globalNavigation navBtnColor" aria-label="Previous products"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="button arrow"></button>
             </div>
         </div>
     </div>
@@ -167,19 +167,19 @@
 
 
 <section id="sustainabiltyStandard">
-    <img src="<?php echo get_template_directory_uri() . '/assets/images/sustain_back_svg.png'; ?>" alt="" class="back_svg" btcPattern>
+    <img src="<?php echo get_template_directory_uri() . '/assets/images/sustain_back_svg.png'; ?>" alt="Compliant With Global Sustainability Standards" class="back_svg" btcPattern>
     <div class="leftContent">
         <div class="heading" animateHeading>
             <p>Sustainability Standards</p>
             <h3>Compliant With Global Sustainability Standards</h3>
         </div>
-        <button class="cta leadpopup" ctaButton>Learn More <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+        <button class="cta leadpopup" ctaButton>Learn More <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Learn more button arrow"></button>
     </div>
     <div class="accordian">
         <div class="faq default-open" >
             <div class="head">
                 <p>Carbon Footprint of Factory</p>
-                <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
+                <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="close icon">
             </div>
             <div class="ans" style="display: none;">
                 <p>We reduce emissions and waste through sustainable sourcing and clean production.</p>
@@ -193,7 +193,7 @@
         <div class="faq" >
             <div class="head">
                 <p>Sustainable Infra</p>
-                <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
+                <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="close icon">
             </div>
             <div class="ans" style="display: none;">
                 <p>Our facilities meet global sustainability benchmarks, guided by ESIA and IFC standards.</p>
@@ -207,7 +207,7 @@
         <div class="faq" >
             <div class="head">
                 <p>Tech</p>
-                <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
+                <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="close icon">
             </div>
             <div class="ans" style="display: none;">
                 <p>Smart tech drives our efficient, eco-conscious production.</p>
@@ -221,7 +221,7 @@
         <div class="faq" >
             <div class="head">
                 <p>Certifications</p>
-                <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
+                <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="close icon">
             </div>
             <div class="ans" style="display: none;">
                 <p>We meet leading global standards in quality, safety, and sustainability.</p>
@@ -246,13 +246,13 @@
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/CTPAT_Master_Logo.png" ?>" alt="CTPAT - Secure supply chain for US exports">    
                     Secure supply chain for US exports</li>
                     <li>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/bsci.png" ?>" alt="bsci">    
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/bsci.png" ?>" alt="Meeting global ethical sourcing standards">    
                     Meeting global ethical sourcing standards</li>
                     <li>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/newhigg.png" ?>" alt="bsci">    
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/newhigg.png" ?>" alt="Verified Sustainable Manufacturing Standards">    
                     Verified Sustainable Manufacturing Standards</li>
                     <li>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/newsmeta.png" ?>" alt="bsci">    
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/newsmeta.png" ?>" alt="Ethical & Responsible Workplace Practices">    
                     Ethical & Responsible Workplace Practices</li>
                 </ul>
             </div>
@@ -261,7 +261,7 @@
 </section>
 
 <section id="ourCapabilities">
-    <img src="<?php echo get_template_directory_uri() . '/assets/images/capabilities_back.svg'; ?>" alt="" class="back" btcPattern />
+    <img src="<?php echo get_template_directory_uri() . '/assets/images/capabilities_back.svg'; ?>" alt="From Farm To Fashion" class="back" btcPattern />
     
     <div class="leftContent heading" animateHeading>
         <p>Our Capabilities</p>
@@ -270,7 +270,7 @@
     <div class="rightContent">
         <p ourCapabilitiesRightContent>BTC combines <span>state-of-the-art technology</span> with sustainable practices, ensuring every product
             is crafted with care, precision and environmental responsibility.</p>
-        <button id="exploreWhatWeDo"   class="cta">Explore What We Do<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+        <button id="exploreWhatWeDo"   class="cta">Explore What We Do<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Explore What We Do - button arrow"></button>
     </div>
     <div class="cap_container swiper ourCapabilities">
         <div class="swiper-wrapper">
@@ -326,13 +326,13 @@
         </div>
         <div class="swiper-pagination"></div>
         <div class="btnssNew">
-            <button class="swiper-button-next capabilitiesNext globalNavigation navBtnColor" aria-label="Next capabilities"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
-            <button class="swiper-button-prev capabilitiesPrev swiper-button-disabled navBtnColor globalNavigation" aria-label="Previous capabilities"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <button class="swiper-button-next capabilitiesNext globalNavigation navBtnColor" aria-label="Next capabilities"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="arrow svg"></button>
+            <button class="swiper-button-prev capabilitiesPrev swiper-button-disabled navBtnColor globalNavigation" aria-label="Previous capabilities"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="arrow svg"></button>
         </div>
     </div>
 
 
-    <img src="<?php echo get_template_directory_uri() . '/assets/images/closeSvg.svg'; ?>" alt="" class="closeCapabilities" id="closeCapabilities">
+    <img src="<?php echo get_template_directory_uri() . '/assets/images/closeSvg.svg'; ?>" alt="close icon" class="closeCapabilities" id="closeCapabilities">
 </section>
 
 
@@ -345,7 +345,7 @@
     <div class="heading" animateHeading>
         <p>End-To-End Apparel Manufacturing Solutions</p>
         <h3>Fully Integrated Textile Park</h3>
-        <a href="/capabilities"  class="cta">Explore Capabilities<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
+        <a href="/capabilities"  class="cta">Explore Capabilities<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Explore Capabilities - button arrow"></a>
     </div>
     <video
         id="linkedInVideo"

@@ -33,17 +33,17 @@ the_post();
             <div class="heading fr" animateHeadingBanner>
                 <p><?php the_title(); ?></p>
                 <?php the_content(); ?>
-                <button onclick="scrollToSectionById('lead_form')" class="cta fr">Contactez - nous maintenant <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt=""> </button>
+                <button onclick="scrollToSectionById('lead_form')" class="cta fr">Contactez - nous maintenant <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="flèche droite"> </button>
             </div>
             <div class="contacts" >
                 <p>Bénin Textile Corporation</p>
                 <a href="">Ilot C/SB, Tangbo-Djévié, Plot F-1,<br>Maison Etat Béninois, Zè-Bénin</a>
                 <div>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/mailIcon.svg" ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/mailIcon.svg" ?>" alt="icône de courrie">
                     <a href="mailto:info.btc@arisenet.com">info.btc@arisenet.com</a>
                 </div>
                 <div>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/callIcon.svg" ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/callIcon.svg" ?>" alt="icône d'appel">
                     <a href="tel:+229 5145127009">+229 5145127009</a>
                 </div>
             </div>
@@ -59,11 +59,11 @@ the_post();
 Maison Etat Béninois, Zè-Bénin
 </a>
     <div animateHeadingBanner>
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/mailIcon.svg" ?>" alt="">
+        <img src="<?php echo get_template_directory_uri() . "/assets/images/mailIcon.svg" ?>" alt="icône de courrie">
         <a href="mailto:info.btc@arisenet.com">info.btc@arisenet.com</a>
     </div>
     <div animateHeadingBanner>
-        <img src="<?php echo get_template_directory_uri() . "/assets/images/callIcon.svg" ?>" alt="">
+        <img src="<?php echo get_template_directory_uri() . "/assets/images/callIcon.svg" ?>" alt="icône d'appel">
         <a href="tel:+229 5145127009">+229 5145127009</a>
     </div>
 </div>
@@ -84,7 +84,7 @@ $faqs = get_post_meta(get_the_ID(), 'category_faqs', true);
 
 if (!empty($faqs)) { ?>
     <section id="faqs">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="" btcPattern />
+        <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC_pattern.png'; ?>" alt="image de motif btc" btcPattern />
         <div class="heading fr" animateHeading>
             <p>Questions Fréquemment Posées</p>
             <h2>Réponses à Vos Questions</h2>
@@ -107,7 +107,7 @@ if (!empty($faqs)) { ?>
                         <img
                             class="menu open"
                             src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>"
-                            alt="clase icon" />
+                            alt="icône de flèche" />
                     </div>
                     <div class="ans" style="display: none">
                         <p>

@@ -90,7 +90,7 @@
                 <p><?php the_title(); ?></p>
                 <?php the_content(); ?>
             </div>
-            <button class="cta leadpopup fr">Commencez votre ligne<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <button class="cta leadpopup fr">Commencez votre ligne<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="flèche du bouton"></button>
         </div>
         <div class="layer"></div>
         <div class="layer2"></div>
@@ -145,7 +145,7 @@
 
                                 ?>
                                 <p class="title"><?php the_title(); ?></p>
-                                <a href="<?php the_permalink(); ?>" class="cta fr">Voir la gamme<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
+                                <a href="<?php the_permalink(); ?>" class="cta fr">Voir la gamme<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="flèche du bouton"></a>
                             </div>
                             <p><?php the_title(); ?></p>
                         </div>
@@ -156,8 +156,8 @@
                 ?>
             </div>
             <div class="btnss">
-                <button class="swiper-button-next productNext globalNavigation navBtnColor fr" aria-label="Next products"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
-                <button class="swiper-button-prev productPrev globalNavigation navBtnColor fr" aria-label="Previous products"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+                <button class="swiper-button-next productNext globalNavigation navBtnColor fr" aria-label="Next products"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="flèche du bouton"></button>
+                <button class="swiper-button-prev productPrev globalNavigation navBtnColor fr" aria-label="Previous products"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="flèche du bouton"></button>
             </div>
         </div>
     </div>
@@ -166,19 +166,19 @@
 
 
 <section id="sustainabiltyStandard">
-    <img src="<?php echo get_template_directory_uri() . '/assets/images/sustain_back_svg.png'; ?>" alt="" class="back_svg" btcPattern>
+    <img src="<?php echo get_template_directory_uri() . '/assets/images/sustain_back_svg.png'; ?>" alt="Conforme Aux Normes Mondiales De Durabilité" class="back_svg" btcPattern>
     <div class="leftContent">
         <div class="heading fr" animateHeading>
             <p>Normes de Durabilité</p>
             <h3>Conforme Aux Normes Mondiales De Durabilité</h3>
         </div>
-        <button class="cta leadpopup fr" ctaButton>En Savoir Plus <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+        <button class="cta leadpopup fr" ctaButton>En Savoir Plus <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="En Savoir Plus  - flèche du bouton"></button>
     </div>
     <div class="accordian">
         <div class="faq default-open" >
             <div class="head">
                 <p>Empreinte Carbone de l'Usine</p>
-                <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
+                <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="icône de fermeture">
             </div>
             <div class="ans" style="display: none;">
                 <p>Nous réduisons les émissions et les déchets grâce à un approvisionnement durable et à une production propre.</p>
@@ -192,7 +192,7 @@
         <div class="faq" >
             <div class="head">
                 <p>Infrastructures Durables</p>
-                <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
+                <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="icône de fermeture">
             </div>
             <div class="ans" style="display: none;">
                 <p>Nos installations répondent aux critères mondiaux de durabilité, guidés par les normes ESIA et IFC.</p>
@@ -206,7 +206,7 @@
         <div class="faq" >
             <div class="head">
                 <p>Technologie</p>
-                <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
+                <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="icône de fermeture">
             </div>
             <div class="ans" style="display: none;">
                 <p>La technologie intelligente est le moteur de notre production efficace et respectueuse de l'environnement.</p>
@@ -220,38 +220,38 @@
         <div class="faq" >
             <div class="head">
                 <p>Certifications</p>
-                <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="clase icon">
+                <img class="menu open" src="<?php echo get_template_directory_uri() . '/assets/images/arow_donw.svg'; ?>" alt="icône de fermeture">
             </div>
             <div class="ans" style="display: none;">
                 <p>Nous respectons les principales normes mondiales en matière de qualité, de sécurité et de durabilité.</p>
                 <ul class="certificates fr">
                     <li>
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ISO.png" ?>" alt=" ISO 9001/45001/14001 - Environmental & safety management">
+                        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/ISO.png" ?>" alt="Gestion de l'environnement et de la sécurité">
                         Gestion de l'environnement et de la sécurité
                     </li>
                     <li>
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/cotton_made_in_africa.png" ?>" alt="Coton Africain durable">    
                     Coton Africain durable</li>
                     <li>
-                        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/oekotex.webp" ?>" alt="OekoTex - Tested for harmful substances">
+                        <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/oekotex.webp" ?>" alt="Testé pour les substances nocives">
                         Testé pour les substances nocives</li>
                     <li>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/wrap.png" ?>" alt="WRAP - Ethical labor and legal compliance">    
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/wrap.png" ?>" alt="Travail éthique et conformité légale">    
                     Travail éthique et conformité légale</li>
                     <li>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/leed.png" ?>" alt="LEED - Green, energy-saving buildings">    
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/certificates/leed.png" ?>" alt="Bâtiments écologiques et économes en énergie">    
                     Bâtiments écologiques et économes en énergie</li>
                     <li>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/CTPAT_Master_Logo.png" ?>" alt="CTPAT - Secure supply chain for US exports">    
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/CTPAT_Master_Logo.png" ?>" alt="Chaîne d'approvisionnement sécurisée pour les exportations américaines">    
                     Chaîne d'approvisionnement sécurisée pour les exportations américaines</li>
                     <li>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/bsci.png" ?>" alt="bsci">    
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/bsci.png" ?>" alt="Répondre aux normes mondiales d'approvisionnement éthique">    
                     Répondre aux normes mondiales d'approvisionnement éthique</li>
                     <li>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/newhigg.png" ?>" alt="bsci">    
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/newhigg.png" ?>" alt="Normes De Confection Durables Vérifiées">    
                     Normes De Confection Durables Vérifiées</li>
                     <li>
-                    <img src="<?php echo get_template_directory_uri() . "/assets/images/newsmeta.png" ?>" alt="bsci">    
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/newsmeta.png" ?>" alt="Pratiques Éthiques et Responsables En Milieu de Travail">    
                     Pratiques Éthiques et Responsables En Milieu de Travail</li>
                 </ul>
             </div>
@@ -260,7 +260,7 @@
 </section>
 
 <section id="ourCapabilities">
-    <img src="<?php echo get_template_directory_uri() . '/assets/images/capabilities_back.svg'; ?>" alt="" class="back" btcPattern />
+    <img src="<?php echo get_template_directory_uri() . '/assets/images/capabilities_back.svg'; ?>" alt="De La Ferme À La Mode" class="back" btcPattern />
     
     <div class="leftContent heading fr" animateHeading>
         <p>Nos Capacités</p>
@@ -268,7 +268,7 @@
     </div>
     <div class="rightContent">
         <p ourCapabilitiesRightContent>BTC combine une technologie de pointe avec des pratiques durables, garantissant que chaque produit est fabriqué avec soin, précision et responsabilité environnementale.</p>
-        <button id="exploreWhatWeDo"   class="cta small fr">Découvrez ce que nous faisons<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+        <button id="exploreWhatWeDo"   class="cta small fr">Découvrez ce que nous faisons<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Découvrez ce que nous faisons - flèche du bouton"></button>
     </div>
     <div class="cap_container swiper ourCapabilities">
         <div class="swiper-wrapper">
@@ -324,13 +324,13 @@
         </div>
         <div class="swiper-pagination"></div>
         <div class="btnssNew">
-            <button class="swiper-button-next capabilitiesNext globalNavigation navBtnColor fr" aria-label="Next capabilities"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
-            <button class="swiper-button-prev capabilitiesPrev swiper-button-disabled navBtnColor globalNavigation fr" aria-label="Previous capabilities"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></button>
+            <button class="swiper-button-next capabilitiesNext globalNavigation navBtnColor fr" aria-label="Next capabilities"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="flèche du bouton"></button>
+            <button class="swiper-button-prev capabilitiesPrev swiper-button-disabled navBtnColor globalNavigation fr" aria-label="Previous capabilities"><img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="flèche du bouton"></button>
         </div>
     </div>
 
 
-    <img src="<?php echo get_template_directory_uri() . '/assets/images/closeSvg.svg'; ?>" alt="" class="closeCapabilities" id="closeCapabilities">
+    <img src="<?php echo get_template_directory_uri() . '/assets/images/closeSvg.svg'; ?>" alt="icône de fermeture" class="closeCapabilities" id="closeCapabilities">
 </section>
 
 
@@ -343,7 +343,7 @@
     <div class="heading fr" animateHeading>
         <p>Solutions De Confection De Vêtements De Bout En Bout</p>
         <h3>Parc Textile Entièrement Intégré</h3>
-        <a href="/fr/capacites"  class="cta fr">Explorer les Capacités<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt=""></a>
+        <a href="/fr/capacites"  class="cta fr">Explorer les Capacités<img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="Explorer les Capacités - flèche du bouton"></a>
     </div>
     <video
         id="linkedInVideo"

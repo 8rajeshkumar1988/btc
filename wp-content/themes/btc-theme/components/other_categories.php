@@ -28,10 +28,10 @@ if($lang=='fr_FR'){
        </div>
        <div class="explore_other_buttons">
          <button class="explore_other-prev globalNavigation <?php echo $fr_class; ?> navBtnColor">
-           <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
+           <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="<?php echo t('rightArrow'); ?>" />
          </button>
          <button class="explore_other-next globalNavigation <?php echo $fr_class; ?> navBtnColor">
-           <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
+           <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="<?php echo t('rightArrow'); ?>" />
          </button>
        </div>
      </div>
@@ -65,12 +65,12 @@ if($lang=='fr_FR'){
                     $title_text = get_the_title();
                   }
 
-                  $image = '<img  src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+                  $image = '<img loading="lazy" src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
                   echo  $image;
 
                   ?>
                  <p class="cta <?php echo $fr_class; ?>">
-                   <?php echo t('exploreMore'); ?> <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="" />
+                   <?php echo t('exploreMore'); ?> <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="<?php echo t('rightArrow'); ?>" />
                  </p>
                </a>
                <a href="<?php the_permalink(); ?>" class="category_title <?php echo $fr_class; ?>"><?php the_title(); ?></a>
@@ -89,10 +89,10 @@ if($lang=='fr_FR'){
      </div>
       <div class="explore_other_buttons in_mobile_explore">
          <button class="explore_other-prev globalNavigation <?php echo $fr_class; ?> navBtnColor">
-           <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
+           <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="<?php echo t('rightArrow'); ?>" />
          </button>
          <button class="explore_other-next globalNavigation <?php echo $fr_class; ?> navBtnColor">
-           <img src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="right arrow " />
+           <img loading="lazy" src="<?php echo get_template_directory_uri() . '/assets/images/right_arrow.svg'; ?>" alt="<?php echo t('rightArrow'); ?>" />
          </button>
        </div>
    </section>

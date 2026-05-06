@@ -18,7 +18,7 @@
     </button>
 </header>
 <section id="header" data-lenis-prevent class="">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="" class="logoBlue">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="btc logo" class="logoBlue">
     <div class="left">
 
         <?php
@@ -319,7 +319,7 @@
 
 
         <div class="else">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/cotton.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/cotton.jpg" alt="cotton jpg">
         </div>
 
         <div class="mediaArea">

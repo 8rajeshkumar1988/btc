@@ -38,7 +38,7 @@ get_header();
 </section>
 <section id="textile_details">
     
-    <img src="<?php echo get_template_directory_uri() . '/assets/images/textilePattern.png'; ?>" alt="" btcPattern />
+    <img src="<?php echo get_template_directory_uri() . '/assets/images/textilePattern.png'; ?>" alt="image de motif btc" btcPattern />
     <div animateHeading>
         <p>Parc Textile</p>
         <h2 class="fr">
@@ -79,7 +79,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/access_to_local_cotton.webp'; ?>" alt="access_to_local_cotton">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/access_to_local_cotton.webp'; ?>" alt="L'image représente les champs de coton">
                 </div>
             </div>
         </div>
@@ -109,7 +109,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Spinning-25.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Spinning-25.jpg'; ?>" alt="démonstration de l'usinage par filage haute performance">
                 </div>
             </div>
         </div>
@@ -139,7 +139,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Knitting-05.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/BTC-Knitting-05.jpg'; ?>" alt="présentation de la machine à tricoter">
                 </div>
             </div>
         </div>
@@ -208,7 +208,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img id="textile_processing_img" src="<?php echo get_template_directory_uri() . '/assets/images/dyeing_pic.webp'; ?>" alt="">
+                    <img id="textile_processing_img" src="<?php echo get_template_directory_uri() . '/assets/images/dyeing_pic.webp'; ?>" alt="présentation du traitement textile">
                 </div>
             </div>
         </div>
@@ -238,7 +238,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/garmenting.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/garmenting.jpg'; ?>" alt="fabrication de vêtements">
                 </div>
             </div>
         </div>
@@ -268,7 +268,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Quality-control-BTC.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Quality-control-BTC.jpg'; ?>" alt="affiche le contrôle de qualité">
                 </div>
             </div>
         </div>
@@ -298,7 +298,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/whybtc/packaging.webp'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/whybtc/packaging.webp'; ?>" alt="conditionnement">
                 </div>
             </div>
         </div>
@@ -328,7 +328,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Logistics-img.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Logistics-img.jpg'; ?>" alt="processus logistique - présente le port maritime">
                 </div>
             </div>
         </div>
@@ -358,7 +358,7 @@ get_header();
                     </div>
                 </div>
                 <div class="right">
-                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Quality-control.jpg'; ?>" alt="">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/Quality-control.jpg'; ?>" alt="image présentant le produit final">
                 </div>
             </div>
         </div>
