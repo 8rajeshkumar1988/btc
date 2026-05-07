@@ -1295,7 +1295,18 @@ function process_lead_acf_csv_export() {
         $i_agree_to_receive_e_communications_from_btc = $i_agree_to_receive_e_communications_from_btc==1 ? "Yes" : 'No';
         $source_url = $source_url ? $source_url : '';
 
-
+    //    'ID',
+    //     'Name',
+    //     'Email',
+    //     'Phone',
+    //     "Company",
+    //     "Requirements",
+    //     "Whatsapp Number",
+    //     "Organization Type",
+    //     'Enquiry Type',
+    //     "Receive E Communications",
+    //     "Page URL",
+    //     'Created Date'
         // CSV Row
         fputcsv( $output, [
             $id,
@@ -1306,9 +1317,10 @@ function process_lead_acf_csv_export() {
             $requirements,
             $whatsapp_number,
             $organization_type,
+            $enquiry_type,
             $i_agree_to_receive_e_communications_from_btc,
             $source_url,
-            $enquiry_type,
+            
            
             get_the_date()
         ]);
