@@ -1,7 +1,7 @@
 <?php
 
 // function btc_theme_setup() {
-   
+
 //     load_theme_textdomain('btc-theme', get_template_directory() . '/languages');
 // }
 // add_action('after_setup_theme', 'btc_theme_setup');
@@ -74,7 +74,7 @@ function btc_files()
         );
     }
 
-   
+
 
 
     if (is_page('contact-us')) {
@@ -310,7 +310,8 @@ function btc_ajax_get_lead_popup_form()
 add_action('wp_ajax_get_lead_popup_form', 'btc_ajax_get_lead_popup_form');
 add_action('wp_ajax_nopriv_get_lead_popup_form', 'btc_ajax_get_lead_popup_form');
 
-function t($key, ...$args) {
+function t($key, ...$args)
+{
     static $lang_data = null;
 
     if ($lang_data === null) {
@@ -325,7 +326,8 @@ function t($key, ...$args) {
 
     return $text;
 }
-function get_lang_data() {
+function get_lang_data()
+{
     $lang = 'en'; // default
 
     // Detect language (Polylang OR URL)
@@ -371,7 +373,7 @@ function btc_features()
 
     add_image_size('metaimage', 1200, 630, true);
     //echo get_locale();
-    
+
 }
 
 add_action('after_setup_theme', 'btc_features');
@@ -548,8 +550,70 @@ function btc_ajax_save_lead()
     update_field('i_agree_to_the_btc_privacy_policy', $tandc, $post_id);
     update_field('created_on', $dt_ist->format('Y-m-d H:i'), $post_id);
 
+
+
+
+    // $url = 'https://script.google.com/macros/s/AKfycbwnKO8196ZPGK8wi6VXnZlkfdR0iylwe8dYA0RKfWkCSW9eK-Zu6b6fBP6OJs2EPTb6/exec';
+
+   
+
+    // $args = array(
+    //     'method'    => 'POST',
+    //     'body'      => json_encode($body),
+    //     'headers'   => array(
+    //         'Content-Type' => 'application/json'
+    //     ),
+    //     'timeout'   => 15,
+    // );
+
+    // wp_remote_post($url, $args);
+
+    // if (is_wp_error($response)) {
+    //     echo $response->get_error_message();
+    // } else {
+    //     echo wp_remote_retrieve_body($response);
+    // }
+
+    $body = array(
+        "name" => $name,
+        "email" => $email,
+        "mobile" => $phone,
+        "company" => $company_name,
+        "requirements" =>  $requirements,
+        "whatsapp_number" => $whatsapp,
+        "organization_type" => $org_type,
+        "enquiry_type" =>  $enquiry_type
+    );
+    $curl = curl_init();
+
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => 'https://script.google.com/macros/s/AKfycbwnKO8196ZPGK8wi6VXnZlkfdR0iylwe8dYA0RKfWkCSW9eK-Zu6b6fBP6OJs2EPTb6/exec',
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => '',
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => 'POST',
+        CURLOPT_POSTFIELDS => json_encode($body),
+        CURLOPT_HTTPHEADER => array(
+            'Content-Type: application/json'
+        ),
+    ));
+
+    $response = curl_exec($curl);
+
+    curl_close($curl);
+   
+
+
+
+
+
+
+
     wp_send_json_success(t('leadSavedSuccess'));
-}   
+}
 add_action('wp_ajax_save_lead', 'btc_ajax_save_lead');
 add_action('wp_ajax_nopriv_save_lead', 'btc_ajax_save_lead');
 
@@ -1195,7 +1259,7 @@ function page_schema()
                     "itemListElement" => $items
                 ];
 
-                 echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
+                echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
             }
         }
     }
@@ -1204,41 +1268,43 @@ add_action('wp_head', 'page_schema');
 
 
 
-add_action( 'restrict_manage_posts', 'lead_csv_export_button' );
-function lead_csv_export_button() {
+add_action('restrict_manage_posts', 'lead_csv_export_button');
+function lead_csv_export_button()
+{
 
     global $typenow;
 
     // Show button only on Lead post type
-    if ( $typenow == 'lead' ) {
+    if ($typenow == 'lead') {
         echo '<input type="submit" name="export_lead_csv" class="button button-primary" value="Export CSV">';
     }
 }
 
 
-add_action( 'load-edit.php', 'process_lead_acf_csv_export' );
-function process_lead_acf_csv_export() {
+add_action('load-edit.php', 'process_lead_acf_csv_export');
+function process_lead_acf_csv_export()
+{
 
-    if ( ! isset( $_GET['export_lead_csv'] ) ) {
+    if (! isset($_GET['export_lead_csv'])) {
         return;
     }
 
-    if ( ! current_user_can( 'manage_options' ) ) {
+    if (! current_user_can('manage_options')) {
         return;
     }
 
     $filename = 'leads-acf-export-' . date('Y-m-d') . '.csv';
 
-    header( 'Content-Type: text/csv; charset=utf-8' );
-    header( 'Content-Disposition: attachment; filename=' . $filename );
-    header( 'Pragma: no-cache' );
-    header( 'Expires: 0' );
+    header('Content-Type: text/csv; charset=utf-8');
+    header('Content-Disposition: attachment; filename=' . $filename);
+    header('Pragma: no-cache');
+    header('Expires: 0');
 
-    $output = fopen( 'php://output', 'w' );
+    $output = fopen('php://output', 'w');
 
 
     // ===== CSV HEADERS (EDIT THESE) =====
-    fputcsv( $output, [
+    fputcsv($output, [
         'ID',
         'Name',
         'Email',
@@ -1261,25 +1327,25 @@ function process_lead_acf_csv_export() {
         'post_status'    => 'publish'
     ];
 
-    $leads = new WP_Query( $args );
+    $leads = new WP_Query($args);
 
-    while ( $leads->have_posts() ) {
+    while ($leads->have_posts()) {
         $leads->the_post();
 
         $id = get_the_ID();
 
 
         // ===== GET ACF FIELDS (CHANGE FIELD NAMES) =====
-        $name   = get_field( 'name', $id );
-        $email  = get_field( 'email', $id );
-        $enquiry_type  = get_field( 'enquiry_type', $id );
-        $phone_number = get_field( 'phone_number', $id );
-        $company_name = get_field( 'company_name', $id );
-        $requirements = get_field( 'requirements', $id );
-        $whatsapp_number = get_field( 'whatsapp_number', $id );
-        $organization_type = get_field( 'organization_type', $id );
-        $i_agree_to_receive_e_communications_from_btc = get_field( 'i_agree_to_receive_e-communications_from_btc', $id );
-        $source_url = get_field( 'source_url', $id );
+        $name   = get_field('name', $id);
+        $email  = get_field('email', $id);
+        $enquiry_type  = get_field('enquiry_type', $id);
+        $phone_number = get_field('phone_number', $id);
+        $company_name = get_field('company_name', $id);
+        $requirements = get_field('requirements', $id);
+        $whatsapp_number = get_field('whatsapp_number', $id);
+        $organization_type = get_field('organization_type', $id);
+        $i_agree_to_receive_e_communications_from_btc = get_field('i_agree_to_receive_e-communications_from_btc', $id);
+        $source_url = get_field('source_url', $id);
 
 
 
@@ -1292,23 +1358,23 @@ function process_lead_acf_csv_export() {
         $requirements = $requirements ? $requirements : '';
         $whatsapp_number = $whatsapp_number ? $whatsapp_number : '';
         $organization_type = $organization_type ? $organization_type : '';
-        $i_agree_to_receive_e_communications_from_btc = $i_agree_to_receive_e_communications_from_btc==1 ? "Yes" : 'No';
+        $i_agree_to_receive_e_communications_from_btc = $i_agree_to_receive_e_communications_from_btc == 1 ? "Yes" : 'No';
         $source_url = $source_url ? $source_url : '';
 
-    //    'ID',
-    //     'Name',
-    //     'Email',
-    //     'Phone',
-    //     "Company",
-    //     "Requirements",
-    //     "Whatsapp Number",
-    //     "Organization Type",
-    //     'Enquiry Type',
-    //     "Receive E Communications",
-    //     "Page URL",
-    //     'Created Date'
+        //    'ID',
+        //     'Name',
+        //     'Email',
+        //     'Phone',
+        //     "Company",
+        //     "Requirements",
+        //     "Whatsapp Number",
+        //     "Organization Type",
+        //     'Enquiry Type',
+        //     "Receive E Communications",
+        //     "Page URL",
+        //     'Created Date'
         // CSV Row
-        fputcsv( $output, [
+        fputcsv($output, [
             $id,
             $name,
             $email,
@@ -1320,14 +1386,14 @@ function process_lead_acf_csv_export() {
             $enquiry_type,
             $i_agree_to_receive_e_communications_from_btc,
             $source_url,
-            
-           
+
+
             get_the_date()
         ]);
     }
 
     wp_reset_postdata();
-    fclose( $output );
+    fclose($output);
 
     exit;
 }
