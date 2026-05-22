@@ -222,7 +222,7 @@ get_header();
                 <div class="left">
                     <div class="inner_top">
                         <div class="copy">
-                            <p>Après la teinture, le tissu est coupé avec précision et cousu de manière experte. <strong style="font-weight: 400;">Tous les éléments-coutures (fermetures à glissière, boutons, etc.) sont assemblés pour créer le vêtement final.</strong></p>
+                            <p>Après la teinture, le tissu est coupé avec précision et cousu de manière experte. Tous les éléments-coutures (fermetures à glissière, boutons, etc.) sont assemblés pour créer le vêtement final.</p>
                         </div>
                         <p class="count">(05)</p>
                     </div>

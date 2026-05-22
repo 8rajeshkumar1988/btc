@@ -61,7 +61,7 @@ the_post();
                         <img loading="lazy" src="<?php echo get_template_directory_uri() . "/assets/images/home/bTC_Gate_.webp"  ?>" alt="image de la porte d'entrée du BTC" />
                     </div>
                     <p class="category_description" >
-                    BTC, située au Bénin, est la première usine d'Afrique de l'Ouest entièrement intégrée verticalement, transformant du coton local <strong style="font-weight: 600;">nourri par</strong> la pluie, sans OGM certifié CmiA en vêtements haut de gamme largement reconnu et approuvé par les associations d'égrenage et les acteurs de l'industrie.
+                    BTC, située au Bénin, est la première usine d'Afrique de l'Ouest entièrement intégrée verticalement, transformant du coton local nourri par la pluie, sans OGM certifié CmiA en vêtements haut de gamme largement reconnu et approuvé par les associations d'égrenage et les acteurs de l'industrie.
                     </p>
                 </div>
                 <div class="swiper-slide category_item" animateHeading>
