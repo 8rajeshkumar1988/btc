@@ -1412,7 +1412,8 @@ header {
   padding: 6px 10px;
   backdrop-filter: blur(4px);
   cursor: pointer;
-  opacity: 1;
+  opacity: 0;
+  pointer-events: none;
   .lang-switcher__row {
     display: flex;
     align-items: center;
