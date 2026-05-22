@@ -67,7 +67,7 @@ return [
 
     // thankyou page
     'thankyou' => 'Merci',
-    'thankyouMsg' => 'Nous avons bien reçu votre demande. <br> Notre équipe vous recontactera prochainement.',
+    'thankyouMsgPage' => 'Nous avons bien reçu votre demande. <br> Notre équipe vous recontactera prochainement.',
 
 
     // client conponents
