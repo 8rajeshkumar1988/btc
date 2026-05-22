@@ -65,7 +65,7 @@ return [
 
     // thankyou page
     'thankyou' => 'Thank You',
-    'thankyouMsg' => 'We have received your query. <br> Our team will get back to you shortly.',
+    'thankyouMsgPage' => 'We have received your query. <br> Our team will get back to you shortly.',
 
     // client conponents
     'ourClients' => 'Our Clients',

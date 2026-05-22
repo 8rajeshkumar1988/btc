@@ -101,7 +101,7 @@ function btc_files()
     }
 
 
-    if (is_page('thank-you')) {
+    if (is_page('thank-you') || is_page('merci')) {
         wp_enqueue_style('btc_thank_styles', get_theme_file_uri('/assets/thank-you/style.css'));
         wp_enqueue_script(
             'btc_thanks_script',
@@ -111,6 +111,7 @@ function btc_files()
             true
         );
     }
+    
     if (is_page('capabilities')) {
         wp_enqueue_style('btc_capabilities_styles', get_theme_file_uri('/assets/capabilities/style.css'));
         wp_enqueue_script(

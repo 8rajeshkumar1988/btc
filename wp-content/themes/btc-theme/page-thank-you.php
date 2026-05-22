@@ -10,7 +10,7 @@ the_post();
         <dotlottie-wc class="lottie" id="thankYouLottie" src=<?php echo get_template_directory_uri() . '/assets/images/complete.lottie'; ?>    autoplay></dotlottie-wc>
         <div class="content" animateHeading style="margin-top: 80px;">
             <h1><?php echo t('thankyou'); ?></h1>
-            <p><?php echo t('thankyouMsg'); ?></p>
+            <p><?php echo t('thankyouMsgPage'); ?></p>
         </div>
     </div>
 </section>
