@@ -25,10 +25,10 @@ $(document).ready(function () {
     },
     on: {
       init: function () {
-        toggleNavButtons(this);
+        toggleNavButtons(this, ".about_more_news-prev", ".about_more_news-next");
       },
       resize: function () {
-        toggleNavButtons(this);
+        toggleNavButtons(this, ".about_more_news-prev", ".about_more_news-next");
       },
     },
   });
@@ -53,47 +53,36 @@ $(document).ready(function () {
     },
     on: {
       init: function () {
-        toggleNavButtonsBlogs(this);
+        toggleNavButtons(this, ".about_more_blogs-prev", ".about_more_blogs-next");
       },
       resize: function () {
-        toggleNavButtonsBlogs(this);
+        toggleNavButtons(this, ".about_more_blogs-prev", ".about_more_blogs-next");
       },
     },
   });
 
-  function toggleNavButtons(swiperInstance) {
-    const totalSlides = swiperInstance.slides.length;
-    const slidesPerView = swiperInstance.params.slidesPerView;
+  function toggleNavButtons(swiperInstance, prevSelector, nextSelector) {
+    const section = swiperInstance.el.closest("section");
+    if (!section) return;
 
-    const nextBtn = document.querySelector(".about_more_news-next");
-    const prevBtn = document.querySelector(".about_more_news-prev");
-    const buttonsContainer = document.querySelector(".more_news_buttons");
-    if (totalSlides <= slidesPerView) {
-      nextBtn.style.display = "none";
-      prevBtn.style.display = "none";
-      buttonsContainer.style.display = "none";
-    } else {
-      nextBtn.style.display = "flex";
-      prevBtn.style.display = "flex";
-      buttonsContainer.style.display = "flex";
-    }
-  }
-  function toggleNavButtonsBlogs(swiperInstance) {
-    const totalSlides = swiperInstance.slides.length;
-    const slidesPerView = swiperInstance.params.slidesPerView;
+    const nextBtn = section.querySelector(nextSelector);
+    const prevBtn = section.querySelector(prevSelector);
+    const buttonsContainer = section.querySelector(
+      ".more_news_buttons, .more_news_buttons_news"
+    );
+    if (!nextBtn || !prevBtn || !buttonsContainer) return;
 
-    const nextBtn = document.querySelector(".about_more_blogs-next");
-    const prevBtn = document.querySelector(".about_more_blogs-prev");
-    const buttonsContainer = document.querySelector(".more_news_buttons_news");
-    if (totalSlides <= slidesPerView) {
-      nextBtn.style.display = "none";
-      prevBtn.style.display = "none";
-      buttonsContainer.style.display = "none";
-    } else {
-      nextBtn.style.display = "flex";
-      prevBtn.style.display = "flex";
-      buttonsContainer.style.display = "flex";
-    }
+    const totalSlides = swiperInstance.slides.length;
+    const slidesPerView =
+      typeof swiperInstance.params.slidesPerView === "number"
+        ? swiperInstance.params.slidesPerView
+        : 1;
+    const shouldShow = totalSlides > slidesPerView;
+    const display = shouldShow ? "flex" : "none";
+
+    nextBtn.style.display = display;
+    prevBtn.style.display = display;
+    buttonsContainer.style.display = display;
   }
 
   gsap.utils.toArray("#news_spotlight .news_detail").forEach((wrap, i) => {

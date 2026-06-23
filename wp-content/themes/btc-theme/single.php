@@ -115,8 +115,7 @@ $posts = new WP_Query([
   'posts_per_page' => -1,
   'meta_key'       => 'published_at',
   'orderby'        => 'meta_value_num',
-  'order'          => 'DESC',
-  'cat'            => 1,
+  'order'          => 'ASC',
   'post__not_in'   => $top_post_ids,
 ]);
 

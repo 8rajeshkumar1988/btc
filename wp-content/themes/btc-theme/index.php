@@ -132,7 +132,7 @@ $args = [
     'posts_per_page' => -1,
     'meta_key'       => 'published_at',
     'orderby'        => 'meta_value_num',
-    'order'          => 'DESC',
+    'order'          => 'ASC',
     'cat'            => 1,
     'post__not_in'   => $top_post_ids,
 ];
@@ -197,7 +197,7 @@ if ($news->have_posts()) {
             </div>
         </div>
         <div class="more_news_button_container">
-            <div class="more_news_buttons more_news_buttons_news">
+            <div class=" more_news_buttons_news">
                 <button class="about_more_news-prev">
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>" />
                 </button>
@@ -223,7 +223,7 @@ $args = [
     'posts_per_page' => -1,
     'meta_key'       => 'published_at',
     'orderby'        => 'meta_value_num',
-    'order'          => 'DESC',
+    'order'          => 'ASC',
     'cat'            => 3,
     'post__not_in'   => $top_post_ids,
 ];
