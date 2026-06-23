@@ -197,7 +197,7 @@ if ($news->have_posts()) {
             </div>
         </div>
         <div class="more_news_button_container">
-            <div class="more_news_buttons">
+            <div class="more_news_buttons more_news_buttons_news">
                 <button class="about_more_news-prev">
                     <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>" />
                 </button>
@@ -242,57 +242,61 @@ if ($sarticles->have_posts()) {
             <p><?php echo t('stories'); ?></p>
             <h2><?php echo t('exploreMedia'); ?></h2>
         </div>
-        <div class="explore_media_container">
-            <?php
-            while ($sarticles->have_posts()) {
-                $sarticles->the_post();
+        <div class="more_news_container">
+            <div class="swiper about_more_blogs">
+                <div class="swiper-wrapper">
+                    <?php
+                    while ($sarticles->have_posts()) {
+                        $sarticles->the_post();
 
-            ?>
-                <div class="explore_media_card">
-                    <a href="<?php the_permalink(); ?>" class="explore_media_image">
-                        <?php
+                    ?>
+                        <div class="swiper-slide blog_card">
+                            <a href="<?php the_permalink(); ?>" class="blog_image">
+                                <?php
+                                $thumbnail_id = get_post_thumbnail_id();
+                                $image_url = wp_get_attachment_url($thumbnail_id);
+                                $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+                                $title_text = get_the_title($thumbnail_id);
+                                if (empty($alt_text)) {
+                                    $alt_text = get_the_title();
+                                }
+                                if (empty($title_text)) {
+                                    $title_text = get_the_title();
+                                }
 
-                        $thumbnail_id = get_post_thumbnail_id();
-                        $image_url = wp_get_attachment_url($thumbnail_id);
-                        $alt_text = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
-                        $title_text = get_the_title($thumbnail_id);
-                        if (empty($alt_text)) {
-                            $alt_text = get_the_title();
-                        }
-                        if (empty($title_text)) {
-                            $title_text = get_the_title();
-                        }
+                                $image = '<img  src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
+                                echo  $image;
 
-                        $image = '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($alt_text) . '">';
-                        echo  $image;
-
-                        ?>
-                        <div class="explore_media_description">
-                            <!-- <div class="blog_tag">
-                                <p>BLOG</p>
-                            </div> -->
-                            <div class="blog_desciption">
-                                <h2><?php the_title(); ?></h2>
-                                <!-- <p><?php the_excerpt(); ?></p> -->
-                                <p>
-                                    <?php
+                                ?>
+                            </a>
+                            <div class="blog_description">
+                                <p><?php
                                     $date_raw = get_field('published_at');
                                     if ($date_raw) {
                                         echo date('j M Y', strtotime($date_raw));
                                     }
-                                    ?>
-                                </p>
+                                    ?></p>
+                                <h3>
+                                    <?php the_title(); ?>
+                                </h3>
+                                <a href="<?php the_permalink(); ?>" class="cta <?php echo $fr_class; ?>"><?php echo t('viewArticle'); ?> <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>"></a>
                             </div>
                         </div>
-                    </a>
-                    <a href="<?php the_permalink(); ?>" class="cta explore_media_cta">View Article <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>"></a>
+                    <?php } ?>
+
                 </div>
-            <?php } ?>
-
-
-
-
-
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+        </div>
+        <div class="more_news_button_container">
+            <div class="more_news_buttons">
+                <button class="about_more_blogs-prev">
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>" />
+                </button>
+                <button class="about_more_blogs-next">
+                    <img src="<?php echo get_template_directory_uri() . "/assets/images/right_arrow.svg" ?>" alt="<?php echo t('rightArrow'); ?>" />
+                </button>
+            </div>
         </div>
     </section>
 <?php } ?>
