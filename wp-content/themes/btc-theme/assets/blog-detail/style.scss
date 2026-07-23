@@ -109,7 +109,7 @@ body {
     }
   }
 }
-
+ 
 .blog_content {
   // padding: 0 var(--paddingX);
   padding-bottom: var(--spaceBelow_heading);
@@ -124,6 +124,16 @@ body {
   }
   * {
     font-weight: 300;
+  }
+  .no_underline{
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 500;
+    *{
+      font-weight: 500;
+      color: var(--blue);
+      text-decoration: none;
+    }
   }
   h2 {
     font-size: var(--font-46);

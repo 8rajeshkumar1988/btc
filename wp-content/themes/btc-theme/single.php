@@ -103,7 +103,7 @@ if ($lang == 'fr_FR') {
 <div class="blog_content">
     <img class="pattern" src="<?php echo get_template_directory_uri() . "/assets/images/BTC_pattern.png" ?>" alt="<?php echo t('btcPattern'); ?>" />
 
-  <?php the_content(); ?>
+  <!-- <?php the_content(); ?> -->
 </div>
 
 
@@ -184,8 +184,7 @@ if ($posts->have_posts()) {
   </section>
   <?php } ?>
   
-  <?php get_template_part('components/newsletter_subs_section'); ?>
+    
 <?php
 get_footer();
-
 ?>
