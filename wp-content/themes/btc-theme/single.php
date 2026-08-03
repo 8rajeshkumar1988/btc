@@ -51,6 +51,11 @@ if ($lang == 'fr_FR') {
       </div>
     </div>
   </div>
+  <div class="heading_phone">      
+    <h1>
+      <?php the_title(); ?>
+    </h1>
+  </div>
   <div class="data_container">
   <div class="tags">
     <p class="date">
