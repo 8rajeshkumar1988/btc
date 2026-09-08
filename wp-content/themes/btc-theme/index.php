@@ -223,7 +223,7 @@ $args = [
     'posts_per_page' => -1,
     'meta_key'       => 'published_at',
     'orderby'        => 'meta_value_num',
-    'order'          => 'ASC',
+    'order'          => 'DESC',
     'cat'            => 3,
     'post__not_in'   => $top_post_ids,
 ];
